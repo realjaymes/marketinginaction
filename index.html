@@ -11,7 +11,7 @@
       }
 
       :root {
-        --bg-page: #ffffff;
+        --bg-page: #ffffff; 
         --bg-surface: #f7f4fa;
 
         --text-primary: #1c1422;
@@ -197,6 +197,14 @@
         font-weight: 900;
         color: var(--text-primary);
         letter-spacing: -0.02em;
+      }
+
+      .logo img,
+      .nav-logo-img {
+        width: 100px;
+        height: 40px;
+        max-width: none;
+        object-fit: contain;
       }
 
       /* Accessibility helper */
@@ -602,7 +610,7 @@
     <header>
       <div class="container nav">
         <a class="logo" href="https://www.marketinginaction.xyz/">
-          <img src="assets/mia-logo.svg" alt="Marketing In Action" style="height: 34px; width: 34px" />
+          <img src="assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
 
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">
