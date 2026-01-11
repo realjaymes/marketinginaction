@@ -9,6 +9,14 @@ Marketing In Action helps marketers put marketing into action through:
 - Applied education via MIA Academy
 - Jobs, hiring, and consulting infrastructure
 The platform is built to reduce the gap between learning marketing and doing marketing.
+## Founder
+Hi, I’m James. I’m a Product and Growth Marketing consultant with close to a decade of experience helping startups launch, scale, and grow with clarity and execution. 
+I’ve been a founding marketer multiple times, building marketing functions, teams and systems from the ground up.
+I am currently experimenting with vibe coding, and this is one of the projects I’m building with the knowledge. 
+### Find Me on the Web
+- **Website:** https://www.jamespraise.xyz  
+- **LinkedIn:** https://www.linkedin.com/in/jamespraise  
+- **X (Twitter):** https://x.com/realjaymes
 ## Website
 Live site: https://www.marketinginaction.xyz
 ## Core Sections
