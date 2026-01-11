@@ -1,0 +1,843 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marketing In Action – Newsletter, Academy, Jobs & Consulting</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-page: #ffffff;
+        --bg-surface: #f7f4fa;
+
+        --text-primary: #1c1422;
+        --text-muted: #5f5a66;
+
+        --color-accent: #f1de71; /* Yellow */
+        --color-black: #1c1422; /* Near-black */
+        --color-white: #f7f4fa; /* Soft white */
+
+        --color-blue: #71c4f1;
+        --color-purple: #7184f1;
+        --color-pink: #f171c4;
+        --color-green: #71f19e;
+
+        --max-width: 1100px;
+
+        --space-xs: 6px;
+        --space-sm: 12px;
+        --space-md: 16px;
+        --space-lg: 24px;
+        --space-xl: 40px;
+        --space-2xl: 64px;
+
+        --radius-sm: 10px;
+        --radius-md: 14px;
+
+        --border: rgba(28, 20, 34, 0.12);
+        --shadow: 0 8px 30px rgba(28, 20, 34, 0.08);
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-page);
+        color: var(--text-primary);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 var(--space-sm);
+        font-weight: 750;
+        line-height: 1.2;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-size: clamp(34px, 4vw, 52px);
+      }
+
+      h2 {
+        font-size: clamp(22px, 2.4vw, 30px);
+      }
+
+      p {
+        margin: 0 0 var(--space-md);
+      }
+
+      /* Hyperlinks should be blue */
+      a {
+        color: var(--color-blue);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: min(var(--max-width), 92%);
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: var(--space-lg);
+        box-shadow: var(--shadow);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: #fff;
+        font-weight: 650;
+        font-size: 14px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--color-accent);
+        border: 1px solid rgba(28, 20, 34, 0.15);
+      }
+
+      .muted {
+        color: var(--text-muted);
+      }
+
+      .button-row {
+        display: flex;
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+        margin-top: var(--space-md);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        border: 1px solid transparent;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 120ms ease, opacity 120ms ease, background-color 120ms ease;
+      }
+
+      .button:active {
+        transform: translateY(1px);
+      }
+
+      .button-primary {
+        background: var(--color-accent);
+        color: var(--color-black);
+      }
+
+      .button-primary:hover {
+        opacity: 0.9;
+        text-decoration: none;
+      }
+
+      .button-secondary {
+        background: transparent;
+        border-color: var(--border);
+        color: var(--text-primary);
+      }
+
+      .button-secondary:hover {
+        background: rgba(241, 222, 113, 0.12);
+        text-decoration: none;
+      }
+
+      /* =========================
+         Header
+         ========================= */
+
+      header {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+        z-index: 10;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-md) 0;
+        gap: var(--space-lg);
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      /* Keep nav links near-black (do not inherit global link blue) */
+      nav a {
+        color: var(--text-primary);
+        font-weight: 650;
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background: rgba(241, 222, 113, 0.16);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      /* =========================
+         Hero (Centered)
+         ========================= */
+
+      .hero {
+        padding: var(--space-2xl) 0 var(--space-xl);
+        text-align: center;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: var(--space-xl);
+        justify-items: center;
+      }
+
+      .hero p {
+        max-width: 72ch;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* =========================
+         Ways to engage
+         ========================= */
+
+      .two-col {
+        display: grid;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 980px) {
+        .two-col {
+          grid-template-columns: 0.9fr 1.1fr;
+          align-items: start;
+        }
+      }
+
+      .stack {
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      /* Floating Scroll Section (left column sticky, right column scrolls) */
+      @media (min-width: 980px) {
+        #work-with-mia .two-col > div:first-child {
+          position: sticky;
+          top: 120px;
+          align-self: start;
+        }
+      }
+
+      /* Cards: neutral fill, colored LEFT borders in exact order */
+      .mini-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-left-width: 8px;
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+      }
+
+      .mini-card h3 {
+        font-size: 18px;
+        margin: 0 0 6px;
+      }
+
+      .mini-card p {
+        margin: 0 0 10px;
+      }
+
+      /* Card CTA text should be black */
+      .mini-card a {
+        color: var(--color-black);
+        font-weight: 650;
+      }
+
+      /* Exact border order:
+         1) Yellow, 2) Near-black, 3) Blue, 4) Pink, 5) Green, 6) Near-black, 7) Purple
+      */
+      .mini-card.card-newsletter {
+        border-left-color: #f1de71;
+      }
+
+      .mini-card.card-community {
+        border-left-color: #1c1422;
+      }
+
+      .mini-card.card-academy {
+        border-left-color: #71c4f1;
+      }
+
+      .mini-card.card-events {
+        border-left-color: #f171c4;
+      }
+
+      .mini-card.card-hiring {
+        border-left-color: #71f19e;
+      }
+
+      .mini-card.card-consulting {
+        border-left-color: #1c1422;
+      }
+
+      .mini-card.card-partner {
+        border-left-color: #7184f1;
+      }
+
+      /* =========================
+         About
+         ========================= */
+
+      .about-header {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+      }
+
+      .about-header h2 {
+        text-transform: none;
+        letter-spacing: -0.02em;
+        font-weight: 750;
+        margin-bottom: 10px;
+      }
+
+      .about-header .about-intro {
+        margin: 0;
+      }
+
+      .about {
+        display: grid;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 980px) {
+        .about {
+          grid-template-columns: 0.85fr 1.15fr;
+          align-items: start;
+        }
+      }
+
+      /* Clean photo block (no extra borders/frames) */
+      .photo {
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        background: var(--bg-surface);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .photo img {
+        width: 100%;
+        display: block;
+        height: auto;
+      }
+
+      /* =========================
+         Newsletter
+         ========================= */
+
+      .newsletter {
+        display: grid;
+        gap: var(--space-md);
+        align-items: center;
+      }
+
+      @media (min-width: 980px) {
+        .newsletter {
+          grid-template-columns: 1fr auto;
+        }
+      }
+
+      /* Center CTA to card width */
+      .newsletter .button-row {
+        justify-content: center;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 980px) {
+        .newsletter .button-row {
+          justify-self: end;
+          justify-content: flex-end;
+          width: auto;
+        }
+      }
+
+      /* =========================
+         Footer (MIA Black Background)
+         ========================= */
+
+      footer {
+        background: var(--color-black);
+        color: var(--color-white);
+        padding: var(--space-xl) 0;
+      }
+
+      footer .muted,
+      footer .footer-list a {
+        color: rgba(247, 244, 250, 0.7);
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 980px) {
+        .footer-grid {
+          grid-template-columns: 1.2fr 1fr 1fr 1fr;
+        }
+      }
+
+      /* Footer section headers bold */
+      .footer-title {
+        font-weight: 900;
+        margin-bottom: var(--space-sm);
+        color: var(--color-white);
+      }
+
+      .footer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      /* Footer items not bold */
+      .footer-list a {
+        color: var(--color-white);
+        font-weight: 400;
+      }
+
+      .footer-list a:hover {
+        color: var(--color-accent);
+        text-decoration: none;
+      }
+
+      .footer-bottom {
+        margin-top: var(--space-xl);
+        padding-top: var(--space-md);
+        border-top: 1px solid rgba(247, 244, 250, 0.2);
+        display: flex;
+        gap: var(--space-md);
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      /* Footer social icons */
+      .footer-social {
+        display: flex;
+        gap: 14px;
+        margin-top: var(--space-md);
+      }
+
+      .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(247, 244, 250, 0.08);
+        transition: background 120ms ease, transform 120ms ease;
+      }
+
+      .footer-social a:hover {
+        background: rgba(241, 222, 113, 0.25);
+        transform: translateY(-1px);
+      }
+
+      .footer-social svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--color-white);
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container nav">
+        <a class="logo" href="https://www.marketinginaction.xyz/">
+          <img src="assets/mia-logo.svg" alt="Marketing In Action" style="height: 34px; width: 34px" />
+          Marketing In Action
+        </a>
+
+        <nav class="nav-links" aria-label="Primary navigation">
+          <a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">MIA Newsletter</a>
+          <a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">MIA Academy</a>
+          <a href="https://www.marketinginaction.xyz/resources" target="_blank" rel="noreferrer">MIA Resources</a>
+          <a href="https://www.marketinginaction.xyz/events" target="_blank" rel="noreferrer">MIA Events</a>
+          <a href="https://marketinginaction.xyz/jobs" target="_blank" rel="noreferrer">MIA Jobs</a>
+          <a href="https://www.marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">MIA Consulting</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="pill">
+              <span class="dot" aria-hidden="true"></span>
+              MIA Newsletter, Academy, Jobs & Consulting with James Praise
+            </div>
+
+            <h1 style="margin-top: var(--space-lg)">Put marketing into action. Not just ideas, not just theory.</h1>
+
+            <p class="muted" style="font-size: 18px">
+              MIA is an execution-first ecosystem that brings together media, community, education, hiring, and consulting in one connected system. From newsletters and podcasts to events, applied learning, jobs, and advisory support, every layer is designed to help marketers and founders move from ideas to execution, and from execution to outcomes.
+            </p>
+
+            <div class="button-row" style="margin-top: var(--space-lg); justify-content: center">
+              <a class="button button-primary" href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">
+                Read the Newsletter
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 1 -->
+      <section id="work-with-mia" class="section">
+        <div class="container two-col">
+          <div>
+            <h2>How to work with Marketing In Action</h2>
+            <p class="muted">
+              Marketing In Action is led by practitioners and operators focused on building, executing, and compounding real go to market work.
+            </p>
+            <p class="muted">
+              There are a few clear ways to engage with the ecosystem, depending on what you’re trying to achieve right now.
+            </p>
+
+            <div class="button-row">
+              <a class="button button-primary" href="mailto:james@marketinginaction.xyz">Email Us</a>
+            </div>
+          </div>
+
+          <div class="stack" aria-label="Ways to engage">
+            <div class="mini-card card-newsletter">
+              <h3>Start with the MIA Newsletter</h3>
+              <p class="muted">
+                The MIA Newsletter is the entry point into the ecosystem. Execution first insights, frameworks, templates, and GTM thinking you can apply immediately.
+              </p>
+              <a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">Read The Newsletter →</a>
+            </div>
+
+            <div class="mini-card card-community">
+              <h3>Join the Community</h3>
+              <p class="muted">
+                The community is where execution happens in public. Ask questions, share work, get feedback, and learn from peers doing the work.
+              </p>
+              <a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">Join The Community →</a>
+            </div>
+
+            <div class="mini-card card-academy">
+              <h3>Learn through the MIA Academy</h3>
+              <p class="muted">
+                Structured, hands on execution. Programs focus on product marketing, growth, GTM, and AI for modern marketers.
+              </p>
+              <a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">Explore The Academy →</a>
+            </div>
+
+            <div class="mini-card card-events">
+              <h3>Attend Events</h3>
+              <p class="muted">
+                Small, focused virtual and in person events designed to deepen trust and connect people doing similar work.
+              </p>
+              <a href="https://luma.com/marketinginaction" target="_blank" rel="noreferrer">Attend Events →</a>
+            </div>
+
+            <div class="mini-card card-hiring">
+              <h3>Hire or Get Hired</h3>
+              <p class="muted">
+                MIA Jobs connects companies and marketers through execution, not resumes alone. Proof of work, community participation, and modern GTM.
+              </p>
+              <a href="https://marketinginaction.xyz/jobs" target="_blank" rel="noreferrer">Explore Jobs →</a>
+            </div>
+
+            <div class="mini-card card-consulting">
+              <h3>Work with MIA</h3>
+              <p class="muted">Advisory, execution support, and fractional leadership for teams that need clarity and momentum.</p>
+              <a href="https://www.marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">Work With MIA →</a>
+            </div>
+
+            <div class="mini-card card-partner">
+              <h3>Partner With MIA</h3>
+              <p class="muted">
+                A small number of partners and sponsors each year across the newsletter, podcast, events, and ecosystem collaborations.
+              </p>
+              <a href="mailto:james@marketinginaction.xyz">Partner With MIA →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="about" class="section">
+        <div class="container about-header">
+          <h2>About MIA & James Praise</h2>
+          <p class="muted about-intro">
+            <a href="https://linkedin.com/in/jamespraise" target="_blank" rel="noreferrer">James Praise</a>
+            is the founder of Marketing In Action.
+          </p>
+        </div>
+
+        <div class="container about">
+          <div class="photo">
+            <img src="assets/james.jpg" alt="James Praise, founder of Marketing In Action" />
+          </div>
+
+          <div>
+            <p class="muted">
+              Hi, I’m James. I’m a Product and Growth Marketing consultant with over eight years of experience helping startups launch, scale, and grow with clarity and execution. I’ve worked with more than 20 companies across the US, Africa, and Europe, leading go to market strategy, customer acquisition, and demand generation for bootstrapped, seed, and Series A teams across B2B, SaaS, Fintech, EdTech, and Martech.
+            </p>
+
+            <p class="muted">
+              I’ve been a founding marketer multiple times, building marketing functions, teams and systems from the ground up at Reform, FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence, while also mentoring founders through programs such as SBC Afritech and PAADC.
+
+            <p class="muted">
+              I’ve published more than 50 playbooks, templates, and practical breakdowns across product marketing, growth marketing, GTM engineering, AI, strategy, content, lifecycle, demand generation, and product led growth. Everything I share is rooted in real execution, not theory.
+            </p>
+
+            <p class="muted">
+              At the end of the day, my work is about one thing: turning random acts of marketing into structured growth systems, so teams can scale with confidence and context.
+            </p>
+
+            <div class="button-row">
+              <a class="button button-primary" href="https://marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">
+                Work with James
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section id="subscribe" class="section">
+        <div class="container">
+          <div class="card newsletter">
+            <div>
+              <h2>Subscribe to the MIA Newsletter</h2>
+              <p class="muted">
+                We’re building a village of 5,000+ marketers and founders who want to increase their odds of succeeding at marketing. You’re one of us.
+              </p>
+            </div>
+
+            <div class="button-row">
+              <a class="button button-primary" href="http://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">
+                Subscribe to the Newsletter
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-title">Marketing In Action</div>
+            <p class="muted">
+              Execution-first marketing community helping more than 5,000 marketers and founders unlock predictable revenue with templates and tools, community, events, and hands-on learning.
+            </p>
+
+            <div class="footer-social">
+              <a href="https://www.linkedin.com/company/marketinginactionnewsletter" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24">
+                  <path d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z" />
+                </svg>
+              </a>
+
+              <a href="https://twitter.com/marketinginact" aria-label="Twitter" target="_blank" rel="noreferrer">
+                <!-- Twitter -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.48 8.48 0 01-2.7 1.03A4.24 4.24 0 0016.1 4c-2.36 0-4.27 1.91-4.27 4.27 0 .33.04.66.11.97A12.05 12.05 0 013 5.1a4.27 4.27 0 001.32 5.69 4.2 4.2 0 01-1.93-.53v.05c0 2.07 1.47 3.8 3.42 4.19a4.3 4.3 0 01-1.92.07 4.27 4.27 0 003.99 2.96A8.5 8.5 0 012 19.54a12.02 12.02 0 006.53 1.91c7.84 0 12.13-6.5 12.13-12.13l-.01-.55A8.7 8.7 0 0022.46 6z"
+                  />
+                </svg>
+              </a>
+
+              <a href="https://www.instagram.com/marketinginact" aria-label="Instagram" target="_blank" rel="noreferrer">
+                <!-- Instagram -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.6.23 1.03.5 1.48.95.45.45.72.88.95 1.48.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.23.6-.5 1.03-.95 1.48-.45.45-.88.72-1.48.95-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.6-.23-1.03-.5-1.48-.95-.45-.45-.72-.88-.95-1.48-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.23-.6.5-1.03.95-1.48.45-.45.88-.72 1.48-.95.46-.16 1.26-.35 2.43-.4 1.27-.06 1.65-.07 4.85-.07zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.88a4.28 4.28 0 110-8.56 4.28 4.28 0 010 8.56zm6.84-11.14a1.54 1.54 0 110 3.08 1.54 1.54 0 010-3.08z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <!-- YouTube -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M23.5 6.5s-.23-1.62-.93-2.34c-.88-.93-1.87-.93-2.33-.98C16.97 3 12 3 12 3h-.01s-4.97 0-8.24.18c-.46.05-1.45.05-2.33.98C.72 4.88.5 6.5.5 6.5S0 8.41 0 10.33v1.34c0 1.91.5 3.83.5 3.83s.23 1.62.93 2.34c.88.93 2.04.9 2.56 1C5.86 19 12 19 12 19s4.97 0 8.24-.18c.46-.05 1.45-.05 2.33-.98.7-.72.93-2.34.93-2.34s.5-1.91.5-3.83v-1.34c0-1.91-.5-3.83-.5-3.83zM9.75 14.57V8.93l5.5 2.82-5.5 2.82z"
+                  />
+                </svg>
+              </a>
+
+              <a href="https://www.tiktok.com/@marketinginact" aria-label="TikTok" target="_blank" rel="noreferrer">
+                <!-- TikTok -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M16.7 3c.5 2.9 2.3 4.7 5 4.9v3.1c-1.8.1-3.3-.5-4.8-1.5v6.1c0 4-2.8 6.8-6.7 6.8-3.5 0-6.4-2.8-6.4-6.4 0-3.8 3-6.6 6.8-6.6.5 0 1 .1 1.5.2v3.3c-.5-.2-1-.4-1.6-.4-1.8 0-3.3 1.4-3.3 3.3 0 1.8 1.4 3.3 3.3 3.3 2.1 0 3.5-1.3 3.5-4V3h2.7z"
+                  />
+                </svg>
+              </a>
+
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-title">MIA Ecosystem</div>
+            <ul class="footer-list">
+              <li><a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">MIA Newsletter</a></li>
+              <li><a href="https://luma.com/marketinginaction" target="_blank" rel="noreferrer">MIA Events</a></li>
+              <li>
+                <a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a>
+              </li>
+              <li><a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">MIA Academy</a></li>
+              <li><a href="https://marketinginaction.xyz/jobs" target="_blank" rel="noreferrer">MIA Jobs</a></li>
+              <li><a href="https://www.marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">MIA Consulting</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-title">MIA Resources</div>
+            <ul class="footer-list">
+              <li>
+                <a href="https://selar.com/marketingprogram" target="_blank" rel="noreferrer">Product & Growth Marketing with AI Bootcamp</a>
+              </li>
+              <li>
+                <a href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">Product Marketing Templates & Resources Library</a>
+              </li>
+              <li>
+                <a href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">AI Prompt Frameworks & Templates for Marketers</a>
+              </li>
+              <li>
+                <a href="https://www.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"
+                  >The State of Marketing In African Tech (Report)</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Marketing & AI Product Database
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Marketing Thought Leaders Database
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Annual Tech Events Calendar
+                </a>
+              </li>
+              <li><a href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer">Ask James Anything</a></li>
+              <li>
+                <a
+                  href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MIA Resource Library (Free)
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-title">Work with MIA</div>
+            <ul class="footer-list">
+              <li>
+                <a
+                  href="https://drive.google.com/file/d/1u209WbBYXV7572Lc2QmjL91DmxUmkvo6/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Advertise with MIA
+                </a>
+              </li>
+              <li><a href="mailto:james@marketinginaction.xyz">Work with MIA (Email)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="muted">Copyright <span id="year"></span>, Marketing In Action Hub.</div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
