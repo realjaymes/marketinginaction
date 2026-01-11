@@ -662,3 +662,52 @@ footer {
   }
 }
 
+/* =========================
+   Academy header fix
+   ========================= */
+
+/* Keep header content aligned and prevent giant logo */
+.academy-page header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+/* Force the logo area to be normal size */
+.academy-page .logo {
+  display: flex;
+  align-items: center;
+  line-height: 0;
+}
+
+/* This is the key: constrain the SVG/image size */
+.academy-page .nav-logo-img {
+  height: 32px;
+  width: auto;
+  display: block;
+  max-width: 140px;
+}
+
+/* Make header links readable on dark */
+.academy-page header a {
+  color: rgba(247, 244, 250, 0.82);
+  text-decoration: none;
+}
+
+.academy-page header a:hover {
+  color: #f7f4fa;
+}
+
+/* Give the header a consistent dark background */
+.academy-page header {
+  background: rgba(28, 20, 34, 0.92);
+  border-bottom: 1px solid rgba(247, 244, 250, 0.14);
+}
+.academy-page .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
