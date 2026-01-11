@@ -11,7 +11,7 @@
       }
 
       :root {
-        --bg-page: #ffffff; 
+        --bg-page: #F7F4FA;
         --bg-surface: #f7f4fa;
 
         --text-primary: #1c1422;
@@ -67,6 +67,15 @@
       h2 {
         font-size: clamp(22px, 2.4vw, 30px);
       }
+
+      .text-yellow {
+        color: #f1de71;
+      }
+
+      .text-white {
+        color: #F7F4FA !important;
+      }
+
 
       p {
         margin: 0 0 var(--space-md);
@@ -334,6 +343,7 @@
       .hero {
         padding: var(--space-2xl) 0 var(--space-xl);
         text-align: center;
+        background-color: #322B38;
       }
 
       .hero-grid {
@@ -349,7 +359,7 @@
       }
 
       /* =========================
-         Ways to engage
+         Ways to engage 
          ========================= */
 
       .two-col {
@@ -437,6 +447,10 @@
          About
          ========================= */
 
+      #about {
+        background-color: #322B38;
+      }
+
       .about-header {
         text-align: center;
         margin-bottom: var(--space-xl);
@@ -509,6 +523,20 @@
           justify-content: flex-end;
           width: auto;
         }
+      }
+
+      /* Newsletter card fill + text contrast */
+      #subscribe .card {
+        background-color: #1c1422;
+      }
+
+      #subscribe .card h2,
+      #subscribe .card p {
+        color: #f7f4fa;
+      }
+
+      #subscribe .card p.muted {
+        color: rgba(247, 244, 250, 0.8);
       }
 
       /* =========================
@@ -639,10 +667,12 @@
               MIA Newsletter, Academy, Jobs & Consulting with James Praise
             </div>
 
-            <h1 style="margin-top: var(--space-lg)">Put marketing into action. Not just ideas, not just theory.</h1>
+            <h1 class="text-white" style="margin-top: var(--space-lg)">Put <span class="text-yellow">marketing into action</span>, not just theory.</h1>
 
-            <p class="muted" style="font-size: 18px">
-              MIA is an execution-first ecosystem that brings together media, community, education, hiring, and consulting in one connected system. From newsletters and podcasts to events, applied learning, jobs, and advisory support, every layer is designed to help marketers and founders move from ideas to execution, and from execution to outcomes.
+            <p class="muted text-white" style="font-size: 18px">
+              MIA is an execution-first ecosystem that brings together media, community, education, hiring, and consulting in one connected
+              system. From newsletters and podcasts to events, applied learning, jobs, and advisory support, every layer is designed to help
+              marketers and founders move from ideas to execution, and from execution to outcomes.
             </p>
 
             <div class="button-row" style="margin-top: var(--space-lg); justify-content: center">
@@ -675,7 +705,8 @@
             <div class="mini-card card-newsletter">
               <h3>Start with the MIA Newsletter</h3>
               <p class="muted">
-                The MIA Newsletter is the entry point into the ecosystem. Execution first insights, frameworks, templates, and GTM thinking you can apply immediately.
+                The MIA Newsletter is the entry point into the ecosystem. Execution first insights, frameworks, templates, and GTM thinking you
+                can apply immediately.
               </p>
               <a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">Read The Newsletter →</a>
             </div>
@@ -683,16 +714,15 @@
             <div class="mini-card card-community">
               <h3>Join the Community</h3>
               <p class="muted">
-                The community is where execution happens in public. Ask questions, share work, get feedback, and learn from peers doing the work.
+                The community is where execution happens in public. Ask questions, share work, get feedback, and learn from peers doing the
+                work.
               </p>
               <a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">Join The Community →</a>
             </div>
 
             <div class="mini-card card-academy">
               <h3>Learn through the MIA Academy</h3>
-              <p class="muted">
-                Structured, hands on execution. Programs focus on product marketing, growth, GTM, and AI for modern marketers.
-              </p>
+              <p class="muted">Structured, hands on execution. Programs focus on product marketing, growth, GTM, and AI for modern marketers.</p>
               <a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">Explore The Academy →</a>
             </div>
 
@@ -707,7 +737,8 @@
             <div class="mini-card card-hiring">
               <h3>Hire or Get Hired</h3>
               <p class="muted">
-                MIA Jobs connects companies and marketers through execution, not resumes alone. Proof of work, community participation, and modern GTM.
+                MIA Jobs connects companies and marketers through execution, not resumes alone. Proof of work, community participation, and
+                modern GTM.
               </p>
               <a href="https://marketinginaction.xyz/jobs" target="_blank" rel="noreferrer">Explore Jobs →</a>
             </div>
@@ -732,9 +763,9 @@
       <!-- Section 2 -->
       <section id="about" class="section">
         <div class="container about-header">
-          <h2>About MIA & James Praise</h2>
-          <p class="muted about-intro">
-            <a href="https://linkedin.com/in/jamespraise" target="_blank" rel="noreferrer">James Praise</a>
+          <h2 class="text-white">About MIA & James Praise</h2>
+          <p class="muted about-intro text-white">
+            <a class="text-white" href="https://linkedin.com/in/jamespraise" target="_blank" rel="noreferrer">James Praise</a>
             is the founder of Marketing In Action.
           </p>
         </div>
@@ -745,20 +776,28 @@
           </div>
 
           <div>
-            <p class="muted">
-              Hi, I’m James. I’m a Product and Growth Marketing consultant with over eight years of experience helping startups launch, scale, and grow with clarity and execution. I’ve worked with more than 20 companies across the US, Africa, and Europe, leading go to market strategy, customer acquisition, and demand generation for bootstrapped, seed, and Series A teams across B2B, SaaS, Fintech, EdTech, and Martech.
+            <p class="muted text-white">
+              Hi, I’m James. I’m a Product and Growth Marketing consultant with over eight years of experience helping startups launch, scale,
+              and grow with clarity and execution. I’ve worked with more than 20 companies across the US, Africa, and Europe, leading go to
+              market strategy, customer acquisition, and demand generation for bootstrapped, seed, and Series A teams across B2B, SaaS, Fintech,
+              EdTech, and Martech.
             </p>
 
-            <p class="muted">
-              I’ve been a founding marketer multiple times, building marketing functions, teams and systems from the ground up at Reform, FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence, while also mentoring founders through programs such as SBC Afritech and PAADC.
+            <p class="muted text-white">
+              I’ve been a founding marketer multiple times, building marketing functions, teams and systems from the ground up at Reform,
+              FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence, while also mentoring founders through programs such as SBC Afritech and
+              PAADC.
             </p>
 
-            <p class="muted">
-              I’ve published more than 50 playbooks, templates, and practical breakdowns across product marketing, growth marketing, GTM engineering, AI, strategy, content, lifecycle, demand generation, and product led growth. Everything I share is rooted in real execution, not theory.
+            <p class="muted text-white">
+              I’ve published more than 50 playbooks, templates, and practical breakdowns across product marketing, growth marketing, GTM
+              engineering, AI, strategy, content, lifecycle, demand generation, and product led growth. Everything I share is rooted in real
+              execution, not theory.
             </p>
 
-            <p class="muted">
-              At the end of the day, my work is about one thing: turning random acts of marketing into structured growth systems, so teams can scale with confidence and context.
+            <p class="muted text-white">
+              At the end of the day, my work is about one thing: turning random acts of marketing into structured growth systems, so teams can
+              scale with confidence and context.
             </p>
           </div>
         </div>
@@ -771,13 +810,14 @@
             <div>
               <h2>Subscribe to the MIA Newsletter</h2>
               <p class="muted">
-                We’re building a village of 5,000+ marketers and founders who want to increase their odds of succeeding at marketing. You’re one of us.
+                We’re building a village of 5,000+ marketers and founders who want to increase their odds of succeeding at marketing. You’re one
+                of us.
               </p>
             </div>
 
             <div class="button-row">
-              <a class="button button-primary" href="http://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">
-                Subscribe to the Newsletter
+              <a class="button button-primary" href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">
+                Join 5000+ Marketers
               </a>
             </div>
           </div>
@@ -792,14 +832,22 @@
           <div>
             <div class="footer-title">Marketing In Action</div>
             <p class="muted">
-              Execution-first marketing community helping more than 5,000 marketers and founders unlock predictable revenue with templates and tools, community, events, and hands-on learning.
+              Execution-first marketing community helping more than 5,000 marketers and founders unlock predictable revenue with templates and
+              tools, community, events, and hands-on learning.
             </p>
 
             <div class="footer-social">
-              <a href="https://www.linkedin.com/company/marketinginactionnewsletter" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/company/marketinginactionnewsletter"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <!-- LinkedIn -->
                 <svg viewBox="0 0 24 24">
-                  <path d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z" />
+                  <path
+                    d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z"
+                  />
                 </svg>
               </a>
 
