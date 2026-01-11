@@ -199,6 +199,98 @@
         letter-spacing: -0.02em;
       }
 
+      /* Accessibility helper */
+        .sr-only {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+        }
+
+        /* Mobile menu button */
+        .menu-button {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 42px;
+          height: 42px;
+          border-radius: 12px;
+          border: 1px solid var(--border);
+          background: #fff;
+          cursor: pointer;
+        }
+
+        /* Simple hamburger icon */
+        .menu-icon {
+          width: 18px;
+          height: 2px;
+          background: var(--text-primary);
+          position: relative;
+          display: inline-block;
+        }
+
+        .menu-icon::before,
+        .menu-icon::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          width: 18px;
+          height: 2px;
+          background: var(--text-primary);
+        }
+
+        .menu-icon::before {
+          top: -6px;
+        }
+
+        .menu-icon::after {
+          top: 6px;
+        }
+
+        /* Mobile nav layout (collapsed by default) */
+        @media (max-width: 979px) {
+          .nav {
+            gap: var(--space-md);
+          }
+
+          .nav-links {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+            gap: 6px;
+            padding: var(--space-sm);
+            margin-top: var(--space-sm);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            background: #fff;
+          }
+
+          .nav-links.is-open {
+            display: flex;
+          }
+
+          nav a {
+            padding: 10px 12px;
+          }
+        }
+
+        /* Desktop: hide the menu button, show nav normally */
+        @media (min-width: 980px) {
+          .menu-button {
+            display: none;
+          }
+
+          .nav-links {
+            display: flex;
+          }
+        }
+
+
       /* Keep nav links near-black (do not inherit global link blue) */
       nav a {
         color: var(--text-primary);
@@ -505,10 +597,14 @@
       <div class="container nav">
         <a class="logo" href="https://www.marketinginaction.xyz/">
           <img src="assets/mia-logo.svg" alt="Marketing In Action" style="height: 34px; width: 34px" />
-          Marketing In Action
         </a>
 
-        <nav class="nav-links" aria-label="Primary navigation">
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="menu-icon" aria-hidden="true"></span>
+          <span class="sr-only">Open menu</span>
+        </button>
+
+        <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
           <a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">MIA Newsletter</a>
           <a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">MIA Academy</a>
           <a href="https://www.marketinginaction.xyz/resources" target="_blank" rel="noreferrer">MIA Resources</a>
@@ -518,6 +614,7 @@
         </nav>
       </div>
     </header>
+
 
     <main>
       <!-- Hero -->
@@ -650,11 +747,6 @@
               At the end of the day, my work is about one thing: turning random acts of marketing into structured growth systems, so teams can scale with confidence and context.
             </p>
 
-            <div class="button-row">
-              <a class="button button-primary" href="https://marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">
-                Work with James
-              </a>
-            </div>
           </div>
         </div>
       </section>
