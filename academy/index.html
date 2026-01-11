@@ -3,19 +3,648 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MIA Academy – Programs</title>
+    <title>Marketing In Action – Newsletter, Academy, Jobs & Consulting</title>
 
-    <!-- This path is correct because this file sits in /academy/ -->
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --bg-page: #F7F4FA;
+        --bg-surface: #f7f4fa;
+
+        --text-primary: #1c1422;
+        --text-muted: #5f5a66;
+
+        --color-accent: #f1de71; /* Yellow */
+        --color-black: #1c1422; /* Near-black */
+        --color-white: #f7f4fa; /* Soft white */
+
+        --color-blue: #71c4f1;
+        --color-purple: #7184f1;
+        --color-pink: #f171c4;
+        --color-green: #71f19e;
+
+        --max-width: 1100px;
+
+        --space-xs: 6px;
+        --space-sm: 12px;
+        --space-md: 16px;
+        --space-lg: 24px;
+        --space-xl: 40px;
+        --space-2xl: 64px;
+
+        --radius-sm: 10px;
+        --radius-md: 14px;
+
+        --border: rgba(28, 20, 34, 0.12);
+        --shadow: 0 8px 30px rgba(28, 20, 34, 0.08);
+      }
+
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        background-color: var(--bg-page);
+        color: var(--text-primary);
+      }
+
+      h1,
+      h2,
+      h3 {
+        margin: 0 0 var(--space-sm);
+        font-weight: 750;
+        line-height: 1.2;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      h1 {
+        font-size: clamp(34px, 4vw, 52px);
+      }
+
+      h2 {
+        font-size: clamp(22px, 2.4vw, 30px);
+      }
+
+      .text-yellow {
+        color: #f1de71;
+      }
+
+      .text-white {
+        color: #F7F4FA !important;
+      }
+
+      .accent-italic {
+        font-style: italic;
+      }
+
+
+      p {
+        margin: 0 0 var(--space-md);
+      }
+
+      /* Hyperlinks should be blue */
+      a {
+        color: var(--color-blue);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .container {
+        width: min(var(--max-width), 92%);
+        margin: 0 auto;
+      }
+
+      .section {
+        padding: var(--space-2xl) 0;
+      }
+
+      .card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border);
+        border-radius: var(--radius-md);
+        padding: var(--space-lg);
+        box-shadow: var(--shadow);
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: #fff;
+        font-weight: 650;
+        font-size: 14px;
+      }
+
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: var(--color-accent);
+        border: 1px solid rgba(28, 20, 34, 0.15);
+      }
+
+      .muted {
+        color: var(--text-muted);
+      }
+
+      .button-row {
+        display: flex;
+        gap: var(--space-sm);
+        flex-wrap: wrap;
+        margin-top: var(--space-md);
+      }
+
+      .button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 16px;
+        border-radius: var(--radius-sm);
+        border: 1px solid transparent;
+        font-weight: 700;
+        cursor: pointer;
+        text-decoration: none;
+        transition: transform 120ms ease, opacity 120ms ease, background-color 120ms ease;
+      }
+
+      .button:active {
+        transform: translateY(1px);
+      }
+
+      .button-primary {
+        background: var(--color-accent);
+        color: var(--color-black);
+      }
+
+      .button-primary:hover {
+        opacity: 0.9;
+        text-decoration: none;
+      }
+
+      .button-secondary {
+        background: transparent;
+        border-color: var(--border);
+        color: var(--text-primary);
+      }
+
+      .button-secondary:hover {
+        background: rgba(241, 222, 113, 0.12);
+        text-decoration: none;
+      }
+
+      /* =========================
+         Header
+         ========================= */
+
+      header {
+        position: sticky;
+        top: 0;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--border);
+        z-index: 10;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: var(--space-md) 0;
+        gap: var(--space-lg);
+      }
+
+      .logo {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 900;
+        color: var(--text-primary);
+        letter-spacing: -0.02em;
+      }
+
+      .logo img,
+      .nav-logo-img {
+        width: 100px;
+        height: 40px;
+        max-width: none;
+        object-fit: contain;
+      }
+
+      /* Accessibility helper */
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+
+      /* Mobile menu button */
+      .menu-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+        background: #fff;
+        cursor: pointer;
+      }
+
+      /* Simple hamburger icon */
+      .menu-icon {
+        width: 18px;
+        height: 2px;
+        background: var(--text-primary);
+        position: relative;
+        display: inline-block;
+      }
+
+      .menu-icon::before,
+      .menu-icon::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 18px;
+        height: 2px;
+        background: var(--text-primary);
+      }
+
+      .menu-icon::before {
+        top: -6px;
+      }
+
+      .menu-icon::after {
+        top: 6px;
+      }
+
+      /* Keep nav links near-black (do not inherit global link blue) */
+      nav a {
+        color: var(--text-primary);
+        font-weight: 650;
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      nav a:hover {
+        background: rgba(241, 222, 113, 0.16);
+        text-decoration: none;
+      }
+
+      /*
+        IMPORTANT CHANGE:
+        Do not force display:flex here, mobile logic controls it.
+      */
+      .nav-links {
+        gap: 6px;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+      }
+
+      /* Mobile nav layout (collapsed by default) */
+      @media (max-width: 979px) {
+        .nav {
+          gap: var(--space-md);
+          flex-wrap: wrap;
+        }
+
+        .nav-links {
+          display: none;
+          width: 100%;
+          flex-direction: column;
+          gap: 6px;
+          padding: var(--space-sm);
+          margin-top: var(--space-sm);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          background: #fff;
+        }
+
+        .nav-links.is-open {
+          display: flex;
+        }
+
+        nav a {
+          padding: 10px 12px;
+        }
+      }
+
+      /* Desktop: hide the menu button, show nav normally */
+      @media (min-width: 980px) {
+        .menu-button {
+          display: none;
+        }
+
+        .nav-links {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+          justify-content: flex-end;
+        }
+      }
+
+      /* =========================
+         Hero (Centered)
+         ========================= */
+
+      .hero {
+        padding: var(--space-2xl) 0 var(--space-xl);
+        text-align: center;
+        background-color: #1C1422;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: var(--space-xl);
+        justify-items: center;
+      }
+
+      .hero p {
+        max-width: 72ch;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* =========================
+         Ways to engage 
+         ========================= */
+
+      .two-col {
+        display: grid;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 980px) {
+        .two-col {
+          grid-template-columns: 0.9fr 1.1fr;
+          align-items: start;
+        }
+      }
+
+      .stack {
+        display: grid;
+        gap: var(--space-md);
+      }
+
+      /* Floating Scroll Section (left column sticky, right column scrolls) */
+      @media (min-width: 980px) {
+        #work-with-mia .two-col > div:first-child {
+          position: sticky;
+          top: 120px;
+          align-self: start;
+        }
+      }
+
+      /* Cards: neutral fill, colored LEFT borders in exact order */
+      .mini-card {
+        background: #fff;
+        border: 1px solid var(--border);
+        border-left-width: 8px;
+        border-radius: var(--radius-md);
+        padding: var(--space-md);
+      }
+
+      .mini-card h3 {
+        font-size: 18px;
+        margin: 0 0 6px;
+      }
+
+      .mini-card p {
+        margin: 0 0 10px;
+      }
+
+      /* Card CTA text should be black */
+      .mini-card a {
+        color: var(--color-black);
+        font-weight: 650;
+      }
+
+      /* Exact border order:
+         1) Yellow, 2) Near-black, 3) Blue, 4) Pink, 5) Green, 6) Near-black, 7) Purple
+      */
+      .mini-card.card-newsletter {
+        border-left-color: #f1de71;
+      }
+
+      .mini-card.card-community {
+        border-left-color: #1c1422;
+      }
+
+      .mini-card.card-academy {
+        border-left-color: #71c4f1;
+      }
+
+      .mini-card.card-events {
+        border-left-color: #f171c4;
+      }
+
+      .mini-card.card-hiring {
+        border-left-color: #71f19e;
+      }
+
+      .mini-card.card-consulting {
+        border-left-color: #1c1422;
+      }
+
+      .mini-card.card-partner {
+        border-left-color: #7184f1;
+      }
+
+      /* =========================
+         About
+         ========================= */
+
+      #about {
+        background-color: #1C1422;
+      }
+
+      .about-header {
+        text-align: center;
+        margin-bottom: var(--space-xl);
+      }
+
+      .about-header h2 {
+        text-transform: none;
+        letter-spacing: -0.02em;
+        font-weight: 750;
+        margin-bottom: 10px;
+      }
+
+      .about-header .about-intro {
+        margin: 0;
+      }
+
+      .about {
+        display: grid;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 980px) {
+        .about {
+          grid-template-columns: 0.85fr 1.15fr;
+          align-items: start;
+        }
+      }
+
+      /* Clean photo block (no extra borders/frames) */
+      .photo {
+        border-radius: var(--radius-md);
+        border: 1px solid var(--border);
+        background: var(--bg-surface);
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+
+      .photo img {
+        width: 100%;
+        display: block;
+        height: auto;
+      }
+
+      /* =========================
+         Newsletter
+         ========================= */
+
+      .newsletter {
+        display: grid;
+        gap: var(--space-md);
+        align-items: center;
+      }
+
+      @media (min-width: 980px) {
+        .newsletter {
+          grid-template-columns: 1fr auto;
+        }
+      }
+
+      /* Center CTA to card width */
+      .newsletter .button-row {
+        justify-content: center;
+        margin-top: 0;
+        width: 100%;
+      }
+
+      @media (min-width: 980px) {
+        .newsletter .button-row {
+          justify-self: end;
+          justify-content: flex-end;
+          width: auto;
+        }
+      }
+
+      /* Newsletter card fill + text contrast */
+      #subscribe .card {
+        background-color: #1c1422;
+      }
+
+      #subscribe .card h2,
+      #subscribe .card p {
+        color: #f7f4fa;
+      }
+
+      #subscribe .card p.muted {
+        color: rgba(247, 244, 250, 0.8);
+      }
+
+      /* =========================
+         Footer (MIA Black Background)
+         ========================= */
+
+      footer {
+        background: var(--color-black);
+        color: var(--color-white);
+        padding: var(--space-xl) 0;
+      }
+
+      footer .muted,
+      footer .footer-list a {
+        color: rgba(247, 244, 250, 0.7);
+      }
+
+      .footer-grid {
+        display: grid;
+        gap: var(--space-xl);
+      }
+
+      @media (min-width: 980px) {
+        .footer-grid {
+          grid-template-columns: 1.2fr 1fr 1fr 1fr;
+        }
+      }
+
+      /* Footer section headers bold */
+      .footer-title {
+        font-weight: 900;
+        margin-bottom: var(--space-sm);
+        color: var(--color-white);
+      }
+
+      .footer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: 8px;
+      }
+
+      /* Footer items not bold */
+      .footer-list a {
+        color: var(--color-white);
+        font-weight: 400;
+      }
+
+      .footer-list a:hover {
+        color: var(--color-accent);
+        text-decoration: none;
+      }
+
+      .footer-bottom {
+        margin-top: var(--space-xl);
+        padding-top: var(--space-md);
+        border-top: 1px solid rgba(247, 244, 250, 0.2);
+        display: flex;
+        gap: var(--space-md);
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      /* Footer social icons */
+      .footer-social {
+        display: flex;
+        gap: 14px;
+        margin-top: var(--space-md);
+      }
+
+      .footer-social a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        background: rgba(247, 244, 250, 0.08);
+        transition: background 120ms ease, transform 120ms ease;
+      }
+
+      .footer-social a:hover {
+        background: rgba(241, 222, 113, 0.25);
+        transform: translateY(-1px);
+      }
+
+      .footer-social svg {
+        width: 18px;
+        height: 18px;
+        fill: var(--color-white);
+      }
+    </style>
   </head>
 
   <body>
-    <!-- Header (same structure as your homepage) -->
+    <!-- Header -->
     <header>
       <div class="container nav">
-        <!-- For GitHub Pages, link to the repo homepage -->
-        <a class="logo" href="../index.html">
-          <img src="../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
+        <a class="logo" href="https://www.marketinginaction.xyz/">
+          <img src="assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
 
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -25,7 +654,7 @@
 
         <nav id="primary-nav" class="nav-links" aria-label="Primary navigation">
           <a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">MIA Newsletter</a>
-          <a href="../academy/index.html">MIA Academy</a>
+          <a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">MIA Academy</a>
           <a href="https://www.marketinginaction.xyz/resources" target="_blank" rel="noreferrer">MIA Resources</a>
           <a href="https://www.marketinginaction.xyz/events" target="_blank" rel="noreferrer">MIA Events</a>
           <a href="https://marketinginaction.xyz/jobs" target="_blank" rel="noreferrer">MIA Jobs</a>
@@ -35,91 +664,101 @@
     </header>
 
     <main>
-      <!-- Academy Hero -->
+      <!-- HERO -->
       <section class="academy-hero">
         <div class="container academy-hero-grid">
+          <!-- Left -->
           <div>
-            <div class="pill academy-pill">
+            <div class="academy-pill">
               <span class="dot" aria-hidden="true"></span>
-              MIA Newsletter, Academy, Jobs & Consulting with James Praise
+              MIA Academy
             </div>
 
-            <h1 class="text-white" style="margin-top: var(--space-lg)">
-              Put marketing skills into <span class="text-yellow accent-italic">action</span>, not theory.
+            <h1 style="margin-top: 18px">
+              Put marketing<br />
+              skills into <span class="text-yellow accent-italic">action</span>,<br />
+              not theory.
             </h1>
 
-            <p class="muted text-white academy-hero-sub">
+            <p class="muted" style="max-width: 58ch; margin-top: 10px">
               MIA Academy is where modern marketers learn by doing. Applied product marketing, growth, GTM, and AI skills taught through real
               execution, feedback, and systems you can use at work.
             </p>
 
-            <div class="button-row academy-hero-ctas">
+            <div class="button-row" style="margin-top: 18px">
               <a class="button button-primary" href="#programs">Explore Programs</a>
-              <a class="button button-secondary academy-secondary-dark" href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">
+              <a
+                class="button button-secondary"
+                href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1"
+                target="_blank"
+                rel="noreferrer"
+              >
                 Join the Community
               </a>
             </div>
 
-            <div class="academy-alumni">
-              <div class="academy-alumni-label">OUR ALUMNI WORK AT</div>
-              <div class="academy-alumni-logos" aria-label="Alumni companies">
+            <hr class="academy-hero-divider" />
+
+            <div class="alumni-row">
+              <div class="alumni-label">OUR ALUMNI WORK AT</div>
+              <div class="alumni-logos" aria-label="Alumni companies">
                 <span>REFORM</span>
                 <span>KUDA</span>
                 <span>BUJETI</span>
                 <span>MONIEPOINT</span>
+                <span>REFORM</span>
               </div>
             </div>
           </div>
 
-          <div class="academy-testimonials" aria-label="Testimonials">
-            <div class="academy-quote">
-              <p class="academy-quote-text">
+          <!-- Right -->
+          <div class="testimonial-col" aria-label="Testimonials">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
                 “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
               </p>
-              <div class="academy-quote-meta">
-                <span class="academy-avatar">T</span>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">T</div>
                 <div>
-                  <div class="academy-quote-name">Theodore Nnah</div>
-                  <div class="academy-quote-role muted">Product Marketer</div>
+                  <div class="testimonial-name">Theodore Nnah</div>
+                  <div class="testimonial-role">Product Marketer</div>
                 </div>
               </div>
             </div>
 
-            <div class="academy-quote">
-              <p class="academy-quote-text">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
                 “I’ve taken courses before, but this actually changed how I approach product marketing in my day-to-day work.”
               </p>
-              <div class="academy-quote-meta">
-                <span class="academy-avatar">C</span>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">C</div>
                 <div>
-                  <div class="academy-quote-name">Chidinma Ezeani</div>
-                  <div class="academy-quote-role muted">Marketing Manager</div>
+                  <div class="testimonial-name">Chidinma Ezeani</div>
+                  <div class="testimonial-role">Marketing Manager</div>
                 </div>
               </div>
             </div>
 
-            <div class="academy-quote">
-              <p class="academy-quote-text">
+            <div class="testimonial-card">
+              <p class="testimonial-quote">
                 “I’ve been in product marketing for a while, but this helped me think more clearly about what I was already doing.”
               </p>
-              <div class="academy-quote-meta">
-                <span class="academy-avatar">T</span>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">T</div>
                 <div>
-                  <div class="academy-quote-name">Tunde Adewale</div>
-                  <div class="academy-quote-role muted">Senior Product Marketing Manager</div>
+                  <div class="testimonial-name">Tunde Adewale</div>
+                  <div class="testimonial-role">Senior Product Marketing Manager</div>
                 </div>
               </div>
             </div>
 
-            <div class="academy-quote">
-              <p class="academy-quote-text">
-                “The way things were broken down made it easier to act, not just understand.”
-              </p>
-              <div class="academy-quote-meta">
-                <span class="academy-avatar">D</span>
+            <div class="testimonial-card">
+              <p class="testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
+              <div class="testimonial-person">
+                <div class="testimonial-avatar">D</div>
                 <div>
-                  <div class="academy-quote-name">Despina Maris</div>
-                  <div class="academy-quote-role muted">Product Marketer</div>
+                  <div class="testimonial-name">Despina Maris</div>
+                  <div class="testimonial-role">Product Marketer</div>
                 </div>
               </div>
             </div>
@@ -127,290 +766,342 @@
         </div>
       </section>
 
-      <!-- Programs -->
-      <section id="programs" class="section">
+    <!-- PROGRAMS -->
+      <section id="programs" class="section academy-programs">
         <div class="container">
-          <div class="academy-section-head">
-            <h2>Get Started with MIA Academy Programs</h2>
-            <p class="muted">
-              Choose the learning path that matches the level of depth, support, and speed you need right now. All programs are built around
-              applied execution, not passive learning.
+          <div class="programs-head">
+            <h2>Get Started with MIA Academy<br />Programs</h2>
+            <p>
+              Choose the learning path that matches the level of depth, support, and speed you need right now. All programs are built around applied
+              execution, not passive learning.
             </p>
           </div>
 
-          <div class="academy-programs-grid">
-            <!-- Row 1 -->
-            <article class="academy-program-card accent-blue">
-              <div class="academy-program-top">
-                <span class="academy-badge">BOOTCAMP</span>
-                <h3>Product & Growth Marketing with AI for Modern Marketers</h3>
-                <p class="muted">
-                  A live, cohort-based bootcamp focused on real product marketing and GTM execution. You’ll apply frameworks to real scenarios and
-                  leave with systems you can reuse.
+          <div class="program-grid">
+            <!-- 1 -->
+            <article class="program-card">
+              <div class="program-rail" style="background: var(--color-blue)"></div>
+              <div class="program-inner">
+                <div class="program-tag">BOOTCAMP</div>
+                <h3 class="program-title">Product & Growth Marketing with AI for Modern Marketers</h3>
+                <p class="program-desc">
+                  A live cohort bootcamp focused on real product marketing and GTM execution. Apply frameworks to real scenarios, get feedback, and leave
+                  with reusable systems you can use at work.
                 </p>
-              </div>
 
-              <div class="academy-program-bottom">
-                <div class="academy-meta-row">
+                <div class="program-includes" style="margin-top: 6px">
+                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
+                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
+                    <li>Live sessions + assignments</li>
+                    <li>Templates, playbooks, and feedback</li>
+                  </ul>
+                </div>
+
+                <hr class="program-hr" />
+
+                <div class="program-meta">
                   <div>
-                    <div class="academy-meta-label">COST</div>
-                    <div class="academy-meta-value">₦65,000</div>
+                    <p class="meta-label">COST</p>
+                    <p class="meta-value">₦65,000</p>
                   </div>
-                  <div class="academy-meta-right">
-                    <div class="academy-meta-label">FORMAT</div>
-                    <div class="academy-meta-value academy-meta-small">Live cohort, applied assignments, feedback</div>
+                  <div>
+                    <p class="meta-label">FORMAT</p>
+                    <p class="meta-sub">Live cohort, applied assignments, feedback</p>
                   </div>
                 </div>
-                <a class="button academy-program-cta" href="#" aria-label="Get access to Product & Growth Marketing with AI Bootcamp">Get Access</a>
+
+                <a class="program-btn" href="https://selar.com/marketingprogram" target="_blank" rel="noreferrer">Get Access</a>
               </div>
             </article>
 
-            <article class="academy-program-card accent-pink">
-              <div class="academy-program-top">
-                <span class="academy-badge">COURSE</span>
-                <h3>The Complete Product Marketing Training Course</h3>
-                <p class="muted">
-                  A self-paced course covering product marketing fundamentals through GTM execution. Built to help you apply positioning, launches,
-                  and enablement directly.
+            <!-- 2 -->
+            <article class="program-card">
+              <div class="program-rail" style="background: var(--color-pink)"></div>
+              <div class="program-inner">
+                <div class="program-tag">COURSE</div>
+                <h3 class="program-title">The Complete Product Marketing Training Course</h3>
+                <p class="program-desc">
+                  A self-paced course covering product marketing fundamentals through GTM execution. Learn positioning, launches, and enablement in a way
+                  you can apply directly to real work.
                 </p>
-              </div>
 
-              <div class="academy-program-bottom">
-                <div class="academy-meta-row">
+                <div class="program-includes" style="margin-top: 6px">
+                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
+                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
+                    <li>Pre-recorded lessons</li>
+                    <li>Handbook and practical templates</li>
+                  </ul>
+                </div>
+
+                <hr class="program-hr" />
+
+                <div class="program-meta">
                   <div>
-                    <div class="academy-meta-label">COST</div>
-                    <div class="academy-meta-value">₦15,000</div>
+                    <p class="meta-label">COST</p>
+                    <p class="meta-value">₦15,000</p>
                   </div>
-                  <div class="academy-meta-right">
-                    <div class="academy-meta-label">FORMAT</div>
-                    <div class="academy-meta-value academy-meta-small">Pre-recorded videos + handbook</div>
+                  <div>
+                    <p class="meta-label">FORMAT</p>
+                    <p class="meta-sub">Pre-recorded videos + handbook</p>
                   </div>
                 </div>
-                <a class="button academy-program-cta" href="#" aria-label="Get access to Complete Product Marketing Training Course">Get Access</a>
+
+                <a class="program-btn" href="#" aria-label="Replace with course checkout link">Get Access</a>
               </div>
             </article>
 
-            <article class="academy-program-card accent-green">
-              <div class="academy-program-top">
-                <span class="academy-badge">LIBRARY</span>
-                <h3>Product Marketing Templates & Resources Library</h3>
-                <p class="muted">
-                  Get access to 50+ templates, frameworks, and resources designed to help you execute with clarity inside real teams.
+            <!-- 3 -->
+            <article class="program-card">
+              <div class="program-rail" style="background: var(--color-green)"></div>
+              <div class="program-inner">
+                <div class="program-tag">LIBRARY</div>
+                <h3 class="program-title">Product Marketing Templates & Resources Library</h3>
+                <p class="program-desc">
+                  Get access to 50+ product and growth marketing templates, frameworks, and resources designed to help you execute with clarity inside real
+                  teams.
                 </p>
-                <div class="academy-includes">
-                  <div class="academy-includes-title">INCLUDES:</div>
-                  <ul class="academy-includes-list muted">
+
+                <div class="program-includes" style="margin-top: 6px">
+                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
+                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
                     <li>Google Docs, Sheets, and Notion templates</li>
                     <li>Playbooks and handbooks</li>
                   </ul>
                 </div>
-              </div>
 
-              <div class="academy-program-bottom">
-                <div class="academy-meta-row">
+                <hr class="program-hr" />
+
+                <div class="program-meta">
                   <div>
-                    <div class="academy-meta-label">COST</div>
-                    <div class="academy-meta-value">₦20,000</div>
+                    <p class="meta-label">COST</p>
+                    <p class="meta-value">₦20,000</p>
                   </div>
-                  <div class="academy-meta-right">
-                    <div class="academy-meta-label">FORMAT</div>
-                    <div class="academy-meta-value academy-meta-small">Instant Access</div>
+                  <div>
+                    <p class="meta-label">FORMAT</p>
+                    <p class="meta-sub">Instant Access</p>
                   </div>
                 </div>
-                <a class="button academy-program-cta" href="#" aria-label="Get access to Product Marketing Templates & Resources Library">Get Access</a>
+
+                <a class="program-btn" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">Get Access</a>
               </div>
             </article>
 
-            <!-- Row 2 -->
-            <article class="academy-program-card accent-yellow">
-              <div class="academy-program-top">
-                <span class="academy-badge">LIBRARY</span>
-                <h3>AI Prompt Frameworks & Templates for Marketers</h3>
-                <p class="muted">
-                  The exact frameworks and templates used by 200+ marketers to produce consistent, high-quality outputs from AI.
+            <!-- 4 -->
+            <article class="program-card">
+              <div class="program-rail" style="background: var(--color-accent)"></div>
+              <div class="program-inner">
+                <div class="program-tag">LIBRARY</div>
+                <h3 class="program-title">AI Prompt Frameworks & Templates for Marketers</h3>
+                <p class="program-desc">
+                  Frameworks and templates used by 200+ marketers and founders to produce consistent, high-quality outputs from AI across real marketing
+                  use cases.
                 </p>
-                <div class="academy-includes">
-                  <div class="academy-includes-title">INCLUDES:</div>
-                  <ul class="academy-includes-list muted">
+
+                <div class="program-includes" style="margin-top: 6px">
+                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
+                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
                     <li>Prompt frameworks</li>
-                    <li>Reusable templates</li>
-                    <li>AI workflows</li>
+                    <li>Reusable templates and AI workflows</li>
                   </ul>
                 </div>
-              </div>
 
-              <div class="academy-program-bottom">
-                <div class="academy-meta-row">
+                <hr class="program-hr" />
+
+                <div class="program-meta">
                   <div>
-                    <div class="academy-meta-label">COST</div>
-                    <div class="academy-meta-value">₦20,000</div>
+                    <p class="meta-label">COST</p>
+                    <p class="meta-value">₦20,000</p>
                   </div>
-                  <div class="academy-meta-right">
-                    <div class="academy-meta-label">FORMAT</div>
-                    <div class="academy-meta-value academy-meta-small">Instant Access</div>
+                  <div>
+                    <p class="meta-label">FORMAT</p>
+                    <p class="meta-sub">Instant Access</p>
                   </div>
                 </div>
-                <a class="button academy-program-cta" href="#" aria-label="Get access to AI Prompt Frameworks & Templates">Get Access</a>
+
+                <a class="program-btn" href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">Get Access</a>
               </div>
             </article>
 
-            <article class="academy-program-card accent-purple">
-              <div class="academy-program-top">
-                <span class="academy-badge">HANDBOOK</span>
-                <h3>The Complete Growth Marketing Handbook</h3>
-                <p class="muted">
-                  Execution-focused handbook covering growth strategy, experimentation, onboarding, acquisition, and B2B sales fundamentals.
+            <!-- 5 -->
+            <article class="program-card">
+              <div class="program-rail" style="background: var(--color-purple)"></div>
+              <div class="program-inner">
+                <div class="program-tag">HANDBOOK</div>
+                <h3 class="program-title">The Complete Growth Marketing Handbook</h3>
+                <p class="program-desc">
+                  An execution-focused handbook covering growth strategy, experimentation, onboarding, acquisition, ads, B2B sales fundamentals, and content
+                  distribution.
                 </p>
-              </div>
 
-              <div class="academy-program-bottom">
-                <div class="academy-meta-row">
+                <div class="program-includes" style="margin-top: 6px">
+                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
+                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
+                    <li>Handbook + practical examples</li>
+                    <li>Frameworks you can reuse</li>
+                  </ul>
+                </div>
+
+                <hr class="program-hr" />
+
+                <div class="program-meta">
                   <div>
-                    <div class="academy-meta-label">COST</div>
-                    <div class="academy-meta-value">₦10,000</div>
+                    <p class="meta-label">COST</p>
+                    <p class="meta-value">₦10,000</p>
                   </div>
-                  <div class="academy-meta-right">
-                    <div class="academy-meta-label">FORMAT</div>
-                    <div class="academy-meta-value academy-meta-small">Digital Handbook</div>
+                  <div>
+                    <p class="meta-label">FORMAT</p>
+                    <p class="meta-sub">Digital Handbook</p>
                   </div>
                 </div>
-                <a class="button academy-program-cta" href="#" aria-label="Get access to Complete Growth Marketing Handbook">Get Access</a>
+
+                <a class="program-btn" href="#" aria-label="Replace with handbook checkout link">Get Access</a>
               </div>
             </article>
 
-            <article class="academy-program-card accent-black">
-              <div class="academy-program-top">
-                <span class="academy-badge">HANDBOOK</span>
-                <h3>The Complete Digital Marketing Guide</h3>
-                <p class="muted">
+            <!-- 6 -->
+            <article class="program-card">
+              <div class="program-rail" style="background: #111016"></div>
+              <div class="program-inner">
+                <div class="program-tag">HANDBOOK</div>
+                <h3 class="program-title">The Complete Digital Marketing Guide</h3>
+                <p class="program-desc">
                   A structured handbook covering digital marketing strategy across SEO, content, social, ads, attribution, and measurement.
                 </p>
-              </div>
 
-              <div class="academy-program-bottom">
-                <div class="academy-meta-row">
+                <div class="program-includes" style="margin-top: 6px">
+                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
+                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
+                    <li>Digital strategy playbook</li>
+                    <li>Channel checklists and examples</li>
+                  </ul>
+                </div>
+
+                <hr class="program-hr" />
+
+                <div class="program-meta">
                   <div>
-                    <div class="academy-meta-label">COST</div>
-                    <div class="academy-meta-value">₦5,000</div>
+                    <p class="meta-label">COST</p>
+                    <p class="meta-value">₦5,000</p>
                   </div>
-                  <div class="academy-meta-right">
-                    <div class="academy-meta-label">FORMAT</div>
-                    <div class="academy-meta-value academy-meta-small">Digital Handbook</div>
+                  <div>
+                    <p class="meta-label">FORMAT</p>
+                    <p class="meta-sub">Digital Handbook</p>
                   </div>
                 </div>
-                <a class="button academy-program-cta" href="#" aria-label="Get access to Complete Digital Marketing Guide">Get Access</a>
+
+                <a class="program-btn" href="#" aria-label="Replace with guide checkout link">Get Access</a>
               </div>
             </article>
           </div>
         </div>
       </section>
+  
 
-      <!-- How it works -->
-      <section class="academy-how">
+      <!-- HOW IT WORKS -->
+      <section class="section academy-how" id="how">
         <div class="container academy-how-grid">
-          <div>
-            <h2 class="text-white">How MIA<br />Academy works</h2>
-            <p class="muted text-white">
-              MIA Academy is not a one-off course. It’s a learning-to-career system designed to help you build skill, apply it in context, and
-              turn it into opportunity.
+          <div class="academy-how-sticky">
+            <h2>How MIA<br />Academy works</h2>
+            <p class="muted" style="max-width: 40ch; margin-top: 10px">
+              MIA Academy is not a one-off course. It’s a learning-to-career system designed to help you build skill, apply it in context, and turn it
+              into opportunity.
             </p>
 
-            <div class="academy-side-card">
-              <div class="academy-side-card-title">Proactive Career Path</div>
-              <p class="muted text-white academy-side-card-text">
-                We focus on “Usable Output” rather than simple completion certificates. You build assets you can show employers.
+            <div class="how-callout">
+              <p class="how-callout-title">Proactive Career Path</p>
+              <p class="how-callout-text">
+                We focus on usable output rather than simple completion certificates. You build assets you can show employers.
               </p>
             </div>
           </div>
 
-          <div class="academy-steps" aria-label="How MIA Academy works steps">
-            <div class="academy-step">
-              <div class="academy-step-num">1</div>
+          <div class="how-steps" aria-label="How it works steps">
+            <div class="how-step">
+              <div class="step-num">1</div>
               <div>
-                <div class="academy-step-title">Start with the right program</div>
-                <p class="muted academy-step-text">
-                  You begin by enrolling in the program that fits where you are right now. Whether it's a bootcamp for guided execution or a
-                  self-paced course for flexibility.
+                <h3 class="step-title">Start with the right program</h3>
+                <p class="step-text">
+                  You begin by enrolling in the program that fits where you are right now. Whether it's a bootcamp for guided execution or a self-paced
+                  course for flexibility.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">2</div>
+            <div class="how-step">
+              <div class="step-num">2</div>
               <div>
-                <div class="academy-step-title">Learn with real context</div>
-                <p class="muted academy-step-text">
-                  You don’t just consume content. You learn frameworks and approaches grounded in real product, growth, and GTM work.
+                <h3 class="step-title">Learn with real context</h3>
+                <p class="step-text">
+                  You don't just consume content. You learn frameworks and approaches grounded in real product, growth, and GTM work.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">3</div>
+            <div class="how-step">
+              <div class="step-num">3</div>
               <div>
-                <div class="academy-step-title">Apply what you’re learning</div>
-                <p class="muted academy-step-text">
+                <h3 class="step-title">Apply what you’re learning</h3>
+                <p class="step-text">
                   As you go through a program, you apply what you learn to real scenarios, practical exercises, and portfolio-style work.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">4</div>
+            <div class="how-step">
+              <div class="step-num">4</div>
               <div>
-                <div class="academy-step-title">Get feedback from people doing the work</div>
-                <p class="muted academy-step-text">
-                  You don’t learn in isolation. Through the MIA Community, you share work, ask questions, and get feedback from peers and
-                  practitioners.
+                <h3 class="step-title">Get feedback from people doing the work</h3>
+                <p class="step-text">
+                  You don't learn in isolation. Through the MIA Community, you share work, ask questions, and get feedback from peers and practitioners.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">5</div>
+            <div class="how-step">
+              <div class="step-num">5</div>
               <div>
-                <div class="academy-step-title">Access the full MIA resource ecosystem</div>
-                <p class="muted academy-step-text">
+                <h3 class="step-title">Access the full MIA resource ecosystem</h3>
+                <p class="step-text">
                   As a learner, you get ongoing access to templates, frameworks, playbooks, and supporting tools that evolve with the market.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">6</div>
+            <div class="how-step">
+              <div class="step-num">6</div>
               <div>
-                <div class="academy-step-title">Attend MIA events and deepen your network</div>
-                <p class="muted academy-step-text">
+                <h3 class="step-title">Attend MIA events and deepen your network</h3>
+                <p class="step-text">
                   MIA hosts focused virtual and in-person events designed to deepen trust and connect people doing similar work.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">7</div>
+            <div class="how-step">
+              <div class="step-num">7</div>
               <div>
-                <div class="academy-step-title">Become job-ready through proof of work</div>
-                <p class="muted academy-step-text">
+                <h3 class="step-title">Become job-ready through proof of work</h3>
+                <p class="step-text">
                   By applying what you learn, you build clear examples of execution and artifacts you can talk through with confidence.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">8</div>
+            <div class="how-step">
+              <div class="step-num">8</div>
               <div>
-                <div class="academy-step-title">Find opportunities through MIA Jobs</div>
-                <p class="muted academy-step-text">
+                <h3 class="step-title">Find opportunities through MIA Jobs</h3>
+                <p class="step-text">
                   MIA Jobs connects marketers to roles based on execution skill and proof of work, not just resumes alone.
                 </p>
               </div>
             </div>
 
-            <div class="academy-step">
-              <div class="academy-step-num">9</div>
+            <div class="how-step">
+              <div class="step-num">9</div>
               <div>
-                <div class="academy-step-title">Get continuous career support</div>
-                <p class="muted academy-step-text">
+                <h3 class="step-title">Get continuous career support</h3>
+                <p class="step-text">
                   Your journey doesn't end after one program. You continue to get access to new resources, learning opportunities, and guidance.
                 </p>
               </div>
@@ -419,64 +1110,47 @@
         </div>
       </section>
 
-      <!-- Quiz CTA -->
-      <section class="academy-quiz-wrap">
+      <!-- QUIZ CTA -->
+      <section class="quiz-wrap" id="start">
         <div class="container">
-          <div class="academy-quiz-card">
-            <h2 class="text-white academy-quiz-title">Not sure where to start?</h2>
-            <p class="muted text-white academy-quiz-sub">
-              If you’re unsure whether to start with a bootcamp, a self-paced course, or a resource library, we can help you decide in a few
-              minutes.
+          <div class="quiz-panel">
+            <h2>Not sure where to start?</h2>
+            <p>
+              If you’re unsure whether to start with a bootcamp, a self-paced course, or a resource library, we can help you decide in a few minutes.
             </p>
 
-            <div class="academy-quiz-divider"></div>
+            <hr class="quiz-divider" />
 
-            <div class="academy-quiz-steps">
-              <div class="academy-quiz-step">
-                <div class="academy-quiz-step-num">1</div>
-                <div class="academy-quiz-step-text text-white">
-                  Answer a short set of questions about your role and goals.
-                </div>
+            <div class="quiz-steps" aria-label="Quiz steps">
+              <div class="quiz-step">
+                <div class="step-num">1</div>
+                <p>Answer a short set of questions about your role and goals.</p>
               </div>
 
-              <div class="academy-quiz-step">
-                <div class="academy-quiz-step-num">2</div>
-                <div class="academy-quiz-step-text text-white">
-                  Get a clear recommendation on which MIA program fits you best.
-                </div>
+              <div class="quiz-step">
+                <div class="step-num">2</div>
+                <p>Get a clear recommendation on which MIA program fits you best.</p>
               </div>
             </div>
 
-            <div class="academy-quiz-cta">
-              <a class="button button-primary academy-quiz-button" href="#" aria-label="Take the 3-minute quiz">Take the 3-Minute Quiz</a>
-            </div>
-          </div>
-        </div>
-      </section>
+            <div class="quiz-divider"></div>
 
-      <!-- Newsletter (same pattern as your homepage, but light version like the screenshot) -->
-      <section class="section">
-        <div class="container">
-          <div class="academy-subscribe-bar">
-            <div>
-              <h2 style="margin-bottom: 6px">Subscribe to the MIA Newsletter</h2>
-              <p class="muted" style="margin: 0">
-                We’re building a village of 5,000+ marketers and founders who want to increase their odds of succeeding at marketing. You’re one
-                of us.
-              </p>
-            </div>
-
-            <div class="button-row" style="margin: 0">
-              <a class="button button-primary" href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">
-                Subscribe to the Newsletter
-              </a>
-            </div>
+            <div class="quiz-cta">
+            <a
+              class="quiz-btn"
+              href="https://tally.so/r/0QBXqy"
+              aria-label="Take the 3 minute MIA Academy quiz"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Take the 3-Minute Quiz
+            </a>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer (same as your homepage) -->
+    <!-- Footer -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -488,7 +1162,13 @@
             </p>
 
             <div class="footer-social">
-              <a href="https://www.linkedin.com/company/marketinginactionnewsletter" aria-label="LinkedIn" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/company/marketinginactionnewsletter"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <!-- LinkedIn -->
                 <svg viewBox="0 0 24 24">
                   <path
                     d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z"
@@ -497,6 +1177,7 @@
               </a>
 
               <a href="https://twitter.com/marketinginact" aria-label="Twitter" target="_blank" rel="noreferrer">
+                <!-- Twitter -->
                 <svg viewBox="0 0 24 24">
                   <path
                     d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.48 8.48 0 01-2.7 1.03A4.24 4.24 0 0016.1 4c-2.36 0-4.27 1.91-4.27 4.27 0 .33.04.66.11.97A12.05 12.05 0 013 5.1a4.27 4.27 0 001.32 5.69 4.2 4.2 0 01-1.93-.53v.05c0 2.07 1.47 3.8 3.42 4.19a4.3 4.3 0 01-1.92.07 4.27 4.27 0 003.99 2.96A8.5 8.5 0 012 19.54a12.02 12.02 0 006.53 1.91c7.84 0 12.13-6.5 12.13-12.13l-.01-.55A8.7 8.7 0 0022.46 6z"
@@ -505,6 +1186,7 @@
               </a>
 
               <a href="https://www.instagram.com/marketinginact" aria-label="Instagram" target="_blank" rel="noreferrer">
+                <!-- Instagram -->
                 <svg viewBox="0 0 24 24">
                   <path
                     d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.6.23 1.03.5 1.48.95.45.45.72.88.95 1.48.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.23.6-.5 1.03-.95 1.48-.45.45-.88.72-1.48.95-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.6-.23-1.03-.5-1.48-.95-.45-.45-.72-.88-.95-1.48-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.23-.6.5-1.03.95-1.48.45-.45.88-.72 1.48-.95.46-.16 1.26-.35 2.43-.4 1.27-.06 1.65-.07 4.85-.07zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.88a4.28 4.28 0 110-8.56 4.28 4.28 0 010 8.56zm6.84-11.14a1.54 1.54 0 110 3.08 1.54 1.54 0 010-3.08z"
@@ -518,6 +1200,7 @@
                 target="_blank"
                 rel="noreferrer"
               >
+                <!-- YouTube -->
                 <svg viewBox="0 0 24 24">
                   <path
                     d="M23.5 6.5s-.23-1.62-.93-2.34c-.88-.93-1.87-.93-2.33-.98C16.97 3 12 3 12 3h-.01s-4.97 0-8.24.18c-.46.05-1.45.05-2.33.98C.72 4.88.5 6.5.5 6.5S0 8.41 0 10.33v1.34c0 1.91.5 3.83.5 3.83s.23 1.62.93 2.34c.88.93 2.04.9 2.56 1C5.86 19 12 19 12 19s4.97 0 8.24-.18c.46-.05 1.45-.05 2.33-.98.7-.72.93-2.34.93-2.34s.5-1.91.5-3.83v-1.34c0-1.91-.5-3.83-.5-3.83zM9.75 14.57V8.93l5.5 2.82-5.5 2.82z"
@@ -526,6 +1209,7 @@
               </a>
 
               <a href="https://www.tiktok.com/@marketinginact" aria-label="TikTok" target="_blank" rel="noreferrer">
+                <!-- TikTok -->
                 <svg viewBox="0 0 24 24">
                   <path
                     d="M16.7 3c.5 2.9 2.3 4.7 5 4.9v3.1c-1.8.1-3.3-.5-4.8-1.5v6.1c0 4-2.8 6.8-6.7 6.8-3.5 0-6.4-2.8-6.4-6.4 0-3.8 3-6.6 6.8-6.6.5 0 1 .1 1.5.2v3.3c-.5-.2-1-.4-1.6-.4-1.8 0-3.3 1.4-3.3 3.3 0 1.8 1.4 3.3 3.3 3.3 2.1 0 3.5-1.3 3.5-4V3h2.7z"
@@ -540,8 +1224,10 @@
             <ul class="footer-list">
               <li><a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">MIA Newsletter</a></li>
               <li><a href="https://luma.com/marketinginaction" target="_blank" rel="noreferrer">MIA Events</a></li>
-              <li><a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a></li>
-              <li><a href="../academy/index.html">MIA Academy</a></li>
+              <li>
+                <a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a>
+              </li>
+              <li><a href="https://marketinginaction.xyz/academy" target="_blank" rel="noreferrer">MIA Academy</a></li>
               <li><a href="https://marketinginaction.xyz/jobs" target="_blank" rel="noreferrer">MIA Jobs</a></li>
               <li><a href="https://www.marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">MIA Consulting</a></li>
             </ul>
@@ -550,13 +1236,19 @@
           <div>
             <div class="footer-title">MIA Resources</div>
             <ul class="footer-list">
-              <li><a href="https://selar.com/marketingprogram" target="_blank" rel="noreferrer">Product & Growth Marketing with AI Bootcamp</a></li>
-              <li><a href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">Product Marketing Templates & Resources Library</a></li>
-              <li><a href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">AI Prompt Frameworks & Templates for Marketers</a></li>
               <li>
-                <a href="https://www.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">
-                  The State of Marketing In African Tech (Report)
-                </a>
+                <a href="https://selar.com/marketingprogram" target="_blank" rel="noreferrer">Product & Growth Marketing with AI Bootcamp</a>
+              </li>
+              <li>
+                <a href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">Product Marketing Templates & Resources Library</a>
+              </li>
+              <li>
+                <a href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">AI Prompt Frameworks & Templates for Marketers</a>
+              </li>
+              <li>
+                <a href="https://www.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"
+                  >The State of Marketing In African Tech (Report)</a
+                >
               </li>
               <li>
                 <a
@@ -567,52 +1259,72 @@
                   Marketing & AI Product Database
                 </a>
               </li>
-              <li><a href="https://www.marketinginaction.xyz/resources" target="_blank" rel="noreferrer">View all resources</a></li>
+              <li>
+                <a
+                  href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Marketing Thought Leaders Database
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Annual Tech Events Calendar
+                </a>
+              </li>
+              <li><a href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer">Ask James Anything</a></li>
+              <li>
+                <a
+                  href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  MIA Resource Library (Free)
+                </a>
+              </li>
             </ul>
           </div>
 
           <div>
             <div class="footer-title">Work with MIA</div>
             <ul class="footer-list">
-              <li><a href="https://www.marketinginaction.xyz/consulting" target="_blank" rel="noreferrer">Advertise with MIA</a></li>
-              <li><a href="mailto:james@marketinginaction.xyz">Work with MIA (Email)</a></li>
-            </ul>
-
-            <div class="footer-title" style="margin-top: 18px">Social</div>
-            <ul class="footer-list">
-              <li><a href="https://www.linkedin.com/company/marketinginactionnewsletter" target="_blank" rel="noreferrer">LinkedIn</a></li>
-              <li><a href="https://www.instagram.com/marketinginact" target="_blank" rel="noreferrer">Instagram</a></li>
-              <li><a href="https://www.tiktok.com/@marketinginact" target="_blank" rel="noreferrer">TikTok</a></li>
-              <li><a href="https://twitter.com/marketinginact" target="_blank" rel="noreferrer">Twitter</a></li>
-              <li><a href="https://www.facebook.com/marketinginactionhub" target="_blank" rel="noreferrer">Facebook</a></li>
               <li>
-                <a href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp" target="_blank" rel="noreferrer"
-                  >YouTube</a
+                <a
+                  href="https://drive.google.com/file/d/1u209WbBYXV7572Lc2QmjL91DmxUmkvo6/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
                 >
+                  Advertise with MIA
+                </a>
               </li>
+              <li><a href="mailto:james@marketinginaction.xyz">Work with MIA (Email)</a></li>
             </ul>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div class="muted">Copyright 2026, Marketing In Action Hub.</div>
-          <a class="footer-email" href="mailto:james@marketinginaction.xyz">james@marketinginaction.xyz</a>
+          <div class="muted">Copyright <span id="year"></span>, Marketing In Action Hub.</div>
         </div>
       </div>
     </footer>
 
-    <!-- Mobile menu toggle (same behavior as your homepage) -->
     <script>
-      (function () {
-        var btn = document.querySelector(".menu-button");
-        var nav = document.querySelector("#primary-nav");
-        if (!btn || !nav) return;
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-        btn.addEventListener("click", function () {
-          var isOpen = nav.classList.toggle("is-open");
-          btn.setAttribute("aria-expanded", String(isOpen));
-        });
-      })();
+    <script>
+      const btn = document.querySelector(".menu-button");
+      const nav = document.querySelector(".nav-links");
+
+      btn.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
     </script>
   </body>
 </html>
