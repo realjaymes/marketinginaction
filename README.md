@@ -42,7 +42,8 @@ Live site: https://marketinginaction.xyz
 - Git for version control and change tracking
 - GitHub for repository hosting and collaboration
 ### Hosting, DNS & Delivery
-- GitHub Pages for static site hosting and continuous deployment
+- GitHub Pages for static site hosting and continuous deployment (v1)
+- Netlify for static site hosting and continuous deployment (v2)
 - Cloudflare for DNS management, SSL, CDN, and redirect rules
 ### Content & Publishing
 - Substack for newsletter publishing and content management on a custom subdomain
