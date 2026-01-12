@@ -1159,3 +1159,57 @@ footer .muted {
 .theme-dark .resources-proof-list li {
   margin: 10px 0;
 }
+
+/* =========================================
+   Resources fixes (CSS only, before HTML edits)
+   ========================================= */
+
+/* 1) Header layout consistency */
+header .nav {
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.nav-links a {
+  white-space: nowrap;
+}
+
+/* 2) Pin CTAs to the bottom of resource cards */
+.program-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.program-btn {
+  margin-top: auto;
+}
+
+/* Reduce excess height so cards feel tighter */
+.program-inner {
+  min-height: 420px; /* was 520px, keeps alignment but less tall */
+}
+
+/* 3) Social proof should be a dark panel on the light page, not merged with footer */
+.social-proof-panel {
+  background: #1c1422;
+  border: 1px solid rgba(247, 244, 250, 0.14);
+  border-radius: 22px;
+  padding: clamp(20px, 3vw, 40px);
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.35);
+}
+
+/* Give the section breathing room above the footer */
+.section.social-proof-wrap {
+  padding-bottom: var(--space-xl);
+}
+
+/* Make sure footer starts as its own block */
+footer {
+  margin-top: 0;
+}
