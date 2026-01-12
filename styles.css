@@ -256,6 +256,23 @@ nav a:hover {
   }
 }
 
+/* Homepage hero layout: match current HTML (.container.hero-grid) */
+.hero {
+  text-align: center;
+}
+
+.hero-grid {
+  display: grid;
+  gap: var(--space-xl);
+  justify-items: center;
+}
+
+/* Preheader pill typography: restore old look */
+.pill {
+  font-weight: 650;
+  font-size: 14px;
+}
+
 /* =========================================
    Shared Hero – Homepage & Resources
    Centered gradient
