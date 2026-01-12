@@ -257,15 +257,43 @@ nav a:hover {
 }
 
 /* =========================================
-   Shared Hero (Homepage, Resources, Academy)
+   Shared Hero – Homepage & Resources
+   Centered gradient
    ========================================= */
 
 .hero,
-.resources-hero,
+.resources-hero {
+  background:
+    radial-gradient(
+      1200px 600px at 50% 50%,
+      rgba(241, 222, 113, 0.14),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 50% 50%,
+      rgba(113, 132, 241, 0.10),
+      transparent 65%
+    ),
+    #1c1422;
+}
+
+/* =========================================
+   Academy Hero
+   Offset gradient (intentional emphasis)
+   ========================================= */
+
 .academy-hero {
   background:
-    radial-gradient(1200px 600px at 50% 50%, rgba(241, 222, 113, 0.12), transparent 55%),
-    radial-gradient(900px 600px at 50% 50%, rgba(113, 132, 241, 0.10), transparent 50%),
+    radial-gradient(
+      1200px 600px at 30% 10%,
+      rgba(241, 222, 113, 0.12),
+      transparent 55%
+    ),
+    radial-gradient(
+      900px 600px at 80% 20%,
+      rgba(113, 132, 241, 0.10),
+      transparent 50%
+    ),
     #1c1422;
 }
 
