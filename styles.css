@@ -166,9 +166,9 @@ header {
   padding: var(--space-2xl) 0 var(--space-xl);
   text-align: center;
   background:
-    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.12), transparent 55%),
-    radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 50%),
-  background-color: #1c1422;
+    radial-gradient(1200px 600px at 50% 50%, rgba(241, 222, 113, 0.12), transparent 55%),
+    radial-gradient(900px 600px at 50% 50%, rgba(113, 132, 241, 0.10), transparent 50%),
+    #1c1422;
 }
 
 .hero p {
@@ -761,45 +761,152 @@ footer {
 }
 
 /* =========================
-   Resources page styles
+   Resources page additions
+   Append to the end of styles.css
    ========================= */
 
 .resources-hero {
-  padding: var(--space-2xl) 0 var(--space-xl);
-  text-align: center;
+  padding: var(--space-2xl) 0;
   background:
-    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.12), transparent 55%),
-    radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 50%),
-    #1c1422;
+    radial-gradient(1200px 520px at 50% 0%, rgba(241, 222, 113, 0.22), rgba(28, 20, 34, 0.92)),
+    linear-gradient(180deg, rgba(28, 20, 34, 0.96), rgba(28, 20, 34, 0.96));
+  color: var(--color-white);
+  border-bottom: 1px solid rgba(247, 244, 250, 0.12);
 }
 
-.resources-hero-grid {
-  display: grid;
-  gap: var(--space-xl);
-  justify-items: center;
+.resources-hero-inner {
+  max-width: 920px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-.resources-hero .muted {
-  color: rgba(247, 244, 250, 0.72);
-}
-
-.resources-pill {
+.resources-hero .pill {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
+  gap: 8px;
+  padding: 8px 12px;
   border-radius: 999px;
-  border: 1px solid rgba(247, 244, 250, 0.18);
+  border: 1px solid rgba(247, 244, 250, 0.2);
   background: rgba(247, 244, 250, 0.06);
   color: rgba(247, 244, 250, 0.92);
-  font-weight: 650;
-  font-size: 14px;
 }
 
-.resources-pill .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(241, 222, 113, 0.18);
+.resources-hero .hero-title {
+  margin-top: var(--space-lg);
+  color: var(--color-white);
+}
+
+.resources-hero-sub {
+  margin: var(--space-md) auto 0;
+  max-width: 860px;
+  color: rgba(247, 244, 250, 0.9);
+}
+
+.resources-hero-proof {
+  margin: var(--space-md) auto 0;
+  max-width: 760px;
+  color: rgba(247, 244, 250, 0.8);
+}
+
+.resources-hero-ctas {
+  justify-content: center;
+}
+
+.resources-hero .button-secondary {
+  border-color: rgba(247, 244, 250, 0.25);
+  color: rgba(247, 244, 250, 0.92);
+  background: rgba(247, 244, 250, 0.06);
+}
+
+.resources-hero .button-secondary:hover {
+  background: rgba(247, 244, 250, 0.1);
+}
+
+/* Make resource cards equal height and keep CTA pinned */
+.resources-programs .program-grid {
+  align-items: stretch;
+}
+
+.resources-programs .program-card {
+  height: 100%;
+}
+
+.resources-programs .program-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 520px;
+}
+
+.resources-programs .program-desc {
+  margin-bottom: var(--space-lg);
+}
+
+.resources-programs .program-btn {
+  margin-top: auto;
+}
+
+/* Social Proof block */
+.resources-proof {
+  padding-top: 0;
+}
+
+.resources-proof-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-xl);
+  align-items: start;
+  padding: var(--space-xl);
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow);
+}
+
+.resources-proof-list {
+  margin: var(--space-md) 0 0;
+  padding-left: 18px;
+  color: var(--text-muted);
+}
+
+.resources-proof-list li {
+  margin: 10px 0;
+}
+
+.resources-testimonial {
+  padding: var(--space-lg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(247, 244, 250, 0.7);
+}
+
+.resources-testimonial + .resources-testimonial {
+  margin-top: var(--space-md);
+}
+
+.resources-testimonial-quote {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.resources-testimonial-name {
+  margin-top: 10px;
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.resources-proof-cta {
+  width: 100%;
+  margin-top: var(--space-md);
+}
+
+@media (max-width: 900px) {
+  .resources-proof-grid {
+    grid-template-columns: 1fr;
+    padding: var(--space-lg);
+  }
+
+  .resources-programs .program-inner {
+    min-height: 0;
+  }
 }
