@@ -1,7 +1,19 @@
+/* =========================================
+   MIA Global Styles
+   Single source of truth for all pages
+   ========================================= */
+
+/* Base reset */
 * {
   box-sizing: border-box;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+/* Design tokens */
 :root {
   --bg-page: #F7F4FA;
   --bg-surface: #f7f4fa;
@@ -9,9 +21,9 @@
   --text-primary: #1c1422;
   --text-muted: #5f5a66;
 
-  --color-accent: #f1de71;
-  --color-black: #1c1422;
-  --color-white: #f7f4fa;
+  --color-accent: #f1de71; /* Yellow */
+  --color-black: #1c1422;  /* Near-black */
+  --color-white: #f7f4fa;  /* Soft white */
 
   --color-blue: #71c4f1;
   --color-purple: #7184f1;
@@ -32,8 +44,14 @@
 
   --border: rgba(28, 20, 34, 0.12);
   --shadow: 0 8px 30px rgba(28, 20, 34, 0.08);
+
+  --ease: 120ms ease;
+
+  /* Header sizing for sticky offsets */
+  --header-height: 72px;
 }
 
+/* Typography */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -64,6 +82,7 @@ p {
   margin: 0 0 var(--space-md);
 }
 
+/* Links */
 a {
   color: var(--color-blue);
   text-decoration: none;
@@ -73,21 +92,7 @@ a:hover {
   text-decoration: underline;
 }
 
-.text-yellow {
-  color: #f1de71;
-}
-
-.text-white {
-  color: #f7f4fa !important;
-}
-
- .accent-italic {
-  font-style: italic; 
-}
-.muted {
-  color: var(--text-muted);
-}
-
+/* Utilities */
 .container {
   width: min(var(--max-width), 92%);
   margin: 0 auto;
@@ -97,6 +102,36 @@ a:hover {
   padding: var(--space-2xl) 0;
 }
 
+.muted {
+  color: var(--text-muted);
+}
+
+.text-yellow {
+  color: var(--color-accent);
+}
+
+.text-white {
+  color: var(--color-white) !important;
+}
+
+.accent-italic {
+  font-style: italic;
+}
+
+/* Accessibility helper */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Surfaces */
 .card {
   background: var(--bg-surface);
   border: 1px solid var(--border);
@@ -105,6 +140,28 @@ a:hover {
   box-shadow: var(--shadow);
 }
 
+/* Pill */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 12px;
+  background: #fff;
+  font-weight: 650;
+  font-size: 14px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  border: 1px solid rgba(28, 20, 34, 0.15);
+}
+
+/* Buttons */
 .button-row {
   display: flex;
   gap: var(--space-sm);
@@ -122,7 +179,8 @@ a:hover {
   border: 1px solid transparent;
   font-weight: 700;
   cursor: pointer;
-  transition: transform 120ms ease, opacity 120ms ease;
+  text-decoration: none;
+  transition: transform var(--ease), opacity var(--ease), background-color var(--ease);
 }
 
 .button:active {
@@ -134,11 +192,26 @@ a:hover {
   color: var(--color-black);
 }
 
+.button-primary:hover {
+  opacity: 0.92;
+  text-decoration: none;
+}
+
 .button-secondary {
   background: transparent;
   border-color: var(--border);
   color: var(--text-primary);
 }
+
+.button-secondary:hover {
+  background: rgba(241, 222, 113, 0.12);
+  text-decoration: none;
+}
+
+/* =========================================
+   Header and Navigation (global)
+   Works for all pages
+   ========================================= */
 
 header {
   position: sticky;
@@ -146,7 +219,7 @@ header {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid var(--border);
-  z-index: 10;
+  z-index: 50;
 }
 
 .nav {
@@ -155,13 +228,130 @@ header {
   justify-content: space-between;
   padding: var(--space-md) 0;
   gap: var(--space-lg);
+  min-height: var(--header-height);
+  position: relative;
 }
 
-.nav-links {
-  display: flex;
-  gap: 6px;
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 900;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
 }
 
+.logo img,
+.nav-logo-img {
+  width: 100px;
+  height: 40px;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+}
+
+/* Menu button */
+.menu-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 18px;
+  height: 2px;
+  background: var(--text-primary);
+  position: relative;
+  display: inline-block;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 18px;
+  height: 2px;
+  background: var(--text-primary);
+}
+
+.menu-icon::before {
+  top: -6px;
+}
+
+.menu-icon::after {
+  top: 6px;
+}
+
+/* Nav links should not inherit global link blue */
+nav a {
+  color: var(--text-primary);
+  font-weight: 650;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background: rgba(241, 222, 113, 0.16);
+  text-decoration: none;
+}
+
+/* Desktop nav */
+@media (min-width: 980px) {
+  .menu-button {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile nav */
+@media (max-width: 979px) {
+  .nav {
+    gap: var(--space-md);
+    flex-wrap: wrap;
+  }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--space-sm);
+    margin-top: var(--space-sm);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: #fff;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+  }
+
+  nav a {
+    padding: 10px 12px;
+  }
+}
+
+/* =========================================
+   Homepage sections
+   ========================================= */
+
+/* Hero (homepage) */
 .hero {
   padding: var(--space-2xl) 0 var(--space-xl);
   text-align: center;
@@ -171,12 +361,19 @@ header {
     #1c1422;
 }
 
+.hero-grid {
+  display: grid;
+  gap: var(--space-xl);
+  justify-items: center;
+}
+
 .hero p {
   max-width: 72ch;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* Two column layout */
 .two-col {
   display: grid;
   gap: var(--space-xl);
@@ -185,6 +382,7 @@ header {
 @media (min-width: 980px) {
   .two-col {
     grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
   }
 }
 
@@ -193,6 +391,16 @@ header {
   gap: var(--space-md);
 }
 
+/* Floating left panel for homepage "How to work with MIA" */
+@media (min-width: 980px) {
+  #work-with-mia .two-col > div:first-child {
+    position: sticky;
+    top: calc(var(--header-height) + 48px);
+    align-self: start;
+  }
+}
+
+/* Mini cards */
 .mini-card {
   background: #fff;
   border: 1px solid var(--border);
@@ -201,21 +409,105 @@ header {
   padding: var(--space-md);
 }
 
+.mini-card h3 {
+  font-size: 18px;
+  margin: 0 0 6px;
+}
+
+.mini-card p {
+  margin: 0 0 10px;
+}
+
+.mini-card a {
+  color: var(--color-black);
+  font-weight: 650;
+}
+
+/* Border color order */
+.mini-card.card-newsletter { border-left-color: #f1de71; }
+.mini-card.card-community  { border-left-color: #1c1422; }
+.mini-card.card-academy    { border-left-color: #71c4f1; }
+.mini-card.card-events     { border-left-color: #f171c4; }
+.mini-card.card-hiring     { border-left-color: #71f19e; }
+.mini-card.card-consulting { border-left-color: #1c1422; }
+.mini-card.card-partner    { border-left-color: #7184f1; }
+
+/* About section */
 #about {
   background-color: #1c1422;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.about-header h2 {
+  text-transform: none;
+  letter-spacing: -0.02em;
+  font-weight: 750;
+  margin-bottom: 10px;
+}
+
+.about-header .about-intro {
+  margin: 0;
+}
+
+.about {
+  display: grid;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 980px) {
+  .about {
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: start;
+  }
 }
 
 .photo {
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
+  background: var(--bg-surface);
   overflow: hidden;
+  box-shadow: var(--shadow);
 }
 
+.photo img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+/* Newsletter section */
 .newsletter {
   display: grid;
   gap: var(--space-md);
+  align-items: center;
 }
 
+@media (min-width: 980px) {
+  .newsletter {
+    grid-template-columns: 1fr auto;
+  }
+}
+
+/* Center CTA on small screens */
+.newsletter .button-row {
+  justify-content: center;
+  margin-top: 0;
+  width: 100%;
+}
+
+@media (min-width: 980px) {
+  .newsletter .button-row {
+    justify-self: end;
+    justify-content: flex-end;
+    width: auto;
+  }
+}
+
+/* Newsletter card theme */
 #subscribe .card {
   background-color: #1c1422;
 }
@@ -225,10 +517,22 @@ header {
   color: #f7f4fa;
 }
 
+#subscribe .card p.muted {
+  color: rgba(247, 244, 250, 0.8);
+}
+
+/* =========================================
+   Footer (global)
+   ========================================= */
+
 footer {
   background: var(--color-black);
   color: var(--color-white);
   padding: var(--space-xl) 0;
+}
+
+footer .muted {
+  color: rgba(247, 244, 250, 0.7);
 }
 
 .footer-grid {
@@ -236,11 +540,22 @@ footer {
   gap: var(--space-xl);
 }
 
+/* Desktop columns */
+@media (min-width: 980px) {
+  .footer-grid {
+    grid-template-columns: 1.2fr 1fr 1fr 1fr;
+    align-items: start;
+  }
+}
+
+/* Footer titles */
 .footer-title {
   font-weight: 900;
   margin-bottom: var(--space-sm);
+  color: var(--color-white);
 }
 
+/* Footer list */
 .footer-list {
   list-style: none;
   padding: 0;
@@ -249,20 +564,68 @@ footer {
   gap: 8px;
 }
 
+/* Footer links */
+.footer-list a {
+  color: rgba(247, 244, 250, 0.78);
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.footer-list a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* Footer social */
+.footer-social {
+  display: flex;
+  gap: 14px;
+  margin-top: var(--space-md);
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(247, 244, 250, 0.08);
+  transition: background var(--ease), transform var(--ease);
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: rgba(241, 222, 113, 0.25);
+  transform: translateY(-1px);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-white);
+}
+
+/* Footer bottom */
 .footer-bottom {
   margin-top: var(--space-xl);
   padding-top: var(--space-md);
   border-top: 1px solid rgba(247, 244, 250, 0.2);
+  display: flex;
+  gap: var(--space-md);
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   Academy page styles
-   Add this to the bottom of styles.css
-   ========================= */
+/* =========================================
+   Academy page styles (existing class names)
+   ========================================= */
 
 .academy-hero {
   padding: var(--space-2xl) 0;
-  background: radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.12), transparent 55%),
+  background:
+    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.12), transparent 55%),
     radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 50%),
     #1c1422;
 }
@@ -298,6 +661,7 @@ footer {
   border-radius: 999px;
   background: var(--color-accent);
   box-shadow: 0 0 0 3px rgba(241, 222, 113, 0.18);
+  border: none;
 }
 
 .academy-hero h1 {
@@ -314,6 +678,10 @@ footer {
   border-color: rgba(247, 244, 250, 0.18);
   color: #f7f4fa;
   background: rgba(247, 244, 250, 0.04);
+}
+
+.academy-hero .button-secondary:hover {
+  background: rgba(247, 244, 250, 0.08);
 }
 
 .academy-hero-divider {
@@ -344,6 +712,7 @@ footer {
   letter-spacing: 0.02em;
 }
 
+/* Testimonials */
 .testimonial-col {
   display: grid;
   gap: var(--space-md);
@@ -394,6 +763,7 @@ footer {
   margin-top: 2px;
 }
 
+/* Programs */
 .academy-programs {
   background: #ffffff;
 }
@@ -417,6 +787,7 @@ footer {
 @media (min-width: 980px) {
   .program-grid {
     grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
   }
 }
 
@@ -427,6 +798,8 @@ footer {
   overflow: hidden;
   box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
   position: relative;
+  height: 100%;
+  display: flex;
 }
 
 .program-rail {
@@ -440,10 +813,11 @@ footer {
 
 .program-inner {
   padding: 18px 18px 16px;
-  min-height: 420px;
-  display: grid;
-  grid-template-rows: auto auto 1fr auto auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 12px;
+  min-height: 520px; /* keeps cards consistent */
 }
 
 .program-tag {
@@ -471,10 +845,14 @@ footer {
   color: rgba(28, 20, 34, 0.62);
 }
 
+.program-includes {
+  min-height: 84px;
+}
+
 .program-hr {
   border: none;
   border-top: 1px solid rgba(28, 20, 34, 0.08);
-  margin: 6px 0 0;
+  margin-top: auto; /* pushes meta and button down */
 }
 
 .program-meta {
@@ -482,6 +860,7 @@ footer {
   grid-template-columns: 1fr 1fr;
   gap: 12px;
   align-items: end;
+  margin-bottom: 14px;
 }
 
 .meta-label {
@@ -508,12 +887,18 @@ footer {
 
 .program-btn {
   width: 100%;
+  display: flex;
+  align-items: center;
   justify-content: center;
+  text-align: center;
+  height: 48px;
+  line-height: 1;
   background: #1c1422;
   color: #f7f4fa;
   border-radius: 12px;
   padding: 12px 16px;
   font-weight: 850;
+  text-decoration: none;
 }
 
 .program-btn:hover {
@@ -521,8 +906,10 @@ footer {
   opacity: 0.95;
 }
 
+/* How it works */
 .academy-how {
-  background: radial-gradient(900px 600px at 25% 15%, rgba(241, 222, 113, 0.10), transparent 55%),
+  background:
+    radial-gradient(900px 600px at 25% 15%, rgba(241, 222, 113, 0.10), transparent 55%),
     #1c1422;
 }
 
@@ -548,17 +935,17 @@ footer {
 
   .academy-how-sticky {
     position: sticky;
-    top: 96px;
+    top: calc(var(--header-height) + 24px);
   }
 }
 
 .how-callout {
   margin-top: var(--space-xl);
   border-radius: 14px;
-  width: fit-content;     /* shrink the background/border */
-  max-width: 400px;   /* controls line length */
-  padding: 18px 18px;     /* taller card */
-  min-height: 120px;      /* helps the paragraph wrap to an extra line */
+  width: fit-content;
+  max-width: 400px;
+  padding: 18px 18px;
+  min-height: 120px;
   border: 1px solid rgba(247, 244, 250, 0.14);
   background: rgba(247, 244, 250, 0.05);
 }
@@ -569,13 +956,12 @@ footer {
   font-weight: 900;
   font-size: 16px;
   line-height: 1.25;
-  margin-bottom: 8px;
 }
 
 .how-callout-text {
   margin: 0;
-  max-width: 320px;        /* forces the text to wrap to 3 lines */
-  line-height: 1.55;      /* better readability, more natural wrapping */
+  max-width: 320px;
+  line-height: 1.55;
   color: rgba(247, 244, 250, 0.60);
   font-size: 14px;
 }
@@ -604,67 +990,21 @@ footer {
 }
 
 .step-title {
-  margin: 0 0 6px;
+  margin: 0 0 4px;
   color: rgba(247, 244, 250, 0.92);
-  font-weight: 900;
-}
-
-/* Tighter hierarchy for How it works steps */
-.step-title {
-  font-size: 16.5px;        /* down from ~18–20px */
-  font-weight: 750;       /* slightly lighter */
+  font-size: 16.5px;
+  font-weight: 750;
   line-height: 1.25;
-  margin-bottom: 4px;
-}
-
-..how-text {
-  font-size: 15px;        /* keeps contrast clear */
-  line-height: 1.55;
 }
 
 .step-text {
   margin: 0;
   color: rgba(247, 244, 250, 0.62);
+  font-size: 15px;
+  line-height: 1.55;
 }
 
-.program-btn {
-  display: flex;              /* not inline-flex */
-  align-items: center;        /* vertical centering */
-  justify-content: center;    /* horizontal centering */
-  text-align: center;
-  height: 48px;               /* consistent button height */
-  line-height: 1;
-}
-
-/* Make all cards the same height */
-.program-card {
-  height: 100%;
-  display: flex;
-}
-
-/* Turn the card into a vertical layout */
-.program-inner {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  min-height: 520px; /* tweak if needed */
-}
-
-/* Keep includes consistent */
-.program-includes {
-  min-height: 84px;
-}
-
-/* Push meta + button to the bottom */
-.program-hr {
-  margin-top: auto;
-}
-
-/* Ensure meta stays compact */
-.program-meta {
-  margin-bottom: 14px;
-}
-
+/* Quiz CTA */
 .quiz-wrap {
   background: var(--color-accent);
   padding: 70px 0;
@@ -744,273 +1084,39 @@ footer {
   font-weight: 900;
   min-width: 280px;
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
-}
-
-.quiz-btn:hover {
-  text-decoration: none;
-  opacity: 0.96;
-  
-}
-
-.quiz-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   line-height: 1;
-}
-
-/* =========================
-   Resources page fixes
-   Append to the end of styles.css
-   ========================= */
-
-/* Header fixes (scoped to Resources page) */
-.page-resources header {
-  background: #fff;
-  border-bottom: 1px solid rgba(28, 20, 34, 0.08);
-}
-
-.page-resources .nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  padding-top: 14px;
-  padding-bottom: 14px;
-}
-
-.page-resources .nav .logo {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  min-width: 120px;
-}
-
-.page-resources .nav-logo-img {
-  height: 34px;
-  width: auto;
-  display: block;
-}
-
-.page-resources .nav-links {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.page-resources .nav-links a {
   text-decoration: none;
-  font-weight: 650;
 }
 
-.page-resources .menu-button {
-  display: none;
+.quiz-btn:hover {
+  text-decoration: none;
+  opacity: 0.96;
 }
 
-@media (max-width: 980px) {
-  .page-resources .menu-button {
-    display: inline-flex;
-  }
+/* =========================================
+   Future proof helpers for additional pages
+   Optional to use later, no current markup required
+   ========================================= */
 
-  .page-resources .nav-links {
-    display: none;
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    top: 74px;
-    background: #fff;
-    border: 1px solid rgba(28, 20, 34, 0.12);
-    border-radius: 14px;
-    padding: 12px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-    box-shadow: 0 18px 40px rgba(28, 20, 34, 0.18);
-    z-index: 50;
-  }
-
-  .page-resources .nav-links.is-open {
-    display: flex;
-  }
-}
-
-/* Hero */
-.resources-hero {
-  padding: var(--space-2xl) 0;
-  background:
-    radial-gradient(1200px 600px at 50% 50%, rgba(241, 222, 113, 0.12), transparent 55%),
-    radial-gradient(900px 600px at 50% 50%, rgba(113, 132, 241, 0.10), transparent 50%),
-    #1c1422;
-  border-bottom: 1px solid rgba(247, 244, 250, 0.12);
-}
-
-.resources-hero-inner {
-  max-width: 920px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.resources-hero .pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 8px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(247, 244, 250, 0.18);
-  background: rgba(247, 244, 250, 0.06);
-  color: rgba(247, 244, 250, 0.92);
-  font-weight: 650;
-  font-size: 14px;
-}
-
-.resources-hero .pill .dot {
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #f1de71;
-  box-shadow: 0 0 0 3px rgba(241, 222, 113, 0.18);
-}
-
-.resources-hero .hero-title {
-  margin-top: var(--space-lg);
+.theme-dark {
+  background: #1c1422;
   color: #f7f4fa;
 }
 
-.resources-hero-sub {
-  margin: var(--space-md) auto 0;
-  max-width: 860px;
-  color: rgba(247, 244, 250, 0.92);
+.theme-dark .muted {
+  color: rgba(247, 244, 250, 0.70);
 }
 
-.resources-hero-proof {
-  margin: var(--space-md) auto 0;
-  max-width: 760px;
-  color: rgba(247, 244, 250, 0.78);
-}
-
-.resources-hero-ctas {
-  justify-content: center;
-}
-
-/* Secondary CTA styling like Academy (scoped, no global override) */
-.resources-hero .academy-secondary {
-  border-color: rgba(247, 244, 250, 0.25);
-  color: rgba(247, 244, 250, 0.92);
-  background: rgba(247, 244, 250, 0.06);
-}
-
-.resources-hero .academy-secondary:hover {
-  background: rgba(247, 244, 250, 0.1);
-}
-
-/* Resources header centered */
-.resources-head {
+.centered {
   text-align: center;
-  max-width: 860px;
-  margin: 0 auto var(--space-xl);
 }
 
-.resources-head h2 {
-  margin-bottom: 10px;
-}
-
-/* Cards: even height, but not overly tall */
-.resources-programs .program-grid {
-  align-items: stretch;
-}
-
-.resources-programs .program-card {
-  height: 100%;
-}
-
-.resources-programs .program-inner {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  min-height: 0;
-  padding-bottom: 18px;
-}
-
-.resources-programs .program-desc {
-  margin-bottom: 18px;
-}
-
-.resources-programs .program-btn {
-  margin-top: auto;
-}
-
-/* Social proof: dark background, CTA on left */
-.resources-proof-dark {
-  padding: var(--space-2xl) 0;
-  background: #1c1422;
-}
-
-.resources-proof-grid {
-  display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
-  gap: var(--space-xl);
-  align-items: start;
-}
-
-.resources-proof-list {
-  margin: var(--space-md) 0 0;
-  padding-left: 18px;
-  color: rgba(247, 244, 250, 0.72);
-}
-
-.resources-proof-list li {
-  margin: 10px 0;
-}
-
-.resources-proof-cta-wrap {
-  margin-top: var(--space-lg);
-}
-
-.resources-testimonial {
-  padding: var(--space-lg);
-  border: 1px solid rgba(247, 244, 250, 0.14);
-  border-radius: 16px;
-  background: rgba(247, 244, 250, 0.06);
-}
-
-.resources-testimonial + .resources-testimonial {
-  margin-top: var(--space-md);
-}
-
-.resources-testimonial-quote {
-  margin: 0;
-  color: rgba(247, 244, 250, 0.92);
-}
-
-.resources-testimonial-name {
-  margin-top: 10px;
-  color: rgba(247, 244, 250, 0.72);
-  font-weight: 700;
-}
-
-@media (max-width: 900px) {
-  .resources-proof-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Footer fixes (scoped to Resources page) */
-.page-resources footer {
-  background: #1c1422;
-  color: rgba(247, 244, 250, 0.92);
-  border-top: 1px solid rgba(247, 244, 250, 0.12);
-}
-
-.page-resources footer .muted {
-  color: rgba(247, 244, 250, 0.72);
-}
-
-.page-resources footer a {
-  color: rgba(247, 244, 250, 0.82);
-  text-decoration: none;
-}
-
-.page-resources footer a:hover {
-  color: rgba(247, 244, 250, 0.92);
+.max-ch-72 {
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
 }
