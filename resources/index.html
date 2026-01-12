@@ -48,11 +48,11 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header (fixed) -->
+    <!-- Header -->
     <header>
       <div class="container nav">
         <a class="logo" href="../index.html" aria-label="Marketing In Action Home">
-          <img class="nav-logo-img" src="../assets/mia-logo.png" alt="Marketing In Action" />
+          <img src="../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
 
         <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
@@ -68,10 +68,10 @@
     </header>
 
     <main>
-      <!-- HERO (uses homepage heading setup) -->
+      <!-- Hero -->
       <section class="resources-hero">
-        <div class="container hero-grid">
-          <div>
+        <div class="container" style="padding-top: 10px">
+          <div style="max-width: 980px; margin: 0 auto">
             <div class="pill">
               <span class="dot" aria-hidden="true"></span>
               MIA Resources, Frameworks &amp; Templates
@@ -81,16 +81,16 @@
               Everything you need to put <span class="text-yellow accent-italic">marketing into action</span>.
             </h1>
 
-            <p class="muted text-white" style="font-size: 18px; margin-top: 10px">
+            <p class="text-white" style="opacity: 0.92; max-width: 88ch; font-size: 18px">
               Actionable marketing resources, templates, frameworks, and systems built from real startup and GTM work in the trenches. Built from
               scratch, updated regularly, and ready to implement.
             </p>
 
-            <p class="muted text-white" style="margin-top: 12px">
+            <p class="text-white" style="opacity: 0.78; margin-top: 10px">
               Trusted and used by 5,000+ product marketers, growth teams, and founders across Africa, the US, and Europe.
             </p>
 
-            <div class="button-row" style="margin-top: var(--space-lg); justify-content: center">
+            <div class="button-row" style="margin-top: var(--space-lg)">
               <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
                 Get Full Annual Access
               </a>
@@ -100,8 +100,8 @@
         </div>
       </section>
 
-      <!-- RESOURCE GRID (centered header) -->
-      <section id="resources" class="section resources-programs">
+      <!-- Resources -->
+      <section id="resources" class="section">
         <div class="container">
           <div class="programs-head">
             <h2>Explore MIA Resources</h2>
@@ -114,7 +114,7 @@
           <div class="program-grid" aria-label="MIA Resources list">
             <article class="program-card">
               <div class="program-rail" style="background: var(--color-accent)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">LIBRARY</div>
                 <h3 class="program-title">Product Marketing Templates &amp; Resources Library</h3>
                 <p class="program-desc">
@@ -126,7 +126,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: var(--color-blue)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">AI PROMPTS</div>
                 <h3 class="program-title">AI Prompt Frameworks &amp; Templates for Marketers</h3>
                 <p class="program-desc">
@@ -138,7 +138,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: var(--color-pink)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">REPORTS</div>
                 <h3 class="program-title">The State of Marketing in African Tech</h3>
                 <p class="program-desc">
@@ -157,7 +157,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(28, 20, 34, 0.65)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">DATABASE</div>
                 <h3 class="program-title">Marketing &amp; AI Product Database</h3>
                 <p class="program-desc">A curated directory of the most useful marketing and AI products for modern GTM teams.</p>
@@ -173,7 +173,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(241, 222, 113, 0.75)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">DATABASE</div>
                 <h3 class="program-title">Marketing Thought Leaders Database</h3>
                 <p class="program-desc">A curated directory of the most influential voices in modern marketing.</p>
@@ -189,7 +189,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(113, 132, 241, 0.75)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">CALENDAR</div>
                 <h3 class="program-title">Annual Tech Events Calendar</h3>
                 <p class="program-desc">
@@ -207,7 +207,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(28, 20, 34, 0.35)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">FREE</div>
                 <h3 class="program-title">MIA Resource Library</h3>
                 <p class="program-desc">A growing collection of free templates, tools, and references (Google Docs, Sheets, Notion).</p>
@@ -223,7 +223,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(241, 222, 113, 0.45)"></div>
-              <div class="program-inner resources-card">
+              <div class="program-inner">
                 <div class="program-tag">AMA</div>
                 <h3 class="program-title">Ask James Anything</h3>
                 <p class="program-desc">
@@ -237,48 +237,50 @@
         </div>
       </section>
 
-      <!-- SOCIAL PROOF (dark background, Academy testimonial markup) -->
-      <section class="section theme-dark">
+      <!-- Social proof -->
+      <section class="section social-proof-wrap">
         <div class="container">
-          <div class="two-col" style="align-items: start">
-            <div>
-              <h2 class="text-white">Built from real work, trusted by real operators.</h2>
+          <div class="social-proof-panel">
+            <div class="two-col" style="align-items: start">
+              <div>
+                <h2 class="text-white">Built from real work, trusted by real operators.</h2>
 
-              <ul class="resources-proof-list">
-                <li>Created by marketers actively working across product, growth, and GTM roles</li>
-                <li>Used by founders and teams building and scaling real companies</li>
-                <li>Designed for execution in emerging and global markets</li>
-                <li>Continuously refined through live work and community feedback</li>
-              </ul>
+                <ul class="resources-proof-list">
+                  <li>Created by marketers actively working across product, growth, and GTM roles</li>
+                  <li>Used by founders and teams building and scaling real companies</li>
+                  <li>Designed for execution in emerging and global markets</li>
+                  <li>Continuously refined through live work and community feedback</li>
+                </ul>
 
-              <div class="button-row" style="margin-top: var(--space-lg)">
-                <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
-                  Get Full Annual Access
-                </a>
-              </div>
-            </div>
-
-            <div class="testimonial-col" aria-label="Resource testimonials">
-              <div class="testimonial-card">
-                <p class="testimonial-quote">
-                  “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
-                </p>
-                <div class="testimonial-person">
-                  <div class="testimonial-avatar">T</div>
-                  <div>
-                    <div class="testimonial-name">Theodore Nnah</div>
-                    <div class="testimonial-role">Product Marketer</div>
-                  </div>
+                <div class="button-row" style="margin-top: var(--space-lg)">
+                  <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
+                    Get Full Annual Access
+                  </a>
                 </div>
               </div>
 
-              <div class="testimonial-card">
-                <p class="testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
-                <div class="testimonial-person">
-                  <div class="testimonial-avatar">D</div>
-                  <div>
-                    <div class="testimonial-name">Despina Maris</div>
-                    <div class="testimonial-role">Product Marketer</div>
+              <div class="testimonial-col" aria-label="Resource testimonials">
+                <div class="testimonial-card">
+                  <p class="testimonial-quote">
+                    “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
+                  </p>
+                  <div class="testimonial-person">
+                    <div class="testimonial-avatar">T</div>
+                    <div>
+                      <div class="testimonial-name">Theodore Nnah</div>
+                      <div class="testimonial-role">Product Marketer</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <p class="testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
+                  <div class="testimonial-person">
+                    <div class="testimonial-avatar">D</div>
+                    <div>
+                      <div class="testimonial-name">Despina Maris</div>
+                      <div class="testimonial-role">Product Marketer</div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -288,7 +290,7 @@
       </section>
     </main>
 
-    <!-- Footer (fixed) -->
+    <!-- Footer (same as other pages) -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -424,7 +426,6 @@
     <script>
       const btn = document.querySelector(".menu-button");
       const nav = document.querySelector(".nav-links");
-
       btn.addEventListener("click", () => {
         const isOpen = nav.classList.toggle("is-open");
         btn.setAttribute("aria-expanded", String(isOpen));
