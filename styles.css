@@ -491,6 +491,17 @@ nav a:hover {
 .academy-hero p { color: rgba(247, 244, 250, 0.75); }
 .academy-hero .muted { color: rgba(247, 244, 250, 0.65); }
 
+/* Academy hero: make secondary CTA readable on dark background */
+.academy-hero .button-secondary {
+  border-color: rgba(247, 244, 250, 0.22);
+  background: rgba(247, 244, 250, 0.06);
+  color: rgba(247, 244, 250, 0.92);
+}
+
+.academy-hero .button-secondary:hover {
+  background: rgba(247, 244, 250, 0.10);
+}
+
 .academy-pill {
   display: inline-flex;
   align-items: center;
@@ -735,7 +746,7 @@ nav a:hover {
 
 .quiz-cta {
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 18px;
 }
 
@@ -746,6 +757,8 @@ nav a:hover {
   border-radius: 16px;
   font-weight: 900;
   min-width: 280px;
+  max-width: 360px;
+  width: 100%;     
   box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
   display: inline-flex;
   align-items: center;
