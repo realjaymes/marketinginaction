@@ -923,3 +923,182 @@ footer .muted { color: rgba(247, 244, 250, 0.7); }
   align-items: center;
   flex-wrap: wrap;
 }
+
+/* =========================================
+   Homepage styles migrated from index.html
+   Scoped to body.home to avoid affecting
+   Academy and Resources pages
+   ========================================= */
+
+body.home .card {
+  background: var(--bg-surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius-md);
+          padding: var(--space-lg);
+          box-shadow: var(--shadow);
+}
+
+.sr-only {
+  position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border: 0;
+}
+
+body.home .hero-grid {
+  display: grid;
+          gap: var(--space-xl);
+          justify-items: center;
+}
+
+body.home .stack {
+  display: grid;
+          gap: var(--space-md);
+}
+
+body.home .mini-card {
+  background: #fff;
+          border: 1px solid var(--border);
+          border-left-width: 8px;
+          border-radius: var(--radius-md);
+          padding: var(--space-md);
+}
+
+body.home .mini-card h3 {
+  font-size: 18px;
+          margin: 0 0 6px;
+}
+
+body.home .mini-card p {
+  margin: 0 0 10px;
+}
+
+body.home .mini-card a {
+  color: var(--color-black);
+          font-weight: 650;
+}
+
+body.home .mini-card.card-newsletter {
+  border-left-color: #f1de71;
+}
+
+body.home .mini-card.card-community {
+  border-left-color: #1c1422;
+}
+
+body.home .mini-card.card-academy {
+  border-left-color: #71c4f1;
+}
+
+body.home .mini-card.card-events {
+  border-left-color: #f171c4;
+}
+
+body.home .mini-card.card-hiring {
+  border-left-color: #71f19e;
+}
+
+body.home .mini-card.card-consulting {
+  border-left-color: #1c1422;
+}
+
+body.home .mini-card.card-partner {
+  border-left-color: #7184f1;
+}
+
+body.home #about {
+  background-color: #1C1422;
+}
+
+body.home .about-header {
+  text-align: center;
+          margin-bottom: var(--space-xl);
+}
+
+body.home .about-header h2 {
+  text-transform: none;
+          letter-spacing: -0.02em;
+          font-weight: 750;
+          margin-bottom: 10px;
+}
+
+body.home .about-header .about-intro {
+  margin: 0;
+}
+
+body.home .about {
+  display: grid;
+          gap: var(--space-xl);
+}
+
+body.home .photo {
+  border-radius: var(--radius-md);
+          border: 1px solid var(--border);
+          background: var(--bg-surface);
+          overflow: hidden;
+          box-shadow: var(--shadow);
+}
+
+body.home .photo img {
+  width: 100%;
+          display: block;
+          height: auto;
+}
+
+body.home .newsletter {
+  display: grid;
+          gap: var(--space-md);
+          align-items: center;
+}
+
+body.home .newsletter .button-row {
+  justify-content: center;
+          margin-top: 0;
+          width: 100%;
+}
+
+body.home #subscribe .card {
+  background-color: #1c1422;
+}
+
+body.home #subscribe .card h2, body.home #subscribe .card p {
+  color: #f7f4fa;
+}
+
+body.home #subscribe .card p.muted {
+  color: rgba(247, 244, 250, 0.8);
+}
+
+@media (min-width: 980px) {
+        body.home #work-with-mia .two-col > div:first-child {
+          position: sticky;
+          top: 120px;
+          align-self: start;
+        }
+      }
+
+@media (min-width: 980px) {
+        body.home .about {
+          grid-template-columns: 0.85fr 1.15fr;
+          align-items: start;
+        }
+      }
+
+@media (min-width: 980px) {
+        body.home .newsletter {
+          grid-template-columns: 1fr auto;
+        }
+      }
+
+@media (min-width: 980px) {
+        body.home .newsletter .button-row {
+          justify-self: end;
+          justify-content: flex-end;
+          width: auto;
+        }
+      }
