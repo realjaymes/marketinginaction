@@ -36,7 +36,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   </head>
 
-  <body class="page-resources">
+  <body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -48,7 +48,7 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header (fixed markup, styles improved via CSS additions) -->
+    <!-- Header (fixed) -->
     <header>
       <div class="container nav">
         <a class="logo" href="../index.html" aria-label="Marketing In Action Home">
@@ -63,62 +63,58 @@
           <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a>
           <a href="../academy/" rel="noreferrer">MIA Academy</a>
           <a href="./" aria-current="page">MIA Resources</a>
-          <a href="../events/" rel="noreferrer">MIA Events</a>
-          <a href="../jobs/" rel="noreferrer">MIA Jobs</a>
-          <a href="../consulting/" rel="noreferrer">MIA Consulting</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero -->
+      <!-- HERO (uses homepage heading setup) -->
       <section class="resources-hero">
-        <div class="container">
-          <div class="resources-hero-inner">
+        <div class="container hero-grid">
+          <div>
             <div class="pill">
               <span class="dot" aria-hidden="true"></span>
               MIA Resources, Frameworks &amp; Templates
             </div>
 
-            <h1 class="hero-title">
-              Everything you need to put
-              <span class="text-yellow accent-italic">marketing into action</span>.
+            <h1 class="text-white" style="margin-top: var(--space-lg)">
+              Everything you need to put <span class="text-yellow accent-italic">marketing into action</span>.
             </h1>
 
-            <p class="resources-hero-sub">
-              Actionable marketing resources, templates, frameworks, and systems built from real startup and GTM work in the trenches. Built
-              from scratch, updated regularly, and ready to implement.
+            <p class="muted text-white" style="font-size: 18px; margin-top: 10px">
+              Actionable marketing resources, templates, frameworks, and systems built from real startup and GTM work in the trenches. Built from
+              scratch, updated regularly, and ready to implement.
             </p>
 
-            <p class="resources-hero-proof">
+            <p class="muted text-white" style="margin-top: 12px">
               Trusted and used by 5,000+ product marketers, growth teams, and founders across Africa, the US, and Europe.
             </p>
 
-            <div class="button-row resources-hero-ctas">
+            <div class="button-row" style="margin-top: var(--space-lg); justify-content: center">
               <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
                 Get Full Annual Access
               </a>
-              <a class="button button-secondary academy-secondary" href="#resources">See All Resources</a>
+              <a class="button button-secondary resources-secondary" href="#resources">See All Resources</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Resources -->
+      <!-- RESOURCE GRID (centered header) -->
       <section id="resources" class="section resources-programs">
         <div class="container">
-          <div class="resources-head">
+          <div class="programs-head">
             <h2>Explore MIA Resources</h2>
-            <p class="muted">
+            <p>
               Start with individual resources or get full access to everything through the Premium MIA Resource &amp; Template Library, available
               via annual subscription.
             </p>
           </div>
 
-          <div class="program-grid">
+          <div class="program-grid" aria-label="MIA Resources list">
             <article class="program-card">
-              <div class="program-rail" style="background: rgba(241, 222, 113, 0.85)"></div>
-              <div class="program-inner">
+              <div class="program-rail" style="background: var(--color-accent)"></div>
+              <div class="program-inner resources-card">
                 <div class="program-tag">LIBRARY</div>
                 <h3 class="program-title">Product Marketing Templates &amp; Resources Library</h3>
                 <p class="program-desc">
@@ -129,27 +125,31 @@
             </article>
 
             <article class="program-card">
-              <div class="program-rail" style="background: rgba(113, 196, 241, 0.85)"></div>
-              <div class="program-inner">
-                <div class="program-tag">AI</div>
+              <div class="program-rail" style="background: var(--color-blue)"></div>
+              <div class="program-inner resources-card">
+                <div class="program-tag">AI PROMPTS</div>
                 <h3 class="program-title">AI Prompt Frameworks &amp; Templates for Marketers</h3>
                 <p class="program-desc">
-                  Get the frameworks and templates that 200+ marketers and founders use to produce consistent, high-quality outputs from AI.
+                  Get the frameworks and templates that 200+ marketers and founders use to produce consistent, high quality outputs from AI.
                 </p>
                 <a class="program-btn" href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">Get Access</a>
               </div>
             </article>
 
             <article class="program-card">
-              <div class="program-rail" style="background: rgba(241, 113, 196, 0.8)"></div>
-              <div class="program-inner">
+              <div class="program-rail" style="background: var(--color-pink)"></div>
+              <div class="program-inner resources-card">
                 <div class="program-tag">REPORTS</div>
                 <h3 class="program-title">The State of Marketing in African Tech</h3>
                 <p class="program-desc">
                   Industry reports on SaaS, FinTech, Web3, Healthtech, Edtech, HRtech, Agritech, Ecommerce, Energytech, Marketplace,
                   Entertainment, Creators, and Agencies.
                 </p>
-                <a class="program-btn" href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"
+                <a
+                  class="program-btn"
+                  href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports"
+                  target="_blank"
+                  rel="noreferrer"
                   >Get Access</a
                 >
               </div>
@@ -157,7 +157,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(28, 20, 34, 0.65)"></div>
-              <div class="program-inner">
+              <div class="program-inner resources-card">
                 <div class="program-tag">DATABASE</div>
                 <h3 class="program-title">Marketing &amp; AI Product Database</h3>
                 <p class="program-desc">A curated directory of the most useful marketing and AI products for modern GTM teams.</p>
@@ -173,7 +173,7 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(241, 222, 113, 0.75)"></div>
-              <div class="program-inner">
+              <div class="program-inner resources-card">
                 <div class="program-tag">DATABASE</div>
                 <h3 class="program-title">Marketing Thought Leaders Database</h3>
                 <p class="program-desc">A curated directory of the most influential voices in modern marketing.</p>
@@ -189,10 +189,12 @@
 
             <article class="program-card">
               <div class="program-rail" style="background: rgba(113, 132, 241, 0.75)"></div>
-              <div class="program-inner">
+              <div class="program-inner resources-card">
                 <div class="program-tag">CALENDAR</div>
                 <h3 class="program-title">Annual Tech Events Calendar</h3>
-                <p class="program-desc">A curated, living calendar of tech events in Africa, built to expand globally for digital nomads.</p>
+                <p class="program-desc">
+                  A curated, living calendar of tech events in Africa, built to expand globally for digital nomads.
+                </p>
                 <a
                   class="program-btn"
                   href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096"
@@ -204,23 +206,10 @@
             </article>
 
             <article class="program-card">
-              <div class="program-rail" style="background: rgba(241, 222, 113, 0.45)"></div>
-              <div class="program-inner">
-                <div class="program-tag">AMA</div>
-                <h3 class="program-title">Ask James Anything</h3>
-                <p class="program-desc">
-                  Get answers to questions about positioning, messaging, GTM strategy, lifecycle setups, growth experiments, tools, templates,
-                  and career clarity.
-                </p>
-                <a class="program-btn" href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer">Get Access</a>
-              </div>
-            </article>
-
-            <article class="program-card">
               <div class="program-rail" style="background: rgba(28, 20, 34, 0.35)"></div>
-              <div class="program-inner">
+              <div class="program-inner resources-card">
                 <div class="program-tag">FREE</div>
-                <h3 class="program-title">MIA Resource Library (Free)</h3>
+                <h3 class="program-title">MIA Resource Library</h3>
                 <p class="program-desc">A growing collection of free templates, tools, and references (Google Docs, Sheets, Notion).</p>
                 <a
                   class="program-btn"
@@ -231,15 +220,28 @@
                 >
               </div>
             </article>
+
+            <article class="program-card">
+              <div class="program-rail" style="background: rgba(241, 222, 113, 0.45)"></div>
+              <div class="program-inner resources-card">
+                <div class="program-tag">AMA</div>
+                <h3 class="program-title">Ask James Anything</h3>
+                <p class="program-desc">
+                  Get answers to questions about positioning, messaging, GTM strategy, lifecycle setups, growth experiments, tools, templates,
+                  and career clarity.
+                </p>
+                <a class="program-btn" href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer">Get Access</a>
+              </div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- Social Proof (dark background, CTA moved left) -->
-      <section class="resources-proof-dark">
+      <!-- SOCIAL PROOF (dark background, Academy testimonial markup) -->
+      <section class="section theme-dark">
         <div class="container">
-          <div class="resources-proof-grid">
-            <div class="resources-proof-left">
+          <div class="two-col" style="align-items: start">
+            <div>
               <h2 class="text-white">Built from real work, trusted by real operators.</h2>
 
               <ul class="resources-proof-list">
@@ -249,24 +251,36 @@
                 <li>Continuously refined through live work and community feedback</li>
               </ul>
 
-              <div class="resources-proof-cta-wrap">
+              <div class="button-row" style="margin-top: var(--space-lg)">
                 <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
                   Get Full Annual Access
                 </a>
               </div>
             </div>
 
-            <div class="resources-proof-right" aria-label="Resource testimonials">
-              <div class="resources-testimonial">
-                <p class="resources-testimonial-quote">
+            <div class="testimonial-col" aria-label="Resource testimonials">
+              <div class="testimonial-card">
+                <p class="testimonial-quote">
                   “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
                 </p>
-                <div class="resources-testimonial-name">— Theodore Nnah, Product Marketer</div>
+                <div class="testimonial-person">
+                  <div class="testimonial-avatar">T</div>
+                  <div>
+                    <div class="testimonial-name">Theodore Nnah</div>
+                    <div class="testimonial-role">Product Marketer</div>
+                  </div>
+                </div>
               </div>
 
-              <div class="resources-testimonial">
-                <p class="resources-testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
-                <div class="resources-testimonial-name">— Despina Maris, Product Marketer</div>
+              <div class="testimonial-card">
+                <p class="testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
+                <div class="testimonial-person">
+                  <div class="testimonial-avatar">D</div>
+                  <div>
+                    <div class="testimonial-name">Despina Maris</div>
+                    <div class="testimonial-role">Product Marketer</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -274,7 +288,7 @@
       </section>
     </main>
 
-    <!-- Footer (fixed markup, styles improved via CSS additions) -->
+    <!-- Footer (fixed) -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -293,7 +307,6 @@
                   />
                 </svg>
               </a>
-
               <a href="https://twitter.com/marketinginact" aria-label="Twitter" target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24">
                   <path
@@ -301,7 +314,6 @@
                   />
                 </svg>
               </a>
-
               <a href="https://www.instagram.com/marketinginact" aria-label="Instagram" target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24">
                   <path
@@ -309,7 +321,6 @@
                   />
                 </svg>
               </a>
-
               <a
                 href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp"
                 aria-label="YouTube"
