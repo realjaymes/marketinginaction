@@ -783,7 +783,14 @@ nav a:hover {
 .resources-secondary:hover { background: rgba(247, 244, 250, 0.08); }
 
 /* Resources cards are shorter than Academy cards */
-.resources-page .program-inner { min-height: 420px; }
+.resources-page .program-inner { 
+  min-height: 360px;
+  display: flex;
+  flex direction: column; }
+
+.resources-page .program-btn {
+  margin-top: auto;
+}
 
 .resources-proof-list {
   margin: var(--space-md) 0 0;
