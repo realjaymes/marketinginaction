@@ -761,10 +761,81 @@ footer {
 }
 
 /* =========================
-   Resources page additions
+   Resources page fixes
    Append to the end of styles.css
    ========================= */
 
+/* Header fixes (scoped to Resources page) */
+.page-resources header {
+  background: #fff;
+  border-bottom: 1px solid rgba(28, 20, 34, 0.08);
+}
+
+.page-resources .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.page-resources .nav .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 120px;
+}
+
+.page-resources .nav-logo-img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
+
+.page-resources .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.page-resources .nav-links a {
+  text-decoration: none;
+  font-weight: 650;
+}
+
+.page-resources .menu-button {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .page-resources .menu-button {
+    display: inline-flex;
+  }
+
+  .page-resources .nav-links {
+    display: none;
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 74px;
+    background: #fff;
+    border: 1px solid rgba(28, 20, 34, 0.12);
+    border-radius: 14px;
+    padding: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    box-shadow: 0 18px 40px rgba(28, 20, 34, 0.18);
+    z-index: 50;
+  }
+
+  .page-resources .nav-links.is-open {
+    display: flex;
+  }
+}
+
+/* Hero */
 .resources-hero {
   padding: var(--space-2xl) 0;
   background:
@@ -783,46 +854,68 @@ footer {
 .resources-hero .pill {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
+  gap: 10px;
+  padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid rgba(247, 244, 250, 0.2);
+  border: 1px solid rgba(247, 244, 250, 0.18);
   background: rgba(247, 244, 250, 0.06);
   color: rgba(247, 244, 250, 0.92);
+  font-weight: 650;
+  font-size: 14px;
+}
+
+.resources-hero .pill .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #f1de71;
+  box-shadow: 0 0 0 3px rgba(241, 222, 113, 0.18);
 }
 
 .resources-hero .hero-title {
   margin-top: var(--space-lg);
-  color: var(--color-white);
+  color: #f7f4fa;
 }
 
 .resources-hero-sub {
   margin: var(--space-md) auto 0;
   max-width: 860px;
-  color: rgba(247, 244, 250, 0.9);
+  color: rgba(247, 244, 250, 0.92);
 }
 
 .resources-hero-proof {
   margin: var(--space-md) auto 0;
   max-width: 760px;
-  color: rgba(247, 244, 250, 0.8);
+  color: rgba(247, 244, 250, 0.78);
 }
 
 .resources-hero-ctas {
   justify-content: center;
 }
 
-.resources-hero .button-secondary {
+/* Secondary CTA styling like Academy (scoped, no global override) */
+.resources-hero .academy-secondary {
   border-color: rgba(247, 244, 250, 0.25);
   color: rgba(247, 244, 250, 0.92);
   background: rgba(247, 244, 250, 0.06);
 }
 
-.resources-hero .button-secondary:hover {
+.resources-hero .academy-secondary:hover {
   background: rgba(247, 244, 250, 0.1);
 }
 
-/* Make resource cards equal height and keep CTA pinned */
+/* Resources header centered */
+.resources-head {
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto var(--space-xl);
+}
+
+.resources-head h2 {
+  margin-bottom: 10px;
+}
+
+/* Cards: even height, but not overly tall */
 .resources-programs .program-grid {
   align-items: stretch;
 }
@@ -835,49 +928,50 @@ footer {
   height: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 520px;
+  min-height: 0;
+  padding-bottom: 18px;
 }
 
 .resources-programs .program-desc {
-  margin-bottom: var(--space-lg);
+  margin-bottom: 18px;
 }
 
 .resources-programs .program-btn {
   margin-top: auto;
 }
 
-/* Social Proof block */
-.resources-proof {
-  padding-top: 0;
+/* Social proof: dark background, CTA on left */
+.resources-proof-dark {
+  padding: var(--space-2xl) 0;
+  background: #1c1422;
 }
 
 .resources-proof-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.05fr 0.95fr;
   gap: var(--space-xl);
   align-items: start;
-  padding: var(--space-xl);
-  background: #fff;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow);
 }
 
 .resources-proof-list {
   margin: var(--space-md) 0 0;
   padding-left: 18px;
-  color: var(--text-muted);
+  color: rgba(247, 244, 250, 0.72);
 }
 
 .resources-proof-list li {
   margin: 10px 0;
 }
 
+.resources-proof-cta-wrap {
+  margin-top: var(--space-lg);
+}
+
 .resources-testimonial {
   padding: var(--space-lg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: rgba(247, 244, 250, 0.7);
+  border: 1px solid rgba(247, 244, 250, 0.14);
+  border-radius: 16px;
+  background: rgba(247, 244, 250, 0.06);
 }
 
 .resources-testimonial + .resources-testimonial {
@@ -886,27 +980,37 @@ footer {
 
 .resources-testimonial-quote {
   margin: 0;
-  color: var(--text-primary);
+  color: rgba(247, 244, 250, 0.92);
 }
 
 .resources-testimonial-name {
   margin-top: 10px;
-  color: var(--text-muted);
+  color: rgba(247, 244, 250, 0.72);
   font-weight: 700;
-}
-
-.resources-proof-cta {
-  width: 100%;
-  margin-top: var(--space-md);
 }
 
 @media (max-width: 900px) {
   .resources-proof-grid {
     grid-template-columns: 1fr;
-    padding: var(--space-lg);
   }
+}
 
-  .resources-programs .program-inner {
-    min-height: 0;
-  }
+/* Footer fixes (scoped to Resources page) */
+.page-resources footer {
+  background: #1c1422;
+  color: rgba(247, 244, 250, 0.92);
+  border-top: 1px solid rgba(247, 244, 250, 0.12);
+}
+
+.page-resources footer .muted {
+  color: rgba(247, 244, 250, 0.72);
+}
+
+.page-resources footer a {
+  color: rgba(247, 244, 250, 0.82);
+  text-decoration: none;
+}
+
+.page-resources footer a:hover {
+  color: rgba(247, 244, 250, 0.92);
 }

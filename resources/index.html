@@ -36,7 +36,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   </head>
 
-  <body>
+  <body class="page-resources">
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -48,18 +48,18 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- Header (fixed) -->
+    <!-- Header (fixed markup, styles improved via CSS additions) -->
     <header>
       <div class="container nav">
         <a class="logo" href="../index.html" aria-label="Marketing In Action Home">
           <img class="nav-logo-img" src="../assets/mia-logo.png" alt="Marketing In Action" />
         </a>
 
-        <button class="menu-button" aria-label="Open menu" aria-expanded="false">
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
           <span class="menu-icon" aria-hidden="true"></span>
         </button>
 
-        <nav class="nav-links" aria-label="Primary">
+        <nav id="primary-nav" class="nav-links" aria-label="Primary">
           <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a>
           <a href="../academy/" rel="noreferrer">MIA Academy</a>
           <a href="./" aria-current="page">MIA Resources</a>
@@ -75,10 +75,14 @@
       <section class="resources-hero">
         <div class="container">
           <div class="resources-hero-inner">
-            <div class="pill">MIA Resources, Frameworks &amp; Templates</div>
+            <div class="pill">
+              <span class="dot" aria-hidden="true"></span>
+              MIA Resources, Frameworks &amp; Templates
+            </div>
 
             <h1 class="hero-title">
-              Everything you need to put <span class="accent-italic">marketing into action</span>.
+              Everything you need to put
+              <span class="text-yellow accent-italic">marketing into action</span>.
             </h1>
 
             <p class="resources-hero-sub">
@@ -94,16 +98,16 @@
               <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
                 Get Full Annual Access
               </a>
-              <a class="button button-secondary" href="#resources">See All Resources</a>
+              <a class="button button-secondary academy-secondary" href="#resources">See All Resources</a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- Resource Library Grid -->
+      <!-- Resources -->
       <section id="resources" class="section resources-programs">
         <div class="container">
-          <div class="section-head">
+          <div class="resources-head">
             <h2>Explore MIA Resources</h2>
             <p class="muted">
               Start with individual resources or get full access to everything through the Premium MIA Resource &amp; Template Library, available
@@ -112,7 +116,6 @@
           </div>
 
           <div class="program-grid">
-            <!-- 1 -->
             <article class="program-card">
               <div class="program-rail" style="background: rgba(241, 222, 113, 0.85)"></div>
               <div class="program-inner">
@@ -125,7 +128,6 @@
               </div>
             </article>
 
-            <!-- 2 -->
             <article class="program-card">
               <div class="program-rail" style="background: rgba(113, 196, 241, 0.85)"></div>
               <div class="program-inner">
@@ -138,7 +140,6 @@
               </div>
             </article>
 
-            <!-- 3 -->
             <article class="program-card">
               <div class="program-rail" style="background: rgba(241, 113, 196, 0.8)"></div>
               <div class="program-inner">
@@ -148,17 +149,12 @@
                   Industry reports on SaaS, FinTech, Web3, Healthtech, Edtech, HRtech, Agritech, Ecommerce, Energytech, Marketplace,
                   Entertainment, Creators, and Agencies.
                 </p>
-                <a
-                  class="program-btn"
-                  href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports"
-                  target="_blank"
-                  rel="noreferrer"
+                <a class="program-btn" href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"
                   >Get Access</a
                 >
               </div>
             </article>
 
-            <!-- 4 -->
             <article class="program-card">
               <div class="program-rail" style="background: rgba(28, 20, 34, 0.65)"></div>
               <div class="program-inner">
@@ -175,7 +171,6 @@
               </div>
             </article>
 
-            <!-- 5 -->
             <article class="program-card">
               <div class="program-rail" style="background: rgba(241, 222, 113, 0.75)"></div>
               <div class="program-inner">
@@ -192,15 +187,12 @@
               </div>
             </article>
 
-            <!-- 6 -->
             <article class="program-card">
               <div class="program-rail" style="background: rgba(113, 132, 241, 0.75)"></div>
               <div class="program-inner">
                 <div class="program-tag">CALENDAR</div>
                 <h3 class="program-title">Annual Tech Events Calendar</h3>
-                <p class="program-desc">
-                  A curated, living calendar of tech events in Africa, built to expand globally for digital nomads.
-                </p>
+                <p class="program-desc">A curated, living calendar of tech events in Africa, built to expand globally for digital nomads.</p>
                 <a
                   class="program-btn"
                   href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096"
@@ -211,11 +203,10 @@
               </div>
             </article>
 
-            <!-- 7 -->
             <article class="program-card">
-              <div class="program-rail" style="background: rgba(28, 20, 34, 0.35)"></div>
+              <div class="program-rail" style="background: rgba(241, 222, 113, 0.45)"></div>
               <div class="program-inner">
-                <div class="program-tag">COACHING</div>
+                <div class="program-tag">AMA</div>
                 <h3 class="program-title">Ask James Anything</h3>
                 <p class="program-desc">
                   Get answers to questions about positioning, messaging, GTM strategy, lifecycle setups, growth experiments, tools, templates,
@@ -225,9 +216,8 @@
               </div>
             </article>
 
-            <!-- 8 -->
             <article class="program-card">
-              <div class="program-rail" style="background: rgba(113, 241, 158, 0.75)"></div>
+              <div class="program-rail" style="background: rgba(28, 20, 34, 0.35)"></div>
               <div class="program-inner">
                 <div class="program-tag">FREE</div>
                 <h3 class="program-title">MIA Resource Library (Free)</h3>
@@ -245,12 +235,12 @@
         </div>
       </section>
 
-      <!-- Social Proof (after Ask James Anything) -->
-      <section class="section resources-proof">
+      <!-- Social Proof (dark background, CTA moved left) -->
+      <section class="resources-proof-dark">
         <div class="container">
           <div class="resources-proof-grid">
             <div class="resources-proof-left">
-              <h2>Built from real work, trusted by real operators.</h2>
+              <h2 class="text-white">Built from real work, trusted by real operators.</h2>
 
               <ul class="resources-proof-list">
                 <li>Created by marketers actively working across product, growth, and GTM roles</li>
@@ -258,9 +248,15 @@
                 <li>Designed for execution in emerging and global markets</li>
                 <li>Continuously refined through live work and community feedback</li>
               </ul>
+
+              <div class="resources-proof-cta-wrap">
+                <a class="button button-primary" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
+                  Get Full Annual Access
+                </a>
+              </div>
             </div>
 
-            <div class="resources-proof-right">
+            <div class="resources-proof-right" aria-label="Resource testimonials">
               <div class="resources-testimonial">
                 <p class="resources-testimonial-quote">
                   “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
@@ -269,22 +265,16 @@
               </div>
 
               <div class="resources-testimonial">
-                <p class="resources-testimonial-quote">
-                  “The way things were broken down made it easier to act, not just understand.”
-                </p>
+                <p class="resources-testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
                 <div class="resources-testimonial-name">— Despina Maris, Product Marketer</div>
               </div>
-
-              <a class="button button-primary resources-proof-cta" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">
-                Get Full Annual Access
-              </a>
             </div>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer (fixed) -->
+    <!-- Footer (fixed markup, styles improved via CSS additions) -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -296,12 +286,7 @@
             </p>
 
             <div class="footer-social">
-              <a
-                href="https://www.linkedin.com/company/marketinginactionnewsletter"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://www.linkedin.com/company/marketinginactionnewsletter" aria-label="LinkedIn" target="_blank" rel="noreferrer">
                 <svg viewBox="0 0 24 24">
                   <path
                     d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.07V21h-3.96v-5.23c0-1.25-.02-2.86-1.74-2.86-1.74 0-2.01 1.36-2.01 2.77V21H9.5V8.98z"
@@ -325,9 +310,16 @@
                 </svg>
               </a>
 
-              <a href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp" aria-label="YouTube" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg viewBox="0 0 24 24">
-                  <path d="M21.8 8.001a2.75 2.75 0 00-1.94-1.95C18.1 5.5 12 5.5 12 5.5s-6.1 0-7.86.55A2.75 2.75 0 002.2 8.001 28.6 28.6 0 001.8 12c0 1.35.1 2.7.4 3.999a2.75 2.75 0 001.94 1.95c1.76.551 7.86.551 7.86.551s6.1 0 7.86-.55a2.75 2.75 0 001.94-1.95c.3-1.3.4-2.65.4-4a28.6 28.6 0 00-.4-3.999zM10 15.5v-7l6 3.5-6 3.5z" />
+                  <path
+                    d="M21.8 8.001a2.75 2.75 0 00-1.94-1.95C18.1 5.5 12 5.5 12 5.5s-6.1 0-7.86.55A2.75 2.75 0 002.2 8.001 28.6 28.6 0 001.8 12c0 1.35.1 2.7.4 3.999a2.75 2.75 0 001.94 1.95c1.76.551 7.86.551 7.86.551s6.1 0 7.86-.55a2.75 2.75 0 001.94-1.95c.3-1.3.4-2.65.4-4a28.6 28.6 0 00-.4-3.999zM10 15.5v-7l6 3.5-6 3.5z"
+                  />
                 </svg>
               </a>
             </div>
@@ -338,9 +330,7 @@
             <ul class="footer-list">
               <li><a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a></li>
               <li><a href="https://luma.com/marketinginaction" target="_blank" rel="noreferrer">MIA Events</a></li>
-              <li>
-                <a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a>
-              </li>
+              <li><a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a></li>
               <li><a href="https://marketinginaction.xyz/academy" rel="noreferrer">MIA Academy</a></li>
               <li><a href="https://marketinginaction.xyz/jobs" rel="noreferrer">MIA Jobs</a></li>
               <li><a href="https://marketinginaction.xyz/consulting" rel="noreferrer">MIA Consulting</a></li>
@@ -353,7 +343,11 @@
               <li><a href="https://selar.com/marketingprogram" target="_blank" rel="noreferrer">Product &amp; Growth Marketing with AI Bootcamp</a></li>
               <li><a href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">Product Marketing Templates &amp; Resources Library</a></li>
               <li><a href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">AI Prompt Frameworks &amp; Templates for Marketers</a></li>
-              <li><a href="https://www.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">The State of Marketing In African Tech (Report)</a></li>
+              <li>
+                <a href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"
+                  >The State of Marketing In African Tech (Report)</a
+                >
+              </li>
               <li>
                 <a
                   href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7"
