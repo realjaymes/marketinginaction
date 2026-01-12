@@ -18,7 +18,7 @@ I am currently experimenting with vibe coding, and this is one of the projects I
 - LinkedIn: https://www.linkedin.com/in/jamespraise  
 - X (Twitter): https://x.com/realjaymes
 ## Website
-Live site: https://www.marketinginaction.xyz
+Live site: https://marketinginaction.xyz
 ## Core Sections
 - Media and newsletters
 - Resource and template libraries
