@@ -26,11 +26,29 @@ Live site: https://marketinginaction.xyz
 - Academy and learning programs
 - Jobs and ecosystem pages
 ## Tech Stack
-(To be included once finalized)
-- Frontend: 
-- Styling: 
-- CMS: 
-- Hosting: 
+### AI & Vibe Coding
+- ChatGPT Custom GPT for vibe coding assistance and build guidance
+- Google Gemini in Google AI Studio for multimodal prompting and rapid iteration
+- Lovable for AI driven website and UI prototyping
+### Development Environment
+- macOS for local development
+- Visual Studio Code for writing, editing, and reviewing code
+- Git CLI on Mac Terminal for commits, branching, merges, and conflict resolution
+### Core Web Technologies
+- HTML for structure and semantic markup
+- CSS for layout, typography, and visual styling
+- Vanilla JavaScript for interactivity and lightweight behavior
+### Version Control & Collaboration
+- Git for version control and change tracking
+- GitHub for repository hosting and collaboration
+### Hosting, DNS & Delivery
+- GitHub Pages for static site hosting and continuous deployment
+- Cloudflare for DNS management, SSL, CDN, and redirect rules
+### Content & Publishing
+- Substack for newsletter publishing and content management on a custom subdomain
+### Analytics & Measurement
+- Google Tag Manager for centralized analytics and event management
+- Google Analytics 4 for traffic, engagement, and performance tracking
 ## Contributing
 This repository is primarily maintained by James and the Marketing In Action team.  
 Community contributions, suggestions, and issues are welcome.
