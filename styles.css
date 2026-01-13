@@ -1267,6 +1267,38 @@ body.home #subscribe .card p.muted {
   -webkit-overflow-scrolling: touch;
 }
 
+/* Track becomes a horizontal grid */
+.jobs-testimonials-track {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--space-md) * 3)) / 4);
+  gap: var(--space-md);
+  overflow-x: auto;
+  padding: 8px 2px 12px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Each card snaps cleanly */
+.jobs-testimonial-card {
+  scroll-snap-align: start;
+  width: auto;
+}
+
+/* 2-up on tablets */
+@media (max-width: 1100px) {
+  .jobs-testimonials-track {
+    grid-auto-columns: calc((100% - var(--space-md)) / 2);
+  }
+}
+
+/* 1-up on mobile */
+@media (max-width: 640px) {
+  .jobs-testimonials-track {
+    grid-auto-columns: 88%;
+  }
+}
+
 .jobs-testimonials-track::-webkit-scrollbar {
   height: 10px;
 }
@@ -1432,6 +1464,12 @@ body.home #subscribe .card p.muted {
   .jobs-testimonials-section {
     padding: calc(var(--space-2xl) - 20px) 0;
   }
+}
+
+.jobs-testimonials-section {
+  background: #140f1a;
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(28, 20, 34, 0.12);
 }
 
 /* Footer row with avatar + author */
