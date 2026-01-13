@@ -1415,6 +1415,23 @@ body.home #subscribe .card p.muted {
   opacity: 0.8;
 }
 
+/* Full-width dark band */
+.jobs-testimonials-band {
+  background: #140f1a;
+}
+
+/* Reset section padding logic */
+.jobs-testimonials-section {
+  padding: var(--space-2xl) 0;
+}
+
+/* Tighten top and bottom so it matches adjacent sections */
+@media (min-width: 980px) {
+  .jobs-testimonials-section {
+    padding: calc(var(--space-2xl) - 20px) 0;
+  }
+}
+
 /* Footer row with avatar + author */
 .jobs-testimonial-footer {
   display: flex;
