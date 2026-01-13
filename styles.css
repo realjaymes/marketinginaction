@@ -1353,6 +1353,68 @@ body.home #subscribe .card p.muted {
   max-width: 46ch;
 }
 
+/* Testimonials section: fix spacing */
+.jobs-testimonials-section {
+  background: #140f1a;
+  padding: var(--space-xl) 0;
+}
+
+@media (min-width: 980px) {
+  .jobs-testimonials-section {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+}
+
+/* Keep the section head tighter on dark */
+.jobs-testimonials-section .jobs-section-head {
+  margin-bottom: var(--space-lg);
+}
+
+/* Track: slightly tighter */
+.jobs-testimonials-track {
+  gap: var(--space-md);
+  padding: 8px 2px 12px;
+}
+
+/* Cards: smaller and closer to screenshot proportions */
+.jobs-testimonial-card {
+  width: min(560px, 84vw);
+  padding: 26px 26px 20px;
+  border-radius: 22px;
+}
+
+/* Quote: reduce size */
+.jobs-quote {
+  font-size: 18px;
+  line-height: 1.55;
+  max-width: 56ch;
+}
+
+/* Footer row: reduce spacing */
+.jobs-testimonial-footer {
+  margin-top: 18px;
+  gap: 12px;
+}
+
+/* Avatar: smaller */
+.jobs-avatar {
+  width: 44px;
+  height: 44px;
+  font-size: 14px;
+}
+
+/* Byline: smaller */
+.jobs-byline {
+  font-size: 14px;
+}
+
+/* Scroll hint: tuck closer */
+.jobs-testimonials-section .jobs-scroll-hint {
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
 /* Footer row with avatar + author */
 .jobs-testimonial-footer {
   display: flex;
