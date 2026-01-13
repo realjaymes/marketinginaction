@@ -744,8 +744,14 @@ nav a:hover {
 .quiz-panel h2 {
   color: #f7f4fa;
   font-size: clamp(34px, 4vw, 58px);
-  text-align: left;
+  text-align: center;
   margin-bottom: 10px;
+}
+
+.quiz-panel > p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .quiz-panel p {
