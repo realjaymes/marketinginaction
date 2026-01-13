@@ -1418,6 +1418,8 @@ body.home #subscribe .card p.muted {
 /* Full-width dark band */
 .jobs-testimonials-band {
   background: #140f1a;
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid rgba(28, 20, 34, 0.12);
 }
 
 /* Reset section padding logic */
