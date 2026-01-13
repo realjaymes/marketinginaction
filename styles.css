@@ -1171,18 +1171,36 @@ body.home #subscribe .card p.muted {
 }
 
 .jobs-proof-item {
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.04);
-  border-radius: var(--radius-md);
-  padding: 14px 12px;
+  border: none;
+  background: transparent;
+  border-radius: 0);
+  padding: 0;
+  position: relative
 }
 
 .jobs-proof-value {
-  color: #f7f4fa;
+  color: #f1de71;
   font-weight: 900;
   letter-spacing: -0.02em;
   font-size: 18px;
   line-height: 1.2;
+}
+
+/* Optional: subtle dividers between stats */
+.jobs-proof {
+  gap: var(--space-lg);
+}
+
+@media (min-width: 980px) {
+  .jobs-proof-item:not(:first-child)::before {
+    content: "";
+    position: absolute;
+    left: calc(-1 * (var(--space-lg) / 2));
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: rgba(255, 255, 255, 0.12);
+  }
 }
 
 .jobs-proof-label {
@@ -1286,6 +1304,101 @@ body.home #subscribe .card p.muted {
   margin-top: 10px;
   text-align: center;
   font-size: 13px;
+}
+
+/* Testimonials section: dark background */
+.jobs-testimonials-section {
+  background: #140f1a;
+  padding: var(--space-2xl) 0;
+}
+
+.jobs-testimonials-section h2,
+.jobs-testimonials-section .muted {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.jobs-testimonials-section .muted {
+  opacity: 0.72;
+}
+
+/* Testimonials track stays scrollable */
+.jobs-testimonials-track {
+  display: flex;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  padding: 10px 2px 14px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Cards like the screenshot */
+.jobs-testimonial-card {
+  flex: 0 0 auto;
+  width: min(720px, 88vw);
+  scroll-snap-align: start;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 26px;
+  padding: 44px 44px 34px;
+  box-shadow: none;
+}
+
+.jobs-quote {
+  color: rgba(255, 255, 255, 0.92);
+  font-style: italic;
+  font-size: 26px;
+  line-height: 1.45;
+  letter-spacing: -0.01em;
+  margin: 0;
+  max-width: 46ch;
+}
+
+/* Footer row with avatar + author */
+.jobs-testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.jobs-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: rgba(241, 222, 113, 0.16);
+  border: 1px solid rgba(241, 222, 113, 0.35);
+  color: var(--brand-yellow);
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.jobs-byline {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.62);
+  font-size: 18px;
+  font-weight: 750;
+}
+
+/* Scroll hint on dark */
+.jobs-scroll-hint {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+/* Smaller screens */
+@media (max-width: 720px) {
+  .jobs-testimonial-card {
+    padding: 28px 22px 22px;
+  }
+
+  .jobs-quote {
+    font-size: 20px;
+  }
+
+  .jobs-byline {
+    font-size: 16px;
+  }
 }
 
 /* Pricing table */
