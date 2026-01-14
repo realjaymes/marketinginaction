@@ -837,7 +837,8 @@ nav a:hover {
 .resources-page .program-inner { 
   min-height: 360px;
   display: flex;
-  flex direction: column; }
+  flex direction: column; 
+}
 
 .resources-page .program-btn {
   margin-top: auto;
@@ -1541,4 +1542,419 @@ body.home #subscribe .card p.muted {
 
 .jobs-faq-body p {
   margin: 0;
+}
+
+/* =========================================
+   Consulting Page
+   ========================================= */
+
+.consulting-hero {
+  background:
+    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.14), transparent 60%),
+    radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 55%),
+    #1c1422;
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.consulting-hero-grid {
+  display: grid;
+  gap: var(--space-xl);
+  align-items: start;
+}
+
+@media (min-width: 980px) {
+  .consulting-hero-grid {
+    grid-template-columns: 1.2fr 0.9fr;
+    align-items: start;
+  }
+}
+
+.consulting-hero-sub {
+  font-size: 18px;
+  max-width: 70ch;
+}
+
+.consulting-secondary {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #f7f4fa;
+}
+
+.consulting-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+
+/* Metrics strip (Jobs-style) */
+.consulting-metrics {
+  margin-top: var(--space-xl);
+}
+
+.consulting-proof {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(160px, 1fr);
+  gap: 0;
+  align-items: stretch;
+
+  padding: 18px 10px;
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
+}
+
+.consulting-proof::-webkit-scrollbar {
+  height: 0;
+}
+
+.consulting-proof-item {
+  padding: 6px 18px;
+  min-height: 56px;
+  display: grid;
+  align-content: center;
+}
+
+.consulting-proof-item + .consulting-proof-item {
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.consulting-proof-value {
+  color: rgba(241, 222, 113, 0.95);
+  font-weight: 900;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.consulting-proof-label {
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+/* On wider screens, allow the strip to breathe */
+@media (min-width: 980px) {
+  .consulting-proof {
+    grid-auto-columns: minmax(180px, 1fr);
+    padding: 20px 14px;
+  }
+
+  .consulting-proof-value {
+    font-size: 24px;
+  }
+}
+
+.consulting-video-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-lg);
+  padding: 14px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+}
+
+.consulting-video-title {
+  color: #fff;
+  font-weight: 850;
+  margin-bottom: 10px;
+}
+
+.consulting-video-embed {
+  border-radius: 14px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.consulting-video-embed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.consulting-video-meta {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 13px;
+}
+
+.consulting-under-hero {
+  padding-top: var(--space-xl);
+}
+
+/* Center only this logos heading block (wins over other rules) */
+.consulting-logos-head,
+.consulting-logos-head p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72ch;
+}
+
+.consulting-marquee {
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 14px 0;
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+}
+
+.consulting-marquee-track {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+  width: max-content;
+  padding-left: 18px;
+  animation: consulting-marquee 28s linear infinite;
+}
+
+.consulting-marquee-track span {
+  font-weight: 750;
+  font-size: 14px;
+  color: rgba(28, 20, 34, 0.68);
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  background: rgba(241, 222, 113, 0.14);
+}
+
+@keyframes consulting-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .consulting-marquee-track { animation: none; }
+}
+
+/* Top 5 signs card (Jobs-style cleanliness) */
+.consulting-problem {
+  margin-top: var(--space-2xl);
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+}
+
+.consulting-problem h2 {
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.consulting-problem-list {
+  margin: 16px 0 10px;
+  padding-left: 22px;
+  color: rgba(28, 20, 34, 0.78);
+}
+
+.consulting-problem-list li {
+  margin: 12px 0;
+  line-height: 1.55;
+}
+
+.consulting-problem-list strong {
+  color: rgba(28, 20, 34, 0.92);
+}
+
+.consulting-problem-close {
+  margin: 14px 0 0;
+  font-weight: 850;
+  color: rgba(28, 20, 34, 0.92);
+  text-align: center;
+  margin-top: var(--space-xl);
+  font-weight: 850;
+}
+
+.consulting-services-head {
+  max-width: 82ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.consulting-services-grid {
+  margin-top: var(--space-xl);
+  display: grid;
+  gap: var(--space-xl);
+}
+
+@media (min-width: 980px) {
+  .consulting-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+}
+
+.consulting-service-card {
+  background: #fff;
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.consulting-service-media {
+  background: #f3eef7;
+  border-bottom: 1px solid rgba(28, 20, 34, 0.08);
+}
+
+.consulting-service-media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.consulting-service-body {
+  padding: 18px 18px 16px;
+}
+
+.consulting-bullets {
+  margin: 10px 0 10px;
+  padding-left: 18px;
+  color: rgba(28, 20, 34, 0.72);
+}
+
+.consulting-bullets li {
+  margin: 6px 0;
+}
+
+.consulting-case-link {
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.consulting-case-link:hover {
+  text-decoration: underline;
+}
+
+/* Engagement section centering */
+.consulting-engagement .container {
+  text-align: center;
+}
+
+.consulting-engagement .consulting-table-wrap {
+  text-align: left;
+}
+
+.consulting-engagement-cta {
+  margin-top: var(--space-lg);
+  display: flex;
+  justify-content: center;
+}
+
+.consulting-table-wrap {
+  margin-top: var(--space-lg);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  border-radius: var(--radius-lg);
+  background: #fff;
+  box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+}
+
+.consulting-table {
+  width: 100%;
+  min-width: 980px;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.consulting-table thead th {
+  text-align: left;
+  padding: 14px 14px;
+  font-weight: 900;
+  background: rgba(241, 222, 113, 0.85);
+  border-bottom: 1px solid rgba(28, 20, 34, 0.12);
+}
+
+.consulting-table thead th:first-child {
+  background: rgba(241, 222, 113, 0.85);
+}
+
+.consulting-table tbody th {
+  text-align: left;
+  padding: 14px 14px;
+  font-weight: 850;
+  border-bottom: 1px solid rgba(28, 20, 34, 0.10);
+  background: rgba(28, 20, 34, 0.02);
+  width: 190px;
+}
+
+.consulting-table td {
+  vertical-align: top;
+  padding: 14px 14px;
+  border-bottom: 1px solid rgba(28, 20, 34, 0.10);
+  color: rgba(28, 20, 34, 0.78);
+}
+
+.consulting-table-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.consulting-table-list li {
+  margin: 6px 0;
+}
+
+/* Agency section centering */
+.consulting-agency-card {
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+  text-align: center;
+}
+
+.consulting-agency-card .button-row {
+  justify-content: center;
+}
+
+/* FAQs centering + layout fix */
+.consulting-faq-head {
+  max-width: 80ch;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.consulting-faqs {
+  margin-top: var(--space-lg);
+  display: grid;
+}
+
+.consulting-faq {
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  border-radius: var(--radius-md);
+  background: #fff;
+  padding: 12px 14px;
+  box-shadow: 0 12px 40px rgba(28, 20, 34, 0.05);
+  text-align: left;
+}
+
+.consulting-faq + .consulting-faq {
+  margin-top: 12px;
+}
+
+.consulting-faq summary {
+  cursor: pointer;
+  font-weight: 850;
+}
+
+.consulting-faq-body {
+  padding-top: 10px;
+}
+
+.consulting-faq-cta {
+  margin-top: var(--space-xl);
+  display: flex;
+  justify-content: center;
 }
