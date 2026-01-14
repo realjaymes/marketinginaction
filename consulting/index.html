@@ -895,6 +895,19 @@
         </div>
       </div>
     </footer>
+
+        <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      const btn = document.querySelector(".menu-button");
+      const nav = document.querySelector(".nav-links");
+      btn.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
+    </script>
     
   </body>
 </html>
