@@ -1,0 +1,5 @@
+# robots.txt for Marketing In Action
+User-agent: *
+Allow: /
+
+Sitemap: https://marketinginaction.xyz/sitemap.xml

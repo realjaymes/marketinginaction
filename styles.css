@@ -73,6 +73,16 @@ p { margin: 0 0 var(--space-md); }
 a { color: #1c1422; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* Focus styles for keyboard accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
 .muted { color: var(--text-muted); }
 .text-white { color: var(--color-white) !important; }
 .text-yellow { color: var(--color-accent); }
@@ -837,7 +847,7 @@ nav a:hover {
 .resources-page .program-inner { 
   min-height: 360px;
   display: flex;
-  flex direction: column; 
+  flex-direction: column; 
 }
 
 .resources-page .program-btn {
