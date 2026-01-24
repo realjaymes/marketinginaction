@@ -1,0 +1,41 @@
+# Marketing In Action
+
+> An execution-first marketing community helping marketers and founders unlock predictable revenue.
+
+Marketing In Action (MIA) is a marketing ecosystem providing education, resources, job opportunities, and consulting services for marketers and founders focused on go-to-market (GTM) execution.
+
+## Site Structure
+
+- [Homepage](https://marketinginaction.xyz/): Overview of the MIA ecosystem and offerings
+- [MIA Academy](https://marketinginaction.xyz/academy/): Courses and hands-on learning programs for marketers
+- [MIA Consulting](https://marketinginaction.xyz/consulting/): Fractional marketing, advisory, and consulting services
+- [MIA Jobs](https://marketinginaction.xyz/jobs/): Marketing job board for hiring and job seekers
+- [MIA Resources](https://marketinginaction.xyz/resources/): Templates, tools, and marketing resources
+- [MIA Newsletter](https://newsletter.marketinginaction.xyz/): Weekly marketing insights and strategies
+
+## Key Topics
+
+- Go-to-market (GTM) strategy
+- Marketing execution and operations
+- Demand generation
+- Content marketing
+- Brand positioning and messaging
+- Marketing hiring and careers
+- Startup marketing
+- B2B marketing
+
+## About
+
+Marketing In Action was created to bridge the gap between marketing theory and execution. The community focuses on practical, actionable marketing strategies rather than abstract concepts.
+
+## Contact
+
+- Website: https://marketinginaction.xyz/
+- Newsletter: https://newsletter.marketinginaction.xyz/
+- Twitter: https://twitter.com/marketinginact
+- LinkedIn: https://www.linkedin.com/company/marketinginactionnewsletter
+
+## Optional
+
+- Sitemap: https://marketinginaction.xyz/sitemap.xml
+- Robots.txt: https://marketinginaction.xyz/robots.txt
