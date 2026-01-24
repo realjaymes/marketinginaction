@@ -35,7 +35,14 @@ Marketing In Action was created to bridge the gap between marketing theory and e
 - Twitter: https://twitter.com/marketinginact
 - LinkedIn: https://www.linkedin.com/company/marketinginactionnewsletter
 
+## Content Feeds
+
+- Newsletter RSS Feed: https://newsletter.marketinginaction.xyz/feed
+- Newsletter Archive: https://newsletter.marketinginaction.xyz/archive
+
 ## Optional
 
-- Sitemap: https://marketinginaction.xyz/sitemap.xml
+- Sitemap Index: https://marketinginaction.xyz/sitemap.xml
+- Main Site Sitemap: https://marketinginaction.xyz/sitemap-main.xml
+- Newsletter Sitemap: https://newsletter.marketinginaction.xyz/sitemap.xml
 - Robots.txt: https://marketinginaction.xyz/robots.txt
