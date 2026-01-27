@@ -958,6 +958,63 @@ footer .muted { color: rgba(247, 244, 250, 0.7); }
   flex-wrap: wrap;
 }
 
+.footer-legal {
+  display: flex;
+  gap: var(--space-md);
+}
+
+.footer-legal a {
+  color: var(--color-muted);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--color-white);
+}
+
+/* Legal Pages (Privacy Policy, Terms) */
+.legal-content {
+  padding: var(--space-3xl) 0;
+}
+
+.legal-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.legal-content h2 {
+  font-size: 1.5rem;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+  color: var(--color-white);
+}
+
+.legal-content h3 {
+  font-size: 1.125rem;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--color-white);
+}
+
+.legal-content p {
+  color: var(--color-muted);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.legal-content ul {
+  color: var(--color-muted);
+  margin-bottom: var(--space-md);
+  padding-left: var(--space-lg);
+}
+
+.legal-content li {
+  margin-bottom: var(--space-sm);
+  line-height: 1.6;
+}
+
 /* =========================================
    Homepage styles migrated from index.html
    Scoped to body.home to avoid affecting
