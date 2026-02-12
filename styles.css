@@ -139,6 +139,16 @@ textarea:focus-visible {
   text-decoration: none;
 }
 
+.hero .button-secondary {
+  border-color: rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: #f7f4fa;
+}
+
+.hero .button-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* =========================================
    Header and Navigation
    ========================================= */
@@ -548,13 +558,13 @@ nav a:hover {
 
 /* Academy hero: make secondary CTA readable on dark background */
 .academy-hero .button-secondary {
-  border-color: rgba(247, 244, 250, 0.22);
-  background: rgba(247, 244, 250, 0.06);
-  color: rgba(247, 244, 250, 0.92);
+  border-color: rgba(255, 255, 255, 0.22);
+  background: transparent;
+  color: #f7f4fa;
 }
 
 .academy-hero .button-secondary:hover {
-  background: rgba(247, 244, 250, 0.10);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .academy-pill {
@@ -836,12 +846,12 @@ nav a:hover {
    ========================================= */
 
 .resources-secondary {
-  border-color: rgba(247, 244, 250, 0.18);
+  border-color: rgba(255, 255, 255, 0.22);
   color: #f7f4fa;
-  background: rgba(247, 244, 250, 0.04);
+  background: transparent;
 }
 
-.resources-secondary:hover { background: rgba(247, 244, 250, 0.08); }
+.resources-secondary:hover { background: rgba(255, 255, 255, 0.06); }
 
 /* Resources cards are shorter than Academy cards */
 .resources-page .program-inner { 
