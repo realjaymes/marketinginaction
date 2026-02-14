@@ -8,6 +8,7 @@ Marketing In Action helps marketers put marketing into action through:
 - Community discussions and events
 - Applied education via MIA Academy
 - Jobs, hiring, and consulting infrastructure
+
 The platform is built to reduce the gap between learning marketing and doing marketing.
 ## Founder
 Hi, I’m James. I’m a Product and Growth Marketing consultant with close to a decade of experience helping startups launch, scale, and grow with clarity and execution. 
