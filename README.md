@@ -30,8 +30,10 @@ Live site: https://marketinginaction.xyz
 ### AI & Vibe Coding
 - ChatGPT Custom GPT for vibe coding assistance and build guidance
 - Google Gemini in Google AI Studio for multimodal prompting and rapid iteration
+- Google Antigravity for AI-powered coding assistance
 - Lovable for AI driven website and UI prototyping
 - Claude Code for AI-assisted development, code generation, and git workflows
+- OpenAI Codex CLI for terminal-based AI code generation and editing
 ### Development Environment
 - macOS for local development
 - Visual Studio Code for writing, editing, and reviewing code
