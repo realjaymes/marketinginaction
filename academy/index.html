@@ -260,6 +260,7 @@
                 </div>
 
                 <a class="program-btn" href="https://selar.com/marketingprogram" target="_blank" rel="noreferrer">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="bootcamp">See Full Details</a>
               </div>
             </article>
 
@@ -296,6 +297,7 @@
                 </div>
 
                 <a class="program-btn" href="#" aria-label="Replace with course checkout link">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="pmm-course">See Full Details</a>
               </div>
             </article>
 
@@ -331,6 +333,7 @@
                 </div>
 
                 <a class="program-btn" href="https://selar.com/techsalescourse" aria-label="Get access to tech sales course">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="tech-sales">See Full Details</a>
               </div>
             </article>
 
@@ -367,6 +370,7 @@
                 </div>
 
                 <a class="program-btn" href="https://selar.com/marketingresources" target="_blank" rel="noreferrer">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="templates">See Full Details</a>
               </div>
             </article>
 
@@ -403,6 +407,7 @@
                 </div>
 
                 <a class="program-btn" href="https://selar.com/aipromptplaybook" target="_blank" rel="noreferrer">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="ai-prompts">See Full Details</a>
               </div>
             </article>
 
@@ -439,6 +444,7 @@
                 </div>
 
                 <a class="program-btn" href="#" aria-label="Replace with handbook checkout link">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="growth-handbook">See Full Details</a>
               </div>
             </article>
 
@@ -474,6 +480,7 @@
                 </div>
 
                 <a class="program-btn" href="#" aria-label="Replace with guide checkout link">Get Access</a>
+                <a class="program-detail-link" data-panel-trigger="digital-marketing">See Full Details</a>
               </div>
             </article>
           </div>
@@ -812,6 +819,321 @@
         btn.setAttribute("aria-expanded", String(isOpen));
       });
     </script>
+    <!-- Side Panel -->
+    <div class="panel-overlay" id="panelOverlay"></div>
+    <aside class="panel-drawer" id="panelDrawer" aria-hidden="true" role="dialog" aria-label="Program details">
+      <div class="panel-header">
+        <button class="panel-close" id="panelClose" aria-label="Close panel">&times;</button>
+      </div>
+      <div class="panel-body" id="panelBody"></div>
+      <div class="panel-footer" id="panelFooter"></div>
+    </aside>
+
+    <script>
+    (function() {
+      var panelData = {
+        bootcamp: {
+          hook: "The Market Is Paying $127K for Skills Most Marketing Courses Don\u2019t Teach.",
+          stats: [
+            { value: "$100K\u2013$150K", label: "Product Marketing Managers" },
+            { value: "$95K\u2013$140K", label: "Growth Marketing Managers" },
+            { value: "$127.5K", label: "GTM Engineers (Median)" }
+          ],
+          bridge: "The gap between knowing and doing is where careers stall. 91% of marketers say they use AI. Only 23% have real depth. This program closes that gap with execution, not theory.",
+          deliverables: [
+            "12 completed portfolio-ready marketing deliverables",
+            "50+ templates and frameworks (\u20A6100,000 value)",
+            "40+ custom AI tools for marketers (\u20A650,000 value)",
+            "MIA Academy certification",
+            "Internship access with career coaching",
+            "Weekly live Q&A and async support"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies on three continents. Generated $10M+ in qualified pipeline, supported 15+ product launches, and built marketing functions from zero at Reform, FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence."
+          },
+          testimonials: [
+            { quote: "Landed a product marketing role paying 40% more than my last one. The portfolio assessments were what got me through the interview.", name: "Theodore Nnah", role: "Product Marketer" },
+            { quote: "Got promoted to lead GTM strategy three months after completing the program. The frameworks changed how I work.", name: "Chidinma Ezeani", role: "Marketing Manager" }
+          ],
+          specs: [
+            { label: "Duration", value: "13 weeks (4 modules, 12 lessons)" },
+            { label: "Format", value: "Recorded lessons + weekly live Q&A" },
+            { label: "Cohorts", value: "Feb 2 \u2013 May 3, 2026 | Jun 8 \u2013 Sep 6, 2026" },
+            { label: "Cost", value: "\u20A665,000" },
+            { label: "Scholarships", value: "Full scholarships and 40% discounts available" }
+          ],
+          cta: { text: "Apply for the Next Cohort", url: "https://selar.com/marketingprogram" }
+        },
+        "pmm-course": {
+          hook: "Product Marketing Is One of the Fastest-Growing Roles in Tech.",
+          stats: [
+            { value: "$100K\u2013$150K", label: "PMM Salary Range" },
+            { value: "60%+", label: "Roles Listing AI as Preferred" }
+          ],
+          bridge: "This self-paced course covers product marketing fundamentals through GTM execution. Learn positioning, launches, and enablement in a way you can apply directly to real work.",
+          deliverables: [
+            "Pre-recorded lessons covering full PMM lifecycle",
+            "Practical handbook with frameworks",
+            "Templates for positioning, messaging, and launches"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies. Built marketing functions from zero at Reform, FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence."
+          },
+          testimonials: [],
+          specs: [
+            { label: "Format", value: "Pre-recorded videos + handbook" },
+            { label: "Cost", value: "\u20A615,000" },
+            { label: "Access", value: "Instant, self-paced" }
+          ],
+          cta: { text: "Get Access", url: "#" }
+        },
+        "tech-sales": {
+          hook: "Tech Sales Reps with Structured Training Close More Deals.",
+          stats: [
+            { value: "$80K\u2013$130K", label: "Tech Sales AE Salary Range" },
+            { value: "Top 20%", label: "Reps with Process Outperform" }
+          ],
+          bridge: "A practical course covering modern tech sales, from strategy and process to engagement, tooling, and performance metrics.",
+          deliverables: [
+            "Pre-recorded video lessons",
+            "Sales handbook with practical examples",
+            "Frameworks for prospecting, qualification, and closing"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies. Built marketing functions from zero at Reform, FunnelEnvy, Bujeti, Distrobird, and Cecure Intelligence."
+          },
+          testimonials: [],
+          specs: [
+            { label: "Format", value: "Pre-recorded videos + handbook" },
+            { label: "Cost", value: "\u20A615,000" },
+            { label: "Access", value: "Instant, self-paced" }
+          ],
+          cta: { text: "Get Access", url: "https://selar.com/techsalescourse" }
+        },
+        templates: {
+          hook: "50+ Templates Built from Real Product Marketing Work.",
+          stats: [
+            { value: "50+", label: "Templates & Frameworks" },
+            { value: "10+", label: "Marketing Categories" }
+          ],
+          bridge: "Stop building from scratch. These templates are designed to help you execute with clarity inside real teams, from positioning docs to launch plans.",
+          deliverables: [
+            "Google Docs, Sheets, and Notion templates",
+            "Playbooks and handbooks",
+            "Positioning, messaging, and launch frameworks",
+            "Lifecycle and onboarding templates"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies. These templates come from real work, not theory."
+          },
+          testimonials: [],
+          specs: [
+            { label: "Format", value: "Instant access" },
+            { label: "Cost", value: "\u20A620,000" },
+            { label: "Includes", value: "Google Docs, Sheets, Notion templates" }
+          ],
+          cta: { text: "Get Access", url: "https://selar.com/marketingresources" }
+        },
+        "ai-prompts": {
+          hook: "Marketers with AI Skills Earn 28% More Than Their Peers.",
+          stats: [
+            { value: "28%", label: "Salary Premium (One AI Skill)" },
+            { value: "200+", label: "Marketers Using These Frameworks" }
+          ],
+          bridge: "Frameworks and templates used by 200+ marketers and founders to produce consistent, high-quality outputs from AI across real marketing use cases.",
+          deliverables: [
+            "Prompt frameworks for key marketing tasks",
+            "Reusable templates for AI workflows",
+            "Strategies for consistent AI output quality"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies. Built 40+ custom AI tools for marketers."
+          },
+          testimonials: [],
+          specs: [
+            { label: "Format", value: "Instant access" },
+            { label: "Cost", value: "\u20A620,000" },
+            { label: "Includes", value: "Prompt frameworks, templates, AI workflows" }
+          ],
+          cta: { text: "Get Access", url: "https://selar.com/aipromptplaybook" }
+        },
+        "growth-handbook": {
+          hook: "Growth Marketing Is Where Strategy Meets Execution.",
+          stats: [
+            { value: "$95K\u2013$140K", label: "Growth Marketing Managers" },
+            { value: "High Demand", label: "Across B2B & SaaS" }
+          ],
+          bridge: "An execution-focused handbook covering growth strategy, experimentation, onboarding, acquisition, ads, B2B sales fundamentals, and content distribution.",
+          deliverables: [
+            "Complete growth marketing handbook",
+            "Practical examples and case breakdowns",
+            "Reusable frameworks for experimentation and acquisition"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies. Drove double-digit MRR growth for startups in B2B, SaaS, Fintech, and EdTech."
+          },
+          testimonials: [],
+          specs: [
+            { label: "Format", value: "Digital handbook" },
+            { label: "Cost", value: "\u20A610,000" },
+            { label: "Access", value: "Instant" }
+          ],
+          cta: { text: "Get Access", url: "#" }
+        },
+        "digital-marketing": {
+          hook: "Digital Marketing Demands Structure, Not Guesswork.",
+          stats: [
+            { value: "7+", label: "Channels Covered" },
+            { value: "End-to-End", label: "Strategy to Measurement" }
+          ],
+          bridge: "A structured handbook covering digital marketing strategy across SEO, content, social, ads, attribution, and measurement.",
+          deliverables: [
+            "Digital strategy playbook",
+            "Channel-specific checklists and examples",
+            "Attribution and measurement frameworks"
+          ],
+          instructor: {
+            name: "James Praise",
+            image: "../assets/james.jpg",
+            bio: "Product and growth marketing operator with 8+ years across 20+ companies. Built and executed digital marketing strategies for startups across three continents."
+          },
+          testimonials: [],
+          specs: [
+            { label: "Format", value: "Digital handbook" },
+            { label: "Cost", value: "\u20A65,000" },
+            { label: "Access", value: "Instant" }
+          ],
+          cta: { text: "Get Access", url: "#" }
+        }
+      };
+
+      var overlay = document.getElementById("panelOverlay");
+      var drawer = document.getElementById("panelDrawer");
+      var panelBody = document.getElementById("panelBody");
+      var panelFooter = document.getElementById("panelFooter");
+      var closeBtn = document.getElementById("panelClose");
+
+      function openPanel(id) {
+        var data = panelData[id];
+        if (!data) return;
+
+        var html = "";
+
+        // Hook
+        html += '<h3 class="panel-hook-headline">' + data.hook + '</h3>';
+
+        // Stats
+        if (data.stats.length) {
+          html += '<div class="panel-stats">';
+          data.stats.forEach(function(s) {
+            html += '<div class="panel-stat">' +
+              '<div class="panel-stat-value">' + s.value + '</div>' +
+              '<div class="panel-stat-label">' + s.label + '</div>' +
+            '</div>';
+          });
+          html += '</div>';
+        }
+
+        // Bridge
+        html += '<div class="panel-bridge"><p>' + data.bridge + '</p></div>';
+        html += '<hr class="panel-divider">';
+
+        // Deliverables
+        html += '<div class="panel-deliverables">';
+        html += '<p class="panel-section-title">What You Get</p><ul>';
+        data.deliverables.forEach(function(d) {
+          html += '<li>' + d + '</li>';
+        });
+        html += '</ul></div>';
+        html += '<hr class="panel-divider">';
+
+        // Instructor
+        html += '<div class="panel-instructor">';
+        if (data.instructor.image) {
+          html += '<div class="panel-instructor-img">' +
+            '<img src="' + data.instructor.image + '" alt="' + data.instructor.name + '" ' +
+            'onerror="this.parentElement.classList.add(\'is-hidden\')" />' +
+          '</div>';
+        }
+        html += '<div class="panel-instructor-info">' +
+          '<p class="panel-instructor-name">' + data.instructor.name + '</p>' +
+          '<p class="panel-instructor-bio">' + data.instructor.bio + '</p>' +
+        '</div></div>';
+
+        // Testimonials
+        if (data.testimonials.length) {
+          html += '<hr class="panel-divider">';
+          html += '<div class="panel-testimonials">';
+          html += '<p class="panel-section-title">Results</p>';
+          data.testimonials.forEach(function(t) {
+            html += '<div class="panel-testimonial">' +
+              '<p class="panel-testimonial-quote">\u201C' + t.quote + '\u201D</p>' +
+              '<p class="panel-testimonial-author">' + t.name + ', ' + t.role + '</p>' +
+            '</div>';
+          });
+          html += '</div>';
+        }
+
+        // Specs
+        html += '<hr class="panel-divider">';
+        html += '<div class="panel-specs">';
+        html += '<p class="panel-section-title">Details</p>';
+        data.specs.forEach(function(s) {
+          html += '<div class="panel-spec">' +
+            '<span class="panel-spec-label">' + s.label + '</span>' +
+            '<span class="panel-spec-value">' + s.value + '</span>' +
+          '</div>';
+        });
+        html += '</div>';
+
+        panelBody.innerHTML = html;
+
+        // Footer CTA
+        var target = data.cta.url.indexOf("http") === 0 ? ' target="_blank" rel="noreferrer"' : '';
+        panelFooter.innerHTML = '<a class="panel-cta" href="' + data.cta.url + '"' + target + '>' + data.cta.text + '</a>';
+
+        // Show
+        overlay.classList.add("is-active");
+        drawer.classList.add("is-active");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.classList.add("panel-open");
+        panelBody.scrollTop = 0;
+      }
+
+      function closePanel() {
+        overlay.classList.remove("is-active");
+        drawer.classList.remove("is-active");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("panel-open");
+      }
+
+      document.querySelectorAll(".program-detail-link").forEach(function(link) {
+        link.addEventListener("click", function(e) {
+          e.preventDefault();
+          openPanel(this.getAttribute("data-panel-trigger"));
+        });
+      });
+
+      closeBtn.addEventListener("click", closePanel);
+      overlay.addEventListener("click", closePanel);
+      document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") closePanel();
+      });
+    })();
+    </script>
+
     <!-- LinkedIn Insight Tag -->
     <script type="text/javascript">
       _linkedin_partner_id = "9341153";
