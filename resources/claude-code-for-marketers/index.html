@@ -1,0 +1,1382 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Claude Code for Marketers — Set Up Claude Code &amp; Marketing Skills</title>
+  <meta name="description" content="A beginner-friendly guide for marketers to set up Claude Code, install marketing skills, and use AI for positioning, GTM strategy, landing pages, and more. No coding experience needed.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Progress Bar -->
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">&#9670;</span> Claude Code for Marketers
+      </a>
+      <nav class="header-nav">
+        <a href="#section-2" class="nav-link">Setup</a>
+        <a href="#section-4" class="nav-link">Skills</a>
+        <a href="#section-5" class="nav-link">Marketing Skills</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span class="theme-icon-light">&#9788;</span>
+          <span class="theme-icon-dark">&#9790;</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-badge">No Coding Experience Needed</div>
+        <h1>Use Claude Code<br><span class="hero-accent">for Marketing &amp; GTM</span></h1>
+        <p class="hero-sub">A step-by-step guide for marketers who want to use Claude Code and marketing skills to write better copy, build positioning frameworks, plan launches, and automate GTM workflows. Zero coding knowledge required.</p>
+        <div class="hero-actions">
+          <a href="#section-0" class="btn btn-primary">Start Here</a>
+          <a href="#section-5" class="btn btn-secondary">See the Marketing Skills</a>
+        </div>
+        <div class="hero-meta">
+          By <a href="https://www.jamespraise.xyz" target="_blank" rel="noopener">James Praise</a> &middot; <a href="https://marketinginaction.xyz" target="_blank" rel="noopener">Marketing In Action</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Nav -->
+    <nav class="section-nav" id="sectionNav">
+      <div class="container">
+        <div class="section-nav-inner">
+          <a href="#section-0" class="section-nav-item active" data-section="0">
+            <span class="nav-number">01</span> Why Claude Code?
+          </a>
+          <a href="#section-1" class="section-nav-item" data-section="1">
+            <span class="nav-number">02</span> Key Concepts
+          </a>
+          <a href="#section-2" class="section-nav-item" data-section="2">
+            <span class="nav-number">03</span> Setup
+          </a>
+          <a href="#section-3" class="section-nav-item" data-section="3">
+            <span class="nav-number">04</span> Key Files
+          </a>
+          <a href="#section-4" class="section-nav-item" data-section="4">
+            <span class="nav-number">05</span> What Are Skills?
+          </a>
+          <a href="#section-5" class="section-nav-item" data-section="5">
+            <span class="nav-number">06</span> Marketing Skills
+          </a>
+          <a href="#section-6" class="section-nav-item" data-section="6">
+            <span class="nav-number">07</span> Install Skills
+          </a>
+          <a href="#section-7" class="section-nav-item" data-section="7">
+            <span class="nav-number">08</span> Try It
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Section 0: Why Claude Code for Marketers? -->
+    <section class="content-section" id="section-0">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <h2>Why Claude Code for Marketers?</h2>
+        </div>
+        <div class="section-body">
+          <p>You probably already use Claude (or ChatGPT) in a browser to write copy, brainstorm ideas, or draft emails. Claude Code is different. It runs on your computer, reads your files, and can follow detailed marketing frameworks every single time.</p>
+
+          <p>For marketers, this means you can give Claude a positioning framework, a messaging document, or a set of brand guidelines, and it will reference them automatically whenever you ask it to write copy, plan a launch, or build a landing page.</p>
+
+          <div class="card-grid">
+            <div class="info-card">
+              <div class="card-icon">&#128203;</div>
+              <h3>Consistent Outputs</h3>
+              <p>Instead of re-explaining your brand voice every conversation, Claude Code reads your guidelines from files on your computer. Same quality, every time.</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">&#128161;</div>
+              <h3>Marketing Skills</h3>
+              <p>Install pre-built "skills" that teach Claude proven frameworks for positioning, copywriting, landing pages, lifecycle emails, GTM strategy, and more.</p>
+            </div>
+            <div class="info-card">
+              <div class="card-icon">&#9889;</div>
+              <h3>Works in VS Code</h3>
+              <p>VS Code is a free text editor (not just for coders). Install the Claude Code extension and you get a powerful AI assistant with a clean interface.</p>
+            </div>
+          </div>
+
+          <div class="callout callout-info">
+            <strong>Do I need to know how to code?</strong> No. This guide assumes zero coding experience. You will copy and paste some commands into a terminal (a text-based app on your computer), but every step is explained. Think of it like following a recipe.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: Key Concepts -->
+    <section class="content-section" id="section-1">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <h2>Key Concepts (Plain English)</h2>
+        </div>
+        <div class="section-body">
+          <p>Before we set things up, here are a few terms you will see. You do not need to memorize them. Just read through so they are familiar when they come up later.</p>
+
+          <!-- Terminal -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="true">
+              <span class="concept-title">
+                <span class="concept-icon">&#128421;</span> Terminal — Your Computer's Text Interface
+              </span>
+              <span class="toggle-icon">&#9660;</span>
+            </button>
+            <div class="concept-content expanded">
+              <p>The terminal is a text-based app that comes pre-installed on every Mac and Windows computer. Instead of clicking buttons, you type commands. It looks like this:</p>
+
+              <div class="terminal">
+                <div class="terminal-header">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                  <span class="terminal-title">Terminal</span>
+                </div>
+                <div class="terminal-body">
+                  <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">echo "Hello, I'm using the terminal!"</span>
+                  </div>
+                  <div class="terminal-line terminal-output">Hello, I'm using the terminal!</div>
+                </div>
+              </div>
+
+              <p><strong>How to open it:</strong></p>
+              <ul>
+                <li><strong>Mac:</strong> Press <code>Cmd + Space</code>, type "Terminal", and press Enter</li>
+                <li><strong>Windows:</strong> Press <code>Win + R</code>, type "cmd", and press Enter. Or search for "PowerShell" in the Start menu</li>
+              </ul>
+              <p>The <code>$</code> symbol you see in examples is the "prompt." You do not type it. You type everything after it.</p>
+            </div>
+          </div>
+
+          <!-- Git -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#128193;</span> Git — Save Points for Your Files
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <p>Git is a tool that saves snapshots of your files over time. Think of it like Google Docs version history, but for any file on your computer. If you mess something up, you can go back to a previous version.</p>
+
+              <p>You only need to know four commands. You can copy and paste them when needed:</p>
+
+              <div class="terminal">
+                <div class="terminal-header">
+                  <span class="terminal-dot red"></span>
+                  <span class="terminal-dot yellow"></span>
+                  <span class="terminal-dot green"></span>
+                  <span class="terminal-title">Terminal — The Only Git Commands You Need</span>
+                </div>
+                <div class="terminal-body">
+                  <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">git init</span>
+                    <span class="terminal-comment"># Turn a folder into a tracked project</span>
+                  </div>
+                  <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">git add .</span>
+                    <span class="terminal-comment"># Select all changed files to save</span>
+                  </div>
+                  <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">git commit -m "Added homepage copy"</span>
+                    <span class="terminal-comment"># Save a snapshot with a note</span>
+                  </div>
+                  <div class="terminal-line">
+                    <span class="terminal-prompt">$</span>
+                    <span class="terminal-command">git push</span>
+                    <span class="terminal-comment"># Upload your snapshot to GitHub</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="key-terms">
+                <div class="term">
+                  <strong>Repository (repo)</strong>
+                  <span>A project folder that Git is tracking</span>
+                </div>
+                <div class="term">
+                  <strong>Commit</strong>
+                  <span>A saved snapshot, like pressing "Save" with a label</span>
+                </div>
+                <div class="term">
+                  <strong>Push</strong>
+                  <span>Upload your saved snapshots to GitHub (the cloud)</span>
+                </div>
+                <div class="term">
+                  <strong>Clone</strong>
+                  <span>Download someone else's project from GitHub to your computer</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- GitHub -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#127760;</span> GitHub — Google Drive for Projects
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <p>GitHub is a website where people store and share projects. It works with Git (the save-point tool above). When you "push" your project, it goes to GitHub. When you "clone" someone else's project, you download it from GitHub.</p>
+
+              <div class="callout callout-tip">
+                <strong>You need a free GitHub account.</strong> Go to <a href="https://github.com" target="_blank" rel="noopener">github.com</a> and sign up. You will use it to download marketing skills and (optionally) store your own projects.
+              </div>
+
+              <p>For marketers, GitHub matters because:</p>
+              <ol>
+                <li><strong>Skills live there</strong> — Marketing skills for Claude Code are shared as GitHub repositories you can download</li>
+                <li><strong>Free website hosting</strong> — GitHub Pages lets you publish simple websites for free</li>
+                <li><strong>Backup</strong> — Your marketing files and templates are safely stored in the cloud</li>
+              </ol>
+            </div>
+          </div>
+
+          <!-- Markdown -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#128221;</span> Markdown — Simple Text Formatting
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <p>Markdown is a way to format text using simple characters. Instead of clicking "Bold" in Google Docs, you type <code>**bold**</code>. Claude Code's instruction files (CLAUDE.md, SKILL.md) are written in Markdown. You do not need to learn it all. Here are the basics:</p>
+
+              <div class="tabs">
+                <button class="tab-btn active" data-tab="markdown-source">What You Type</button>
+                <button class="tab-btn" data-tab="markdown-rendered">What It Looks Like</button>
+              </div>
+              <div class="tab-content active" id="markdown-source">
+                <div class="code-block">
+                  <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code># Big Heading
+## Smaller Heading
+
+**Bold text** and *italic text*
+
+- Bullet point
+- Another bullet point
+
+1. Numbered item
+2. Another item
+
+[Click here](https://example.com)
+
+| Column A | Column B |
+|----------|----------|
+| Cell 1   | Cell 2   |</code></pre>
+                </div>
+              </div>
+              <div class="tab-content" id="markdown-rendered">
+                <div class="rendered-markdown">
+                  <h3 style="margin-top:0">Big Heading</h3>
+                  <h4>Smaller Heading</h4>
+                  <p><strong>Bold text</strong> and <em>italic text</em></p>
+                  <ul><li>Bullet point</li><li>Another bullet point</li></ul>
+                  <ol><li>Numbered item</li><li>Another item</li></ol>
+                  <p><a href="#">Click here</a></p>
+                  <table><thead><tr><th>Column A</th><th>Column B</th></tr></thead><tbody><tr><td>Cell 1</td><td>Cell 2</td></tr></tbody></table>
+                </div>
+              </div>
+
+              <div class="callout callout-tip">
+                <strong>You already know enough Markdown.</strong> If you can write a heading with <code>#</code>, bold with <code>**</code>, and make a list with <code>-</code>, you can create and edit Claude Code files.
+              </div>
+            </div>
+          </div>
+
+          <!-- VS Code -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#128187;</span> VS Code — A Free Text Editor (Not Just for Coders)
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <p>VS Code (Visual Studio Code) is a free app from Microsoft. It is a text editor, similar to Notepad or TextEdit, but much more powerful. It has a built-in terminal, file browser, and supports extensions like Claude Code.</p>
+
+              <p><strong>Why marketers should use it:</strong></p>
+              <ul>
+                <li>The Claude Code extension runs inside VS Code, giving you a clean chat interface</li>
+                <li>You can see and edit your CLAUDE.md and other files alongside the Claude chat panel</li>
+                <li>It is free and works on Mac, Windows, and Linux</li>
+              </ul>
+
+              <p><strong>Download it:</strong> Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a> and click "Download."</p>
+            </div>
+          </div>
+
+          <!-- Node.js -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#9881;</span> Node.js — A Behind-the-Scenes Requirement
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <p>Node.js is software that Claude Code needs to run. You do not need to learn it or understand it. You just need to install it once. Think of it like needing Adobe Reader to open PDFs: you install it and forget about it.</p>
+
+              <p>We will install it in the next section.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Setting Up Claude Code -->
+    <section class="content-section" id="section-2">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">03</span>
+          <h2>Setting Up Claude Code</h2>
+        </div>
+        <div class="section-body">
+          <p>Follow these steps in order. There are two ways to use Claude Code: in the terminal (the text-based app), or inside VS Code (the free editor). We recommend VS Code for marketers since it gives you a nice visual interface.</p>
+
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="setup-vscode">VS Code (Recommended)</button>
+            <button class="tab-btn" data-tab="setup-terminal">Terminal (Advanced)</button>
+          </div>
+
+          <div class="tab-content active" id="setup-vscode">
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h3>Install Node.js</h3>
+                  <p>Claude Code needs Node.js to run. Here is how to install it on your computer:</p>
+
+                  <div class="tabs">
+                    <button class="tab-btn active" data-tab="node-mac-vscode">Mac</button>
+                    <button class="tab-btn" data-tab="node-windows-vscode">Windows</button>
+                  </div>
+                  <div class="tab-content active" id="node-mac-vscode">
+                    <ol>
+                      <li>Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></li>
+                      <li>Click the big green button that says <strong>"LTS"</strong> (this is the stable version)</li>
+                      <li>Open the downloaded <code>.pkg</code> file</li>
+                      <li>Click "Continue" through the installer until it finishes</li>
+                      <li>To verify it worked, open Terminal (<code>Cmd + Space</code>, type "Terminal") and paste:</li>
+                    </ol>
+                    <div class="code-block">
+                      <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>node --version</code></pre>
+                    </div>
+                    <p>You should see something like <code>v22.x.x</code>. Any version 18 or higher works.</p>
+                  </div>
+                  <div class="tab-content" id="node-windows-vscode">
+                    <ol>
+                      <li>Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></li>
+                      <li>Click the big green button that says <strong>"LTS"</strong></li>
+                      <li>Open the downloaded <code>.msi</code> file</li>
+                      <li>Click "Next" through the installer. Accept defaults. Click "Install"</li>
+                      <li>When finished, open PowerShell (search "PowerShell" in Start menu) and paste:</li>
+                    </ol>
+                    <div class="code-block">
+                      <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>node --version</code></pre>
+                    </div>
+                    <p>You should see something like <code>v22.x.x</code>. Any version 18 or higher works.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h3>Install VS Code</h3>
+                  <p>If you do not already have it:</p>
+                  <ol>
+                    <li>Go to <a href="https://code.visualstudio.com" target="_blank" rel="noopener">code.visualstudio.com</a></li>
+                    <li>Click "Download" and run the installer</li>
+                    <li>Open VS Code once it is installed</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h3>Install the Claude Code Extension</h3>
+                  <ol>
+                    <li>In VS Code, click the <strong>Extensions icon</strong> in the left sidebar (it looks like four squares)</li>
+                    <li>Search for <strong>"Claude Code"</strong> by Anthropic</li>
+                    <li>Click <strong>"Install"</strong></li>
+                    <li>After installation, you will see a Claude icon in the sidebar. Click it to open the panel</li>
+                  </ol>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h3>Sign In</h3>
+                  <p>The extension will prompt you to sign in with your Anthropic account. Follow the on-screen instructions. You need a Claude Pro or Max subscription, or an Anthropic API key.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h3>Open a Folder</h3>
+                  <p>In VS Code, go to <strong>File &rarr; Open Folder</strong> and choose (or create) a folder for your marketing work. Claude Code works best when it has a folder to operate in.</p>
+                  <div class="callout callout-tip">
+                    <strong>Tip for marketers:</strong> Create a folder called "marketing-workspace" on your Desktop or in Documents. This is where your CLAUDE.md, brand guidelines, and project files will live.
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                  <h3>Start Using Claude</h3>
+                  <p>Click the Claude icon in the sidebar. You can now type requests like "Write a positioning statement for my product" and Claude will respond in the panel. It can also create and edit files in your open folder.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="setup-terminal">
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h3>Install Node.js</h3>
+                  <p>Claude Code needs Node.js to run. Here is how to install it:</p>
+
+                  <div class="tabs">
+                    <button class="tab-btn active" data-tab="node-mac-term">Mac</button>
+                    <button class="tab-btn" data-tab="node-windows-term">Windows</button>
+                  </div>
+                  <div class="tab-content active" id="node-mac-term">
+                    <ol>
+                      <li>Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></li>
+                      <li>Click the green <strong>"LTS"</strong> button and run the installer</li>
+                      <li>Once installed, open Terminal and verify:</li>
+                    </ol>
+                    <div class="code-block">
+                      <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>node --version</code></pre>
+                    </div>
+                  </div>
+                  <div class="tab-content" id="node-windows-term">
+                    <ol>
+                      <li>Go to <a href="https://nodejs.org" target="_blank" rel="noopener">nodejs.org</a></li>
+                      <li>Click the green <strong>"LTS"</strong> button and run the installer</li>
+                      <li>Once installed, open PowerShell and verify:</li>
+                    </ol>
+                    <div class="code-block">
+                      <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>node --version</code></pre>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h3>Install Claude Code</h3>
+                  <p>Open your terminal and paste this command. It downloads and installs Claude Code globally on your computer:</p>
+                  <div class="code-block">
+                    <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>npm install -g @anthropic-ai/claude-code</code></pre>
+                  </div>
+                  <p><code>npm</code> is a tool that comes with Node.js. It installs software packages. <code>-g</code> means "install globally" so you can use it from any folder.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h3>Navigate to Your Workspace and Start Claude</h3>
+                  <p>Create a folder for your marketing work, then start Claude Code:</p>
+                  <div class="code-block">
+                    <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code># Create a marketing workspace folder
+mkdir ~/marketing-workspace
+
+# Go into that folder
+cd ~/marketing-workspace
+
+# Start Claude Code
+claude</code></pre>
+                  </div>
+                  <p>The first time you run <code>claude</code>, it will open your browser to sign in with your Anthropic account.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout-warning">
+            <strong>Billing note:</strong> Claude Code requires a Claude Pro ($20/month), Max ($100/month), or Team plan. Or you can use an Anthropic API key with pay-as-you-go billing. Check <a href="https://www.anthropic.com/pricing" target="_blank" rel="noopener">Anthropic's pricing page</a> for current options.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Key Files -->
+    <section class="content-section" id="section-3">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <h2>Understanding Key Files</h2>
+        </div>
+        <div class="section-body">
+          <p>Claude Code uses special text files to understand how to behave. You create these files once, and Claude reads them automatically. Here are the ones that matter:</p>
+
+          <div class="file-explorer">
+            <!-- CLAUDE.md -->
+            <div class="file-item active">
+              <button class="file-toggle" data-file="claude-md">
+                <span class="file-icon">&#128196;</span>
+                <span class="file-name">CLAUDE.md</span>
+                <span class="file-badge badge-important">Most Important</span>
+              </button>
+              <div class="file-details expanded" id="file-claude-md">
+                <p><strong>What it is:</strong> A text file that tells Claude about you, your company, and how it should work. Think of it as an "onboarding document" for your AI assistant. Every time Claude starts a conversation, it reads this file first.</p>
+                <p><strong>Where it goes:</strong></p>
+                <ul>
+                  <li><code>~/CLAUDE.md</code> — Global instructions (applies to everything). The <code>~</code> means your "home" folder</li>
+                  <li><code>CLAUDE.md</code> in any project folder — Instructions specific to that project</li>
+                </ul>
+                <p><strong>Example for a marketer:</strong></p>
+
+                <div class="code-block">
+                  <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code># Marketing Context
+
+## Company
+- Name: Acme Analytics
+- Industry: B2B SaaS
+- Product: Website analytics platform for marketing teams
+- Stage: Series A, 50 customers
+
+## Target Audience
+- Marketing managers at mid-market companies (200-2000 employees)
+- They currently use Google Analytics but need more
+- Main pain point: cannot connect website data to revenue
+
+## Brand Voice
+- Professional but not corporate
+- Data-driven, specific, no fluff
+- Avoid jargon like "synergy" or "leverage"
+
+## Key Differentiators
+- Real-time revenue attribution
+- No-code setup (5 minutes)
+- Built for marketers, not engineers</code></pre>
+                </div>
+
+                <div class="callout callout-tip">
+                  <strong>This is the single most valuable file you will create.</strong> Once Claude has your marketing context in CLAUDE.md, every output it produces will be tailored to your product, audience, and voice. No more re-explaining your company in every conversation.
+                </div>
+              </div>
+            </div>
+
+            <!-- SKILL.md -->
+            <div class="file-item">
+              <button class="file-toggle" data-file="skill-md">
+                <span class="file-icon">&#128196;</span>
+                <span class="file-name">SKILL.md</span>
+                <span class="file-badge badge-skill">Skills</span>
+              </button>
+              <div class="file-details" id="file-skill-md">
+                <p><strong>What it is:</strong> The instruction file inside every skill. It tells Claude what the skill does and how to execute it. You typically do not need to write these from scratch. You install pre-built skills and they come with their own SKILL.md.</p>
+                <p><strong>Where it lives:</strong> Inside a skill folder, like <code>~/.claude/skills/product-positioning/SKILL.md</code></p>
+
+                <p><strong>What one looks like (simplified):</strong></p>
+
+                <div class="code-block">
+                  <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>---
+name: product-positioning
+description: Create positioning frameworks for products.
+  Use when the user wants to position a product or
+  create a competitive positioning strategy.
+version: "1.0.0"
+---
+
+# Product Positioning
+
+## Instructions
+1. Gather product details, target audience, and competitors
+2. Apply the positioning framework
+3. Output a complete positioning document
+
+## Framework
+- Target customer definition
+- Market category
+- Key differentiator
+- Competitive alternatives
+- Unique value proposition</code></pre>
+                </div>
+
+                <p>The section between <code>---</code> marks at the top is called <strong>frontmatter</strong>. It tells Claude the skill's name and when to use it. The rest is the instructions Claude follows.</p>
+              </div>
+            </div>
+
+            <!-- .claude/ directory -->
+            <div class="file-item">
+              <button class="file-toggle" data-file="claude-dir">
+                <span class="file-icon">&#128193;</span>
+                <span class="file-name">.claude/ folder</span>
+                <span class="file-badge badge-info">Config</span>
+              </button>
+              <div class="file-details" id="file-claude-dir">
+                <p><strong>What it is:</strong> A folder on your computer where Claude Code stores its settings and your installed skills. The dot at the beginning means it is "hidden" by default in your file browser.</p>
+                <p><strong>Where it lives:</strong> In your home directory: <code>~/.claude/</code></p>
+
+                <div class="tree-view">
+<pre>~/.claude/                         # Hidden folder in your home directory
+  ├── skills/                      # All your installed skills live here
+  │   ├── product-positioning/
+  │   │   └── SKILL.md
+  │   ├── landing-page/
+  │   │   └── SKILL.md
+  │   ├── copywriting/
+  │   │   └── SKILL.md
+  │   └── icp-persona/
+  │       └── SKILL.md
+  └── settings.json                # Claude Code settings</pre>
+                </div>
+
+                <p>When you install marketing skills (covered in the next sections), they go into the <code>~/.claude/skills/</code> folder. Claude Code automatically detects and loads them.</p>
+
+                <div class="callout callout-info">
+                  <strong>How to see hidden folders:</strong> On Mac, press <code>Cmd + Shift + .</code> in Finder. In VS Code, hidden folders are visible by default in the file sidebar.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: What Are Skills? -->
+    <section class="content-section" id="section-4">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">05</span>
+          <h2>What Are Skills?</h2>
+        </div>
+        <div class="section-body">
+          <p>Skills are instruction packages that teach Claude how to do specific tasks well. Without skills, Claude is a generalist. With the right skills installed, Claude becomes a specialist in positioning, copywriting, launches, email sequences, or whatever marketing task you need.</p>
+
+          <h3>An Analogy</h3>
+          <p>Think of Claude as a smart new hire. CLAUDE.md is the company onboarding doc you give them on day one. Skills are the playbooks and SOPs for specific tasks. With both in place, your new hire produces better work, faster, with less hand-holding.</p>
+
+          <div class="skill-anatomy">
+            <h3>What is Inside a Skill?</h3>
+            <div class="anatomy-diagram">
+              <div class="anatomy-box anatomy-root">
+                <div class="anatomy-label">Skill Folder</div>
+                <code>~/.claude/skills/landing-page/</code>
+              </div>
+              <div class="anatomy-arrow">&#9660;</div>
+              <div class="anatomy-children">
+                <div class="anatomy-box anatomy-required">
+                  <div class="anatomy-label">Required</div>
+                  <code>SKILL.md</code>
+                  <small>The instructions Claude follows</small>
+                </div>
+                <div class="anatomy-box anatomy-optional">
+                  <div class="anatomy-label">Optional</div>
+                  <code>references/</code>
+                  <small>Extra knowledge (frameworks, examples)</small>
+                </div>
+                <div class="anatomy-box anatomy-optional">
+                  <div class="anatomy-label">Optional</div>
+                  <code>templates/</code>
+                  <small>Output templates and formats</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3>How Skills Work</h3>
+          <div class="flow-diagram">
+            <div class="flow-step">
+              <div class="flow-number">1</div>
+              <p>You ask Claude to do a marketing task, or type <code>/skill-name</code></p>
+            </div>
+            <div class="flow-connector">&#8594;</div>
+            <div class="flow-step">
+              <div class="flow-number">2</div>
+              <p>Claude checks if a skill matches your request</p>
+            </div>
+            <div class="flow-connector">&#8594;</div>
+            <div class="flow-step">
+              <div class="flow-number">3</div>
+              <p>It loads the skill's framework and instructions</p>
+            </div>
+            <div class="flow-connector">&#8594;</div>
+            <div class="flow-step">
+              <div class="flow-number">4</div>
+              <p>You get structured, framework-driven output</p>
+            </div>
+          </div>
+
+          <div class="callout callout-info">
+            <strong>Skills vs. CLAUDE.md:</strong> They work together. CLAUDE.md says "here is my product, audience, and voice." Skills say "here is the framework for writing a landing page." When both are in place, Claude writes a landing page for your specific product, using a proven structure, in your brand voice.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Marketing Agent Skills -->
+    <section class="content-section" id="section-5">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">06</span>
+          <h2>Marketing Agent Skills</h2>
+        </div>
+        <div class="section-body">
+          <p>I have built and open-sourced 25+ marketing skills (and constantly adding more) that cover the core workflows marketers and GTM operators run every week. They are free, and anyone can install them.</p>
+
+          <div class="callout callout-tip">
+            <strong>GitHub Repo:</strong> <a href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noopener">github.com/realjaymes/marketingagentskills</a>
+          </div>
+
+          <h3>Skills by Category</h3>
+
+          <!-- Strategy & Positioning -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="true">
+              <span class="concept-title">
+                <span class="concept-icon">&#127919;</span> Strategy &amp; Positioning
+              </span>
+              <span class="toggle-icon">&#9660;</span>
+            </button>
+            <div class="concept-content expanded">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Skill</th>
+                      <th>What It Does</th>
+                      <th>Example Prompt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>product-positioning</code></td>
+                      <td>Creates complete positioning frameworks</td>
+                      <td>"Position my analytics product against Google Analytics"</td>
+                    </tr>
+                    <tr>
+                      <td><code>product-messaging</code></td>
+                      <td>Builds messaging frameworks, taglines, elevator pitches</td>
+                      <td>"Create a messaging framework for our new feature"</td>
+                    </tr>
+                    <tr>
+                      <td><code>product-launch-gtm</code></td>
+                      <td>End-to-end launch planning with GTM strategy</td>
+                      <td>"Plan our Product Hunt launch for next month"</td>
+                    </tr>
+                    <tr>
+                      <td><code>marketing-advantages</code></td>
+                      <td>Identifies your product's marketing advantages</td>
+                      <td>"What are our strongest marketing advantages?"</td>
+                    </tr>
+                    <tr>
+                      <td><code>icp-persona</code></td>
+                      <td>Generates ICP and buyer persona documents</td>
+                      <td>"Create an ICP for enterprise software buyers"</td>
+                    </tr>
+                    <tr>
+                      <td><code>customer-segments</code></td>
+                      <td>Creates customer segment documents</td>
+                      <td>"Segment our users by behavior and lifecycle stage"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content & Copy -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#9998;</span> Content &amp; Copy
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Skill</th>
+                      <th>What It Does</th>
+                      <th>Example Prompt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>landing-page</code></td>
+                      <td>Creates landing page copy using modular section templates</td>
+                      <td>"Write homepage copy for our analytics product"</td>
+                    </tr>
+                    <tr>
+                      <td><code>saas-landing-pages</code></td>
+                      <td>Complete SaaS landing page drafts (7 page types)</td>
+                      <td>"Create a pricing page for our SaaS product"</td>
+                    </tr>
+                    <tr>
+                      <td><code>ad-creative</code></td>
+                      <td>Generates ad headlines, descriptions, and variations</td>
+                      <td>"Generate 10 Google Ads headline variations"</td>
+                    </tr>
+                    <tr>
+                      <td><code>press-release</code></td>
+                      <td>Creates press releases with multiple headline options</td>
+                      <td>"Write a press release for our Series A announcement"</td>
+                    </tr>
+                    <tr>
+                      <td><code>copy-anatomy</code></td>
+                      <td>Reverse-engineers copy into reusable templates</td>
+                      <td>"Break down this competitor's landing page copy"</td>
+                    </tr>
+                    <tr>
+                      <td><code>ai-humanizer</code></td>
+                      <td>Makes AI-written text sound genuinely human</td>
+                      <td>"Make this blog post sound less like AI wrote it"</td>
+                    </tr>
+                    <tr>
+                      <td><code>case-study-builder</code></td>
+                      <td>Creates professional case studies</td>
+                      <td>"Build a case study from our Acme Corp engagement"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth & Experimentation -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#128200;</span> Growth &amp; Experimentation
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Skill</th>
+                      <th>What It Does</th>
+                      <th>Example Prompt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>experimentation</code></td>
+                      <td>Designs and prioritizes growth experiments</td>
+                      <td>"Design an experiment to test our pricing page"</td>
+                    </tr>
+                    <tr>
+                      <td><code>marketing-product-ideas</code></td>
+                      <td>Generates marketing ideas grounded in behavioral science</td>
+                      <td>"Give me 5 PLG growth experiment ideas"</td>
+                    </tr>
+                    <tr>
+                      <td><code>performance-marketing</code></td>
+                      <td>Plans and optimizes paid campaigns across platforms</td>
+                      <td>"Review our Meta Ads campaign structure"</td>
+                    </tr>
+                    <tr>
+                      <td><code>lifecycle-marketing-campaigns</code></td>
+                      <td>Creates email flows for onboarding, upgrades, retention</td>
+                      <td>"Build a 7-day trial onboarding email sequence"</td>
+                    </tr>
+                    <tr>
+                      <td><code>product-onboarding-activation</code></td>
+                      <td>Designs onboarding and activation lifecycles</td>
+                      <td>"Design our user onboarding from signup to aha moment"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- GTM Engineering & Automation -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#128640;</span> GTM Engineering &amp; Automation
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Skill</th>
+                      <th>What It Does</th>
+                      <th>Example Prompt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>clay-gtm-outbound</code></td>
+                      <td>Designs Clay-powered GTM workflows for prospecting and outbound</td>
+                      <td>"Build a Clay workflow for outbound prospecting"</td>
+                    </tr>
+                    <tr>
+                      <td><code>n8n-automation</code></td>
+                      <td>Designs and builds n8n automation workflows</td>
+                      <td>"Create an n8n workflow to sync CRM data to Slack"</td>
+                    </tr>
+                    <tr>
+                      <td><code>remotion</code></td>
+                      <td>Creates programmatic videos in React</td>
+                      <td>"Build a product demo video template"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Meta Skills -->
+          <div class="concept-block">
+            <button class="concept-toggle" aria-expanded="false">
+              <span class="concept-title">
+                <span class="concept-icon">&#128736;</span> Meta Skills (Skills about Skills)
+              </span>
+              <span class="toggle-icon">&#9654;</span>
+            </button>
+            <div class="concept-content">
+              <div class="table-responsive">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Skill</th>
+                      <th>What It Does</th>
+                      <th>Example Prompt</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><code>agent-skill-builder</code></td>
+                      <td>Helps you create your own custom skills</td>
+                      <td>"Create a skill for writing weekly marketing reports"</td>
+                    </tr>
+                    <tr>
+                      <td><code>skill-to-prompt</code></td>
+                      <td>Converts Claude skills to ChatGPT Project format</td>
+                      <td>"Convert my positioning skill to a ChatGPT project"</td>
+                    </tr>
+                    <tr>
+                      <td><code>vibe-coding</code></td>
+                      <td>Guides beginners through web development with Claude</td>
+                      <td>"Help me build a landing page from scratch"</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Installing Marketing Skills -->
+    <section class="content-section" id="section-6">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">07</span>
+          <h2>Install the Marketing Skills</h2>
+        </div>
+        <div class="section-body">
+          <p>Three ways to install the marketing skills. The first option is the simplest: just ask Claude to do it for you.</p>
+
+          <div class="tabs">
+            <button class="tab-btn active" data-tab="install-claude">Ask Claude (Simplest)</button>
+            <button class="tab-btn" data-tab="install-easy">Download &amp; Copy</button>
+            <button class="tab-btn" data-tab="install-terminal">Terminal Commands</button>
+          </div>
+
+          <div class="tab-content active" id="install-claude">
+            <p>If you already have Claude Code running, you can ask it to install the skills for you. Open Claude Code (in VS Code or the terminal) and type this prompt:</p>
+
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">Claude Code</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="terminal-prompt">&gt;</span>
+                  <span class="terminal-command">Clone the marketing skills repo from https://github.com/realjaymes/marketingagentskills and copy all the skills from the skills/ folder into ~/.claude/skills/ so I can use them.</span>
+                </div>
+                <div class="terminal-line terminal-output" style="color: var(--accent);">I'll clone the marketing skills repo and install the skills for you...</div>
+                <div class="terminal-line terminal-output" style="color: var(--accent);">Cloning repository...</div>
+                <div class="terminal-line terminal-output" style="color: var(--accent);">Copying 25 skills to ~/.claude/skills/...</div>
+                <div class="terminal-line terminal-output" style="color: var(--accent);">Done! All marketing skills are now installed. You can use them by describing a marketing task or by typing /skill-name.</div>
+              </div>
+            </div>
+
+            <p>Claude will run the terminal commands for you. It will ask for your permission before executing each step. Just approve the commands and the skills will be installed in under a minute.</p>
+
+            <div class="callout callout-tip">
+              <strong>This is the beauty of Claude Code.</strong> You do not need to learn terminal commands. Just describe what you want in plain English, and Claude handles the technical parts. You can copy the prompt above and paste it directly into Claude Code.
+            </div>
+          </div>
+
+          <div class="tab-content" id="install-easy">
+            <p>If you prefer to do it manually without the terminal, you can download and copy the files:</p>
+
+            <div class="steps">
+              <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h3>Download the skills</h3>
+                  <p>Go to <a href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noopener">github.com/realjaymes/marketingagentskills</a></p>
+                  <p>Click the green <strong>"Code"</strong> button, then click <strong>"Download ZIP"</strong></p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h3>Unzip the download</h3>
+                  <p>Find the downloaded ZIP file (usually in your Downloads folder) and double-click to unzip it. You will see a folder called <code>marketingagentskills-main</code>.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h3>Open the skills destination folder</h3>
+                  <p>You need to copy the skills into Claude's hidden skills folder:</p>
+                  <ul>
+                    <li><strong>Mac:</strong> Open Finder, press <code>Cmd + Shift + G</code>, paste <code>~/.claude/skills/</code> and press Enter</li>
+                    <li><strong>Windows:</strong> Open File Explorer, type <code>%USERPROFILE%\.claude\skills\</code> in the address bar and press Enter</li>
+                  </ul>
+                  <p>If the folder does not exist yet, create it.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h3>Copy the skill folders</h3>
+                  <p>Open the unzipped <code>marketingagentskills-main</code> folder, then open the <code>skills</code> folder inside it. You will see 25+ folders (ad-creative, landing-page, product-positioning, etc.).</p>
+                  <p>Select all of them and copy them into the <code>~/.claude/skills/</code> folder from the previous step.</p>
+                </div>
+              </div>
+
+              <div class="step">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h3>Verify installation</h3>
+                  <p>Restart Claude Code (close and reopen VS Code, or type <code>/clear</code> in the terminal). Then try asking:</p>
+                  <div class="code-block">
+                    <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>Create a positioning framework for my product</code></pre>
+                  </div>
+                  <p>If Claude responds with a structured positioning document (not generic advice), the skills are working.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="install-terminal">
+            <p>If you are comfortable with the terminal, you can install everything with two commands:</p>
+
+            <div class="terminal">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">Terminal — Install Marketing Skills</span>
+              </div>
+              <div class="terminal-body">
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-command"># Download the skills repo to your Downloads folder</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-command">git clone https://github.com/realjaymes/marketingagentskills.git ~/Downloads/marketingagentskills</span>
+                </div>
+                <div class="terminal-line terminal-output">Cloning into '/Users/you/Downloads/marketingagentskills'...</div>
+                <div class="terminal-line terminal-output">done.</div>
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-command"># Copy all skills into Claude's skills folder</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-command">cp -r ~/Downloads/marketingagentskills/skills/* ~/.claude/skills/</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-command"># Verify: list the installed skills</span>
+                </div>
+                <div class="terminal-line">
+                  <span class="terminal-prompt">$</span>
+                  <span class="terminal-command">ls ~/.claude/skills/</span>
+                </div>
+                <div class="terminal-line terminal-output">ad-creative      customer-segments   landing-page          performance-marketing   product-positioning</div>
+                <div class="terminal-line terminal-output">agent-skill-builder  experimentation     lifecycle-marketing   press-release           remotion</div>
+                <div class="terminal-line terminal-output">ai-humanizer     icp-persona         marketing-advantages  product-launch-gtm      saas-landing-pages</div>
+                <div class="terminal-line terminal-output">case-study-builder   marketing-product-ideas  n8n-automation   product-messaging       skill-to-prompt</div>
+                <div class="terminal-line terminal-output">clay-gtm-outbound    copy-anatomy        openclaw              product-onboarding      vibe-coding</div>
+              </div>
+            </div>
+
+            <p>That is it. Two commands and all the marketing skills are installed.</p>
+          </div>
+
+          <div class="callout callout-info">
+            <strong>Skills work automatically.</strong> Once installed, you do not need to "activate" them. Just describe what you need in plain English and Claude will use the right skill. You can also invoke a specific skill directly by typing <code>/skill-name</code> (for example, <code>/product-positioning</code>).
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: Try It Out -->
+    <section class="content-section" id="section-7">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-number">08</span>
+          <h2>Try It: Your First Marketing Task</h2>
+        </div>
+        <div class="section-body">
+          <p>Let's run through a real example. You will set up a marketing workspace and use Claude Code with skills to create a positioning document.</p>
+
+          <div class="project-walkthrough">
+            <div class="step">
+              <div class="step-number">1</div>
+              <div class="step-content">
+                <h3>Create your marketing workspace</h3>
+                <p>In VS Code, go to <strong>File &rarr; Open Folder</strong>. Create a new folder called <code>marketing-workspace</code> (on your Desktop or in Documents) and open it.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-content">
+                <h3>Create your CLAUDE.md</h3>
+                <p>In VS Code, right-click in the file sidebar and choose <strong>"New File"</strong>. Name it <code>CLAUDE.md</code>. Paste in your company context (use the example from the Key Files section as a starting point and replace with your own details).</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-content">
+                <h3>Ask Claude to create positioning</h3>
+                <p>Open the Claude Code panel (click the Claude icon in the sidebar) and type:</p>
+                <div class="terminal">
+                  <div class="terminal-header">
+                    <span class="terminal-dot red"></span>
+                    <span class="terminal-dot yellow"></span>
+                    <span class="terminal-dot green"></span>
+                    <span class="terminal-title">Claude Code</span>
+                  </div>
+                  <div class="terminal-body">
+                    <div class="terminal-line">
+                      <span class="terminal-prompt">&gt;</span>
+                      <span class="terminal-command">Create a positioning framework for my product. Include target customer, market category, key differentiator, competitive alternatives, and unique value proposition.</span>
+                    </div>
+                    <div class="terminal-line terminal-output" style="color: var(--accent);">I'll create a positioning framework for Acme Analytics. Let me reference your CLAUDE.md for product context...</div>
+                  </div>
+                </div>
+                <p>Notice how Claude automatically pulls your company details from CLAUDE.md and uses the product-positioning skill's framework. No copy-pasting needed.</p>
+              </div>
+            </div>
+
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-content">
+                <h3>Try more marketing tasks</h3>
+                <p>With your CLAUDE.md set up and skills installed, try these prompts:</p>
+                <div class="code-block">
+                  <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code># Landing page copy
+Write homepage copy for my product
+
+# ICP document
+Create an ICP and buyer persona for my target customers
+
+# Launch plan
+Plan a Product Hunt launch for my product
+
+# Email sequence
+Build a 5-email onboarding sequence for new trial users
+
+# Ad creative
+Generate 10 Google Ads headline variations for my product
+
+# Competitive positioning
+Position my product against [competitor name]
+
+# Press release
+Write a press release for our new feature launch</code></pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="callout callout-tip">
+            <strong>The more context you put in CLAUDE.md, the better the outputs.</strong> Add your competitors, your pricing, recent customer feedback, and your brand voice guidelines. Every skill will use this context to produce more relevant, specific results.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MIA Academy CTA -->
+    <section class="content-section mia-academy-cta" id="mia-academy">
+      <div class="container">
+        <div class="academy-card">
+          <div class="academy-badge">MIA Academy</div>
+          <h2>Want to go deeper?</h2>
+          <p>Skills and tools only get you so far. If you want to learn the strategy behind the frameworks, join MIA Academy.</p>
+          <p class="academy-description">MIA Academy is where modern marketers learn by doing. Applied product marketing, growth, GTM, and AI skills taught through real execution, feedback, and systems you can use at work.</p>
+          <ul class="academy-features">
+            <li>Product marketing and positioning</li>
+            <li>Go-to-market strategy and execution</li>
+            <li>Growth experimentation and lifecycle systems</li>
+            <li>AI-assisted marketing workflows</li>
+          </ul>
+          <a href="https://marketinginaction.xyz/academy/" target="_blank" rel="noopener" class="btn btn-primary">Explore MIA Academy</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Reference -->
+    <section class="content-section quick-ref" id="quick-ref">
+      <div class="container">
+        <h2>Quick Reference</h2>
+        <div class="ref-grid">
+          <div class="ref-card">
+            <h3>Getting Started</h3>
+            <div class="ref-list">
+              <div class="ref-item">
+                <code>CLAUDE.md</code>
+                <span>Your company context file</span>
+              </div>
+              <div class="ref-item">
+                <code>~/.claude/skills/</code>
+                <span>Where skills are installed</span>
+              </div>
+              <div class="ref-item">
+                <code>/skill-name</code>
+                <span>Invoke a specific skill</span>
+              </div>
+              <div class="ref-item">
+                <code>/help</code>
+                <span>Get help in Claude Code</span>
+              </div>
+            </div>
+          </div>
+          <div class="ref-card">
+            <h3>Top Marketing Skills</h3>
+            <div class="ref-list">
+              <div class="ref-item">
+                <code>/product-positioning</code>
+                <span>Positioning frameworks</span>
+              </div>
+              <div class="ref-item">
+                <code>/landing-page</code>
+                <span>Landing page copy</span>
+              </div>
+              <div class="ref-item">
+                <code>/icp-persona</code>
+                <span>ICP &amp; buyer personas</span>
+              </div>
+              <div class="ref-item">
+                <code>/product-launch-gtm</code>
+                <span>Launch planning</span>
+              </div>
+            </div>
+          </div>
+          <div class="ref-card">
+            <h3>Useful Links</h3>
+            <div class="ref-list">
+              <div class="ref-item">
+                <a href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noopener">Marketing Skills Repo</a>
+                <span>25 free skills</span>
+              </div>
+              <div class="ref-item">
+                <a href="https://nodejs.org" target="_blank" rel="noopener">Node.js</a>
+                <span>Required download</span>
+              </div>
+              <div class="ref-item">
+                <a href="https://code.visualstudio.com" target="_blank" rel="noopener">VS Code</a>
+                <span>Free editor</span>
+              </div>
+              <div class="ref-item">
+                <a href="https://marketinginaction.xyz" target="_blank" rel="noopener">Marketing In Action</a>
+                <span>More resources</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta">
+      <div class="container">
+        <h2>Ready to level up your marketing workflow?</h2>
+        <p>Install the marketing skills, set up your CLAUDE.md, and start producing better marketing outputs today.</p>
+        <div class="hero-actions">
+          <a href="#section-2" class="btn btn-primary">Set Up Claude Code</a>
+          <a href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noopener" class="btn btn-secondary">Get the Marketing Skills</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <p>Built by <a href="https://www.jamespraise.xyz" target="_blank" rel="noopener">James Praise</a></p>
+        <p><a href="https://marketinginaction.xyz" target="_blank" rel="noopener">Marketing In Action</a></p>
+      </div>
+      <div class="footer-right">
+        <a href="https://x.com/realjaymes" target="_blank" rel="noopener" aria-label="Twitter/X">X</a>
+        <a href="https://linkedin.com/in/jamespraise" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a>
+        <a href="https://github.com/realjaymes" target="_blank" rel="noopener" aria-label="GitHub">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
