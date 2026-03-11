@@ -1200,6 +1200,7 @@ img {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 20px;
+  overflow: hidden;
 }
 
 .ref-card h3 {
@@ -1220,6 +1221,7 @@ img {
   align-items: baseline;
   gap: 10px;
   font-size: 0.85rem;
+  flex-wrap: wrap;
 }
 
 .ref-item code {
