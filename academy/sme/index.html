@@ -1144,7 +1144,7 @@
 
       var countdownInterval = null;
       var COUNTDOWN_KEY = "mia_academy_sme_timer_start";
-      var COUNTDOWN_DURATION = 3 * 24 * 60 * 60 * 1000;
+      var COUNTDOWN_DURATION = 2 * 24 * 60 * 60 * 1000;
 
       function getCountdownEnd() {
         try {
@@ -1165,15 +1165,25 @@
         return n < 10 ? "0" + n : String(n);
       }
 
+      function resetCountdown() {
+        try {
+          var end = Date.now() + COUNTDOWN_DURATION;
+          localStorage.setItem(COUNTDOWN_KEY, String(end));
+          return end;
+        } catch (e) {
+          window._countdownFallback = Date.now() + COUNTDOWN_DURATION;
+          return window._countdownFallback;
+        }
+      }
+
       function renderCountdown() {
         var el = document.getElementById("panelCountdown");
         if (!el) return;
         var end = getCountdownEnd();
         var remaining = end - Date.now();
         if (remaining <= 0) {
-          el.style.display = "none";
-          stopCountdown();
-          return;
+          resetCountdown();
+          remaining = COUNTDOWN_DURATION;
         }
         var days = Math.floor(remaining / 86400000);
         var hours = Math.floor((remaining % 86400000) / 3600000);
