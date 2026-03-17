@@ -43,6 +43,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://marketinginaction.xyz/affiliate/</loc>
+    <lastmod>2026-03-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://marketinginaction.xyz/resources/claude-code-for-marketers/</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>

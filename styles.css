@@ -2712,3 +2712,176 @@ body.panel-open {
   color: var(--text-primary);
   text-decoration: underline;
 }
+
+/* =========================================
+   Affiliate Program Page
+   ========================================= */
+
+.affiliate-hero {
+  background:
+    radial-gradient(1200px 600px at 50% 45%, rgba(241, 222, 113, 0.14), transparent 60%),
+    radial-gradient(900px 600px at 70% 10%, rgba(113, 132, 241, 0.10), transparent 55%),
+    #1c1422;
+  padding: var(--space-2xl) 0 var(--space-xl);
+}
+
+.affiliate-hero-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.affiliate-secondary {
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #f7f4fa;
+}
+
+.affiliate-secondary:hover {
+  background: rgba(255, 255, 255, 0.06);
+  text-decoration: none;
+}
+
+/* Section head */
+.affiliate-section-head {
+  text-align: center;
+  max-width: 78ch;
+  margin: 0 auto var(--space-xl);
+}
+
+/* How It Works steps */
+.affiliate-steps {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 980px) {
+  .affiliate-steps {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.affiliate-step {
+  background: #fff;
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 14px 40px rgba(28, 20, 34, 0.05);
+}
+
+.affiliate-step h3 {
+  margin: var(--space-sm) 0 var(--space-xs);
+}
+
+.affiliate-step-number {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--color-accent);
+  color: var(--text-primary);
+  font-weight: 900;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  line-height: 1;
+}
+
+/* Earnings scenarios */
+.affiliate-scenarios {
+  display: grid;
+  gap: var(--space-lg);
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+@media (min-width: 980px) {
+  .affiliate-scenarios {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.affiliate-scenario {
+  background: #fff;
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: 0 14px 40px rgba(28, 20, 34, 0.05);
+}
+
+.affiliate-scenario-label {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.affiliate-scenario-value {
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin: var(--space-xs) 0;
+  line-height: 1.2;
+}
+
+.affiliate-scenario-value .muted {
+  font-size: 16px;
+  font-weight: 650;
+}
+
+/* FAQ (reuses jobs-faq pattern) */
+.affiliate-faqs {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.affiliate-faq {
+  background: #fff;
+  border: 1px solid rgba(28, 20, 34, 0.10);
+  border-radius: var(--radius-md);
+  box-shadow: 0 14px 40px rgba(28, 20, 34, 0.05);
+  overflow: hidden;
+}
+
+.affiliate-faq summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 14px;
+  font-weight: 850;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.affiliate-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.affiliate-faq summary::after {
+  content: "+";
+  width: 26px;
+  height: 26px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(28, 20, 34, 0.12);
+  background: rgba(28, 20, 34, 0.02);
+  font-weight: 950;
+  flex-shrink: 0;
+}
+
+.affiliate-faq[open] summary::after {
+  content: "\2013";
+}
+
+.affiliate-faq-body {
+  padding: 0 14px 14px;
+}
+
+.affiliate-faq-body p {
+  margin: 0;
+}
+
