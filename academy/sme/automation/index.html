@@ -1909,7 +1909,7 @@
                 } catch(e) { /* reset */ }
             }
 
-            var initial = CONFIG.totalSpots - 3;
+            var initial = Math.floor(CONFIG.totalSpots * 0.4);
             localStorage.setItem(CONFIG.storageKey, JSON.stringify({ spots: initial, date: today }));
             return initial;
         }
@@ -1981,6 +1981,15 @@
             setTimeout(function() {
                 notifEl.classList.remove('show');
             }, CONFIG.displayDuration);
+
+            /* Decrease spots on ~50% of notifications */
+            if (Math.random() < 0.5 && currentSpots > CONFIG.spotsFloor) {
+                currentSpots--;
+                updateSpotsDisplay(currentSpots);
+                renderDotGrid(currentSpots);
+                var today = new Date().toISOString().split('T')[0];
+                localStorage.setItem(CONFIG.storageKey, JSON.stringify({ spots: currentSpots, date: today }));
+            }
 
             scheduleNextNotification();
         }
