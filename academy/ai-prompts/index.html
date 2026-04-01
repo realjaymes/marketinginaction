@@ -175,8 +175,19 @@
         .problem-card__icon { font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
         .problem-card__text { font-size: 0.95rem; color: var(--text-primary); line-height: 1.5; }
         .problem-close { max-width: 640px; margin: 0 auto; font-size: 1rem; color: var(--text-muted); text-align: center; font-style: italic; }
-        .value-stack { background: var(--background); padding: 64px 0; }
-        .value-stack__box { max-width: 640px; margin: 0 auto; background: var(--white); border-radius: var(--radius-lg); overflow: hidden; border: 2px solid var(--accent); box-shadow: var(--shadow-card); }
+        .value-stack { background: var(--primary-dark); padding: 64px 0; color: var(--white); }
+        .value-stack .section-label { background: rgba(241,222,113,0.15); color: var(--accent); }
+        .value-stack .section-title { color: var(--white); }
+        .value-stack .section-sub { color: rgba(255,255,255,0.6); }
+        .value-stack__box { max-width: 640px; margin: 0 auto; background: rgba(255,255,255,0.04); border-radius: var(--radius-lg); overflow: hidden; border: 1px solid rgba(241,222,113,0.2); }
+        .value-stack .value-item { border-bottom-color: rgba(255,255,255,0.08); }
+        .value-stack .value-item__name { color: var(--white); }
+        .value-stack .value-item__desc { color: rgba(255,255,255,0.55); }
+        .value-stack .value-item__objection { color: var(--accent); }
+        .value-stack .value-item__price-struck { color: rgba(255,255,255,0.35); }
+        .value-stack .value-item__free { background: rgba(241,222,113,0.15); color: var(--accent); }
+        .value-stack .value-item--core { background: rgba(241,222,113,0.04); }
+        .value-stack__subtotal { background: var(--accent); color: var(--primary-dark); border-top: none; font-size: 1rem; font-weight: 750; }
         .value-stack__header { background: var(--accent); color: var(--primary-dark); padding: 20px 28px; font-family: var(--font-display); font-weight: 700; font-size: 1.15rem; text-align: center; }
         .value-stack__header .highlight { color: var(--primary-dark); font-weight: 750; }
         .value-stack__items { padding: 0; }
@@ -207,6 +218,16 @@
         @media (max-width: 768px) { .wa-grid { grid-template-columns: 1fr; max-width: 400px; } .wa-testimonials { padding: 48px 0; } }
         .origin { background: var(--background); padding: 64px 0; }
         .origin__pullquote { background: var(--accent-light); border-left: 4px solid var(--accent); padding: 20px 24px; margin: 24px 0; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 1.05rem; font-style: italic; color: var(--primary-dark); font-weight: 500; }
+        .mega-stat { background: var(--primary-dark); padding: 56px 0; text-align: center; }
+        .mega-stat__number { font-family: var(--font-display); font-weight: 750; font-size: 4rem; color: var(--accent); letter-spacing: -2px; line-height: 1; margin-bottom: 8px; }
+        .mega-stat__label { font-size: 0.9rem; color: var(--white); margin-bottom: 12px; }
+        .mega-stat__story { font-size: 0.9rem; color: rgba(255,255,255,0.5); max-width: 480px; margin: 0 auto; }
+        .transformation { background: var(--primary-light); padding: 64px 0; }
+        .transform-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 720px; margin: 0 auto; }
+        .transform-card { background: var(--white); box-shadow: var(--shadow-card); border-radius: var(--radius-md); padding: 24px; }
+        .transform-card__icon { font-size: 2rem; margin-bottom: 12px; }
+        .transform-card__title { font-family: var(--font-display); font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; color: var(--primary-dark); }
+        .transform-card__text { font-size: 0.9rem; color: var(--text-muted); line-height: 1.5; }
         .coach-intro { background: var(--background); padding: 64px 0; }
         .coach-intro__grid { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: start; }
         .coach-intro__photo { position: sticky; top: 100px; width: 100%; aspect-ratio: 3/4; background: var(--primary-light); border-radius: var(--radius-lg); display: flex; align-items: center; justify-content: center; }
@@ -336,7 +357,10 @@
             .sticky-nav .btn { padding: 8px 16px; font-size: 0.8rem; }
             .purchase-notification { left: 50%; bottom: 80px; max-width: 260px; transform: translateX(-150%); }
             .purchase-notification.show { transform: translateX(-50%); }
-            .problem-section, .value-stack, .origin, .coach-intro, .choices, .pricing, .guarantee, .faq, .final-cta { padding: 48px 0; }
+            .transform-grid { grid-template-columns: 1fr; }
+            .mega-stat__number { font-size: 2.8rem; }
+            .mega-stat { padding: 40px 0; }
+            .problem-section, .value-stack, .origin, .transformation, .coach-intro, .choices, .pricing, .guarantee, .faq, .final-cta { padding: 48px 0; }
         }
         @media (max-width: 380px) { .hero__headline { font-size: 1.5rem; } .section-title { font-size: 1.35rem; } .announcement-bar { font-size: 0.72rem; } .pricing__single-price { font-size: 2rem; } }
         @media (min-width: 769px) { .sticky-bar { display: none; } }
@@ -357,7 +381,7 @@
     <!-- STICKY NAV -->
     <nav class="sticky-nav">
         <div class="container">
-            <a href="https://marketinginaction.xyz/" class="sticky-nav__brand">MIA Academy</a>
+            <a href="/academy/" class="sticky-nav__brand">MIA Academy</a>
             <a href="#pricing" class="btn btn-accent">Get the Playbook</a>
         </div>
     </nav>
@@ -538,6 +562,20 @@
         </div>
     </section>
 
+    <!-- MID-PAGE CTA BREAK -->
+    <section style="background:var(--primary-dark); padding:40px 0; text-align:center;">
+        <div class="container">
+            <p style="color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:16px;">The marketer who 5x'd their output didn't work 5x harder. <strong style="color:var(--accent);">They engineered systems.</strong></p>
+            <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
+                <a href="#pricing" class="btn btn-accent">See Pricing</a>
+                <a href="https://wa.me/2348126546251?text=Hey%20James%20I'm%20interested%20in%20the%20AI%20Prompt%20Playbook" class="btn btn-whatsapp" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Ask James on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
     <!-- STORY -->
     <section class="origin">
         <div class="container text-center">
@@ -550,6 +588,47 @@
                 <p>The difference between a marketer who uses AI and one who engineers AI systems is the difference between typing and building. One opens ChatGPT and improvises. The other has modular templates with variables, chains, and workflows that produce consistent, high-quality output every time.</p>
                 <div class="origin__pullquote">"The marketers getting $4K+/month remote roles don't just 'use AI.' They build prompt systems that make entire teams more productive. That is the skill gap this playbook closes."</div>
                 <p>This playbook gives you the exact systems. 40+ templates across 6 modules, with video walkthroughs for each one. Copy, customize, deploy. Not theory. Not tips. Production-ready frameworks.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEGA STAT -->
+    <section class="mega-stat">
+        <div class="container">
+            <div class="mega-stat__number">5x</div>
+            <div class="mega-stat__label">Output multiplier</div>
+            <div class="mega-stat__story">Modular AI systems. Not one-off prompts. Actual workflow engineering.</div>
+        </div>
+    </section>
+
+    <!-- TRANSFORMATION -->
+    <section class="transformation">
+        <div class="container text-center">
+            <span class="section-label">The Shift</span>
+            <h2 class="section-title">What Changes When You Have This Playbook</h2>
+        </div>
+        <div class="container">
+            <div class="transform-grid">
+                <div class="transform-card">
+                    <div class="transform-card__icon">&#x2699;&#xFE0F;</div>
+                    <div class="transform-card__title">From Typing Prompts to Engineering Systems</div>
+                    <div class="transform-card__text">Variables, agents, custom GPTs.</div>
+                </div>
+                <div class="transform-card">
+                    <div class="transform-card__icon">&#x1F3AF;</div>
+                    <div class="transform-card__title">From Generic Output to Production-Ready Results</div>
+                    <div class="transform-card__text">Prompts built for real marketing work.</div>
+                </div>
+                <div class="transform-card">
+                    <div class="transform-card__icon">&#x1F4BB;</div>
+                    <div class="transform-card__title">From Platform Confusion to Multi-Platform Mastery</div>
+                    <div class="transform-card__text">ChatGPT, Claude, Gemini configured.</div>
+                </div>
+                <div class="transform-card">
+                    <div class="transform-card__icon">&#x1F4AA;</div>
+                    <div class="transform-card__title">From 'I Use AI' to Provable AI Competency</div>
+                    <div class="transform-card__text">The skill employers now test for.</div>
+                </div>
             </div>
         </div>
     </section>
