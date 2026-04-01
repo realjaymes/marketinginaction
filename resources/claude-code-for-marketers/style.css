@@ -11,6 +11,7 @@
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg: #1c1422;
   --bg-secondary: #241c2e;
   --bg-tertiary: #2d2438;
@@ -40,6 +41,7 @@
 }
 
 [data-theme="light"] {
+  color-scheme: light;
   --bg: #f7f4fa;
   --bg-secondary: #eee9f3;
   --bg-tertiary: #e4dded;
@@ -101,22 +103,12 @@ a:hover {
   color: var(--accent-hover);
 }
 
-[data-theme="light"] .section-body a,
-[data-theme="light"] .info-card a,
-[data-theme="light"] .callout a,
-[data-theme="light"] .file-details a,
-[data-theme="light"] .ref-item a,
-[data-theme="light"] .academy-card a:not(.btn) {
-  color: #7184f1;
+[data-theme="light"] .logo-icon {
+  color: #f1de71;
 }
 
-[data-theme="light"] .section-body a:hover,
-[data-theme="light"] .info-card a:hover,
-[data-theme="light"] .callout a:hover,
-[data-theme="light"] .file-details a:hover,
-[data-theme="light"] .ref-item a:hover,
-[data-theme="light"] .academy-card a:not(.btn):hover {
-  color: #5a6de0;
+[data-theme="light"] .progress-bar {
+  background: #f1de71;
 }
 
 code {
@@ -266,15 +258,6 @@ img {
   color: #1c1422;
   background: linear-gradient(180deg, transparent 60%, rgba(241, 222, 113, 0.4) 60%);
   display: inline;
-}
-
-[data-theme="light"] .section-number {
-  color: #7184f1;
-}
-
-[data-theme="light"] .section-nav-item.active {
-  color: #7184f1;
-  border-bottom-color: #7184f1;
 }
 
 [data-theme="light"] .hero-badge {
