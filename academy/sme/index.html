@@ -1455,12 +1455,7 @@
         document.body.classList.remove("panel-open");
       }
 
-      document.querySelectorAll(".program-detail-link").forEach(function(link) {
-        link.addEventListener("click", function(e) {
-          e.preventDefault();
-          openPanel(this.getAttribute("data-panel-trigger"));
-        });
-      });
+      /* Panel triggers removed — detail links now navigate to dedicated landing pages */
 
       closeBtn.addEventListener("click", closePanel);
       overlay.addEventListener("click", closePanel);
