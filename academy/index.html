@@ -560,8 +560,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/marketingprogram?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Apply Now</a>
-                <a class="program-detail-link" data-panel-trigger="bootcamp-pro">See Full Details</a>
+                <a class="program-btn" href="/academy/pro-bootcamp/">Apply Now</a>
               </div>
             </article>
 
@@ -596,8 +595,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/marketingprogramcore?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Apply Now</a>
-                <a class="program-detail-link" data-panel-trigger="bootcamp-core">See Full Details</a>
+                <a class="program-btn" href="/academy/pro-bootcamp/">Apply Now</a>
               </div>
             </article>
 
@@ -632,8 +630,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/productmarketingcourse?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Get Access</a>
-                <a class="program-detail-link" data-panel-trigger="pmm-course">See Full Details</a>
+                <a class="program-btn" href="/academy/pmm-course/">Get Access</a>
               </div>
             </article>
 
@@ -668,8 +665,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/techsalescourse?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Get Access</a>
-                <a class="program-detail-link" data-panel-trigger="tech-sales">See Full Details</a>
+                <a class="program-btn" href="/academy/tech-sales/">Get Access</a>
               </div>
             </article>
 
@@ -704,8 +700,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/marketingresources?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Subscribe Now</a>
-                <a class="program-detail-link" data-panel-trigger="templates">See Full Details</a>
+                <a class="program-btn" href="/academy/templates/">Subscribe Now</a>
               </div>
             </article>
 
@@ -740,8 +735,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/aipromptplaybook?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Get Access</a>
-                <a class="program-detail-link" data-panel-trigger="ai-prompts">See Full Details</a>
+                <a class="program-btn" href="/academy/ai-prompts/">Get Access</a>
               </div>
             </article>
 
@@ -776,8 +770,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/growthmarketinghandbook?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Get Access</a>
-                <a class="program-detail-link" data-panel-trigger="growth-handbook">See Full Details</a>
+                <a class="program-btn" href="/academy/growth-handbook/">Get Access</a>
               </div>
             </article>
 
@@ -812,8 +805,7 @@
                   </div>
                 </div>
 
-                <a class="program-btn" href="https://selar.com/digitalmarketingguide?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noreferrer">Get Access</a>
-                <a class="program-detail-link" data-panel-trigger="digital-marketing">See Full Details</a>
+                <a class="program-btn" href="/academy/digital-marketing/">Get Access</a>
               </div>
             </article>
           </div>
@@ -1658,12 +1650,7 @@
         document.body.classList.remove("panel-open");
       }
 
-      document.querySelectorAll(".program-detail-link").forEach(function(link) {
-        link.addEventListener("click", function(e) {
-          e.preventDefault();
-          openPanel(this.getAttribute("data-panel-trigger"));
-        });
-      });
+      /* Panel triggers removed — cards now link directly to landing pages */
 
       closeBtn.addEventListener("click", closePanel);
       overlay.addEventListener("click", closePanel);
