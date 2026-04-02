@@ -2183,7 +2183,9 @@
             isPageVisible = !document.hidden;
             if (document.hidden && notifTimeout) {
                 clearTimeout(notifTimeout);
+                notifEl.classList.remove('show');
             } else if (!document.hidden) {
+                notifEl.classList.remove('show');
                 scheduleNextNotification();
             }
         });
