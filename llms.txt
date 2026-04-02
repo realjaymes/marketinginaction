@@ -7,26 +7,51 @@ Marketing In Action (MIA) is a marketing ecosystem providing education, resource
 ## Site Structure
 
 - [Homepage](https://marketinginaction.xyz/): Overview of the MIA ecosystem and offerings
-- [MIA Academy](https://marketinginaction.xyz/academy/): Courses and hands-on learning programs for marketers
+- [MIA Academy — For Marketers in Tech](https://marketinginaction.xyz/academy/): Courses, bootcamps, and hands-on learning programs for marketers
+- [MIA Academy — For SME Business Owners](https://marketinginaction.xyz/academy/sme/): Marketing workshops, bundles, and done-for-you services for Nigerian business owners
 - [MIA Consulting](https://marketinginaction.xyz/consulting/): Fractional marketing, advisory, and consulting services
 - [MIA Jobs](https://marketinginaction.xyz/jobs/): Marketing job board for hiring and job seekers
 - [MIA Resources](https://marketinginaction.xyz/resources/): Templates, tools, and marketing resources
 - [MIA Newsletter](https://newsletter.marketinginaction.xyz/): Weekly marketing insights and strategies
 
+## MIA Academy — For SME Business Owners
+
+Workshops with video walkthroughs, templates, and done-for-you services for Nigerian SME business owners.
+
+- [Online Marketing Consulting (Done-For-You)](https://marketinginaction.xyz/academy/sme/consulting/): Full marketing execution — ads, pages, automation, reporting. ₦200,000/month.
+- [Online Marketing Bundle](https://marketinginaction.xyz/academy/sme/bundle/): All 5 workshops + WhatsApp community + live implementation session. ₦45,000.
+- [Meta Ads Simplified](https://marketinginaction.xyz/academy/sme/meta-ads/): Step-by-step Meta Ads workshop with video walkthroughs. ₦15,000.
+- [TikTok Ads Simplified](https://marketinginaction.xyz/academy/sme/tiktok-ads/): Complete TikTok Ads workshop including Nigerian card workaround. ₦15,000.
+- [Business Page Optimization](https://marketinginaction.xyz/academy/sme/page-optimization/): Instagram and TikTok page optimization workshop. ₦15,000.
+- [Social Automation Simplified](https://marketinginaction.xyz/academy/sme/automation/): ManyChat and Meta DM automation workshop. ₦15,000.
+- [Meta Account Recovery](https://marketinginaction.xyz/academy/sme/account-recovery/): Restricted account recovery workshop with copy-paste templates. ₦15,000.
+
+## MIA Academy — For Marketers in Tech
+
+Courses, bootcamps, and resources for Nigerian marketers targeting remote USD roles.
+
+- [Product & Growth Marketing with AI — Pro Bootcamp](https://marketinginaction.xyz/academy/pro-bootcamp/): 12-week execution-first bootcamp. Pro ₦100,000 / Core ₦60,000.
+- [The Complete Product Marketing Course](https://marketinginaction.xyz/academy/pmm-course/): 10-module PMM course with 100+ page handbook. ₦15,000.
+- [The Complete Tech Sales Course](https://marketinginaction.xyz/academy/tech-sales/): 7-module SaaS sales course. ₦15,000.
+- [PMM Templates & Resources Library](https://marketinginaction.xyz/academy/templates/): 24+ premium templates, updated monthly. ₦20,000/year.
+- [AI Prompt Frameworks for Marketers](https://marketinginaction.xyz/academy/ai-prompts/): 40+ production-ready AI prompt templates. ₦20,000.
+- [Growth Marketing Handbook](https://marketinginaction.xyz/academy/growth-handbook/): AARRR framework, experiment templates, growth playbooks. ₦10,000.
+- [Digital Marketing Guide](https://marketinginaction.xyz/academy/digital-marketing/): 7 digital channels, 200+ term glossary. ₦5,000.
+
 ## Key Topics
 
 - Go-to-market (GTM) strategy
-- Marketing execution and operations
-- Demand generation
-- Content marketing
-- Brand positioning and messaging
-- Marketing hiring and careers
-- Startup marketing
-- B2B marketing
+- Product marketing and positioning
+- Growth marketing and experimentation
+- AI-assisted marketing execution
+- Meta Ads and TikTok Ads for Nigerian businesses
+- Social media automation and DM management
+- Marketing careers and remote USD opportunities
+- B2B SaaS marketing
 
 ## About
 
-Marketing In Action was created to bridge the gap between marketing theory and execution. The community focuses on practical, actionable marketing strategies rather than abstract concepts.
+Marketing In Action was created by James Praise, a product marketing and GTM operator with 8+ years across Africa, North America, and Europe. Named one of APMP's Top 20 Marketing Leaders in Africa. Holds an MBA in Entrepreneurship & Innovation and a Product Marketing Management Certification (PMMC). Has trained over 5,000 marketers and business owners.
 
 ## Contact
 
@@ -34,6 +59,9 @@ Marketing In Action was created to bridge the gap between marketing theory and e
 - Newsletter: https://newsletter.marketinginaction.xyz/
 - Twitter: https://twitter.com/marketinginact
 - LinkedIn: https://www.linkedin.com/company/marketinginactionnewsletter
+- Instagram: https://www.instagram.com/marketinginact/
+- TikTok: https://www.tiktok.com/@marketinginact
+- WhatsApp: https://wa.me/2348126546251
 
 ## Content Feeds
 
