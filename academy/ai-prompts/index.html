@@ -319,8 +319,8 @@
         .footer__links a:hover { color: var(--accent); }
         .footer__trust { font-size: 0.75rem; margin-bottom: 8px; }
         .footer__copy { font-size: 0.75rem; }
-        .purchase-notification { position: fixed; bottom: 24px; left: 24px; background: var(--white); border-radius: var(--radius-md); box-shadow: 0 4px 24px rgba(0,0,0,0.15); padding: 14px 20px; max-width: 280px; z-index: 998; display: flex; align-items: center; gap: 12px; transform: translateX(-120%); transition: transform 0.4s ease; }
-        .purchase-notification.show { transform: translateX(0); }
+        .purchase-notification { position: fixed; bottom: 24px; left: 24px; background: var(--white); border-radius: var(--radius-md); box-shadow: 0 4px 24px rgba(0,0,0,0.15); padding: 14px 20px; max-width: 280px; z-index: 998; display: flex; align-items: center; gap: 12px; opacity: 0; visibility: hidden; transform: translateY(20px); transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease; pointer-events: none; }
+        .purchase-notification.show { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
         .purchase-notification__dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green-success); flex-shrink: 0; animation: pulse-dot 2s infinite; }
         .purchase-notification__text { font-size: 0.85rem; color: var(--text-primary); line-height: 1.3; }
         .purchase-notification__time { font-size: 0.7rem; color: var(--text-light); margin-top: 2px; }
@@ -355,8 +355,8 @@
             .dot-grid { gap: 8px; } .dot-grid__dot { width: 20px; height: 20px; }
             .faq-item__q { padding: 16px 18px; font-size: 0.9rem; } .faq-item__a-inner { padding: 0 18px 16px; }
             .sticky-nav .btn { padding: 8px 16px; font-size: 0.8rem; }
-            .purchase-notification { left: 50%; bottom: 80px; max-width: 260px; transform: translateX(-150%); }
-            .purchase-notification.show { transform: translateX(-50%); }
+            .purchase-notification { left: 50%; bottom: 80px; max-width: 260px; transform: translateX(-50%) translateY(20px); }
+            .purchase-notification.show { transform: translateX(-50%) translateY(0); }
             .transform-grid { grid-template-columns: 1fr; }
             .mega-stat__number { font-size: 2.8rem; }
             .mega-stat { padding: 40px 0; }

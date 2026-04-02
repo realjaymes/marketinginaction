@@ -1208,10 +1208,13 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            transform: translateX(-120%);
-            transition: transform 0.4s ease;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: opacity 0.4s ease, visibility 0.4s ease, transform 0.4s ease;
+            pointer-events: none;
         }
-        .purchase-notification.show { transform: translateX(0); }
+        .purchase-notification.show { opacity: 1; visibility: visible; transform: translateY(0); pointer-events: auto; }
         .purchase-notification__dot {
             width: 10px;
             height: 10px;
@@ -1327,8 +1330,8 @@
             .faq-item__q { padding: 16px 18px; font-size: 0.9rem; }
             .faq-item__a-inner { padding: 0 18px 16px; }
             .sticky-nav .btn { padding: 8px 16px; font-size: 0.8rem; }
-            .purchase-notification { left: 50%; bottom: 80px; max-width: 260px; transform: translateX(-150%); }
-            .purchase-notification.show { transform: translateX(-50%); }
+            .purchase-notification { left: 50%; bottom: 80px; max-width: 260px; transform: translateX(-50%) translateY(20px); }
+            .purchase-notification.show { transform: translateX(-50%) translateY(0); }
             .problem-section,
             .value-stack,
             .origin,
