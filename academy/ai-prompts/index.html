@@ -363,7 +363,7 @@
             .problem-section, .value-stack, .origin, .transformation, .coach-intro, .choices, .pricing, .guarantee, .faq, .final-cta { padding: 48px 0; }
         }
         @media (max-width: 380px) { .hero__headline { font-size: 1.5rem; } .section-title { font-size: 1.35rem; } .announcement-bar { font-size: 0.72rem; } .pricing__single-price { font-size: 2rem; } }
-        @media (min-width: 769px) { .sticky-bar { display: none; } }
+        /* sticky-bar visible on all viewports; hidden by IntersectionObserver when pricing is in view */
     </style>
 </head>
 <body>
@@ -382,7 +382,7 @@
     <nav class="sticky-nav">
         <div class="container">
             <a href="/academy/" class="sticky-nav__brand"><img src="/assets/mia-logo.svg" alt="MIA Academy" style="height:28px; width:auto;"></a>
-            <a href="#pricing" class="btn btn-accent">Get the Playbook</a>
+            <a href="https://selar.com/aipromptplaybook?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noopener" class="btn btn-accent">Get the Playbook</a>
         </div>
     </nav>
 
@@ -922,6 +922,7 @@
         document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.querySelector('.faq-item__q');if(!btn)return;btn.addEventListener('click',function(){var isActive=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('active');});if(!isActive)item.classList.add('active');});});
         var stickyBar=document.getElementById('stickyBar');var showBar=false;
         window.addEventListener('scroll',function(){if(window.scrollY>500&&!showBar){stickyBar.classList.add('visible');showBar=true;}else if(window.scrollY<=500&&showBar){stickyBar.classList.remove('visible');showBar=false;}});
+        var pricingSection=document.getElementById('pricing');var stickyBarEl=document.getElementById('stickyBar');if(pricingSection&&stickyBarEl){var pricingObserver=new IntersectionObserver(function(entries){if(entries[0].isIntersecting){stickyBarEl.classList.remove('visible');stickyBarEl.style.pointerEvents='none';}else{stickyBarEl.classList.add('visible');stickyBarEl.style.pointerEvents='';}},{threshold:0.1});pricingObserver.observe(pricingSection);}
         var timerEl=document.getElementById('countdownTimer');
         function updateCountdown(){var deadline=new Date(CONFIG.offerDeadline).getTime();var now=Date.now();var diff=deadline-now;if(diff<=0){if(timerEl)timerEl.innerHTML='<span class="announcement-bar__timer-unit">Price increased</span>';return;}var d=Math.floor(diff/86400000);var h=Math.floor((diff%86400000)/3600000);var m=Math.floor((diff%3600000)/60000);var s=Math.floor((diff%60000)/1000);if(timerEl)timerEl.innerHTML='<span class="announcement-bar__timer-unit">'+d+'d</span><span class="announcement-bar__timer-unit">'+h+'h</span><span class="announcement-bar__timer-unit">'+m+'m</span><span class="announcement-bar__timer-unit">'+s+'s</span>';}
         updateCountdown();setInterval(updateCountdown,1000);

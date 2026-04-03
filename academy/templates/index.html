@@ -1320,9 +1320,7 @@
             .pricing__single-price { font-size: 2rem; }
         }
 
-        @media (min-width: 769px) {
-            .sticky-bar { display: none; }
-        }
+        /* sticky-bar visible on all viewports; hidden by IntersectionObserver when pricing is in view */
     </style>
 </head>
 <body>
@@ -1342,7 +1340,7 @@
     <nav class="sticky-nav">
         <div class="container">
             <a href="/academy/" class="sticky-nav__brand"><img src="/assets/mia-logo.svg" alt="MIA Academy" style="height:28px; width:auto;"></a>
-            <a href="#pricing" class="btn btn-accent">Get the Templates</a>
+            <a href="https://selar.com/marketingresources?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noopener" class="btn btn-accent">Get the Templates</a>
         </div>
     </nav>
 
@@ -2166,6 +2164,22 @@
                 showBar = false;
             }
         });
+
+        /* 5b. HIDE STICKY BAR WHEN PRICING IS VISIBLE */
+        var pricingSection = document.getElementById('pricing');
+        var stickyBarEl = document.getElementById('stickyBar');
+        if (pricingSection && stickyBarEl) {
+            var pricingObserver = new IntersectionObserver(function(entries) {
+                if (entries[0].isIntersecting) {
+                    stickyBarEl.classList.remove('visible');
+                    stickyBarEl.style.pointerEvents = 'none';
+                } else {
+                    stickyBarEl.classList.add('visible');
+                    stickyBarEl.style.pointerEvents = '';
+                }
+            }, { threshold: 0.1 });
+            pricingObserver.observe(pricingSection);
+        }
 
         /* 6. COUNTDOWN TIMER */
         var timerEl = document.getElementById('countdownTimer');
