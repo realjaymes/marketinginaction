@@ -2273,28 +2273,8 @@
             }
         });
 
-        // Mobile exit intent: scroll-up detection
-        var lastScrollY = window.scrollY;
-        var scrollUpDistance = 0;
-        var mobileExitEnabled = false;
-        setTimeout(function() { mobileExitEnabled = true; }, 10000);
-        window.addEventListener('scroll', function() {
-            if (!mobileExitEnabled) { lastScrollY = window.scrollY; return; }
-            var currentY = window.scrollY;
-            if (currentY < lastScrollY) {
-                scrollUpDistance += (lastScrollY - currentY);
-                if (scrollUpDistance > 400 && window.scrollY < document.body.scrollHeight * 0.2) {
-                    showExitPopup();
-                    scrollUpDistance = 0;
-                }
-            } else {
-                scrollUpDistance = 0;
-            }
-            lastScrollY = currentY;
-        }, { passive: true });
-
-        // Mobile exit intent: time-based (90 seconds)
-        setTimeout(function() { showExitPopup(); }, 90000);
+        // Mobile exit intent: time-based (45 seconds)
+        setTimeout(function() { showExitPopup(); }, 45000);
 
         if (exitClose) exitClose.addEventListener('click', closeExitPopup);
         if (exitSkip) exitSkip.addEventListener('click', closeExitPopup);

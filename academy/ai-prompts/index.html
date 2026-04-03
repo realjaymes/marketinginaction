@@ -919,7 +919,7 @@
         function showExitPopup(){if(exitShown||ctaClicked)return;exitOverlay.classList.add('show');sessionStorage.setItem('mia_exit_shown','1');exitShown='1';}
         function closeExitPopup(){exitOverlay.classList.remove('show');}
         document.addEventListener('mouseout',function(e){if(e.clientY<5&&e.relatedTarget==null)showExitPopup();});
-        var lastScrollY=window.scrollY;var scrollUpDistance=0;var mobileExitEnabled=false;setTimeout(function(){mobileExitEnabled=true;},10000);window.addEventListener('scroll',function(){if(!mobileExitEnabled){lastScrollY=window.scrollY;return;}var currentY=window.scrollY;if(currentY<lastScrollY){scrollUpDistance+=(lastScrollY-currentY);if(scrollUpDistance>400&&window.scrollY<document.body.scrollHeight*0.2){showExitPopup();scrollUpDistance=0;}}else{scrollUpDistance=0;}lastScrollY=currentY;},{passive:true});setTimeout(function(){showExitPopup();},90000);
+        setTimeout(function(){showExitPopup();},45000);
         if(exitClose)exitClose.addEventListener('click',closeExitPopup);if(exitSkip)exitSkip.addEventListener('click',closeExitPopup);
         if(exitOverlay)exitOverlay.addEventListener('click',function(e){if(e.target===exitOverlay)closeExitPopup();});
         document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.querySelector('.faq-item__q');if(!btn)return;btn.addEventListener('click',function(){var isActive=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('active');});if(!isActive)item.classList.add('active');});});
