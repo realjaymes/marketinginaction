@@ -2572,6 +2572,26 @@
         });
     })();
     </script>
+<script>
+(function(){
+    var fired=false;
+    function fireViewContent(){
+        if(fired)return;
+        fired=true;
+        if(typeof fbq==='function')fbq('track','ViewContent');
+    }
+    // Fire on 30 seconds
+    setTimeout(fireViewContent,30000);
+    // Fire on scroll to pricing section
+    var pricing=document.getElementById('pricing');
+    if(pricing){
+        var observer=new IntersectionObserver(function(entries){
+            if(entries[0].isIntersecting)fireViewContent();
+        },{threshold:0.1});
+        observer.observe(pricing);
+    }
+})();
+</script>
 
 </body>
 </html>
