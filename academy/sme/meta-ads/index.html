@@ -2301,5 +2301,89 @@
     })();
     </script>
 
+    <!-- Prefill Checkout Modal -->
+    <div class="prefill-modal" id="prefillModal">
+        <div class="prefill-modal__inner">
+            <div class="prefill-modal__header">
+                <span class="prefill-modal__title">Complete Your Purchase</span>
+                <button class="prefill-modal__close" onclick="closePrefill()">&times;</button>
+            </div>
+            <div class="prefill-modal__body">
+                <p class="prefill-modal__sub">Enter your details below. You will be taken to a secure checkout with everything prefilled.</p>
+                <form id="prefillForm" onsubmit="submitPrefill(event)">
+                    <div class="prefill-modal__field">
+                        <label>Full Name *</label>
+                        <input type="text" id="prefillName" required placeholder="e.g. Adaeze Okonkwo">
+                    </div>
+                    <div class="prefill-modal__field">
+                        <label>Email Address *</label>
+                        <input type="email" id="prefillEmail" required placeholder="e.g. adaeze@gmail.com">
+                    </div>
+                    <div class="prefill-modal__field">
+                        <label>Phone Number</label>
+                        <input type="tel" id="prefillPhone" placeholder="e.g. 08012345678">
+                    </div>
+                    <button type="submit" class="prefill-modal__btn">Proceed to Payment &rarr;</button>
+                    <p class="prefill-modal__trust">Secure payment via Selar &middot; Paystack &middot; Bank Transfer</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        .prefill-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;padding:20px;}
+        .prefill-modal.open{display:flex;}
+        .prefill-modal__inner{background:#fff;border-radius:16px;width:100%;max-width:440px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:prefillSlideUp 0.25s ease;}
+        @keyframes prefillSlideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+        .prefill-modal__header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #eee;}
+        .prefill-modal__title{font-weight:700;font-size:1rem;color:var(--primary-dark,#1a1a2e);}
+        .prefill-modal__close{background:none;border:none;font-size:1.6rem;cursor:pointer;color:#999;line-height:1;padding:0 4px;}
+        .prefill-modal__close:hover{color:#333;}
+        .prefill-modal__body{padding:20px 24px 24px;}
+        .prefill-modal__sub{font-size:0.85rem;color:#666;margin:0 0 18px;}
+        .prefill-modal__field{margin-bottom:14px;}
+        .prefill-modal__field label{display:block;font-size:0.8rem;font-weight:600;color:var(--primary-dark,#1a1a2e);margin-bottom:4px;}
+        .prefill-modal__field input{width:100%;padding:10px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:0.9rem;outline:none;transition:border 0.2s;font-family:inherit;}
+        .prefill-modal__field input:focus{border-color:var(--accent,#f1de71);}
+        .prefill-modal__btn{display:block;width:100%;padding:13px;background:var(--accent,#f1de71);color:var(--primary-dark,#1a1a2e);border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;}
+        .prefill-modal__btn:hover{opacity:0.9;}
+        .prefill-modal__trust{font-size:0.75rem;color:#999;text-align:center;margin:10px 0 0;}
+    </style>
+    <script>
+    (function(){
+        var prefillUrl='';
+        document.addEventListener('click',function(e){
+            var link=e.target.closest('a[href*="selar.com"][href*="add_to_cart"]');
+            if(!link)return;
+            e.preventDefault();
+            var href=link.href;
+            var idx=href.indexOf('&email=');
+            prefillUrl=idx>-1?href.substring(0,idx):href;
+            document.getElementById('prefillForm').reset();
+            document.getElementById('prefillModal').classList.add('open');
+            document.body.style.overflow='hidden';
+            setTimeout(function(){document.getElementById('prefillName').focus();},100);
+        });
+        window.closePrefill=function(){
+            document.getElementById('prefillModal').classList.remove('open');
+            document.body.style.overflow='';
+            prefillUrl='';
+        };
+        window.submitPrefill=function(e){
+            e.preventDefault();
+            var name=document.getElementById('prefillName').value.trim();
+            var email=document.getElementById('prefillEmail').value.trim();
+            var phone=document.getElementById('prefillPhone').value.trim();
+            var url=prefillUrl+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name);
+            if(phone)url+='&mobile='+encodeURIComponent(phone);
+            window.location.href=url;
+        };
+        document.getElementById('prefillModal').addEventListener('click',function(e){
+            if(e.target===this)closePrefill();
+        });
+        document.addEventListener('keydown',function(e){
+            if(e.key==='Escape')closePrefill();
+        });
+    })();
+    </script>
 </body>
 </html>
