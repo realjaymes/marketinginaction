@@ -1209,7 +1209,18 @@ version: "1.0.0"
               <div class="step-number">2</div>
               <div class="step-content">
                 <h3>Create your CLAUDE.md</h3>
-                <p>In VS Code, right-click in the file sidebar and choose <strong>"New File"</strong>. Name it <code>CLAUDE.md</code>. Paste in your company context (use the example from the Key Files section as a starting point and replace with your own details).</p>
+                <p>Instead of writing your CLAUDE.md from scratch, paste this prompt into Claude Code and it will ask you the right questions and build it for you:</p>
+
+                <div class="code-block">
+                  <button class="copy-btn" aria-label="Copy code">Copy</button>
+<pre><code>Help me create a CLAUDE.md file for my marketing workspace. Ask me about my company, product, target audience, brand voice, competitors, pricing, and key differentiators. Then generate a complete CLAUDE.md file and save it to ~/CLAUDE.md. Ask me one section at a time so I can give you detailed answers.</code></pre>
+                </div>
+
+                <p>Claude will walk you through each section, ask follow-up questions, and save the file when done. You can also edit the file later as your product evolves.</p>
+
+                <div class="callout callout-tip">
+                  <strong>Alternative:</strong> If you prefer to write it yourself, right-click in the VS Code file sidebar, choose "New File", name it <code>CLAUDE.md</code>, and use the example from the Key Files section above as a starting point.
+                </div>
               </div>
             </div>
 
