@@ -1804,6 +1804,7 @@
                         <li>Lifetime access</li>
                     </ul>
                     <div class="pricing__single-cta">
+                        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-bottom:12px;">Over 500 business owners already enrolled</p>
                         <a href="https://selar.com/tiktokadssolutions?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener">Get the Workshop &mdash; &#8358;15,000</a>
                     </div>
                 </div>
@@ -2221,7 +2222,7 @@
             var currentY = window.scrollY;
             if (currentY < lastScrollY) {
                 scrollUpDistance += (lastScrollY - currentY);
-                if (scrollUpDistance > 400) {
+                if (scrollUpDistance > 400 && window.scrollY < document.body.scrollHeight * 0.2) {
                     showExitPopup();
                     scrollUpDistance = 0;
                 }
@@ -2337,11 +2338,11 @@
     <div class="prefill-modal" id="prefillModal">
         <div class="prefill-modal__inner">
             <div class="prefill-modal__header">
-                <span class="prefill-modal__title">Complete Your Purchase</span>
+                <span class="prefill-modal__title">Almost there — Step 1 of 2</span>
                 <button class="prefill-modal__close" onclick="closePrefill()">&times;</button>
             </div>
             <div class="prefill-modal__body">
-                <p class="prefill-modal__sub">Enter your details below. You will be taken to a secure checkout with everything prefilled.</p>
+                <p class="prefill-modal__sub">Enter your details and you will be taken straight to checkout with everything prefilled.</p>
                 <form id="prefillForm" onsubmit="submitPrefill(event)">
                     <div class="prefill-modal__field">
                         <label>Full Name *</label>

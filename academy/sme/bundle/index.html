@@ -1855,11 +1855,14 @@
                             <li>30-day money-back guarantee</li>
                         </ul>
                         <div class="pricing__tier-cta">
+                            <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-bottom:12px;">Over 500 business owners already enrolled</p>
                             <a href="https://selar.com/onlinemarketingbundle?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener">Get the Bundle &mdash; &#8358;45,000</a>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:20px;">Want to start with just one? <a href="/academy/sme/meta-ads/" style="color:var(--accent); text-decoration:underline;">Meta Ads</a> · <a href="/academy/sme/tiktok-ads/" style="color:var(--accent); text-decoration:underline;">TikTok Ads</a> · <a href="/academy/sme/page-optimization/" style="color:var(--accent); text-decoration:underline;">Page Optimization</a> · <a href="/academy/sme/automation/" style="color:var(--accent); text-decoration:underline;">Automation</a> · <a href="/academy/sme/account-recovery/" style="color:var(--accent); text-decoration:underline;">Account Recovery</a> — ₦15,000 each</p>
 
             <!-- Pricing psychology anchors -->
             <p class="pricing__escalation">Early bird price. Increases by &#8358;5,000 every month.</p>
@@ -1948,7 +1951,7 @@
                         <span class="faq-item__icon">+</span>
                     </button>
                     <div class="faq-item__a">
-                        <div class="faq-item__a-inner">You can buy each workshop individually for &#8358;15,000 each. But the bundle saves you &#8358;210,000 and includes the WhatsApp community and live workshop, which are not available with individual purchases.</div>
+                        <div class="faq-item__a-inner">You can buy each workshop individually for &#8358;15,000 each: <a href="/academy/sme/meta-ads/">Meta Ads</a>, <a href="/academy/sme/tiktok-ads/">TikTok Ads</a>, <a href="/academy/sme/page-optimization/">Page Optimization</a>, <a href="/academy/sme/automation/">Automation</a>, and <a href="/academy/sme/account-recovery/">Account Recovery</a>. But the bundle saves you &#8358;210,000 and includes the WhatsApp community and live workshop, which are not available with individual purchases.</div>
                     </div>
                 </div>
                 <!-- FAQ 4 -->
@@ -2280,7 +2283,7 @@
             var currentY = window.scrollY;
             if (currentY < lastScrollY) {
                 scrollUpDistance += (lastScrollY - currentY);
-                if (scrollUpDistance > 400) {
+                if (scrollUpDistance > 400 && window.scrollY < document.body.scrollHeight * 0.2) {
                     showExitPopup();
                     scrollUpDistance = 0;
                 }
@@ -2396,11 +2399,11 @@
     <div class="prefill-modal" id="prefillModal">
         <div class="prefill-modal__inner">
             <div class="prefill-modal__header">
-                <span class="prefill-modal__title">Complete Your Purchase</span>
+                <span class="prefill-modal__title">Almost there — Step 1 of 2</span>
                 <button class="prefill-modal__close" onclick="closePrefill()">&times;</button>
             </div>
             <div class="prefill-modal__body">
-                <p class="prefill-modal__sub">Enter your details below. You will be taken to a secure checkout with everything prefilled.</p>
+                <p class="prefill-modal__sub">Enter your details and you will be taken straight to checkout with everything prefilled.</p>
                 <form id="prefillForm" onsubmit="submitPrefill(event)">
                     <div class="prefill-modal__field">
                         <label>Full Name *</label>

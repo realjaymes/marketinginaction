@@ -743,6 +743,7 @@
                         <li>Lifetime updates included</li>
                     </ul>
                     <div class="pricing__single-cta">
+                        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-bottom:12px;">Over 5,000 marketers trained across 3 continents</p>
                         <a href="https://selar.com/aipromptplaybook?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener">Get the Playbook &mdash; &#8358;20,000</a>
                     </div>
                 </div>
@@ -918,7 +919,7 @@
         function showExitPopup(){if(exitShown||ctaClicked)return;exitOverlay.classList.add('show');sessionStorage.setItem('mia_exit_shown','1');exitShown='1';}
         function closeExitPopup(){exitOverlay.classList.remove('show');}
         document.addEventListener('mouseout',function(e){if(e.clientY<5&&e.relatedTarget==null)showExitPopup();});
-        var lastScrollY=window.scrollY;var scrollUpDistance=0;var mobileExitEnabled=false;setTimeout(function(){mobileExitEnabled=true;},10000);window.addEventListener('scroll',function(){if(!mobileExitEnabled){lastScrollY=window.scrollY;return;}var currentY=window.scrollY;if(currentY<lastScrollY){scrollUpDistance+=(lastScrollY-currentY);if(scrollUpDistance>400){showExitPopup();scrollUpDistance=0;}}else{scrollUpDistance=0;}lastScrollY=currentY;},{passive:true});setTimeout(function(){showExitPopup();},90000);
+        var lastScrollY=window.scrollY;var scrollUpDistance=0;var mobileExitEnabled=false;setTimeout(function(){mobileExitEnabled=true;},10000);window.addEventListener('scroll',function(){if(!mobileExitEnabled){lastScrollY=window.scrollY;return;}var currentY=window.scrollY;if(currentY<lastScrollY){scrollUpDistance+=(lastScrollY-currentY);if(scrollUpDistance>400&&window.scrollY<document.body.scrollHeight*0.2){showExitPopup();scrollUpDistance=0;}}else{scrollUpDistance=0;}lastScrollY=currentY;},{passive:true});setTimeout(function(){showExitPopup();},90000);
         if(exitClose)exitClose.addEventListener('click',closeExitPopup);if(exitSkip)exitSkip.addEventListener('click',closeExitPopup);
         if(exitOverlay)exitOverlay.addEventListener('click',function(e){if(e.target===exitOverlay)closeExitPopup();});
         document.querySelectorAll('.faq-item').forEach(function(item){var btn=item.querySelector('.faq-item__q');if(!btn)return;btn.addEventListener('click',function(){var isActive=item.classList.contains('active');document.querySelectorAll('.faq-item').forEach(function(fi){fi.classList.remove('active');});if(!isActive)item.classList.add('active');});});
@@ -935,11 +936,11 @@
     <div class="prefill-modal" id="prefillModal">
         <div class="prefill-modal__inner">
             <div class="prefill-modal__header">
-                <span class="prefill-modal__title">Complete Your Purchase</span>
+                <span class="prefill-modal__title">Almost there — Step 1 of 2</span>
                 <button class="prefill-modal__close" onclick="closePrefill()">&times;</button>
             </div>
             <div class="prefill-modal__body">
-                <p class="prefill-modal__sub">Enter your details below. You will be taken to a secure checkout with everything prefilled.</p>
+                <p class="prefill-modal__sub">Enter your details and you will be taken straight to checkout with everything prefilled.</p>
                 <form id="prefillForm" onsubmit="submitPrefill(event)">
                     <div class="prefill-modal__field">
                         <label>Full Name *</label>
