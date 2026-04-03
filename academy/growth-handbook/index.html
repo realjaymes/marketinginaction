@@ -347,14 +347,14 @@
             document.body.style.overflow='';
             prefillUrl='';
         };
-        window.submitPrefill=function(e){
+        window.submitPrefill=function(e){var SHEET_URL="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
             e.preventDefault();
             var name=document.getElementById('prefillName').value.trim();
             var email=document.getElementById('prefillEmail').value.trim();
             var phone=document.getElementById('prefillPhone').value.trim();
             var url=prefillUrl+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name);
             if(phone)url+='&mobile='+encodeURIComponent(phone);
-            window.location.href=url;
+            try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:document.title,pageUrl:window.location.href})});}catch(err){}window.location.href=url;
         };
         document.getElementById('prefillModal').addEventListener('click',function(e){
             if(e.target===this)closePrefill();
