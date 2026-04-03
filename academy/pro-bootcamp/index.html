@@ -2302,7 +2302,7 @@
                 } catch(e) { /* reset */ }
             }
 
-            var initial = Math.floor(CONFIG.totalSpots * 0.4);
+            var initial = Math.floor(CONFIG.totalSpots * 0.45);
             localStorage.setItem(CONFIG.storageKey, JSON.stringify({ spots: initial, date: today }));
             return initial;
         }
