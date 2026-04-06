@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found | Marketing In Action</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+        .error-page {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        .error-page__code {
+            font-size: 6rem;
+            font-weight: 800;
+            color: var(--color-black, #1a1a2e);
+            line-height: 1;
+            margin: 0 0 8px;
+        }
+        .error-page__title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 0 12px;
+            color: var(--color-black, #1a1a2e);
+        }
+        .error-page__text {
+            font-size: 1rem;
+            color: var(--text-muted, #666);
+            margin: 0 0 32px;
+            max-width: 480px;
+        }
+        .error-page__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .error-page__links a {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 650;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        .error-page__links a:hover {
+            opacity: 0.85;
+        }
+        .error-page__links a.primary {
+            background: var(--color-black, #1a1a2e);
+            color: #fff;
+        }
+        .error-page__links a.secondary {
+            background: #f5f5f5;
+            color: var(--color-black, #1a1a2e);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav class="nav">
+                <a href="/" class="logo">
+                    <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
+                </a>
+                <div class="nav-links">
+                    <a href="https://newsletter.marketinginaction.xyz" target="_blank" rel="noreferrer">MIA Newsletter</a>
+                    <a href="/academy/">MIA Academy</a>
+                    <a href="/resources/">MIA Resources</a>
+                    <a href="/jobs/">MIA Jobs</a>
+                    <a href="/consulting/">MIA Consulting</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="error-page">
+            <div>
+                <div class="error-page__code">404</div>
+                <h1 class="error-page__title">Page not found</h1>
+                <p class="error-page__text">The page you are looking for does not exist or has been moved. Here are some places you can go instead.</p>
+                <div class="error-page__links">
+                    <a href="/" class="primary">Go to Homepage</a>
+                    <a href="/academy/" class="secondary">MIA Academy</a>
+                    <a href="https://newsletter.marketinginaction.xyz" class="secondary" target="_blank" rel="noreferrer">MIA Newsletter</a>
+                    <a href="/consulting/" class="secondary">MIA Consulting</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-title">Marketing In Action</div>
+            <p class="muted">
+              Execution-first marketing community helping more than 5,000 marketers and founders unlock predictable revenue with templates and tools, community, events, and hands-on learning.
+            </p>
+          </div>
+
+          <div>
+            <div class="footer-title">MIA Ecosystem</div>
+            <ul class="footer-list">
+              <li><a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a></li>
+              <li><a href="https://newsletter.marketinginaction.xyz/s/events" target="_blank" rel="noreferrer">MIA Events</a></li>
+              <li><a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a></li>
+              <li><a href="/academy/">MIA Academy</a></li>
+              <li><a href="/jobs/">MIA Jobs</a></li>
+              <li><a href="/consulting/">MIA Consulting</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-title">MIA Academy</div>
+            <ul class="footer-list">
+              <li><a href="/academy/pro-bootcamp/">Product & Growth Marketing with AI Bootcamp</a></li>
+              <li><a href="/academy/sme/bundle/">Online Marketing Mentorship</a></li>
+              <li><a href="/academy/ai-prompts/">AI Prompt Frameworks & Templates</a></li>
+              <li><a href="/academy/templates/">Product Marketing Templates & Resources</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-title">Resources & More</div>
+            <ul class="footer-list">
+              <li><a href="/affiliate/">MIA Affiliate Program (Earn 40%)</a></li>
+              <li><a href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">The State of Marketing In African Tech</a></li>
+              <li><a href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7" target="_blank" rel="noreferrer">Marketing & AI Product Database</a></li>
+              <li><a href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing" target="_blank" rel="noreferrer">MIA Resource Library (Free)</a></li>
+              <li><a href="mailto:james@marketinginaction.xyz">Work with MIA (Email)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="muted">Copyright <span id="year"></span>, Marketing In Action Hub.</div>
+          <div class="footer-legal">
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/terms/">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
