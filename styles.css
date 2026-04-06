@@ -986,7 +986,7 @@ footer {
   padding: var(--space-xl) 0;
 }
 
-footer .muted { color: rgba(247, 244, 250, 0.7); }
+footer .muted { color: rgba(247, 244, 250, 0.7); font-size: 0.85rem; }
 
 .footer-grid {
   display: grid;
@@ -1002,6 +1002,7 @@ footer .muted { color: rgba(247, 244, 250, 0.7); }
 
 .footer-title {
   font-weight: 900;
+  font-size: 0.85rem;
   margin-bottom: var(--space-sm);
   color: var(--color-white);
 }
@@ -1012,6 +1013,7 @@ footer .muted { color: rgba(247, 244, 250, 0.7); }
   margin: 0;
   display: grid;
   gap: 8px;
+  font-size: 0.85rem;
 }
 
 .footer-list a {
@@ -1056,6 +1058,7 @@ footer .muted { color: rgba(247, 244, 250, 0.7); }
   border-top: 1px solid rgba(247, 244, 250, 0.2);
   display: flex;
   gap: var(--space-md);
+  font-size: 0.75rem;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -1069,7 +1072,7 @@ footer .muted { color: rgba(247, 244, 250, 0.7); }
 .footer-legal a {
   color: var(--color-muted);
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   transition: color 0.2s ease;
 }
 
