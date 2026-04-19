@@ -38,6 +38,10 @@ Courses, bootcamps, and resources for Nigerian marketers targeting remote USD ro
 - [Growth Marketing Handbook](https://marketinginaction.xyz/academy/growth-handbook/): AARRR framework, experiment templates, growth playbooks. ₦10,000.
 - [Digital Marketing Guide](https://marketinginaction.xyz/academy/digital-marketing/): 7 digital channels, 200+ term glossary. ₦5,000.
 
+## Free Guides
+
+- [Claude Code for Marketers](https://marketinginaction.xyz/resources/claude-code-for-marketers/): Free guide for marketers to set up Claude Code, install marketing skills, and use AI for positioning, GTM strategy, landing pages, and more. No coding experience needed.
+
 ## Key Topics
 
 - Go-to-market (GTM) strategy
