@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <meta name="author" content="James Praise">
     <title>MIA | Consulting, Advisory & Fractional Marketing Services</title>
 
     <!-- Open Graph -->
@@ -95,6 +96,7 @@
         "url": "https://marketinginaction.xyz/consulting/",
         "provider": {
           "@type": "Person",
+          "@id": "https://marketinginaction.xyz/#james",
           "name": "James Praise",
           "jobTitle": "Product Marketing Consultant",
           "url": "https://www.jamespraise.xyz"
@@ -165,6 +167,27 @@
         ]
       }
     ]
+    </script>
+    <!-- BreadcrumbList schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://marketinginaction.xyz/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Consulting",
+      "item": "https://marketinginaction.xyz/consulting/"
+    }
+  ]
+}
     </script>
   </head>
 

@@ -3,3 +3,5 @@ User-agent: *
 Allow: /
 
 Sitemap: https://marketinginaction.xyz/sitemap.xml
+Sitemap: https://marketinginaction.xyz/sitemap-main.xml
+Sitemap: https://newsletter.marketinginaction.xyz/sitemap.xml
