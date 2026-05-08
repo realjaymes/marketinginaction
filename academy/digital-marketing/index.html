@@ -320,8 +320,8 @@
             <h3 class="exit-modal__title">Still a single-channel marketer?</h3>
             <p class="exit-modal__text">Full-stack digital marketers earn 30 to 50% more than single-channel specialists.</p>
             <p class="exit-modal__text" style="margin-top:8px; margin-bottom:12px;">That gap stays open every month you stay in one channel. 7 channel deep dives, &#8358;5,000 once.</p>
-            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br>Chioma got the guide.<br>Tunde is at checkout.<br>Blessing sent her receipt.</p>
-            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;5,000. If you can pay today, this is the door.</p>
+            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br><span class="exit-name"></span> got the guide.<br><span class="exit-name"></span> is at checkout.<br><span class="exit-name"></span> just paid.</p>
+            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;5,000. Lock it in today.</p>
             <a href="https://selar.com/digitalmarketingguide?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener" style="width:100%;margin-bottom:10px;">Get the Digital Marketing Guide, &#8358;5,000</a>
             <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20buy%20the%20Digital%20Marketing%20Guide%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" target="_blank" rel="noopener" style="display:block; text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:12px; text-decoration:underline;">Trouble paying? WhatsApp us</a>
             <button class="exit-modal__skip" id="exitSkip">Not today</button></div></div>
@@ -341,7 +341,7 @@
     document.addEventListener('visibilitychange',function(){isPageVisible=!document.hidden;if(document.hidden&&notifTimeout){clearTimeout(notifTimeout);notifEl.classList.remove('show');}else if(!document.hidden){notifEl.classList.remove('show');scheduleNext();}});
     var exitOverlay=document.getElementById('exitOverlay'),exitClose=document.getElementById('exitClose'),exitSkip=document.getElementById('exitSkip'),ctaClicked=false,exitShown=sessionStorage.getItem('mia_exit_shown');
     ['heroCtas','finalCtas'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('click',function(e){if(e.target.closest('.btn'))ctaClicked=true;});});
-    function showExitPopup(){if(exitShown||ctaClicked)return;exitOverlay.classList.add('show');sessionStorage.setItem('mia_exit_shown','1');exitShown='1';}function closeExitPopup(){exitOverlay.classList.remove('show');}
+    function showExitPopup(){if(exitShown||ctaClicked)return;try{var _pool=(typeof CONFIG!=='undefined'&&CONFIG.namesFallback)?CONFIG.namesFallback.slice():['Chioma','Tunde','Blessing','Emeka','Aisha','Adaeze','Funmi','Chidi'];for(var _i=_pool.length-1;_i>0;_i--){var _j=Math.floor(Math.random()*(_i+1));var _t=_pool[_i];_pool[_i]=_pool[_j];_pool[_j]=_t;}var _slots=document.querySelectorAll('.exit-name');for(var _k=0;_k<_slots.length&&_k<_pool.length;_k++){_slots[_k].textContent=_pool[_k];}}catch(e){}exitOverlay.classList.add('show');sessionStorage.setItem('mia_exit_shown','1');exitShown='1';}function closeExitPopup(){exitOverlay.classList.remove('show');}
     document.addEventListener('mouseout',function(e){if(e.clientY<5&&e.relatedTarget==null)showExitPopup();});
     setTimeout(function(){showExitPopup();},45000);
     if(exitClose)exitClose.addEventListener('click',closeExitPopup);if(exitSkip)exitSkip.addEventListener('click',closeExitPopup);if(exitOverlay)exitOverlay.addEventListener('click',function(e){if(e.target===exitOverlay)closeExitPopup();});

@@ -324,8 +324,8 @@
             <h3 class="exit-modal__title">Still missing out on growth roles?</h3>
             <p class="exit-modal__text">Growth marketing managers earn $95,000 to $140,000 a year. That's $8,000 to $12,000 a month, &#8358;12 million to &#8358;18 million monthly.</p>
             <p class="exit-modal__text" style="margin-top:8px; margin-bottom:12px;">Without AARRR fluency and a paper trail of experiments, you're not in the running. Every month you wait is a month off the path.</p>
-            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br>Chioma got the handbook.<br>Tunde is at checkout.<br>Blessing sent her receipt.</p>
-            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;10,000. If you can pay today, this is the door.</p>
+            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br><span class="exit-name"></span> got the handbook.<br><span class="exit-name"></span> is at checkout.<br><span class="exit-name"></span> just paid.</p>
+            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;10,000. Lock it in today.</p>
             <a href="https://selar.com/growthmarketinghandbook?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener" style="width:100%;margin-bottom:10px;">Get the Growth Handbook, &#8358;10,000</a>
             <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20buy%20the%20Growth%20Handbook%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" target="_blank" rel="noopener" style="display:block; text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:12px; text-decoration:underline;">Trouble paying? WhatsApp us</a>
             <button class="exit-modal__skip" id="exitSkip">Not today</button></div></div>
@@ -345,7 +345,7 @@
     document.addEventListener('visibilitychange',function(){isPageVisible=!document.hidden;if(document.hidden&&notifTimeout){clearTimeout(notifTimeout);notifEl.classList.remove('show');}else if(!document.hidden){notifEl.classList.remove('show');scheduleNext();}});
     var exitOverlay=document.getElementById('exitOverlay'),exitClose=document.getElementById('exitClose'),exitSkip=document.getElementById('exitSkip'),ctaClicked=false,exitShown=sessionStorage.getItem('mia_exit_shown');
     ['heroCtas','finalCtas'].forEach(function(id){var el=document.getElementById(id);if(el)el.addEventListener('click',function(e){if(e.target.closest('.btn'))ctaClicked=true;});});
-    function showExitPopup(){if(exitShown||ctaClicked)return;exitOverlay.classList.add('show');sessionStorage.setItem('mia_exit_shown','1');exitShown='1';}function closeExitPopup(){exitOverlay.classList.remove('show');}
+    function showExitPopup(){if(exitShown||ctaClicked)return;try{var _pool=(typeof CONFIG!=='undefined'&&CONFIG.namesFallback)?CONFIG.namesFallback.slice():['Chioma','Tunde','Blessing','Emeka','Aisha','Adaeze','Funmi','Chidi'];for(var _i=_pool.length-1;_i>0;_i--){var _j=Math.floor(Math.random()*(_i+1));var _t=_pool[_i];_pool[_i]=_pool[_j];_pool[_j]=_t;}var _slots=document.querySelectorAll('.exit-name');for(var _k=0;_k<_slots.length&&_k<_pool.length;_k++){_slots[_k].textContent=_pool[_k];}}catch(e){}exitOverlay.classList.add('show');sessionStorage.setItem('mia_exit_shown','1');exitShown='1';}function closeExitPopup(){exitOverlay.classList.remove('show');}
     document.addEventListener('mouseout',function(e){if(e.clientY<5&&e.relatedTarget==null)showExitPopup();});
     setTimeout(function(){showExitPopup();},45000);
     if(exitClose)exitClose.addEventListener('click',closeExitPopup);if(exitSkip)exitSkip.addEventListener('click',closeExitPopup);if(exitOverlay)exitOverlay.addEventListener('click',function(e){if(e.target===exitOverlay)closeExitPopup();});

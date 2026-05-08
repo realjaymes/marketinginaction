@@ -2055,8 +2055,8 @@
             <h3 class="exit-modal__title">Still missing the fastest path to a remote PMM role?</h3>
             <p class="exit-modal__text">Remote PMM roles pay $4,000 to $8,000 a month. That's &#8358;6 million to &#8358;12 million monthly, &#8358;72 million to &#8358;144 million a year.</p>
             <p class="exit-modal__text" style="margin-top:8px; margin-bottom:12px;">Every month you wait is a month not building what those roles screen for. 10 modules and a 100+ page handbook is the fastest path.</p>
-            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br>Chioma got the course.<br>Tunde is at checkout.<br>Blessing sent his receipt.</p>
-            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;15,000. If you can pay today, this is the door.</p>
+            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br><span class="exit-name"></span> got the course.<br><span class="exit-name"></span> is at checkout.<br><span class="exit-name"></span> just paid.</p>
+            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;15,000. Lock it in today.</p>
             <a href="https://selar.com/productmarketingcourse?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener" style="width:100%;margin-bottom:10px;">Get the PMM Course, &#8358;15,000</a>
             <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20buy%20the%20PMM%20Course%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" target="_blank" rel="noopener" style="display:block; text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:12px; text-decoration:underline;">Trouble paying? WhatsApp us</a>
             <button class="exit-modal__skip" id="exitSkip">Not today</button>
@@ -2254,6 +2254,17 @@
 
         function showExitPopup() {
             if (exitShown || ctaClicked) return;
+            try {
+                var _pool = (typeof CONFIG !== 'undefined' && CONFIG.namesFallback) ? CONFIG.namesFallback.slice() : ['Chioma','Tunde','Blessing','Emeka','Aisha','Adaeze','Funmi','Chidi'];
+                for (var _i = _pool.length - 1; _i > 0; _i--) {
+                    var _j = Math.floor(Math.random() * (_i + 1));
+                    var _t = _pool[_i]; _pool[_i] = _pool[_j]; _pool[_j] = _t;
+                }
+                var _slots = document.querySelectorAll('.exit-name');
+                for (var _k = 0; _k < _slots.length && _k < _pool.length; _k++) {
+                    _slots[_k].textContent = _pool[_k];
+                }
+            } catch(e) {}
             exitOverlay.classList.add('show');
             sessionStorage.setItem('mia_exit_shown', '1');
             exitShown = '1';
