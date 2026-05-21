@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="James Praise">
+    <meta name="color-scheme" content="light only">
+    <title>Book a Free Consultation | Marketing In Action</title>
+    <meta name="description" content="Tell us about your situation and goals, then pick a time. James reviews your context before the call so you walk out with a clear next step.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="canonical" href="https://marketinginaction.xyz/book/">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KRT2BT27');</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17909542714"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17909542714');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '660940561182168');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=660940561182168&ev=PageView&noscript=1"></noscript>
+
+    <!-- TikTok Pixel Code -->
+    <script>
+      !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=r+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(a,s)}}(window,document,"ttq");
+      ttq.load('D7831IRC77U97CC2V3KG');
+      ttq.page();
+    </script>
+
+    <style>
+        body {
+            background: var(--bg-page);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-header {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-surface);
+        }
+        .book-header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .book-header__logo {
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            letter-spacing: -0.01em;
+        }
+        .book-header__back {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .book-header__back:hover {
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+
+        .book-main {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 20px 80px;
+        }
+
+        .book-card {
+            background: var(--bg-surface);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 560px;
+            box-shadow: 0 20px 60px rgba(28, 20, 34, 0.10);
+            overflow: hidden;
+            animation: bookSlideUp 0.25s ease;
+        }
+        @keyframes bookSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .book-card__header {
+            padding: 22px 28px 0;
+        }
+        .book-card__step {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            background: var(--color-accent);
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+        .book-card__title {
+            font-size: 1.45rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin: 0 0 6px;
+            letter-spacing: -0.01em;
+        }
+        .book-card__sub {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .book-card__body {
+            padding: 22px 28px 28px;
+        }
+
+        .book-field {
+            margin-bottom: 18px;
+        }
+        .book-field__label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .book-field__hint {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin: 0 0 8px;
+        }
+        .book-field input[type="text"],
+        .book-field input[type="email"],
+        .book-field input[type="tel"],
+        .book-field textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-primary);
+            background: var(--bg-surface);
+            outline: none;
+            transition: border-color var(--ease);
+        }
+        .book-field textarea {
+            min-height: 84px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+        .book-field input:focus,
+        .book-field textarea:focus {
+            border-color: var(--color-accent);
+        }
+
+        .book-radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .book-radio {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color var(--ease), background-color var(--ease);
+        }
+        .book-radio:hover {
+            border-color: rgba(28, 20, 34, 0.28);
+        }
+        .book-radio input {
+            margin-top: 3px;
+            accent-color: var(--text-primary);
+        }
+        .book-radio--checked {
+            border-color: var(--color-accent);
+            background: rgba(241, 222, 113, 0.12);
+        }
+        .book-radio__label {
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            line-height: 1.35;
+        }
+
+        .book-other-input {
+            margin-top: 8px;
+            display: none;
+        }
+        .book-other-input.show {
+            display: block;
+        }
+
+        .book-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+        }
+        .book-btn {
+            flex: 1;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: none;
+            font-size: 0.98rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: opacity var(--ease), transform var(--ease);
+        }
+        .book-btn--primary {
+            background: var(--color-accent);
+            color: var(--text-primary);
+        }
+        .book-btn--primary:hover {
+            opacity: 0.9;
+        }
+        .book-btn--primary:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+        .book-btn--secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+        }
+        .book-btn--secondary:hover {
+            border-color: var(--text-primary);
+        }
+
+        .book-error {
+            background: rgba(241, 113, 113, 0.10);
+            border: 1px solid rgba(241, 113, 113, 0.35);
+            color: #b03a3a;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            display: none;
+        }
+        .book-error.show {
+            display: block;
+        }
+
+        .book-trust {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin: 14px 0 0;
+        }
+
+        .book-step {
+            display: none;
+        }
+        .book-step.active {
+            display: block;
+        }
+
+        @media (max-width: 520px) {
+            .book-main { padding: 24px 14px 60px; }
+            .book-card__header { padding: 20px 20px 0; }
+            .book-card__body { padding: 18px 20px 24px; }
+            .book-card__title { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="book-header">
+        <div class="container book-header__inner">
+            <a href="/" class="book-header__logo">Marketing In Action</a>
+            <a href="/" class="book-header__back">← Back to site</a>
+        </div>
+    </header>
+
+    <main class="book-main">
+        <div class="book-card" role="dialog" aria-labelledby="bookTitle">
+
+            <!-- STEP 1 -->
+            <section class="book-step active" id="step1">
+                <div class="book-card__header">
+                    <span class="book-card__step">Step 1 of 2</span>
+                    <h1 class="book-card__title" id="bookTitle">Tell me what brought you here</h1>
+                    <p class="book-card__sub">Two minutes of context now means the call goes straight to what matters.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step1Error">Please answer every question before continuing.</div>
+
+                    <form id="step1Form" onsubmit="goToStep2(event)" novalidate>
+
+                        <div class="book-field">
+                            <span class="book-field__label">Which best describes you?</span>
+                            <div class="book-radio-group" id="audienceGroup">
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="business-owner">
+                                    <span class="book-radio__label">I run a business and want to market it better</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="marketer">
+                                    <span class="book-radio__label">I work in marketing and want to grow my career</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="transitioning">
+                                    <span class="book-radio__label">I'm transitioning into marketing</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="other">
+                                    <span class="book-radio__label">Other</span>
+                                </label>
+                            </div>
+                            <div class="book-other-input" id="otherWrap">
+                                <input type="text" id="audienceOther" placeholder="Tell me in a few words" maxlength="120">
+                            </div>
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="challenge">What's your biggest challenge right now?</label>
+                            <textarea id="challenge" maxlength="800" placeholder="The thing keeping you stuck, the gap you can't close, the question you keep coming back to."></textarea>
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="goals">What are your goals for this meeting?</label>
+                            <textarea id="goals" maxlength="800" placeholder="What does a useful 30-minute call look like for you?"></textarea>
+                        </div>
+
+                        <div class="book-actions">
+                            <button type="submit" class="book-btn book-btn--primary">Continue →</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="book-step" id="step2">
+                <div class="book-card__header">
+                    <span class="book-card__step">Step 2 of 2</span>
+                    <h2 class="book-card__title">How can I reach you?</h2>
+                    <p class="book-card__sub">After this, you'll pick a time on my calendar.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step2Error">Please fill out every field before booking.</div>
+
+                    <form id="step2Form" onsubmit="submitBooking(event)" novalidate>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="name">Full name</label>
+                            <input type="text" id="name" autocomplete="name" placeholder="e.g. Adaeze Okonkwo">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="email">Email</label>
+                            <input type="email" id="email" autocomplete="email" placeholder="e.g. adaeze@gmail.com">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="phone">Phone number</label>
+                            <p class="book-field__hint">Nigerian or international — I'll WhatsApp you a reminder before the call.</p>
+                            <input type="tel" id="phone" autocomplete="tel" placeholder="e.g. 08012345678">
+                        </div>
+
+                        <div class="book-actions">
+                            <button type="button" class="book-btn book-btn--secondary" onclick="goToStep1()">← Back</button>
+                            <button type="submit" class="book-btn book-btn--primary" id="submitBtn">Book my call →</button>
+                        </div>
+                        <p class="book-trust">Takes you straight to my Google Calendar to pick a time.</p>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+    (function() {
+        var CALENDAR_URL = 'https://calendar.app.google/HZ9KVJw85E6C2cb19';
+        // Replace with the deployed Apps Script web app URL (Deploy → New deployment → Web app, "Anyone").
+        var SHEET_URL = 'https://script.google.com/macros/s/AKfycbzZgDd7MbOtl-iI4cb7qeSU3haBX7HRQF7fMLlfi8d3CGEFuJnhY-CAMFB9xxTTDsuY/exec';
+
+        function getUtm(name) {
+            try {
+                return new URLSearchParams(window.location.search).get(name) || '';
+            } catch(e) { return ''; }
+        }
+
+        var captured = { audience:'', audienceOther:'', challenge:'', goals:'' };
+
+        // Audience radio highlight + Other reveal
+        var radios = document.querySelectorAll('input[name="audience"]');
+        var otherWrap = document.getElementById('otherWrap');
+        var otherInput = document.getElementById('audienceOther');
+
+        function refreshRadioStyles() {
+            document.querySelectorAll('#audienceGroup .book-radio').forEach(function(el) {
+                var input = el.querySelector('input');
+                if (input.checked) el.classList.add('book-radio--checked');
+                else el.classList.remove('book-radio--checked');
+            });
+            var sel = document.querySelector('input[name="audience"]:checked');
+            if (sel && sel.value === 'other') otherWrap.classList.add('show');
+            else otherWrap.classList.remove('show');
+        }
+        radios.forEach(function(r) { r.addEventListener('change', refreshRadioStyles); });
+
+        // Step 1 validation + advance
+        window.goToStep2 = function(e) {
+            e.preventDefault();
+            var sel = document.querySelector('input[name="audience"]:checked');
+            var challenge = document.getElementById('challenge').value.trim();
+            var goals = document.getElementById('goals').value.trim();
+            var otherText = otherInput.value.trim();
+            var err = document.getElementById('step1Error');
+
+            if (!sel || !challenge || !goals || (sel.value === 'other' && !otherText)) {
+                err.classList.add('show');
+                err.scrollIntoView({ behavior:'smooth', block:'center' });
+                return;
+            }
+            err.classList.remove('show');
+
+            captured.audience = sel.value;
+            captured.audienceOther = sel.value === 'other' ? otherText : '';
+            captured.challenge = challenge;
+            captured.goals = goals;
+
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(function() {
+                var el = document.getElementById('name');
+                if (el) el.focus();
+            }, 150);
+        };
+
+        window.goToStep1 = function() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        function normalizePhone(raw) {
+            var p = (raw || '').replace(/\D/g, '');
+            if (!p) return '';
+            if (p.startsWith('234')) p = p.substring(3);
+            if (p.startsWith('0')) p = p.substring(1);
+            return '234' + p;
+        }
+        function isEmail(s) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+        }
+
+        // Step 2 submit
+        window.submitBooking = function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phoneRaw = document.getElementById('phone').value.trim();
+            var err = document.getElementById('step2Error');
+            var btn = document.getElementById('submitBtn');
+
+            if (!name || !email || !phoneRaw || !isEmail(email)) {
+                err.classList.add('show');
+                err.textContent = !isEmail(email)
+                    ? 'Double-check your email — it doesn\'t look quite right.'
+                    : 'Please fill out every field before booking.';
+                err.scrollIntoView({ behavior:'smooth', block:'center' });
+                return;
+            }
+            err.classList.remove('show');
+
+            var phone = normalizePhone(phoneRaw);
+
+            btn.disabled = true;
+            btn.textContent = 'Booking…';
+
+            var audienceLabels = {
+                'business-owner': 'I run a business and want to market it better',
+                'marketer':       'I work in marketing and want to grow my career',
+                'transitioning':  'I\'m transitioning into marketing',
+                'other':          'Other'
+            };
+
+            var payload = {
+                audienceType: audienceLabels[captured.audience] || captured.audience,
+                audienceOther: captured.audienceOther,
+                challenge: captured.challenge,
+                goals: captured.goals,
+                fullName: name,
+                email: email,
+                phone: phone,
+                pageUrl: window.location.href,
+                utmSource: getUtm('utm_source'),
+                utmMedium: getUtm('utm_medium'),
+                utmCampaign: getUtm('utm_campaign')
+            };
+
+            // Pixels
+            var eid = 'consult_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            try {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', { content_name: 'MIA Consultation Booking', content_category: 'consultation' }, { eventID: eid });
+                }
+            } catch(_) {}
+            try {
+                if (typeof ttq !== 'undefined') {
+                    ttq.track('SubmitForm', { content_id: 'consultation', content_name: 'MIA Consultation Booking' });
+                }
+            } catch(_) {}
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'consultation_form_submitted',
+                event_id: eid,
+                lead_email: email,
+                lead_name: name,
+                lead_phone: phone,
+                audience_type: payload.audienceType
+            });
+
+            // Sheet write — fire-and-forget, no-cors (matches existing prefill pattern)
+            try {
+                fetch(SHEET_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    keepalive: true,
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+            } catch(_) {}
+
+            // Hand off to calendar after a brief delay so pixel + sheet fire
+            setTimeout(function() {
+                window.location.href = CALENDAR_URL;
+            }, 600);
+        };
+    })();
+    </script>
+</body>
+</html>
