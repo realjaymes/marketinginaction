@@ -74,18 +74,56 @@
             justify-content: space-between;
         }
         .book-header__logo {
-            font-weight: 800;
-            font-size: 1.05rem;
-            color: var(--text-primary);
-            letter-spacing: -0.01em;
+            display: inline-flex;
+            align-items: center;
+            line-height: 0;
         }
-        .book-header__back {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-        }
-        .book-header__back:hover {
-            color: var(--text-primary);
+        .book-header__logo:hover {
             text-decoration: none;
+        }
+        .book-header__logo-img {
+            height: 28px;
+            width: auto;
+            display: block;
+        }
+        @media (max-width: 520px) {
+            .book-header__logo-img { height: 24px; }
+        }
+        .book-header__nav {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .book-header__divider {
+            width: 2px;
+            height: 18px;
+            background: var(--color-accent);
+            border-radius: 2px;
+        }
+        .book-header__link {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            padding: 6px 0;
+            border-bottom: 1.5px solid transparent;
+            transition: border-color var(--ease);
+        }
+        .book-header__link:hover {
+            text-decoration: none;
+            border-bottom-color: var(--color-accent);
+        }
+        @media (max-width: 520px) {
+            .book-header__inner {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            .book-header__nav {
+                gap: 18px;
+            }
+            .book-header__link {
+                font-size: 0.85rem;
+            }
         }
 
         .book-main {
@@ -299,8 +337,14 @@
 
     <header class="book-header">
         <div class="container book-header__inner">
-            <a href="/" class="book-header__logo">Marketing In Action</a>
-            <a href="/" class="book-header__back">← Back to site</a>
+            <a href="/" class="book-header__logo" aria-label="Marketing In Action — home">
+                <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="book-header__logo-img">
+            </a>
+            <nav class="book-header__nav">
+                <a href="/academy/sme/" class="book-header__link">Business Owners</a>
+                <span class="book-header__divider" aria-hidden="true"></span>
+                <a href="/academy/" class="book-header__link">Marketers</a>
+            </nav>
         </div>
     </header>
 
@@ -385,7 +429,7 @@
 
                         <div class="book-field">
                             <label class="book-field__label" for="phone">Phone number</label>
-                            <p class="book-field__hint">Nigerian or international — I'll WhatsApp you a reminder before the call.</p>
+                            <p class="book-field__hint">Nigerian or international format welcome.</p>
                             <input type="tel" id="phone" autocomplete="tel" placeholder="e.g. 08012345678">
                         </div>
 
