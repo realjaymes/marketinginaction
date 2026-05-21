@@ -88,6 +88,11 @@
             },
             {
                 "@type": "Question",
+                "name": "Why is the price discounted? Will it stay at this rate?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The current rate (₦150,000/month, ₦135,000/month on a 3-month commitment, ₦120,000/month on a 6-month commitment) is an early-bird price while we build case studies with the first cohort of business owners. The price increases by ₦50,000 every three months for new clients. Whatever rate you book at is locked for the length of your committed term, even when we raise prices for new clients during that period. A 3-month or 6-month commitment locks your rate in for longer. Renewals after your committed term are billed at whatever the current rate is at the time of renewal. The earlier you book, and the longer you commit, the more you save." }
+            },
+            {
+                "@type": "Question",
                 "name": "What happens after the engagement ends?",
                 "acceptedAnswer": { "@type": "Answer", "text": "You receive a complete playbook documenting everything we built across the focus areas chosen during your engagement: winning campaigns, top audiences, ad copy, email sequences, SEO content, automation flows, optimized pages, and any other systems we set up. This is yours to keep whether you continue with us or not." }
             },
@@ -109,12 +114,12 @@
             {
                 "@type": "Question",
                 "name": "Can I change the focus from month to month?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every month's focus is decided together based on what your business needs at that point. Month 1 covers the audit (Weeks 1-2) and the first focus area kickoff (Weeks 3-4), agreed with you. From Month 2 onward, each month is one major focus area chosen with you. The sequence is flexible." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every month's focus is decided together based on what your business needs at that point. Month 1 runs on a 4-week launch cadence: Week 1 access and info, Week 2 audit and locked plan, Week 3 build and launch, Week 4 daily optimization with your Day 30 scorecard and Month 1 report. From Month 2 onward, each month is one major focus area chosen with you. The sequence is flexible." }
             },
             {
                 "@type": "Question",
                 "name": "Why one focus area per month and not everything at the same time?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Because marketing that works needs depth, not divided attention. A team spread across multiple priorities in the same month delivers none of them at the level your business needs. Month 1 covers the audit (Weeks 1-2) and the first focus area launch (Weeks 3-4). From Month 2, each month is one major focus area, decided with you. By the end of the engagement, every priority area has had a month of real attention." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Because marketing that works needs depth, not divided attention. A team spread across multiple priorities in the same month delivers none of them at the level your business needs. Month 1 runs on a 4-week launch cadence: Week 1 access and info, Week 2 audit and locked plan, Week 3 build and launch, Week 4 daily optimization with your Day 30 scorecard and Month 1 report. From Month 2, each month is one major focus area, decided with you. By the end of the engagement, every priority area has had a month of real attention." }
             }
         ]
     }
@@ -263,6 +268,14 @@
         }
         .btn-whatsapp:hover {
             background: #20bd5a;
+            transform: translateY(-1px);
+        }
+        .btn-book {
+            background: var(--color-blue);
+            color: var(--primary-dark);
+        }
+        .btn-book:hover {
+            background: #5fb4e1;
             transform: translateY(-1px);
         }
         .btn-outline {
@@ -1525,14 +1538,14 @@
 
             <div class="hero__ctas" id="heroCtas">
                 <a href="#pricing" class="btn btn-accent">Get Started &mdash; &#8358;150,000/month</a>
-                <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20book%20consulting%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Trouble paying? WhatsApp us
+                <a href="https://marketinginaction.xyz/book/?utm_source=consulting-page&amp;utm_medium=cta&amp;utm_campaign=consulting-hero" class="btn btn-book" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Book a Free Consultation
                 </a>
             </div>
 
             <div class="hero__social-proof">
-                <span class="hero__proof-text">Only <strong><span class="spots-count">3</span> of 5 spots remaining</strong> &middot; Start now and your price stays the same even when it goes up</span>
+                <span class="hero__proof-text">Only <strong><span class="spots-count">3</span> of 5 spots remaining</strong> &middot; Start now and your rate is locked for your full term, even when prices go up</span>
             </div>
             <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:8px; font-size:0.8rem; color:rgba(255,255,255,0.45);">
                 <span>&#x1F512; Secure payment via Selar</span>
@@ -1659,10 +1672,10 @@
                 </div>
                 <div class="problem-card">
                     <div class="problem-card__icon">&#x1F4CA;</div>
-                    <div class="problem-card__text"><strong>An agency charging &#8358;200,000&ndash;&#8358;1,000,000/month.</strong> You never spoke to anyone running your campaigns. The reports were full of jargon. You still don't know what you paid for.</div>
+                    <div class="problem-card__text"><strong>An agency charging &#8358;1,000,000/month.</strong> You never spoke to anyone running your campaigns. The reports were full of jargon. You still don't know what you paid for.</div>
                 </div>
             </div>
-            <p class="problem-close">That is &#8358;2,000,000 to &#8358;3,000,000+ gone. And you still don't have a system that brings customers every month.</p>
+            <p class="problem-close">That is &#8358;3,000,000 to &#8358;5,000,000+ gone. And you still don't have a system that brings customers every month.</p>
         </div>
     </section>
 
@@ -1787,9 +1800,9 @@
             <p style="color:rgba(255,255,255,0.7); font-size:1rem; margin-bottom:16px;">Your competitors already have someone running their ads. <strong style="color:var(--accent);">Do you?</strong></p>
             <div style="display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
                 <a href="#pricing" class="btn btn-accent">See Pricing</a>
-                <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20book%20consulting%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Trouble paying? WhatsApp us
+                <a href="https://marketinginaction.xyz/book/?utm_source=consulting-page&amp;utm_medium=cta&amp;utm_campaign=consulting-midpage" class="btn btn-book" target="_blank" rel="noopener">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Book a Free Consultation
                 </a>
             </div>
         </div>
@@ -1966,8 +1979,8 @@
                 <div class="achievement-card">
                     <div class="achievement-card__badge">1&#xFE0F;&#x20E3;</div>
                     <div class="achievement-card__title">Month 1: Audit + First Launch</div>
-                    <div class="achievement-card__worth">Audit + Live in 4 Weeks</div>
-                    <div class="achievement-card__condition">Weeks 1-2: partner access, pixel checks, and a full audit of every channel. We deliver findings, baseline metrics, and the agreed priority sequence. Weeks 3-4: fix critical broken-things, build the first focus area, and launch the first campaigns.</div>
+                    <div class="achievement-card__worth">Live in 3 Weeks</div>
+                    <div class="achievement-card__condition">Week 1: partner access, pixel checks, asset transfer, discovery questionnaire. Week 2: audit delivered with findings, baseline metrics, locked budget, and the locked first focus area. Week 3: build the campaign and launch the first focus area. Week 4: daily optimization. Day 30 scorecard delivered alongside your Month 1 performance report.</div>
                 </div>
                 <div class="achievement-card">
                     <div class="achievement-card__badge">2&#xFE0F;&#x20E3;</div>
@@ -2114,11 +2127,11 @@
                 <p class="pricing__anchor-item">&#8358;150,000/month is less than <strong>one influencer post</strong> that disappears in 24 hours with no tracking and no refund. Less than <strong>one trade fair</strong> where you stand in the rain and pray. Less than what most businesses lose in a <strong>single quarter of boosted posts</strong>.</p>
             </div>
 
-            <!-- WhatsApp CTA -->
+            <!-- Book-a-call CTA -->
             <div style="text-align:center; margin-bottom:32px;">
-                <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20book%20consulting%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Trouble paying? WhatsApp us
+                <a href="https://marketinginaction.xyz/book/?utm_source=consulting-page&amp;utm_medium=cta&amp;utm_campaign=consulting-pricing-anchor" class="btn btn-book" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Still on the fence? Book a free call
                 </a>
             </div>
 
@@ -2129,7 +2142,7 @@
                     Influencer post (one-time, no tracking)
                 </div>
                 <div class="pricing__compare-item">
-                    <strong>&#8358;200K&ndash;&#8358;1M/mo</strong>
+                    <strong>&#8358;1M/mo</strong>
                     Agency retainer (reports you can't read)
                 </div>
                 <div class="pricing__compare-item pricing__compare-item--this">
@@ -2168,7 +2181,7 @@
                         <span class="faq-item__icon">+</span>
                     </button>
                     <div class="faq-item__a">
-                        <div class="faq-item__a-inner">There are no guarantees in marketing, and anyone who promises you a specific result before understanding your business, your product, or your market is not being honest with you. What we guarantee is this: deep, sequenced execution across whatever your business needs (ads, email, SEO, page optimization, automation, and more), transparent reporting so you see exactly where your money goes, and ongoing optimization every single week. We have 8+ years of experience across three continents and have contributed to millions of dollars in revenue for e-commerce, retail, tech, and service brands. That track record is the closest thing to a guarantee you will find. And if you commit for at least three months and your business has not seen a measurable improvement in leads, customers, or revenue after up to three months of engagement, we will refund your final month in full. You keep everything we built.</div>
+                        <div class="faq-item__a-inner">There are no guarantees in marketing, and anyone who promises you a specific result before understanding your business, your product, or your market is not being honest with you.<br><br>What we guarantee is this: deep, sequenced execution across whatever your business needs (ads, email, SEO, page optimization, automation, and more), transparent reporting so you see exactly where your money goes, and ongoing optimization every single week.<br><br>We have 8+ years of experience across three continents and have contributed to millions of dollars in revenue for e-commerce, retail, tech, and service brands. That track record is the closest thing to a guarantee you will find.<br><br>And if you commit for at least three months and your business has not seen a measurable improvement in leads, customers, or revenue after up to three months of engagement, we will refund your final month in full. You keep everything we built.</div>
                     </div>
                 </div>
                 <!-- FAQ 2 -->
@@ -2191,7 +2204,17 @@
                         <div class="faq-item__a-inner">You can start at one month (&#8358;150,000). We offer discounted rates for 3-month (&#8358;135,000/month) and 6-month (&#8358;120,000/month) commitments. Most clients see the clearest results by Month 3, which is also the minimum engagement length required for the money-back guarantee to apply. You are welcome to start month-to-month and upgrade later, but the refund clause only applies once you have completed up to three months of engagement.</div>
                     </div>
                 </div>
-                <!-- FAQ 4 -->
+                <!-- FAQ 4 — early-bird pricing -->
+                <div class="faq-item">
+                    <button class="faq-item__q">
+                        <span>Why is the price discounted? Will it stay at this rate?</span>
+                        <span class="faq-item__icon">+</span>
+                    </button>
+                    <div class="faq-item__a">
+                        <div class="faq-item__a-inner">The current rate (&#8358;150,000/month, &#8358;135,000/month on a 3-month commitment, &#8358;120,000/month on a 6-month commitment) is an early-bird price while we build case studies with the first cohort of business owners.<br><br>The price increases by &#8358;50,000 every three months for new clients. Whatever rate you book at is locked for the length of your committed term, even when we raise prices for new clients during that period. A 3-month or 6-month commitment locks your rate in for longer.<br><br>Renewals after your committed term are billed at whatever the current rate is at the time of renewal. The earlier you book, and the longer you commit, the more you save.</div>
+                    </div>
+                </div>
+                <!-- FAQ 5 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>What happens after the engagement ends?</span>
@@ -2201,7 +2224,7 @@
                         <div class="faq-item__a-inner">At the end of your engagement, you receive a complete playbook documenting everything we built across the focus areas chosen during your engagement: winning campaigns, top audiences, ad copy, email sequences, SEO content, automation flows, optimized pages, and any other systems we set up. This playbook is yours to keep, whether you continue with us or not. You can hand it to an internal team member, a new marketer, or continue managing the work yourself. Nothing we build disappears when you leave.</div>
                     </div>
                 </div>
-                <!-- FAQ 5 -->
+                <!-- FAQ 6 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>What kind of businesses do you work with?</span>
@@ -2211,7 +2234,7 @@
                         <div class="faq-item__a-inner">We work with Nigerian business owners who sell products or services, online or offline. Our clients include e-commerce sellers, retail businesses, service providers (salons, event planners, logistics, cleaning services, consultants), restaurants, beauty and fashion brands, and real estate agents. If you sell something and want more customers from online marketing, this is for you.</div>
                     </div>
                 </div>
-                <!-- FAQ 6 -->
+                <!-- FAQ 7 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>How is this different from hiring an agency?</span>
@@ -2221,7 +2244,7 @@
                         <div class="faq-item__a-inner">Most agencies give you a contract, a junior account manager, and monthly reports full of jargon. You never speak to the person actually running your campaigns, and you have no idea what is working or why. With us, you get direct WhatsApp access to James, bi-weekly strategy calls, and plain-language monthly reports. You know exactly what was spent, what it returned, and what we are doing next. We are a team of practitioners, not a reporting factory.</div>
                     </div>
                 </div>
-                <!-- FAQ 7 -->
+                <!-- FAQ 8 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>Do you handle email marketing, Google Ads, or SEO?</span>
@@ -2231,27 +2254,27 @@
                         <div class="faq-item__a-inner">Yes. The retainer covers whatever your business needs to grow online: ads (Meta, TikTok, Google), email marketing, SEO, page optimization, automation, and more. We sequence one major focus per month based on what will move your business furthest, so each gets real attention.</div>
                     </div>
                 </div>
-                <!-- FAQ 8 -->
+                <!-- FAQ 9 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>Can I change the focus from month to month?</span>
                         <span class="faq-item__icon">+</span>
                     </button>
                     <div class="faq-item__a">
-                        <div class="faq-item__a-inner">Yes. Every month's focus is decided together based on what your business needs at that point. Month 1 covers the audit (Weeks 1-2) and the first focus area kickoff (Weeks 3-4), agreed with you. From Month 2 onward, each month is one major focus area chosen with you. The sequence is flexible.</div>
+                        <div class="faq-item__a-inner">Yes. Every month's focus is decided together based on what your business needs at that point. Month 1 runs on a 4-week launch cadence: Week 1 access and info, Week 2 audit and locked plan, Week 3 build and launch, Week 4 daily optimization with your Day 30 scorecard and Month 1 report. From Month 2 onward, each month is one major focus area chosen with you. The sequence is flexible.</div>
                     </div>
                 </div>
-                <!-- FAQ 9 -->
+                <!-- FAQ 10 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>Why one focus area per month and not everything at the same time?</span>
                         <span class="faq-item__icon">+</span>
                     </button>
                     <div class="faq-item__a">
-                        <div class="faq-item__a-inner">Because marketing that works needs depth, not divided attention. A team spread across multiple priorities in the same month delivers none of them at the level your business needs. Month 1 covers the audit (Weeks 1-2) and the first focus area launch (Weeks 3-4). From Month 2, each month is one major focus area, decided with you. By the end of the engagement, every priority area has had a month of real attention.</div>
+                        <div class="faq-item__a-inner">Because marketing that works needs depth, not divided attention. A team spread across multiple priorities in the same month delivers none of them at the level your business needs. Month 1 runs on a 4-week launch cadence: Week 1 access and info, Week 2 audit and locked plan, Week 3 build and launch, Week 4 daily optimization with your Day 30 scorecard and Month 1 report. From Month 2, each month is one major focus area, decided with you. By the end of the engagement, every priority area has had a month of real attention.</div>
                     </div>
                 </div>
-                <!-- FAQ 10 -->
+                <!-- FAQ 11 -->
                 <div class="faq-item">
                     <button class="faq-item__q">
                         <span>What if I want to learn to do this myself?</span>
@@ -2272,9 +2295,9 @@
             <p class="final-cta__sub">The early bird price of &#8358;150,000/month won't last. It increases by &#8358;50,000 every three months. The longer you wait, the more you pay.</p>
             <div class="final-cta__buttons" id="finalCtas">
                 <a href="#pricing" class="btn btn-accent">Book Your Spot &mdash; &#8358;150,000/month</a>
-                <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20book%20consulting%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" class="btn btn-whatsapp" target="_blank" rel="noopener">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                    Trouble paying? WhatsApp us
+                <a href="https://marketinginaction.xyz/book/?utm_source=consulting-page&amp;utm_medium=cta&amp;utm_campaign=consulting-finalcta" class="btn btn-book" target="_blank" rel="noopener">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Book a Free Consultation
                 </a>
             </div>
             <p class="final-cta__trust">&#x1F512; Secure payment via Selar &middot; &#x1F6E1; If it doesn't work, you get your money back</p>
@@ -2326,10 +2349,10 @@
             <h3 class="exit-modal__title">Still wasting ad spend that doesn't convert?</h3>
             <p class="exit-modal__text">Boosting posts, paying influencers, praying. None of it is bringing the customers you need.</p>
             <p class="exit-modal__text" style="margin-top:8px; margin-bottom:12px;">If you make only 20 sales a day at &#8358;30,000 each, that's &#8358;600,000 a day, &#8358;18 million a month. We run the ads, optimize the pages, and set up the automations to get you there.</p>
-            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br><span class="exit-name"></span> started consulting.<br><span class="exit-name"></span> is at checkout.<br><span class="exit-name"></span> just paid.</p>
-            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;150,000/month. Lock it in today.</p>
-            <a href="https://selar.com/onlinemarketingconsulting?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener" style="width:100%;margin-bottom:10px;">Get Started, &#8358;150,000/month</a>
-            <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20book%20consulting%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" target="_blank" rel="noopener" style="display:block; text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:12px; text-decoration:underline;">Trouble paying? WhatsApp us</a>
+            <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br><span class="exit-name"></span> booked a call.<br><span class="exit-name"></span> is at checkout.<br><span class="exit-name"></span> just paid.</p>
+            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">Talk to us first or lock in today.</p>
+            <a href="https://marketinginaction.xyz/book/?utm_source=consulting-page&amp;utm_medium=cta&amp;utm_campaign=consulting-exitintent" class="btn btn-accent" target="_blank" rel="noopener" style="width:100%;margin-bottom:10px;">Book a Free Consultation</a>
+            <a href="https://selar.com/onlinemarketingconsulting?add_to_cart=1&email=&fullname=&mobile=" target="_blank" rel="noopener" style="display:block; text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:12px; text-decoration:underline;">Already decided? Get started &mdash; &#8358;150,000/month</a>
             <button class="exit-modal__skip" id="exitSkip">Not today</button>
         </div>
     </div>
