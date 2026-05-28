@@ -2,6 +2,3 @@
 /s/*  https://newsletter.marketinginaction.xyz/:splat  301!
 /academy/sme/account-recovery/*  /academy/sme/support/:splat  301!
 /academy/sme/account-recovery  /academy/sme/support/  301!
-# TEMP 2026-05-28: safety-net -> support during Meta fraud/deceptive-practices appeal on @jamestalksmarketing. 302 (not 301) so it reverts clean. DELETE these 2 lines once appeal resolves (~2026-05-30).
-/academy/sme/safety-net/*  /academy/sme/support/:splat  302!
-/academy/sme/safety-net  /academy/sme/support/  302!
