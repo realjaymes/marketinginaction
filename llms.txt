@@ -41,6 +41,7 @@ Courses, bootcamps, and resources for Nigerian marketers targeting remote USD ro
 ## Free Guides
 
 - [Claude Code for Marketers](https://marketinginaction.xyz/resources/claude-code-for-marketers/): Free guide for marketers to set up Claude Code, install marketing skills, and use AI for positioning, GTM strategy, landing pages, and more. No coding experience needed.
+- [The Paid Acquisition Playbook](https://marketinginaction.xyz/resources/paid-ads-playbook/): Free interactive playbook for paid acquisition across the major paid channels. Covers onboarding, tracking, strategy, structure, audiences, creative, budget, launch, optimization, reporting, and scaling. Includes checklists, calculators, naming generators, and copy-ready templates.
 
 ## Key Topics
 
