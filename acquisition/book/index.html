@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="James Praise">
+    <meta name="color-scheme" content="light only">
+    <title>Book a Strategy Call | MIA Acquisition</title>
+    <meta name="description" content="Tell me what brought you here, pick a time, and we'll figure out if working together makes sense.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="canonical" href="https://marketinginaction.xyz/acquisition/book/">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KRT2BT27');</script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17909542714"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17909542714');
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '660940561182168');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=660940561182168&ev=PageView&noscript=1"></noscript>
+
+    <!-- TikTok Pixel Code -->
+    <script>
+      !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=r+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(a,s)}}(window,document,"ttq");
+      ttq.load('D7831IRC77U97CC2V3KG');
+      ttq.page();
+    </script>
+
+    <style>
+        body {
+            background: var(--bg-page);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-header {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-surface);
+        }
+        .book-header__inner {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .book-header__logo {
+            display: inline-flex;
+            align-items: center;
+            line-height: 0;
+        }
+        .book-header__logo:hover {
+            text-decoration: none;
+        }
+        .book-header__logo-img {
+            height: 28px;
+            width: auto;
+            display: block;
+        }
+        @media (max-width: 520px) {
+            .book-header__logo-img { height: 24px; }
+        }
+
+        .book-main {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 40px 20px 80px;
+        }
+
+        .book-card {
+            background: var(--bg-surface);
+            border-radius: 16px;
+            width: 100%;
+            max-width: 560px;
+            box-shadow: 0 20px 60px rgba(28, 20, 34, 0.10);
+            overflow: hidden;
+            animation: bookSlideUp 0.25s ease;
+        }
+        @keyframes bookSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .book-card__header {
+            padding: 22px 28px 0;
+        }
+        .book-card__step {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-muted);
+            background: var(--color-accent);
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: 10px;
+        }
+        .book-card__title {
+            font-size: 1.45rem;
+            font-weight: 750;
+            color: var(--text-primary);
+            margin: 0 0 6px;
+            letter-spacing: -0.01em;
+        }
+        .book-card__sub {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .book-card__body {
+            padding: 22px 28px 28px;
+        }
+
+        .book-field {
+            margin-bottom: 18px;
+        }
+        .book-field__label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .book-field__hint {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin: 0 0 8px;
+        }
+        .book-field input[type="text"],
+        .book-field input[type="email"],
+        .book-field input[type="tel"],
+        .book-field input[type="url"],
+        .book-field textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-family: inherit;
+            color: var(--text-primary);
+            background: var(--bg-surface);
+            outline: none;
+            transition: border-color var(--ease);
+        }
+        .book-field textarea {
+            min-height: 84px;
+            resize: vertical;
+            line-height: 1.5;
+        }
+        .book-field input:focus,
+        .book-field textarea:focus {
+            border-color: var(--color-accent);
+        }
+
+        .book-radio-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .book-radio {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 12px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: border-color var(--ease), background-color var(--ease);
+        }
+        .book-radio:hover {
+            border-color: rgba(28, 20, 34, 0.28);
+        }
+        .book-radio input {
+            margin-top: 3px;
+            accent-color: var(--text-primary);
+        }
+        .book-radio--checked {
+            border-color: var(--color-accent);
+            background: rgba(241, 222, 113, 0.12);
+        }
+        .book-radio__label {
+            font-size: 0.92rem;
+            color: var(--text-primary);
+            line-height: 1.35;
+        }
+
+        .book-other-input {
+            margin-top: 8px;
+            display: none;
+        }
+        .book-other-input.show {
+            display: block;
+        }
+
+        .book-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 6px;
+        }
+        .book-btn {
+            flex: 1;
+            padding: 14px 16px;
+            border-radius: 10px;
+            border: none;
+            font-size: 0.98rem;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: opacity var(--ease), transform var(--ease);
+        }
+        .book-btn--primary {
+            background: var(--color-accent);
+            color: var(--text-primary);
+        }
+        .book-btn--primary:hover {
+            opacity: 0.9;
+        }
+        .book-btn--primary:disabled {
+            opacity: 0.55;
+            cursor: not-allowed;
+        }
+        .book-btn--secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1.5px solid var(--border);
+        }
+        .book-btn--secondary:hover {
+            border-color: var(--text-primary);
+        }
+
+        .book-error {
+            background: rgba(241, 113, 113, 0.10);
+            border: 1px solid rgba(241, 113, 113, 0.35);
+            color: #b03a3a;
+            padding: 10px 12px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 16px;
+            display: none;
+        }
+        .book-error.show {
+            display: block;
+        }
+
+        .book-trust {
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            text-align: center;
+            margin: 14px 0 0;
+        }
+
+        .book-step {
+            display: none;
+        }
+        .book-step.active {
+            display: block;
+        }
+
+        @media (max-width: 520px) {
+            .book-main { padding: 24px 14px 60px; }
+            .book-card__header { padding: 20px 20px 0; }
+            .book-card__body { padding: 18px 20px 24px; }
+            .book-card__title { font-size: 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="book-header">
+        <div class="container book-header__inner">
+            <a href="/acquisition/" class="book-header__logo" aria-label="MIA Acquisition — back to overview">
+                <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="book-header__logo-img">
+            </a>
+            <!-- No nav links. Intentional. /acquisition is a hidden funnel surface with no siblings worth offering as exit ramps. -->
+        </div>
+    </header>
+
+    <main class="book-main">
+        <div class="book-card" role="dialog" aria-labelledby="bookTitle">
+
+            <!-- STEP 1 -->
+            <section class="book-step active" id="step1">
+                <div class="book-card__header">
+                    <span class="book-card__step">Step 1 of 2</span>
+                    <h1 class="book-card__title" id="bookTitle">Tell me what brought you here</h1>
+                    <p class="book-card__sub">Two minutes of context now means the call goes straight to what matters.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step1Error">Please answer every required question before continuing.</div>
+
+                    <form id="step1Form" onsubmit="goToStep2(event)" novalidate>
+
+                        <div class="book-field">
+                            <span class="book-field__label">Which best describes you?</span>
+                            <div class="book-radio-group" id="audienceGroup">
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="local-service">
+                                    <span class="book-radio__label">I run a local service business (restaurants, spas, gyms, clinics, real estate, etc.)</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="ecom">
+                                    <span class="book-radio__label">I run an ecommerce or D2C brand (clothing, beauty, food, accessories, etc.)</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="coach-creator">
+                                    <span class="book-radio__label">I'm a coach, consultant, course creator, or agency owner</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="audience" value="other">
+                                    <span class="book-radio__label">Other</span>
+                                </label>
+                            </div>
+                            <div class="book-other-input" id="otherWrap">
+                                <input type="text" id="audienceOther" placeholder="Tell me in a few words" maxlength="120">
+                            </div>
+                        </div>
+
+                        <div class="book-field">
+                            <span class="book-field__label">Approximate monthly revenue <span style="font-weight:400;color:var(--text-muted);font-size:0.78rem;">(optional)</span></span>
+                            <div class="book-radio-group" id="revenueGroup">
+                                <label class="book-radio">
+                                    <input type="radio" name="revenue" value="under-5k">
+                                    <span class="book-radio__label">Under $5K</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="revenue" value="5k-15k">
+                                    <span class="book-radio__label">$5K – $15K</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="revenue" value="15k-50k">
+                                    <span class="book-radio__label">$15K – $50K</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="revenue" value="50k-150k">
+                                    <span class="book-radio__label">$50K – $150K</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="revenue" value="150k-plus">
+                                    <span class="book-radio__label">$150K+</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="revenue" value="prefer-not">
+                                    <span class="book-radio__label">Prefer not to share</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="book-field">
+                            <span class="book-field__label">Are you running paid ads currently?</span>
+                            <div class="book-radio-group" id="adsGroup">
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="not-running">
+                                    <span class="book-radio__label">Not running ads</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="running-under-500">
+                                    <span class="book-radio__label">Running ads, under $500/mo</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="running-500-1500">
+                                    <span class="book-radio__label">Running ads, $500 – $1.5K/mo</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="running-1500-5k">
+                                    <span class="book-radio__label">Running ads, $1.5K – $5K/mo</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="running-5k-15k">
+                                    <span class="book-radio__label">Running ads, $5K – $15K/mo</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="running-15k-plus">
+                                    <span class="book-radio__label">Running ads, $15K+/mo</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="ads" value="used-to-stopped">
+                                    <span class="book-radio__label">Used to run ads, stopped</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="challenge">What's your biggest challenge right now?</label>
+                            <textarea id="challenge" maxlength="800" placeholder="The lead-gen gap you can't close, the channel that stopped working, the customer pipeline that won't scale."></textarea>
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="goals">What are your goals for this meeting?</label>
+                            <textarea id="goals" maxlength="800" placeholder="What does a useful 30-minute call look like for you?"></textarea>
+                        </div>
+
+                        <div class="book-actions">
+                            <button type="submit" class="book-btn book-btn--primary">Continue →</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- STEP 2 -->
+            <section class="book-step" id="step2">
+                <div class="book-card__header">
+                    <span class="book-card__step">Step 2 of 2</span>
+                    <h2 class="book-card__title">How can I reach you?</h2>
+                    <p class="book-card__sub">After this, you'll pick a time on my calendar.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step2Error">Please fill out every field before booking.</div>
+
+                    <form id="step2Form" onsubmit="submitBooking(event)" novalidate>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="name">Full name</label>
+                            <input type="text" id="name" autocomplete="name" placeholder="e.g. Sarah Mitchell">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="email">Email</label>
+                            <input type="email" id="email" autocomplete="email" placeholder="e.g. sarah@yourbusiness.com">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="phone">Phone number</label>
+                            <p class="book-field__hint">International format welcome.</p>
+                            <input type="tel" id="phone" autocomplete="tel" placeholder="e.g. +1 555 123 4567">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="website">Website URL</label>
+                            <input type="url" id="website" autocomplete="url" placeholder="yourbusiness.com (or 'no website yet')">
+                        </div>
+
+                        <div class="book-actions">
+                            <button type="button" class="book-btn book-btn--secondary" onclick="goToStep1()">← Back</button>
+                            <button type="submit" class="book-btn book-btn--primary" id="submitBtn">Book my call →</button>
+                        </div>
+                        <p class="book-trust">Takes you straight to my Google Calendar to pick a time.</p>
+                    </form>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script>
+    (function() {
+        var CALENDAR_URL = 'https://calendar.app.google/HNk2xuhKLamQvKaQ9';
+        var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwDncP_WEi4nLgIo9-hVQGy2JV58_I9WlHYkPxY3zoPDh1wrQ2PAKEY_sm1CoiD9VUU/exec';
+
+        function getUtm(name) {
+            try {
+                return new URLSearchParams(window.location.search).get(name) || '';
+            } catch(e) { return ''; }
+        }
+
+        var captured = {
+            audience: '', audienceOther: '',
+            revenue: '', ads: '',
+            challenge: '', goals: ''
+        };
+
+        // Radio highlight + Other reveal for the audience group
+        function refreshRadioStyles(groupId, otherWrapId) {
+            document.querySelectorAll('#' + groupId + ' .book-radio').forEach(function(el) {
+                var input = el.querySelector('input');
+                if (input.checked) el.classList.add('book-radio--checked');
+                else el.classList.remove('book-radio--checked');
+            });
+            if (otherWrapId) {
+                var sel = document.querySelector('#' + groupId + ' input:checked');
+                var wrap = document.getElementById(otherWrapId);
+                if (sel && sel.value === 'other') wrap.classList.add('show');
+                else if (wrap) wrap.classList.remove('show');
+            }
+        }
+
+        // Wire all three radio groups
+        document.querySelectorAll('input[name="audience"]').forEach(function(r) {
+            r.addEventListener('change', function() { refreshRadioStyles('audienceGroup', 'otherWrap'); });
+        });
+        document.querySelectorAll('input[name="revenue"]').forEach(function(r) {
+            r.addEventListener('change', function() { refreshRadioStyles('revenueGroup', null); });
+        });
+        document.querySelectorAll('input[name="ads"]').forEach(function(r) {
+            r.addEventListener('change', function() { refreshRadioStyles('adsGroup', null); });
+        });
+
+        // Step 1 validation + advance
+        window.goToStep2 = function(e) {
+            e.preventDefault();
+            var audienceSel = document.querySelector('input[name="audience"]:checked');
+            var adsSel = document.querySelector('input[name="ads"]:checked');
+            var revenueSel = document.querySelector('input[name="revenue"]:checked'); // optional
+            var challenge = document.getElementById('challenge').value.trim();
+            var goals = document.getElementById('goals').value.trim();
+            var otherText = document.getElementById('audienceOther').value.trim();
+            var err = document.getElementById('step1Error');
+
+            if (!audienceSel || !adsSel || !challenge || !goals || (audienceSel.value === 'other' && !otherText)) {
+                err.classList.add('show');
+                err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+            err.classList.remove('show');
+
+            captured.audience = audienceSel.value;
+            captured.audienceOther = audienceSel.value === 'other' ? otherText : '';
+            captured.revenue = revenueSel ? revenueSel.value : '';
+            captured.ads = adsSel.value;
+            captured.challenge = challenge;
+            captured.goals = goals;
+
+            document.getElementById('step1').classList.remove('active');
+            document.getElementById('step2').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            setTimeout(function() {
+                var el = document.getElementById('name');
+                if (el) el.focus();
+            }, 150);
+        };
+
+        window.goToStep1 = function() {
+            document.getElementById('step2').classList.remove('active');
+            document.getElementById('step1').classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+
+        function isEmail(s) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
+        }
+
+        function normalizePhoneIntl(raw) {
+            // International phone capture: keep digits + optional leading +, strip everything else
+            if (!raw) return '';
+            var hasPlus = raw.trim().charAt(0) === '+';
+            var digits = raw.replace(/\D/g, '');
+            return (hasPlus ? '+' : '') + digits;
+        }
+
+        // Step 2 submit
+        window.submitBooking = function(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            var phoneRaw = document.getElementById('phone').value.trim();
+            var website = document.getElementById('website').value.trim();
+            var err = document.getElementById('step2Error');
+            var btn = document.getElementById('submitBtn');
+
+            if (!name || !email || !phoneRaw || !website || !isEmail(email)) {
+                err.classList.add('show');
+                err.textContent = !isEmail(email)
+                    ? 'Double-check your email — it doesn\'t look quite right.'
+                    : 'Please fill out every field before booking.';
+                err.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                return;
+            }
+            err.classList.remove('show');
+
+            var phone = normalizePhoneIntl(phoneRaw);
+
+            btn.disabled = true;
+            btn.textContent = 'Booking…';
+
+            var audienceLabels = {
+                'local-service':  'Local service business',
+                'ecom':           'Ecommerce / D2C brand',
+                'coach-creator':  'Coach, consultant, course creator, or agency',
+                'other':          'Other'
+            };
+
+            var revenueLabels = {
+                'under-5k':    'Under $5K',
+                '5k-15k':      '$5K – $15K',
+                '15k-50k':     '$15K – $50K',
+                '50k-150k':    '$50K – $150K',
+                '150k-plus':   '$150K+',
+                'prefer-not':  'Prefer not to share'
+            };
+
+            var adsLabels = {
+                'not-running':         'Not running ads',
+                'running-under-500':   'Running ads, under $500/mo',
+                'running-500-1500':    'Running ads, $500 – $1.5K/mo',
+                'running-1500-5k':     'Running ads, $1.5K – $5K/mo',
+                'running-5k-15k':      'Running ads, $5K – $15K/mo',
+                'running-15k-plus':    'Running ads, $15K+/mo',
+                'used-to-stopped':     'Used to run ads, stopped'
+            };
+
+            var payload = {
+                audienceType:   audienceLabels[captured.audience] || captured.audience,
+                audienceOther:  captured.audienceOther,
+                monthlyRevenue: revenueLabels[captured.revenue] || captured.revenue,
+                adStatus:       adsLabels[captured.ads] || captured.ads,
+                challenge:      captured.challenge,
+                goals:          captured.goals,
+                fullName:       name,
+                email:          email,
+                phone:          phone,
+                websiteUrl:     website,
+                pageUrl:        window.location.href,
+                utmSource:      getUtm('utm_source'),
+                utmMedium:      getUtm('utm_medium'),
+                utmCampaign:    getUtm('utm_campaign')
+            };
+
+            // Pixels
+            var eid = 'acq_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            try {
+                if (typeof fbq === 'function') {
+                    fbq('track', 'Lead', { content_name: 'MIA Acquisition Booking', content_category: 'acquisition' }, { eventID: eid });
+                }
+            } catch(_) {}
+            try {
+                if (typeof ttq !== 'undefined') {
+                    ttq.track('SubmitForm', { content_id: 'acquisition', content_name: 'MIA Acquisition Booking' });
+                }
+            } catch(_) {}
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                event: 'acquisition_form_submitted',
+                event_id: eid,
+                lead_email: email,
+                lead_name: name,
+                lead_phone: phone,
+                audience_type: payload.audienceType,
+                monthly_revenue: payload.monthlyRevenue,
+                ad_status: payload.adStatus
+            });
+
+            // Sheet write — fire-and-forget, no-cors
+            try {
+                fetch(SHEET_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    keepalive: true,
+                    headers: { 'Content-Type': 'text/plain' },
+                    body: JSON.stringify(payload)
+                });
+            } catch(_) {}
+
+            // Hand off to calendar after a brief delay so pixel + sheet fire
+            setTimeout(function() {
+                window.location.href = CALENDAR_URL;
+            }, 600);
+        };
+    })();
+    </script>
+</body>
+</html>

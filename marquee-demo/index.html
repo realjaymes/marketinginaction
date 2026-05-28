@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquee Style Options | MIA Demo</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/styles.css">
+
+    <style>
+        body {
+            background: var(--bg-page);
+            padding: 40px 0 80px;
+        }
+
+        .demo-head {
+            max-width: 880px;
+            margin: 0 auto 48px;
+            padding: 0 20px;
+        }
+        .demo-head h1 {
+            margin: 0 0 12px;
+            font-size: clamp(24px, 3.2vw, 34px);
+        }
+        .demo-head p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 16px;
+            line-height: 1.55;
+        }
+
+        .demo-option {
+            margin-bottom: 56px;
+        }
+        .demo-option__label-row {
+            max-width: 1100px;
+            margin: 0 auto 14px;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .demo-option__label {
+            font-weight: 800;
+            font-size: 18px;
+            color: var(--text-primary);
+        }
+        .demo-option__tag {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+        .demo-option__notes {
+            max-width: 1100px;
+            margin: 14px auto 0;
+            padding: 0 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+            line-height: 1.65;
+        }
+
+        /* Shared marquee skeleton — copied from the global .consulting-marquee so each demo can be styled independently */
+        .demo-mq {
+            width: min(1100px, 92%);
+            margin: 0 auto;
+            border-radius: var(--radius-lg);
+            padding: 14px 0;
+            overflow: hidden;
+            box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+        }
+        .demo-mq__track {
+            display: flex;
+            gap: 22px;
+            align-items: center;
+            width: max-content;
+            padding-left: 18px;
+            animation: demo-marquee 28s linear infinite;
+        }
+        .demo-mq__track span {
+            white-space: nowrap;
+            font-weight: 750;
+            font-size: 14px;
+            padding: 6px 12px;
+            border-radius: 999px;
+        }
+        @keyframes demo-marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .demo-mq__track { animation: none; }
+        }
+
+        /* ============== Option 0: CURRENT (baseline) ============== */
+        .demo-mq--current {
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.10);
+        }
+        .demo-mq--current .demo-mq__track span {
+            color: rgba(28, 20, 34, 0.68);
+            border: 1px solid rgba(28, 20, 34, 0.10);
+            background: rgba(241, 222, 113, 0.14);
+        }
+
+        /* ============== Option A: STRONGER YELLOW CHIPS ============== */
+        .demo-mq--option-a {
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.10);
+        }
+        .demo-mq--option-a .demo-mq__track span {
+            color: rgba(28, 20, 34, 0.85);
+            border: 1px solid rgba(28, 20, 34, 0.18);
+            background: rgba(241, 222, 113, 0.55);
+        }
+
+        /* ============== Option B: DARK BAND, LIGHT PILLS ============== */
+        .demo-mq--option-b {
+            background: #1c1422;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .demo-mq--option-b .demo-mq__track span {
+            color: rgba(247, 244, 250, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        /* ============== Option C: CLEAN MONOCHROME ============== */
+        .demo-mq--option-c {
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.10);
+        }
+        .demo-mq--option-c .demo-mq__track span {
+            color: rgba(28, 20, 34, 0.75);
+            border: 1px solid rgba(28, 20, 34, 0.14);
+            background: transparent;
+        }
+
+        /* ============== Option D: DARK PILLS WITH YELLOW TEXT (on light bg) ============== */
+        .demo-mq--option-d {
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.10);
+        }
+        .demo-mq--option-d .demo-mq__track span {
+            color: #f1de71;
+            background: #1c1422;
+            border: 1px solid #1c1422;
+        }
+
+        /* ============== Option E: YELLOW BAND WITH DARK PILLS ============== */
+        .demo-mq--option-e {
+            background: rgba(241, 222, 113, 0.65);
+            border: 1px solid rgba(28, 20, 34, 0.12);
+        }
+        .demo-mq--option-e .demo-mq__track span {
+            color: rgba(28, 20, 34, 0.92);
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.14);
+        }
+
+        /* ============== Option F: NO PILLS — CLEAN TEXT ONLY ============== */
+        .demo-mq--option-f {
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.10);
+        }
+        .demo-mq--option-f .demo-mq__track span {
+            color: rgba(28, 20, 34, 0.78);
+            background: transparent;
+            border: none;
+            padding: 6px 0;
+            position: relative;
+        }
+        .demo-mq--option-f .demo-mq__track span:not(:last-child)::after {
+            content: "·";
+            position: absolute;
+            right: -16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: rgba(28, 20, 34, 0.30);
+            font-weight: 900;
+            font-size: 18px;
+        }
+
+        /* ============== Option G: GRADIENT-FADED EDGES, PILL CHIPS ============== */
+        .demo-mq--option-g {
+            background: #fff;
+            border: 1px solid rgba(28, 20, 34, 0.10);
+            position: relative;
+        }
+        .demo-mq--option-g::before,
+        .demo-mq--option-g::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .demo-mq--option-g::before {
+            left: 0;
+            background: linear-gradient(to right, #fff 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .demo-mq--option-g::after {
+            right: 0;
+            background: linear-gradient(to left, #fff 0%, rgba(255, 255, 255, 0) 100%);
+        }
+        .demo-mq--option-g .demo-mq__track span {
+            color: rgba(28, 20, 34, 0.85);
+            border: 1px solid rgba(28, 20, 34, 0.18);
+            background: rgba(241, 222, 113, 0.45);
+        }
+
+        .demo-pick-row {
+            max-width: 880px;
+            margin: 60px auto 0;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            text-align: center;
+        }
+        .demo-pick-row p {
+            margin: 0;
+            font-size: 14px;
+            color: var(--text-muted);
+            line-height: 1.55;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="demo-head">
+        <h1>Logo Marquee — Style Options</h1>
+        <p>Same logo set in every option. Live animation. Same width container. Tell me which one to apply to both <code>/consulting</code> and <code>/acquisition</code>.</p>
+    </div>
+
+    <!-- Option 0: CURRENT -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option 0 — Current (baseline)</span>
+            <span class="demo-option__tag">Pale yellow tint · 14% opacity</span>
+        </div>
+        <div class="demo-mq demo-mq--current">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #fff · pill bg: rgba(241,222,113, 0.14) · pill border: rgba(28,20,34, 0.10) · text: rgba(28,20,34, 0.68)</p>
+    </div>
+
+    <!-- Option A: STRONGER YELLOW CHIPS -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option A — Stronger MIA yellow chips</span>
+            <span class="demo-option__tag">Yellow 55% · stronger border</span>
+        </div>
+        <div class="demo-mq demo-mq--option-a">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #fff · pill bg: rgba(241,222,113, 0.55) · pill border: rgba(28,20,34, 0.18) · text: rgba(28,20,34, 0.85)</p>
+    </div>
+
+    <!-- Option B: DARK BAND, LIGHT PILLS -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option B — Dark band, light pills</span>
+            <span class="demo-option__tag">Premium · matches hero band</span>
+        </div>
+        <div class="demo-mq demo-mq--option-b">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #1c1422 · pill bg: rgba(255,255,255, 0.06) · pill border: rgba(255,255,255, 0.18) · text: rgba(247,244,250, 0.92)</p>
+    </div>
+
+    <!-- Option C: CLEAN MONOCHROME -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option C — Clean monochrome (no fill)</span>
+            <span class="demo-option__tag">Stripe / Linear / Vercel aesthetic</span>
+        </div>
+        <div class="demo-mq demo-mq--option-c">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #fff · pill bg: transparent · pill border: rgba(28,20,34, 0.14) · text: rgba(28,20,34, 0.75)</p>
+    </div>
+
+    <!-- Option D: DARK PILLS WITH YELLOW TEXT -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option D — Dark pills with yellow text (on light bg)</span>
+            <span class="demo-option__tag">Strong brand · may feel heavy</span>
+        </div>
+        <div class="demo-mq demo-mq--option-d">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #fff · pill bg: #1c1422 · text: #f1de71 · no border</p>
+    </div>
+
+    <!-- Option E: YELLOW BAND WITH WHITE PILLS -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option E — Yellow band with white pills</span>
+            <span class="demo-option__tag">Brand-forward · cheerful</span>
+        </div>
+        <div class="demo-mq demo-mq--option-e">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: rgba(241,222,113, 0.65) · pill bg: #fff · pill border: rgba(28,20,34, 0.14) · text: rgba(28,20,34, 0.92)</p>
+    </div>
+
+    <!-- Option F: NO PILLS — CLEAN TEXT ONLY -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option F — No pills, just text with dot separators</span>
+            <span class="demo-option__tag">Minimal · zero visual chrome</span>
+        </div>
+        <div class="demo-mq demo-mq--option-f">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #fff · no pill bg, no border · text: rgba(28,20,34, 0.78) · dot separators</p>
+    </div>
+
+    <!-- Option G: GRADIENT-FADED EDGES + YELLOW CHIPS -->
+    <div class="demo-option">
+        <div class="demo-option__label-row">
+            <span class="demo-option__label">Option G — Faded edges + medium-yellow chips</span>
+            <span class="demo-option__tag">Modern · edge gradient mask</span>
+        </div>
+        <div class="demo-mq demo-mq--option-g">
+            <div class="demo-mq__track">
+                <span>Hank Robotics</span><span>Komfot Health</span><span>FunnelEnvy</span><span>Reform</span><span>Distrobird</span><span>Bujeti</span><span>CIL</span><span>Bento</span><span>Utiva</span><span>Jumia</span><span>Startupbootcamp Afritech</span><span>Y Combinator</span><span>PAADC</span>
+                <span aria-hidden="true">Hank Robotics</span><span aria-hidden="true">Komfot Health</span><span aria-hidden="true">FunnelEnvy</span><span aria-hidden="true">Reform</span><span aria-hidden="true">Distrobird</span><span aria-hidden="true">Bujeti</span><span aria-hidden="true">CIL</span><span aria-hidden="true">Bento</span><span aria-hidden="true">Utiva</span><span aria-hidden="true">Jumia</span><span aria-hidden="true">Startupbootcamp Afritech</span><span aria-hidden="true">Y Combinator</span><span aria-hidden="true">PAADC</span>
+            </div>
+        </div>
+        <p class="demo-option__notes">bg: #fff with fade-in/out edges · pill bg: rgba(241,222,113, 0.45) · pill border: rgba(28,20,34, 0.18) · text: rgba(28,20,34, 0.85)</p>
+    </div>
+
+    <div class="demo-pick-row">
+        <p>Pick your favorite by name (e.g., "go with Option B") and I'll apply it to the live <code>/styles.css</code> so both <code>/consulting</code> and <code>/acquisition</code> update automatically. Mix-and-match welcome (e.g., "Option B but with brighter pills" or "Option G but on dark bg").</p>
+    </div>
+
+</body>
+</html>
