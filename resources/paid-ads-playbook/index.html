@@ -82,7 +82,7 @@
     "description": "The exact operating system we use to run paid acquisition for clients. From onboarding through scaling, across the major paid channels.",
     "image": "https://marketinginaction.xyz/og-image.png",
     "datePublished": "2026-05-28",
-    "dateModified": "2026-05-28",
+    "dateModified": "2026-06-01",
     "author": {
       "@type": "Person",
       "@id": "https://marketinginaction.xyz/#james",
@@ -1060,6 +1060,12 @@
       </button>
       <button class="platform-btn" data-platform-btn="snapchat" onclick="switchPlatform('snapchat')">
         <span class="dot" style="background:#fffc00;border:2px solid #1c1422"></span> Snapchat
+      </button>
+      <button class="platform-btn" data-platform-btn="x" onclick="switchPlatform('x')">
+        <span class="dot" style="background:#000000"></span> X
+      </button>
+      <button class="platform-btn" data-platform-btn="chatgpt" onclick="switchPlatform('chatgpt')">
+        <span class="dot" style="background:#10A37F"></span> ChatGPT
       </button>
     </div>
 
@@ -2863,7 +2869,9 @@ Key priorities:
       tiktok: '#fe2c55',
       google: '#4285f4',
       linkedin: '#0a66c2',
-      snapchat: '#fffc00'
+      snapchat: '#fffc00',
+      x: '#000000',
+      chatgpt: '#10A37F'
     };
 
     const PLATFORM_LABELS = {
@@ -2871,7 +2879,9 @@ Key priorities:
       tiktok: { adset: 'Ad Group' },
       google: { adset: 'Ad Group' },
       linkedin: { adset: 'Campaign' },
-      snapchat: { adset: 'Ad Set' }
+      snapchat: { adset: 'Ad Set' },
+      x: { adset: 'Ad Group' },
+      chatgpt: { adset: 'Ad Group' }
     };
 
     /* ========== INIT ========== */
@@ -2888,14 +2898,17 @@ Key priorities:
       document.documentElement.style.setProperty('--accent', PLATFORM_COLORS[platform]);
 
       const lightColors = {
-        meta: '#e7f3ff', tiktok: '#ffe8ec', google: '#e8f0fe', linkedin: '#e1f0ff', snapchat: '#fffde0'
+        meta: '#e7f3ff', tiktok: '#ffe8ec', google: '#e8f0fe', linkedin: '#e1f0ff', snapchat: '#fffde0',
+        x: '#1a1a1a', chatgpt: '#e6f7f0'
       };
       const bgColors = {
-        meta: '#f0f7ff', tiktok: '#fff5f7', google: '#f1f5fe', linkedin: '#edf5ff', snapchat: '#fffef0'
+        meta: '#f0f7ff', tiktok: '#fff5f7', google: '#f1f5fe', linkedin: '#edf5ff', snapchat: '#fffef0',
+        x: '#0d0d0d', chatgpt: '#eef9f3'
       };
       // Text color paired with --accent. Snapchat's near-white brand yellow needs black; the other platforms need white.
       const textColors = {
-        meta: '#fff', tiktok: '#fff', google: '#fff', linkedin: '#fff', snapchat: '#1c1422'
+        meta: '#fff', tiktok: '#fff', google: '#fff', linkedin: '#fff', snapchat: '#1c1422',
+        x: '#fff', chatgpt: '#fff'
       };
       document.documentElement.style.setProperty('--accent-light', lightColors[platform]);
       document.documentElement.style.setProperty('--accent-bg', bgColors[platform]);
@@ -2904,8 +2917,27 @@ Key priorities:
       document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
       document.querySelector(`[data-platform-btn="${platform}"]`).classList.add('active');
 
+      // Clear all platform-visible classes, then set them for the matching platform.
+      // Fallback: if a sibling group has no element matching the current platform, show the meta variant.
+      // This lets new platforms (X, ChatGPT) reuse Meta's content for blocks where no platform-specific override exists.
       document.querySelectorAll('[data-platform]').forEach(el => {
-        el.classList.toggle('platform-visible', el.dataset.platform === platform);
+        el.classList.remove('platform-visible');
+      });
+      document.querySelectorAll(`[data-platform="${platform}"]`).forEach(el => {
+        el.classList.add('platform-visible');
+      });
+      const groups = new Map();
+      document.querySelectorAll('[data-platform]').forEach(el => {
+        const parent = el.parentNode;
+        if (!groups.has(parent)) groups.set(parent, []);
+        groups.get(parent).push(el);
+      });
+      groups.forEach((children) => {
+        const hasMatch = children.some(child => child.dataset.platform === platform);
+        if (!hasMatch) {
+          const metaChild = children.find(child => child.dataset.platform === 'meta');
+          if (metaChild) metaChild.classList.add('platform-visible');
+        }
       });
 
       // Update naming generator label
