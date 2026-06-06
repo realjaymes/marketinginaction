@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="James Praise">
     <meta name="color-scheme" content="light only">
-    <title>Book a Free Consultation | Marketing In Action</title>
-    <meta name="description" content="Tell us about your situation and goals, then pick a time. James reviews your context before the call so you walk out with a clear next step.">
+    <title>Get Started | Marketing In Action</title>
+    <meta name="description" content="Answer a couple of quick questions and we'll point you to the right MIA program, or book a free consultation if done-for-you marketing is your fit.">
     <meta name="robots" content="noindex, nofollow">
 
     <link rel="canonical" href="https://marketinginaction.xyz/book/">
@@ -317,6 +317,22 @@
             margin: 14px 0 0;
         }
 
+        a.book-btn {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        a.book-btn:hover {
+            text-decoration: none;
+        }
+        #recBody {
+            font-size: 0.98rem;
+            color: var(--text-primary);
+            line-height: 1.55;
+            margin: 4px 0 22px;
+        }
+
         .book-step {
             display: none;
         }
@@ -351,53 +367,38 @@
     <main class="book-main">
         <div class="book-card" role="dialog" aria-labelledby="bookTitle">
 
-            <!-- STEP 1 -->
+            <!-- STEP 1: INTENT -->
             <section class="book-step active" id="step1">
                 <div class="book-card__header">
-                    <span class="book-card__step">Step 1 of 2</span>
-                    <h1 class="book-card__title" id="bookTitle">Tell me what brought you here</h1>
-                    <p class="book-card__sub">Two minutes of context now means the call goes straight to what matters.</p>
+                    <span class="book-card__step">Start here</span>
+                    <h1 class="book-card__title" id="bookTitle">What brings you here?</h1>
+                    <p class="book-card__sub">Pick the closest fit and we'll point you in the right direction.</p>
                 </div>
                 <div class="book-card__body">
-                    <div class="book-error" id="step1Error">Please answer every question before continuing.</div>
+                    <div class="book-error" id="step1Error">Please choose one to continue.</div>
 
-                    <form id="step1Form" onsubmit="goToStep2(event)" novalidate>
-
+                    <form id="step1Form" onsubmit="goFromIntent(event)" novalidate>
                         <div class="book-field">
                             <span class="book-field__label">Which best describes you?</span>
-                            <div class="book-radio-group" id="audienceGroup">
+                            <div class="book-radio-group" id="intentGroup">
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="business-owner">
-                                    <span class="book-radio__label">I run a business and want to market it better</span>
+                                    <input type="radio" name="intent" value="business-owner">
+                                    <span class="book-radio__label">I run a business and want to grow it</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="marketer">
+                                    <input type="radio" name="intent" value="make-money-online">
+                                    <span class="book-radio__label">I want to make money online / learn to build and sell digital products</span>
+                                </label>
+                                <label class="book-radio">
+                                    <input type="radio" name="intent" value="marketer">
                                     <span class="book-radio__label">I work in marketing and want to grow my career</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="transitioning">
-                                    <span class="book-radio__label">I'm transitioning into marketing</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="audience" value="other">
-                                    <span class="book-radio__label">Other</span>
+                                    <input type="radio" name="intent" value="exploring">
+                                    <span class="book-radio__label">Something else, I'm just exploring</span>
                                 </label>
                             </div>
-                            <div class="book-other-input" id="otherWrap">
-                                <input type="text" id="audienceOther" placeholder="Tell me in a few words" maxlength="120">
-                            </div>
                         </div>
-
-                        <div class="book-field">
-                            <label class="book-field__label" for="challenge">What's your biggest challenge right now?</label>
-                            <textarea id="challenge" maxlength="800" placeholder="The thing keeping you stuck, the gap you can't close, the question you keep coming back to."></textarea>
-                        </div>
-
-                        <div class="book-field">
-                            <label class="book-field__label" for="goals">What are your goals for this meeting?</label>
-                            <textarea id="goals" maxlength="800" placeholder="What does a useful 30-minute call look like for you?"></textarea>
-                        </div>
-
                         <div class="book-actions">
                             <button type="submit" class="book-btn book-btn--primary">Continue →</button>
                         </div>
@@ -405,40 +406,111 @@
                 </div>
             </section>
 
-            <!-- STEP 2 -->
-            <section class="book-step" id="step2">
+            <!-- STEP 2: AD BUDGET (business owners) -->
+            <section class="book-step" id="step2biz">
                 <div class="book-card__header">
-                    <span class="book-card__step">Step 2 of 2</span>
-                    <h2 class="book-card__title">How can I reach you?</h2>
-                    <p class="book-card__sub">After this, you'll pick a time on my calendar.</p>
+                    <span class="book-card__step">Business owners</span>
+                    <h2 class="book-card__title">What's your monthly marketing or ads budget?</h2>
+                    <p class="book-card__sub">This helps us point you to the right level of support.</p>
                 </div>
                 <div class="book-card__body">
-                    <div class="book-error" id="step2Error">Please fill out every field before booking.</div>
+                    <div class="book-error" id="step2Error">Please choose one to continue.</div>
 
-                    <form id="step2Form" onsubmit="submitBooking(event)" novalidate>
+                    <form id="step2Form" onsubmit="goFromAdBudget(event)" novalidate>
+                        <div class="book-field">
+                            <div class="book-radio-group" id="adBudgetGroup">
+                                <label class="book-radio"><input type="radio" name="adBudget" value="unsure"><span class="book-radio__label">I'm not sure yet</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="under-100k"><span class="book-radio__label">Under ₦100,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="100-250k"><span class="book-radio__label">₦100,000 – ₦250,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="250-500k"><span class="book-radio__label">₦250,000 – ₦500,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="500k-plus"><span class="book-radio__label">₦500,000+</span></label>
+                            </div>
+                        </div>
+                        <div class="book-actions">
+                            <button type="button" class="book-btn book-btn--secondary" onclick="backTo('step1')">← Back</button>
+                            <button type="submit" class="book-btn book-btn--primary">Continue →</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
 
+            <!-- STEP 3: RETAINER WILLINGNESS (business owners) -->
+            <section class="book-step" id="step3biz">
+                <div class="book-card__header">
+                    <span class="book-card__step">Business owners</span>
+                    <h2 class="book-card__title">How would you like to work with us?</h2>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step3Error">Please choose one to continue.</div>
+
+                    <form id="step3Form" onsubmit="goFromRetainer(event)" novalidate>
+                        <div class="book-field">
+                            <span class="book-field__label">Our done-for-you marketing team is ₦250,000/month.</span>
+                            <p class="book-field__hint">We recommend a 3-month commitment to get the most value. What sounds right for you?</p>
+                            <div class="book-radio-group" id="retainerGroup">
+                                <label class="book-radio"><input type="radio" name="retainer" value="ready"><span class="book-radio__label">I'm ready to invest in the done-for-you service</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="learn-more"><span class="book-radio__label">I'd like to learn more on a call first</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="diy"><span class="book-radio__label">I'd rather start cheaper and do it myself with guidance</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="not-now"><span class="book-radio__label">Not right now</span></label>
+                            </div>
+                        </div>
+                        <div class="book-actions">
+                            <button type="button" class="book-btn book-btn--secondary" onclick="backTo('step2biz')">← Back</button>
+                            <button type="submit" class="book-btn book-btn--primary">Continue →</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- STEP 4: CONTACT (consulting path only) -->
+            <section class="book-step" id="step4contact">
+                <div class="book-card__header">
+                    <span class="book-card__step">Last step</span>
+                    <h2 class="book-card__title">A few details before your call</h2>
+                    <p class="book-card__sub">James reviews these before you pick a time, so the call goes straight to what matters.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step4Error">Please fill out the required fields before booking.</div>
+
+                    <form id="step4Form" onsubmit="submitBooking(event)" novalidate>
                         <div class="book-field">
                             <label class="book-field__label" for="name">Full name</label>
                             <input type="text" id="name" autocomplete="name" placeholder="e.g. Adaeze Okonkwo">
                         </div>
-
                         <div class="book-field">
                             <label class="book-field__label" for="email">Email</label>
                             <input type="email" id="email" autocomplete="email" placeholder="e.g. adaeze@gmail.com">
                         </div>
-
                         <div class="book-field">
                             <label class="book-field__label" for="phone">Phone number</label>
                             <p class="book-field__hint">Nigerian or international format welcome.</p>
                             <input type="tel" id="phone" autocomplete="tel" placeholder="e.g. 08012345678">
                         </div>
-
+                        <div class="book-field">
+                            <label class="book-field__label" for="challenge">What's your biggest marketing challenge right now? <span style="font-weight:400;color:var(--text-muted);">(optional)</span></label>
+                            <textarea id="challenge" maxlength="800" placeholder="The lead-gen gap you can't close, the channel that stopped working, the customers who won't come back."></textarea>
+                        </div>
                         <div class="book-actions">
-                            <button type="button" class="book-btn book-btn--secondary" onclick="goToStep1()">← Back</button>
+                            <button type="button" class="book-btn book-btn--secondary" onclick="backTo('step3biz')">← Back</button>
                             <button type="submit" class="book-btn book-btn--primary" id="submitBtn">Book my call →</button>
                         </div>
                         <p class="book-trust">Takes you straight to my Google Calendar to pick a time.</p>
                     </form>
+                </div>
+            </section>
+
+            <!-- RECOMMENDATION (terminal cards: Bootcamp / DIME / Bundle / Academy) -->
+            <section class="book-step" id="stepRec">
+                <div class="book-card__header">
+                    <span class="book-card__step">Your recommendation</span>
+                    <h2 class="book-card__title" id="recTitle">Your recommendation</h2>
+                </div>
+                <div class="book-card__body">
+                    <p id="recBody"></p>
+                    <div class="book-actions">
+                        <button type="button" class="book-btn book-btn--secondary" onclick="recBack()">← Back</button>
+                        <a class="book-btn book-btn--primary" id="recBtn" href="#">Continue →</a>
+                    </div>
                 </div>
             </section>
 
@@ -448,7 +520,7 @@
     <script>
     (function() {
         var CALENDAR_URL = 'https://calendar.app.google/HZ9KVJw85E6C2cb19';
-        // Replace with the deployed Apps Script web app URL (Deploy → New deployment → Web app, "Anyone").
+        // Deployed Apps Script web app URL (Deploy → New deployment → Web app, "Anyone"). Stable /exec.
         var SHEET_URL = 'https://script.google.com/macros/s/AKfycbzZgDd7MbOtl-iI4cb7qeSU3haBX7HRQF7fMLlfi8d3CGEFuJnhY-CAMFB9xxTTDsuY/exec';
 
         function getUtm(name) {
@@ -457,60 +529,140 @@
             } catch(e) { return ''; }
         }
 
-        var captured = { audience:'', audienceOther:'', challenge:'', goals:'' };
+        var captured = { intent:'', adBudget:'', retainer:'' };
 
-        // Audience radio highlight + Other reveal
-        var radios = document.querySelectorAll('input[name="audience"]');
-        var otherWrap = document.getElementById('otherWrap');
-        var otherInput = document.getElementById('audienceOther');
+        // Human-readable labels written to the Sheet
+        var adBudgetLabels = {
+            'unsure':     'I\'m not sure yet',
+            'under-100k': 'Under ₦100,000',
+            '100-250k':   '₦100,000 – ₦250,000',
+            '250-500k':   '₦250,000 – ₦500,000',
+            '500k-plus':  '₦500,000+'
+        };
+        var retainerLabels = {
+            'ready':      'Ready to invest in done-for-you',
+            'learn-more': 'Wants to learn more on a call',
+            'diy':        'Prefers cheaper DIY',
+            'not-now':    'Not right now'
+        };
 
-        function refreshRadioStyles() {
-            document.querySelectorAll('#audienceGroup .book-radio').forEach(function(el) {
-                var input = el.querySelector('input');
-                if (input.checked) el.classList.add('book-radio--checked');
-                else el.classList.remove('book-radio--checked');
-            });
-            var sel = document.querySelector('input[name="audience"]:checked');
-            if (sel && sel.value === 'other') otherWrap.classList.add('show');
-            else otherWrap.classList.remove('show');
-        }
-        radios.forEach(function(r) { r.addEventListener('change', refreshRadioStyles); });
-
-        // Step 1 validation + advance
-        window.goToStep2 = function(e) {
-            e.preventDefault();
-            var sel = document.querySelector('input[name="audience"]:checked');
-            var challenge = document.getElementById('challenge').value.trim();
-            var goals = document.getElementById('goals').value.trim();
-            var otherText = otherInput.value.trim();
-            var err = document.getElementById('step1Error');
-
-            if (!sel || !challenge || !goals || (sel.value === 'other' && !otherText)) {
-                err.classList.add('show');
-                err.scrollIntoView({ behavior:'smooth', block:'center' });
-                return;
+        // Recommendation cards
+        var REC = {
+            bootcamp: {
+                title: 'AI Marketing Bootcamp',
+                body:  'Based on your answer, the AI Marketing Bootcamp is your best fit.',
+                btn:   'Explore the Bootcamp →',
+                href:  '/academy/pro-bootcamp/',
+                back:  'step1'
+            },
+            dime: {
+                title: 'Digital Income Made Easy (DIME)',
+                body:  'Based on your answer, the Digital Income Made Easy (DIME) Program is your best fit. Join the free class to see the simplest way to your first dollar online.',
+                btn:   'Join the free class →',
+                href:  '/academy/dime/class/',
+                back:  'step1'
+            },
+            bundle: {
+                title: 'Online Marketing Mentorship',
+                body:  'Based on your answers, the Online Marketing Mentorship is your best fit. Five complete marketing systems you run yourself, with implementation support.',
+                btn:   'Explore the Mentorship →',
+                href:  '/academy/sme/bundle/',
+                back:  'step3biz'
+            },
+            academy: {
+                title: 'MIA Academy',
+                body:  'Explore the Academy to find the program that fits where you are right now.',
+                btn:   'Explore the Academy →',
+                href:  '/academy/',
+                back:  'step1'
             }
-            err.classList.remove('show');
-
-            captured.audience = sel.value;
-            captured.audienceOther = sel.value === 'other' ? otherText : '';
-            captured.challenge = challenge;
-            captured.goals = goals;
-
-            document.getElementById('step1').classList.remove('active');
-            document.getElementById('step2').classList.add('active');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            setTimeout(function() {
-                var el = document.getElementById('name');
-                if (el) el.focus();
-            }, 150);
         };
 
-        window.goToStep1 = function() {
-            document.getElementById('step2').classList.remove('active');
-            document.getElementById('step1').classList.add('active');
+        // Radio highlight wiring (generic, all groups)
+        ['intentGroup', 'adBudgetGroup', 'retainerGroup'].forEach(function(groupId) {
+            var group = document.getElementById(groupId);
+            if (!group) return;
+            group.addEventListener('change', function() {
+                group.querySelectorAll('.book-radio').forEach(function(el) {
+                    el.classList.toggle('book-radio--checked', el.querySelector('input').checked);
+                });
+            });
+        });
+
+        function show(id) {
+            document.querySelectorAll('.book-step').forEach(function(s) { s.classList.remove('active'); });
+            document.getElementById(id).classList.add('active');
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function checkedVal(name) {
+            var s = document.querySelector('input[name="' + name + '"]:checked');
+            return s ? s.value : '';
+        }
+        function showError(id) {
+            var e = document.getElementById(id);
+            e.classList.add('show');
+            e.scrollIntoView({ behavior:'smooth', block:'center' });
+        }
+        function hideError(id) { document.getElementById(id).classList.remove('show'); }
+
+        window.backTo = function(id) { show(id); };
+
+        // Step 1 — intent router
+        window.goFromIntent = function(e) {
+            e.preventDefault();
+            var v = checkedVal('intent');
+            if (!v) { showError('step1Error'); return; }
+            hideError('step1Error');
+            captured.intent = v;
+            if (v === 'business-owner') { show('step2biz'); }
+            else if (v === 'make-money-online') { showRec('dime'); }
+            else if (v === 'marketer') { showRec('bootcamp'); }
+            else { showRec('academy'); }
         };
+
+        // Step 2 — ad budget (business owners)
+        window.goFromAdBudget = function(e) {
+            e.preventDefault();
+            var v = checkedVal('adBudget');
+            if (!v) { showError('step2Error'); return; }
+            hideError('step2Error');
+            captured.adBudget = adBudgetLabels[v] || v;
+            show('step3biz');
+        };
+
+        // Step 3 — retainer willingness (business owners) → Consulting or Bundle
+        window.goFromRetainer = function(e) {
+            e.preventDefault();
+            var v = checkedVal('retainer');
+            if (!v) { showError('step3Error'); return; }
+            hideError('step3Error');
+            captured.retainer = retainerLabels[v] || v;
+            if (v === 'ready' || v === 'learn-more') {
+                show('step4contact');
+                setTimeout(function() {
+                    var el = document.getElementById('challenge');
+                    if (el) el.focus();
+                }, 150);
+            } else {
+                showRec('bundle');
+            }
+        };
+
+        // Recommendation card
+        var currentRecBack = 'step1';
+        function showRec(type) {
+            var r = REC[type];
+            document.getElementById('recTitle').textContent = r.title;
+            document.getElementById('recBody').textContent = r.body;
+            var btn = document.getElementById('recBtn');
+            btn.textContent = r.btn;
+            btn.setAttribute('href', r.href);
+            currentRecBack = r.back;
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'router_route_selected', route: type, destination: r.href });
+            show('stepRec');
+        }
+        window.recBack = function() { show(currentRecBack); };
 
         function normalizePhone(raw) {
             var p = (raw || '').replace(/\D/g, '');
@@ -523,49 +675,45 @@
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
         }
 
-        // Step 2 submit
+        // Step 4 — Consulting contact + book (only path that captures a lead)
         window.submitBooking = function(e) {
             e.preventDefault();
+            var challenge = document.getElementById('challenge').value.trim();
             var name = document.getElementById('name').value.trim();
             var email = document.getElementById('email').value.trim();
             var phoneRaw = document.getElementById('phone').value.trim();
-            var err = document.getElementById('step2Error');
+            var err = document.getElementById('step4Error');
             var btn = document.getElementById('submitBtn');
 
             if (!name || !email || !phoneRaw || !isEmail(email)) {
-                err.classList.add('show');
                 err.textContent = !isEmail(email)
                     ? 'Double-check your email — it doesn\'t look quite right.'
-                    : 'Please fill out every field before booking.';
+                    : 'Please fill in your contact details before booking.';
+                err.classList.add('show');
                 err.scrollIntoView({ behavior:'smooth', block:'center' });
                 return;
             }
             err.classList.remove('show');
 
             var phone = normalizePhone(phoneRaw);
-
             btn.disabled = true;
             btn.textContent = 'Booking…';
 
-            var audienceLabels = {
-                'business-owner': 'I run a business and want to market it better',
-                'marketer':       'I work in marketing and want to grow my career',
-                'transitioning':  'I\'m transitioning into marketing',
-                'other':          'Other'
-            };
-
             var payload = {
-                audienceType: audienceLabels[captured.audience] || captured.audience,
-                audienceOther: captured.audienceOther,
-                challenge: captured.challenge,
-                goals: captured.goals,
+                audienceType: 'Business Owner',
+                audienceOther: '',
+                challenge: challenge,
+                goals: '',
                 fullName: name,
                 email: email,
                 phone: phone,
                 pageUrl: window.location.href,
                 utmSource: getUtm('utm_source'),
                 utmMedium: getUtm('utm_medium'),
-                utmCampaign: getUtm('utm_campaign')
+                utmCampaign: getUtm('utm_campaign'),
+                adBudget: captured.adBudget,
+                retainerWillingness: captured.retainer,
+                recommendedPath: 'Consulting'
             };
 
             // Pixels
@@ -587,10 +735,12 @@
                 lead_email: email,
                 lead_name: name,
                 lead_phone: phone,
-                audience_type: payload.audienceType
+                audience_type: 'Business Owner',
+                ad_budget: captured.adBudget,
+                retainer_willingness: captured.retainer
             });
 
-            // Sheet write — fire-and-forget, no-cors (matches existing prefill pattern)
+            // Sheet write — fire-and-forget, no-cors
             try {
                 fetch(SHEET_URL, {
                     method: 'POST',
