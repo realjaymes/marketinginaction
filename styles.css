@@ -1246,7 +1246,7 @@ body.home .featured-section {
 
 body.home .featured-programs {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-lg);
   margin-top: var(--space-md);
 }
@@ -1280,6 +1280,11 @@ body.home .program-card__badge--blue {
 body.home .program-card__badge--yellow {
   background: #fdf8e8;
   color: #8a7a2a;
+}
+
+body.home .program-card__badge--green {
+  background: #e9f6ee;
+  color: #2e7d4f;
 }
 
 body.home .program-card__title {
