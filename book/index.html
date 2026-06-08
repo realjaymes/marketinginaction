@@ -317,6 +317,20 @@
             margin: 14px 0 0;
         }
 
+        .book-howto {
+            background: rgba(0, 0, 0, 0.035);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            border-radius: 8px;
+            padding: 12px 14px;
+            margin: 0 0 16px;
+            font-size: 0.85rem;
+            line-height: 1.55;
+            color: var(--text-muted);
+        }
+        .book-howto strong {
+            color: var(--text-strong, inherit);
+        }
+
         a.book-btn {
             text-decoration: none;
             display: inline-flex;
@@ -467,7 +481,7 @@
                 <div class="book-card__header">
                     <span class="book-card__step">Last step</span>
                     <h2 class="book-card__title">A few details before your call</h2>
-                    <p class="book-card__sub">James reviews these before you pick a time, so the call goes straight to what matters.</p>
+                    <p class="book-card__sub">James reads these before your call so your time goes straight to what matters. Your call is a live video call on Google Meet. It works just like a WhatsApp video call, where you see and talk to James on your screen, so it is not a regular phone call.</p>
                 </div>
                 <div class="book-card__body">
                     <div class="book-error" id="step4Error">Please fill out the required fields before booking.</div>
@@ -490,11 +504,14 @@
                             <label class="book-field__label" for="challenge">What's your biggest marketing challenge right now? <span style="font-weight:400;color:var(--text-muted);">(optional)</span></label>
                             <textarea id="challenge" maxlength="800" placeholder="The lead-gen gap you can't close, the channel that stopped working, the customers who won't come back."></textarea>
                         </div>
+                        <div class="book-howto">
+                            <strong>How your call works.</strong> This is a live 30-minute call with James on Google Meet. You can join right from your phone, no laptop needed. After you pick a time, you'll confirm on WhatsApp, and that's where we send your meeting link and reminders. New to Google Meet? Don't worry, we'll walk you in.
+                        </div>
                         <div class="book-actions">
                             <button type="button" class="book-btn book-btn--secondary" onclick="backTo('step3biz')">← Back</button>
                             <button type="submit" class="book-btn book-btn--primary" id="submitBtn">Book my call →</button>
                         </div>
-                        <p class="book-trust">Takes you straight to my Google Calendar to pick a time.</p>
+                        <p class="book-trust">Next, you'll pick a time on my Google Calendar. Your Google Meet call is a video call you join right from your phone, just like a WhatsApp video call. After you pick a time, confirm on WhatsApp so I can send your link and walk you into the call.</p>
                     </form>
                 </div>
             </section>
