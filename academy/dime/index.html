@@ -1498,7 +1498,7 @@
     <nav class="sticky-nav">
         <div class="container">
             <a href="/academy/" class="sticky-nav__brand"><img src="/assets/mia-logo.svg" alt="MIA Academy" style="height:28px; width:auto;"></a>
-            <a href="#offer" class="btn btn-accent">Get DIME</a>
+            <a href="https://selar.com/digitalincomemadeeasy?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="btn btn-accent js-buy" target="_blank" rel="noopener">Get DIME</a>
         </div>
     </nav>
 
@@ -1519,8 +1519,8 @@
             </div>
 
             <div class="hero__ctas" id="heroCtas">
-                <a href="#offer" class="btn btn-accent">Get Instant Access &mdash; &#8358;45,000</a>
-                <a href="#value" class="btn btn-book" style="border-color:rgba(255,255,255,0.25);">See What's Inside</a>
+                <a href="https://selar.com/digitalincomemadeeasy?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="btn btn-accent js-buy" target="_blank" rel="noopener">Get Instant Access &mdash; &#8358;45,000</a>
+                <a href="#value" class="btn btn-outline">See What's Inside</a>
             </div>
 
             <div class="hero__social-proof">
@@ -1832,12 +1832,6 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__brand">MIA Academy</div>
-            <div class="footer__links">
-                <a href="https://marketinginaction.xyz/academy/">MIA Academy</a>
-                <a href="https://newsletter.marketinginaction.xyz/">MIA Newsletter</a>
-                
-                <a href="https://www.instagram.com/marketinginact/" target="_blank" rel="noreferrer">Instagram (MIA)</a>
-                <a href="https://www.instagram.com/realjaymes/" target="_blank" rel="noreferrer">Instagram (James)</a></div>
             <p class="footer__trust">Results vary based on your effort, niche, and implementation. Testimonials and results reflect individual experiences and are not a guarantee of specific outcomes.</p>
             <p class="footer__copy">&copy; <span class="year">2026</span> Marketing In Action (MIA). All rights reserved.</p>
         </div>
@@ -1879,7 +1873,7 @@
                     <span class="sticky-bar__label">Founding price &middot; lifetime access</span>
                 </div>
             </div>
-            <a href="#offer" class="sticky-bar__cta">Get DIME &rarr;</a>
+            <a href="https://selar.com/digitalincomemadeeasy?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="sticky-bar__cta js-buy" target="_blank" rel="noopener">Get DIME &rarr;</a>
         </div>
     </div>
 
@@ -1899,6 +1893,14 @@
         var bar=document.getElementById('stickyBar');
         function onScroll(){ if(!bar) return; bar.classList.toggle('visible', window.scrollY>700); }
         window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+      })();
+      // Announcement bar offset: push the sticky nav below the announcement bar so both stay visible on scroll (same pattern as the SME pages)
+      (function(){
+        var announceBar=document.querySelector('.announcement-bar');
+        var stickyNav=document.querySelector('.sticky-nav');
+        function setNavOffset(){ if(announceBar && stickyNav){ stickyNav.style.top=announceBar.offsetHeight+'px'; } }
+        setNavOffset();
+        window.addEventListener('resize', setNavOffset, {passive:true});
       })();
     </script>
 
