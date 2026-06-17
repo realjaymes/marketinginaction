@@ -1601,10 +1601,11 @@
         var cohort = (new URLSearchParams(window.location.search).get('cohort')||'').trim();
         if(!(cohort && Date.now() < LIVE_END)){ window.DIME_cohort=''; return; }
         window.DIME_cohort = cohort;
+        var COHORT_LABEL={june26:'Friday, June 26'}, label=COHORT_LABEL[cohort]||cohort; // URL-safe token → display date (falls back to the raw value for old links)
         var esc=function(s){return s.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
         var set=function(id,html){var el=document.getElementById(id); if(el) el.innerHTML=html;};
-        set('abText','FREE LIVE CLASS &middot; <strong>'+esc(cohort)+'</strong> &middot; 7PM (Nigeria) &middot; Live only, no free replay');
-        set('heroTag','Free live class &middot; '+esc(cohort)+' &middot; 7PM Nigeria time');
+        set('abText','FREE LIVE CLASS &middot; <strong>'+esc(label)+'</strong> &middot; 7PM (Nigeria) &middot; Live only, no free replay');
+        set('heroTag','Free live class &middot; '+esc(label)+' &middot; 7PM Nigeria time');
         set('heroSub','In this free live class I will show you the simplest way to your first dollar online, where AI does 80% of the work. No experience, no big audience, no showing your face.');
         set('formNote','It&rsquo;s free. The class is live, with no free replay. Your details are safe.');
         set('finalHead','It Is Live, And <span class="highlight">Live Only</span>');

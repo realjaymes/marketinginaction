@@ -1549,7 +1549,7 @@
         var cohort=(new URLSearchParams(window.location.search).get('cohort')||'').trim();
         if (cohort && Date.now() < LIVE_END) {
           var live=document.getElementById('liveConfirm'); if(live) live.style.display='block';
-          var cd=document.getElementById('classDate'); if(cd) cd.textContent=cohort;
+          var cd=document.getElementById('classDate'); if(cd) cd.textContent=({june26:'Friday, June 26'}[cohort]||cohort);
         } else {
           var ev=document.getElementById('evergreenConfirm'); if(ev) ev.style.display='block';
           var n=15, el=document.getElementById('countdown');
