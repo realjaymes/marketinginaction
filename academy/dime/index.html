@@ -1528,7 +1528,6 @@
             </div>
             <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:8px; font-size:0.8rem; color:rgba(255,255,255,0.45);">
                 <span>&#x1F512; Secure checkout (Selar &amp; Paystack)</span>
-                <span>&#x1F4B3; Pay in 2 installments</span>
                 <span>&#x1F30D; Sell worldwide, earn in dollars</span>
             </div>
         </div>
@@ -1718,7 +1717,7 @@
                 <div style="font-size:3rem; font-weight:750; color:var(--primary-dark); line-height:1; margin:6px 0;">&#8358;45,000</div>
                 <div style="font-size:0.9rem; color:var(--text-muted); margin-bottom:20px;">about &#8358;123/day over a year &mdash; cheaper than your daily data. Roughly $29 if you earn abroad; checkout shows your local currency.</div>
                 <a href="https://selar.com/digitalincomemadeeasy?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="btn btn-accent js-buy" style="width:100%; justify-content:center;" target="_blank" rel="noopener">Join DIME Now &mdash; &#8358;45,000</a>
-                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:14px;">&#x1F512; Selar &amp; Paystack &middot; Pay in 2 parts (&#8358;22,500 &times; 2) &middot; 30-Day First-Sale Guarantee</div>
+                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:14px;">&#x1F512; Selar &amp; Paystack &middot; 30-Day First-Sale Guarantee</div>
             </div>
             <p style="text-align:center; max-width:560px; margin:24px auto 0; color:var(--text-muted); font-size:0.9rem;">You spent more than &#8358;45,000 last month on things that left you exactly where you started. This is the same money, pointed at something that pays you back. Your first sale alone can cover it.</p>
         </div>
@@ -1820,7 +1819,7 @@
     <section class="final-cta">
         <div class="container">
             <h2 class="final-cta__headline">Make Your First Sale <span class="highlight">This Week</span></h2>
-            <p class="final-cta__sub">Founding price &#8358;45,000 (rising to &#8358;55,000). 30-Day First-Sale Guarantee. Lifetime access + private community. Pay in 2 installments on Selar.</p>
+            <p class="final-cta__sub">Founding price &#8358;45,000 (rising to &#8358;55,000). 30-Day First-Sale Guarantee. Lifetime access + private community.</p>
             <div class="final-cta__buttons" id="finalCtas">
                 <a href="https://selar.com/digitalincomemadeeasy?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="btn btn-accent js-buy" target="_blank" rel="noopener">Join DIME Now &mdash; &#8358;45,000</a>
             </div>
@@ -1859,7 +1858,7 @@
             <div class="exit-modal__emoji">&#128075;</div>
             <h3 class="exit-modal__title">Before you go &mdash; watch the free class first</h3>
             <p class="exit-modal__text">It's completely free. In about an hour you'll see exactly how the system works and how to start, even from scratch, before you decide on anything.</p>
-            <a href="/academy/dime/class/" class="btn btn-accent">Save My Free Seat &rarr;</a>
+            <a href="/academy/dime/class/?cohort=Friday,%20June%2026" id="exitCta" class="btn btn-accent">Save My Free Seat &rarr;</a>
             <button class="exit-modal__skip" id="exitSkip" type="button">No thanks, I'll keep reading</button>
         </div>
     </div>
@@ -1887,6 +1886,9 @@
         var c=document.getElementById('exitClose'); if(c) c.addEventListener('click', hideExit);
         var s=document.getElementById('exitSkip'); if(s) s.addEventListener('click', hideExit);
         if(overlay) overlay.addEventListener('click', function(e){ if(e.target===overlay) hideExit(); });
+        // Until Jun 28, 2026 the exit-popup CTA points to the LIVE cohort class (?cohort=); after that it falls back to the evergreen class.
+        var cta=document.getElementById('exitCta');
+        if(cta && Date.now() >= new Date('2026-06-29T00:00:00+01:00').getTime()){ cta.href='/academy/dime/class/'; }
       })();
       // Sticky mobile bar: reveal after scrolling past the hero
       (function(){
