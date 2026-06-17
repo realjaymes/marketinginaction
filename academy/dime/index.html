@@ -1886,9 +1886,9 @@
         var c=document.getElementById('exitClose'); if(c) c.addEventListener('click', hideExit);
         var s=document.getElementById('exitSkip'); if(s) s.addEventListener('click', hideExit);
         if(overlay) overlay.addEventListener('click', function(e){ if(e.target===overlay) hideExit(); });
-        // Until Jun 28, 2026 the exit-popup CTA points to the LIVE cohort class (?cohort=); after that it falls back to the evergreen class.
+        // Through end of Jun 26, 2026 the exit-popup CTA points to the LIVE cohort class (?cohort=); from Jun 27 it falls back to the evergreen class.
         var cta=document.getElementById('exitCta');
-        if(cta && Date.now() >= new Date('2026-06-29T00:00:00+01:00').getTime()){ cta.href='/academy/dime/class/'; }
+        if(cta && Date.now() >= new Date('2026-06-27T00:00:00+01:00').getTime()){ cta.href='/academy/dime/class/'; }
       })();
       // Sticky mobile bar: reveal after scrolling past the hero
       (function(){
