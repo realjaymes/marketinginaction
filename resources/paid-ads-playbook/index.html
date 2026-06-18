@@ -82,7 +82,7 @@
     "description": "The exact operating system we use to run paid acquisition for clients. From onboarding through scaling, across the major paid channels.",
     "image": "https://marketinginaction.xyz/og-image.png",
     "datePublished": "2026-05-28",
-    "dateModified": "2026-06-01",
+    "dateModified": "2026-06-18",
     "author": {
       "@type": "Person",
       "@id": "https://marketinginaction.xyz/#james",
@@ -1841,15 +1841,15 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
       <table class="decision-table">
         <tr><th>Level</th><th>Pattern</th><th>Why these fields</th></tr>
         <tr><td><strong>Campaign</strong></td><td><code>Objective | Product | Audience Type | Date</code></td><td>Objective + Product define the campaign's job; Audience Type + Date scope it</td></tr>
-        <tr><td><strong>Ad Set</strong></td><td><code>Country | Audience | Conversion Event | Daily Budget</code></td><td>Country and audience determine delivery; conversion event and budget determine learning</td></tr>
-        <tr><td><strong>Ad</strong></td><td><code>Product | Creative Type | Hook Angle</code></td><td>Anchor on the product so multi-product accounts stay legible; creative type + hook are the test variables</td></tr>
+        <tr><td><strong>Ad Set</strong></td><td><code>Country | Audience | Angle | Conversion Event | Daily Budget</code></td><td>Country and audience determine delivery; <strong>Angle scopes the ad set to one message (one ad set = one angle)</strong>; conversion event and budget determine learning</td></tr>
+        <tr><td><strong>Ad</strong></td><td><code>Product | Creative Type | Hook</code></td><td>Anchor on the product so multi-product accounts stay legible; creative type + hook are the test variables within the ad set's angle</td></tr>
       </table>
       <div class="info-box">
         <strong>Examples</strong><br><br>
         <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Cold | 2026-03-01</code><br>
         <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Warm | 2026-03-01</code><br>
-        <strong>Ad Set:</strong> <code>Nigeria | Purchase | ₦15,000</code><br>
-        <strong>Ad Set:</strong> <code>Retargeting Audiences | Purchase | ₦15,000</code><br>
+        <strong>Ad Set:</strong> <code>Nigeria | Cold | AI Fear | Purchase | ₦15,000</code><br>
+        <strong>Ad Set:</strong> <code>Retargeting Audiences | AI Fear | Purchase | ₦15,000</code><br>
         <strong>Ad:</strong> <code>Bootcamp | Video | Fear of Replacement</code><br>
         <strong>Ad:</strong> <code>Bootcamp | Video | Discount</code>
       </div>
@@ -1861,10 +1861,11 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
           <strong>Audience Type (Campaign):</strong> Cold, Warm, Cold-Broad, Cold-Interest, Cold-LAL, RT, Warm-Engagement<br>
           <strong>Audience (Ad Set):</strong> Broad, Nigeria, Retargeting Audiences, LAL1-Buyers, Interest-Marketing, RT-Site30d, RT-AddToCart7d<br>
           <strong>Country:</strong> ISO code, country name, or region (Nigeria, NG, US, UK, EU, DIASPORA)<br>
+          <strong>Angle (Ad Set):</strong> the one belief, desire, or fear this ad set speaks to — AI Fear, Cost of Living, Financial Freedom, Job Security, Speed, Fear of Replacement, Japa. One angle per ad set (the angle layer of the Creative Strategy Framework). A desire/fear, NOT a content structure — testimonial, social proof, origin story are content structures, not angles.<br>
           <strong>Conversion Event:</strong> Purchase, Lead, Subscribe, Schedule, IC, AddToCart, ViewContent<br>
           <strong>Daily Budget:</strong> include currency (₦15,000, $50)<br>
           <strong>Creative Type:</strong> Video, UGC-Video, Founder-Talking, Static-Carousel, Static-Single, Reel, Demo-Screen<br>
-          <strong>Hook Angle:</strong> Pain, Outcome, Authority, FOMO, Origin-Story, Category-Frame, Social-Proof, Cost-of-Inaction, Fear of Replacement, Discount<br>
+          <strong>Hook:</strong> the specific opening this ad tests within the ad set's angle — Fear of Replacement, Discount, Pain, Outcome, a bold-claim line, a question opener. The angle lives on the ad set; the hook is the ad-level test variable.<br>
           <strong>Note:</strong> CTA is no longer part of the ad name. Track CTA at the creative level (asset tag in the brief), not in the name.<br>
           <strong>Date:</strong> YYYY-MM-DD (or YYYY-MM for monthly, YYYY-Q1 for quarterly)
         </div>
@@ -1909,6 +1910,10 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
           <input type="text" id="nc-country" placeholder="e.g. Nigeria, US, UK, Retargeting Audiences" oninput="generateNaming()">
         </div>
         <div class="input-group">
+          <label>Angle (one per ad set)</label>
+          <input type="text" id="nc-angle" placeholder="e.g. AI Fear, Cost of Living, Financial Freedom" oninput="generateNaming()">
+        </div>
+        <div class="input-group">
           <label>Conversion Event</label>
           <select id="nc-conversion" onchange="generateNaming()">
             <option value="Purchase">Purchase</option>
@@ -1944,7 +1949,7 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
           </select>
         </div>
         <div class="input-group">
-          <label>Hook Angle</label>
+          <label>Hook</label>
           <input type="text" id="nc-hook" placeholder="e.g. Fear of Replacement, Discount, Pain" oninput="generateNaming()">
         </div>
         <div class="input-group">
@@ -1957,7 +1962,7 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
         <span class="naming-label">Campaign:</span>
         <span id="nc-campaign">Sales | PMM AI Bootcamp Core | Cold | 2026-03-01</span>
         <span class="naming-label" style="margin-top:8px" id="nc-adset-label">Ad Set:</span>
-        <span id="nc-adset">Nigeria | Purchase | ₦15,000</span>
+        <span id="nc-adset">Nigeria | AI Fear | Purchase | ₦15,000</span>
         <span class="naming-label" style="margin-top:8px">Ad:</span>
         <span id="nc-ad">PMM AI Bootcamp Core | Video | Fear of Replacement</span>
       </div>
@@ -2213,10 +2218,12 @@ EXCLUSIONS
 
       <h3>3x3 Creative Matrix</h3>
       <div class="info-box">
-        Create 9 ad variations by crossing <strong>3 hooks</strong> with <strong>3 formats</strong>.<br><br>
-        <strong>Hooks:</strong> (1) Problem/Pain, (2) Benefit/Outcome, (3) Social Proof/Authority<br>
+        This sits inside the creative hierarchy: <strong>Offer &rarr; Angle &rarr; Content Structure &rarr; Creative Format &rarr; Style &rarr; Hook &rarr; Platform</strong> (Creative Strategy Framework). The <strong>angle</strong> is the strategic unit and maps to <strong>one ad set</strong> (one ad set = one angle).<br><br>
+        <strong>What an angle is:</strong> a <strong>belief, desire, or fear the audience holds</strong> &mdash; what you're saying, not how. Formula: <em>Product + Audience + Desire or Fear = Angle</em>. Test: if a label describes how you organize or prove the message (testimonial, case study, founder story, social proof, demo) it's a <strong>content structure</strong>, not an angle; if it's the opening line/visual, it's a <strong>hook</strong>. Example angles for a "make money with AI" offer: Financial freedom, Cost of living, AI opportunity, Job security / AI fear, Speed.<br><br>
+        Pick 3 angles (each becomes its own ad set). Within an angle, create 9 variations by crossing <strong>3 hooks</strong> with <strong>3 formats</strong>.<br>
+        <strong>Hooks (openings):</strong> (1) Pain-led, (2) Outcome-led, (3) Curiosity/contrarian line<br>
         <strong>Formats:</strong> (1) Static Image, (2) Video, (3) Carousel<br><br>
-        This gives you structured creative diversity to test. Each cell is one unique ad.
+        Angle, content structure, format, and hook are separate knobs &mdash; don't collapse them. Each cell is one unique ad expressing one angle.
       </div>
 
       <h3>Hook Formulas</h3>
@@ -2390,10 +2397,14 @@ Description: ___________
       </div>
 
       <h3>CBO vs. Manual Budget</h3>
+      <div class="info-box" style="border-left:3px solid var(--accent)">
+        <strong>ABO for testing, CBO for scaling.</strong> ABO (ad-set/ad-group budget) forces a fair budget into every angle/audience so each generates enough signal to judge. CBO (campaign budget) lets the algorithm allocate to proven winners once you know what works.<br><br>
+        <strong>Don't test on CBO.</strong> Launch a test on CBO and the algorithm concentrates budget on the first ad set to get early traction; the others never get a fair test, so you'll think you have one winner when you never gave the rest a chance. Test on ABO, then move proven winners to CBO to scale. (Applies to Meta, TikTok, Snapchat; Google and LinkedIn use the budget models below.)
+      </div>
       <div data-platform="meta" class="platform-visible">
         <div class="info-box">
-          <strong>Advantage+ Campaign Budget (CBO):</strong> Use when you have 3+ ad sets and want Meta to allocate budget to the best performer. Set a minimum spend per ad set if needed.<br><br>
-          <strong>Ad Set Budget (ABO):</strong> Use when testing new audiences and you want equal spend across ad sets. Better for controlled experiments.
+          <strong>Advantage+ Campaign Budget (CBO):</strong> Use when you have 3+ ad sets and want Meta to allocate budget to the best performer. Set a minimum spend per ad set if needed. Scaling only &mdash; not for testing.<br><br>
+          <strong>Ad Set Budget (ABO):</strong> Use when testing new audiences/angles and you want equal spend across ad sets so each gets a clean read. Better for controlled experiments.
         </div>
       </div>
       <div data-platform="tiktok">
@@ -2494,8 +2505,11 @@ Description: ___________
       <p class="section-desc">Decision rules for managing live campaigns. Remove emotion from optimization.</p>
 
       <h3>Optimization Decision Table</h3>
+      <p class="section-desc">Once delivery is confirmed, read <strong>CPM first</strong> &mdash; it's the rawest signal of whether the platform thinks your ad is worth showing, and a high CPM inflates every cost beneath it. Then work down CTR &rarr; CPC &rarr; CVR &rarr; ROAS.</p>
       <table class="decision-table">
         <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-kill"><td>CPM (read first)</td><td>&gt; 2x benchmark</td><td>Auction pressure, weak quality ranking, audience too narrow, or creative fatigue</td><td>Refresh creative or broaden audience signals before reading anything downstream &mdash; high CPM inflates CPC, CPA, and ROAS</td></tr>
+        <tr class="action-scale"><td>CPM (read first)</td><td>&lt; benchmark</td><td>Efficient delivery, healthy signal</td><td>Good foundation; read the rest of the funnel</td></tr>
         <tr class="action-kill"><td>CTR</td><td>&lt; 0.5%</td><td>Creative not resonating</td><td>Test new hooks, visuals, or formats</td></tr>
         <tr class="action-watch"><td>CTR</td><td>0.5-1.5%</td><td>Average creative</td><td>Test variations, iterate on best performer</td></tr>
         <tr class="action-scale"><td>CTR</td><td>&gt; 2%</td><td>Strong creative</td><td>Scale budget, duplicate to new audiences</td></tr>
@@ -2503,7 +2517,7 @@ Description: ___________
         <tr class="action-kill"><td>CPA</td><td>&gt; 1.3x target after 2x cycle</td><td>Funnel or targeting issue</td><td>Review landing page, audience, offer</td></tr>
         <tr class="action-scale"><td>CPA</td><td>&lt; target for 3+ days</td><td>Winning combination</td><td>Scale 20% every 3 days</td></tr>
         <tr class="action-kill"><td>Frequency</td><td>&gt; 2.5</td><td>Audience fatigue</td><td>Refresh creative or expand audience</td></tr>
-        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 1%</td><td>Destination mismatch, slow load, weak CTA, or wrong audience</td><td>Audit message-match, mobile speed, CTA clarity. Fix the destination before changing ads</td></tr>
+        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 1%</td><td>Destination OR offer problem (not the ad). Slow load, weak CTA, message mismatch &mdash; or the offer/price isn't compelling enough to convert the click</td><td>Audit the page first (message-match, mobile speed, CTA clarity). If the page is sound, the offer or price is the leak &mdash; see the Conversion Playbook (offer + sales-page reasons)</td></tr>
         <tr class="action-watch"><td>CVR (post-click)</td><td>1-3%</td><td>Average destination performance</td><td>Test destination variants (headline, hero, CTA, social proof, form length)</td></tr>
         <tr class="action-scale"><td>CVR (post-click)</td><td>&gt; 3%</td><td>Strong destination, ad and page aligned</td><td>Scale traffic, protect the destination, document what works</td></tr>
         <tr class="action-kill"><td>ROAS</td><td>&lt; 1.0x</td><td>Losing money</td><td>Pause and diagnose (creative, audience, landing page)</td></tr>
@@ -2519,7 +2533,7 @@ Description: ___________
         &#x2022; Spent 2x target CPA with zero conversions<br>
         &#x2022; CTR below 0.5% after 1,000+ impressions<br>
         &#x2022; CPA above 1.5x target after 50+ clicks<br>
-        &#x2022; CVR (post-click) below 1% after 200+ link clicks (audit and fix the destination before continuing spend)<br>
+        &#x2022; CVR (post-click) below 1% after 200+ link clicks (audit the destination AND the offer before continuing spend &mdash; clicks without conversions point to the page or the offer, not the ad)<br>
         &#x2022; ROAS below 1.0x after full conversion window
       </div>
 
@@ -2546,6 +2560,16 @@ Description: ___________
       </ul>
 
       <h3>Common Fixes</h3>
+      <details>
+        <summary>High CPM (read first)</summary>
+        <div class="detail-content">
+          The rawest cost signal &mdash; fix before anything downstream, because high CPM inflates CPC, CPA, and ROAS.<br>
+          1. Creative fatigue &rarr; refresh the creative (new hook, format, or concept)<br>
+          2. Audience too narrow &rarr; broaden signals or go broad<br>
+          3. Weak quality/relevance ranking &rarr; rebuild the creative (placement and audience tweaks won't move quality ranking)<br>
+          4. Competitive auction window &rarr; accept it or shift the schedule
+        </div>
+      </details>
       <details>
         <summary>High CPC</summary>
         <div class="detail-content">
@@ -3069,6 +3093,7 @@ Key priorities:
       const product = document.getElementById('nc-product').value || 'PMM AI Bootcamp Core';
       const audienceType = document.getElementById('nc-audience-type').value || 'Cold';
       const country = document.getElementById('nc-country').value || 'Nigeria';
+      const angle = document.getElementById('nc-angle').value || 'AI Fear';
       const conversion = document.getElementById('nc-conversion').value || 'Purchase';
       const budget = document.getElementById('nc-budget').value || '₦15,000';
       const creative = document.getElementById('nc-creative').value || 'Video';
@@ -3076,7 +3101,7 @@ Key priorities:
       const date = document.getElementById('nc-date').value || '2026-03-01';
 
       const campaign = `${objective} | ${product} | ${audienceType} | ${date}`;
-      const adset = `${country} | ${conversion} | ${budget}`;
+      const adset = `${country} | ${angle} | ${conversion} | ${budget}`;
       const ad = `${product} | ${creative} | ${hook}`;
 
       document.getElementById('nc-campaign').textContent = campaign;
