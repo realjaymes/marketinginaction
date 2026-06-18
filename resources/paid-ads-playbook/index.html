@@ -1697,8 +1697,9 @@ Platform: ___________
         <tr><td>WhatsApp / Messenger conversion</td><td>3-10% (compound of click-to-conversation &times; conversation-to-sale)</td></tr>
         <tr><td>Profile visit funnel (Visit-to-Sale, compound)</td><td>0.5-2% (compound of Visit-to-DM 5-15% &times; DM-to-Sale 15-30%)</td></tr>
         <tr><td>Info product checkout</td><td>2-6%</td></tr>
+        <tr><td>Webinar funnel (reg &rarr; attend &rarr; buy, compound)</td><td>3-8% reg-to-sale (compound of attendance 25-45% &times; show-to-sale 8-20%)</td></tr>
       </table>
-      <p>Set target at or above the floor of the benchmark range. Below the floor signals a destination problem.</p>
+      <p>Set target at or above the floor of the benchmark range. Below the floor signals a destination problem. For compound funnels (webinar, profile-visit), the floor is the <em>product</em> of the stage rates, so a weak single stage drags the whole funnel below the floor even when the ad-stage metric looks fine.</p>
       <div class="info-box">
         Algebraic check: <code>Target CVR = Target CPC / Target CPA</code>. If the math returns a CVR outside the benchmark range, one of CPA or CPC targets is unrealistic.
       </div>
@@ -1722,8 +1723,9 @@ Platform: ___________
           <tr><td>Lead Gen (ad &rarr; native form &rarr; follow-up)</td><td>Cost Per Lead</td><td>Target CPA &times; Lead-to-Sale rate</td><td>Target CPA &divide; 10</td></tr>
           <tr><td>Click-to-WhatsApp (ad &rarr; DM &rarr; sale)</td><td>Cost Per Conversation</td><td>Target CPA &times; DM-to-Sale rate</td><td>Target CPA &divide; 4 (retail), &divide; 7 (B2B)</td></tr>
           <tr><td>Profile Visit (ad &rarr; IG profile &rarr; DM &rarr; sale)</td><td>Cost Per Profile Visit</td><td>Target CPA &times; DM-to-Sale &times; Visit-to-DM</td><td>Target CPA &divide; 40 (retail), &divide; 67 (B2B)</td></tr>
+          <tr><td>Webinar funnel (ad &rarr; registration &rarr; live/replay &rarr; checkout)</td><td>Cost Per Registration (Lead)</td><td>Target CPA &times; attendance rate &times; show-to-sale rate</td><td>Target CPA &divide; 20 to &divide; 40</td></tr>
         </table>
-        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>Default Nigerian SMB conversion rates:</strong> Click-to-Sale (Traffic objective) 2% cold / 4% warm/RT / 1% broad-geo splash; Lead-to-Sale (Meta native lead form) 10%; DM-to-Sale 25% retail / 15% B2B wholesale; Profile-Visit-to-DM 10% optimized profile / 5% unoptimized.</p>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>Default Nigerian SMB conversion rates:</strong> Click-to-Sale (Traffic objective) 2% cold / 4% warm/RT / 1% broad-geo splash; Lead-to-Sale (Meta native lead form) 10%; DM-to-Sale 25% retail / 15% B2B wholesale; Profile-Visit-to-DM 10% optimized profile / 5% unoptimized. <strong>Webinar funnel:</strong> registration &rarr; attendance 25-45% (cold paid; warm/organic + reminder stacks higher), attendance &rarr; purchase 8-20%, replay &rarr; purchase 2-8% of no-shows, blended registration &rarr; purchase 3-8%.</p>
         <div class="warning-box" style="margin-top:8px;">
           <strong>Critical: Objective Choice Drives Translation.</strong> If pixel + purchase event installed, Sales objective beats Traffic objective by 40-60% effective CPA without any other change. Same destination, different optimization. Most NG SMBs run the wrong objective for their funnel &mdash; switching is the cheapest Month 1 win available.
         </div>
@@ -1737,8 +1739,9 @@ Platform: ___________
           <tr><td>Lead Gen (ad &rarr; native form &rarr; follow-up)</td><td>Cost Per Lead</td><td>Target CPA &times; Lead-to-Sale rate</td><td>Target CPA &divide; 12 (lead quality typically weaker than Meta)</td></tr>
           <tr><td>Click-to-WhatsApp / Messages (ad &rarr; DM &rarr; sale)</td><td>Cost Per Conversation</td><td>Target CPA &times; DM-to-Sale rate</td><td>Target CPA &divide; 4 (retail), &divide; 7 (B2B)</td></tr>
           <tr><td>Profile Visit / Bio Link (ad &rarr; profile &rarr; DM &rarr; sale)</td><td>Cost Per Profile Visit / CPC on Bio Link</td><td>Target CPA &times; DM-to-Sale &times; Visit-to-DM</td><td>Target CPA &divide; 50 (retail, lower than IG), &divide; 80 (B2B)</td></tr>
+          <tr><td>Webinar funnel (ad &rarr; registration &rarr; live/replay &rarr; checkout)</td><td>Cost Per Registration (Lead)</td><td>Target CPA &times; attendance rate &times; show-to-sale rate</td><td>Target CPA &divide; 25 to &divide; 50 (attendance typically lower than Meta)</td></tr>
         </table>
-        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>Default conversion rates (TikTok-adjusted):</strong> Click-to-Sale (Traffic) 1.5% cold / 3% warm/RT (lower than Meta &mdash; audience skews entertainment-first); Lead-to-Sale (TikTok native lead form) 8%; DM-to-Sale 25% retail / 15% B2B; Profile-Visit-to-DM 7% optimized / 3% unoptimized.</p>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>Default conversion rates (TikTok-adjusted):</strong> Click-to-Sale (Traffic) 1.5% cold / 3% warm/RT (lower than Meta &mdash; audience skews entertainment-first); Lead-to-Sale (TikTok native lead form) 8%; DM-to-Sale 25% retail / 15% B2B; Profile-Visit-to-DM 7% optimized / 3% unoptimized; Webinar registration &rarr; attendance 20-40% (entertainment-first audience shows up less reliably; lean on reminder stacks).</p>
         <div class="warning-box" style="margin-top:8px;">
           <strong>Critical: TikTok audience is entertainment-first.</strong> Same offer that converts at 2% on Meta Traffic typically converts at 1-1.5% on TikTok Traffic. If using TikTok for direct response, default to Sales objective with TikTok Shop or pixel-tracked checkout. Lead Gen and Traffic produce volume but soft intent.
         </div>
@@ -1787,6 +1790,41 @@ Platform: ___________
 
       <div class="info-box" style="margin-top:10px;">
         For the diagnostic reply templates and 7-step quick-diagnosis workflow used in client conversations, see the markdown reference at <code>~/.claude/skills/performance-marketing/references/client-engagement-playbook.md</code> &rarr; Diagnostic Reply Templates.
+      </div>
+
+      <h4>Webinar / multi-stage funnels &mdash; stage-by-stage estimation</h4>
+      <p>A webinar funnel breaks the single-stage assumption behind every row above. The ad fills a free class; the purchase happens days later, on a different page, after the prospect shows up and watches the pitch. The <strong>only</strong> ad-readable metric is <strong>CPL (cost per registration)</strong> &mdash; it sits four stages upstream of revenue, and the ad platform cannot see the sale at all (and undercounts the checkout backend heavily where it can). Do not judge a webinar campaign on CPL alone; judge it on the modelled chain, then on the backend export once the webinar runs.</p>
+      <div class="copyable">Spend &rarr; Registrations (CPL) &rarr; Attendees (attendance rate) &rarr; Buyers (show-to-sale + replay) &rarr; Revenue
+
+Registrations    = Spend / CPL
+Attendees        = Registrations * attendance rate
+Buyers           = (Attendees * show-to-sale) + (No-shows * replay-sale rate)
+Blended reg-sale = Buyers / Registrations
+Effective CAC    = Spend / Buyers = CPL / blended reg-sale
+Revenue          = Buyers * price        (net = * 0.96 for a ~4% checkout fee)
+Funnel ROAS      = Revenue / Spend
+Breakeven CAC    = price * gross margin
+Target CAC       = price * gross margin * allowance (~30%)
+Target CPL       = Target CAC * blended reg-sale     &lt;-- set the ad-stage target from this, not from a guess</div>
+      <p>Worked example (info product at &#8358;35,000, 90% margin, &#8358;70,000 weekly spend, CPL &#8358;600; base assumptions attendance 35% / show-to-sale 12% / replay 2% of no-shows):</p>
+      <table class="decision-table">
+        <tr><th>Stage</th><th>Value</th></tr>
+        <tr><td>Registrations</td><td>117</td></tr>
+        <tr><td>Attendees (35%)</td><td>41</td></tr>
+        <tr><td>Buyers (live 12% + replay 2% of no-shows)</td><td>~6.4</td></tr>
+        <tr><td>Blended reg &rarr; sale</td><td>5.5%</td></tr>
+        <tr><td>Effective CAC</td><td>&#8358;10,940</td></tr>
+        <tr><td>Gross revenue</td><td>&#8358;224,000</td></tr>
+        <tr class="action-scale"><td>Funnel ROAS</td><td>3.2x (breakeven 1.11x, target ~2.5x)</td></tr>
+        <tr><td>Target CAC (30% of margin)</td><td>&#8358;9,450</td></tr>
+        <tr><td>Implied target CPL</td><td>~&#8358;520</td></tr>
+        <tr class="action-kill"><td>Breakeven CPL (lose money above)</td><td>~&#8358;1,733</td></tr>
+      </table>
+      <div class="warning-box" style="margin-top:8px;">
+        <strong>The leverage sits in show-to-sale, not the ad.</strong> Hold everything else and move show-to-sale from 12% to 8% and funnel ROAS falls to ~2.0x; move it to 18% and it rises to ~5.5x. When CPL looks fine but funnel ROAS is weak, the fix is the webinar and the close, not the campaign.
+      </div>
+      <div class="info-box" style="margin-top:8px;">
+        <strong>Backend export is truth.</strong> Build the model on assumptions, then replace registration counts with the registration source of truth (the Sheet / email / CRM tool) and buyer counts with the checkout backend export &mdash; whatever processor the offer sells through (Selar, Paystack, Flutterwave, Stripe, Gumroad, a manual transfer log, etc.) &mdash; never the platform-attributed purchase number. The platform's Lead count is the only ad-side figure to trust on a webinar campaign.
       </div>
 
       <div class="success-box">
