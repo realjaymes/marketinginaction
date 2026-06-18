@@ -1573,7 +1573,7 @@
       document.querySelectorAll('.year').forEach(function(e){ e.textContent = new Date().getFullYear(); });
       try { if (typeof fbq === 'function') fbq('track','ViewContent',{content_name:'DIME Webinar Room'}); } catch(e){}
       // OFFER TIMING — seconds into the recording when the price is revealed.
-      var OFFER_REVEAL_SECONDS = 2440; // James's real video time: you say the price (₦35,000) at 40:38 = 2438, +2 so the words land first.
+      var OFFER_REVEAL_SECONDS = 2456; // Verified against transcript 2026-06-19: "₦35,000" first spoken at 40:54 = 2454, +2 so the words land first (was 2440, ~14s early).
       var COMMENT_DELAY = 2; // seconds added to every comment's anchor — natural "viewers typing" lag after each prompt. Tune freely.
 
       // Bunny HLS source (HLS needs hls.js outside Safari). No <source>/controls = no seeking.
@@ -1649,11 +1649,11 @@
         {t:2418, name:"Peace",    text:"Let's go sir"},
         {t:2428, name:"Obi",      text:"Been waiting for this part"},
         {t:2435, name:"Stella",   text:"Yes sir"},
-        {t:2448, name:"Amaka",    text:"Is the ₦35k one-time?"},
-        {t:2460, name:"Grace",    text:"₦96 a day is nothing"},
-        {t:2472, name:"Tunde",    text:"Does it work for students?"},
-        {t:2484, name:"Yusuf",    text:"How soon is the first sale?"},
-        {t:2496, name:"Kelechi",  text:"Okay you have answered me"},
+        {t:2458, name:"Amaka",    text:"Is the ₦35k one-time?"},
+        {t:2478, name:"Tunde",    text:"Does it work for students?"},
+        {t:2490, name:"Yusuf",    text:"How soon is the first sale?"},
+        {t:2502, name:"Grace",    text:"₦96 a day is nothing"},
+        {t:2504, name:"Kelechi",  text:"Okay you have answered me"},
         {t:2510, name:"Chinedu",  text:"Paid"},
         {t:2515, name:"Tobi",     text:"Paid"},
         {t:2520, name:"Ekele",    text:"Just paid, used DIMEWEBINAR"},
