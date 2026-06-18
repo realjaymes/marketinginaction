@@ -19,6 +19,7 @@
     socialoptimizationsolutions: 15000,
     socialautomationsolutions:   15000,
     metaaccountsolutions:        15000,
+    targetbuyer:                 5000,
     onlinemarketingbundle:       45000,   // Online Marketing Mentorship
     onlinemarketingconsulting:   250000,  // per month
 
@@ -30,7 +31,8 @@
     marketingresources:          20000,
     aipromptplaybook:            20000,
     marketingprogramcore:        45000,   // AI Marketing Bootcamp (Core)
-    marketingprogram:            75000    // AI Marketing Bootcamp (Full)
+    marketingprogram:            75000,   // AI Marketing Bootcamp (Full)
+    dimedfy:                     350000   // DIME Done-For-You (founding early-bird)
   };
 
   window.MIA_PRICES = PRICES;
