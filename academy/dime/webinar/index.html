@@ -1580,7 +1580,7 @@
       var HLS_URL='https://vz-210e68ea-a2f.b-cdn.net/0bba9366-477b-4638-bd8e-255e5cab8512/playlist.m3u8';
       (function(){ var v=document.getElementById('classVideo'); if(!v) return;
         if(v.canPlayType('application/vnd.apple.mpegurl')){ v.src=HLS_URL; }
-        else if(window.Hls && Hls.isSupported()){ var h=new Hls({maxBufferLength:30}); h.loadSource(HLS_URL); h.attachMedia(v); }
+        else if(window.Hls && Hls.isSupported()){ var h=new Hls({maxBufferLength:30, capLevelToPlayerSize:true}); h.loadSource(HLS_URL); h.attachMedia(v); }
         else { v.src=HLS_URL; }
       })();
 
