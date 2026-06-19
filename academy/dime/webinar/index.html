@@ -1697,28 +1697,106 @@
       var so=document.getElementById('startOverlay'); if(so) so.addEventListener('click', startClass);
       var cv=document.getElementById('classVideo');
       if(cv){ cv.addEventListener('ended', function(){ revealOffer(); var e=document.getElementById('endedBlock'); if(e) e.style.display='block'; var o=document.getElementById('offerBlock'); if(o){ try{ o.scrollIntoView({behavior:'smooth', block:'center'}); }catch(err){} } }); }
-      // === Buyer identity carry-through + checkout-intent capture (shared MIA intent sheet) ===
-      // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage from the opt-in (same browser).
-      // Prefills Selar with name+email ONLY (no phone — prefilled phones break Selar checkout). Logs a "clicked buy" row to the same sheet all the lead modals use.
+      // === Checkout: known buyer → straight to Selar; unknown → prefill modal first ===
+      // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage dime_lead (same browser, set at the opt-in).
+      // KNOWN (email present): go direct to Selar and log a complete intent row. UNKNOWN: pop the prefill modal, collect name/email/phone, log, then go.
+      // Selar always gets name + email only — phone goes to our sheet, never to Selar (prefilled phones break Selar checkout). The coupon on the href is preserved.
       (function(){
         var INTENT_SHEET="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
-        var qp; try{ qp=new URLSearchParams(location.search); }catch(e){ qp=null; }
-        var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){}
-        function pick(k){ return (qp&&(qp.get(k)||''))||''; }
-        var email=(pick('email')||pick('lead')||lead.email||'').trim();
-        var name =(pick('fullname')||pick('name')||lead.name||'').trim();
-        var phone=(lead.phone||'').trim(); // phone → our sheet only, never to Selar
-        // Prefill the Selar links (name + email; coupon already on the href)
-        document.querySelectorAll('a.js-buy').forEach(function(a){ try{ var u=new URL(a.href); if(email)u.searchParams.set('email',email); if(name)u.searchParams.set('fullname',name); a.href=u.toString(); }catch(e){} });
-        // Pixels + intent row on click
-        document.querySelectorAll('a.js-buy').forEach(function(a){ a.addEventListener('click', function(){
-          try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:35000,currency:'NGN'}); }catch(e){}
-          try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:35000,currency:'NGN'}); }catch(e){}
-          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:35000, currency:'NGN'});
-          try{ fetch(INTENT_SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:'DIME – clicked buy (webinar)',pageUrl:location.href,source:'webinar-intent',event:'clicked_buy'})}); }catch(e){}
-        }); });
+        var PRODUCT='DIME – clicked buy (webinar)', SOURCE='webinar-intent', VALUE=35000;
+        var DEFAULT_SELAR='https://selar.com/57157707om?quickcheckout=1&coupon=DIMEWEBINAR';
+        function known(){
+          var qp; try{ qp=new URLSearchParams(location.search); }catch(e){ qp=null; }
+          var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){}
+          function pick(k){ return (qp&&(qp.get(k)||''))||''; }
+          return { email:(pick('email')||pick('lead')||lead.email||'').trim(), name:(pick('fullname')||pick('name')||lead.name||'').trim(), phone:(lead.phone||'').trim() };
+        }
+        // Preserve everything already on the href (incl. ?quickcheckout=1&coupon=DIMEWEBINAR); append name+email only, never phone.
+        function selarUrl(base, name, email){ var i=base.indexOf('&email='); var u=(i>-1?base.substring(0,i):base); return u+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name); }
+        function fireCheckout(){
+          try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e){}
+          try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:VALUE,currency:'NGN'}); }catch(e){}
+          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:VALUE, currency:'NGN'});
+        }
+        function logIntent(d){ try{ fetch(INTENT_SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:d.name||'',email:d.email||'',phone:d.phone||'',product:PRODUCT,pageUrl:location.href,source:SOURCE,event:'clicked_buy'})}); }catch(e){} }
+        var pendingBase='';
+        document.addEventListener('click', function(e){
+          if(e.target && e.target.id==='prefillModal'){ closePrefill(); return; } // backdrop click closes
+          var a=e.target.closest('a.js-buy'); if(!a) return;
+          e.preventDefault();
+          var k=known();
+          if(k.email){ fireCheckout(); logIntent(k); window.location.href=selarUrl(a.href, k.name, k.email); return; } // known → direct
+          pendingBase=a.href; // unknown → collect first
+          var form=document.getElementById('prefillForm'); if(form) form.reset();
+          if(k.name){ var n=document.getElementById('prefillName'); if(n) n.value=k.name; }
+          var m=document.getElementById('prefillModal'); if(m) m.classList.add('open'); document.body.style.overflow='hidden';
+          try{ if(typeof fbq==='function') fbq('track','AddToCart',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e2){}
+          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'add_to_cart', value:VALUE, currency:'NGN'});
+          setTimeout(function(){ try{ document.getElementById('prefillName').focus(); }catch(e3){} },100);
+        });
+        window.closePrefill=function(){ var m=document.getElementById('prefillModal'); if(m) m.classList.remove('open'); document.body.style.overflow=''; pendingBase=''; };
+        window.submitPrefill=function(ev){
+          ev.preventDefault();
+          var name=document.getElementById('prefillName').value.trim();
+          var email=document.getElementById('prefillEmail').value.trim();
+          var phone=document.getElementById('prefillPhone').value.trim();
+          if(phone){ phone=phone.replace(/\D/g,''); if(phone.startsWith('234'))phone=phone.substring(3); if(phone.startsWith('0'))phone=phone.substring(1); phone='234'+phone; }
+          try{ localStorage.setItem('dime_lead', JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()})); }catch(e){} // so the next click is "known"
+          fireCheckout(); logIntent({name:name,email:email,phone:phone});
+          var dest=selarUrl(pendingBase||DEFAULT_SELAR, name, email);
+          setTimeout(function(){ window.location.href=dest; }, 400);
+        };
+        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closePrefill(); });
       })();
     </script>
+
+    <!-- Prefill Checkout Modal (unknown buyers only; known buyers skip straight to Selar) -->
+    <div class="prefill-modal" id="prefillModal">
+        <div class="prefill-modal__inner">
+            <div class="prefill-modal__header">
+                <span class="prefill-modal__title">Almost there — Step 1 of 2</span>
+                <button class="prefill-modal__close" onclick="closePrefill()">&times;</button>
+            </div>
+            <div class="prefill-modal__body">
+                <p class="prefill-modal__sub">Enter your details and you will be taken straight to checkout with the coupon already applied.</p>
+                <form id="prefillForm" onsubmit="submitPrefill(event)">
+                    <div class="prefill-modal__field">
+                        <label>Full Name *</label>
+                        <input type="text" id="prefillName" required placeholder="e.g. Adaeze Okonkwo">
+                    </div>
+                    <div class="prefill-modal__field">
+                        <label>Email Address *</label>
+                        <input type="email" id="prefillEmail" required placeholder="e.g. adaeze@gmail.com">
+                    </div>
+                    <div class="prefill-modal__field">
+                        <label>Phone Number</label>
+                        <input type="tel" id="prefillPhone" placeholder="e.g. 08012345678">
+                    </div>
+                    <button type="submit" class="prefill-modal__btn">Proceed to Payment &rarr;</button>
+                    <p class="prefill-modal__trust">Secure payment via Selar &middot; Paystack &middot; Bank Transfer</p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <style>
+        .prefill-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;padding:20px;}
+        .prefill-modal.open{display:flex;}
+        .prefill-modal__inner{background:#fff;border-radius:16px;width:100%;max-width:440px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:prefillSlideUp 0.25s ease;}
+        @keyframes prefillSlideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+        .prefill-modal__header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #eee;}
+        .prefill-modal__title{font-weight:700;font-size:1rem;color:var(--primary-dark,#1a1a2e);}
+        .prefill-modal__close{background:none;border:none;font-size:1.6rem;cursor:pointer;color:#999;line-height:1;padding:0 4px;}
+        .prefill-modal__close:hover{color:#333;}
+        .prefill-modal__body{padding:20px 24px 24px;}
+        .prefill-modal__sub{font-size:0.85rem;color:#666;margin:0 0 18px;}
+        .prefill-modal__field{margin-bottom:14px;}
+        .prefill-modal__field label{display:block;font-size:0.8rem;font-weight:600;color:var(--primary-dark,#1a1a2e);margin-bottom:4px;}
+        .prefill-modal__field input{width:100%;padding:10px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:0.9rem;outline:none;transition:border 0.2s;font-family:inherit;}
+        .prefill-modal__field input:focus{border-color:var(--accent,#f1de71);}
+        .prefill-modal__btn{display:block;width:100%;padding:13px;background:var(--accent,#f1de71);color:var(--primary-dark,#1a1a2e);border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;}
+        .prefill-modal__btn:hover{opacity:0.9;}
+        .prefill-modal__trust{font-size:0.75rem;color:#999;text-align:center;margin:10px 0 0;}
+    </style>
 
 </body>
 </html>
