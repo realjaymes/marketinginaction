@@ -113,6 +113,6 @@
     </footer>
   </div>
 
-  <script>(function(){try{var KEY='mia_purchase_socialautomationsolutions';if(!sessionStorage.getItem(KEY)){sessionStorage.setItem(KEY,'1');var pname='Social Automation Simplified for Business Owners';var slug='socialautomationsolutions';var pval=(window.MIA_PRICES&&window.MIA_PRICES.socialautomationsolutions)||15000;var cur='NGN';var eid='purch_'+new Date().getTime()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','Purchase',{content_name:pname,content_ids:[slug],content_type:'product',value:pval,currency:cur},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('CompletePayment',{content_id:slug,content_name:pname,value:pval,currency:cur});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'purchase',event_id:eid,ecommerce:{value:pval,currency:cur,items:[{item_id:slug,item_name:pname,price:pval,quantity:1}]}});var qs=new URLSearchParams(location.search),utm={};['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){if(qs.get(k))utm[k]=qs.get(k);});if(Object.keys(utm).length)window.dataLayer.push({event:'purchase_source',utm:utm});}}catch(e){}})();</script>
+  <!-- Purchase event removed 2026-06-19: the client-side fire counted ANY page load (QA, refresh, direct/bookmarked visits, bots) as a purchase, with no Selar transaction check. Meta Purchase now comes from Selar's CAPI (server-side, accurate); Selar export is source of truth. -->
 </body>
 </html>
