@@ -20,9 +20,9 @@
   --text: #f7f4fa;
   --text-secondary: #b8afc4;
   --text-muted: #8a7f96;
-  --accent: #f1de71;
-  --accent-hover: #f5e898;
-  --accent-bg: rgba(241, 222, 113, 0.1);
+  --mia-accent: #f1de71;
+  --mia-accent-hover: #f5e898;
+  --mia-accent-bg: rgba(241, 222, 113, 0.1);
   --green: #71f19e;
   --yellow: #f1de71;
   --red: #f171c4;
@@ -50,9 +50,9 @@
   --text: #1c1422;
   --text-secondary: #4a3d58;
   --text-muted: #7a6e88;
-  --accent: #1c1422;
-  --accent-hover: #2d2438;
-  --accent-bg: rgba(28, 20, 34, 0.06);
+  --mia-accent: #1c1422;
+  --mia-accent-hover: #2d2438;
+  --mia-accent-bg: rgba(28, 20, 34, 0.06);
   --green: #2d9f5a;
   --yellow: #c4a91a;
   --red: #c4418a;
@@ -94,13 +94,13 @@ body {
 }
 
 a {
-  color: var(--accent);
+  color: var(--mia-accent);
   text-decoration: none;
   transition: color var(--transition);
 }
 
 a:hover {
-  color: var(--accent-hover);
+  color: var(--mia-accent-hover);
 }
 
 [data-theme="light"] .logo-icon {
@@ -141,7 +141,7 @@ img {
   top: 0;
   left: 0;
   height: 3px;
-  background: var(--accent);
+  background: var(--mia-accent);
   z-index: 1000;
   transition: width 0.1s linear;
   width: 0%;
@@ -177,11 +177,11 @@ img {
 }
 
 .logo:hover {
-  color: var(--accent);
+  color: var(--mia-accent);
 }
 
 .logo-icon {
-  color: var(--accent);
+  color: var(--mia-accent);
 }
 
 .header-nav {
@@ -212,8 +212,8 @@ img {
 }
 
 .theme-toggle:hover {
-  border-color: var(--accent);
-  background: var(--accent-bg);
+  border-color: var(--mia-accent);
+  background: var(--mia-accent-bg);
 }
 
 [data-theme="dark"] .theme-icon-dark { display: none; }
@@ -235,8 +235,8 @@ img {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
-  background: var(--accent-bg);
+  color: var(--mia-accent);
+  background: var(--mia-accent-bg);
   padding: 4px 14px;
   border-radius: 20px;
   margin-bottom: 20px;
@@ -251,7 +251,7 @@ img {
 }
 
 .hero-accent {
-  color: var(--accent);
+  color: var(--mia-accent);
 }
 
 [data-theme="light"] .hero-accent {
@@ -340,13 +340,13 @@ img {
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--mia-accent);
   color: var(--bg);
   font-weight: 700;
 }
 
 .btn-primary:hover {
-  background: var(--accent-hover);
+  background: var(--mia-accent-hover);
   color: var(--bg);
 }
 
@@ -367,8 +367,8 @@ img {
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--mia-accent);
+  color: var(--mia-accent);
 }
 
 /* ===========================
@@ -409,8 +409,8 @@ img {
 }
 
 .section-nav-item.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--mia-accent);
+  border-bottom-color: var(--mia-accent);
 }
 
 .nav-number {
@@ -435,7 +435,7 @@ img {
   display: block;
   font-size: 0.8rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--mia-accent);
   letter-spacing: 0.08em;
   margin-bottom: 8px;
 }
@@ -493,7 +493,7 @@ img {
 }
 
 .info-card:hover {
-  border-color: var(--accent);
+  border-color: var(--mia-accent);
   box-shadow: var(--shadow-lg);
 }
 
@@ -735,8 +735,8 @@ img {
 }
 
 .tab-btn.active {
-  color: var(--accent);
-  border-bottom-color: var(--accent);
+  color: var(--mia-accent);
+  border-bottom-color: var(--mia-accent);
 }
 
 .tab-content {
@@ -795,9 +795,9 @@ img {
 }
 
 .copy-btn:hover {
-  background: var(--accent);
+  background: var(--mia-accent);
   color: #fff;
-  border-color: var(--accent);
+  border-color: var(--mia-accent);
 }
 
 [data-theme="light"] .copy-btn:hover {
@@ -870,15 +870,15 @@ img {
   flex-shrink: 0;
   width: 36px;
   height: 36px;
-  background: var(--accent-bg);
-  color: var(--accent);
+  background: var(--mia-accent-bg);
+  color: var(--mia-accent);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
   font-size: 0.9rem;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--mia-accent);
 }
 
 .step-content {
@@ -954,8 +954,8 @@ img {
 }
 
 .badge-skill {
-  background: var(--accent-bg);
-  color: var(--accent);
+  background: var(--mia-accent-bg);
+  color: var(--mia-accent);
 }
 
 .badge-info {
@@ -1041,12 +1041,12 @@ img {
 }
 
 .anatomy-root {
-  background: var(--accent-bg);
-  border-color: var(--accent);
+  background: var(--mia-accent-bg);
+  border-color: var(--mia-accent);
 }
 
 .anatomy-root .anatomy-label {
-  color: var(--accent);
+  color: var(--mia-accent);
 }
 
 .anatomy-required {
@@ -1103,7 +1103,7 @@ img {
 .flow-number {
   width: 28px;
   height: 28px;
-  background: var(--accent);
+  background: var(--mia-accent);
   color: var(--bg);
   border-radius: 50%;
   display: flex;
@@ -1268,7 +1268,7 @@ img {
 }
 
 .footer-right a:hover {
-  color: var(--accent);
+  color: var(--mia-accent);
 }
 
 /* ===========================
@@ -1339,8 +1339,8 @@ img {
 }
 
 .academy-card {
-  background: linear-gradient(135deg, var(--accent-bg), var(--bg-secondary));
-  border: 1px solid var(--accent);
+  background: linear-gradient(135deg, var(--mia-accent-bg), var(--bg-secondary));
+  border: 1px solid var(--mia-accent);
   border-radius: var(--radius);
   padding: 40px;
   text-align: center;
@@ -1352,12 +1352,12 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: var(--mia-accent);
   background: var(--bg);
   padding: 4px 14px;
   border-radius: 20px;
   margin-bottom: 16px;
-  border: 1px solid var(--accent);
+  border: 1px solid var(--mia-accent);
 }
 
 .academy-card h2 {
@@ -1400,7 +1400,7 @@ img {
   content: "\2713";
   position: absolute;
   left: 0;
-  color: var(--accent);
+  color: var(--mia-accent);
   font-weight: 700;
 }
 

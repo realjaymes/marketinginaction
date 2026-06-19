@@ -160,11 +160,11 @@
             --primary-dark:    #1c1422;
             --primary-mid:     #2d2235;
             --primary-light:   #F0ECF5;
-            --accent:          #f1de71;
-            --accent-dark:     #d4c35e;
-            --accent-light:    #fdf8e8;
-            --background:      #F7F4FA;
-            --background-dark: #EDE8F3;
+            --mia-accent:          #f1de71;
+            --mia-accent-dark:     #d4c35e;
+            --mia-accent-light:    #fdf8e8;
+            --mia-background:      #F7F4FA;
+            --mia-background-dark: #EDE8F3;
             --text-primary:    #1c1422;
             --text-muted:      rgba(28, 20, 34, 0.62);
             --text-light:      rgba(28, 20, 34, 0.4);
@@ -196,7 +196,7 @@
         body {
             font-family: var(--font-body);
             color: var(--text-primary);
-            background: var(--background);
+            background: var(--mia-background);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
         }
@@ -229,7 +229,7 @@
             max-width: 640px;
             margin: 0 auto 32px;
         }
-        .highlight { color: var(--accent); }
+        .highlight { color: var(--mia-accent); }
         .highlight-dark { color: var(--primary-dark); }
 
         /* BUTTONS */
@@ -251,7 +251,7 @@
         }
         .btn:active { transform: translateY(1px); }
         .btn-accent {
-            background: var(--accent);
+            background: var(--mia-accent);
             color: var(--primary-dark);
             box-shadow: var(--shadow-cta);
         }
@@ -278,8 +278,8 @@
             border: 2px solid rgba(255,255,255,0.3);
         }
         .btn-outline:hover {
-            border-color: var(--accent);
-            color: var(--accent);
+            border-color: var(--mia-accent);
+            color: var(--mia-accent);
         }
 
         /* SECTION 1: ANNOUNCEMENT BAR */
@@ -314,7 +314,7 @@
             margin-left: 8px;
             font-family: var(--font-display);
             font-weight: 700;
-            color: var(--accent);
+            color: var(--mia-accent);
         }
         .announcement-bar__timer-unit {
             background: rgba(255,255,255,0.1);
@@ -348,7 +348,7 @@
             color: var(--primary-dark);
             transition: color 0.2s;
         }
-        .sticky-nav__brand:hover { color: var(--accent-dark); text-decoration: none; }
+        .sticky-nav__brand:hover { color: var(--mia-accent-dark); text-decoration: none; }
         .sticky-nav .btn { padding: 10px 24px; font-size: 0.9rem; }
 
         /* SECTION 3: HERO */
@@ -360,8 +360,8 @@
         }
         .hero__audience-tag {
             display: inline-block;
-            border: 1.5px solid var(--accent);
-            color: var(--accent);
+            border: 1.5px solid var(--mia-accent);
+            color: var(--mia-accent);
             font-size: 0.85rem;
             font-weight: 500;
             padding: 6px 20px;
@@ -402,8 +402,8 @@
             background: rgba(220,38,38,0.05);
         }
         .hero__compare-box--after {
-            color: var(--accent);
-            border-color: var(--accent);
+            color: var(--mia-accent);
+            border-color: var(--mia-accent);
             font-weight: 700;
             background: rgba(241,222,113,0.06);
         }
@@ -426,7 +426,7 @@
             font-size: 0.85rem;
             color: rgba(255,255,255,0.7);
         }
-        .hero__proof-text strong { color: var(--accent); }
+        .hero__proof-text strong { color: var(--mia-accent); }
 
         /* SECTION 4: PROBLEM */
         .problem-section {
@@ -468,7 +468,7 @@
         }
         .value-stack .section-label {
             background: rgba(241,222,113,0.15);
-            color: var(--accent);
+            color: var(--mia-accent);
         }
         .value-stack .section-title { color: var(--white); }
         .value-stack .section-sub { color: rgba(255,255,255,0.6); }
@@ -481,7 +481,7 @@
             border: 1px solid rgba(241,222,113,0.2);
         }
         .value-stack__header {
-            background: var(--accent);
+            background: var(--mia-accent);
             color: var(--primary-dark);
             padding: 20px 28px;
             font-family: var(--font-display);
@@ -493,11 +493,11 @@
         .value-stack .value-item { border-bottom-color: rgba(255,255,255,0.08); }
         .value-stack .value-item__name { color: var(--white); }
         .value-stack .value-item__desc { color: rgba(255,255,255,0.55); }
-        .value-stack .value-item__objection { color: var(--accent); }
+        .value-stack .value-item__objection { color: var(--mia-accent); }
         .value-stack .value-item__price-struck { color: rgba(255,255,255,0.35); }
-        .value-stack .value-item__free { background: rgba(241,222,113,0.15); color: var(--accent); }
+        .value-stack .value-item__free { background: rgba(241,222,113,0.15); color: var(--mia-accent); }
         .value-stack .value-item--core { background: rgba(241,222,113,0.04); }
-        .value-stack__subtotal { background: var(--accent); color: var(--primary-dark); border-top: none; font-size: 1rem; font-weight: 750; }
+        .value-stack__subtotal { background: var(--mia-accent); color: var(--primary-dark); border-top: none; font-size: 1rem; font-weight: 750; }
         .value-stack__items { padding: 0; }
         .value-item {
             display: flex;
@@ -516,7 +516,7 @@
         .value-item__desc { font-size: 0.8rem; color: var(--text-muted); }
         .value-item__objection {
             font-size: 0.75rem;
-            color: var(--accent-dark);
+            color: var(--mia-accent-dark);
             font-style: italic;
             margin-top: 2px;
         }
@@ -533,14 +533,14 @@
             margin-right: 8px;
         }
         .value-item__free {
-            background: var(--accent-light);
-            color: var(--accent-dark);
+            background: var(--mia-accent-light);
+            color: var(--mia-accent-dark);
             padding: 3px 10px;
             border-radius: 50px;
             font-size: 0.75rem;
         }
         .value-stack__subtotal {
-            background: var(--accent);
+            background: var(--mia-accent);
             padding: 14px 28px;
             text-align: center;
             font-family: var(--font-display);
@@ -559,7 +559,7 @@
             font-family: var(--font-display);
             font-weight: 750;
             font-size: 1.6rem;
-            color: var(--accent);
+            color: var(--mia-accent);
         }
         .value-stack__total-label {
             font-size: 0.85rem;
@@ -568,7 +568,7 @@
 
         /* SECTION 6/10: WHATSAPP TESTIMONIALS */
         .wa-testimonials {
-            background: var(--background);
+            background: var(--mia-background);
             padding: 64px 0;
         }
         .wa-testimonials--alt {
@@ -589,7 +589,7 @@
             position: relative;
         }
         .wa-testimonials--alt .wa-card {
-            background: var(--background);
+            background: var(--mia-background);
         }
         .wa-card__badge {
             display: inline-flex;
@@ -625,7 +625,7 @@
 
         /* SECTION 7: STORY */
         .origin {
-            background: var(--background);
+            background: var(--mia-background);
             padding: 64px 0;
         }
         .origin__grid {
@@ -655,8 +655,8 @@
             color: var(--text-primary);
         }
         .origin__pullquote {
-            background: var(--accent-light);
-            border-left: 4px solid var(--accent);
+            background: var(--mia-accent-light);
+            border-left: 4px solid var(--mia-accent);
             padding: 20px 24px;
             margin: 24px 0;
             border-radius: 0 var(--radius-md) var(--radius-md) 0;
@@ -676,7 +676,7 @@
             font-family: var(--font-display);
             font-weight: 750;
             font-size: 4rem;
-            color: var(--accent);
+            color: var(--mia-accent);
             letter-spacing: -2px;
             line-height: 1;
             margin-bottom: 8px;
@@ -723,7 +723,7 @@
 
         /* SECTION 11: COACH INTRO */
         .coach-intro {
-            background: var(--background);
+            background: var(--mia-background);
             padding: 64px 0;
         }
         .coach-intro__grid {
@@ -806,7 +806,7 @@
             width: 72px;
             height: 72px;
             margin: 0 auto 20px;
-            background: var(--accent);
+            background: var(--mia-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -844,7 +844,7 @@
         }
         .guarantee__checklist li::before {
             content: "\2713";
-            color: var(--accent);
+            color: var(--mia-accent);
             font-weight: 700;
             flex-shrink: 0;
             margin-top: 1px;
@@ -879,7 +879,7 @@
         }
         .achievement-card {
             background: var(--white);
-            border-left: 4px solid var(--accent);
+            border-left: 4px solid var(--mia-accent);
             box-shadow: var(--shadow-card);
             border-radius: var(--radius-md);
             padding: 24px;
@@ -896,7 +896,7 @@
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 0.85rem;
-            color: var(--accent-dark);
+            color: var(--mia-accent-dark);
             margin-bottom: 10px;
         }
         .achievement-card__condition { font-size: 0.85rem; color: var(--text-primary); margin-bottom: 8px; line-height: 1.4; }
@@ -924,7 +924,7 @@
         }
         .choice-box--good {
             background: var(--primary-light);
-            border: 2px solid var(--accent);
+            border: 2px solid var(--mia-accent);
         }
         .choice-box__label {
             font-family: var(--font-display);
@@ -950,7 +950,7 @@
 
         /* SECTION 15: PRICING — 3 TIERS */
         .pricing {
-            background: var(--background);
+            background: var(--mia-background);
             padding: 64px 0;
         }
         .pricing__tiers {
@@ -970,12 +970,12 @@
             text-align: center;
         }
         .pricing__tier--recommended {
-            border-color: var(--accent);
+            border-color: var(--mia-accent);
             box-shadow: 0 8px 40px rgba(241,222,113,0.2);
             position: relative;
         }
         .pricing__tier-badge {
-            background: var(--accent);
+            background: var(--mia-accent);
             color: var(--primary-dark);
             padding: 8px;
             font-family: var(--font-display);
@@ -1012,8 +1012,8 @@
         }
         .pricing__tier-savings {
             display: inline-block;
-            background: var(--accent-light);
-            color: var(--accent-dark);
+            background: var(--mia-accent-light);
+            color: var(--mia-accent-dark);
             font-family: var(--font-display);
             font-weight: 700;
             font-size: 0.75rem;
@@ -1081,7 +1081,7 @@
             font-size: 0.8rem;
             color: var(--text-muted);
             padding: 12px;
-            background: var(--background);
+            background: var(--mia-background);
             border-radius: var(--radius-md);
         }
         .pricing__compare-item strong {
@@ -1093,8 +1093,8 @@
             margin-bottom: 2px;
         }
         .pricing__compare-item--this {
-            background: var(--accent-light);
-            border: 2px solid var(--accent);
+            background: var(--mia-accent-light);
+            border: 2px solid var(--mia-accent);
         }
         .pricing__compare-item--this strong {
             color: var(--primary-dark);
@@ -1115,7 +1115,7 @@
             color: var(--white);
             margin-bottom: 20px;
         }
-        .scarcity-band__title strong { color: var(--accent); }
+        .scarcity-band__title strong { color: var(--mia-accent); }
         .dot-grid {
             display: flex;
             flex-wrap: wrap;
@@ -1131,7 +1131,7 @@
             background: rgba(255,255,255,0.12);
         }
         .dot-grid__dot--taken {
-            background: var(--accent);
+            background: var(--mia-accent);
             box-shadow: 0 0 8px rgba(241,222,113,0.4);
         }
         .scarcity-band__note {
@@ -1172,7 +1172,7 @@
             gap: 12px;
             transition: color 0.2s;
         }
-        .faq-item__q:hover { color: var(--accent-dark); }
+        .faq-item__q:hover { color: var(--mia-accent-dark); }
         .faq-item__icon {
             font-size: 1.2rem;
             transition: transform 0.3s;
@@ -1256,7 +1256,7 @@
             font-size: 0.75rem;
         }
         .sticky-bar__cta {
-            background: var(--accent);
+            background: var(--mia-accent);
             color: var(--primary-dark);
             font-family: var(--font-display);
             font-weight: 700;
@@ -1265,7 +1265,7 @@
             border-radius: var(--radius-md);
             transition: background 0.2s;
         }
-        .sticky-bar__cta:hover { background: var(--accent-dark); }
+        .sticky-bar__cta:hover { background: var(--mia-accent-dark); }
 
         /* FOOTER */
         .footer {
@@ -1289,7 +1289,7 @@
             margin-bottom: 20px;
             font-size: 0.85rem;
         }
-        .footer__links a:hover { color: var(--accent); }
+        .footer__links a:hover { color: var(--mia-accent); }
         .footer__trust { font-size: 0.75rem; margin-bottom: 8px; }
         .footer__copy { font-size: 0.75rem; }
 
@@ -1504,9 +1504,9 @@
     <section style="background:#0c0a12; padding:28px 0 48px; min-height:80vh;">
         <div class="container" style="max-width:none; padding:0 32px;">
 
-            <h1 style="color:#fff; font-size:clamp(21px,2.6vw,30px); text-align:center; margin-bottom:6px; line-height:1.25;">How To Make Your First <span style="color:var(--accent);">&#8358;500,000</span> Online <span style="color:var(--accent);">With AI in 30 Days</span> Starting From Scratch</h1>
+            <h1 style="color:#fff; font-size:clamp(21px,2.6vw,30px); text-align:center; margin-bottom:6px; line-height:1.25;">How To Make Your First <span style="color:var(--mia-accent);">&#8358;500,000</span> Online <span style="color:var(--mia-accent);">With AI in 30 Days</span> Starting From Scratch</h1>
             <p style="color:rgba(255,255,255,0.72); text-align:center; font-size:0.9rem; margin-bottom:6px; line-height:1.5;">Your class is starting. Plan for about <strong>40 minutes</strong> and watch the whole thing, there is a lot here. Grab a pen and paper.</p>
-            <p style="color:var(--accent); text-align:center; font-size:0.9rem; font-weight:600; margin-bottom:18px; line-height:1.5;">Stay to the very end. The people who finish get a price and an offer the ones who leave in a hurry never see. It might be the best decision you make this year.</p>
+            <p style="color:var(--mia-accent); text-align:center; font-size:0.9rem; font-weight:600; margin-bottom:18px; line-height:1.5;">Stay to the very end. The people who finish get a price and an offer the ones who leave in a hurry never see. It might be the best decision you make this year.</p>
 
             <style>
               #vidchat{ display:flex; gap:16px; align-items:stretch; }
@@ -1532,7 +1532,7 @@
                         </video>
                         <!-- Start overlay (a click = user gesture so audio autoplays) -->
                         <div id="startOverlay" style="position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:12px; background:rgba(12,10,18,0.92); color:#fff; cursor:pointer; text-align:center; padding:20px;">
-                            <div style="width:74px; height:74px; border-radius:50%; background:var(--accent); color:var(--primary-dark); display:flex; align-items:center; justify-content:center; font-size:1.9rem;">&#9658;</div>
+                            <div style="width:74px; height:74px; border-radius:50%; background:var(--mia-accent); color:var(--primary-dark); display:flex; align-items:center; justify-content:center; font-size:1.9rem;">&#9658;</div>
                             <div style="font-weight:750; font-size:1.1rem;">Click to start your class</div>
                             <div style="font-size:0.82rem; color:rgba(255,255,255,0.6);">(make sure your sound is on)</div>
                         </div>
@@ -1550,14 +1550,14 @@
             <!-- POLL (engagement; appears 36:18 at the ₦45k mention; results reveal ~1 min later, before the ₦35,000 offer) -->
             <style>
               .poll-opt{display:block;width:100%;text-align:left;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;background:#fff;font-size:0.92rem;font-weight:600;color:var(--text-primary);cursor:pointer;font-family:inherit;transition:border .15s,background .15s;}
-              .poll-opt:hover{border-color:var(--accent);}
-              .poll-opt.sel{border-color:var(--accent-dark);background:#fff8e1;}
+              .poll-opt:hover{border-color:var(--mia-accent);}
+              .poll-opt.sel{border-color:var(--mia-accent-dark);background:#fff8e1;}
               .poll-opt:disabled{cursor:default;}
               .poll-bar-row .lab{display:flex;justify-content:space-between;margin-bottom:4px;font-weight:600;font-size:0.88rem;color:var(--text-primary);}
               .poll-bar-track{height:10px;background:#ececec;border-radius:6px;overflow:hidden;}
-              .poll-bar-fill{height:100%;background:var(--accent);border-radius:6px;transition:width .6s ease;}
-              .poll-bar-row.mine .poll-bar-fill{background:var(--accent-dark);}
-              .poll-bar-row.mine .lab span:first-child::after{content:" (you)";color:var(--accent-dark);}
+              .poll-bar-fill{height:100%;background:var(--mia-accent);border-radius:6px;transition:width .6s ease;}
+              .poll-bar-row.mine .poll-bar-fill{background:var(--mia-accent-dark);}
+              .poll-bar-row.mine .lab span:first-child::after{content:" (you)";color:var(--mia-accent-dark);}
             </style>
             <div id="pollBlock" style="display:none; max-width:620px; margin:28px auto 0; background:var(--white); border:2px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:24px 22px;">
                 <div id="pollVote">
@@ -1579,7 +1579,7 @@
             </div>
 
             <!-- OFFER (hidden until the pitch moment) -->
-            <div id="offerBlock" style="display:none; max-width:620px; margin:28px auto 0; background:var(--white); border:2px solid var(--accent); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:28px 26px; text-align:center;">
+            <div id="offerBlock" style="display:none; max-width:620px; margin:28px auto 0; background:var(--white); border:2px solid var(--mia-accent); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:28px 26px; text-align:center;">
                 <span class="section-label">The offer</span>
                 <h2 class="section-title" style="font-size:1.5rem;">Everything you just saw &mdash; for &#8358;35,000</h2>
                 <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:16px;">Both doors, all the tools, the bonuses, and the founding-cohort rewards. Over <strong>&#8358;3,000,000</strong> of value. Because you showed up to this class, you get the founding price.</p>
@@ -1837,8 +1837,8 @@
         .prefill-modal__field{margin-bottom:14px;}
         .prefill-modal__field label{display:block;font-size:0.8rem;font-weight:600;color:var(--primary-dark,#1a1a2e);margin-bottom:4px;}
         .prefill-modal__field input{width:100%;padding:10px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:0.9rem;outline:none;transition:border 0.2s;font-family:inherit;}
-        .prefill-modal__field input:focus{border-color:var(--accent,#f1de71);}
-        .prefill-modal__btn{display:block;width:100%;padding:13px;background:var(--accent,#f1de71);color:var(--primary-dark,#1a1a2e);border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;}
+        .prefill-modal__field input:focus{border-color:var(--mia-accent,#f1de71);}
+        .prefill-modal__btn{display:block;width:100%;padding:13px;background:var(--mia-accent,#f1de71);color:var(--primary-dark,#1a1a2e);border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;}
         .prefill-modal__btn:hover{opacity:0.9;}
         .prefill-modal__trust{font-size:0.75rem;color:#999;text-align:center;margin:10px 0 0;}
     </style>

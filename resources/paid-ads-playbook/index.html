@@ -110,10 +110,10 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     :root {
-      --accent: #1877f2;
-      --accent-light: #e7f3ff;
-      --accent-bg: #f0f7ff;
-      --accent-text: #fff;
+      --mia-accent: #1877f2;
+      --mia-accent-light: #e7f3ff;
+      --mia-accent-bg: #f0f7ff;
+      --mia-accent-text: #fff;
       --bg: #f0f2f5;
       --card: #fff;
       --text: #1c1e21;
@@ -149,7 +149,7 @@
     header h1 {
       font-size: 28px;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--mia-accent);
       margin-bottom: 4px;
       transition: color 0.3s;
     }
@@ -189,7 +189,7 @@
 
     .client-bar input:focus {
       outline: none;
-      border-color: var(--accent);
+      border-color: var(--mia-accent);
     }
 
     .client-bar .reset-btn {
@@ -240,15 +240,15 @@
       display: inline-block;
     }
 
-    .platform-btn:hover { border-color: var(--accent); }
+    .platform-btn:hover { border-color: var(--mia-accent); }
 
     .platform-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: var(--accent-text);
+      background: var(--mia-accent);
+      border-color: var(--mia-accent);
+      color: var(--mia-accent-text);
     }
 
-    .platform-btn.active .dot { background: var(--accent-text) !important; }
+    .platform-btn.active .dot { background: var(--mia-accent-text) !important; }
 
     /* ========== SECTION TABS ========== */
     .tabs {
@@ -275,14 +275,14 @@
     }
 
     .tab-btn:hover {
-      border-color: var(--accent);
-      color: var(--accent);
+      border-color: var(--mia-accent);
+      color: var(--mia-accent);
     }
 
     .tab-btn.active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: var(--accent-text);
+      background: var(--mia-accent);
+      border-color: var(--mia-accent);
+      color: var(--mia-accent-text);
     }
 
     .tab-btn .badge {
@@ -347,7 +347,7 @@
       width: 18px;
       height: 18px;
       margin-top: 2px;
-      accent-color: var(--accent);
+      accent-color: var(--mia-accent);
       cursor: pointer;
       flex-shrink: 0;
     }
@@ -381,8 +381,8 @@
       top: 8px;
       right: 8px;
       padding: 4px 12px;
-      background: var(--accent);
-      color: var(--accent-text);
+      background: var(--mia-accent);
+      color: var(--mia-accent-text);
       border: none;
       border-radius: 6px;
       font-size: 12px;
@@ -411,7 +411,7 @@
       transition: background 0.2s;
     }
 
-    summary:hover { background: var(--accent-light); }
+    summary:hover { background: var(--mia-accent-light); }
     details[open] summary { border-bottom: 1px solid var(--border); }
     details .detail-content { padding: 16px; }
 
@@ -445,8 +445,8 @@
 
     /* ========== INFO/WARNING BOXES ========== */
     .info-box {
-      background: var(--accent-light);
-      border-left: 4px solid var(--accent);
+      background: var(--mia-accent-light);
+      border-left: 4px solid var(--mia-accent);
       padding: 12px 16px;
       border-radius: 0 8px 8px 0;
       font-size: 13px;
@@ -509,7 +509,7 @@
     .input-group select:focus,
     .input-group textarea:focus {
       outline: none;
-      border-color: var(--accent);
+      border-color: var(--mia-accent);
     }
 
     .input-row {
@@ -528,8 +528,8 @@
     .action-btn {
       display: inline-block;
       padding: 12px 24px;
-      background: var(--accent);
-      color: var(--accent-text);
+      background: var(--mia-accent);
+      color: var(--mia-accent-text);
       border: none;
       border-radius: 8px;
       font-size: 14px;
@@ -543,21 +543,21 @@
 
     .action-btn.secondary {
       background: none;
-      color: var(--accent);
-      border: 2px solid var(--accent);
+      color: var(--mia-accent);
+      border: 2px solid var(--mia-accent);
     }
 
     /* ========== NAMING PREVIEW ========== */
     .naming-preview {
-      background: var(--accent-light);
-      border: 2px solid var(--accent);
+      background: var(--mia-accent-light);
+      border: 2px solid var(--mia-accent);
       border-radius: 8px;
       padding: 16px;
       margin: 12px 0;
       font-family: 'SF Mono', 'Fira Code', monospace;
       font-size: 14px;
       font-weight: 600;
-      color: var(--accent);
+      color: var(--mia-accent);
       word-break: break-all;
     }
 
@@ -583,7 +583,7 @@
       text-align: center;
     }
 
-    .funnel-stage.tofu { background: var(--accent); color: var(--accent-text); }
+    .funnel-stage.tofu { background: var(--mia-accent); color: var(--mia-accent-text); }
     .funnel-stage.mofu { background: #5b9cf6; }
     .funnel-stage.bofu { background: #0d47a1; }
 
@@ -593,7 +593,7 @@
     .calc-result {
       margin-top: 16px;
       padding: 20px;
-      background: var(--accent-bg);
+      background: var(--mia-accent-bg);
       border-radius: 10px;
       display: none;
     }
@@ -603,7 +603,7 @@
     .calc-result .big-number {
       font-size: 32px;
       font-weight: 700;
-      color: var(--accent);
+      color: var(--mia-accent);
       text-align: center;
     }
 
@@ -2435,7 +2435,7 @@ Description: ___________
       </div>
 
       <h3>CBO vs. Manual Budget</h3>
-      <div class="info-box" style="border-left:3px solid var(--accent)">
+      <div class="info-box" style="border-left:3px solid var(--mia-accent)">
         <strong>ABO for testing, CBO for scaling.</strong> ABO (ad-set/ad-group budget) forces a fair budget into every angle/audience so each generates enough signal to judge. CBO (campaign budget) lets the algorithm allocate to proven winners once you know what works.<br><br>
         <strong>Don't test on CBO.</strong> Launch a test on CBO and the algorithm concentrates budget on the first ad set to get early traction; the others never get a fair test, so you'll think you have one winner when you never gave the rest a chance. Test on ABO, then move proven winners to CBO to scale. (Applies to Meta, TikTok, Snapchat; Google and LinkedIn use the budget models below.)
       </div>
@@ -2957,7 +2957,7 @@ Key priorities:
     /* ========== PLATFORM SWITCHING ========== */
     function switchPlatform(platform) {
       activePlatform = platform;
-      document.documentElement.style.setProperty('--accent', PLATFORM_COLORS[platform]);
+      document.documentElement.style.setProperty('--mia-accent', PLATFORM_COLORS[platform]);
 
       const lightColors = {
         meta: '#e7f3ff', tiktok: '#ffe8ec', google: '#e8f0fe', linkedin: '#e1f0ff', snapchat: '#fffde0',
@@ -2967,14 +2967,14 @@ Key priorities:
         meta: '#f0f7ff', tiktok: '#fff5f7', google: '#f1f5fe', linkedin: '#edf5ff', snapchat: '#fffef0',
         x: '#0d0d0d', chatgpt: '#eef9f3'
       };
-      // Text color paired with --accent. Snapchat's near-white brand yellow needs black; the other platforms need white.
+      // Text color paired with --mia-accent. Snapchat's near-white brand yellow needs black; the other platforms need white.
       const textColors = {
         meta: '#fff', tiktok: '#fff', google: '#fff', linkedin: '#fff', snapchat: '#1c1422',
         x: '#fff', chatgpt: '#fff'
       };
-      document.documentElement.style.setProperty('--accent-light', lightColors[platform]);
-      document.documentElement.style.setProperty('--accent-bg', bgColors[platform]);
-      document.documentElement.style.setProperty('--accent-text', textColors[platform]);
+      document.documentElement.style.setProperty('--mia-accent-light', lightColors[platform]);
+      document.documentElement.style.setProperty('--mia-accent-bg', bgColors[platform]);
+      document.documentElement.style.setProperty('--mia-accent-text', textColors[platform]);
 
       document.querySelectorAll('.platform-btn').forEach(b => b.classList.remove('active'));
       document.querySelector(`[data-platform-btn="${platform}"]`).classList.add('active');

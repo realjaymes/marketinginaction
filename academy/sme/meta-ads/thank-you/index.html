@@ -60,11 +60,11 @@
             --primary-dark:    #1c1422;
             --primary-mid:     #2d2235;
             --primary-light:   #F0ECF5;
-            --accent:          #f1de71;
-            --accent-dark:     #d4c35e;
-            --accent-light:    #fdf8e8;
-            --background:      #F7F4FA;
-            --background-dark: #EDE8F3;
+            --mia-accent:          #f1de71;
+            --mia-accent-dark:     #d4c35e;
+            --mia-accent-light:    #fdf8e8;
+            --mia-background:      #F7F4FA;
+            --mia-background-dark: #EDE8F3;
             --text-primary:    #1c1422;
             --text-muted:      rgba(28, 20, 34, 0.62);
             --text-light:      rgba(28, 20, 34, 0.4);
@@ -88,7 +88,7 @@
         body {
             font-family: var(--font-body);
             color: var(--text-primary);
-            background: var(--background);
+            background: var(--mia-background);
             line-height: 1.6;
             -webkit-font-smoothing: antialiased;
             padding: 0 18px;
@@ -123,11 +123,11 @@
         .confirm h1 { font-size: 1.85rem; line-height: 1.2; font-weight: 800; margin-bottom: 14px; }
         .confirm p { color: var(--text-muted); font-size: 1rem; margin-bottom: 10px; }
         .confirm p.lead { color: var(--text-primary); font-weight: 600; font-size: 1.05rem; margin-top: 6px; }
-        .confirm a { color: var(--accent-dark); font-weight: 600; text-decoration: none; }
+        .confirm a { color: var(--mia-accent-dark); font-weight: 600; text-decoration: none; }
 
         .eyebrow {
             display: inline-block; font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em;
-            text-transform: uppercase; color: var(--accent-dark); margin-bottom: 12px;
+            text-transform: uppercase; color: var(--mia-accent-dark); margin-bottom: 12px;
         }
         h2 { font-size: 1.35rem; font-weight: 800; line-height: 1.25; margin-bottom: 12px; }
         .card p { color: var(--text-muted); font-size: 0.97rem; margin-bottom: 14px; }
@@ -141,7 +141,7 @@
             border: none; transition: transform var(--ease), box-shadow var(--ease);
         }
         .btn:hover { transform: translateY(-1px); }
-        .btn-primary { background: var(--accent); color: var(--primary-dark); box-shadow: var(--shadow-cta); }
+        .btn-primary { background: var(--mia-accent); color: var(--primary-dark); box-shadow: var(--shadow-cta); }
         .btn-dark { background: var(--primary-dark); color: var(--white); }
         .btn-outline { background: transparent; color: var(--primary-dark); border: 1.5px solid var(--border); font-size: 0.98rem; padding: 13px 18px; }
 
@@ -156,7 +156,7 @@
 
         /* Next step / ladder */
         .ladder-label { text-align: center; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin: 34px 0 4px; }
-        .upsell { border: 2px solid var(--accent); }
+        .upsell { border: 2px solid var(--mia-accent); }
         .upsell .price-line { font-weight: 800; color: var(--primary-dark); font-size: 1.05rem; margin: 14px 0 16px; }
         .upsell .price-line s { color: var(--text-light); font-weight: 600; margin-right: 8px; }
         .skip { display: block; text-align: center; margin-top: 14px; font-size: 0.9rem; color: var(--text-light); text-decoration: none; }
@@ -167,13 +167,13 @@
         .xsell__item .t { font-weight: 700; font-size: 0.95rem; }
         .xsell__item .d { font-size: 0.82rem; color: var(--text-muted); }
         .xsell__item a { flex: 0 0 auto; font-weight: 800; font-size: 0.85rem; color: var(--primary-dark); text-decoration: none; border: 1.5px solid var(--border); border-radius: 9px; padding: 9px 14px; }
-        .xsell__item a:hover { border-color: var(--accent-dark); }
+        .xsell__item a:hover { border-color: var(--mia-accent-dark); }
 
         .longgame { display: flex; align-items: center; justify-content: space-between; gap: 14px; border: 1px solid var(--border); background: var(--primary-light); border-radius: var(--radius-md); padding: 16px 18px; margin-top: 12px; }
         .longgame .t { font-weight: 700; font-size: 0.95rem; }
         .longgame .d { font-size: 0.82rem; color: var(--text-muted); }
         .longgame a { flex: 0 0 auto; font-weight: 800; font-size: 0.85rem; color: var(--primary-dark); text-decoration: none; border: 1.5px solid var(--border); border-radius: 9px; padding: 9px 14px; white-space: nowrap; background: var(--white); }
-        .longgame a:hover { border-color: var(--accent-dark); }
+        .longgame a:hover { border-color: var(--mia-accent-dark); }
 
         /* Footer */
         footer { text-align: center; padding: 30px 0 50px; color: var(--text-light); font-size: 0.82rem; }
