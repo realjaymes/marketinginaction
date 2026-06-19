@@ -1657,7 +1657,25 @@
       document.querySelectorAll('.year').forEach(function(e){ e.textContent = new Date().getFullYear(); });
       document.querySelectorAll('.faq-item__q').forEach(function(b){ b.addEventListener('click', function(){ b.closest('.faq-item').classList.toggle('active'); }); });
       try { if (typeof fbq === 'function') fbq('track','ViewContent',{content_name:'DIME Replay'}); } catch(e){}
-      document.querySelectorAll('a.js-buy').forEach(function(a){ a.addEventListener('click', function(){ try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:35000,currency:'NGN'}); }catch(e){} try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:35000,currency:'NGN'}); }catch(e){} window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:35000, currency:'NGN'}); }); });
+      // === Buyer identity carry-through + checkout-intent capture (shared MIA intent sheet) ===
+      // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage from the opt-in (same browser).
+      // Prefills Selar with name+email ONLY (no phone — prefilled phones break Selar checkout). Logs a "clicked buy" row to the same sheet all the lead modals use.
+      (function(){
+        var INTENT_SHEET="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
+        var qp; try{ qp=new URLSearchParams(location.search); }catch(e){ qp=null; }
+        var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){}
+        function pick(k){ return (qp&&(qp.get(k)||''))||''; }
+        var email=(pick('email')||pick('lead')||lead.email||'').trim();
+        var name =(pick('fullname')||pick('name')||lead.name||'').trim();
+        var phone=(lead.phone||'').trim(); // phone → our sheet only, never to Selar
+        document.querySelectorAll('a.js-buy').forEach(function(a){ try{ var u=new URL(a.href); if(email)u.searchParams.set('email',email); if(name)u.searchParams.set('fullname',name); a.href=u.toString(); }catch(e){} });
+        document.querySelectorAll('a.js-buy').forEach(function(a){ a.addEventListener('click', function(){
+          try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:35000,currency:'NGN'}); }catch(e){}
+          try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:35000,currency:'NGN'}); }catch(e){}
+          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:35000, currency:'NGN'});
+          try{ fetch(INTENT_SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:'DIME – clicked buy (replay)',pageUrl:location.href,source:'replay-intent',event:'clicked_buy'})}); }catch(e){}
+        }); });
+      })();
       // Per-person replay countdown (48h window via localStorage). True enforcement = Brevo deadline + Selar coupon expiry.
       (function(){
         var KEY='dime_replay_deadline', HOURS=48, el=document.getElementById('rcTimer');

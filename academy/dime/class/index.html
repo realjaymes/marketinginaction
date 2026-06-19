@@ -1635,6 +1635,8 @@
         var source=''; try{ source=new URLSearchParams(window.location.search).get('utm_source')||''; }catch(err){} source=source||document.referrer||'direct';
         window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'generate_lead', event_id:eid, lead_name:name, lead_email:email, lead_phone:phone, lead_product:product, lead_source:source});
         if(SHEET_URL.indexOf('http')===0){ try{ fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:product,pageUrl:window.location.href,source:source})}); }catch(err){} }
+        // Stash registrant identity so the webinar/replay buy buttons can prefill Selar (name+email) + log checkout intent. Same-browser only; the WhatsApp/email link hop uses the ?email= URL fallback read on those pages.
+        try{ localStorage.setItem('dime_lead', JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()})); }catch(err){}
         setTimeout(function(){ window.location.href='/academy/dime/class/confirmed/'+(cohort?('?cohort='+encodeURIComponent(cohort)):''); }, 450);
         return false;
       };

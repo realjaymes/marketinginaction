@@ -1697,8 +1697,27 @@
       var so=document.getElementById('startOverlay'); if(so) so.addEventListener('click', startClass);
       var cv=document.getElementById('classVideo');
       if(cv){ cv.addEventListener('ended', function(){ revealOffer(); var e=document.getElementById('endedBlock'); if(e) e.style.display='block'; var o=document.getElementById('offerBlock'); if(o){ try{ o.scrollIntoView({behavior:'smooth', block:'center'}); }catch(err){} } }); }
-      // InitiateCheckout on the offer button
-      document.querySelectorAll('a.js-buy').forEach(function(a){ a.addEventListener('click', function(){ try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:35000,currency:'NGN'}); }catch(e){} try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:35000,currency:'NGN'}); }catch(e){} window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:35000, currency:'NGN'}); }); });
+      // === Buyer identity carry-through + checkout-intent capture (shared MIA intent sheet) ===
+      // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage from the opt-in (same browser).
+      // Prefills Selar with name+email ONLY (no phone — prefilled phones break Selar checkout). Logs a "clicked buy" row to the same sheet all the lead modals use.
+      (function(){
+        var INTENT_SHEET="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
+        var qp; try{ qp=new URLSearchParams(location.search); }catch(e){ qp=null; }
+        var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){}
+        function pick(k){ return (qp&&(qp.get(k)||''))||''; }
+        var email=(pick('email')||pick('lead')||lead.email||'').trim();
+        var name =(pick('fullname')||pick('name')||lead.name||'').trim();
+        var phone=(lead.phone||'').trim(); // phone → our sheet only, never to Selar
+        // Prefill the Selar links (name + email; coupon already on the href)
+        document.querySelectorAll('a.js-buy').forEach(function(a){ try{ var u=new URL(a.href); if(email)u.searchParams.set('email',email); if(name)u.searchParams.set('fullname',name); a.href=u.toString(); }catch(e){} });
+        // Pixels + intent row on click
+        document.querySelectorAll('a.js-buy').forEach(function(a){ a.addEventListener('click', function(){
+          try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:35000,currency:'NGN'}); }catch(e){}
+          try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:35000,currency:'NGN'}); }catch(e){}
+          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:35000, currency:'NGN'});
+          try{ fetch(INTENT_SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:'DIME – clicked buy (webinar)',pageUrl:location.href,source:'webinar-intent',event:'clicked_buy'})}); }catch(e){}
+        }); });
+      })();
     </script>
 
 </body>
