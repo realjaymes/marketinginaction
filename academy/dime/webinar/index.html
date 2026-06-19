@@ -1505,7 +1505,8 @@
         <div class="container" style="max-width:none; padding:0 32px;">
 
             <h1 style="color:#fff; font-size:clamp(21px,2.6vw,30px); text-align:center; margin-bottom:6px; line-height:1.25;">How To Make Your First <span style="color:var(--accent);">&#8358;500,000</span> Online <span style="color:var(--accent);">With AI in 30 Days</span> Starting From Scratch</h1>
-            <p style="color:rgba(255,255,255,0.6); text-align:center; font-size:0.88rem; margin-bottom:18px;">Your class is starting. Watch the whole thing, there is a lot here. Grab a pen and paper.</p>
+            <p style="color:rgba(255,255,255,0.72); text-align:center; font-size:0.9rem; margin-bottom:6px; line-height:1.5;">Your class is starting. Plan for about <strong>40 minutes</strong> and watch the whole thing, there is a lot here. Grab a pen and paper.</p>
+            <p style="color:var(--accent); text-align:center; font-size:0.9rem; font-weight:600; margin-bottom:18px; line-height:1.5;">Stay to the very end. The people who finish get a price and an offer the ones who leave in a hurry never see. It might be the best decision you make this year.</p>
 
             <style>
               #vidchat{ display:flex; gap:16px; align-items:stretch; }
@@ -1535,6 +1536,8 @@
                             <div style="font-weight:750; font-size:1.1rem;">Click to start your class</div>
                             <div style="font-size:0.82rem; color:rgba(255,255,255,0.6);">(make sure your sound is on)</div>
                         </div>
+                        <!-- Elapsed timer (count-up only; never shows time remaining). Appears when the class starts. -->
+                        <div id="elapsedPill" style="position:absolute; top:12px; right:12px; display:none; align-items:center; gap:6px; background:rgba(12,10,18,0.6); color:#fff; font-size:0.8rem; font-weight:600; padding:5px 10px; border-radius:999px; -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); pointer-events:none; z-index:3;">&#9201;&#65039;&nbsp;<span id="elapsedTime">0:00</span></div>
                     </div>
                 </div>
                 <!-- CHAT: real comments, time-synced to the video. Hidden until CHAT[] is populated with the REAL captured chat. -->
@@ -1679,7 +1682,7 @@
       function revealOffer(){ if(offerShown) return; var o=document.getElementById('offerBlock'); if(o){ offerShown=true; o.style.display='block'; try{o.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){} if(typeof fbq==='function')try{fbq('track','ViewContent',{content_name:'DIME Offer Revealed'});}catch(e){} } }
       function pushChat(c,i){ var f=document.getElementById('chatFeed'); if(!f) return; var nearBottom=(f.scrollHeight - f.scrollTop - f.clientHeight) < 60; var d=document.createElement('div'); d.className='chat-msg'; var col=AV[i%AV.length]; var init=(c.name||'?').charAt(0).toUpperCase(); var el=document.createElement('div'); el.className='av'; el.style.background=col; el.textContent=init; var b=document.createElement('div'); b.className='bod'; var n=document.createElement('span'); n.className='nm'; n.textContent=c.name; b.appendChild(n); b.appendChild(document.createTextNode(c.text)); d.appendChild(el); d.appendChild(b); f.appendChild(d); if(nearBottom) f.scrollTop=f.scrollHeight; }
       function elapsed(){ var v=document.getElementById('classVideo'); return (v && v.currentTime>0) ? v.currentTime : ((Date.now()-startTime)/1000); }
-      function tick(){ var e=elapsed(); if(e>=OFFER_REVEAL_SECONDS) revealOffer(); while(shownChat<CHAT.length && CHAT[shownChat].t+COMMENT_DELAY<=e){ pushChat(CHAT[shownChat], shownChat); shownChat++; } }
+      function tick(){ var e=elapsed(); var et=document.getElementById('elapsedTime'); if(et){ var s=Math.max(0,Math.floor(e)); et.textContent=Math.floor(s/60)+':'+((s%60)<10?'0':'')+(s%60); } if(e>=OFFER_REVEAL_SECONDS) revealOffer(); while(shownChat<CHAT.length && CHAT[shownChat].t+COMMENT_DELAY<=e){ pushChat(CHAT[shownChat], shownChat); shownChat++; } }
 
       // Keep the chat the same height as the video so new comments scroll INSIDE the panel
       // instead of growing the page. On mobile (stacked) the CSS height (300px) takes over.
@@ -1690,6 +1693,7 @@
         if(started) return; started=true; startTime=Date.now();
         var ov=document.getElementById('startOverlay'); if(ov) ov.style.display='none';
         var v=document.getElementById('classVideo'); if(v){ try{ v.play(); }catch(e){} }
+        var pill=document.getElementById('elapsedPill'); if(pill) pill.style.display='inline-flex';
         if(CHAT.length){ var cp=document.getElementById('chatPanel'); if(cp) cp.style.display='flex'; }
         requestAnimationFrame(syncChatHeight);
         ticker=setInterval(tick, 1000);
