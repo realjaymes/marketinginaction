@@ -1547,6 +1547,37 @@
                 </aside>
             </div>
 
+            <!-- POLL (engagement; appears 36:18 at the ₦45k mention; results reveal ~1 min later, before the ₦35,000 offer) -->
+            <style>
+              .poll-opt{display:block;width:100%;text-align:left;padding:13px 15px;border:1.5px solid var(--border);border-radius:10px;background:#fff;font-size:0.92rem;font-weight:600;color:var(--text-primary);cursor:pointer;font-family:inherit;transition:border .15s,background .15s;}
+              .poll-opt:hover{border-color:var(--accent);}
+              .poll-opt.sel{border-color:var(--accent-dark);background:#fff8e1;}
+              .poll-opt:disabled{cursor:default;}
+              .poll-bar-row .lab{display:flex;justify-content:space-between;margin-bottom:4px;font-weight:600;font-size:0.88rem;color:var(--text-primary);}
+              .poll-bar-track{height:10px;background:#ececec;border-radius:6px;overflow:hidden;}
+              .poll-bar-fill{height:100%;background:var(--accent);border-radius:6px;transition:width .6s ease;}
+              .poll-bar-row.mine .poll-bar-fill{background:var(--accent-dark);}
+              .poll-bar-row.mine .lab span:first-child::after{content:" (you)";color:var(--accent-dark);}
+            </style>
+            <div id="pollBlock" style="display:none; max-width:620px; margin:28px auto 0; background:var(--white); border:2px solid var(--border); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:24px 22px;">
+                <div id="pollVote">
+                    <span class="section-label" style="display:block; text-align:center;">Quick poll</span>
+                    <p style="text-align:center; color:var(--text-primary); font-size:1rem; font-weight:700; margin:6px 0 4px;">You've just seen over &#8358;3,000,000 in value. The regular price is &#8358;45,000.</p>
+                    <p style="text-align:center; color:var(--text-muted); font-size:0.9rem; margin:0 0 16px;">Be honest, where do you stand right now?</p>
+                    <div style="display:flex; flex-direction:column; gap:10px;">
+                        <button class="poll-opt" data-k="now">&#8358;45k is a steal for this, I'm ready to start</button>
+                        <button class="poll-opt" data-k="discount">I'm in, if I can get a discount</button>
+                        <button class="poll-opt" data-k="split">I'm in, if I can pay in two parts</button>
+                        <button class="poll-opt" data-k="time">I want it, but I need some more time</button>
+                    </div>
+                </div>
+                <div id="pollResults" style="display:none;">
+                    <span class="section-label" style="display:block; text-align:center;">What the class said</span>
+                    <p style="text-align:center; color:var(--text-muted); font-size:0.9rem; margin:6px 0 16px;">You're not the only one weighing this up.</p>
+                    <div id="pollBars" style="display:flex; flex-direction:column; gap:13px;"></div>
+                </div>
+            </div>
+
             <!-- OFFER (hidden until the pitch moment) -->
             <div id="offerBlock" style="display:none; max-width:620px; margin:28px auto 0; background:var(--white); border:2px solid var(--accent); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:28px 26px; text-align:center;">
                 <span class="section-label">The offer</span>
@@ -1575,6 +1606,13 @@
       try { if (typeof fbq === 'function') fbq('track','ViewContent',{content_name:'DIME Webinar Room'}); } catch(e){}
       // OFFER TIMING — seconds into the recording when the price is revealed.
       var OFFER_REVEAL_SECONDS = 2456; // Verified against transcript 2026-06-19: "₦35,000" first spoken at 40:54 = 2454, +2 so the words land first (was 2440, ~14s early).
+      var POLL_REVEAL_SECONDS = 2178;   // 36:18 — ₦45,000 mentioned; poll appears
+      var POLL_RESULTS_SECONDS = 2238;  // ~1 min later; results reveal
+      var POLL_HIDE_SECONDS = 2268;     // results show 30s, then the whole poll clears — back to the video until the ₦35,000 offer
+      // SEED distribution — placeholder for engagement; replace the pct values with the REAL cohort-1 vote split once captured. Votes are logged regardless.
+      var POLL_RESULTS = [ {k:'now',label:"₦45k is a steal for this, I'm ready to start",pct:41}, {k:'discount',label:"I'm in, if I can get a discount",pct:34}, {k:'split',label:"I'm in, if I can pay in two parts",pct:16}, {k:'time',label:"I want it, but I need some more time",pct:9} ];
+      var PREVIEW=false; try{ PREVIEW=new URLSearchParams(location.search).has('preview'); }catch(e){}
+      if(PREVIEW){ POLL_REVEAL_SECONDS=3; POLL_RESULTS_SECONDS=9; POLL_HIDE_SECONDS=14; OFFER_REVEAL_SECONDS=18; } // ?preview=1 → compressed: poll 3s · results 9s · clears 14s · offer 18s
       var COMMENT_DELAY = 2; // seconds added to every comment's anchor — natural "viewers typing" lag after each prompt. Tune freely.
 
       // Bunny HLS source (HLS needs hls.js outside Safari). No <source>/controls = no seeking.
@@ -1674,12 +1712,17 @@
         {t:2598, name:"Seyi", text:"Paid"},
       ];
       var AV=['#a7a4ad','#9b98a2','#b0adb6','#929099','#a29fa9','#959399'];
-      var started=false, startTime=0, shownChat=0, offerShown=false, ticker=null;
+      var started=false, startTime=0, shownChat=0, offerShown=false, pollShown=false, pollResultsShown=false, pollHidden=false, pollVote=null, ticker=null;
 
-      function revealOffer(){ if(offerShown) return; var o=document.getElementById('offerBlock'); if(o){ offerShown=true; o.style.display='block'; try{o.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){} if(typeof fbq==='function')try{fbq('track','ViewContent',{content_name:'DIME Offer Revealed'});}catch(e){} } }
+      function revealOffer(){ if(offerShown) return; var p=document.getElementById('pollBlock'); if(p) p.style.display='none'; var o=document.getElementById('offerBlock'); if(o){ offerShown=true; o.style.display='block'; try{o.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){} if(typeof fbq==='function')try{fbq('track','ViewContent',{content_name:'DIME Offer Revealed'});}catch(e){} } }
+      function pollLog(answer){ var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){} var qp; try{ qp=new URLSearchParams(location.search); }catch(e){ qp=null; } var email=((qp&&(qp.get('email')||qp.get('lead')))||lead.email||'').trim(); var name=((qp&&(qp.get('fullname')||qp.get('name')))||lead.name||'').trim(); try{ fetch("https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec",{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:(lead.phone||''),product:'DIME webinar poll',dimePoll:({now:'Ready now',discount:'Wants discount',split:'Wants split (2 parts)',time:'Needs more time'}[answer]||answer),answer:answer,pageUrl:location.href,source:'webinar-poll',event:'poll_vote'})}); }catch(e){} }
+      function showPoll(){ if(pollShown||offerShown) return; pollShown=true; var b=document.getElementById('pollBlock'); if(b){ b.style.display='block'; try{b.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){} } }
+      function showPollResults(){ if(pollResultsShown||offerShown) return; pollResultsShown=true; pollShown=true; var b=document.getElementById('pollBlock'); if(b) b.style.display='block'; var bars=document.getElementById('pollBars'); if(bars){ bars.innerHTML=''; POLL_RESULTS.forEach(function(o){ var row=document.createElement('div'); row.className='poll-bar-row'+(pollVote===o.k?' mine':''); row.innerHTML='<div class="lab"><span>'+o.label+'</span><span>'+o.pct+'%</span></div><div class="poll-bar-track"><div class="poll-bar-fill" style="width:'+o.pct+'%"></div></div>'; bars.appendChild(row); }); } var v=document.getElementById('pollVote'), r=document.getElementById('pollResults'); if(v) v.style.display='none'; if(r) r.style.display='block'; if(b){ try{b.scrollIntoView({behavior:'smooth',block:'center'});}catch(e){} } }
+      function hidePoll(){ if(pollHidden||offerShown) return; pollHidden=true; var b=document.getElementById('pollBlock'); if(b) b.style.display='none'; var vc=document.querySelector('#vidchat .vid')||document.getElementById('classVideo'); if(vc){ try{ vc.scrollIntoView({behavior:'smooth',block:'center'}); }catch(e){} } }
+      document.addEventListener('click', function(e){ var btn=e.target.closest&&e.target.closest('.poll-opt'); if(!btn) return; if(pollVote) return; pollVote=btn.getAttribute('data-k'); try{ localStorage.setItem('dime_poll', pollVote); }catch(e2){} var opts=document.querySelectorAll('.poll-opt'); for(var i=0;i<opts.length;i++){ opts[i].disabled=true; } btn.classList.add('sel'); pollLog(pollVote); });
       function pushChat(c,i){ var f=document.getElementById('chatFeed'); if(!f) return; var nearBottom=(f.scrollHeight - f.scrollTop - f.clientHeight) < 60; var d=document.createElement('div'); d.className='chat-msg'; var col=AV[i%AV.length]; var init=(c.name||'?').charAt(0).toUpperCase(); var el=document.createElement('div'); el.className='av'; el.style.background=col; el.textContent=init; var b=document.createElement('div'); b.className='bod'; var n=document.createElement('span'); n.className='nm'; n.textContent=c.name; b.appendChild(n); b.appendChild(document.createTextNode(c.text)); d.appendChild(el); d.appendChild(b); f.appendChild(d); if(nearBottom) f.scrollTop=f.scrollHeight; }
-      function elapsed(){ var v=document.getElementById('classVideo'); return (v && v.currentTime>0) ? v.currentTime : ((Date.now()-startTime)/1000); }
-      function tick(){ var e=elapsed(); var et=document.getElementById('elapsedTime'); if(et){ var s=Math.max(0,Math.floor(e)); et.textContent=Math.floor(s/60)+':'+((s%60)<10?'0':'')+(s%60); } if(e>=OFFER_REVEAL_SECONDS) revealOffer(); while(shownChat<CHAT.length && CHAT[shownChat].t+COMMENT_DELAY<=e){ pushChat(CHAT[shownChat], shownChat); shownChat++; } }
+      function elapsed(){ if(PREVIEW) return (Date.now()-startTime)/1000; var v=document.getElementById('classVideo'); return (v && v.currentTime>0) ? v.currentTime : ((Date.now()-startTime)/1000); }
+      function tick(){ var e=elapsed(); var et=document.getElementById('elapsedTime'); if(et){ var s=Math.max(0,Math.floor(e)); et.textContent=Math.floor(s/60)+':'+((s%60)<10?'0':'')+(s%60); } if(e>=OFFER_REVEAL_SECONDS) revealOffer(); else if(e>=POLL_HIDE_SECONDS) hidePoll(); else if(e>=POLL_RESULTS_SECONDS) showPollResults(); else if(e>=POLL_REVEAL_SECONDS) showPoll(); while(shownChat<CHAT.length && CHAT[shownChat].t+COMMENT_DELAY<=e){ pushChat(CHAT[shownChat], shownChat); shownChat++; } }
 
       // Keep the chat the same height as the video so new comments scroll INSIDE the panel
       // instead of growing the page. On mobile (stacked) the CSS height (300px) takes over.
@@ -1689,13 +1732,14 @@
       function startClass(){
         if(started) return; started=true; startTime=Date.now();
         var ov=document.getElementById('startOverlay'); if(ov) ov.style.display='none';
-        var v=document.getElementById('classVideo'); if(v){ try{ v.play(); }catch(e){} }
+        var v=document.getElementById('classVideo'); if(v && !PREVIEW){ try{ v.play(); }catch(e){} }
         var pill=document.getElementById('elapsedPill'); if(pill) pill.style.display='inline-flex';
         if(CHAT.length){ var cp=document.getElementById('chatPanel'); if(cp) cp.style.display='flex'; }
         requestAnimationFrame(syncChatHeight);
         ticker=setInterval(tick, 1000);
       }
       var so=document.getElementById('startOverlay'); if(so) so.addEventListener('click', startClass);
+      if(PREVIEW){ var pb=document.createElement('div'); pb.textContent='PREVIEW — compressed (poll 3s · results 9s · clears 14s · offer 18s)'; pb.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99998;background:#d4c35e;color:#1c1422;font:600 12px system-ui;text-align:center;padding:6px;'; document.body.appendChild(pb); startClass(); }
       var cv=document.getElementById('classVideo');
       if(cv){ cv.addEventListener('ended', function(){ revealOffer(); var e=document.getElementById('endedBlock'); if(e) e.style.display='block'; var o=document.getElementById('offerBlock'); if(o){ try{ o.scrollIntoView({behavior:'smooth', block:'center'}); }catch(err){} } }); }
       // === Checkout: known buyer → straight to Selar; unknown → prefill modal first ===
