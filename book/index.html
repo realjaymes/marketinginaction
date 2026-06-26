@@ -459,13 +459,14 @@
 
                     <form id="step3Form" onsubmit="goFromRetainer(event)" novalidate>
                         <div class="book-field">
-                            <span class="book-field__label">Our done-for-you marketing team is ₦250,000/month.</span>
-                            <p class="book-field__hint">We recommend a 3-month commitment to get the most value. What sounds right for you?</p>
+                            <span class="book-field__label">There are a few ways to work with us, depending on your budget and how hands-on you want to be.</span>
+                            <p class="book-field__hint">Pick the one that fits where you are right now.</p>
                             <div class="book-radio-group" id="retainerGroup">
-                                <label class="book-radio"><input type="radio" name="retainer" value="ready"><span class="book-radio__label">I'm ready to invest in the done-for-you service</span></label>
-                                <label class="book-radio"><input type="radio" name="retainer" value="learn-more"><span class="book-radio__label">I'd like to learn more on a call first</span></label>
-                                <label class="book-radio"><input type="radio" name="retainer" value="diy"><span class="book-radio__label">I'd rather start cheaper and do it myself with guidance</span></label>
-                                <label class="book-radio"><input type="radio" name="retainer" value="not-now"><span class="book-radio__label">Not right now</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="ready"><span class="book-radio__label"><strong>Run it all for me (done-for-you).</strong> My team sets up, runs, and optimises your ads every month so you just focus on your business. ₦250,000/month, or ₦225,000/mo on a 3-month plan and ₦200,000/mo on 6 months.</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="learn-more"><span class="book-radio__label"><strong>I'm interested in done-for-you, but I want to learn more first.</strong> Book a call to see if the monthly service is right for your business.</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="setup"><span class="book-radio__label"><strong>Set it up for me once, then I'll run it.</strong> We build your ad account, pixel, and the audiences that reach your real target buyers, then hand it over with a blueprint and implementation support so you run profitable ads. ₦75,000 one-time.</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="diy"><span class="book-radio__label"><strong>Teach me to do it myself.</strong> We give you the workshops, templates, mentorship, and implementation support to run your own marketing with guidance. From ₦45,000.</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="not-now"><span class="book-radio__label"><strong>Not right now, I'm just exploring.</strong></span></label>
                             </div>
                         </div>
                         <div class="book-actions">
@@ -524,6 +525,7 @@
                 </div>
                 <div class="book-card__body">
                     <p id="recBody"></p>
+                    <ul id="recBullets" style="list-style:none;padding:0;margin:14px 0 4px;font-size:0.95rem;"></ul>
                     <div class="book-actions">
                         <button type="button" class="book-btn book-btn--secondary" onclick="recBack()">← Back</button>
                         <a class="book-btn book-btn--primary" id="recBtn" href="#">Continue →</a>
@@ -567,28 +569,39 @@
         var REC = {
             bootcamp: {
                 title: 'AI Marketing Bootcamp',
-                body:  'Based on your answer, the AI Marketing Bootcamp is your best fit.',
+                body:  'You want to grow your marketing career. The AI Marketing Bootcamp gives you the product, growth, and AI marketing skills companies actually pay for, with hands-on projects, weekly live sessions, and a real portfolio to show for it.',
+                bullets: ['Gain the product, growth, and AI marketing skills companies pay for.','Hands-on projects, live sessions, and a portfolio that proves you can do the work.','New to it? A structured curriculum takes you from the basics to job-ready.'],
                 btn:   'Explore the Bootcamp →',
                 href:  '/academy/pro-bootcamp/',
                 back:  'step1'
             },
             dime: {
                 title: 'Digital Income Made Easy (DIME)',
-                body:  'Based on your answer, the Digital Income Made Easy (DIME) Program is your best fit. Join the free class to see the simplest way to your first dollar online.',
+                body:  'You want to start earning online. DIME shows you the simplest path to your first sales: building and selling a digital product with AI, even with no audience and no experience.',
+                bullets: ['Make your first sales online, even with no audience and no experience.','A simple, proven path to building and selling a digital product with AI.','Start free: join the class and see how it works before you pay anything.'],
                 btn:   'Join the free class →',
                 href:  '/academy/dime/class/',
                 back:  'step1'
             },
             bundle: {
                 title: 'Online Marketing Mentorship',
-                body:  'Based on your answers, the Online Marketing Mentorship is your best fit. Five complete marketing systems you run yourself, with implementation support.',
+                body:  'You would rather run your own marketing. The Mentorship hands you five complete systems, Meta ads, TikTok ads, page optimization, automation, and account recovery, as step-by-step workshops with templates and implementation support.',
+                bullets: ['Run all five marketing systems for your business yourself, with confidence.','The same systems behind results for hundreds of Nigerian businesses.','Not techy? Step-by-step workshops plus a private group so you are never stuck. ₦45,000.'],
                 btn:   'Explore the Mentorship →',
                 href:  '/academy/sme/bundle/',
                 back:  'step3biz'
             },
+            adsetup: {
+                title: 'The Profitable Ads Targeting Setup',
+                body:  'You want it done right without learning the whole technical side yourself. We build your ad account, pixel, and the 5-10 audiences that actually reach your buyers, then hand it over with a blueprint, the platform walkthrough videos, and WhatsApp support so you run your own profitable ads. ₦75,000 one-time.',
+                bullets: ['Every naira reaches people who actually buy, not whoever the algorithm picks.','Built on the same targeting behind ₦1.5M+ in ad spend at ~20x return.','No technical skill needed and no monthly fee. ₦75,000 once, and you own it.'],
+                btn:   'Explore the Setup →',
+                href:  '/academy/sme/targeting-setup/',
+                back:  'step3biz'
+            },
             academy: {
                 title: 'MIA Academy',
-                body:  'Explore the Academy to find the program that fits where you are right now.',
+                body:  'Not sure yet? Explore the Academy to see everything we offer, from free classes and low-cost workshops to full programs, and find the one that fits exactly where you are right now.',
                 btn:   'Explore the Academy →',
                 href:  '/academy/',
                 back:  'step1'
@@ -660,6 +673,8 @@
                     var el = document.getElementById('challenge');
                     if (el) el.focus();
                 }, 150);
+            } else if (v === 'setup') {
+                showRec('adsetup');
             } else {
                 showRec('bundle');
             }
@@ -671,6 +686,16 @@
             var r = REC[type];
             document.getElementById('recTitle').textContent = r.title;
             document.getElementById('recBody').textContent = r.body;
+            var bl = document.getElementById('recBullets');
+            if (bl) {
+                if (r.bullets && r.bullets.length) {
+                    bl.innerHTML = r.bullets.map(function(b){ return '<li style="position:relative;padding-left:26px;margin-bottom:10px;line-height:1.5;"><span style="position:absolute;left:0;top:0;color:var(--mia-accent-dark,#d4c35e);font-weight:800;">✓</span>' + b + '</li>'; }).join('');
+                    bl.style.display = 'block';
+                } else {
+                    bl.innerHTML = '';
+                    bl.style.display = 'none';
+                }
+            }
             var btn = document.getElementById('recBtn');
             btn.textContent = r.btn;
             btn.setAttribute('href', r.href);
