@@ -1362,6 +1362,15 @@ Platform: ___________
    - Key stakeholders and approvals
         <button class="copy-btn" onclick="copyBlock('discovery-template')">Copy</button>
       </div>
+
+      <h3>Audience Research (do before Strategy)</h3>
+      <p style="font-size:13px;color:var(--text-secondary);margin-bottom:10px;">Do this yourself before opening Ads Manager. Skip it and strategy is a guess.</p>
+      <ul class="checklist" data-section="onboard">
+        <li><input type="checkbox" id="ar-1"><label for="ar-1">Existing customer profile pulled (who buys today: age, geo, price points, lifestyle markers)</label></li>
+        <li><input type="checkbox" id="ar-2"><label for="ar-2">Competitor Ad Library teardown (3-5 competitors: hooks, formats, offers, CTAs, where they send people)</label></li>
+        <li><input type="checkbox" id="ar-3"><label for="ar-3">Comments mined for objections, desires, and the exact words buyers use</label></li>
+        <li><input type="checkbox" id="ar-4"><label for="ar-4">Audience Language Doc written (5 pain quotes, 5 desire quotes, 3 objection patterns, 5 competitor hooks, destination)</label></li>
+      </ul>
     </div>
 
     <!-- ========== SECTION 2: TRACKING ========== -->
@@ -2543,11 +2552,14 @@ Description: ___________
       <p class="section-desc">Decision rules for managing live campaigns. Remove emotion from optimization.</p>
 
       <h3>Optimization Decision Table</h3>
-      <p class="section-desc">Once delivery is confirmed, read <strong>CPM first</strong> &mdash; it's the rawest signal of whether the platform thinks your ad is worth showing, and a high CPM inflates every cost beneath it. Then work down CTR &rarr; CPC &rarr; CVR &rarr; ROAS.</p>
+      <p class="section-desc">Once delivery is confirmed, read <strong>CPM first</strong> &mdash; it's the rawest signal of whether the platform thinks your ad is worth showing, and a high CPM inflates every cost beneath it. Then work down hook rate &rarr; hold rate &rarr; ThruPlay completion &rarr; CTR &rarr; CPC &rarr; CVR &rarr; ROAS.</p>
       <table class="decision-table">
         <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
         <tr class="action-kill"><td>CPM (read first)</td><td>&gt; 2x benchmark</td><td>Auction pressure, weak quality ranking, audience too narrow, or creative fatigue</td><td>Refresh creative or broaden audience signals before reading anything downstream &mdash; high CPM inflates CPC, CPA, and ROAS</td></tr>
         <tr class="action-scale"><td>CPM (read first)</td><td>&lt; benchmark</td><td>Efficient delivery, healthy signal</td><td>Good foundation; read the rest of the funnel</td></tr>
+        <tr class="action-kill"><td>Hook Rate (3s views &divide; impressions)</td><td>&lt; 20% (NG) / 25% (diaspora)</td><td>First 1-2 seconds aren't stopping the scroll</td><td>Fix the hook &mdash; new opening line, visual, or pattern interrupt</td></tr>
+        <tr class="action-kill"><td>Hold Rate (15s views &divide; 3s views)</td><td>&lt; 15% (NG) / 20% (diaspora)</td><td>The middle loses people</td><td>Rewrite the middle &mdash; tighten pacing, cut slow sections</td></tr>
+        <tr class="action-kill"><td>ThruPlay Completion (100% plays &divide; ThruPlays)</td><td>&lt; 25% (15s) / 15% (30s) / 8% (60s)</td><td>Weak ending, drags, or video too long</td><td>Shorten, punch up the close, or test a shorter cut</td></tr>
         <tr class="action-kill"><td>CTR</td><td>&lt; 0.5%</td><td>Creative not resonating</td><td>Test new hooks, visuals, or formats</td></tr>
         <tr class="action-watch"><td>CTR</td><td>0.5-1.5%</td><td>Average creative</td><td>Test variations, iterate on best performer</td></tr>
         <tr class="action-scale"><td>CTR</td><td>&gt; 2%</td><td>Strong creative</td><td>Scale budget, duplicate to new audiences</td></tr>
@@ -2724,6 +2736,16 @@ Description: ___________
       </div>
 
       <div class="warning-box">Benchmarks are directional, not absolute. Industry, audience, offer, and creative quality all shift these ranges. Use your client's historical data as the primary benchmark after 30 days.</div>
+
+      <h3>Platform Report Column Setup</h3>
+      <p class="section-desc">The diagnosis table only works if Ads Manager shows the right columns. Build a saved custom column set once and reuse it for every read so the numbers stay comparable. In Meta Ads Manager: <strong>Columns &rarr; Customise Columns</strong>, add the set below, tick <strong>Save as preset</strong>, name it "MIA Read-the-Funnel".</p>
+      <div class="copyable" id="meta-column-set">MIA META COLUMN SET (funnel-read order)
+delivery | amount spent | budget | results | purchases | purchase ROAS | adds to cart | leads | cost per result | reach | impressions | CPM | hook rate | hold rate | thruplay completion rate | frequency | results ROAS | clicks (all) | CTR | quality ranking | landing page views | cost per landing page view
+        <button class="copy-btn" onclick="copyBlock('meta-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> Hook rate, hold rate, and ThruPlay completion usually aren't default columns &mdash; add them as <strong>custom metrics</strong> (Customise Columns &rarr; Create Custom Metric): hook rate = 3-second plays &divide; impressions; hold rate = 15-second (or ThruPlay) plays &divide; 3-second plays; ThruPlay completion = 100% plays &divide; ThruPlays. Quality ranking is only in the campaign-level view, not the placement/age breakdowns. Use the same saved set for every scheduled read and the weekly report.
+      </div>
 
       <h3>Weekly Report Template</h3>
       <div class="copyable" id="weekly-report">WEEKLY PERFORMANCE REPORT — {{CLIENT}}
