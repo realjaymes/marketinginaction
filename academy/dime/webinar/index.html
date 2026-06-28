@@ -1771,7 +1771,7 @@
       // === Checkout: known buyer → straight to Selar; unknown → prefill modal first ===
       // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage dime_lead (same browser, set at the opt-in).
       // KNOWN (email present): go direct to Selar and log a complete intent row. UNKNOWN: pop the prefill modal, collect name/email/phone, log, then go.
-      // Selar always gets name + email only — phone goes to our sheet, never to Selar (prefilled phones break Selar checkout). The coupon on the href is preserved.
+      // Selar gets name + email + phone (local 0XXXX format). Selar's phone-prefill bug was fixed 2026-06-28, so the phone is now prefilled on checkout. The coupon on the href is preserved.
       (function(){
         var INTENT_SHEET="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
         var PRODUCT='DIME – clicked buy (webinar)', SOURCE='webinar-intent', VALUE=35000;
@@ -1782,8 +1782,8 @@
           function pick(k){ return (qp&&(qp.get(k)||''))||''; }
           return { email:(pick('email')||pick('lead')||lead.email||'').trim(), name:(pick('fullname')||pick('name')||lead.name||'').trim(), phone:(lead.phone||'').trim() };
         }
-        // Preserve everything already on the href (incl. ?quickcheckout=1&coupon=DIMEWEBINAR); append name+email only, never phone.
-        function selarUrl(base, name, email){ var i=base.indexOf('&email='); var u=(i>-1?base.substring(0,i):base); return u+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name); }
+        // Preserve everything already on the href (incl. ?quickcheckout=1&coupon=DIMEWEBINAR); append name+email, plus phone (local 0XXXX) when present.
+        function selarUrl(base, name, email, phone){ var i=base.indexOf('&email='); var u=(i>-1?base.substring(0,i):base); var s=u+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name); if(phone)s+='&mobile=0'+phone.substring(3); return s; }
         function fireCheckout(){
           try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e){}
           try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:VALUE,currency:'NGN'}); }catch(e){}
@@ -1796,7 +1796,7 @@
           var a=e.target.closest('a.js-buy'); if(!a) return;
           e.preventDefault();
           var k=known();
-          if(k.email){ fireCheckout(); logIntent(k); window.location.href=selarUrl(a.href, k.name, k.email); return; } // known → direct
+          if(k.email){ fireCheckout(); logIntent(k); window.location.href=selarUrl(a.href, k.name, k.email, k.phone); return; } // known → direct
           pendingBase=a.href; // unknown → collect first
           var form=document.getElementById('prefillForm'); if(form) form.reset();
           if(k.name){ var n=document.getElementById('prefillName'); if(n) n.value=k.name; }
@@ -1814,7 +1814,7 @@
           if(phone){ phone=phone.replace(/\D/g,''); if(phone.startsWith('234'))phone=phone.substring(3); if(phone.startsWith('0'))phone=phone.substring(1); phone='234'+phone; }
           try{ localStorage.setItem('dime_lead', JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()})); }catch(e){} // so the next click is "known"
           fireCheckout(); logIntent({name:name,email:email,phone:phone});
-          var dest=selarUrl(pendingBase||DEFAULT_SELAR, name, email);
+          var dest=selarUrl(pendingBase||DEFAULT_SELAR, name, email, phone);
           setTimeout(function(){ window.location.href=dest; }, 400);
         };
         document.addEventListener('keydown', function(e){ if(e.key==='Escape') closePrefill(); });
