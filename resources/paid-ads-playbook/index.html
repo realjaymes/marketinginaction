@@ -1094,7 +1094,7 @@
       <table class="decision-table">
         <tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr>
         <tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state</td><td>Is this account ready to spend?</td></tr>
-        <tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer actually want, in their own words? (do before Strategy)</td></tr>
+        <tr><td>1.5</td><td>Audience Research</td><td>Restate business, pull existing customer profile, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>Skipping this means Strategy is a guess. Don't proceed without it on new engagements</td></tr>
         <tr><td>2</td><td>Track</td><td>Verify pixel + CAPI + conversion events</td><td>Don't proceed without 80%+ event match vs. analytics</td></tr>
         <tr><td>3</td><td>Strategy</td><td>Pick objective, set CPA/CVR/ROAS targets, hypothesize audiences and creative themes</td><td>Define kill/scale thresholds before launch</td></tr>
         <tr><td>4</td><td>Structure</td><td>Build campaign &rarr; ad set &rarr; ad hierarchy with naming convention</td><td>ABO (testing) or CBO (scaling)?</td></tr>
@@ -1892,6 +1892,26 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
         <tr><td><strong>Ad Set</strong></td><td><code>Country | Audience | Angle | Conversion Event | Daily Budget</code></td><td>Country and audience determine delivery; <strong>Angle scopes the ad set to one message (one ad set = one angle)</strong>; conversion event and budget determine learning</td></tr>
         <tr><td><strong>Ad</strong></td><td><code>Product | Creative Type | Hook</code></td><td>Anchor on the product so multi-product accounts stay legible; creative type + hook are the test variables within the ad set's angle</td></tr>
       </table>
+
+      <h3>Platform Hierarchy</h3>
+      <p>The three tiers are the same idea everywhere, but each platform names its middle level differently. "Campaign &rarr; Ad Set &rarr; Ad" is Meta's terminology; map the middle tier to your platform's term below. The naming generator above already swaps the middle-level label when you switch platforms.</p>
+      <table class="decision-table">
+        <tr><th>Platform</th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr>
+        <tr><td><strong>Meta</strong></td><td>Campaign</td><td>Ad Set</td><td>Ad</td></tr>
+        <tr><td><strong>TikTok</strong></td><td>Campaign</td><td>Ad Group</td><td>Ad</td></tr>
+        <tr><td><strong>Google</strong></td><td>Campaign</td><td>Ad Group</td><td>Ad</td></tr>
+        <tr><td><strong>LinkedIn</strong></td><td>Campaign Group</td><td>Campaign</td><td>Ad</td></tr>
+        <tr><td><strong>Snapchat</strong></td><td>Campaign</td><td>Ad Set</td><td>Ad</td></tr>
+        <tr><td><strong>X</strong></td><td>Campaign</td><td>Ad Group</td><td>Ad</td></tr>
+        <tr><td><strong>ChatGPT</strong></td><td>Campaign</td><td>Ad Group (intent cluster)</td><td>Ad</td></tr>
+      </table>
+
+      <div class="info-box">
+        <strong>One Ad Set = One Angle</strong><br><br>
+        An <strong>angle</strong> is a belief, desire, or fear the audience holds (AI Fear, Cost of Living, Job Security, Financial Freedom, Speed). It is <em>what you say</em>, not how you say it. Scope each ad set to a single angle so the platform learns cleanly.<br><br>
+        A testimonial, case study, founder story, or demo is a <strong>content structure</strong>, not an angle. The opening line or visual is the <strong>Hook</strong> &mdash; the test variable at the ad level. Don't mix multiple angles inside one ad set, and don't confuse a content structure for an angle.
+      </div>
+
       <div class="info-box">
         <strong>Examples</strong><br><br>
         <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Cold | 2026-03-01</code><br>
@@ -2985,11 +3005,11 @@ Key priorities:
 
       const lightColors = {
         meta: '#e7f3ff', tiktok: '#ffe8ec', google: '#e8f0fe', linkedin: '#e1f0ff', snapchat: '#fffde0',
-        x: '#1a1a1a', chatgpt: '#e6f7f0'
+        x: '#f0f0f0', chatgpt: '#e6f7f0'
       };
       const bgColors = {
         meta: '#f0f7ff', tiktok: '#fff5f7', google: '#f1f5fe', linkedin: '#edf5ff', snapchat: '#fffef0',
-        x: '#0d0d0d', chatgpt: '#eef9f3'
+        x: '#f7f7f7', chatgpt: '#eef9f3'
       };
       // Text color paired with --mia-accent. Snapchat's near-white brand yellow needs black; the other platforms need white.
       const textColors = {
