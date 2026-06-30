@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="James Praise">
     <meta name="color-scheme" content="light only">
-    <title>DIME Class Replay | MIA Academy</title>
+    <title>Free Class: Make Your First ₦500,000 Online With AI</title>
+    <meta name="description" content="Register for the free live class. The simplest way to your first money online, with AI doing 80% of the work. No experience, no audience, no camera needed.">
     <meta name="robots" content="noindex">
-    <meta name="description" content="Make your first money online with AI doing 80% of the work. Sell a ready-made digital product this week, then build your own that pays you in dollars. From MIA Academy. Founding price ₦45,000, 30-day first-sale guarantee.">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="DIME – Digital Income Made Easy (with AI)">
-    <meta property="og:description" content="The simplest way to your first dollar online, with AI doing 80% of the work. Two doors: sell ready-made products for fast cash, or build your own with AI and earn in dollars. Founding price ₦45,000. 30-day first-sale guarantee.">
-    <meta property="og:url" content="https://marketinginaction.xyz/academy/dime/replay/">
+    <meta property="og:title" content="Free Live Class — DIME (Digital Income Made Easy with AI)">
+    <meta property="og:description" content="A free live class: the simplest way to your first money online, with AI doing 80% of the work. Save your seat.">
+    <meta property="og:url" content="https://marketinginaction.xyz/academy/dime/class-info/">
     <meta property="og:image" content="https://marketinginaction.xyz/og-image.png">
     <meta property="og:site_name" content="Marketing In Action">
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="DIME – Digital Income Made Easy (with AI)">
-    <meta name="twitter:description" content="The simplest way to your first dollar online, with AI doing 80% of the work. Two doors: sell ready-made products for fast cash, or build your own with AI and earn in dollars. Founding price ₦45,000. 30-day first-sale guarantee.">
+    <meta name="twitter:title" content="Free Live Class — DIME (Digital Income Made Easy with AI)">
+    <meta name="twitter:description" content="A free live class: the simplest way to your first money online, with AI doing 80% of the work. Save your seat.">
     <meta name="twitter:image" content="https://marketinginaction.xyz/og-image.png">
     <meta name="twitter:site" content="@marketinginact">
 
-    <link rel="canonical" href="https://marketinginaction.xyz/academy/dime/replay/">
+    <link rel="canonical" href="https://marketinginaction.xyz/academy/dime/class-info/">
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -135,7 +135,7 @@
             "@type": "Offer",
             "price": "45000",
             "priceCurrency": "NGN",
-            "url": "https://marketinginaction.xyz/academy/dime/replay/",
+            "url": "https://marketinginaction.xyz/academy/dime/class-info/",
             "availability": "https://schema.org/InStock"
         },
         "author": {
@@ -1478,7 +1478,7 @@
       "@type": "ListItem",
       "position": 3,
       "name": "DIME – Digital Income Made Easy",
-      "item": "https://marketinginaction.xyz/academy/dime/replay/"
+      "item": "https://marketinginaction.xyz/academy/dime/class-info/"
     }
   ]
 }
@@ -1489,159 +1489,97 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- BUILD: checkout wired → https://selar.com/57157707om?quickcheckout=1&coupon=DIMEWEBINAR (DIMEWEBINAR pre-applied → ₦35,000). Default ₦45,000 link = https://selar.com/digitalincomemadeeasy (sales page). Replace the replay video embed. Countdown is a per-person 48h window via localStorage; true enforcement = the Brevo deadline sequence + the Selar coupon expiry. -->
+    <!-- BUILD NOTE: replace [CLASS DATE] with the live date for cohort 1. Form posts to James's Google Sheet endpoint, fires Lead + CompleteRegistration, then redirects to /academy/dime/confirmed-info/ (build that next, Funnel/03). For evergreen, the confirmation page routes to the instant JIT room. Swap the VSL placeholder with the registration video embed. -->
 
-    <!-- COUNTDOWN BANNER -->
-    <div id="rcBanner" style="position:sticky; top:0; z-index:101; background:#dc2626; color:#fff; text-align:center; padding:11px 16px; font-size:0.92rem; font-weight:600;">
-        &#9203; Your replay is up for a limited time. The <strong>&#8358;35,000</strong> price + bonuses close when the timer ends &mdash; <span id="rcTimer" style="font-variant-numeric:tabular-nums;">48:00:00</span>
+    <!-- ANNOUNCEMENT BAR -->
+    <div class="announcement-bar">
+        <span class="dot"></span>
+        <span id="abText">FREE CLASS &middot; <strong>Make Your First Money Online With AI</strong>, Even From Zero</span>
     </div>
 
-    <!-- NAV -->
+    <!-- STICKY NAV -->
     <nav class="sticky-nav">
         <div class="container">
             <a href="/academy/" class="sticky-nav__brand"><img src="/assets/mia-logo.svg" alt="MIA Academy" style="height:28px; width:auto;"></a>
-            <a href="#offer" class="btn btn-accent">Get Access &mdash; &#8358;35,000</a>
+            <a href="#register" class="btn btn-accent">Save My Seat</a>
         </div>
     </nav>
 
-    <!-- HERO -->
+    <!-- HERO + REGISTRATION -->
     <section class="hero">
-        <div class="container" style="max-width:1320px;">
-            <div class="hero__audience-tag">The class replay &middot; available for a limited time</div>
-            <h1 class="hero__headline">How One Simple Digital Product Put <span class="highlight">&#8358;3,166,300 ($2,062)</span> in My Account in 30 Days, and How You'll <span class="highlight">Build Yours With AI</span></h1>
-            <p class="hero__sub">This is the replay of the class where I show you the simplest way to your first dollar online, with AI doing 80% of the work. Watch it now &mdash; the offer at the end is only open while this replay is live.</p>
-
-            <!-- REPLAY VIDEO -->
-            <div style="max-width:1240px; margin:24px auto 0; aspect-ratio:16/9; background:#000; border-radius:var(--radius-md); overflow:hidden; box-shadow:0 20px 60px rgba(0,0,0,0.5); display:flex; align-items:center; justify-content:center;">
-                <iframe src="https://iframe.mediadelivery.net/embed/685418/87710968-05cb-41ea-b918-54ba8e380e4d?autoplay=false&preload=true&responsive=true" loading="lazy" allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;" allowfullscreen="true" style="width:100%; height:100%; border:0;"></iframe>
-            </div>
-            <div style="text-align:center; margin-top:18px;"><a href="#offer" class="btn btn-accent">Get Instant Access &mdash; &#8358;35,000</a></div>
-        </div>
-    </section>
-
-    <!-- OFFER RECAP + STACK -->
-    <section class="value-stack" id="value">
-        <div class="container text-center">
-            <span class="section-label">What You Get</span>
-            <h2 class="section-title">Everything Inside DIME</h2>
-            <p class="section-sub">If you watched, you saw it: making money online comes down to selling, two ways, and AI does 80% of the work. Here is everything to do both.</p>
-        </div>
         <div class="container">
-            <div class="value-stack__box">
-                <div class="value-stack__header">DIME &ndash; Digital Income Made Easy <span class="highlight">(with AI)</span></div>
-                <div class="value-stack__items">
-                    <div class="value-item value-item--core"><div class="value-item__info"><div class="value-item__name">The full DIME system</div><div class="value-item__desc">The 7-step roadmap, AI demand-mining to find what sells, and the get-paid-first method so you never build the wrong thing.</div></div><div class="value-item__badge"><span class="value-item__price-struck">&#8358;500,000</span><span class="value-item__free">Included</span></div></div>
-                    <div class="value-item value-item--core"><div class="value-item__info"><div class="value-item__name">Door 1 &mdash; Plug-and-Profit</div><div class="value-item__desc">Sell ready-made products and make your first money this week. Nothing to build.</div></div><div class="value-item__badge"><span class="value-item__price-struck">&#8358;150,000</span><span class="value-item__free">Included</span></div></div>
-                    <div class="value-item value-item--core"><div class="value-item__info"><div class="value-item__name">Door 2 &mdash; Build-with-AI</div><div class="value-item__desc">Build and own your own product that pays you in dollars.</div></div><div class="value-item__badge"><span class="value-item__price-struck">&#8358;200,000</span><span class="value-item__free">Included</span></div></div>
-                    <div class="value-item"><div class="value-item__info"><div class="value-item__name">Every tool that makes the money</div><div class="value-item__desc">Funnel builder, AI page prompts, Meta (IG &amp; FB) ads, webinar selling, email automation, WhatsApp selling, faceless traffic, and naira-to-dollars cashout.</div></div><div class="value-item__badge"><span class="value-item__price-struck">&#8358;1,800,000</span><span class="value-item__free">Included</span></div></div>
-                    <div class="value-item"><div class="value-item__info"><div class="value-item__name">&#127873; The bonuses</div><div class="value-item__desc">The lifetime DIME community, the Winning Funnels Vault, the Phone-Only Toolkit, the Naija Playbook, and the Founding-Cohort Door Audit.</div></div><div class="value-item__badge"><span class="value-item__price-struck">&#8358;525,000</span><span class="value-item__free">Bonus</span></div></div>
+            <div class="hero__audience-tag" id="heroTag">For complete beginners &middot; Instant access</div>
+
+            <h1 class="hero__headline">
+                How One Simple Digital Product Put <span class="highlight">&#8358;3,166,300 ($2,062)</span> in My Account in 30 Days, and How You'll <span class="highlight">Build Yours With AI</span>
+            </h1>
+
+            <p class="hero__sub" id="heroSub">In this free class I will show you the simplest way to your first dollar online, where AI does 80% of the work. No experience, no big audience, no showing your face.</p>
+
+            <!-- VSL + FORM CARD -->
+            <div id="register" style="max-width:880px; margin:28px auto 0; background:var(--white); border-radius:var(--radius-lg); box-shadow:0 20px 60px rgba(0,0,0,0.3); overflow:hidden; text-align:left;">
+                <!-- VSL -->
+                <div style="position:relative; width:100%; aspect-ratio:16/9; background:#0c0a12;">
+                    <iframe src="https://iframe.mediadelivery.net/embed/685418/1fced53b-9e15-49b3-bd17-20def5bb3d37?autoplay=false&loop=false&muted=false&preload=true&responsive=true" loading="lazy" allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;" allowfullscreen="true" style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
                 </div>
-                <div class="value-stack__footer">
-                    <div class="value-stack__total-label">Total real value</div>
-                    <div style="font-size:1.3rem; text-decoration:line-through; color:var(--red); margin:4px 0;">&#8358;3,175,000</div>
-                    <div class="value-stack__total-label" style="margin-top:8px;">Your replay price</div>
-                    <div class="value-stack__total">&#8358;35,000</div>
-                    <div class="value-stack__total-label" style="margin-top:4px;">one time. lifetime access.</div>
+                <!-- FORM -->
+                <div style="padding:24px 24px 26px;">
+                    <div style="font-family:var(--font-display); font-weight:750; font-size:1.2rem; color:var(--primary-dark); text-align:center; margin-bottom:4px;">Save your free seat</div>
+                    <p style="font-size:0.85rem; color:var(--text-muted); text-align:center; margin:0 0 16px;">Enter your details to get your class link and reminders.</p>
+                    <form id="optinForm" onsubmit="return submitOptin(event)" style="max-width:440px; margin:0 auto;">
+                        <input type="text" id="optinName" required placeholder="First name" autocomplete="given-name" style="width:100%; padding:13px 14px; margin-bottom:10px; border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:1rem; background:var(--bg-page); color:var(--text-primary);">
+                        <input type="email" id="optinEmail" required placeholder="Email address" autocomplete="email" style="width:100%; padding:13px 14px; margin-bottom:10px; border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:1rem; background:var(--bg-page); color:var(--text-primary);">
+                        <input type="tel" id="optinPhone" required placeholder="WhatsApp number (for your reminders + class link)" autocomplete="tel" style="width:100%; padding:13px 14px; margin-bottom:14px; border:1.5px solid var(--border); border-radius:var(--radius-sm); font-size:1rem; background:var(--bg-page); color:var(--text-primary);">
+                        <button type="submit" id="optinBtn" class="btn btn-accent" style="width:100%; justify-content:center; font-size:1.05rem;">Save My Seat &rarr;</button>
+                        <p id="formNote" style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin:12px 0 0;">It's free. You get instant access the moment you register. Your details are safe.</p>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- OFFER / PRICE -->
-    <section class="pricing" id="offer">
-        <div class="container text-center">
-            <span class="section-label">The Offer</span>
-            <h2 class="section-title">Because You Showed Up, You Get the Class Price</h2>
-            <p class="section-sub">Not the regular price. But only while this replay is live.</p>
-        </div>
-        <div class="container">
-            <div style="max-width:520px; margin:0 auto; background:var(--white); border:2px solid var(--mia-accent); border-radius:var(--radius-lg); box-shadow:var(--shadow-card); padding:32px 28px; text-align:center;">
-                <div style="font-size:0.9rem; color:var(--text-muted);"><s>Regular &#8358;45,000</s> &middot; <s>rising to &#8358;55,000</s></div>
-                <div style="font-size:3rem; font-weight:750; color:var(--primary-dark); line-height:1; margin:6px 0;">&#8358;35,000</div>
-                <div style="font-size:0.9rem; color:var(--text-muted); margin-bottom:18px;">about &#8358;96/day over a year &mdash; cheaper than your data. Roughly $23 abroad; checkout shows your local currency.</div>
-                <a href="https://selar.com/57157707om?quickcheckout=1&amp;coupon=DIMEWEBINAR" class="btn btn-accent js-buy" style="width:100%; justify-content:center;" target="_blank" rel="noopener">Get Instant Access &mdash; &#8358;35,000</a>
-                <div style="font-size:0.8rem; color:var(--text-muted); margin-top:14px;">coupon <strong>DIMEWEBINAR</strong> &middot; &#128737;&#65039; 30-Day First-Sale Guarantee</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROOF -->
+    <!-- WHAT YOU'LL DISCOVER -->
     <section style="background:var(--white); padding:56px 0;">
         <div class="container text-center">
-            <span class="section-label">Proof</span>
-            <h2 class="section-title">Real Results From People Who Did the Work</h2>
-            <p class="section-sub">In May alone I made <strong>&#8358;4,769,290</strong>; one product has sold <strong>203 times</strong>; my ads run at <strong>4.84&times; ROAS</strong>. And it is not just me.</p>
+            <span class="section-label">On This Free Class</span>
+            <h2 class="section-title">What You Will Discover</h2>
         </div>
         <div class="container">
-            <p style="text-align:center; margin:8px 0 16px; font-weight:700; font-size:1.05rem; color:var(--primary-dark);">First, my own receipts</p>
-            <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:760px; margin:0 auto;">
-                <div style="background:var(--mia-background); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><img src="/academy/dime/assets/selar-dashboard.png?v=20260630" alt="Selar dashboard: 645 sales, ₦9,209,500" loading="lazy" style="width:100%; height:auto; display:block;"></div>
-                <div style="background:var(--mia-background); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><img src="/academy/dime/assets/meta-ads-1.png" alt="Meta Ads 4.84x ROAS" loading="lazy" style="width:100%; height:auto; display:block;"></div>
-            </div>
-            <p style="text-align:center; margin:40px 0 16px; font-weight:700; font-size:1.05rem; color:var(--primary-dark);">Then, the students in their own words</p>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); gap:18px; max-width:720px; margin:0 auto;">
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/o1ofCRj-QG4" title="Dozie — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Dozie</strong> &middot; 9-to-5 in Sales<br><span style="font-style:italic;">"&#8358;75,000 in my first week."</span></figcaption></figure>
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/gyMmepioDW0" title="Ivie — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Ivie</strong> &middot; University Student<br><span style="font-style:italic;">"My first sale, ever."</span></figcaption></figure>
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/l3NiHp9WH0A" title="Faith — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Faith</strong> &middot; Recent Graduate<br><span style="font-style:italic;">"My first customer changed my mindset."</span></figcaption></figure>
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/CNhy3OzqNjM" title="Cynthia — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Cynthia</strong> &middot; Content Marketer<br><span style="font-style:italic;">"I went from learning to actually doing."</span></figcaption></figure>
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/vxcPV_gOW-k" title="Favour — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Favour</strong> &middot; Marketing Associate<br><span style="font-style:italic;">"My first sale in the first couple of days."</span></figcaption></figure>
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/VjsItZi1448" title="Emeka — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Emeka</strong> &middot; Marketing Manager<br><span style="font-style:italic;">"A proven framework, not guru advice."</span></figcaption></figure>
-                <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/hoxZrm6tmWk" title="Olamide — DIME student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Olamide</strong> &middot; Recent Graduate<br><span style="font-style:italic;">"My first online income within a month."</span></figcaption></figure>
-            </div>
-            <p style="text-align:center; margin:40px 0 16px; font-weight:700; font-size:1.05rem; color:var(--primary-dark);">And straight from their DMs</p>
-            <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px; max-width:600px; margin:0 auto;">
-                <div style="background:var(--mia-background); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><img src="/academy/dime/assets/student-oyinloye.jpg" alt="Student: I just made my first sale" loading="lazy" style="width:100%; height:auto; display:block;"></div>
-                <div style="background:var(--mia-background); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><img src="/academy/dime/assets/student-angela.jpg" alt="Student: two sales in dollars" loading="lazy" style="width:100%; height:auto; display:block;"></div>
-            </div>
-            <p style="text-align:center; margin-top:18px; font-size:0.8rem; color:var(--text-muted);">Real MIA Academy students, shared with permission.</p>
-        </div>
-    </section>
-
-    <!-- GUARANTEE -->
-    <section class="guarantee">
-        <div class="container">
-            <div class="guarantee__box">
-                <div class="guarantee__seal">&#128737;&#65039;</div>
-                <div class="guarantee__title">The 30-Day First-Sale Guarantee</div>
-                <p class="guarantee__text">Go through the program and do the work. If you do not make your first sale within 30 days, I will refund you in full, and you keep every bonus. The risk is on me, not you.</p>
+            <div style="max-width:680px; margin:0 auto; display:grid; gap:14px;">
+                <div style="display:flex; gap:14px; align-items:flex-start; background:var(--bg-page); border-radius:var(--radius-md); padding:18px 20px;">
+                    <span style="font-size:1.3rem;">&#129504;</span>
+                    <span>The one simple skill that actually makes money online in Nigeria, and how AI now does most of it for you.</span>
+                </div>
+                <div style="display:flex; gap:14px; align-items:flex-start; background:var(--bg-page); border-radius:var(--radius-md); padding:18px 20px;">
+                    <span style="font-size:1.3rem;">&#128241;</span>
+                    <span>How ordinary people are earning their first dollars online with no capital, no laptop needed, and no face on camera.</span>
+                </div>
+                <div style="display:flex; gap:14px; align-items:flex-start; background:var(--bg-page); border-radius:var(--radius-md); padding:18px 20px;">
+                    <span style="font-size:1.3rem;">&#128682;</span>
+                    <span>The exact two-door system to make your first money this week, then own a product that pays you in dollars, even if you are starting from zero.</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- FOUNDING REWARDS -->
-    <section style="background:var(--primary-dark); padding:48px 0;">
+    <!-- WHY LISTEN (PROOF) -->
+    <section style="background:var(--primary-dark); padding:52px 0;">
         <div class="container text-center">
-            <span class="section-label" style="background:rgba(241,222,113,0.15); color:var(--mia-accent);">The Partner Challenge</span>
-            <h2 class="section-title" style="color:var(--white);">Your Sales Decide, Not a Draw</h2>
-            <p class="section-sub" style="color:rgba(255,255,255,0.7);">You join as a DIME Plug-and-Profit partner, keep your commission on every sale, and the rewards stack on top. Verified on Selar.</p>
-            <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:14px; max-width:820px; margin:22px auto 0;">
-                <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(241,222,113,0.2); border-radius:var(--radius-md); padding:18px; color:rgba(255,255,255,0.9);">&#128176; <strong>Week 1 Flash:</strong> 100 sales in 7 days &rarr; <strong>&#8358;100,000 cash</strong>.</div>
-                <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(241,222,113,0.2); border-radius:var(--radius-md); padding:18px; color:rgba(255,255,255,0.9);">&#128241; <strong>30-Day Milestone:</strong> 500 sales in 30 days &rarr; the <strong>latest iPhone, or a MacBook</strong>.</div>
-                <div style="background:rgba(255,255,255,0.05); border:1px solid rgba(241,222,113,0.2); border-radius:var(--radius-md); padding:18px; color:rgba(255,255,255,0.9);">&#9992;&#65039; <strong>12-Month Reward:</strong> our <strong>top 10</strong> partners get a <strong>fully-funded 3-day Nigeria resort vacation</strong>.</div>
-            </div>
+            <span class="section-label" style="background:rgba(241,222,113,0.15); color:var(--mia-accent);">Why Listen</span>
+            <h2 class="section-title" style="color:var(--white);">This Is Real</h2>
+            <p style="max-width:600px; margin:0 auto; color:rgba(255,255,255,0.8);">In May alone I made <strong style="color:var(--mia-accent);">&#8358;4,769,290</strong> from my digital products, and one of them has sold <strong style="color:var(--mia-accent);">203 times</strong>, from home, as a side hustle, without dancing on TikTok or begging anyone. On this class I show you exactly how it works.</p>
+            <p style="font-size:0.78rem; color:rgba(255,255,255,0.45); margin-top:14px;">My results are not promised. They are achievable if you put in the effort.</p>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq">
-        <div class="container text-center"><span class="section-label">FAQ</span><h2 class="section-title">Quick Questions</h2></div>
-        <div class="container">
-            <div class="faq-list">
-                <div class="faq-item active"><button class="faq-item__q"><span>Do I need experience, skills, capital, or a laptop?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No, no, no, and no. It is built for complete beginners, AI does the technical part, Door 1 needs little to no capital, and you can run it from your phone. No age limit either.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q"><span>Does it keep paying?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">You set it up once and it keeps selling, for months and years.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q"><span>How fast can I make money?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Door 1 is built for a first sale in your first week. Door 2 (your own product) takes a few weeks.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q"><span>Can I sell outside Nigeria?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes. Digital products have no borders, you sell worldwide and get paid in dollars. Your checkout shows each buyer their local currency.</div></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FINAL CTA -->
+    <!-- URGENCY + CTA -->
     <section class="final-cta">
         <div class="container">
-            <h2 class="final-cta__headline">When This Replay Comes Down, <span class="highlight">So Does the Price</span></h2>
-            <p class="final-cta__sub">The ₦35,000 price and the bonuses close with the timer, then it goes back to ₦45,000. Do not let this be one more thing you watched and did nothing about.</p>
-            <div class="final-cta__buttons"><a href="https://selar.com/57157707om?quickcheckout=1&amp;coupon=DIMEWEBINAR" class="btn btn-accent js-buy" target="_blank" rel="noopener">Get Instant Access &mdash; &#8358;35,000</a></div>
-            <p class="final-cta__trust">&#128737;&#65039; 30-Day First-Sale Guarantee &middot; lifetime access + community &middot; coupon DIMEWEBINAR</p>
+            <h2 class="final-cta__headline" id="finalHead">Start Today, <span class="highlight">Watch Instantly</span></h2>
+            <p class="final-cta__sub" id="finalSub">No waiting for a date. Register and the class starts right away. The sooner you start, the sooner your first sale.</p>
+            <div class="final-cta__buttons">
+                <a href="#register" class="btn btn-accent">Save My Seat &rarr;</a>
+            </div>
         </div>
     </section>
 
@@ -1649,7 +1587,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer__brand">MIA Academy</div>
-            <p class="footer__trust">Earnings disclaimer: my results, and any student results shown, are not promised. They are achievable if you put in the effort. Results vary based on your effort, niche, and implementation.</p>
+            <p class="footer__trust">Results vary based on your effort, niche, and implementation. Testimonials and results reflect individual experiences and are not a guarantee of specific outcomes.</p>
             <p class="footer__copy">&copy; <span class="year">2026</span> Marketing In Action (MIA). All rights reserved.</p>
         </div>
     </footer>
@@ -1657,135 +1595,66 @@
     <!-- SCRIPTS -->
     <script>
       document.querySelectorAll('.year').forEach(function(e){ e.textContent = new Date().getFullYear(); });
-      document.querySelectorAll('.faq-item__q').forEach(function(b){ b.addEventListener('click', function(){ b.closest('.faq-item').classList.toggle('active'); }); });
-      try { if (typeof fbq === 'function') fbq('track','ViewContent',{content_name:'DIME Replay'}); } catch(e){}
-      // === Checkout: known buyer → straight to Selar; unknown → prefill modal first ===
-      // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage dime_lead (same browser, set at the opt-in).
-      // KNOWN (email present): go direct to Selar and log a complete intent row. UNKNOWN: pop the prefill modal, collect name/email/phone, log, then go.
-      // Selar gets name + email + phone (local 0XXXX format). Selar's phone-prefill bug was fixed 2026-06-28, so the phone is now prefilled on checkout. The coupon on the href is preserved.
+      try { if (typeof fbq === 'function') fbq('track','ViewContent',{content_name:'DIME Free Class'}); } catch(e){}
+
+      // DIME live/evergreen switch — the page is EVERGREEN by default; a ?cohort= link UPGRADES it to LIVE,
+      // but only until the premiere cutover below. After that, stale cohort links gracefully fall back to evergreen.
       (function(){
-        var INTENT_SHEET="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
-        var PRODUCT='DIME – clicked buy (replay)', SOURCE='replay-intent', VALUE=35000;
-        var DEFAULT_SELAR='https://selar.com/57157707om?quickcheckout=1&coupon=DIMEWEBINAR';
-        function known(){
-          var qp; try{ qp=new URLSearchParams(location.search); }catch(e){ qp=null; }
-          var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){}
-          function pick(k){ return (qp&&(qp.get(k)||''))||''; }
-          return { email:(pick('email')||pick('lead')||lead.email||'').trim(), name:(pick('fullname')||pick('name')||lead.name||'').trim(), phone:(lead.phone||'').trim() };
-        }
-        // Preserve everything already on the href (incl. ?quickcheckout=1&coupon=DIMEWEBINAR); append name+email, plus phone (local 0XXXX) when present.
-        function openCheckout(u){ try{ var w=window.open(u,'_blank'); if(w){ try{ w.opener=null; }catch(e){} return; } }catch(e){} window.location.href=u; }
-        function selarUrl(base, name, email, phone){ var i=base.indexOf('&email='); var u=(i>-1?base.substring(0,i):base); var s=u+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name); if(phone)s+='&mobile=0'+phone.substring(3); return s; }
-        function fireCheckout(){
-          try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e){}
-          try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:VALUE,currency:'NGN'}); }catch(e){}
-          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:VALUE, currency:'NGN'});
-        }
-        function logIntent(d){ try{ fetch(INTENT_SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:d.name||'',email:d.email||'',phone:d.phone||'',product:PRODUCT,pageUrl:location.href,source:SOURCE,event:'clicked_buy'})}); }catch(e){} }
-        var pendingBase='';
-        document.addEventListener('click', function(e){
-          if(e.target && e.target.id==='prefillModal'){ closePrefill(); return; } // backdrop click closes
-          var a=e.target.closest('a.js-buy'); if(!a) return;
-          e.preventDefault();
-          var k=known();
-          if(k.email){ fireCheckout(); logIntent(k); openCheckout(selarUrl(a.href, k.name, k.email, k.phone)); return; } // known → direct
-          pendingBase=a.href; // unknown → collect first
-          var form=document.getElementById('prefillForm'); if(form) form.reset();
-          if(k.name){ var n=document.getElementById('prefillName'); if(n) n.value=k.name; }
-          var m=document.getElementById('prefillModal'); if(m) m.classList.add('open'); document.body.style.overflow='hidden';
-          try{ if(typeof fbq==='function') fbq('track','AddToCart',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e2){}
-          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'add_to_cart', value:VALUE, currency:'NGN'});
-          setTimeout(function(){ try{ document.getElementById('prefillName').focus(); }catch(e3){} },100);
-        });
-        window.closePrefill=function(){ var m=document.getElementById('prefillModal'); if(m) m.classList.remove('open'); document.body.style.overflow=''; pendingBase=''; };
-        window.submitPrefill=function(ev){
-          ev.preventDefault();
-          var name=document.getElementById('prefillName').value.trim();
-          var email=document.getElementById('prefillEmail').value.trim();
-          var phone=document.getElementById('prefillPhone').value.trim();
-          if(phone){ phone=phone.replace(/\D/g,''); if(phone.startsWith('234'))phone=phone.substring(3); if(phone.startsWith('0'))phone=phone.substring(1); phone='234'+phone; }
-          try{ localStorage.setItem('dime_lead', JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()})); }catch(e){} // so the next click is "known"
-          fireCheckout(); logIntent({name:name,email:email,phone:phone});
-          var dest=selarUrl(pendingBase||DEFAULT_SELAR, name, email, phone);
-          openCheckout(dest); closePrefill();
-        };
-        document.addEventListener('keydown', function(e){ if(e.key==='Escape') closePrefill(); });
+        var LIVE_END = new Date('2026-06-26T20:30:00+01:00').getTime(); // ← premiere end (Fri June 26, ~8:30PM WAT). After this moment, ALL traffic is evergreen. Change this one line to move the cutover.
+        var cohort = (new URLSearchParams(window.location.search).get('cohort')||'').trim();
+        if(!(cohort && Date.now() < LIVE_END)){ window.DIME_cohort=''; return; }
+        window.DIME_cohort = cohort;
+        var COHORT_LABEL={june26:'Friday, June 26'}, label=COHORT_LABEL[cohort]||cohort; // URL-safe token → display date (falls back to the raw value for old links)
+        var esc=function(s){return s.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+        var set=function(id,html){var el=document.getElementById(id); if(el) el.innerHTML=html;};
+        set('abText','FREE LIVE CLASS &middot; <strong>'+esc(label)+'</strong> &middot; 7PM (Nigeria) &middot; Live only, no free replay');
+        set('heroTag','Free live class &middot; '+esc(label)+' &middot; 7PM Nigeria time');
+        set('heroSub','In this free live class I will show you the simplest way to your first dollar online, where AI does 80% of the work. No experience, no big audience, no showing your face.');
+        set('formNote','It&rsquo;s free. The class is live, with no free replay. Your details are safe.');
+        set('finalHead','It Is Live, And <span class="highlight">Live Only</span>');
+        set('finalSub','There is no paid replay floating around afterward. When it is over, it is over. If you want in, save your seat and show up.');
       })();
-      // Per-person replay countdown (48h window via localStorage). True enforcement = Brevo deadline + Selar coupon expiry.
-      (function(){
-        var KEY='dime_replay_deadline', HOURS=48, el=document.getElementById('rcTimer');
-        var dl=parseInt(localStorage.getItem(KEY)||'0',10);
-        if(!dl || isNaN(dl) || dl<=0){ dl=Date.now()+HOURS*3600*1000; localStorage.setItem(KEY, String(dl)); }
-        function pad(n){ return (n<10?'0':'')+n; }
-        function upd(){
-          var s=Math.floor((dl-Date.now())/1000);
-          if(s<=0){ if(el) el.textContent='00:00:00'; var b=document.getElementById('rcBanner'); if(b){ b.style.background='#4a3d58'; b.innerHTML='This replay window has closed. The class price has returned to &#8358;45,000.'; } return; }
-          var h=Math.floor(s/3600), m=Math.floor((s%3600)/60), x=s%60;
-          if(el) el.textContent=pad(h)+':'+pad(m)+':'+pad(x);
-          setTimeout(upd, 1000);
-        }
-        upd();
-      })();
+
+      window.submitOptin = function(e){
+        e.preventDefault();
+        var name=document.getElementById('optinName').value.trim();
+        var email=document.getElementById('optinEmail').value.trim();
+        // Phone normalizer → canonical 234XXXXXXXXXX (matches MIA lead-capture pipeline; Brevo rejects malformed)
+        var phone=document.getElementById('optinPhone').value.replace(/\D/g,'');
+        if(phone.indexOf('234')===0) phone=phone.substring(3);
+        if(phone.indexOf('0')===0) phone=phone.substring(1);
+        phone='234'+phone;
+        var btn=document.getElementById('optinBtn'); if(btn){btn.disabled=true; btn.textContent='Saving your seat...';}
+        var SHEET_URL="https://script.google.com/macros/s/AKfycbw-Ps6DvRaV2v1gRjv35lVkULGnnmkYjtFyUCwIJsHI-0evwi0H-LuBS4MoH3dl2A/exec";
+        // Product = one reusable tag per type for Brevo segmentation:
+        //   /class/?cohort=2026-06-15  → "DIME Live Class"      (one reusable automation; cohort date stays in Page URL)
+        //   /class/                    → "DIME Evergreen Class"  (default, always-on)
+        var cohort=window.DIME_cohort||'';
+        var product=cohort ? 'DIME Live Class' : 'DIME Evergreen Class';
+        var eid='reg_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);
+        try{ if(typeof fbq==='function'){ fbq('track','Lead',{content_name:product},{eventID:eid}); fbq('track','CompleteRegistration',{content_name:product},{eventID:eid}); } }catch(err){}
+        try{ if(typeof ttq!=='undefined'){ ttq.track('SubmitForm',{content_name:product}); ttq.track('CompleteRegistration',{content_name:product}); } }catch(err){}
+        // Source: prefer utm_source (clean: facebook / tiktok / etc.), else referrer, else 'direct'
+        var source=''; try{ source=new URLSearchParams(window.location.search).get('utm_source')||''; }catch(err){} source=source||document.referrer||'direct';
+        window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'generate_lead', event_id:eid, lead_name:name, lead_email:email, lead_phone:phone, lead_product:product, lead_source:source});
+        if(SHEET_URL.indexOf('http')===0){ try{ fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:product,pageUrl:window.location.href,source:source})}); }catch(err){} }
+        // Stash registrant identity so the webinar/replay buy buttons can prefill Selar (name+email) + log checkout intent. Same-browser only; the WhatsApp/email link hop uses the ?email= URL fallback read on those pages.
+        try{ localStorage.setItem('dime_lead', JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()})); }catch(err){}
+        setTimeout(function(){ window.location.href='/academy/dime/confirmed-info/'+(cohort?('?cohort='+encodeURIComponent(cohort)):''); }, 450);
+        return false;
+      };
     </script>
 
-    <!-- Banner offset: push the sticky nav below the (now sticky) red countdown banner so both stay visible on scroll -->
+    <!-- Announcement bar offset: push the sticky nav below the announcement bar so both stay visible on scroll (same pattern as the SME pages) -->
     <script>
       (function(){
-        var banner=document.querySelector('.announcement-bar, #rcBanner');
+        var announceBar=document.querySelector('.announcement-bar');
         var stickyNav=document.querySelector('.sticky-nav');
-        function setNavOffset(){ if(banner && stickyNav){ stickyNav.style.top=banner.offsetHeight+'px'; } }
+        function setNavOffset(){ if(announceBar && stickyNav){ stickyNav.style.top=announceBar.offsetHeight+'px'; } }
         setNavOffset();
         window.addEventListener('resize', setNavOffset, {passive:true});
       })();
     </script>
-
-    <!-- Prefill Checkout Modal (unknown buyers only; known buyers skip straight to Selar) -->
-    <div class="prefill-modal" id="prefillModal">
-        <div class="prefill-modal__inner">
-            <div class="prefill-modal__header">
-                <span class="prefill-modal__title">Almost there — Step 1 of 2</span>
-                <button class="prefill-modal__close" onclick="closePrefill()">&times;</button>
-            </div>
-            <div class="prefill-modal__body">
-                <p class="prefill-modal__sub">Enter your details and you will be taken straight to checkout with the coupon already applied.</p>
-                <form id="prefillForm" onsubmit="submitPrefill(event)">
-                    <div class="prefill-modal__field">
-                        <label>Full Name *</label>
-                        <input type="text" id="prefillName" required placeholder="e.g. Adaeze Okonkwo">
-                    </div>
-                    <div class="prefill-modal__field">
-                        <label>Email Address *</label>
-                        <input type="email" id="prefillEmail" required placeholder="e.g. adaeze@gmail.com">
-                    </div>
-                    <div class="prefill-modal__field">
-                        <label>Phone Number</label>
-                        <input type="tel" id="prefillPhone" placeholder="e.g. 08012345678">
-                    </div>
-                    <button type="submit" class="prefill-modal__btn">Proceed to Payment &rarr;</button>
-                    <p class="prefill-modal__trust">Secure payment via Selar &middot; Paystack &middot; Bank Transfer</p>
-                </form>
-            </div>
-        </div>
-    </div>
-    <style>
-        .prefill-modal{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.6);z-index:99999;align-items:center;justify-content:center;padding:20px;}
-        .prefill-modal.open{display:flex;}
-        .prefill-modal__inner{background:#fff;border-radius:16px;width:100%;max-width:440px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,0.3);animation:prefillSlideUp 0.25s ease;}
-        @keyframes prefillSlideUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
-        .prefill-modal__header{display:flex;align-items:center;justify-content:space-between;padding:16px 20px;border-bottom:1px solid #eee;}
-        .prefill-modal__title{font-weight:700;font-size:1rem;color:var(--primary-dark,#1a1a2e);}
-        .prefill-modal__close{background:none;border:none;font-size:1.6rem;cursor:pointer;color:#999;line-height:1;padding:0 4px;}
-        .prefill-modal__close:hover{color:#333;}
-        .prefill-modal__body{padding:20px 24px 24px;}
-        .prefill-modal__sub{font-size:0.85rem;color:#666;margin:0 0 18px;}
-        .prefill-modal__field{margin-bottom:14px;}
-        .prefill-modal__field label{display:block;font-size:0.8rem;font-weight:600;color:var(--primary-dark,#1a1a2e);margin-bottom:4px;}
-        .prefill-modal__field input{width:100%;padding:10px 12px;border:1.5px solid #ddd;border-radius:8px;font-size:0.9rem;outline:none;transition:border 0.2s;font-family:inherit;}
-        .prefill-modal__field input:focus{border-color:var(--mia-accent,#f1de71);}
-        .prefill-modal__btn{display:block;width:100%;padding:13px;background:var(--mia-accent,#f1de71);color:var(--primary-dark,#1a1a2e);border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:inherit;margin-top:6px;}
-        .prefill-modal__btn:hover{opacity:0.9;}
-        .prefill-modal__trust{font-size:0.75rem;color:#999;text-align:center;margin:10px 0 0;}
-    </style>
 
 </body>
 </html>

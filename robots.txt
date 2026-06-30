@@ -4,6 +4,11 @@ Allow: /
 # Ad bridge / pre-sell pages and post-purchase thank-you pages: ad/funnel-only, keep out of search crawl.
 Disallow: /go/
 Disallow: /academy/*/thank-you/
+# DIME long-funnel (-info) test pages: alternate funnel, ad-only, keep out of search.
+Disallow: /academy/dime/class-info/
+Disallow: /academy/dime/confirmed-info/
+Disallow: /academy/dime/webinar-info/
+Disallow: /academy/dime/replay-info/
 
 Sitemap: https://marketinginaction.xyz/sitemap.xml
 Sitemap: https://marketinginaction.xyz/sitemap-main.xml
