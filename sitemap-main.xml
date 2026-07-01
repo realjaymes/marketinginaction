@@ -21,6 +21,12 @@
 
   <!-- SME Product Landing Pages -->
   <url>
+    <loc>https://marketinginaction.xyz/academy/sme/team-training/</loc>
+    <lastmod>2026-07-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://marketinginaction.xyz/academy/sme/consulting/</loc>
     <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
