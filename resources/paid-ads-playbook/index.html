@@ -1891,37 +1891,66 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
       <table class="decision-table">
         <tr><th>Level</th><th>Pattern</th><th>Why these fields</th></tr>
         <tr><td><strong>Campaign</strong></td><td><code>Objective | Product | Audience Type | Date</code></td><td>Objective + Product define the campaign's job; Audience Type + Date scope it</td></tr>
-        <tr><td><strong>Ad Set</strong></td><td><code>Country | Audience | Angle | Conversion Event | Daily Budget</code></td><td>Country and audience determine delivery; <strong>Angle scopes the ad set to one message (one ad set = one angle)</strong>; conversion event and budget determine learning</td></tr>
+        <tr><td><strong>Ad Set / Ad Group</strong></td><td><code>Country | Audience | Angle | Conversion Event | Daily Budget</code></td><td>The middle tier (named per platform below); country and audience determine delivery; <strong>Angle scopes it to one message (one ad set / ad group = one angle)</strong>; conversion event and budget determine learning</td></tr>
         <tr><td><strong>Ad</strong></td><td><code>Product | Creative Type | Hook</code></td><td>Anchor on the product so multi-product accounts stay legible; creative type + hook are the test variables within the ad set's angle</td></tr>
       </table>
 
       <h3>Platform Hierarchy</h3>
-      <p>The three tiers are the same idea everywhere, but each platform names its middle level differently. "Campaign &rarr; Ad Set &rarr; Ad" is Meta's terminology; map the middle tier to your platform's term below. The naming generator above already swaps the middle-level label when you switch platforms.</p>
-      <table class="decision-table">
-        <tr><th>Platform</th><th>Level 1</th><th>Level 2</th><th>Level 3</th></tr>
-        <tr><td><strong>Meta</strong></td><td>Campaign</td><td>Ad Set</td><td>Ad</td></tr>
-        <tr><td><strong>TikTok</strong></td><td>Campaign</td><td>Ad Group</td><td>Ad</td></tr>
-        <tr><td><strong>Google</strong></td><td>Campaign</td><td>Ad Group</td><td>Ad</td></tr>
-        <tr><td><strong>LinkedIn</strong></td><td>Campaign Group</td><td>Campaign</td><td>Ad</td></tr>
-        <tr><td><strong>Snapchat</strong></td><td>Campaign</td><td>Ad Set</td><td>Ad</td></tr>
-        <tr><td><strong>X</strong></td><td>Campaign</td><td>Ad Group</td><td>Ad</td></tr>
-        <tr><td><strong>ChatGPT</strong></td><td>Campaign</td><td>Ad Group (intent cluster)</td><td>Ad</td></tr>
-      </table>
-
-      <div class="info-box">
-        <strong>One Ad Set = One Angle</strong><br><br>
-        An <strong>angle</strong> is a belief, desire, or fear the audience holds (AI Fear, Cost of Living, Job Security, Financial Freedom, Speed). It is <em>what you say</em>, not how you say it. Scope each ad set to a single angle so the platform learns cleanly.<br><br>
-        A testimonial, case study, founder story, or demo is a <strong>content structure</strong>, not an angle. The opening line or visual is the <strong>Hook</strong> &mdash; the test variable at the ad level. Don't mix multiple angles inside one ad set, and don't confuse a content structure for an angle.
+      <p>The three tiers are the same idea everywhere; each platform just names its middle level differently. Showing the hierarchy for the platform selected above. The naming generator below already swaps the middle-level label when you switch platforms.</p>
+      <div class="platform-hierarchy">
+        <div data-platform="meta" class="platform-visible"><div class="info-box"><strong>Meta:</strong> Campaign &rarr; <strong>Ad Set</strong> &rarr; Ad</div></div>
+        <div data-platform="tiktok"><div class="info-box"><strong>TikTok:</strong> Campaign &rarr; <strong>Ad Group</strong> &rarr; Ad</div></div>
+        <div data-platform="google"><div class="info-box"><strong>Google:</strong> Campaign &rarr; <strong>Ad Group</strong> &rarr; Ad</div></div>
+        <div data-platform="linkedin"><div class="info-box"><strong>LinkedIn:</strong> <strong>Campaign Group</strong> &rarr; Campaign &rarr; Ad</div></div>
+        <div data-platform="snapchat"><div class="info-box"><strong>Snapchat:</strong> Campaign &rarr; <strong>Ad Set</strong> &rarr; Ad</div></div>
+        <div data-platform="x"><div class="info-box"><strong>X:</strong> Campaign &rarr; <strong>Ad Group</strong> &rarr; Ad</div></div>
+        <div data-platform="chatgpt"><div class="info-box"><strong>ChatGPT:</strong> Campaign &rarr; <strong>Ad Group (intent cluster)</strong> &rarr; Ad</div></div>
       </div>
 
       <div class="info-box">
-        <strong>Examples</strong><br><br>
-        <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Cold | 2026-03-01</code><br>
-        <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Warm | 2026-03-01</code><br>
-        <strong>Ad Set:</strong> <code>Nigeria | Cold | AI Fear | Purchase | ₦15,000</code><br>
-        <strong>Ad Set:</strong> <code>Retargeting Audiences | AI Fear | Purchase | ₦15,000</code><br>
-        <strong>Ad:</strong> <code>Bootcamp | Video | Fear of Replacement</code><br>
-        <strong>Ad:</strong> <code>Bootcamp | Video | Discount</code>
+        <strong>One Ad Set / Ad Group = One Angle</strong><br><br>
+        An <strong>angle</strong> is a belief, desire, or fear the audience holds (AI Fear, Cost of Living, Job Security, Financial Freedom, Speed). It is <em>what you say</em>, not how you say it. Scope each ad set (ad group on Google, TikTok, and X) to a single angle so the platform learns cleanly.<br><br>
+        A testimonial, case study, founder story, or demo is a <strong>content structure</strong>, not an angle. The opening line or visual is the <strong>Hook</strong> &mdash; the test variable at the ad level. Don't mix multiple angles inside one ad set, and don't confuse a content structure for an angle.
+      </div>
+
+      <h3>Examples</h3>
+      <p class="section-desc">Named for the platform selected above.</p>
+      <div class="platform-examples">
+        <div data-platform="meta" class="platform-visible">
+          <div class="info-box">
+            <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Cold | 2026-03-01</code><br>
+            <strong>Ad Set:</strong> <code>Nigeria | Cold | AI Fear | Purchase | ₦15,000</code><br>
+            <strong>Ad:</strong> <code>Bootcamp | Video | Fear of Replacement</code>
+          </div>
+        </div>
+        <div data-platform="tiktok">
+          <div class="info-box">
+            <strong>Campaign:</strong> <code>Sales | PMM AI Bootcamp Core | Cold | 2026-03-01</code><br>
+            <strong>Ad Group:</strong> <code>Nigeria | Cold | AI Fear | CompletePayment | ₦15,000</code><br>
+            <strong>Ad:</strong> <code>Bootcamp | SparkAd-Creator | Fear of Replacement</code>
+          </div>
+        </div>
+        <div data-platform="google">
+          <div class="info-box">
+            <strong>Campaign:</strong> <code>Search | HeroSKU | NonBrand-Exact | 2026-04</code><br>
+            <strong>Ad Group:</strong> <code>US | ForSchools-Bulk-Exact | Cost Savings | Purchase | $50</code><br>
+            <strong>Ad:</strong> <code>HeroSKU | RSA | Keyword-Mirror</code>
+          </div>
+        </div>
+        <div data-platform="linkedin">
+          <div class="info-box">
+            <strong>Campaign Group:</strong> <code>Leads | ABM Enterprise | Cold | 2026-Q2</code><br>
+            <strong>Campaign:</strong> <code>US | Director-DemandGen | Cost of CAC | LeadGenForm | $80</code><br>
+            <strong>Ad:</strong> <code>Platform | Document-Ad | ROI Stat</code>
+          </div>
+        </div>
+        <div data-platform="snapchat">
+          <div class="info-box">
+            <strong>Campaign:</strong> <code>Sales | HeroSKU | Cold | 2026-03-01</code><br>
+            <strong>Ad Set:</strong> <code>Lagos | Lookalike-Buyers | Speed | Purchase | ₦15,000</code><br>
+            <strong>Ad:</strong> <code>HeroSKU | Single-Video | Discount</code>
+          </div>
+        </div>
       </div>
       <details>
         <summary><strong>Field reference</strong> (click to expand)</summary>
@@ -2125,7 +2154,18 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
 
       <!-- GOOGLE AUDIENCES -->
       <div data-platform="google">
-        <h3>Audience Types</h3>
+        <h3>Search: Keywords Are the Audience</h3>
+        <p class="section-desc">On Search, keyword + match type <em>is</em> the targeting. The audience-signal types further down apply to PMax, Demand Gen, YouTube, and Display.</p>
+        <table class="ref-table">
+          <tr><th>Match type</th><th>Syntax</th><th>Use</th></tr>
+          <tr><td><strong>Exact</strong></td><td><code>[keyword]</code></td><td>Highest precision, lowest reach. Proven high-intent terms.</td></tr>
+          <tr><td><strong>Phrase</strong></td><td><code>"keyword"</code></td><td>Moderate precision + reach. Workhorse for new themes.</td></tr>
+          <tr><td><strong>Broad</strong></td><td><code>keyword</code></td><td>Highest reach, only safe with Smart Bidding (tCPA/tROAS). Without it, broad burns budget.</td></tr>
+        </table>
+        <div class="info-box">
+          <strong>Ad group = one keyword theme</strong> (4-8 closely related keywords). Brand and non-brand never share a campaign. <strong>Negative-keyword hygiene:</strong> pull the search-terms report 2x/week and add waste; common non-brand negatives: <code>free</code>, <code>jobs</code>, <code>cheap</code> (vertical-dependent), competitor names you don't bid on.
+        </div>
+        <h3>Audience Signals (PMax / Demand Gen / YouTube / Display)</h3>
         <table class="ref-table">
           <tr><th>Type</th><th>Description</th><th>Best For</th></tr>
           <tr><td><strong>In-Market</strong></td><td>Users actively researching or comparing products</td><td>MOFU / high-intent prospecting</td></tr>
@@ -2258,6 +2298,25 @@ EXCLUSIONS
           <tr><td>YouTube Video</td><td>1920x1080 (16:9)</td><td>Skippable: 12s-3min, Non-skip: 6-15s, Bumper: 6s</td></tr>
           <tr><td>Performance Max</td><td>All of the above + product feed</td><td>Provide maximum asset variety</td></tr>
           <tr><td>Demand Gen</td><td>1200x628, 1080x1080, 1080x1920 images/video</td><td>Social-style placements on Google surfaces</td></tr>
+        </table>
+        <h3>Responsive Search Ads — headlines, pinning, descriptions</h3>
+        <div class="info-box">
+          <strong>15 headlines (30 chars each)</strong> covering: keyword mirror · primary benefit · differentiation · social proof · CTA/qualifier · urgency/freshness · brand name.<br><br>
+          <strong>Pinning (deliberate, max 2):</strong> pin the keyword-mirror or brand headline to <strong>Position 1</strong> when message-match matters (high-intent + brand ad groups); pin a legal/offer line to Position 2 only if it must always show; leave the rest unpinned for Google to optimize. Default posture is unpinned.<br><br>
+          <strong>4 descriptions (90 chars each), role-mapped:</strong> D1 expand the benefit · D2 proof / differentiator · D3 handle the objection (price, risk) · D4 CTA + urgency.<br><br>
+          Aim for <strong>"Good"+ Ad Strength</strong>; each ad group points to its own intent-matched landing page (no shared generic page).
+        </div>
+        <h3>Assets / Ad Extensions</h3>
+        <p class="section-desc">Free CTR + Ad Rank lift. Message-match every asset to the ad group theme. Character limits are hard caps &mdash; Google truncates or disapproves anything over.</p>
+        <table class="ref-table">
+          <tr><th>Asset</th><th>Count</th><th>Char limits</th><th>Formula</th></tr>
+          <tr><td><strong>Sitelinks</strong></td><td>4-6+</td><td>text 25; 2 desc lines 35 each</td><td>Distinct page/intent per link → its own URL</td></tr>
+          <tr><td><strong>Callouts</strong></td><td>6-10</td><td>25 each</td><td>Benefit/proof fragment, no punctuation</td></tr>
+          <tr><td><strong>Structured snippets</strong></td><td>3-10 values</td><td>values 25; header from fixed list</td><td>Header (Brands / Types / Services…) + matching values</td></tr>
+          <tr><td><strong>Call</strong></td><td>1</td><td>number + hours</td><td>Use when phone leads convert</td></tr>
+          <tr><td><strong>Price</strong></td><td>3-8</td><td>header 25, desc 25, price</td><td><code>[Item] — from $X</code> rows</td></tr>
+          <tr><td><strong>Promotion</strong></td><td>as needed</td><td>promo 20, item 20, dates</td><td>Occasion + % / $ off + start-end dates</td></tr>
+          <tr><td><strong>Image</strong></td><td>3-15</td><td>1200×1200 + 1200×628</td><td>Query-matched product/context imagery</td></tr>
         </table>
       </div>
 
@@ -2544,6 +2603,18 @@ Description: ___________
         <li><input type="checkbox" id="la-19"><label for="la-19">UTM parameters added to all URLs</label></li>
         <li><input type="checkbox" id="la-20"><label for="la-20">Preview checked on all placements (mobile, desktop, stories)</label></li>
       </ul>
+
+      <div data-platform="google">
+        <h3>Google Search &mdash; extra pre-launch</h3>
+        <ul class="checklist" data-section="launch">
+          <li><input type="checkbox" id="la-g1"><label for="la-g1">RSA: 12-15 headlines (&le;30 chars), 4 descriptions (&le;90 chars), Ad Strength "Good"+</label></li>
+          <li><input type="checkbox" id="la-g2"><label for="la-g2">Keyword-mirror pinned to Position 1 where message-match matters (max 2 pins)</label></li>
+          <li><input type="checkbox" id="la-g3"><label for="la-g3">Assets attached + message-matched: sitelinks &ge;4 (25c text + 35c desc), callouts &ge;6 (25c), &ge;1 structured-snippet header; add call/price/promotion where the offer supports them</label></li>
+          <li><input type="checkbox" id="la-g4"><label for="la-g4">Each ad group points to its own intent-matched landing page (no shared generic page)</label></li>
+          <li><input type="checkbox" id="la-g5"><label for="la-g5">Networks: Search only, Search Partners off until proven; geo "Presence" not "Presence or interest"</label></li>
+          <li><input type="checkbox" id="la-g6"><label for="la-g6">Negative-keyword list applied; auto-tagging on for GA4</label></li>
+        </ul>
+      </div>
 
       <h3>Final Verification</h3>
       <ul class="checklist" data-section="launch">
