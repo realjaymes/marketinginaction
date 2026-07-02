@@ -2911,13 +2911,86 @@ Description: ___________
       <div class="warning-box">Benchmarks are directional, not absolute. Industry, audience, offer, and creative quality all shift these ranges. Use your client's historical data as the primary benchmark after 30 days.</div>
 
       <h3>Platform Report Column Setup</h3>
-      <p class="section-desc">The diagnosis table only works if Ads Manager shows the right columns. Build a saved custom column set once and reuse it for every read so the numbers stay comparable. In Meta Ads Manager: <strong>Columns &rarr; Customise Columns</strong>, add the set below, tick <strong>Save as preset</strong>, name it "MIA Read-the-Funnel".</p>
+      <p class="section-desc">The diagnosis table only works if Ads Manager shows the right columns. Build a saved custom column set once and reuse it for every read so the numbers stay comparable. The set below switches with the platform selector &mdash; each platform names its columns differently, so use the one for the account you're reading.</p>
+      <div class="column-setup-wrap">
+
+      <div data-platform="meta" class="platform-visible">
+      <p class="section-desc">In Meta Ads Manager: <strong>Columns &rarr; Customise Columns</strong>, add the set below, tick <strong>Save as preset</strong>, name it "MIA Read-the-Funnel".</p>
       <div class="copyable" id="meta-column-set">MIA META COLUMN SET (funnel-read order)
 delivery | amount spent | budget | results | purchases | purchase ROAS | adds to cart | leads | cost per result | reach | impressions | CPM | hook rate | hold rate | thruplay completion rate | frequency | results ROAS | clicks (all) | CTR | quality ranking | landing page views | cost per landing page view
         <button class="copy-btn" onclick="copyBlock('meta-column-set')">Copy</button>
       </div>
       <div class="info-box">
         <strong>Notes.</strong> Hook rate, hold rate, and ThruPlay completion usually aren't default columns &mdash; add them as <strong>custom metrics</strong> (Customise Columns &rarr; Create Custom Metric): hook rate = 3-second plays &divide; impressions; hold rate = 15-second (or ThruPlay) plays &divide; 3-second plays; ThruPlay completion = 100% plays &divide; ThruPlays. Quality ranking is only in the campaign-level view, not the placement/age breakdowns. Use the same saved set for every scheduled read and the weekly report.
+      </div>
+      </div>
+
+      <div data-platform="tiktok">
+      <p class="section-desc">In TikTok Ads Manager: on the campaign table open <strong>Custom Columns</strong> (or build a Custom Report under <strong>Reporting</strong>), add the set below, and save it as a template named "MIA Read-the-Funnel".</p>
+      <div class="copyable" id="tiktok-column-set">MIA TIKTOK COLUMN SET (funnel-read order)
+cost | budget | conversions | cost per conversion | complete payment ROAS | adds to cart (paid) | leads | reach | impressions | CPM | 2-second video view rate | 6-second video view rate | video views at 100% | frequency | clicks (destination) | CTR (destination) | CPC (destination) | landing page views | cost per landing page view | conversion rate
+        <button class="copy-btn" onclick="copyBlock('tiktok-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> TikTok has no hook rate, hold rate, ThruPlay, or quality ranking. The creative-quality signal is the <strong>2-second and 6-second video view rate</strong> &mdash; read those where you'd read hook and hold on Meta. Always use the <strong>destination</strong> variants of clicks, CTR, and CPC (not the "all" or click-to-play variants). Complete payment ROAS is the ecommerce ROAS; swap in the ROAS that matches your optimization event.
+      </div>
+      </div>
+
+      <div data-platform="google">
+      <p class="section-desc">In Google Ads: on the Campaigns table open <strong>Columns &rarr; Modify columns</strong>, add the set below, then <strong>Save column set</strong> as "MIA Read-the-Funnel".</p>
+      <div class="copyable" id="google-column-set">MIA GOOGLE COLUMN SET (funnel-read order)
+cost | budget | impressions | clicks | CTR | avg. CPC | CPM | conversions | conv. rate | cost / conv. | conv. value / cost (ROAS) | all conv. | search impr. share | view rate (Video/Demand Gen) | video played to 100% (Video/Demand Gen)
+        <button class="copy-btn" onclick="copyBlock('google-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> Available columns change by campaign type. For <strong>Search</strong>, read Search impression share and Quality Score as the auction-strength signal (there is no hook rate). For <strong>Video and Demand Gen</strong>, view rate + video played to 25/50/75/100% are the creative signals. CPM matters on Video/Display, less on Search. There is no ThruPlay or quality ranking &mdash; those are Meta-only.
+      </div>
+      </div>
+
+      <div data-platform="linkedin">
+      <p class="section-desc">In LinkedIn Campaign Manager: open the <strong>Columns</strong> dropdown above the performance chart, pick the metrics below (a mix of Performance, Conversions &amp; Leads, and Video views), and save them as a custom set named "MIA Read-the-Funnel".</p>
+      <div class="copyable" id="linkedin-column-set">MIA LINKEDIN COLUMN SET (funnel-read order)
+spend | budget | impressions | clicks | CTR | average CPC | CPM | frequency | key results | cost per result | conversions | cost per conversion | conversion rate | leads | cost per lead | lead form completion rate | video views | video completion rate | cost per video view
+        <button class="copy-btn" onclick="copyBlock('linkedin-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> LinkedIn has no hook rate, hold rate, ThruPlay, or quality ranking. <strong>Video views + video completion rate</strong> are the creative signals. For Lead Gen Form campaigns, <strong>lead form completion rate</strong> is the key funnel gate &mdash; read it where you'd read CVR. CPMs run high on LinkedIn; judge efficiency on cost per result and cost per lead, not CPM.
+      </div>
+      </div>
+
+      <div data-platform="snapchat">
+      <p class="section-desc">In Snapchat Ads Manager: open the columns menu on the campaign table, add the set below, and save it as a custom view named "MIA Read-the-Funnel".</p>
+      <div class="copyable" id="snapchat-column-set">MIA SNAPCHAT COLUMN SET (funnel-read order)
+spend | budget | impressions | paid reach | frequency | eCPM | swipe ups | swipe up rate | eCPSU (cost per swipe up) | results | cost per result | purchases | purchases ROAS | adds to cart | 2-second video views | 15-second video views | screen time (avg)
+        <button class="copy-btn" onclick="copyBlock('snapchat-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> On Snapchat the <strong>swipe up</strong> is the click equivalent &mdash; read swipe up rate and eCPSU where you'd read CTR and CPC. The creative-quality signal is 2-second and 15-second video views plus average screen time (no ThruPlay or quality ranking). View-through conversions carry more weight here than on other platforms; keep an eye on the CTC/VTC split.
+      </div>
+      </div>
+
+      <div data-platform="x">
+      <p class="section-desc">In X Ads Manager: use the metric/column customizer on the campaign table, add the set below, and save it as a custom view named "MIA Read-the-Funnel".</p>
+      <div class="copyable" id="x-column-set">MIA X COLUMN SET (funnel-read order)
+spend | budget | impressions | reach | frequency | CPM | engagements | engagement rate | link clicks | CPC (link click) | CTR (link click) | video views | video completion rate | 25% / 50% / 75% / 100% video views | results | cost per result | conversion rate | ROAS
+        <button class="copy-btn" onclick="copyBlock('x-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> X has no hook rate, hold rate, ThruPlay, or quality ranking. Video views + completion rate + the quartile views are the creative signals; read the 25%/50% drop-off the way you'd read hook and hold on Meta. Separate <strong>link clicks</strong> from total engagements &mdash; optimize on link-click CPC and CTR, not the inflated engagement number.
+      </div>
+      </div>
+
+      <div data-platform="chatgpt">
+      <p class="section-desc">ChatGPT proper isn't buyable from Nigeria yet &mdash; treat it as monitor-and-prepare. The buyable AI-answer layer runs through <strong>Microsoft Ads</strong> and <strong>Google Ads (AI Overviews)</strong>; read those in their own Ads Managers using the Google-style column set. Across every AI surface the truth signal is your <strong>post-purchase survey</strong>, not the pixel. Build the read below in your analytics + survey tool.</p>
+      <div class="copyable" id="chatgpt-column-set">MIA AI-ANSWER-ENGINE READ (across surfaces; survey-attributed, not pixel-only)
+surface impression share (how often you appear in AI answers) | click rate in AI answer | post-click CVR | pixel-attributed CPA | survey-attributed CPA ("heard about us from ChatGPT/AI" %) | blended CPA | branded search lift | referral sessions from AI referrers (chatgpt.com / copilot / gemini / perplexity.ai)
+        <button class="copy-btn" onclick="copyBlock('chatgpt-column-set')">Copy</button>
+      </div>
+      <div class="info-box">
+        <strong>Notes.</strong> Pixel-only attribution loses ~60% of true conversions on AI-answer surfaces (the <strong>conversation gap</strong> &mdash; the buyer returns hours or days later via direct or branded search). Always pair the pixel with a post-purchase survey field and watch branded search lift as the downstream signal. For the buyable layer, build the column set inside <strong>Microsoft Ads / Google Ads</strong> (mirror the Google set). Read monthly for surface mix; ChatGPT proper stays in monitoring posture until NG access opens.
+      </div>
+      </div>
+
       </div>
 
       <h3>Weekly Report Template</h3>
