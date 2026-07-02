@@ -2725,7 +2725,9 @@ Description: ___________
       <p class="section-desc">Decision rules for managing live campaigns. Remove emotion from optimization.</p>
 
       <h3>Optimization Decision Table</h3>
-      <p class="section-desc">Once delivery is confirmed, read <strong>CPM first</strong> &mdash; it's the rawest signal of whether the platform thinks your ad is worth showing, and a high CPM inflates every cost beneath it. Then work down hook rate &rarr; hold rate &rarr; ThruPlay completion &rarr; CTR &rarr; CPC &rarr; CVR &rarr; ROAS.</p>
+      <p class="section-desc">Once delivery is confirmed, read <strong>CPM first</strong> &mdash; it's the rawest signal of whether the platform thinks your ad is worth showing, and a high CPM inflates every cost beneath it. Then work down the creative-quality signal &rarr; CTR &rarr; CPC &rarr; CVR &rarr; ROAS. <strong>This table switches with the platform selector</strong> &mdash; each platform's creative-quality signal differs (Meta reads hook / hold / ThruPlay; TikTok the 2s/6s view rate; Google Quality Score and view rate; LinkedIn video view-rate and form-fill; Snapchat swipe-up and screen time; X Aesthetic Score and view rate).</p>
+      <div class="decision-table-wrap">
+      <div data-platform="meta" class="platform-visible">
       <table class="decision-table">
         <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
         <tr class="action-kill"><td>CPM (read first)</td><td>&gt; 2x benchmark</td><td>Auction pressure, weak quality ranking, audience too narrow, or creative fatigue</td><td>Refresh creative or broaden audience signals before reading anything downstream &mdash; high CPM inflates CPC, CPA, and ROAS</td></tr>
@@ -2746,6 +2748,114 @@ Description: ___________
         <tr class="action-kill"><td>ROAS</td><td>&lt; 1.0x</td><td>Losing money</td><td>Pause and diagnose (creative, audience, landing page)</td></tr>
         <tr class="action-scale"><td>ROAS</td><td>&gt; 3.0x</td><td>Profitable</td><td>Scale budget, test similar audiences</td></tr>
       </table>
+      </div>
+
+      <div data-platform="tiktok">
+      <table class="decision-table">
+        <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-kill"><td>CPM (read first)</td><td>&gt; 2x benchmark</td><td>Auction pressure, weak creative, audience too narrow, or fatigue</td><td>Refresh creative or broaden audience before reading anything downstream</td></tr>
+        <tr class="action-kill"><td>2-second view rate</td><td>&lt; 15% (NG) / 18% (diaspora)</td><td>Hook broken in the first 1-2 seconds</td><td>Rewrite the opening frame/line</td></tr>
+        <tr class="action-kill"><td>6-second view rate</td><td>&lt; 8% (NG) / 10% (diaspora)</td><td>Mid-creative loses people</td><td>Tighten the middle, cut slow sections</td></tr>
+        <tr class="action-watch"><td>Video completion rate</td><td>&lt; 25% (15s cut)</td><td>Weak ending or video too long</td><td>Shorten, punch up the close</td></tr>
+        <tr class="action-kill"><td>CTR (destination)</td><td>&lt; 0.5%</td><td>Creative not earning the click</td><td>Test new hooks, angles, formats</td></tr>
+        <tr class="action-scale"><td>CTR (destination)</td><td>&gt; 2%</td><td>Strong creative</td><td>Scale budget, duplicate to new audiences</td></tr>
+        <tr class="action-kill"><td>CPC (destination)</td><td>&gt; 2x benchmark</td><td>Creative or audience issue</td><td>Refresh creative or broaden targeting</td></tr>
+        <tr class="action-kill"><td>Frequency</td><td>&gt; 2.0</td><td>Creative fatigue</td><td>Refresh creative or expand audience</td></tr>
+        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 1%</td><td>Destination or offer problem, not the ad</td><td>Audit the page first, then the offer/price</td></tr>
+        <tr class="action-kill"><td>CPA</td><td>&gt; 1.3x target after learning exits</td><td>Funnel or targeting issue</td><td>Review landing page, audience, offer</td></tr>
+        <tr class="action-kill"><td>ROAS</td><td>&lt; 1.8x</td><td>Below breakeven</td><td>Pause and diagnose</td></tr>
+        <tr class="action-scale"><td>ROAS</td><td>&gt; 2.5x</td><td>Profitable</td><td>Scale 20% every 3-4 days</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="google">
+      <table class="decision-table">
+        <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-kill"><td>Eligibility / Ad Strength</td><td>Disapproved, or "Poor" 14 days+</td><td>Policy, budget, or a weak RSA is blocking delivery</td><td>Fix policy/budget; add headlines &amp; descriptions, pin H1</td></tr>
+        <tr class="action-watch"><td>Impression share (total)</td><td>&lt; 60% (commercial)</td><td>Competitive or budget-starved</td><td>Raise budget or bid</td></tr>
+        <tr class="action-scale"><td>Search Lost IS (Budget)</td><td>&gt; 20%</td><td>Under-funded &mdash; capping out on budget</td><td>Scale daily budget</td></tr>
+        <tr class="action-kill"><td>Search Lost IS (Rank)</td><td>&gt; 30%</td><td>Quality Score or bid too low</td><td>Improve Quality Score or raise bid</td></tr>
+        <tr class="action-kill"><td>Quality Score</td><td>&lt; 7</td><td>Ad &ndash; keyword &ndash; landing-page mismatch</td><td>Rebuild relevance (copy, keywords, LP)</td></tr>
+        <tr class="action-kill"><td>CTR (Search)</td><td>&lt; 2%</td><td>Copy not earning the click</td><td>Rewrite headlines to mirror the query</td></tr>
+        <tr class="action-watch"><td>View rate + quartiles (Video/Demand Gen)</td><td>&lt; 30%, weak 25-75% hold</td><td>Mid drags or ending weak</td><td>Rewrite the middle or trim length</td></tr>
+        <tr class="action-kill"><td>CPC</td><td>&gt; 2x benchmark</td><td>Competitive vertical or low Quality Score</td><td>Improve Quality Score or pause</td></tr>
+        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 3% (Search commercial)</td><td>Destination or offer problem</td><td>Audit the page first, then the offer</td></tr>
+        <tr class="action-kill"><td>CPA</td><td>&gt; 1.3x target after ~30 conv</td><td>Funnel or targeting issue</td><td>Review LP, keywords, offer</td></tr>
+        <tr class="action-kill"><td>ROAS (conv value / cost)</td><td>&lt; 2x</td><td>Below breakeven</td><td>Restructure or pause</td></tr>
+        <tr class="action-scale"><td>ROAS</td><td>&gt; 3x</td><td>Profitable</td><td>Scale budget, expand keywords/audiences</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="linkedin">
+      <table class="decision-table">
+        <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-watch"><td>CPM</td><td>&gt; $200</td><td>Over-narrow targeting, weak creative, or fatigue</td><td>Broaden targeting or refresh creative</td></tr>
+        <tr class="action-watch"><td>Video view rate (25/50/75/100)</td><td>&lt; 30 / 15 / 8 / 5%</td><td>Hook and body fail to hold attention</td><td>Rewrite the intro and middle</td></tr>
+        <tr class="action-kill"><td>CTR</td><td>&lt; 0.5%</td><td>Hook + headline not earning the click</td><td>Rewrite copy</td></tr>
+        <tr class="action-watch"><td>CPC</td><td>&gt; $15</td><td>Audience too narrow or weak creative</td><td>Broaden audience or improve creative</td></tr>
+        <tr class="action-watch"><td>Frequency (cold)</td><td>&gt; 4</td><td>Creative fatigue or saturation</td><td>Refresh creative</td></tr>
+        <tr class="action-kill"><td>Lead form completion rate</td><td>&lt; 8%</td><td>Form too long/heavy or audience mismatch</td><td>Simplify the form or tighten targeting</td></tr>
+        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 8% (Lead Gen Form) / 2% (web)</td><td>Destination or offer problem</td><td>Audit page/form first, then offer</td></tr>
+        <tr class="action-watch"><td>Lead quality (sales feedback)</td><td>&lt; 60% "good"</td><td>Wrong roles, or offer attracts tire-kickers</td><td>Tighten ICP or deepen the conversion event</td></tr>
+        <tr class="action-kill"><td>CPL</td><td>&gt; 1.3x target after ~14 days</td><td>Full-funnel issue</td><td>Diagnose targeting, offer, form</td></tr>
+        <tr class="action-watch"><td>Pipeline ROAS (90-day)</td><td>&lt; 5x</td><td>CPL fine but leads fail downstream</td><td>Audit sales follow-up and lead routing</td></tr>
+        <tr class="action-scale"><td>Pipeline ROAS</td><td>&gt; 8x</td><td>Profitable through to pipeline</td><td>Scale budget, expand ICP</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="snapchat">
+      <table class="decision-table">
+        <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-kill"><td>CPM / eCPM (read first)</td><td>&gt; 2x benchmark</td><td>Auction pressure, weak creative, narrow audience, or fatigue</td><td>Refresh creative or broaden audience</td></tr>
+        <tr class="action-kill"><td>Swipe-up rate (Snap Ads)</td><td>&lt; 0.5% (US/UK/CA) / 0.4% (NG)</td><td>Hook broken in the first 1-2 seconds</td><td>Rewrite the opening</td></tr>
+        <tr class="action-watch"><td>Swipe-up rate (Story Ads)</td><td>&lt; 1.5% / 1% (NG)</td><td>Cover tile weak or story sequence broken</td><td>Redesign the cover or story flow</td></tr>
+        <tr class="action-watch"><td>Video completion / screen time</td><td>Low completion; screen time below benchmark</td><td>Ending weak or video too long</td><td>Shorten, punch up the close</td></tr>
+        <tr class="action-kill"><td>CTR (link)</td><td>&lt; 0.5% / 0.4% (NG)</td><td>Payoff not earning the click</td><td>Rewrite copy</td></tr>
+        <tr class="action-kill"><td>CPC / eCPSU</td><td>&gt; 2x benchmark</td><td>Creative or audience issue</td><td>Refresh creative or broaden targeting</td></tr>
+        <tr class="action-kill"><td>Frequency</td><td>&gt; 2.0</td><td>Creative fatigue</td><td>Refresh creative</td></tr>
+        <tr class="action-kill"><td>CVR (post-swipe)</td><td>&lt; 0.8% / 0.6% (NG)</td><td>Destination or offer problem</td><td>Audit the page first, then the offer</td></tr>
+        <tr class="action-watch"><td>VTC share</td><td>&lt; 30% or &gt; 70%</td><td>Below = view-through tracking broken; above = over-credit</td><td>Validate tracking; cross-check MER</td></tr>
+        <tr class="action-kill"><td>CPA</td><td>&gt; 1.3x target after learning</td><td>Funnel or targeting issue</td><td>Review landing page, audience, offer</td></tr>
+        <tr class="action-kill"><td>ROAS</td><td>&lt; 1.5x</td><td>Below breakeven</td><td>Pause and diagnose</td></tr>
+        <tr class="action-scale"><td>ROAS</td><td>&gt; 2.2x (with VTC)</td><td>Profitable</td><td>Scale 20% every 3-4 days</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="x">
+      <table class="decision-table">
+        <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-kill"><td>CPM (read first)</td><td>&gt; 2x benchmark</td><td>Auction pressure, Aesthetic Score penalty, narrow audience, or fatigue</td><td>Fix Aesthetic Score / refresh creative or broaden audience</td></tr>
+        <tr class="action-kill"><td>Aesthetic Score</td><td>Below Average</td><td>CPM penalized, placement demoted</td><td>Polish visual quality before iterating copy</td></tr>
+        <tr class="action-kill"><td>3-second view rate</td><td>&lt; 15% (NG) / 20% (diaspora)</td><td>Hook isn't stopping the scroll</td><td>Rewrite the first line/frame</td></tr>
+        <tr class="action-watch"><td>6-second view rate</td><td>&lt; 15% / 20%</td><td>Mid-creative loses people</td><td>Trim or rewrite the middle</td></tr>
+        <tr class="action-kill"><td>CTR (link)</td><td>&lt; 0.8% / 0.6% (diaspora)</td><td>Hook + claim not earning the click</td><td>Rewrite copy</td></tr>
+        <tr class="action-kill"><td>CPC (link click)</td><td>&gt; 2x benchmark</td><td>Creative or audience issue</td><td>Refresh creative or broaden targeting</td></tr>
+        <tr class="action-kill"><td>High engagement + zero conversions</td><td>Engagement fine, conversions flat</td><td>Wrong objective (running Engagements, not Website Conversions)</td><td>Switch the objective &mdash; the single biggest fix on X</td></tr>
+        <tr class="action-kill"><td>Frequency</td><td>&gt; 2.5</td><td>Creative fatigue</td><td>Refresh creative or expand audience</td></tr>
+        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 2%</td><td>Destination or offer problem</td><td>Audit the page first, then the offer</td></tr>
+        <tr class="action-kill"><td>CPA</td><td>&gt; 1.3x target after ~7-10 days</td><td>Funnel or targeting issue</td><td>Review landing page, audience, offer</td></tr>
+        <tr class="action-kill"><td>ROAS</td><td>&lt; 2x</td><td>Below breakeven</td><td>Restructure or pause</td></tr>
+        <tr class="action-scale"><td>ROAS</td><td>&gt; 3x</td><td>Profitable</td><td>Scale budget, test similar audiences</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="chatgpt">
+      <table class="decision-table">
+        <tr><th>Signal</th><th>Threshold</th><th>Diagnosis</th><th>Action</th></tr>
+        <tr class="action-watch"><td>Impression share (on intent)</td><td>&lt; 10%</td><td>Surface ineligibility, low query volume, or bid too low</td><td>Refine the intent cluster or raise bid</td></tr>
+        <tr class="action-kill"><td>CTR (in AI answer)</td><td>&lt; 2% (ChatGPT) / 3% (MS/Google)</td><td>Copy not earning the click in the sponsored slot</td><td>Improve copy relevance to the intent</td></tr>
+        <tr class="action-watch"><td>CPC</td><td>&gt; 2x benchmark</td><td>Auction pressure or weak intent match</td><td>Debug the intent cluster or copy</td></tr>
+        <tr class="action-kill"><td>CVR (post-click)</td><td>&lt; 3%</td><td>Page pitches instead of answering the question</td><td>Make the page answer the query first, then offer</td></tr>
+        <tr class="action-watch"><td>Survey AI-attribution %</td><td>Plateau or decline over 30-60 days</td><td>Surface saturating or survey methodology breaking</td><td>Validate the survey setup or pause</td></tr>
+        <tr class="action-watch"><td>Pixel / blended CPA ratio</td><td>&gt; 0.5 (suspicious)</td><td>No conversation gap &mdash; pixel over-crediting</td><td>Validate pixel + survey tracking</td></tr>
+        <tr class="action-watch"><td>Branded search lift</td><td>Flat over 60-90 days</td><td>No surface visibility despite spend</td><td>Raise bid or refresh creative</td></tr>
+        <tr class="action-kill"><td>Blended CPA (pixel + survey)</td><td>&gt; 1.3x target after 14 days</td><td>Full-funnel issue</td><td>Diagnose intent, copy, offer</td></tr>
+        <tr class="action-kill"><td>ROAS (blended)</td><td>&lt; 2x</td><td>Below breakeven</td><td>Restructure or pause</td></tr>
+        <tr class="action-scale"><td>ROAS (blended)</td><td>&gt; 3x</td><td>Profitable</td><td>Scale on Copilot/AIO; keep ChatGPT in monitoring</td></tr>
+      </table>
+      </div>
+
+      </div>
 
       <h3>Kill Rules</h3>
       <div class="info-box">
@@ -2917,7 +3027,7 @@ Description: ___________
       <div data-platform="meta" class="platform-visible">
       <p class="section-desc">In Meta Ads Manager: <strong>Columns &rarr; Customise Columns</strong>, add the set below, tick <strong>Save as preset</strong>, name it "MIA Read-the-Funnel".</p>
       <div class="copyable" id="meta-column-set">MIA META COLUMN SET (funnel-read order)
-delivery | amount spent | budget | results | purchases | purchase ROAS | adds to cart | leads | cost per result | reach | impressions | CPM | hook rate | hold rate | thruplay completion rate | frequency | results ROAS | clicks (all) | CTR | quality ranking | landing page views | cost per landing page view
+delivery | amount spent | budget | results | purchases | purchase ROAS | adds to cart | leads | cost per result | reach | impressions | CPM | hook rate | hold rate | thruplay completion rate | frequency | results ROAS | clicks (all) | CTR | cost per click (CPC) | quality ranking | landing page views | cost per landing page view
         <button class="copy-btn" onclick="copyBlock('meta-column-set')">Copy</button>
       </div>
       <div class="info-box">
@@ -2932,14 +3042,14 @@ cost | budget | conversions | cost per conversion | complete payment ROAS | adds
         <button class="copy-btn" onclick="copyBlock('tiktok-column-set')">Copy</button>
       </div>
       <div class="info-box">
-        <strong>Notes.</strong> TikTok has no hook rate, hold rate, ThruPlay, or quality ranking. The creative-quality signal is the <strong>2-second and 6-second video view rate</strong> &mdash; read those where you'd read hook and hold on Meta. Always use the <strong>destination</strong> variants of clicks, CTR, and CPC (not the "all" or click-to-play variants). Complete payment ROAS is the ecommerce ROAS; swap in the ROAS that matches your optimization event.
+        <strong>Notes.</strong> TikTok has no ThruPlay or quality ranking (those are Meta-only). Its hook and hold signals are the <strong>2-second and 6-second video view rate</strong>, with video completion rate as the end signal &mdash; read those where you'd read hook, hold, and ThruPlay on Meta. Always use the <strong>destination</strong> variants of clicks, CTR, and CPC (not the "all" or click-to-play variants). Complete payment ROAS is the ecommerce ROAS; swap in the ROAS that matches your optimization event.
       </div>
       </div>
 
       <div data-platform="google">
       <p class="section-desc">In Google Ads: on the Campaigns table open <strong>Columns &rarr; Modify columns</strong>, add the set below, then <strong>Save column set</strong> as "MIA Read-the-Funnel".</p>
       <div class="copyable" id="google-column-set">MIA GOOGLE COLUMN SET (funnel-read order)
-cost | budget | impressions | clicks | CTR | avg. CPC | CPM | conversions | conv. rate | cost / conv. | conv. value / cost (ROAS) | all conv. | search impr. share | view rate (Video/Demand Gen) | video played to 100% (Video/Demand Gen)
+cost | budget | impressions | clicks | CTR | avg. CPC | CPM | conversions | conv. rate | cost / conv. | conv. value / cost (ROAS) | all conv. | search impr. share | search lost IS (budget) | search lost IS (rank) | quality score | ad strength | view rate (Video/Demand Gen) | video played to 25% / 50% / 75% / 100% (Video/Demand Gen)
         <button class="copy-btn" onclick="copyBlock('google-column-set')">Copy</button>
       </div>
       <div class="info-box">
@@ -2950,7 +3060,7 @@ cost | budget | impressions | clicks | CTR | avg. CPC | CPM | conversions | conv
       <div data-platform="linkedin">
       <p class="section-desc">In LinkedIn Campaign Manager: open the <strong>Columns</strong> dropdown above the performance chart, pick the metrics below (a mix of Performance, Conversions &amp; Leads, and Video views), and save them as a custom set named "MIA Read-the-Funnel".</p>
       <div class="copyable" id="linkedin-column-set">MIA LINKEDIN COLUMN SET (funnel-read order)
-spend | budget | impressions | clicks | CTR | average CPC | CPM | frequency | key results | cost per result | conversions | cost per conversion | conversion rate | leads | cost per lead | lead form completion rate | video views | video completion rate | cost per video view
+spend | budget | impressions | clicks | CTR | average CPC | CPM | frequency | key results | cost per result | conversions | cost per conversion | conversion rate | leads | cost per lead | lead form completion rate | video views | video views at 25% / 50% / 75% / 100% | video completion rate | cost per video view
         <button class="copy-btn" onclick="copyBlock('linkedin-column-set')">Copy</button>
       </div>
       <div class="info-box">
@@ -2961,7 +3071,7 @@ spend | budget | impressions | clicks | CTR | average CPC | CPM | frequency | ke
       <div data-platform="snapchat">
       <p class="section-desc">In Snapchat Ads Manager: open the columns menu on the campaign table, add the set below, and save it as a custom view named "MIA Read-the-Funnel".</p>
       <div class="copyable" id="snapchat-column-set">MIA SNAPCHAT COLUMN SET (funnel-read order)
-spend | budget | impressions | paid reach | frequency | eCPM | swipe ups | swipe up rate | eCPSU (cost per swipe up) | results | cost per result | purchases | purchases ROAS | adds to cart | 2-second video views | 15-second video views | screen time (avg)
+spend | budget | impressions | paid reach | frequency | eCPM | swipe ups | swipe up rate | eCPSU (cost per swipe up) | results | cost per result | view-through conversions | VTC share (% of total conv) | purchases | purchases ROAS | adds to cart | 2-second video views | 15-second video views | video completion rate | screen time (avg)
         <button class="copy-btn" onclick="copyBlock('snapchat-column-set')">Copy</button>
       </div>
       <div class="info-box">
@@ -2976,7 +3086,7 @@ spend | budget | impressions | reach | frequency | CPM | engagements | engagemen
         <button class="copy-btn" onclick="copyBlock('x-column-set')">Copy</button>
       </div>
       <div class="info-box">
-        <strong>Notes.</strong> X has no hook rate, hold rate, ThruPlay, or quality ranking. Video views + completion rate + the quartile views are the creative signals; read the 25%/50% drop-off the way you'd read hook and hold on Meta. Separate <strong>link clicks</strong> from total engagements &mdash; optimize on link-click CPC and CTR, not the inflated engagement number.
+        <strong>Notes.</strong> X has no ThruPlay or quality ranking (those are Meta-only). Read the <strong>3-second and 6-second view rates</strong> plus the video quartiles as the hook and hold signals. X also has an <strong>Aesthetic Score</strong> that penalizes CPM and placement for low-quality visuals &mdash; fix it before iterating copy. Separate <strong>link clicks</strong> from total engagements &mdash; optimize on link-click CPC and CTR, not the inflated engagement number.
       </div>
       </div>
 
@@ -2989,6 +3099,86 @@ surface impression share (how often you appear in AI answers) | click rate in AI
       <div class="info-box">
         <strong>Notes.</strong> Pixel-only attribution loses ~60% of true conversions on AI-answer surfaces (the <strong>conversation gap</strong> &mdash; the buyer returns hours or days later via direct or branded search). Always pair the pixel with a post-purchase survey field and watch branded search lift as the downstream signal. For the buyable layer, build the column set inside <strong>Microsoft Ads / Google Ads</strong> (mirror the Google set). Read monthly for surface mix; ChatGPT proper stays in monitoring posture until NG access opens.
       </div>
+      </div>
+
+      </div>
+
+      <h3>Reading by Level</h3>
+      <p class="section-desc">The column set is one view. You read the decision table <strong>across levels</strong> &mdash; set the same saved columns at each level and know which signal lives where. This switches with the platform selector.</p>
+      <div class="levels-wrap">
+
+      <div data-platform="meta" class="platform-visible">
+      <table class="ref-table">
+        <tr><th>Level</th><th>What to read here</th></tr>
+        <tr><td>Campaign</td><td>Budget and pacing; <strong>quality ranking</strong> (pull from the campaign-level export &mdash; it is NOT in the placement/age breakdowns)</td></tr>
+        <tr><td>Ad set</td><td>CPM, frequency, CPC, audience and placement performance; pull the <strong>Platform/Placement/Device breakdown</strong> from Day 3</td></tr>
+        <tr><td>Ad</td><td>Hook rate, hold rate, ThruPlay completion, CTR &mdash; the creative signals live here</td></tr>
+        <tr><td>Breakdowns</td><td>Placement, device, age/gender, region &mdash; cut the segments that spend without converting</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="tiktok">
+      <table class="ref-table">
+        <tr><th>Level</th><th>What to read here</th></tr>
+        <tr><td>Campaign</td><td>Budget and pacing &mdash; run tests on ad-group budgets, not campaign budget (CBO concentrates spend on the first ad group)</td></tr>
+        <tr><td>Ad group</td><td>CPM, frequency, CPC, CVR, CPA, audience performance</td></tr>
+        <tr><td>Ad</td><td>2-second and 6-second view rates, video completion rate, CTR &mdash; the creative signals</td></tr>
+        <tr><td>Breakdowns</td><td>Age, placement, device &mdash; cut the segments that spend without converting</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="google">
+      <table class="ref-table">
+        <tr><th>Level / Tab</th><th>What to read here</th></tr>
+        <tr><td>Campaign</td><td>Budget, impression share, <strong>Search Lost IS (Budget)</strong> and <strong>(Rank)</strong>, CPM (Video/Display)</td></tr>
+        <tr><td>Ad group</td><td><strong>Quality Score</strong>, CTR, CPC, keyword performance</td></tr>
+        <tr><td>Ad / Asset</td><td><strong>Ad Strength</strong>, RSA and PMax asset performance ratings, video quartiles</td></tr>
+        <tr><td>Search terms tab</td><td>The actual queries users typed &mdash; add negatives, harvest new keywords (weekly)</td></tr>
+        <tr><td>Landing pages tab</td><td>CVR by page, mobile speed, message-match</td></tr>
+        <tr><td>Auction insights</td><td>Competitor overlap and impression share vs rivals</td></tr>
+        <tr><td>Demographics</td><td>Age, gender, household income, parental status &mdash; layer with intent, don't target on alone</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="linkedin">
+      <table class="ref-table">
+        <tr><th>Level</th><th>What to read here</th></tr>
+        <tr><td>Campaign</td><td>CPM, CPL, spend pacing, and <strong>pipeline ROAS</strong> (the 90-day downstream signal)</td></tr>
+        <tr><td>Ad</td><td>CTR, video view-rate quartiles, video completion per variant &mdash; the creative signals</td></tr>
+        <tr><td>Lead Gen Form</td><td>Lead form completion rate, cost per lead &mdash; the key funnel gate</td></tr>
+        <tr><td>Demographics</td><td>Company size, seniority, function, industry breakdowns; <strong>lead quality</strong> comes from sales feedback, not the dashboard</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="snapchat">
+      <table class="ref-table">
+        <tr><th>Level</th><th>What to read here</th></tr>
+        <tr><td>Campaign</td><td>Budget and spend pacing</td></tr>
+        <tr><td>Ad set</td><td>CPM/eCPM, swipe-up rate, CPC/eCPSU, frequency, CVR, CPA</td></tr>
+        <tr><td>Ad</td><td>2-second and 15-second video views, video completion rate, screen time &mdash; the creative signals</td></tr>
+        <tr><td>Format split</td><td>Snap Ads vs Story Ads vs Commercials &mdash; each has different swipe-up thresholds</td></tr>
+        <tr><td>Attribution</td><td><strong>VTC share</strong> (40-60% of conversions is healthy; below 30% = tracking broken, above 70% = over-credit)</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="x">
+      <table class="ref-table">
+        <tr><th>Level</th><th>What to read here</th></tr>
+        <tr><td>Campaign</td><td>Budget and spend pacing</td></tr>
+        <tr><td>Ad group</td><td>CPM, CTR, CPC, frequency, CPA &mdash; budgets are set here, not at a campaign toggle</td></tr>
+        <tr><td>Ad / creative</td><td><strong>Aesthetic Score</strong> (per creative &mdash; it penalizes CPM and placement), 3s/6s view rates, video quartiles</td></tr>
+        <tr><td>Audience</td><td>Follower-lookalike seed, keyword stack, engagement rate</td></tr>
+      </table>
+      </div>
+
+      <div data-platform="chatgpt">
+      <table class="ref-table">
+        <tr><th>Level</th><th>What to read here</th></tr>
+        <tr><td>Surface</td><td>ChatGPT (monitor-only for NG), Microsoft Ads, Google AI Overviews &mdash; read each surface separately</td></tr>
+        <tr><td>Intent cluster</td><td>Impression share, CPM, CTR, CPC per cluster (the Microsoft/Google buyable layer)</td></tr>
+        <tr><td>Ad / copy variant</td><td>CTR in the AI answer, post-click CVR</td></tr>
+        <tr><td>Attribution</td><td><strong>Survey AI-attribution %</strong> (the truth signal), pixel vs blended CPA ratio (0.3-0.5 healthy), branded search lift</td></tr>
+      </table>
       </div>
 
       </div>
