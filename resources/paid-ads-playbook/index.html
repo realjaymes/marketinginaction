@@ -1281,14 +1281,14 @@
 
       <strong style="font-size:13px;color:var(--text-secondary);display:block;margin-bottom:6px;">Platform Access</strong>
       <ul class="checklist" data-section="onboard">
-        <li><input type="checkbox" id="ob-14"><label for="ob-14" data-platform="meta" class="platform-visible">Business Manager access granted (Admin or Advertiser)</label><label for="ob-14" data-platform="tiktok">TikTok Business Center access granted</label><label for="ob-14" data-platform="google">Google Ads MCC access granted</label><label for="ob-14" data-platform="linkedin">LinkedIn Campaign Manager access granted</label><label for="ob-14" data-platform="snapchat">Snapchat Ads Manager access granted (Public Profile linked)</label></li>
+        <li><input type="checkbox" id="ob-14"><label for="ob-14" data-platform="meta" class="platform-visible">Business Manager access granted (Admin or Advertiser)</label><label for="ob-14" data-platform="tiktok">TikTok Business Center access granted</label><label for="ob-14" data-platform="google">Google Ads MCC access granted</label><label for="ob-14" data-platform="linkedin">LinkedIn Campaign Manager access granted</label><label for="ob-14" data-platform="snapchat">Snapchat Ads Manager access granted (Public Profile linked)</label><label for="ob-14" data-platform="x">X Ads account access granted (USD account, funded virtual card)</label><label for="ob-14" data-platform="chatgpt">Ad surface access granted (Microsoft Ads / Google Ads; ChatGPT proper needs a US/CA/AU/NZ entity)</label></li>
         <li><input type="checkbox" id="ob-15"><label for="ob-15">Payment method on file and verified</label></li>
         <li><input type="checkbox" id="ob-16"><label for="ob-16">Brand assets received (logo, fonts, colors, guidelines)</label></li>
       </ul>
 
       <h3>Current Performance Baseline</h3>
       <p style="font-size:13px;color:var(--text-secondary);margin-bottom:6px;">Total business volume across all channels (organic + paid + email + referral). Date-stamp every row. This is the reference for setting targets and measuring lift.</p>
-      <p style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;font-style:italic;"><span class="platform-visible" data-platform="meta"><strong>"Conversions"</strong> = the primary commercial action for the business model: orders (ecom/D2C), leads (lead gen), enrollments (info product), installs (app), bookings (local service), signups (SaaS trial). <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span><span data-platform="tiktok"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / bookings / signups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span><span data-platform="google"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / bookings / signups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span><span data-platform="linkedin">B2B variant: capture leads → MQLs → SQLs → opps → pipeline $ across the full funnel.</span><span data-platform="snapchat"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / sign ups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model. Currency primary USD, NGN for NG-targeted campaigns.</span></p>
+      <p style="font-size:12px;color:var(--text-secondary);margin-bottom:10px;font-style:italic;"><span class="platform-visible" data-platform="meta"><strong>"Conversions"</strong> = the primary commercial action for the business model: orders (ecom/D2C), leads (lead gen), enrollments (info product), installs (app), bookings (local service), signups (SaaS trial). <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span><span data-platform="tiktok"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / bookings / signups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span><span data-platform="google"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / bookings / signups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span><span data-platform="linkedin">B2B variant: capture leads → MQLs → SQLs → opps → pipeline $ across the full funnel.</span><span data-platform="snapchat"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / sign ups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model. Currency primary USD, NGN for NG-targeted campaigns.</span><span data-platform="x"><strong>"Conversions"</strong> = orders / leads / enrollments / installs / bookings / signups depending on business model. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU. Currency: USD (NG advertisers settle in USD regardless of NGN offer pricing).</span><span data-platform="chatgpt"><strong>"Conversions"</strong> = orders / leads / enrollments / signups, counted <strong>blended</strong> (pixel + post-purchase survey) because AI-surface pixel undercounts ~60%. <strong>"Avg. value"</strong> = AOV / deal value / ASP / ARPU depending on model.</span></p>
 
       <div class="input-row">
         <div class="input-group">
@@ -1539,6 +1539,41 @@ Platform: ___________
         </ul>
       </div>
 
+      <!-- X TRACKING -->
+      <div data-platform="x">
+        <h3>X Pixel &amp; Conversions API</h3>
+        <ul class="checklist" data-section="tracking">
+          <li><input type="checkbox" id="tk-x1"><label for="tk-x1">Ad account currency set to USD (NGN setting triggers ~50% surcharge on non-NG spend)</label></li>
+          <li><input type="checkbox" id="tk-x2"><label for="tk-x2">Virtual USD card / domiciliary Visa funded with &ge;7 days of planned spend</label></li>
+          <li><input type="checkbox" id="tk-x3"><label for="tk-x3">X Pixel base tag installed on all pages</label></li>
+          <li><input type="checkbox" id="tk-x4"><label for="tk-x4">Standard events configured (Purchase, Lead, CompleteRegistration, InitiateCheckout, AddToCart, ContentView, PageView)</label></li>
+          <li><input type="checkbox" id="tk-x5"><label for="tk-x5">Conversions API (CAPI) connected (Pixel-only loses 30-45% of events)</label></li>
+          <li><input type="checkbox" id="tk-x6"><label for="tk-x6">Pixel + CAPI dedup confirmed (event_id matches browser + server)</label></li>
+          <li><input type="checkbox" id="tk-x7"><label for="tk-x7">Purchase event fires with conversion value populated (value-based optimization needs CAPI on X)</label></li>
+          <li><input type="checkbox" id="tk-x8"><label for="tk-x8">Test events verified in Ads Manager test tool (within 5 min)</label></li>
+          <li><input type="checkbox" id="tk-x9"><label for="tk-x9">Objective = Website Conversions optimized for Purchase for revenue (never Engagements)</label></li>
+          <li><input type="checkbox" id="tk-x10"><label for="tk-x10">UTMs set per ad (utm_source=x, utm_medium=cpc)</label></li>
+          <li><input type="checkbox" id="tk-x11"><label for="tk-x11">Reported events vs. GA4 truth within 75-95% (below 65% = CAPI broken or double-firing)</label></li>
+        </ul>
+      </div>
+
+      <!-- CHATGPT / AI ANSWER ENGINE TRACKING -->
+      <div data-platform="chatgpt">
+        <h3>AI Answer Engine Tracking (OpenAI Pixel / UET / Google Tag + Survey)</h3>
+        <ul class="checklist" data-section="tracking">
+          <li><input type="checkbox" id="tk-c1"><label for="tk-c1">Surface pixels installed on destination (OpenAI Pixel for ChatGPT proper, Microsoft UET for Copilot, Google Tag for AIO)</label></li>
+          <li><input type="checkbox" id="tk-c2"><label for="tk-c2">Server-side connected (OpenAI CAPI / Microsoft Conversions API / Google Enhanced Conversions)</label></li>
+          <li><input type="checkbox" id="tk-c3"><label for="tk-c3">Standard events configured (Purchase, Lead, CompleteRegistration, InitiateCheckout, AddToCart, ContentView, PageView)</label></li>
+          <li><input type="checkbox" id="tk-c4"><label for="tk-c4">CAPI deduplication confirmed across pixels (event_id)</label></li>
+          <li><input type="checkbox" id="tk-c5"><label for="tk-c5">Post-purchase survey live with AI-surface options ("How did you hear about us?")</label></li>
+          <li><input type="checkbox" id="tk-c6"><label for="tk-c6">Branded search baseline captured (last 90 days, Search Console)</label></li>
+          <li><input type="checkbox" id="tk-c7"><label for="tk-c7">GA4 custom dimension for AI-source attribution (survey + UTM)</label></li>
+          <li><input type="checkbox" id="tk-c8"><label for="tk-c8">UTMs set per ad per surface (utm_source=chatgpt / copilot / google-aio)</label></li>
+          <li><input type="checkbox" id="tk-c9"><label for="tk-c9">Blended (pixel + survey) attribution used for ROAS decisions, validated by branded-search lift</label></li>
+        </ul>
+        <div class="warning-box">Pixel-only attribution undercounts AI-surface conversions by ~60% (the conversation gap). Never optimize against pixel data alone &mdash; use blended pixel + survey attribution and validate with branded-search lift.</div>
+      </div>
+
       <div class="info-box">Tracking verification tip: After installing pixels, visit the site and trigger conversion events. Verify they appear in each platform's Events Manager or Tag Assistant within 15 minutes.</div>
     </div>
 
@@ -1614,6 +1649,30 @@ Platform: ___________
           <tr><td>App Installs</td><td>App Installs</td><td>Install + in-app event</td><td>CPI, CPA</td></tr>
           <tr><td>Engagement (AR)</td><td>Engagement</td><td>Lens plays / shares</td><td>Cost per Play, Share Rate</td></tr>
         </table>
+      </div>
+      <div data-platform="x">
+        <table class="ref-table">
+          <tr><th>Client Goal</th><th>X Objective</th><th>Optimize For</th><th>Key KPI</th></tr>
+          <tr><td>Brand Awareness</td><td>Reach</td><td>Impressions</td><td>CPM, Frequency</td></tr>
+          <tr><td>Video Views</td><td>Video Views</td><td>6s / ThruPlay</td><td>CPV, VTR</td></tr>
+          <tr><td>Website Traffic (warm-up)</td><td>Website Traffic</td><td>Link Clicks</td><td>CPC, CTR</td></tr>
+          <tr><td>Lead Generation</td><td>Website Conversions</td><td>Lead</td><td>CPL</td></tr>
+          <tr><td>eCommerce / info product</td><td>Website Conversions</td><td>Purchase</td><td>ROAS, CPA</td></tr>
+          <tr><td>App Installs</td><td>App Installs</td><td>Install + in-app event</td><td>CPI</td></tr>
+          <tr><td>Engagement (priming only)</td><td>Engagements</td><td>Likes / reposts / replies</td><td>CPE</td></tr>
+        </table>
+        <div class="warning-box" style="margin-top:8px;"><strong>No Meta-style on-platform "Sales" objective.</strong> Revenue runs Website Conversions optimized for Purchase (Pixel + CAPI must be firing first). The #1 budget waster on X is running Engagements when the goal is sales &mdash; cheapest optimization, best dashboards, worst conversion.</div>
+      </div>
+      <div data-platform="chatgpt">
+        <table class="ref-table">
+          <tr><th>Goal</th><th>Primary Surface</th><th>Why</th></tr>
+          <tr><td>Reach NG users</td><td>Microsoft Copilot + Google AIO</td><td>ChatGPT proper doesn't deliver to NG</td></tr>
+          <tr><td>Reach US/CA/AU/NZ</td><td>ChatGPT Ads + Copilot + AIO</td><td>Full surface availability</td></tr>
+          <tr><td>B2B / professional</td><td>Microsoft Copilot</td><td>Bing enterprise install base + LinkedIn data</td></tr>
+          <tr><td>E-commerce / consumer</td><td>Google AIO (Shopping + AIO)</td><td>Existing Google Shopping infrastructure</td></tr>
+          <tr><td>Local service</td><td>Google AIO (local intent)</td><td>Local search dominance</td></tr>
+        </table>
+        <div class="info-box" style="margin-top:8px;"><strong>Objective by surface:</strong> ChatGPT proper = Website Conversions (Purchase/Lead) or Reach/Traffic on a single Sponsored Recommendation Card (CPM $60 default / CPC $3-5). Microsoft Copilot and Google AIO inventory fold into existing campaign types &mdash; there is no separate "Copilot" or "AIO" campaign.</div>
       </div>
 
       <h3>Funnel Mapping</h3>
@@ -1852,9 +1911,27 @@ Platform: ___________
           <strong>Critical: Snapchat is impulse-first, low patience.</strong> Same offer that converts at 2% on Meta Traffic typically converts at 0.8-1.2% on Snapchat Traffic. Default to Conversions objective with pixel-tracked checkout for direct response. Always report Click-Through Conversions (CTC) and View-Through Conversions (VTC) separately — VTC is typically 40-60% of total. Above 70% VTC share = audit before scaling.
         </div>
       </div>
+      <div data-platform="x">
+        <table class="decision-table">
+          <tr><th>Funnel Type</th><th>X Reports</th><th>Formula</th><th>Mental Shortcut</th></tr>
+          <tr><td>Direct purchase (Website Conversions &rarr; Purchase)</td><td>Cost Per Purchase</td><td>Target CPA itself</td><td>25-30% of AOV (physical), 40-50% (digital)</td></tr>
+          <tr><td>Website Traffic (ad &rarr; LP &rarr; action)</td><td>Cost Per Link Click</td><td>Target CPA &times; Click-to-Sale rate</td><td>Target CPA &divide; 40 (cold), &divide; 20 (warm/RT)</td></tr>
+          <tr><td>Lead Gen (ad &rarr; LP form)</td><td>Cost Per Lead</td><td>Target CPA &times; Lead-to-Sale rate</td><td>Target CPA &divide; 10</td></tr>
+          <tr><td>Engagement-led top of funnel</td><td>Cost Per Engagement</td><td>Proxy floor, not primary KPI</td><td>&le; &#8358;60 / $0.04 for NG content</td></tr>
+        </table>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>Default NG rates:</strong> Click-to-Sale 1.5% cold / 4% warm; Lead-to-Sale 10%; DM-to-Sale 25% retail, 15% B2B. X CPMs run ~30-50% of Meta NG CPMs but volume per dollar is lower &mdash; net CPA lands 0.8-1.3× Meta for the same offer. If target CPA is below 30% of your Meta CPA, X probably can't deliver it.</p>
+      </div>
+      <div data-platform="chatgpt">
+        <table class="decision-table">
+          <tr><th>Funnel Type</th><th>AI Surface Reports</th><th>Formula</th><th>Mental Shortcut</th></tr>
+          <tr><td>Direct purchase</td><td>Cost Per Conversion (pixel)</td><td>Blended CPA = pixel CPA &times; ~0.4</td><td>True CPA &asymp; pixel CPA &times; 0.4 (pixel sees ~40%)</td></tr>
+          <tr><td>Comparison / research queries</td><td>Cost Per Click</td><td>Intent-qualified click cost</td><td>CPC $3-5 (surfaces price 2-6× Meta CPM)</td></tr>
+        </table>
+        <div class="warning-box" style="margin-top:8px;"><strong>Judge on blended (pixel + survey) CPA, never pixel alone</strong> &mdash; pixel sees ~40% of true conversions (conversation gap). 30-90 day attribution lag: plan 60-90 days before scaling on ROAS. Survey-attributed CPA should converge with pixel CPA as branded search compounds; if they still diverge after 90 days, the attribution method is broken.</div>
+      </div>
 
       <div class="info-box" style="margin-top:10px;">
-        For the diagnostic reply templates and 7-step quick-diagnosis workflow used in client conversations, see the markdown reference at <code>~/.claude/skills/performance-marketing/references/client-engagement-playbook.md</code> &rarr; Diagnostic Reply Templates.
+        For the diagnostic reply templates and 7-step quick-diagnosis workflow used in client conversations, MIA clients get the full diagnostic playbook as part of an engagement.
       </div>
 
       <h4>Webinar / multi-stage funnels &mdash; stage-by-stage estimation</h4>
@@ -2256,6 +2333,32 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
         </table>
         <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>NG state-level targeting:</strong> Lagos, Abuja FCT, Rivers, Oyo, Kano. Country-level NG chokes delivery on thin pools — test states beyond top 5 only after offer proves in top 5.</p>
       </div>
+      <div data-platform="x">
+        <h3>Audience Types</h3>
+        <table class="ref-table">
+          <tr><th>Type</th><th>Description</th><th>Best For</th></tr>
+          <tr><td><strong>Follower Lookalikes</strong></td><td>Paste 8-15 competitor / thought-leader handles; X finds similar followers</td><td>Strongest cold lever on X in 2026</td></tr>
+          <tr><td><strong>Keyword targeting</strong></td><td>Entity terms, brand handles, event names (not single broad words)</td><td>Capturing expressed intent</td></tr>
+          <tr><td><strong>Conversation Topics</strong></td><td>10,000+ topics; align to active niche conversations</td><td>Topic-aligned prospecting</td></tr>
+          <tr><td><strong>Interest targeting</strong></td><td>350+ interests; weaker than Follower LAL</td><td>Broad niche, no buyer data</td></tr>
+          <tr><td><strong>Engagement / repliers / profile visitors</strong></td><td>Org + paid engagers, quote-tweeters (repliers = highest organic intent)</td><td>Warm retargeting</td></tr>
+          <tr><td><strong>Custom list + site retargeting</strong></td><td>Hashed email/phone; site / product-page / cart visitors</td><td>BOFU retargeting + LAL seed</td></tr>
+        </table>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;"><strong>NG state-level targeting:</strong> Lagos, Abuja FCT, Rivers, Oyo, Kano. Min TOFU ~200K (X pools are thinner than Meta). Don't stack more than 2 inclusion criteria &mdash; narrow stacks starve on X's thin auction. Follower Lookalikes seed from handles, not a country lookalike.</p>
+      </div>
+      <div data-platform="chatgpt">
+        <h3>Intent Clusters (AI surfaces target intent, not audiences)</h3>
+        <table class="ref-table">
+          <tr><th>Cluster</th><th>Buyer Mindset</th><th>Sample Queries</th></tr>
+          <tr><td><strong>Comparison</strong></td><td>Evaluating options</td><td>"X vs Y," "best alternative to Z"</td></tr>
+          <tr><td><strong>How-to</strong></td><td>Solving a problem</td><td>"how to do X," "best way to Y"</td></tr>
+          <tr><td><strong>Best X</strong></td><td>Discovery shopping</td><td>"best X for Y," "top X for [use case]"</td></tr>
+          <tr><td><strong>Definitional</strong></td><td>Problem unaware &rarr; aware</td><td>"what is X," "X explained"</td></tr>
+          <tr><td><strong>Brand Defense</strong></td><td>Brand-aware research</td><td>"[brand] review," "[brand] vs alternative"</td></tr>
+          <tr><td><strong>Transactional</strong></td><td>Ready to buy</td><td>"buy X," "X pricing"</td></tr>
+        </table>
+        <div class="warning-box"><strong>ChatGPT proper has no demographics, interests, lookalikes, or pixel retargeting</strong> &mdash; only conversational intent + geo (US state/DMA/ZIP) + language + hashed custom list (inclusion/exclusion), and it cannot target Nigeria. Microsoft Copilot + Google AIO inherit full Microsoft/Google audiences (keyword, demographic, in-market, Customer Match, lookalike, remarketing) and are buyable from NG.</div>
+      </div>
 
       <h3>Audience Matrix by Funnel Stage</h3>
       <ul class="checklist" data-section="audiences">
@@ -2352,6 +2455,27 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
           <tr><td><code>Warm | Website visitors | Last 180 days</code></td><td>Search (Observation) · Display / Video / PMax</td></tr>
           <tr><td><code>Retargeting | Product Page remarketing | Last 180 days</code></td><td>Display / Video / PMax</td></tr>
           <tr><td><code>Retargeting | Customer Match List</code></td><td>Search (Observation) · Display / Video / PMax</td></tr>
+        </table>
+      </div>
+      <div data-platform="x">
+        <table class="ref-table">
+          <tr><th>Saved audience name</th><th>Applies to</th></tr>
+          <tr><td><code>Cold | Follower LAL – @handles | NG</code></td><td>X ad group (Targeting)</td></tr>
+          <tr><td><code>Cold | Keyword stack | NG</code></td><td>X ad group</td></tr>
+          <tr><td><code>Cold | Conversation Topics | NG</code></td><td>X ad group</td></tr>
+          <tr><td><code>Warm | Post engagers / repliers | 30-90d</code></td><td>Retargeting</td></tr>
+          <tr><td><code>Retargeting | Site + Product page | 7-30d</code></td><td>Retargeting (exclude 30d buyers)</td></tr>
+          <tr><td><code>Retargeting | Custom list (hashed) | persistent</code></td><td>Upsell / exclusion</td></tr>
+        </table>
+      </div>
+      <div data-platform="chatgpt">
+        <p class="section-desc" style="margin-top:0;">Name by <strong>surface + intent cluster</strong>, not audience attribute. One ad group = one intent cluster.</p>
+        <table class="ref-table">
+          <tr><th>Saved name</th><th>Applies to</th></tr>
+          <tr><td><code>Copilot | Comparison intent | NG</code></td><td>Microsoft Ads (buyable from NG)</td></tr>
+          <tr><td><code>AIO | Best-X intent | NG</code></td><td>Google Ads (buyable from NG)</td></tr>
+          <tr><td><code>ChatGPT | Brand-defense intent | US</code></td><td>ChatGPT proper (diaspora / US entity only)</td></tr>
+          <tr><td><code>Exclude | Customer list (512MB CSV)</code></td><td>ChatGPT proper (exclusion)</td></tr>
         </table>
       </div>
 
@@ -2741,6 +2865,27 @@ Description: ___________
         </table>
         <div class="warning-box">Snapchat needs <strong>4-6× target CPA</strong> as daily budget per ad set (higher multiplier than Meta/TikTok's 3-5× because of weaker auction density and thinner pixel pools). NG floor is higher than Meta because Snapchat NG pixel pools are smaller.</div>
       </div>
+      <div data-platform="x">
+        <table class="ref-table">
+          <tr><th>Campaign Type (per ad group)</th><th>Floor NG ($/day)</th><th>Floor Diaspora ($/day)</th></tr>
+          <tr><td>Testing TOFU</td><td>$10-20</td><td>$25-50</td></tr>
+          <tr><td>Retargeting</td><td>$5-10</td><td>$15-30</td></tr>
+          <tr><td>Engagement (TOF only)</td><td>$5</td><td>$15</td></tr>
+          <tr><td>Scaling (consolidated winner)</td><td>$50+</td><td>$150+</td></tr>
+        </table>
+        <div class="warning-box">X bills in USD (&#8776; $1 = &#8358;1,600). Budget per ad group = <strong>3-5× target CPA</strong> AND must clear 40-60 weekly events of the optimization event. Cap Engagement-optimized ad groups at 10-15% of spend &mdash; cheap on X, but converts worst.</div>
+      </div>
+      <div data-platform="chatgpt">
+        <table class="ref-table">
+          <tr><th>Surface &mdash; Campaign Type</th><th>Floor ($/day)</th><th>Notes</th></tr>
+          <tr><td>Microsoft Copilot &mdash; Search (Conversions)</td><td>$20</td><td>Buyable from NG, reaches NG users</td></tr>
+          <tr><td>Google AIO &mdash; Search (Conversions)</td><td>$20</td><td>Buyable from NG, reaches NG users</td></tr>
+          <tr><td>Google AIO &mdash; Performance Max / Demand Gen</td><td>$20-30</td><td>Broad coverage</td></tr>
+          <tr><td>ChatGPT proper &mdash; Traffic (US)</td><td>$25</td><td>Geo-gated: US/CA/AU/NZ entity only</td></tr>
+          <tr><td>ChatGPT proper &mdash; Conversions (US)</td><td>$50</td><td>Diaspora-targeted offers only</td></tr>
+        </table>
+        <div class="warning-box">AI answer surfaces price <strong>2-6× Meta CPM</strong>. For NG advertisers: ~40-50% Microsoft Copilot + ~40-50% Google AIO; ChatGPT proper 0% (NG) or 10-20% for diaspora offers via a US entity. Volume-limited by query frequency &mdash; budget past query volume just inflates CPM. Treat as experimental budget, not core spend.</div>
+      </div>
 
       <h3>Learning Phase Protection</h3>
       <div data-platform="meta" class="platform-visible">
@@ -2768,11 +2913,21 @@ Description: ___________
           <strong>Don't kill before learning phase exits.</strong> Learning phase = ~50 conversions in 7-10 days per ad set (slightly longer than Meta/TikTok because Snapchat pixel pools are thinner). If you can't hit that at current budget, lower the optimization event (Purchase &rarr; Add to Cart &rarr; View Content) or raise the budget. Killing while in learning resets the algorithm and wastes setup spend.
         </div>
       </div>
+      <div data-platform="x">
+        <div class="warning-box">
+          <strong>Don't kill before the allocator stabilizes.</strong> X's ML allocator stabilizes around 40-60 events of the optimization event per week per ad group. If you can't hit that, lower the optimization event (Purchase &rarr; Lead &rarr; AddToCart &rarr; ContentView) or raise the budget. X learning windows run longer than Meta &mdash; plan ~30 days to first stable read and hold through the 7-10 day warm-up.
+        </div>
+      </div>
+      <div data-platform="chatgpt">
+        <div class="warning-box">
+          <strong>Don't optimize against pixel data alone.</strong> AI surfaces are volume-limited by query frequency, so "learning" is really impression share on your intent cluster. Budget per ad group should clear 2-3× target CPA and enough impression share to read signal. Pixel undercounts ~60% (conversation gap) &mdash; judge on blended pixel + survey, not the dashboard.
+        </div>
+      </div>
 
       <h3>CBO vs. Manual Budget</h3>
       <div class="info-box" style="border-left:3px solid var(--mia-accent)">
         <strong>ABO for testing, CBO for scaling.</strong> ABO (ad-set/ad-group budget) forces a fair budget into every angle/audience so each generates enough signal to judge. CBO (campaign budget) lets the algorithm allocate to proven winners once you know what works.<br><br>
-        <strong>Don't test on CBO.</strong> Launch a test on CBO and the algorithm concentrates budget on the first ad set to get early traction; the others never get a fair test, so you'll think you have one winner when you never gave the rest a chance. Test on ABO, then move proven winners to CBO to scale. (Applies to Meta, TikTok, Snapchat; Google and LinkedIn use the budget models below.)
+        <strong>Don't test on CBO.</strong> Launch a test on CBO and the algorithm concentrates budget on the first ad set to get early traction; the others never get a fair test, so you'll think you have one winner when you never gave the rest a chance. Test on ABO, then move proven winners to CBO to scale. (Applies to Meta, TikTok, Snapchat; Google, LinkedIn, X, and ChatGPT use the budget models below.)
       </div>
       <div data-platform="meta" class="platform-visible">
         <div class="info-box">
@@ -2802,6 +2957,18 @@ Description: ___________
         <div class="info-box">
           <strong>Campaign Budget Optimization (CBO):</strong> Use when you have 2+ ad sets proven and want Snapchat to allocate budget to top performers. Migrate to CBO after manual ABO testing has identified winning audiences.<br><br>
           <strong>Ad Set Daily Budget (ABO):</strong> Default for testing. Forces signal accumulation per ad set so you can read each audience hypothesis cleanly.
+        </div>
+      </div>
+      <div data-platform="x">
+        <div class="info-box">
+          <strong>Ad Group Budget (ABO-style):</strong> X's default. Set budget at the ad group level so each audience hypothesis (Follower Lookalike seed, keyword stack, or list) gets a fair read.<br><br>
+          <strong>Consolidate to scale:</strong> merge proven winners into fewer ad groups &mdash; X's thinner auction rewards concentration over fragmentation, so scaling is about density, not more ad groups.
+        </div>
+      </div>
+      <div data-platform="chatgpt">
+        <div class="info-box">
+          <strong>Intent-based, not audience-based.</strong> Structure mirrors search: one ad group = one intent cluster (comparison / how-to / best-X / brand-defense), not an audience &mdash; there is no CBO-style audience allocation on ChatGPT proper.<br><br>
+          <strong>Surface split, not CBO:</strong> allocate across surfaces (Microsoft Copilot / Google AIO / ChatGPT) rather than letting one algorithm pool budget. Treat ChatGPT proper as experimental budget, not core spend.
         </div>
       </div>
     </div>
@@ -2856,6 +3023,31 @@ Description: ___________
           <li><input type="checkbox" id="la-g4"><label for="la-g4">Each ad group points to its own intent-matched landing page (no shared generic page)</label></li>
           <li><input type="checkbox" id="la-g5"><label for="la-g5">Networks: Search only, Search Partners off until proven; geo "Presence" not "Presence or interest"</label></li>
           <li><input type="checkbox" id="la-g6"><label for="la-g6">Negative-keyword list applied; auto-tagging on for GA4</label></li>
+        </ul>
+      </div>
+
+      <div data-platform="x">
+        <h3>X &mdash; extra pre-launch</h3>
+        <ul class="checklist" data-section="launch">
+          <li><input type="checkbox" id="la-x1"><label for="la-x1">Ad account currency = USD (NGN setting triggers ~50% surcharge on non-NG spend)</label></li>
+          <li><input type="checkbox" id="la-x2"><label for="la-x2">Virtual USD card / domiciliary Visa funded with &ge;7 days of planned spend</label></li>
+          <li><input type="checkbox" id="la-x3"><label for="la-x3">Pixel + CAPI both deployed (Pixel-only loses 30-45% of events)</label></li>
+          <li><input type="checkbox" id="la-x4"><label for="la-x4">Aesthetic Score &ge; Average on every creative before launch</label></li>
+          <li><input type="checkbox" id="la-x5"><label for="la-x5">Revenue campaigns use Website Conversions optimized for Purchase &mdash; NOT Engagements</label></li>
+          <li><input type="checkbox" id="la-x6"><label for="la-x6">One ad group = one audience hypothesis (Follower LAL seed, keyword stack, or list)</label></li>
+        </ul>
+      </div>
+
+      <div data-platform="chatgpt">
+        <h3>AI Answer Engine &mdash; extra pre-launch</h3>
+        <ul class="checklist" data-section="launch">
+          <li><input type="checkbox" id="la-c1"><label for="la-c1">Advertiser geo eligible for chosen surface (ChatGPT proper needs a US/CA/AU/NZ entity; Copilot + AIO buyable from NG)</label></li>
+          <li><input type="checkbox" id="la-c2"><label for="la-c2">Target user geo deliverable on chosen surface (ChatGPT proper doesn't reach NG users)</label></li>
+          <li><input type="checkbox" id="la-c3"><label for="la-c3">Offer category approved (no healthcare/financial/dating/gambling/political on ChatGPT proper without manual approval)</label></li>
+          <li><input type="checkbox" id="la-c4"><label for="la-c4">One campaign per surface + objective combo (don't mix ChatGPT and Microsoft inventory in one unit)</label></li>
+          <li><input type="checkbox" id="la-c5"><label for="la-c5">One ad group = one intent cluster (comparison / how-to / best-X / definitional / brand-defense / transactional)</label></li>
+          <li><input type="checkbox" id="la-c6"><label for="la-c6">Pixel + CAPI + post-purchase survey + branded-search baseline all live (conversation gap = ~60% pixel undercount)</label></li>
+          <li><input type="checkbox" id="la-c7"><label for="la-c7">ChatGPT proper: 3-element creative (50-80 / 150-200 / 80-120 chars), no chatbot-mimicking voice, destination matches promise</label></li>
         </ul>
       </div>
 
@@ -3803,6 +3995,20 @@ Key priorities:
           <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Apply winning-segment bid adjustments across networks (age / gender / household income); exclude the losing demographic bands</label></li>
           <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">On Display / Video / PMax, exclude junk placements; steer PMax with <strong>audience signals + campaign-level exclusions</strong> (no placement editing on Search)</label></li>
           <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Scale budget on the winning campaign / theme; hold Smart Bidding steady through its learning window</label></li>
+        </ul>
+      </div>
+      <div data-platform="x">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Duplicate the winning ad group scoped to the winning <strong>Follower Lookalike seed / keyword stack</strong> (duplicate, never edit a live winner)</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">Concentrate budget on the winning ad group &mdash; X's thin auction rewards <strong>density over fragmentation</strong></label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Raise budget 20-30% every 5-7 days (slower than Meta); ceiling ~3-8× original; watch frequency &gt;4</label></li>
+        </ul>
+      </div>
+      <div data-platform="chatgpt">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Duplicate the winner into an <strong>adjacent intent cluster</strong> ("comparison: X vs Y" &rarr; "X vs Z"); one cluster per ad group</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">Add the second AI surface on the same cluster (Copilot &#8646; Google AIO); layer Customer Match on Microsoft/Google (ChatGPT proper = exclusion only)</label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Raise budget 15-20% every 7-10 days on <strong>blended</strong> CPA; ceiling is query volume (2-5× start) &mdash; impression share &gt;30% means no inventory left</label></li>
         </ul>
       </div>
       </div>
