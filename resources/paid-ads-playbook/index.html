@@ -1092,64 +1092,117 @@
       <h2>Overview</h2>
       <p class="section-desc">Operating system, not a manual. The 11 sections map to a single loop: plan &rarr; launch &rarr; optimize &rarr; scale &rarr; repeat. Use this overview to orient before diving into any section.</p>
 
+      <div class="overview-surface-note-wrap">
+        <div data-platform="chatgpt"><div class="info-box" style="margin-top:0;"><strong>AI answer engine note:</strong> for most NG clients in 2026 this loop runs through Microsoft Copilot and Google AI Overviews while ChatGPT proper sits in a monitoring posture. NG advertisers cannot buy ChatGPT Ads directly (US/CA/AU/NZ entities only).</div></div>
+      </div>
+
       <h3>The Operating Loop</h3>
-      <table class="decision-table">
-        <tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr>
-        <tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state</td><td>Is this account ready to spend?</td></tr>
-        <tr><td>1.5</td><td>Audience Research</td><td>Restate business, pull existing customer profile, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>Skipping this means Strategy is a guess. Don't proceed without it on new engagements</td></tr>
-        <tr><td>2</td><td>Track</td><td>Verify pixel + CAPI + conversion events</td><td>Don't proceed without 80%+ event match vs. analytics</td></tr>
-        <tr><td>3</td><td>Strategy</td><td>Pick objective, set CPA/CVR/ROAS targets, hypothesize audiences and creative themes</td><td>Define kill/scale thresholds before launch</td></tr>
-        <tr><td>4</td><td>Structure</td><td>Build campaign &rarr; ad set &rarr; ad hierarchy with naming convention</td><td>ABO (testing) or CBO (scaling)?</td></tr>
-        <tr><td>5</td><td>Audiences</td><td>Build cold + warm + hot audiences with exclusions</td><td>Which 2-3 audience hypotheses get budget</td></tr>
-        <tr><td>6</td><td>Creative</td><td>Brief 3 angles &times; 3 formats, hook variants per concept</td><td>What's the angle each ad is testing</td></tr>
-        <tr><td>7</td><td>Budget</td><td>Set daily floors at 3-5&times; target CPA per ad set</td><td>How much capital per test cell</td></tr>
-        <tr><td>8</td><td>Launch</td><td>Pre-launch checklist, then 72-hour hands-off</td><td>Don't touch anything for 3 days</td></tr>
-        <tr><td>9</td><td>Optimize</td><td>Apply diagnosis &rarr; kill rules &rarr; scale rules on rolling cycle</td><td>Kill what's broken, scale what's working</td></tr>
-        <tr><td>10</td><td>Report</td><td>Weekly + monthly review, document learnings</td><td>What worked, what failed, what's next</td></tr>
-        <tr><td>11</td><td>Scale</td><td>Vertical (more budget) + horizontal (more audiences/geos/formats)</td><td>Where to put incremental dollars</td></tr>
-      </table>
+      <div class="overview-loop-wrap">
+        <div data-platform="meta" class="platform-visible"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state</td><td>Is this account ready to spend?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify pixel + CAPI + conversion events</td><td>Don't proceed without 80%+ event match vs. analytics</td></tr><tr><td>3</td><td>Strategy</td><td>Pick objective, set CPA/CVR/ROAS targets, hypothesize audiences and creative themes</td><td>Define kill/scale thresholds before launch</td></tr><tr><td>4</td><td>Structure</td><td>Build campaign &rarr; ad set &rarr; ad hierarchy with naming convention</td><td>ABO (testing) or CBO (scaling)?</td></tr><tr><td>5</td><td>Audiences</td><td>Build cold + warm + hot audiences with exclusions</td><td>Which 2-3 audience hypotheses get budget</td></tr><tr><td>6</td><td>Creative</td><td>Brief 3 angles &times; 3 formats, hook variants per concept</td><td>What's the angle each ad is testing</td></tr><tr><td>7</td><td>Budget</td><td>Set daily floors at 3-5&times; target CPA per ad set</td><td>How much capital per test cell</td></tr><tr><td>8</td><td>Launch</td><td>Pre-launch checklist, then 72-hour hands-off</td><td>Don't touch anything for 3 days</td></tr><tr><td>9</td><td>Optimize</td><td>Apply diagnosis &rarr; kill rules &rarr; scale rules on rolling cycle</td><td>Kill what's broken, scale what's working</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly review, document learnings</td><td>What worked, what failed, what's next</td></tr><tr><td>11</td><td>Scale</td><td>Vertical (more budget) + horizontal (more audiences/geos/formats)</td><td>Where to put incremental dollars</td></tr></table></div>
+        <div data-platform="tiktok"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state</td><td>Is this account ready to spend?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify TikTok Pixel + Events API + key events</td><td>Don't proceed without 80%+ event match vs. analytics</td></tr><tr><td>3</td><td>Strategy</td><td>Pick objective, set CPA/CVR/ROAS targets, hypothesize audiences and creative themes</td><td>Define kill/scale thresholds before launch</td></tr><tr><td>4</td><td>Structure</td><td>Build campaign &rarr; ad group &rarr; ad hierarchy with naming convention</td><td>ACO (testing) or manual splits (scaling)?</td></tr><tr><td>5</td><td>Audiences</td><td>Build interest, behavior, custom, lookalike audiences with exclusions</td><td>Which 2-3 audience hypotheses get budget</td></tr><tr><td>6</td><td>Creative</td><td>Brief 3 angles &times; 3 formats, hook variants per concept</td><td>Native creator-style or polished brand? (Almost always native)</td></tr><tr><td>7</td><td>Budget</td><td>Set daily floors at 3-5&times; target CPA per ad group</td><td>How much capital per test cell</td></tr><tr><td>8</td><td>Launch</td><td>Pre-launch checklist, then 48-hour hands-off</td><td>Don't touch anything for 2 days</td></tr><tr><td>9</td><td>Optimize</td><td>Apply diagnosis &rarr; kill rules &rarr; scale rules on rolling cycle</td><td>Kill what's broken, scale what's working</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly review, document learnings</td><td>What worked, what failed, what's next</td></tr><tr><td>11</td><td>Scale</td><td>Vertical (more budget) + horizontal (more audiences/geos/creators)</td><td>Where to put incremental dollars</td></tr></table></div>
+        <div data-platform="google"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state</td><td>Is this account ready to spend?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify Google Tag + Enhanced Conversions + key events</td><td>Don't proceed without 80%+ event match vs. analytics</td></tr><tr><td>3</td><td>Strategy</td><td>Pick campaign types, set CPA/CVR/ROAS targets, hypothesize keywords/audiences</td><td>Define kill/scale thresholds before launch</td></tr><tr><td>4</td><td>Structure</td><td>Build campaign &rarr; ad group &rarr; ad hierarchy with naming convention; cluster keywords by intent</td><td>Manual CPC (early) or Smart Bidding (mature)?</td></tr><tr><td>5</td><td>Audiences</td><td>Build keyword themes (Search), customer match, in-market, custom intent (PMax/Demand Gen)</td><td>Which keyword/audience hypotheses get budget</td></tr><tr><td>6</td><td>Creative</td><td>Brief RSAs, RDAs, video assets, Performance Max asset groups</td><td>Assets feed the algorithm; volume matters</td></tr><tr><td>7</td><td>Budget</td><td>Set daily floors based on Search auction CPC; PMax needs 30+ conversions/month</td><td>How much capital per test cell</td></tr><tr><td>8</td><td>Launch</td><td>Pre-launch checklist, then 5-7 day hands-off (Search), 14-day for Smart Bidding</td><td>Don't touch bid strategy mid-learning</td></tr><tr><td>9</td><td>Optimize</td><td>Apply diagnosis &rarr; kill rules &rarr; scale rules; manage negatives, search terms, asset performance</td><td>Kill what's broken, scale what's working</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly review, document learnings</td><td>What worked, what failed, what's next</td></tr><tr><td>11</td><td>Scale</td><td>Vertical (more budget), horizontal (new keywords/themes/campaign types/geos)</td><td>Where to put incremental dollars</td></tr></table></div>
+        <div data-platform="linkedin"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state, ICP</td><td>Is this account ready to spend?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify Insight Tag + Conversions API + key events + offline closed-loop</td><td>Don't proceed without 80%+ event match vs. analytics</td></tr><tr><td>3</td><td>Strategy</td><td>Pick objective, set CPL/CPA/Pipeline-Influenced targets, define ICP segments</td><td>Define kill/scale thresholds before launch</td></tr><tr><td>4</td><td>Structure</td><td>Build campaign group &rarr; campaign &rarr; ad hierarchy with naming convention</td><td>One audience per campaign; one objective per group</td></tr><tr><td>5</td><td>Audiences</td><td>Build job title, function/seniority, industry, company list (ABM), Matched Audiences</td><td>Which 2-3 audience hypotheses get budget</td></tr><tr><td>6</td><td>Creative</td><td>Brief authority/case study/thought leadership angles, founder voice</td><td>Document Ads, Single Image, Video, Lead Gen Forms</td></tr><tr><td>7</td><td>Budget</td><td>Set daily floors at $100+ per campaign minimum (LinkedIn floors are higher)</td><td>How much capital per test cell</td></tr><tr><td>8</td><td>Launch</td><td>Pre-launch checklist, then 7-day hands-off (long sales cycle = slow signal)</td><td>Don't touch anything for a week</td></tr><tr><td>9</td><td>Optimize</td><td>Apply diagnosis &rarr; kill rules &rarr; scale rules; manage audience saturation aggressively</td><td>Kill what's broken, scale what's working</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly review, document learnings, pipeline-influenced metrics</td><td>What worked, what failed, what's next</td></tr><tr><td>11</td><td>Scale</td><td>Vertical (more budget) + horizontal (new audiences/accounts/regions)</td><td>Where to put incremental dollars</td></tr></table></div>
+        <div data-platform="snapchat"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget, tracking state, audience demo fit</td><td>Is this audience genuinely on Snapchat?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify Snap Pixel + Conversions API + key events</td><td>Don't proceed without 70%+ event match vs. analytics</td></tr><tr><td>3</td><td>Strategy</td><td>Pick objective, set CPA/CVR/ROAS targets, hypothesize audiences and creative themes</td><td>Define kill/scale thresholds before launch</td></tr><tr><td>4</td><td>Structure</td><td>Build campaign &rarr; ad set &rarr; ad hierarchy with naming convention</td><td>Manual splits (testing) or CBO equivalent (scaling)?</td></tr><tr><td>5</td><td>Audiences</td><td>Build interest, lifestyle, lookalike, custom audiences with exclusions</td><td>Which 2-3 audience hypotheses get budget</td></tr><tr><td>6</td><td>Creative</td><td>Brief 3 angles &times; 3 formats, hook variants per concept</td><td>Native creator-style with sound-on; resist polished brand</td></tr><tr><td>7</td><td>Budget</td><td>Set daily floors at 4-6&times; target CPA per ad set (higher floor than Meta)</td><td>How much capital per test cell</td></tr><tr><td>8</td><td>Launch</td><td>Pre-launch checklist, then 72-hour hands-off</td><td>Don't touch anything for 3 days</td></tr><tr><td>9</td><td>Optimize</td><td>Apply diagnosis &rarr; kill rules &rarr; scale rules on rolling cycle</td><td>Kill what's broken, scale what's working</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly review, document learnings</td><td>What worked, what failed, what's next</td></tr><tr><td>11</td><td>Scale</td><td>Vertical (more budget) + horizontal (more audiences/geos/Lenses)</td><td>Where to put incremental dollars</td></tr></table></div>
+        <div data-platform="x"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget. Set USD ad account. Fund virtual card</td><td>Is this account viable to spend USD from NG?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify X Pixel + CAPI + Purchase event</td><td>Don't proceed without dedup + event flow</td></tr><tr><td>3</td><td>Strategy</td><td>Pick objective, set CPA/CVR/ROAS targets, plan POV-led creative</td><td>Define kill/scale thresholds before launch</td></tr><tr><td>4</td><td>Structure</td><td>Campaign &rarr; Ad Group &rarr; Ad with naming convention</td><td>One POV per ad group</td></tr><tr><td>5</td><td>Audiences</td><td>Build follower lookalikes, keyword stacks, custom lists</td><td>Which 2-3 audience hypotheses get budget</td></tr><tr><td>6</td><td>Creative</td><td>Brief 3 POVs &times; 3 formats (post, vertical video, carousel)</td><td>What angle each ad tests</td></tr><tr><td>7</td><td>Budget</td><td>Set ad group daily floors that clear 40-60 weekly events</td><td>How much per test cell</td></tr><tr><td>8</td><td>Launch</td><td>Pre-flight checklist, then 5-7 day hands-off</td><td>Don't optimize during X's longer learning window</td></tr><tr><td>9</td><td>Optimize</td><td>Diagnosis &rarr; kill rules &rarr; scale rules</td><td>Kill what's broken, scale what's working</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly review, factor in 30-90 day attribution lag</td><td>What moved, what didn't</td></tr><tr><td>11</td><td>Scale</td><td>Vertical (budget) + horizontal (audiences, placements, geos)</td><td>Where to put incremental dollars</td></tr></table></div>
+        <div data-platform="chatgpt"><table class="decision-table"><tr><th>#</th><th>Stage</th><th>What Happens</th><th>Primary Decision</th></tr><tr><td>1</td><td>Onboard</td><td>Capture business, offer, geo, budget. Determine NG vs. approved-geo access</td><td>Buy AI Answer Engine ads via what surface?</td></tr><tr><td>1.5</td><td>Audience Research</td><td>Pull existing customers, competitor Ad Library teardown, comments mining, Audience Language Doc</td><td>What does the buyer want, in their own words? (before Strategy)</td></tr><tr><td>2</td><td>Track</td><td>Verify pixel + CAPI + post-purchase survey for conversation gap</td><td>Don't proceed without survey-based attribution for AI surfaces</td></tr><tr><td>3</td><td>Strategy</td><td>Pick surface (Copilot / AIO / ChatGPT). Set CPA targets with 2-6&times; Meta CPM assumption</td><td>Define which surface is primary, which is monitoring</td></tr><tr><td>4</td><td>Structure</td><td>Mirror search structure: intent-based, no audience targeting</td><td>Conversational/intent grouping, not interest</td></tr><tr><td>5</td><td>Audiences</td><td>Custom list upload + geo + conversation context. No lookalikes or retargeting on ChatGPT proper</td><td>Intent + custom list only</td></tr><tr><td>6</td><td>Creative</td><td>Text-first 3-element format (headline / description / proof). Brief 3 intent angles &times; 3 copy variants</td><td>One intent per ad</td></tr><tr><td>7</td><td>Budget</td><td>Floor at 2-6&times; Meta CPM equivalent</td><td>Treat as experimental budget, not core spend</td></tr><tr><td>8</td><td>Launch</td><td>Pre-flight checklist heavy on policy + approved-category check</td><td>Don't ship before approval clears</td></tr><tr><td>9</td><td>Optimize</td><td>Diagnosis assumes 60% conversation gap</td><td>Survey + branded search lift = truth</td></tr><tr><td>10</td><td>Report</td><td>Weekly + monthly with separate AI-surface visibility line</td><td>What got cited vs. what converted</td></tr><tr><td>11</td><td>Scale</td><td>First scale on Copilot/AIO. ChatGPT proper only when NG access opens</td><td>Microsoft Ads / Google Ads first; ChatGPT later</td></tr></table></div>
+      </div>
 
       <h3>Decision Cadence</h3>
-      <table class="decision-table">
-        <tr><th>Time</th><th>Decision</th><th>What to Do</th></tr>
-        <tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify pixel + CAPI + events. Don't launch on broken tracking</td></tr>
-        <tr><td>Hour 0-72</td><td>Hands off</td><td>Confirm delivery only. Resist the urge to optimize</td></tr>
-        <tr class="action-kill"><td>Day 3</td><td>Creative kill</td><td>Cut ads with CTR 40-60% below average + 1&times; CPA spent</td></tr>
-        <tr class="action-kill"><td>Day 5-7</td><td>Ad set kill</td><td>Cut ad sets with CPA 2&times; target + 3&times; CPA spent</td></tr>
-        <tr class="action-scale"><td>Day 7+</td><td>Scale check</td><td>Stable CPA + good frequency &rarr; start vertical scaling</td></tr>
-        <tr><td>Weekly</td><td>Full optimization routine</td><td>Pull report, kill, scale, brief new creative</td></tr>
-        <tr><td>Bi-weekly</td><td>Audience review</td><td>Saturation check, lookalike refresh, new audience tests</td></tr>
-        <tr><td>Monthly</td><td>Strategy review</td><td>Funnel split, MER vs. platform attribution, budget reforecast</td></tr>
-        <tr><td>Quarterly</td><td>Lookalike + creative library refresh</td><td>Rebuild seed audiences, retire stale concepts</td></tr>
-      </table>
+      <div class="overview-cadence-wrap">
+        <div data-platform="meta" class="platform-visible"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify pixel + CAPI + events. Don't launch on broken tracking</td></tr><tr><td>Hour 0-72</td><td>Hands off</td><td>Confirm delivery only. Resist the urge to optimize</td></tr><tr class="action-kill"><td>Day 3</td><td>Creative kill</td><td>Cut ads with CTR 40-60% below average + 1&times; CPA spent</td></tr><tr class="action-kill"><td>Day 5-7</td><td>Ad set kill</td><td>Cut ad sets with CPA 2&times; target + 3&times; CPA spent</td></tr><tr class="action-scale"><td>Day 7+</td><td>Scale check</td><td>Stable CPA + good frequency &rarr; start vertical scaling</td></tr><tr><td>Weekly</td><td>Full optimization routine</td><td>Pull report, kill, scale, brief new creative</td></tr><tr><td>Bi-weekly</td><td>Audience review</td><td>Saturation check, lookalike refresh, new audience tests</td></tr><tr><td>Monthly</td><td>Strategy review</td><td>Funnel split, MER vs. platform attribution, budget reforecast</td></tr><tr><td>Quarterly</td><td>Lookalike + creative library refresh</td><td>Rebuild seed audiences, retire stale concepts</td></tr></table></div>
+        <div data-platform="tiktok"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify Pixel + Events API + key events. Don't launch on broken tracking</td></tr><tr><td>Hour 0-48</td><td>Hands off</td><td>Confirm delivery only. Resist the urge to optimize</td></tr><tr class="action-kill"><td>Day 2</td><td>Creative kill</td><td>Cut ads with hook rate &lt;10% or CTR 50% below average + 1&times; CPA spent</td></tr><tr class="action-kill"><td>Day 4-5</td><td>Ad group kill</td><td>Cut ad groups with CPA 2&times; target + 3&times; CPA spent</td></tr><tr class="action-scale"><td>Day 5-7</td><td>Scale check</td><td>Stable CPA + good frequency &rarr; start vertical scaling</td></tr><tr><td>Weekly</td><td>Full optimization routine</td><td>Pull report, kill, scale, brief new creative (TikTok demands faster refresh)</td></tr><tr><td>Bi-weekly</td><td>Audience review</td><td>Saturation check, lookalike refresh, new behavior tests</td></tr><tr><td>Monthly</td><td>Strategy review</td><td>Funnel split, MER vs. platform attribution, budget reforecast</td></tr><tr><td>Quarterly</td><td>Lookalike + creative library refresh</td><td>Rebuild seed audiences, retire stale concepts</td></tr></table></div>
+        <div data-platform="google"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify Google Tag + Enhanced Conversions + GA4 import. Don't launch on broken tracking</td></tr><tr><td>Hour 0-72</td><td>Hands off</td><td>Confirm delivery only. Resist the urge to optimize bids</td></tr><tr><td>Day 3-5</td><td>First negatives sweep (Search)</td><td>Add negative keywords from search terms report</td></tr><tr class="action-kill"><td>Day 7</td><td>Ad group / asset kill</td><td>Cut ads with CTR 50% below average + 1&times; CPA spent</td></tr><tr><td>Day 7-14</td><td>Bid strategy review</td><td>Manual CPC for ad groups &lt;15 conversions; consider Smart Bidding migration</td></tr><tr><td>Day 14</td><td>Smart Bidding learning exit</td><td>Allow tCPA/tROAS at least 14 days before judging</td></tr><tr><td>Weekly</td><td>Search terms + negatives + asset review</td><td>Pull report, kill, scale, refresh creative</td></tr><tr><td>Bi-weekly</td><td>Keyword expansion / pruning</td><td>New themes from search terms; pause low-volume keywords</td></tr><tr><td>Monthly</td><td>Strategy review</td><td>Funnel split, MER vs. platform attribution, budget reforecast</td></tr><tr><td>Quarterly</td><td>Account audit</td><td>Full restructure check, geo/device/audience overlay review</td></tr></table></div>
+        <div data-platform="linkedin"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify Insight Tag + CAPI + offline import. Don't launch on broken tracking</td></tr><tr><td>Hour 0-72</td><td>Hands off</td><td>Confirm delivery only. Resist the urge to optimize</td></tr><tr class="action-kill"><td>Day 5-7</td><td>First creative kill</td><td>Cut ads with CTR 50% below average + 1.5&times; CPL spent</td></tr><tr class="action-kill"><td>Day 10-14</td><td>Campaign kill</td><td>Cut campaigns with CPL 2&times; target + 3&times; CPL spent</td></tr><tr class="action-scale"><td>Day 14+</td><td>Scale check</td><td>Stable CPL + frequency under 4 + lead quality validated &rarr; start vertical scaling</td></tr><tr><td>Weekly</td><td>Optimization routine</td><td>Pull report, kill, scale, brief new creative</td></tr><tr><td>Bi-weekly</td><td>Audience saturation review</td><td>Frequency check; refresh narrow audiences</td></tr><tr><td>Monthly</td><td>Pipeline review</td><td>MQL &rarr; SQL &rarr; Closed-Won attribution; lead quality check</td></tr><tr><td>Quarterly</td><td>Account list refresh, ICP review</td><td>Update Customer Match, refresh ABM lists</td></tr></table></div>
+        <div data-platform="snapchat"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify Snap Pixel + Conversions API + key events. Don't launch on broken tracking</td></tr><tr><td>Hour 0-72</td><td>Hands off</td><td>Confirm delivery only. Snapchat needs longer signal accumulation than TikTok</td></tr><tr class="action-kill"><td>Day 3</td><td>Creative kill</td><td>Cut ads with Swipe Up Rate below 0.3% or CTR 50% below average + 1&times; CPA spent</td></tr><tr class="action-kill"><td>Day 5-6</td><td>Ad set kill</td><td>Cut ad sets with CPA 2&times; target + 3&times; CPA spent</td></tr><tr class="action-scale"><td>Day 6-8</td><td>Scale check</td><td>Stable CPA + good frequency &rarr; start vertical scaling</td></tr><tr><td>Weekly</td><td>Full optimization routine</td><td>Pull report, kill, scale, brief new creative</td></tr><tr><td>Bi-weekly</td><td>Audience review</td><td>Saturation check, lookalike refresh, new lifestyle tests</td></tr><tr><td>Monthly</td><td>Strategy review</td><td>Funnel split, MER vs. platform attribution, budget reforecast</td></tr><tr><td>Quarterly</td><td>Lookalike + creative library refresh</td><td>Rebuild seed audiences, retire stale concepts</td></tr></table></div>
+        <div data-platform="x"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Currency gate</td><td>Confirm ad account currency = USD. NGN setting triggers 50% surcharge on non-NG spend</td></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Verify Pixel + CAPI + Purchase event. Don't launch on broken tracking</td></tr><tr><td>Hour 0-72</td><td>Hands off</td><td>X's learning takes longer than Meta. Confirm delivery only</td></tr><tr class="action-kill"><td>Day 3</td><td>Creative sanity</td><td>Cut ads with no impressions or &lt;0.3% CTR</td></tr><tr class="action-kill"><td>Day 5-7</td><td>Ad group kill</td><td>Cut ad groups with CPA 2.5&times; target + 3&times; CPA spent</td></tr><tr><td>Day 7-10</td><td>Audience hypothesis read</td><td>X's ML allocator needs ~7-10 days to stabilize</td></tr><tr><td>Weekly</td><td>Full optimization</td><td>Pull report, kill, scale, brief new creative</td></tr><tr><td>Bi-weekly</td><td>Audience refresh</td><td>Rotate follower lookalike handles, refresh keyword stacks</td></tr><tr><td>Monthly</td><td>Strategy review</td><td>Funnel split, MER vs. platform attribution, geo expansion check</td></tr><tr><td>Quarterly</td><td>Creative library refresh</td><td>Retire stale POVs, recompile winning angles</td></tr></table></div>
+        <div data-platform="chatgpt"><table class="decision-table"><tr><th>Time</th><th>Decision</th><th>What to Do</th></tr><tr><td>Pre-launch</td><td>Geo gate</td><td>Confirm advertiser geo + user geo target &mdash; NG advertisers cannot buy ChatGPT Ads (US/CA/AU/NZ only) and cannot reach NG users via ChatGPT</td></tr><tr><td>Pre-launch</td><td>Tracking gate</td><td>Pixel + CAPI on destination; post-purchase survey field for AI-source attribution</td></tr><tr><td>Pre-launch</td><td>Approved-category gate</td><td>OpenAI rejects healthcare, financial, dating, alcohol, drugs, gambling, political at launch</td></tr><tr><td>Hour 0-72</td><td>Hands off</td><td>Surface is still in approval / pacing phase</td></tr><tr class="action-kill"><td>Day 3</td><td>Creative sanity</td><td>Cut copy variants with no impressions or zero CTR signal</td></tr><tr class="action-kill"><td>Day 5-7</td><td>Ad-level kill</td><td>Cut underperformers; bid adjustments only after volume</td></tr><tr><td>Day 7-14</td><td>Surface read</td><td>First read on which surface is delivering attributable conversions</td></tr><tr><td>Weekly</td><td>Optimization + survey pull</td><td>Cross-reference pixel data with post-purchase survey field</td></tr><tr><td>Monthly</td><td>Strategic review</td><td>Surface mix, attribution methodology, conversion-gap modeling</td></tr><tr><td>Quarterly</td><td>Surface expansion</td><td>NG access on ChatGPT? New Copilot surfaces? AIO coverage in NG?</td></tr></table></div>
+      </div>
 
       <h3>Key Numbers to Watch</h3>
-      <table class="decision-table">
-        <tr><th>Metric</th><th>What it tells you</th></tr>
-        <tr><td>CPA / CPL</td><td>Profitability, primary scoreboard</td></tr>
-        <tr><td>ROAS</td><td>Revenue efficiency (ecom)</td></tr>
-        <tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr>
-        <tr><td>CTR (link)</td><td>Whether the ad earns the click</td></tr>
-        <tr><td>CPM</td><td>Auction pressure + creative quality</td></tr>
-        <tr><td>Frequency</td><td>Saturation signal</td></tr>
-        <tr><td>Quality Ranking</td><td>Algorithm's view of your ad vs. competitors</td></tr>
-      </table>
+      <div class="overview-numbers-wrap">
+        <div data-platform="meta" class="platform-visible"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>CPA / CPL</td><td>Profitability, primary scoreboard</td></tr><tr><td>ROAS</td><td>Revenue efficiency (ecom)</td></tr><tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr><tr><td>CTR (link)</td><td>Whether the ad earns the click</td></tr><tr><td>CPM</td><td>Auction pressure + creative quality</td></tr><tr><td>Frequency</td><td>Saturation signal</td></tr><tr><td>Quality Ranking</td><td>Algorithm's view of your ad vs. competitors</td></tr></table></div>
+        <div data-platform="tiktok"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>CPA / CPL</td><td>Profitability, primary scoreboard</td></tr><tr><td>ROAS</td><td>Revenue efficiency (ecom)</td></tr><tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr><tr><td>CTR (link)</td><td>Whether the ad earns the click</td></tr><tr><td>6s VTR (video through rate)</td><td>Whether the hook holds attention past the gate</td></tr><tr><td>Hook Rate (3s view / impression)</td><td>Whether the first 1-2 seconds stops the scroll</td></tr><tr><td>CPM</td><td>Auction pressure + creative quality</td></tr><tr><td>Frequency</td><td>Saturation signal (TikTok saturates faster than Meta)</td></tr></table></div>
+        <div data-platform="google"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>CPA / CPL</td><td>Profitability, primary scoreboard</td></tr><tr><td>ROAS / Conversion Value</td><td>Revenue efficiency (ecom + value-tracked leads)</td></tr><tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr><tr><td>CTR</td><td>Whether the ad earns the click (Search benchmarks much higher than feed platforms)</td></tr><tr><td>CPC</td><td>Auction position cost; rises with competition</td></tr><tr><td>Quality Score (Search)</td><td>Ad-keyword-LP relevance; drives CPC discount</td></tr><tr><td>Impression Share</td><td>% of available impressions you're winning</td></tr><tr><td>Search Lost IS (Budget / Rank)</td><td>Why you're not winning more impressions</td></tr><tr><td>Asset performance ratings (PMax/RSA)</td><td>"Best/Good/Low" labels on individual creative assets</td></tr></table></div>
+        <div data-platform="linkedin"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>CPL</td><td>Lead acquisition cost; primary scoreboard</td></tr><tr><td>CPA (deeper events: Demo Booked, SQL)</td><td>Closer to revenue than top-of-funnel CPL</td></tr><tr><td>Pipeline-Influenced Revenue</td><td>Revenue from accounts touched by ads</td></tr><tr><td>Lead Quality Score (from sales)</td><td>Are leads actually qualified? Critical on LinkedIn</td></tr><tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr><tr><td>CTR</td><td>Whether the ad earns the click</td></tr><tr><td>CPM</td><td>LinkedIn CPMs are 3-10x higher than Meta; budget accordingly</td></tr><tr><td>Frequency</td><td>Saturation signal (LinkedIn audiences are smaller, saturate fast)</td></tr><tr><td>Form Fill Rate (Lead Gen Forms)</td><td>In-platform conversion strength</td></tr><tr><td>InMail Open Rate (Sponsored Messaging)</td><td>Inbox-driven engagement signal</td></tr></table></div>
+        <div data-platform="snapchat"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>CPA / CPL</td><td>Profitability, primary scoreboard</td></tr><tr><td>ROAS</td><td>Revenue efficiency (ecom)</td></tr><tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr><tr><td>Swipe Up Rate</td><td>Whether the ad earns the gesture (Snapchat's primary engagement signal)</td></tr><tr><td>eCPSU</td><td>Effective cost per swipe up; auction efficiency proxy</td></tr><tr><td>CTR (link)</td><td>Whether the ad earns the click on Stories and Spotlight placements</td></tr><tr><td>View Through Conversions (VTC)</td><td>Latent attribution; large share of Snapchat conversions land here</td></tr><tr><td>CPM</td><td>Auction pressure + creative quality</td></tr><tr><td>Frequency</td><td>Saturation signal (Snapchat audiences are smaller than Meta in most markets)</td></tr></table></div>
+        <div data-platform="x"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>CPA / CPL</td><td>Profitability, primary scoreboard</td></tr><tr><td>ROAS</td><td>Revenue efficiency (ecom + info product)</td></tr><tr><td>CVR (post-click)</td><td>Whether the destination converts traffic</td></tr><tr><td>CTR (link)</td><td>Whether the post earns the click</td></tr><tr><td>CPM</td><td>Auction pressure + Aesthetic Score signal</td></tr><tr><td>Engagement rate (organic blend)</td><td>Sanity check &mdash; high engagement + zero conversions = wrong objective</td></tr><tr><td>Aesthetic Score (Grok)</td><td>Creative quality penalty/bonus on CPM and placement</td></tr><tr><td>Frequency</td><td>Saturation signal (X audiences saturate faster than Meta)</td></tr></table></div>
+        <div data-platform="chatgpt"><table class="decision-table"><tr><th>Metric</th><th>What it tells you</th></tr><tr><td>Surface-level impression share</td><td>How often you appear in AI answers in your category</td></tr><tr><td>Click rate (in AI answer)</td><td>Whether your creative earns the click from the sponsored slot</td></tr><tr><td>CVR (post-click, immediate session)</td><td>Whether the destination converts traffic</td></tr><tr><td>Post-purchase survey: "Heard about us from ChatGPT/Copilot/AI" %</td><td>Truth signal for the 60% conversation gap</td></tr><tr><td>Branded search lift</td><td>Indirect signal &mdash; AI surface visibility correlates with branded search</td></tr><tr><td>CPA (combined: pixel + survey-attributed)</td><td>Real ROAS, not just clicked-and-bought</td></tr></table></div>
+      </div>
 
       <h3>The Three Fundamental Questions</h3>
-      <div class="info-box">
+      <div class="overview-questions-wrap">
+        <div data-platform="meta" class="platform-visible"><div class="info-box">
         Before any campaign action, answer these:<br><br>
         <strong>1. Is the tracking trustworthy?</strong> If no, fix tracking first.<br>
         <strong>2. Is the message clear?</strong> If no, fix creative + destination before optimizing.<br>
-        <strong>3. Has it had enough time + spend to learn?</strong> If no, hold the line.<br><br>
-        If yes to all three and performance is still off, the structural issue is audience or offer, in that order.
+        <strong>3. Has it had enough time + spend to learn?</strong> If no, hold the line.<br>
+        <br>If yes to all three and performance is still off, the structural issue is audience or offer, in that order.
+      </div></div>
+        <div data-platform="tiktok"><div class="info-box">
+        Before any campaign action, answer these:<br><br>
+        <strong>1. Is the tracking trustworthy?</strong> If no, fix tracking first.<br>
+        <strong>2. Does the creative look native?</strong> If it looks like a brand ad, it'll burn budget. Fix the asset before optimizing.<br>
+        <strong>3. Has it had enough time + spend to learn?</strong> If no, hold the line.<br>
+        <br>If yes to all three and performance is still off, the structural issue is audience or offer, in that order.
+      </div></div>
+        <div data-platform="google"><div class="info-box">
+        Before any campaign action, answer these:<br><br>
+        <strong>1. Is the tracking trustworthy?</strong> If no, fix tracking first. Google's automated bidding only works with clean conversion data.<br>
+        <strong>2. Does the ad-keyword-landing page chain match?</strong> If no, fix the chain before optimizing bids.<br>
+        <strong>3. Has it had enough time + spend to learn?</strong> Smart Bidding needs 14+ days and 30-50 conversions; manual CPC needs 7+ days.<br>
+        <br>If yes to all three and performance is still off, the structural issue is keyword intent or offer.
+      </div></div>
+        <div data-platform="linkedin"><div class="info-box">
+        Before any campaign action, answer these:<br><br>
+        <strong>1. Is the tracking trustworthy AND closed-loop?</strong> LinkedIn's value is felt at SQL/Closed-Won, not MQL. Without offline import, you're flying blind.<br>
+        <strong>2. Does the message earn credibility?</strong> If the ad sounds salesy or hypey, it'll burn budget. Clarity, proof, authority.<br>
+        <strong>3. Has it had enough time + spend to learn?</strong> LinkedIn sales cycles are long (often 30-90+ days). 14 days minimum before hard judgment, 60-90 days before pipeline judgment.<br>
+        <br>If yes to all three and performance is still off, the structural issue is audience precision or offer-ICP fit.
+      </div></div>
+        <div data-platform="snapchat"><div class="info-box">
+        Before any campaign action, answer these:<br><br>
+        <strong>1. Is my buyer on Snapchat?</strong> If the offer skews to 35+ B2B decision-makers, the platform fit is wrong. Snapchat dies on offers that need authority, not impulse.<br>
+        <strong>2. Does the creative look native?</strong> If it looks like a brand ad, it'll burn budget. Snapchat creative norms are closer to TikTok than Meta. Fix the asset before optimizing.<br>
+        <strong>3. Has it had enough time + spend to learn?</strong> Snapchat needs longer signal windows than TikTok because its pixel pools are thinner. If no, hold the line.<br>
+        <br>If yes to all three and performance is still off, the structural issue is audience or offer, in that order.
+      </div></div>
+        <div data-platform="x"><div class="info-box">
+        Before any campaign action, answer these:<br><br>
+        <strong>1. Is the ad account in USD with a funded virtual card?</strong> If no, fix the funding rail first.<br>
+        <strong>2. Is the tracking trustworthy?</strong> Pixel-only loses 30-45% of events. Run both Pixel + CAPI.<br>
+        <strong>3. Is the POV clear?</strong> X is opinion-driven. If your ad sounds like every other brand, it gets buried.<br>
+      </div></div>
+        <div data-platform="chatgpt"><div class="info-box">
+        Before any campaign action, answer these:<br><br>
+        <strong>1. Can the advertiser actually buy this surface?</strong> ChatGPT proper requires US/CA/AU/NZ entity. Microsoft Copilot and Google AIO are buyable from NG today.<br>
+        <strong>2. Will the surface reach the target audience?</strong> Even with a US entity, ChatGPT Ads doesn't deliver to NG users yet. For diaspora-targeted offers, ChatGPT Ads US delivery is viable.<br>
+        <strong>3. Is the attribution capable of seeing the conversation gap?</strong> Pixel-only loses ~60% of true conversions on AI answer surfaces. CAPI + post-purchase survey is the floor.<br>
+      </div></div>
       </div>
 
       <h3>Metric Definitions</h3>
-      <div class="info-box">
-        <strong>CVR (post-click)</strong> = conversions / link clicks. Measured at the destination (landing page, lead form, product page, app store, WhatsApp, Calendly, Messenger, etc.). Use "CVR" throughout this playbook. Where logic says "fix the destination" or "audit the page," it applies to whatever the click lands on.<br><br>
-        <strong>CPA / CPL</strong> = total spend / conversions. CPL when the conversion is a lead, CPA for any conversion event.<br><br>
-        <strong>ROAS</strong> = revenue attributed / ad spend. Used for ecom and direct-revenue funnels.<br><br>
-        <strong>MER</strong> = total revenue / total ad spend (across channels). Used to decide spend allocation when platform attribution is unreliable.
+      <div class="overview-metrics-wrap">
+        <div data-platform="meta" class="platform-visible"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / link clicks. Measured at the destination (landing page, lead form, product page, app store, WhatsApp, Calendly, Messenger, etc.). Use "CVR" throughout this playbook. Where logic says "fix the destination" or "audit the page," it applies to whatever the click lands on.<br><br><strong>CPA / CPL =</strong> total spend / conversions. CPL when the conversion is a lead, CPA for any conversion event.<br><br><strong>ROAS =</strong> revenue attributed / ad spend. Used for ecom and direct-revenue funnels.<br><br><strong>MER =</strong> total revenue / total ad spend (across channels). Used to decide spend allocation when platform attribution is unreliable.
+      </div></div>
+        <div data-platform="tiktok"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / link clicks. Measured at the destination (landing page, lead form, product page, app store, WhatsApp, Calendly, Messenger, etc.). Use "CVR" throughout this playbook. Where logic says "fix the destination" or "audit the page," it applies to whatever the click lands on.<br><br><strong>CPA / CPL =</strong> total spend / conversions. CPL when the conversion is a lead, CPA for any conversion event.<br><br><strong>ROAS =</strong> revenue attributed / ad spend. Used for ecom and direct-revenue funnels.<br><br><strong>MER =</strong> total revenue / total ad spend (across channels). Used to decide spend allocation when platform attribution is unreliable.<br><br><strong>Hook Rate =</strong> 3-second video views / impressions. The single most important creative metric on TikTok. Below 15% = hook is broken.
+      </div></div>
+        <div data-platform="google"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / clicks. Measured at the destination (landing page, lead form, product page, app store, Calendly, WhatsApp, etc.). Use "CVR" throughout this playbook. Where logic says "fix the destination" or "audit the page," it applies to whatever the click lands on.<br><br><strong>CPA / CPL =</strong> total spend / conversions.<br><br><strong>ROAS =</strong> revenue attributed / ad spend. Used for ecom and direct-revenue funnels.<br><br><strong>MER =</strong> total revenue / total ad spend (across channels). Used to decide spend allocation when platform attribution is unreliable.<br><br><strong>Quality Score =</strong> Google's 1-10 rating of expected CTR, ad relevance, and landing page experience. Drives CPC discount or premium.
+      </div></div>
+        <div data-platform="linkedin"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / clicks. Measured at the destination (landing page, lead form, in-platform Lead Gen Form, demo booking, etc.). Use "CVR" throughout this playbook. Where logic says "fix the destination" or "audit the page," it applies to whatever the click lands on.<br><br><strong>CPL =</strong> total spend / leads. The default scoreboard for LinkedIn lead gen.<br><br><strong>CPA =</strong> total spend / deeper conversions (Demo Booked, SQL, Closed-Won). The honest scoreboard.<br><br><strong>Pipeline-Influenced Revenue =</strong> revenue from accounts that touched ads anywhere in the buyer journey. The metric that matters most for B2B.<br><br><strong>MER =</strong> total revenue / total ad spend. Used for cross-channel allocation.
+      </div></div>
+        <div data-platform="snapchat"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / swipe ups (or link clicks for Spotlight). Measured at the destination (landing page, lead form, product page, app store, etc.). Use "CVR" throughout this playbook. Where logic says "fix the destination" or "audit the page," it applies to whatever the swipe lands on.<br><br><strong>CPA / CPL =</strong> total spend / conversions. CPL when the conversion is a lead, CPA for any conversion event.<br><br><strong>ROAS =</strong> revenue attributed / ad spend. Used for ecom and direct-revenue funnels. Include View Through Conversions for Snapchat or under-count by 30-50%.<br><br><strong>MER =</strong> total revenue / total ad spend (across channels). Used to decide spend allocation when platform attribution is unreliable. Lean harder on MER for Snapchat than for Meta because Snapchat VTC share is large but inflated.<br><br><strong>Swipe Up Rate =</strong> swipe ups / impressions. Snapchat's primary engagement metric, equivalent to TikTok's Hook Rate or Meta's CTR. Below 0.3% on Snap Ads, below 1% on Story Ads = creative is broken.<br><br><strong>eCPSU =</strong> spend / swipe ups. The effective cost per swipe up. Use as the auction-efficiency proxy when CPA volume is too low to read.
+      </div></div>
+        <div data-platform="x"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / link clicks. Measured at the destination (landing page, lead form, WhatsApp, Selar, Calendly). Use "CVR" throughout.<br><br><strong>CPA / CPL =</strong> total spend / conversions. CPL when the conversion is a lead, CPA for any conversion event.<br><br><strong>ROAS =</strong> revenue attributed / ad spend. Used for ecom and direct-revenue funnels.<br><br><strong>MER =</strong> total revenue / total ad spend across all channels. Use this when platform attribution is unreliable (X's attribution is leaner than Meta's).<br><br><strong>Aesthetic Score =</strong> Grok's per-creative visual quality rating. Higher scores get lower CPMs and better placement priority. Affects auction directly in the rebuilt 2026 Ads Manager.
+      </div></div>
+        <div data-platform="chatgpt"><div class="info-box">
+        <strong>CVR (post-click) =</strong> conversions / link clicks. Measured at the destination.<br><br><strong>CPA / CPL =</strong> total spend / conversions. Use both pixel-attributed and survey-attributed CPA &mdash; they will differ by ~60% on AI answer surfaces.<br><br><strong>ROAS =</strong> revenue attributed / ad spend. Use blended pixel + survey for true ROAS on AI surfaces.<br><br><strong>Conversation Gap =</strong> the 60% of attributable conversions that happen hours or days after the AI answer interaction, through direct return or branded search, that pixel-only attribution misses.<br><br><strong>MER =</strong> total revenue / total ad spend across all channels. The right scoreboard when AI-surface pixel attribution is unreliable.
+      </div></div>
       </div>
 
       <div class="mia-inline-cta">
@@ -2226,6 +2279,92 @@ Kill threshold: CPA > ___ | CVR < ___% | CTR < ___% after $___ spend
         <li><input type="checkbox" id="aud-14"><label for="aud-14">Exclude overlapping audiences between ad sets</label></li>
       </ul>
 
+      <h3>Audience Naming Convention</h3>
+      <p class="section-desc">Name every saved audience <code>Type | Descriptor | Geo or Window</code> (include the window only where the audience is time-based). The Cold / Warm / Retargeting token here matches the audience token used in the ad set / ad group name, so a saved audience maps to the ad set that uses it at a glance.</p>
+
+      <!-- META NAMING STARTER SET -->
+      <div data-platform="meta" class="platform-visible">
+        <table class="ref-table">
+          <tr><th>Saved audience name</th><th>Funnel role</th></tr>
+          <tr><td><code>Cold | Broad | Lagos</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Cold | Lookalike 1% Buyers | Lagos</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Warm | Video viewers 50% | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Website visitors | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Prospect Lead List</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Retargeting | Past Customer List</code></td><td>Conversion / upsell</td></tr>
+          <tr><td><code>Retargeting | Website AddToCart | Last 180 days</code></td><td>Conversion</td></tr>
+          <tr><td><code>Retargeting | Website InitiateCheckout | Last 180 days</code></td><td>Conversion</td></tr>
+        </table>
+      </div>
+
+      <!-- TIKTOK NAMING STARTER SET -->
+      <div data-platform="tiktok">
+        <table class="ref-table">
+          <tr><th>Saved audience name</th><th>Funnel role</th></tr>
+          <tr><td><code>Cold | Broad | Lagos</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Cold | Lookalike 1% Buyers | Lagos</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Warm | Video viewers 50% | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Website visitors | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Prospect Lead List</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Retargeting | Past Customer List</code></td><td>Conversion / upsell</td></tr>
+          <tr><td><code>Retargeting | Website Product Page | Last 180 days</code></td><td>Conversion</td></tr>
+        </table>
+        <p style="font-size:13px;color:var(--text-secondary);margin-top:6px;">TikTok exposes a product-page / view-content retargeting audience rather than Meta's separate AddToCart and InitiateCheckout events.</p>
+      </div>
+
+      <!-- SNAPCHAT NAMING STARTER SET -->
+      <div data-platform="snapchat">
+        <table class="ref-table">
+          <tr><th>Saved audience name</th><th>Funnel role</th></tr>
+          <tr><td><code>Cold | Broad | Lagos</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Cold | Lookalike 1% Buyers | Lagos</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Warm | Video viewers 50% | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Website visitors | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Prospect Lead List</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Retargeting | Past Customer List</code></td><td>Conversion / upsell</td></tr>
+          <tr><td><code>Retargeting | Website Product Page | Last 180 days</code></td><td>Conversion</td></tr>
+        </table>
+      </div>
+
+      <!-- LINKEDIN NAMING STARTER SET -->
+      <div data-platform="linkedin">
+        <p class="section-desc" style="margin-top:0;">B2B firmographic variant. Type the audience by job function + seniority, not consumer cart events (LinkedIn has none).</p>
+        <table class="ref-table">
+          <tr><th>Saved audience name</th><th>Funnel role</th></tr>
+          <tr><td><code>Cold | Function Marketing + Seniority Manager+ | NG</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Cold | Lookalike of Customers</code></td><td>Prospecting</td></tr>
+          <tr><td><code>Warm | Video viewers 50% | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Company Page engagers | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Lead Gen Form openers no-submit | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Warm | Website visitors | Last 180 days</code></td><td>Re-engagement</td></tr>
+          <tr><td><code>Retargeting | Past Customer / Contact List</code></td><td>Conversion / upsell</td></tr>
+        </table>
+      </div>
+
+      <!-- GOOGLE NAMING STARTER SET -->
+      <div data-platform="google">
+        <p class="section-desc" style="margin-top:0;">On Search, keyword + match type is the targeting, so audiences run in <strong>Observation</strong> mode only (never Targeting, which chokes Search reach). The same lists apply as <strong>Targeting</strong> on Display, Video / YouTube, Demand Gen, and PMax.</p>
+        <table class="ref-table">
+          <tr><th>Saved audience name</th><th>Applies to</th></tr>
+          <tr><td><code>Cold | In-Market Segment | NG</code></td><td>Search (Observation) · Display / Video / PMax</td></tr>
+          <tr><td><code>Cold | Custom Segment | NG</code></td><td>Search (Observation) · Display / Video / PMax</td></tr>
+          <tr><td><code>Warm | YouTube viewers | Last 180 days</code></td><td>Display / Video / PMax</td></tr>
+          <tr><td><code>Warm | Website visitors | Last 180 days</code></td><td>Search (Observation) · Display / Video / PMax</td></tr>
+          <tr><td><code>Retargeting | Product Page remarketing | Last 180 days</code></td><td>Display / Video / PMax</td></tr>
+          <tr><td><code>Retargeting | Customer Match List</code></td><td>Search (Observation) · Display / Video / PMax</td></tr>
+        </table>
+      </div>
+
+      <h3>When to Use Each, and Combining</h3>
+      <ul style="margin:0 0 12px 20px;line-height:1.7;">
+        <li><strong>Cold</strong> finds new buyers who don't know you yet.</li>
+        <li><strong>Warm</strong> re-engages people who already showed interest (viewed video, visited the site, opened a form, engaged the page).</li>
+        <li><strong>Retargeting</strong> converts near-buyers (past customers, add-to-cart, checkout, product-page views).</li>
+      </ul>
+      <div class="info-box">
+        <strong>Combining rule:</strong> same-type audiences (e.g. two cold sets) can share one campaign. Keep <strong>cold and retargeting in separate campaigns</strong> so they don't cannibalise each other's budget and learning. Where retargeting layers overlap (AddToCart inside Website visitors inside Past customers), use <strong>exclusions</strong> so a single person is only served by the tightest-fitting layer, never double-served.
+      </div>
+
       <h3>Audience Build Sheet</h3>
       <div class="copyable" id="audience-template">AUDIENCE BUILD SHEET — {{CLIENT}}
 Platform: ___________
@@ -2275,6 +2414,32 @@ EXCLUSIONS
           <tr><td>Video</td><td>1080x1080 or 1080x1920</td><td>1:1 or 9:16</td><td>4GB / 240min</td><td>125 primary, 40 headline</td></tr>
           <tr><td>Carousel</td><td>1080x1080 per card</td><td>1:1</td><td>30MB/card</td><td>125 primary, 40 headline/card</td></tr>
           <tr><td>Collection</td><td>1200x628 cover</td><td>1.91:1</td><td>30MB</td><td>125 primary, 40 headline</td></tr>
+        </table>
+      </div>
+
+      <!-- META 5x5x5 AD-COPY METHOD (Meta only) -->
+      <div data-platform="meta" class="platform-visible">
+        <h3>5&times;5&times;5 Ad-Copy Method (Meta)</h3>
+        <div class="info-box">
+          Per ad set (one angle), write <strong>5 primary texts &times; 5 headlines &times; 5 descriptions</strong>. Meta permutes these into up to <strong>125 combinations</strong> and serves the winners, so you get wide coverage from one build. The <strong>first line of each primary text is the hook</strong> &mdash; vary the opener across all five so you test five distinct entry points into the same angle.
+        </div>
+        <h4 style="margin:14px 0 6px;">Character guide</h4>
+        <table class="ref-table">
+          <tr><th>Element</th><th>Count</th><th>Target</th></tr>
+          <tr><td><strong>Primary text</strong></td><td>5</td><td>Land the hook in the first <strong>~125 chars</strong> (before the "See More" cut), up to ~2,200 total</td></tr>
+          <tr><td><strong>Headline</strong></td><td>5</td><td>~40 chars</td></tr>
+          <tr><td><strong>Description</strong></td><td>5</td><td>~25-30 chars</td></tr>
+          <tr><td><strong>CTA button</strong></td><td>1</td><td>One button per ad</td></tr>
+        </table>
+        <h4 style="margin:14px 0 6px;">Ad brief</h4>
+        <p class="section-desc">Brief every ad so production is unambiguous:</p>
+        <table class="ref-table">
+          <tr><th>Field</th><th>Fill with</th></tr>
+          <tr><td><strong>Ad name</strong></td><td><code>Product | Creative type | Hook</code></td></tr>
+          <tr><td><strong>Angle</strong></td><td>The belief / desire / fear this ad set expresses</td></tr>
+          <tr><td><strong>Format</strong></td><td>Static image · Video · Carousel</td></tr>
+          <tr><td><strong>Asset</strong></td><td>The specific creative file / concept</td></tr>
+          <tr><td><strong>Production notes</strong></td><td>Shot list, on-screen text, captions, edit direction</td></tr>
         </table>
       </div>
 
@@ -2857,6 +3022,70 @@ Description: ___________
 
       </div>
 
+      <h3>Reading the Breakdowns</h3>
+      <p class="section-desc">Delivery breakdowns show <em>who and where</em> the budget actually went. Pull them <strong>one at a time</strong>, and only once a segment has spent <strong>~1x target CPA</strong> (below that, differences are noise). Before cutting any demographic, <strong>cross-check it against the client's real sales</strong> &mdash; the platform's cheapest segment isn't always the one that buys, and the platform can't see offline or off-platform revenue.</p>
+      <div class="breakdowns-wrap">
+      <div data-platform="meta" class="platform-visible">
+        <table class="ref-table">
+          <tr><th>Breakdown</th><th>Read for</th></tr>
+          <tr><td><strong>Placement</strong></td><td>Which surface converts (Feed vs Reels vs Stories vs Audience Network)</td></tr>
+          <tr><td><strong>Age</strong></td><td>Which age bands buy vs. just click</td></tr>
+          <tr><td><strong>Gender</strong></td><td>Whether spend skews to a non-converting gender</td></tr>
+        </table>
+        <div class="info-box">
+          <strong>Acting on it:</strong> once a placement clearly wins on low volume, switch the ad set from <strong>automatic (Advantage+) placements to manual</strong> and keep the winner. <strong>Advantage audience expansion overrides your age cap</strong> &mdash; turn expansion off to actually hold an age limit. When you cut a segment, <strong>duplicate the ad set and edit the copy</strong> rather than editing a live winner (editing resets learning).
+        </div>
+      </div>
+      <div data-platform="tiktok">
+        <table class="ref-table">
+          <tr><th>Breakdown</th><th>Read for</th></tr>
+          <tr><td><strong>Placement</strong></td><td>TikTok feed vs Pangle / Global App Bundle (Pangle usually the leak)</td></tr>
+          <tr><td><strong>Age</strong></td><td>Which age bands buy vs. just view</td></tr>
+          <tr><td><strong>Gender</strong></td><td>Whether spend skews to a non-converting gender</td></tr>
+        </table>
+        <div class="info-box">
+          <strong>Acting on it:</strong> once a placement wins on low volume, switch from automatic to <strong>Select Placement (manual)</strong> and hold the winner. <strong>Targeting / audience expansion overrides your age cap</strong> &mdash; turn it off to hold a limit. <strong>Duplicate rather than edit</strong> a live winner so you don't reset learning.
+        </div>
+      </div>
+      <div data-platform="snapchat">
+        <table class="ref-table">
+          <tr><th>Breakdown</th><th>Read for</th></tr>
+          <tr><td><strong>Placement</strong></td><td>Which surface converts (Snap Ads vs Story Ads vs Discover / content)</td></tr>
+          <tr><td><strong>Age</strong></td><td>Which age bands buy vs. just swipe</td></tr>
+          <tr><td><strong>Gender</strong></td><td>Whether spend skews to a non-converting gender</td></tr>
+        </table>
+        <div class="info-box">
+          <strong>Acting on it:</strong> once a placement wins on low volume, move from automatic to <strong>manual placement</strong> and keep the winner. <strong>Audience expansion overrides your age cap</strong> &mdash; turn it off to hold a limit. <strong>Duplicate rather than edit</strong> a live winner so learning doesn't reset.
+        </div>
+      </div>
+      <div data-platform="linkedin">
+        <table class="ref-table">
+          <tr><th>Breakdown</th><th>Read for</th></tr>
+          <tr><td><strong>Job function</strong></td><td>Which functions actually convert / return good lead quality</td></tr>
+          <tr><td><strong>Seniority</strong></td><td>Whether spend reaches decision-makers or gets absorbed by ICs</td></tr>
+          <tr><td><strong>Company size</strong></td><td>Which segments fit the ICP and produce pipeline</td></tr>
+        </table>
+        <div class="info-box">
+          <strong>Acting on it:</strong> read the <strong>firmographic breakdowns</strong>, not age/gender. Turn <strong>Audience Expansion</strong> and the <strong>LinkedIn Audience Network</strong> off to hold your firmographic limits &mdash; both leak spend to lookalike members and off-platform placements outside your target. <strong>Duplicate rather than edit</strong> a live winner.
+        </div>
+      </div>
+      <div data-platform="google">
+        <table class="ref-table">
+          <tr><th>Breakdown</th><th>Read for</th></tr>
+          <tr><td><strong>Age</strong></td><td>Demographic bands that convert vs. spend (across networks)</td></tr>
+          <tr><td><strong>Gender</strong></td><td>Whether spend skews to a non-converting gender</td></tr>
+          <tr><td><strong>Household income</strong></td><td>Whether high-value income tiers are under- or over-served</td></tr>
+          <tr><td><strong>Placement</strong></td><td>Display / Video / PMax only &mdash; cut junk sites &amp; MFA placements. <em>Not available on Search.</em></td></tr>
+        </table>
+        <div class="info-box">
+          <strong>Acting on it:</strong> apply demographic bid adjustments / exclusions across networks; read <strong>placements only on Display, Video, and PMax</strong> (Search has no placement axis &mdash; keyword + match type is the control there). <strong>PMax</strong> can't be edited at the placement level directly &mdash; steer it with <strong>audience signals</strong> plus <strong>campaign-level exclusions</strong> (brand-safety, account-level placement, and negative-keyword lists).
+        </div>
+      </div>
+      </div>
+      <div class="success-box">
+        <strong>Concentrate on the winning segment.</strong> Once the breakdowns name a clear winner (a placement, an age band, a firmographic slice), don't just trim the losers &mdash; <strong>duplicate the ad set / ad group scoped to the winning segment and move budget onto it</strong>. Scaling the proven segment beats spreading budget evenly across segments the data already flagged as weak. (Detailed scaling in the Scale section.)
+      </div>
+
       <h3>Kill Rules</h3>
       <div class="info-box">
         <strong>Don't kill before learning phase exits.</strong> Per-platform thresholds: Meta / TikTok ~50 events / 7 days per ad set/group; Google 30 conv / 30 days per campaign (Smart Bidding); LinkedIn ~21 days stable pacing, ~15-20 conv/week. Pausing or major edits during learning reset the algorithm and waste setup spend. See Learning Phase block below.
@@ -3432,6 +3661,11 @@ Best campaign: ___________
 Best creative: ___________
 Best audience: ___________
 
+PLACEMENT / DEMOGRAPHIC READ (axis: age + gender for Meta/TikTok/Snapchat/Google; firmographics — job function/seniority/company size — for LinkedIn)
+Winning placement: ___________
+Winning demographic / firmographic: ___________
+Segment to cut (cross-checked vs. real sales): ___________
+
 KEY OBSERVATIONS
 1. ___________
 2. ___________
@@ -3475,6 +3709,11 @@ AUDIENCE INSIGHTS
 Best performing: ___________
 Worst performing: ___________
 Recommended changes: ___________
+
+PLACEMENT / DEMOGRAPHIC READ (axis: age + gender for Meta/TikTok/Snapchat/Google; firmographics — job function/seniority/company size — for LinkedIn)
+Winning placement: ___________
+Winning demographic / firmographic: ___________
+Segment cut or concentrated (cross-checked vs. real sales): ___________
 
 NEXT MONTH RECOMMENDATIONS
 Budget: $___________
@@ -3524,8 +3763,49 @@ Key priorities:
         <li><input type="checkbox" id="sc-3"><label for="sc-3">Frequency below 2.0 across active ad sets</label></li>
         <li><input type="checkbox" id="sc-4"><label for="sc-4">At least 2-3 winning creatives identified</label></li>
         <li><input type="checkbox" id="sc-5"><label for="sc-5">Landing page conversion rate stable (no recent drops)</label></li>
+        <li><input type="checkbox" id="sc-5b"><label for="sc-5b">Winning placement / demographics identified from the breakdowns (cross-checked vs. real sales)</label></li>
         <li><input type="checkbox" id="sc-6"><label for="sc-6">Client approved increased budget</label></li>
       </ul>
+
+      <h3>Segment Scaling (Concentrate on the Winner)</h3>
+      <p class="section-desc">The breakdowns in the Optimize step name the winning segment. Scaling means moving budget onto that proven segment, not spreading it evenly across segments the data already flagged as weak.</p>
+      <div class="segment-scaling-wrap">
+      <div data-platform="meta" class="platform-visible">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Duplicate the winning ad set scoped to the winning <strong>placement + age/gender</strong> (duplicate, never edit a live winner)</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">Switch to <strong>manual placements</strong> and turn <strong>Advantage audience expansion off</strong> so the age/placement limit actually holds</label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Move budget onto the concentrated ad set; monitor CPA 48h before the next step</label></li>
+        </ul>
+      </div>
+      <div data-platform="tiktok">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Duplicate the winning ad group scoped to the winning <strong>placement + age/gender</strong> (duplicate, never edit a live winner)</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">Switch to <strong>Select Placement (manual)</strong> and turn <strong>audience expansion off</strong> so the limit holds (cut Pangle if it was the leak)</label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Move budget onto the concentrated ad group; monitor CPA 48h before the next step</label></li>
+        </ul>
+      </div>
+      <div data-platform="snapchat">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Duplicate the winning ad set scoped to the winning <strong>placement + age/gender</strong> (duplicate, never edit a live winner)</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">Switch to <strong>manual placement</strong> and turn <strong>audience expansion off</strong> so the limit holds</label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Move budget onto the concentrated ad set; watch frequency (Snapchat pools are thin) before the next step</label></li>
+        </ul>
+      </div>
+      <div data-platform="linkedin">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Duplicate the winning campaign scoped to the winning <strong>firmographic slice</strong> (job function / seniority / company size)</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">Turn <strong>Audience Expansion + LinkedIn Audience Network off</strong> so the firmographic limit holds</label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Move budget onto the concentrated campaign; give the long sales cycle ~7 days before judging</label></li>
+        </ul>
+      </div>
+      <div data-platform="google">
+        <ul class="checklist" data-section="scale">
+          <li><input type="checkbox" id="sc-seg-1"><label for="sc-seg-1">Apply winning-segment bid adjustments across networks (age / gender / household income); exclude the losing demographic bands</label></li>
+          <li><input type="checkbox" id="sc-seg-2"><label for="sc-seg-2">On Display / Video / PMax, exclude junk placements; steer PMax with <strong>audience signals + campaign-level exclusions</strong> (no placement editing on Search)</label></li>
+          <li><input type="checkbox" id="sc-seg-3"><label for="sc-seg-3">Scale budget on the winning campaign / theme; hold Smart Bidding steady through its learning window</label></li>
+        </ul>
+      </div>
+      </div>
 
       <h3>Horizontal Scaling (New Audiences)</h3>
       <ul class="checklist" data-section="scale">
