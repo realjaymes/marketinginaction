@@ -1624,7 +1624,7 @@
       var COMMENT_DELAY = 2;
 
       // Bunny HLS source (HLS needs hls.js outside Safari). No <source>/controls = no seeking.
-      var HLS_URL='https://vz-210e68ea-a2f.b-cdn.net/87710968-05cb-41ea-b918-54ba8e380e4d/playlist.m3u8';
+      var HLS_URL='https://vz-210e68ea-a2f.b-cdn.net/21ccd46f-a08f-468f-83d0-87e0f42c7bc5/playlist.m3u8';
       (function(){ var v=document.getElementById('classVideo'); if(!v) return;
         if(v.canPlayType('application/vnd.apple.mpegurl')){ v.src=HLS_URL; }
         else if(window.Hls && Hls.isSupported()){ var h=new Hls({maxBufferLength:30, capLevelToPlayerSize:true}); h.loadSource(HLS_URL); h.attachMedia(v); }
