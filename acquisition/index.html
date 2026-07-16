@@ -394,6 +394,49 @@
             margin-top: 0;
         }
 
+        /* Inline mid-page CTA */
+        .acq-inline-cta {
+            text-align: center;
+            max-width: 640px;
+            margin: var(--space-2xl) auto 0;
+        }
+        .acq-inline-cta p {
+            color: var(--text-muted);
+            font-weight: 650;
+            font-size: 18px;
+            margin: 0 0 var(--space-md);
+        }
+        .acq-inline-cta .button { margin-top: 0; }
+
+        /* Sticky book-a-call bar */
+        .acq-sticky {
+            position: fixed;
+            left: 0; right: 0; bottom: 0;
+            z-index: 90;
+            background: #1c1422;
+            border-top: 1px solid rgba(247, 244, 250, 0.12);
+            transform: translateY(100%);
+            transition: transform 0.28s ease;
+        }
+        .acq-sticky.is-visible { transform: translateY(0); }
+        .acq-sticky__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: var(--space-lg);
+            padding: 13px 0;
+        }
+        .acq-sticky__text {
+            color: rgba(247, 244, 250, 0.9);
+            font-weight: 650;
+            font-size: 16px;
+        }
+        .acq-sticky .button { margin-top: 0; white-space: nowrap; }
+        @media (max-width: 620px) {
+            .acq-sticky__text { display: none; }
+            .acq-sticky__inner { justify-content: center; padding: 11px 0; }
+        }
+
         /* Footer */
         .acq-footer {
             padding: var(--space-lg) 0;
@@ -713,6 +756,11 @@
             <p class="acq-process-close">
                 The Diagnostic always comes first. It's the only way I know if I can actually help you, and the only way you know if I'm worth working with.
             </p>
+
+            <div class="acq-inline-cta">
+                <p>Start with a free strategy call. 30 minutes, no pressure.</p>
+                <a class="button button-primary" href="/acquisition/book/" target="_blank" rel="noopener">Book a free strategy call →</a>
+            </div>
         </div>
     </section>
 
@@ -759,6 +807,11 @@
                 <div class="acq-honesty">
                     I'm currently gathering specific testimonials from the businesses I work with, so my founding rates are lower than they'll be once the case studies are public. If you come on now, you lock the founding rate. Worth taking advantage of while it's there.
                 </div>
+            </div>
+
+            <div class="acq-inline-cta">
+                <p>Ready to see what to install first?</p>
+                <a class="button button-primary" href="/acquisition/book/" target="_blank" rel="noopener">Book a free strategy call →</a>
             </div>
         </div>
     </section>
@@ -843,6 +896,14 @@
         </div>
     </section>
 
+    <!-- Sticky book-a-call bar -->
+    <div class="acq-sticky" id="acqSticky" aria-hidden="true">
+        <div class="container acq-sticky__inner">
+            <span class="acq-sticky__text">30 minutes to find the biggest gap in your acquisition. No pressure.</span>
+            <a class="button button-primary" href="/acquisition/book/" target="_blank" rel="noopener">Book a free strategy call →</a>
+        </div>
+    </div>
+
     <footer class="acq-footer">
         <div class="container">
             © <span id="acq-year"></span> Marketing In Action. All rights reserved.
@@ -854,6 +915,27 @@
         (function(){
             var el = document.getElementById('acq-year');
             if (el) el.textContent = new Date().getFullYear();
+        })();
+
+        // Sticky book-a-call bar: appear after the hero, hide when the final CTA is in view
+        (function(){
+            var bar = document.getElementById('acqSticky');
+            if (!bar) return;
+            var finalCta = document.querySelector('.acq-final');
+            function onScroll(){
+                var pastHero = window.scrollY > window.innerHeight * 0.9;
+                var finalInView = false;
+                if (finalCta){
+                    var r = finalCta.getBoundingClientRect();
+                    finalInView = r.top < window.innerHeight && r.bottom > 0;
+                }
+                var show = pastHero && !finalInView;
+                bar.classList.toggle('is-visible', show);
+                bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            onScroll();
         })();
     </script>
 </body>
