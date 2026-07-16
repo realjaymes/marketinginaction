@@ -9,7 +9,9 @@ Marketing In Action (MIA) is a marketing ecosystem providing education, resource
 - [Homepage](https://marketinginaction.xyz/): Overview of the MIA ecosystem and offerings
 - [MIA Academy — For Marketers in Tech](https://marketinginaction.xyz/academy/): Courses, bootcamps, and hands-on learning programs for marketers
 - [MIA Academy — For SME Business Owners](https://marketinginaction.xyz/academy/sme/): Marketing workshops, bundles, and done-for-you services for Nigerian business owners
-- [MIA Consulting](https://marketinginaction.xyz/consulting/): Fractional marketing, advisory, and consulting services
+- [MIA Services](https://marketinginaction.xyz/services/): Overview of ways to work with MIA — product marketing & GTM for software companies, and done-for-you paid acquisition for local, ecommerce, and creator businesses
+- [Product Marketing & GTM](https://marketinginaction.xyz/consulting/): Fractional product marketing, advisory, and GTM execution for software and SaaS companies
+- [Paid Acquisition](https://marketinginaction.xyz/acquisition/): Done-for-you paid acquisition systems (paid ads, AI-generated creative, and content) for service businesses, ecommerce brands, and online creators
 - [MIA Jobs](https://marketinginaction.xyz/jobs/): Marketing job board for hiring and job seekers
 - [MIA Resources](https://marketinginaction.xyz/resources/): Templates, tools, and marketing resources
 - [MIA Newsletter](https://newsletter.marketinginaction.xyz/): Weekly marketing insights and strategies

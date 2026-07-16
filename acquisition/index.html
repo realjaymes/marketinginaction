@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="James Praise">
     <meta name="color-scheme" content="light only">
-    <title>Get More Qualified Leads, Predictably | MIA Acquisition</title>
-    <meta name="description" content="Done-for-you paid acquisition for service businesses, ecommerce brands, and online creators. Diagnose what's leaking, fix what matters, run the system that brings leads in.">
-    <meta name="robots" content="noindex, nofollow">
+    <title>Get More Customers, Predictably | Paid Acquisition Systems</title>
+    <meta name="description" content="I install the paid, creative, and content systems that bring service businesses, ecommerce brands, and online creators customers and revenue predictably, then I run them for you.">
+    <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://marketinginaction.xyz/acquisition/">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Paid Acquisition Systems",
+      "serviceType": "Paid customer acquisition and performance marketing",
+      "description": "Done-for-you paid acquisition. I install the paid, creative, and content systems that bring service businesses, ecommerce brands, and online creators customers and revenue predictably, then run them.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Marketing In Action",
+        "url": "https://marketinginaction.xyz/"
+      },
+      "areaServed": ["US", "GB", "CA", "AU"],
+      "url": "https://marketinginaction.xyz/acquisition/"
+    }
+    </script>
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -339,153 +356,101 @@
         }
 
         /* ============================================================
-           VISUAL: PLAYBOOK PREVIEW SECTION
-           Sits between §5 (Proof) and §6 (FAQs)
-           Mockup of the playbook page's UI
+           3-MECHANISMS SECTION (the three segment revenue engines)
+           Replaces the old playbook preview. Sits between §4 (Process)
+           and §6 (Proof). Each card is a segment engine drawn as an
+           inline node-and-arrow flow, then a dark differentiator band
+           showing the creative + authority systems that power all three.
            ============================================================ */
-        .acq-playbook {
+        .acq-mech {
             background: var(--bg-page);
         }
-        .acq-playbook-card {
-            max-width: 920px;
+        .acq-mech-stack {
+            max-width: 1080px;
             margin: 0 auto;
+            display: grid;
+            gap: var(--space-lg);
+        }
+        @media (min-width: 860px) {
+            .acq-mech-stack { grid-template-columns: repeat(3, 1fr); align-items: start; }
+        }
+        .acq-mech-card {
             background: #fff;
             border: 1px solid var(--border);
             border-radius: var(--radius-lg);
-            overflow: hidden;
-            box-shadow: 0 18px 50px rgba(28, 20, 34, 0.08);
+            padding: var(--space-xl);
+            box-shadow: 0 12px 40px rgba(28, 20, 34, 0.06);
         }
-        .acq-playbook-card__head {
-            padding: 22px 28px 16px;
-            border-bottom: 1px solid rgba(28, 20, 34, 0.06);
-        }
-        .acq-playbook-card__eyebrow {
+        .acq-mech-card__tag {
+            display: inline-block;
             font-size: 11px;
-            font-weight: 700;
+            font-weight: 800;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--text-muted);
-            margin-bottom: 6px;
+            color: var(--color-black);
+            background: var(--color-accent);
+            padding: 4px 10px;
+            border-radius: 999px;
+            margin-bottom: var(--space-md);
         }
-        .acq-playbook-card__title {
-            font-size: clamp(20px, 2.4vw, 26px);
-            margin: 0 0 4px;
+        .acq-mech-card h3 {
+            font-size: clamp(18px, 2.2vw, 22px);
+            margin: 0 0 6px;
             font-weight: 800;
-            letter-spacing: -0.01em;
         }
-        .acq-playbook-card__sub {
-            margin: 0;
-            font-size: 14px;
+        .acq-mech-card__promise {
             color: var(--text-muted);
+            margin: 0 0 var(--space-lg);
             line-height: 1.5;
         }
-        .acq-playbook-platforms {
+        .acq-mech-flow {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            padding: 16px 28px;
-            background: var(--bg-page);
-            border-bottom: 1px solid rgba(28, 20, 34, 0.06);
+            flex-direction: column;
+            gap: 6px;
         }
-        .acq-playbook-platform {
-            display: inline-flex;
+        .acq-mech-node {
+            display: flex;
             align-items: center;
-            gap: 8px;
-            padding: 8px 14px;
-            border-radius: 999px;
-            background: #fff;
-            border: 1.5px solid rgba(28, 20, 34, 0.12);
+            gap: 10px;
+            background: var(--bg-page);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 11px 13px;
             font-size: 13px;
             font-weight: 700;
             color: var(--text-primary);
+            line-height: 1.3;
         }
-        .acq-playbook-platform--active {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-        }
-        .acq-playbook-platform__dot {
-            width: 9px;
-            height: 9px;
-            border-radius: 50%;
-            display: inline-block;
-        }
-        .acq-playbook-tabs {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 4px;
-            padding: 12px 28px;
-            background: #fff;
-            border-bottom: 1px solid rgba(28, 20, 34, 0.06);
-            overflow-x: auto;
-        }
-        .acq-playbook-tab {
-            padding: 8px 12px;
-            font-size: 12px;
-            font-weight: 700;
-            color: var(--text-muted);
-            border-radius: 6px;
-            white-space: nowrap;
-        }
-        .acq-playbook-tab--active {
-            color: var(--text-primary);
-            background: rgba(241, 222, 113, 0.28);
-        }
-        .acq-playbook-body {
-            padding: 24px 28px;
-            background: #fff;
-        }
-        .acq-playbook-checklist {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .acq-playbook-checklist li {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 10px 0;
-            border-bottom: 1px solid rgba(28, 20, 34, 0.06);
-            font-size: 14px;
-            color: var(--text-primary);
-        }
-        .acq-playbook-checklist li:last-child { border-bottom: none; }
-        .acq-playbook-checkbox {
-            width: 16px;
-            height: 16px;
-            border-radius: 4px;
-            border: 1.5px solid rgba(28, 20, 34, 0.28);
-            background: #fff;
+        .acq-mech-node__num {
+            width: 22px;
+            height: 22px;
             flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--color-accent);
+            color: var(--color-black);
+            font-size: 12px;
+            font-weight: 800;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
-            font-weight: 800;
-        }
-        .acq-playbook-checkbox--checked {
-            background: var(--color-accent);
-            border-color: var(--color-accent);
-            color: var(--text-primary);
-        }
-        .acq-playbook-cta-row {
-            text-align: center;
-            margin-top: var(--space-xl);
-        }
-        .acq-playbook-cta-row .button {
-            margin-top: 0;
-        }
-        .acq-playbook-cta-row p {
-            font-size: 13px;
-            color: var(--text-muted);
-            margin: var(--space-sm) 0 0;
         }
 
-        @media (max-width: 720px) {
-            .acq-playbook-card__head,
-            .acq-playbook-platforms,
-            .acq-playbook-tabs,
-            .acq-playbook-body { padding-left: 18px; padding-right: 18px; }
+        /* Differentiator strip — what powers every engine (compact) */
+        .acq-mech-power {
+            max-width: 820px;
+            margin: var(--space-xl) auto 0;
+            background: var(--color-black);
+            color: rgba(247, 244, 250, 0.9);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg) var(--space-xl);
+            text-align: center;
         }
+        .acq-mech-power p {
+            margin: 0;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        .acq-mech-power strong { color: var(--color-accent); }
     </style>
 </head>
 <body>
@@ -499,16 +464,16 @@
             <div class="acq-hero-inner">
                 <div class="pill">
                     <span class="dot" aria-hidden="true"></span>
-                    Paid Acquisition for SMBs, Brands &amp; Creators
+                    Customer Acquisition Systems for SMBs, Brands &amp; Creators
                 </div>
 
                 <h1 class="text-white">
-                    Get more qualified leads, <span class="text-yellow accent-italic">predictably</span>.
+                    Get more customers, <span class="text-yellow accent-italic">predictably</span>.
                 </h1>
 
                 <p class="text-white consulting-hero-sub">
-                    Done-for-you paid acquisition for service businesses, ecommerce brands, and online creators.
-                    We find what's broken in your funnel, fix it, and run the system that brings qualified leads in every week.
+                    I install the paid, creative, and content systems that bring you customers and revenue predictably, then I run them for you.
+                    For local service businesses, ecommerce brands, and online creators who want growth they can count on, not the usual ups and downs.
                 </p>
 
                 <div class="button-row">
@@ -566,68 +531,105 @@
         </div>
     </section>
 
-    <!-- Section 2: Who This Is For -->
+    <!-- Section 2: The problem + who it's for (merged) -->
     <section class="section">
         <div class="container">
             <div class="acq-head">
-                <h2>This is built for you if…</h2>
+                <h2>Right now, your growth isn't in your hands.</h2>
             </div>
+
+            <p class="acq-pain-intro">
+                Maybe your customers come from referrals and word of mouth, so some months are busy and others go quiet. Maybe you run ads, but they work one month and flop the next, and your profit keeps shrinking. Maybe every launch is hit or miss, and you're always making content just to keep sales coming. It shows up differently for each business, but it's the same problem: you don't have a system you control that brings in customers every month, not just the good ones.
+            </p>
 
             <div class="acq-fit-grid">
                 <div class="acq-fit-card acq-fit-card--yes">
-                    <h3>For you if</h3>
+                    <h3>This is for you if</h3>
                     <ul class="acq-fit-list">
-                        <li>You run a service business, ecommerce brand, or online business and you're tired of inconsistent lead flow</li>
+                        <li>You run a service business, ecommerce brand, or online business and you're tired of customers coming in one month and drying up the next</li>
                         <li>You're already getting customers, but mostly through referrals or word of mouth, and you've hit a ceiling</li>
                         <li>You've spent money on ads before (whether they worked or not) or you're ready to start with a real budget</li>
-                        <li>You want a partner running paid acquisition end to end, not another freelancer who only touches the ad account</li>
-                        <li>You're ready to invest in fixing what's broken in your acquisition funnel</li>
+                        <li>You want someone to install and run the whole system, not a freelancer who only touches the ad account</li>
                     </ul>
                 </div>
 
                 <div class="acq-fit-card acq-fit-card--no">
                     <h3>Not for you if</h3>
                     <ul class="acq-fit-list">
-                        <li>You want guaranteed results before you invest anything</li>
-                        <li>You're looking for free or barely-paid help and aren't ready to invest in a real operator</li>
-                        <li>You expect to disappear after the kickoff. You'll still be approving creative and giving feedback every couple of weeks</li>
+                        <li>You want a guaranteed number before you invest anything</li>
+                        <li>You want free or barely-paid help and aren't ready to invest in a real operator</li>
+                        <li>You expect to hand it over and never look again. I run the day to day, but you'll still approve creative and weigh in every couple of weeks</li>
                     </ul>
                 </div>
             </div>
 
-            <p class="acq-fit-note">
-                If you also need branding, web design, or general marketing help on the side, we can still talk. We'll bring it in via partners or AI-assisted execution. Not a disqualifier.
+            <p class="acq-pain-close">
+                The fix is a set of systems you actually own, ones that bring customers in on purpose instead of by luck, month after month. That is what I install, and then run for you.
             </p>
         </div>
     </section>
 
-    <!-- Section 3: Why Most Paid Acquisition Fails -->
-    <section class="section acq-pain">
+    <!-- Section 4: The Three Revenue Engines (mechanisms) -->
+    <section class="section acq-mech">
         <div class="container">
             <div class="acq-head">
-                <h2>You never know if next month will be busy or dead quiet.</h2>
+                <h2>The systems I install.</h2>
+                <p>Three revenue engines, one for each kind of business. I diagnose which pieces you're missing and install what you actually need. Some businesses need the whole engine. Some need one part. The Diagnostic tells us which.</p>
             </div>
 
-            <p class="acq-pain-intro">
-                Right now your customers come from referrals, word of mouth, and the odd post that happens to land. It works, until it doesn't. One month you are full, the next is silent, and nothing about the swing is in your hands. You cannot turn it up when sales are slow, and you cannot count on it from one month to the next.
-            </p>
+            <div class="acq-mech-stack">
 
-            <ul class="acq-pain-list">
-                <li>Your best months come from referrals you did nothing to trigger, and your slow months leave you waiting</li>
-                <li>You want to grow but you cannot make more people talk about you on demand</li>
-                <li>You know there are people who would happily buy from you, you just have no reliable way to reach them</li>
-                <li>You have thought about running ads but you are not sure it works for a business like yours</li>
-                <li>You boosted a post or two, saw nothing come of it, and decided ads were not for you</li>
-                <li>You watched competitors who are not better than you grow faster, because they found a channel they control</li>
-            </ul>
+                <!-- Local Services engine -->
+                <div class="acq-mech-card">
+                    <span class="acq-mech-card__tag">Local Services</span>
+                    <h3>If you run a local service business</h3>
+                    <p class="acq-mech-card__promise">More booked jobs, month after month. The system that adds an extra $250K to $1M a year without hiring more staff or working longer hours.</p>
+                    <div class="acq-mech-flow" aria-label="Local Services revenue engine">
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">1</span>Lead Engine</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">2</span>Follow-Up System</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">3</span>Booking &amp; Conversion</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">4</span>Retention Loop</div>
+                    </div>
+                </div>
 
-            <p class="acq-pain-close">
-                None of that means you did anything wrong. It means you have taken one channel as far as it goes. The next step is a second channel you actually control, one that brings in new customers on purpose instead of by luck, in the slow months as well as the good ones. That is what paid acquisition does when the system around the ads is built right.
-            </p>
+                <!-- Coaches & Creators engine -->
+                <div class="acq-mech-card">
+                    <span class="acq-mech-card__tag">Coaches &amp; Creators</span>
+                    <h3>If you're a coach, consultant, or creator</h3>
+                    <p class="acq-mech-card__promise">A pipeline that fills every week. The system that adds an extra $500K to $1M a year without cold-calling, posting daily, or burning out.</p>
+                    <div class="acq-mech-flow" aria-label="Coaches and Creators revenue engine">
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">1</span>Sellable Offer</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">2</span>Top-of-Funnel Engine</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">3</span>Nurture Sequence</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">4</span>Sales Call System</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">5</span>Retention &amp; Expansion</div>
+                    </div>
+                </div>
+
+                <!-- Ecommerce engine -->
+                <div class="acq-mech-card">
+                    <span class="acq-mech-card__tag">Ecommerce</span>
+                    <h3>If you sell products online</h3>
+                    <p class="acq-mech-card__promise">Profitable spend that scales. The system that adds an extra $500K to $5M a year without burning through ad budget or discounting to zero.</p>
+                    <div class="acq-mech-flow" aria-label="Ecommerce revenue engine">
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">1</span>Offer Stack</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">2</span>Acquisition Engine</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">3</span>Conversion Flow</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">4</span>Retention &amp; LTV Loop</div>
+                        <div class="acq-mech-node"><span class="acq-mech-node__num">5</span>Data Layer</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- What powers every engine (compact strip) -->
+            <div class="acq-mech-power">
+                <p>Every engine runs on two more: a <strong>Creative Engine</strong> that uses AI to ship fresh branded carousels, statics, and video every week, and an <strong>Authority Engine</strong> that turns your content into inbound. You don't need all of it at once. The Diagnostic maps what to install first.</p>
+            </div>
         </div>
     </section>
 
-    <!-- Section 4: What Working With Us Looks Like -->
+    <!-- Section 5: How this works -->
     <section class="section">
         <div class="container">
             <div class="acq-head">
@@ -644,102 +646,24 @@
 
                 <div class="acq-process-card">
                     <div class="acq-process-card__num">2</div>
-                    <h3>$250 Paid Audit</h3>
-                    <p class="acq-process-card__meta">7 to 10 business days</p>
-                    <p>If you're already running ads, I go into your ad accounts, landing pages, lead capture, follow-up, and tracking, and write up everything that's broken, everything that's leaking, and everything that's working. If you're not running ads yet, I map what it takes to launch properly: who to target, what to say, where to send them, and how to track it, so you don't waste money the day you start.</p>
-                    <p>Either way you get a full audit document, a Loom walkthrough, and a 90-day plan with the top fixes or first steps prioritized by impact. Take it and run with it yourself, hand it to someone else to implement, or hire me to execute. Your call.</p>
+                    <h3>$250 System Diagnostic</h3>
+                    <p class="acq-process-card__meta">7 to 10 business days · credited toward your install</p>
+                    <p>I go into everything: your ads (or what you would run instead), your funnel, your checkout or lead capture, follow-up, tracking, and content. You get a full diagnostic document, a Loom walkthrough, and a build map that shows exactly which systems to install and in what order.</p>
+                    <p>Take it and run with it yourself, hand it to your team, or have me install it. Your call. If we work together, the $250 comes off your install.</p>
                 </div>
 
                 <div class="acq-process-card">
                     <div class="acq-process-card__num">3</div>
-                    <h3>$500 to $1K Per Month Retainer</h3>
-                    <p class="acq-process-card__meta">3-month minimum</p>
-                    <p>If we work together on execution, we go into a retainer. I run your paid acquisition, build and test creative, optimize your funnel, set up the follow-up, and ship weekly reports. You focus on closing the leads I bring in.</p>
-                    <p>Starter ($500/mo) is single-channel. Growth ($1K/mo) is multi-channel + full funnel + email nurture.</p>
+                    <h3>Install, then Run</h3>
+                    <p class="acq-process-card__meta">one-time install + monthly run</p>
+                    <p>I install the systems your diagnostic mapped: the acquisition engine, the creative engine that uses AI to ship fresh branded carousels, statics, and video every week, and the content system. Then I run them for you, while you focus on serving the customers I bring in.</p>
+                    <p>Install is a one-time build, from $1,500 depending on your business. Run starts at $1,000/mo for a single channel, more for multi-channel with the full funnel, AI video, and the content system. You get exact numbers on the call, once we know what you need.</p>
                 </div>
             </div>
 
             <p class="acq-process-close">
-                The audit always comes first. It's the only way I know if I can actually help you, and it's the only way you know if I'm worth working with.
+                The Diagnostic always comes first. It's the only way I know if I can actually help you, and the only way you know if I'm worth working with.
             </p>
-        </div>
-    </section>
-
-    <!-- Section 5: Playbook Preview -->
-    <section class="section acq-playbook">
-        <div class="container">
-            <div class="acq-head">
-                <h2>Inside the playbook.</h2>
-                <p>The exact operating system I run with clients. Eleven sections, every major paid channel, working checklists, calculators, and copy-ready templates. Public version below.</p>
-            </div>
-
-            <div class="acq-playbook-card" aria-label="Paid Acquisition Playbook preview">
-                <div class="acq-playbook-card__head">
-                    <div class="acq-playbook-card__eyebrow">Free resource · Interactive</div>
-                    <h3 class="acq-playbook-card__title">The Paid Acquisition Playbook</h3>
-                    <p class="acq-playbook-card__sub">How we actually run paid ads. From onboarding through scaling, across the major paid channels.</p>
-                </div>
-
-                <div class="acq-playbook-platforms" aria-label="Platforms covered">
-                    <span class="acq-playbook-platform acq-playbook-platform--active">
-                        <span class="acq-playbook-platform__dot" style="background:#1877f2"></span>Meta
-                    </span>
-                    <span class="acq-playbook-platform">
-                        <span class="acq-playbook-platform__dot" style="background:#fe2c55"></span>TikTok
-                    </span>
-                    <span class="acq-playbook-platform">
-                        <span class="acq-playbook-platform__dot" style="background:#4285f4"></span>Google
-                    </span>
-                    <span class="acq-playbook-platform">
-                        <span class="acq-playbook-platform__dot" style="background:#0a66c2"></span>LinkedIn
-                    </span>
-                    <span class="acq-playbook-platform">
-                        <span class="acq-playbook-platform__dot" style="background:#fffc00; border:2px solid #1c1422"></span>Snapchat
-                    </span>
-                    <span class="acq-playbook-platform">
-                        <span class="acq-playbook-platform__dot" style="background:#000000"></span>X
-                    </span>
-                    <span class="acq-playbook-platform">
-                        <span class="acq-playbook-platform__dot" style="background:#10a37f"></span>ChatGPT
-                    </span>
-                </div>
-
-                <div class="acq-playbook-tabs" aria-label="Playbook sections">
-                    <span class="acq-playbook-tab">Overview</span>
-                    <span class="acq-playbook-tab acq-playbook-tab--active">1. Onboard</span>
-                    <span class="acq-playbook-tab">2. Tracking</span>
-                    <span class="acq-playbook-tab">3. Strategy</span>
-                    <span class="acq-playbook-tab">4. Structure</span>
-                    <span class="acq-playbook-tab">5. Audiences</span>
-                    <span class="acq-playbook-tab">6. Creative</span>
-                    <span class="acq-playbook-tab">7. Budget</span>
-                    <span class="acq-playbook-tab">8. Launch</span>
-                    <span class="acq-playbook-tab">9. Optimize</span>
-                    <span class="acq-playbook-tab">10. Report</span>
-                    <span class="acq-playbook-tab">11. Scale</span>
-                </div>
-
-                <div class="acq-playbook-body">
-                    <ul class="acq-playbook-checklist">
-                        <li><span class="acq-playbook-checkbox acq-playbook-checkbox--checked">✓</span> Confirm conversion goal + 90-day target</li>
-                        <li><span class="acq-playbook-checkbox acq-playbook-checkbox--checked">✓</span> Audit existing pixel + conversion event setup</li>
-                        <li><span class="acq-playbook-checkbox acq-playbook-checkbox--checked">✓</span> Lock channel mix and budget allocation</li>
-                        <li><span class="acq-playbook-checkbox"></span> Build initial audience inventory (cold, warm, custom)</li>
-                        <li><span class="acq-playbook-checkbox"></span> Ship first creative testing matrix</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="acq-playbook-cta-row">
-                <a id="playbook-cta"
-                   class="button button-secondary"
-                   href="/resources/paid-ads-playbook/?utm_source=acquisition-lp&utm_medium=resource-cta&utm_campaign=playbook-preview"
-                   target="_blank"
-                   rel="noopener">
-                    Read the full playbook →
-                </a>
-                <p>Free to read. Opens in a new tab.</p>
-            </div>
         </div>
     </section>
 
@@ -752,22 +676,22 @@
 
             <div class="acq-stats">
                 <div class="acq-stat">
+                    <div class="acq-stat__num">30+ brands</div>
+                    <p class="acq-stat__copy">Paid acquisition run for 30+ brands and businesses across North America, Europe, and Africa, from D2C and ecommerce to B2B SaaS, services, and info products.</p>
+                </div>
+                <div class="acq-stat">
                     <div class="acq-stat__num">6x ROAS</div>
-                    <p class="acq-stat__copy">Every $1 in ad spend currently returns $6 in revenue, week over week, on Meta and Google.</p>
+                    <p class="acq-stat__copy">What a long-running D2C client currently returns on Meta and Google. Every $1 in ad spend, about $6 back, week over week.</p>
                 </div>
                 <div class="acq-stat">
-                    <div class="acq-stat__num">Every major paid channel</div>
-                    <p class="acq-stat__copy">My own digital product and service business runs its acquisition across every major paid channel, every week, with multiple offers in market. Same operator hands.</p>
-                </div>
-                <div class="acq-stat">
-                    <div class="acq-stat__num">5+ years sustained</div>
-                    <p class="acq-stat__copy">Active D2C advisor at JegzFits Leatherworks since 2021. Continuous, not a one-off project.</p>
+                    <div class="acq-stat__num">Since 2018</div>
+                    <p class="acq-stat__copy">Running paid acquisition on my own money and other people's since 2018, across every major paid channel, often with several offers in market at once.</p>
                 </div>
             </div>
 
             <div class="acq-proof-body">
                 <p>
-                    I've run paid acquisition on Google Ads, LinkedIn Ads, and Meta Ads for SaaS and services clients including Cecure Intelligence Limited (US and global cybersecurity SaaS), FunnelEnvy (US CRO and demand gen agency), Hank Robotics, and several others. Across D2C, B2B SaaS, and services, the channel mix changes but the system doesn't: tight targeting, fast creative iteration, ruthless tracking, and follow-up that actually follows up.
+                    I've been doing this since 2018, for clients including Cecure Intelligence Limited (global cybersecurity SaaS), FunnelEnvy (US demand-gen agency), and Hank Robotics, across D2C, B2B SaaS, and services. The channel mix changes but the systems don't: the offer, the funnel, fresh creative, ruthless tracking, and follow-up that actually follows up.
                 </p>
 
                 <div class="acq-testimonial">
@@ -780,11 +704,11 @@
                 </div>
 
                 <p>
-                    I've been doing paid acquisition since 2018. I've spent my own money on ads. I've spent other people's money on ads. I've made every mistake in the playbook so you don't have to. I'm not the cheapest operator you'll find, and I'm not the biggest agency you'll talk to. I'm the one who'll actually do the work, tell you the truth, and ship results you can measure.
+                    I'm not the cheapest operator you'll find, and I'm not the biggest agency you'll talk to. I'm the one who'll do the work, tell you the truth, and ship results you can measure.
                 </p>
 
                 <div class="acq-honesty">
-                    I'm currently gathering specific testimonials from the businesses I work with. The $250 audit is priced at an entry rate while that's in flight. Once the case studies are public, the price goes up. Worth taking advantage of the entry rate while it's there.
+                    I'm currently gathering specific testimonials from the businesses I work with, so my founding rates are lower than they'll be once the case studies are public. If you come on now, you lock the founding rate. Worth taking advantage of while it's there.
                 </div>
             </div>
         </div>
@@ -799,44 +723,44 @@
 
             <div class="consulting-faqs" aria-label="FAQs">
                 <details class="consulting-faq">
-                    <summary>1. Do I need to be running ads already?</summary>
+                    <summary>1. Is this just running ads?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">No. If you're running ads, the audit will show you what's leaking. If you're not, the audit will show you what to set up first so you don't waste money the moment you start. Same $250 either way.</p>
+                        <p class="muted">No. Ads are one part. What I install is the whole system around them: the offer, the funnel, the follow-up, the tracking, the creative, and the content that brings people in. Ads are just the traffic. Most acquisition fails because everything around the ads is missing, not because the ads themselves are bad. That is the part I build.</p>
                     </div>
                 </details>
 
                 <details class="consulting-faq">
-                    <summary>2. I've mostly grown through referrals and word of mouth. Will paid ads even work for me?</summary>
+                    <summary>2. Do you handle the creative?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">That is exactly who this works best for. If people already buy from you and refer you, you have a real offer, you just have no reliable way to reach new people on demand. Paid acquisition gives you a second channel you control, so new buyers come in on purpose instead of only when someone refers you. We start small, prove it works for your business, then scale what works.</p>
+                        <p class="muted">Yes, all of it, in your brand. I use AI to generate fresh branded carousels, static ads, and video every week, with the video fronted by an AI clone of you or a branded AI presenter, so you never wait on a shoot or run out of ads. One proven angle becomes dozens of ads, and the same creative powers your organic content and your paid ads. This is the part almost no one else does.</p>
                     </div>
                 </details>
 
                 <details class="consulting-faq">
-                    <summary>3. What kind of businesses do you work with?</summary>
+                    <summary>3. Do I need to be running ads already?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">Local service businesses, online service providers, coaches, creators, and product businesses selling to customers in the US, UK, Canada, and beyond. If you sell something people genuinely want and you want a predictable way to reach more of them, this fits. If you are still figuring out what you sell, the audit will tell you honestly whether paid is right for you yet.</p>
+                        <p class="muted">No. If you're running ads, the Diagnostic shows you what's leaking. If you're not, it shows you what to set up first so you don't waste money the moment you start. If you don't even have a website yet, that's fine too, we start by getting you online. Same Diagnostic either way.</p>
                     </div>
                 </details>
 
                 <details class="consulting-faq">
-                    <summary>4. What if my budget for ads is small?</summary>
+                    <summary>4. Do I have to buy the whole system?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">Small budgets work. You can run $5 to $20 a day to start testing creative, validating your offer with cold traffic, and gathering the data we need to make decisions. The retainer fee covers the system around the ads, the funnel, the creative, the follow-up, the tracking, not the ad spend itself. We scale spend deliberately once we see what's working. Even at $5 a day on Meta, you can ship a real campaign and learn fast.</p>
+                        <p class="muted">No. Some businesses need the whole engine. Some need one part: just the creative, just the content, or just getting online and set up to capture demand. The Diagnostic tells us which pieces you actually need and in what order, so you only pay to install what moves your business. Most clients start with one piece and grow into the system.</p>
                     </div>
                 </details>
 
                 <details class="consulting-faq">
                     <summary>5. Do you guarantee leads or sales?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">Run the system and the leads come. My job is to fill your pipeline with qualified people who want what you sell. Closing them is yours, that depends on your offer and your follow-through, which I don't control. I won't promise you a magic number, but I do promise real work, real reporting, and real leads. If you show up and we run this properly, the enquiries come.</p>
+                        <p class="muted">I won't promise you a magic number, because the last mile depends on you. What the system does is put your offer in front of the right people at a cost you can see, and bring in demand you can count on. For a service business or a coach, that shows up as leads and booked calls, and closing them is your part. For an ecommerce brand, the sale happens on the ad itself, so you see it as orders and return on ad spend. Either way I promise real work, real reporting, and real results. Run this properly and the customers come.</p>
                     </div>
                 </details>
 
                 <details class="consulting-faq">
-                    <summary>6. Can I just buy the audit and skip the retainer?</summary>
+                    <summary>6. Can I just buy the Diagnostic and skip the rest?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">Yes. The audit is a real deliverable on its own. About a third of audit clients take the document and execute themselves. About half move into the retainer. The rest hand the audit to someone else. All three are fine outcomes.</p>
+                        <p class="muted">Yes. The Diagnostic is a real deliverable on its own: a full document, a Loom walkthrough, and a build map. Take it and execute yourself, hand it to your team, or have me install it. If you do work with me, the fee comes off your install. All of those are fine outcomes.</p>
                     </div>
                 </details>
 
@@ -848,16 +772,9 @@
                 </details>
 
                 <details class="consulting-faq">
-                    <summary>8. How much of my time will this take?</summary>
+                    <summary>8. How long until I see results?</summary>
                     <div class="consulting-faq-body">
-                        <p class="muted">Strategy call: 30 minutes. Audit handoff: 30 minutes. Once on retainer: a 30-minute call every two to four weeks plus 15 minutes a week to approve creative and answer Slack messages. Less than an hour a week in total. You're not running this. I am.</p>
-                    </div>
-                </details>
-
-                <details class="consulting-faq">
-                    <summary>9. How long until I see results?</summary>
-                    <div class="consulting-faq-body">
-                        <p class="muted">You can see the first signs early. Once the ads go live we start getting real responses, and the first enquiries and leads usually land within the first few weeks. The first month or two is where we test messages and audiences to find your winners, so it starts small and gets steadier as we go. From there it builds, more of what works and less of what doesn't. Anyone promising a flood of sales in week one is selling you a spike that won't last. What I focus on is real progress you can see early and grow every month.</p>
+                        <p class="muted">You can see the first signs early. Once the ads go live we start getting real responses, and the first customers and sales usually land within the first few weeks. The first month or two is where we test messages and audiences to find your winners, so it starts small and gets steadier as we go. From there it builds, more of what works and less of what doesn't. Anyone promising a flood of sales in week one is selling you a spike that won't last. What I focus on is real progress you can see early and grow every month.</p>
                     </div>
                 </details>
             </div>
@@ -867,7 +784,7 @@
     <!-- Section 7: Final CTA -->
     <section class="section acq-final">
         <div class="container">
-            <h2>Ready to find out what's broken?</h2>
+            <h2>Ready to see what to install first?</h2>
             <p>
                 Book the strategy call. 30 minutes, no pressure, no sales pitch. If we're a fit, you leave with a clear next step. If we're not, you leave with the right referral. Worst case, you spend 30 minutes and learn something useful.
             </p>
@@ -888,32 +805,6 @@
         (function(){
             var el = document.getElementById('acq-year');
             if (el) el.textContent = new Date().getFullYear();
-        })();
-
-        // Playbook CTA — fire custom event on click so we can retarget viewers later
-        (function(){
-            var pb = document.getElementById('playbook-cta');
-            if (!pb) return;
-            pb.addEventListener('click', function(){
-                var eid = 'acq_pb_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-                try {
-                    if (typeof fbq === 'function') {
-                        fbq('trackCustom', 'ViewedPlaybook', { content_name: 'Paid Acquisition Playbook', source_page: '/acquisition/' }, { eventID: eid });
-                    }
-                } catch(_) {}
-                try {
-                    if (typeof ttq !== 'undefined') {
-                        ttq.track('ClickButton', { content_id: 'playbook-preview', content_name: 'Paid Acquisition Playbook' });
-                    }
-                } catch(_) {}
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    event: 'playbook_cta_clicked',
-                    event_id: eid,
-                    source_page: '/acquisition/',
-                    destination: '/resources/paid-ads-playbook/'
-                });
-            });
         })();
     </script>
 </body>
