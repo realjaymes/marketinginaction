@@ -1450,6 +1450,8 @@
   ]
 }
     </script>
+    <!-- Pay-the-difference upgrade coupon: applies when arriving with ?coupon=<code> from a workshop thank-you page -->
+    <script src="/assets/bundle-coupon.js"></script>
 </head>
 <body>
 
@@ -1460,7 +1462,7 @@
     <div class="announcement-bar">
         <span class="dot"></span>
         Only <strong><span class="spots-count">48</span> of 50 spots remaining</strong> in the mentorship &middot;
-        <strong>&#8358;45,000</strong> for 3 months
+        <strong data-payprice="strike">&#8358;45,000</strong> for 3 months
         <span class="announcement-bar__timer" id="countdownTimer"></span>
     </div>
 
@@ -1604,7 +1606,7 @@
         <div class="container text-center">
             <span class="section-label">The Real Cost</span>
             <h2 class="section-title">Be Honest. How Much Have You Already Wasted?</h2>
-            <p class="section-sub">Before you say &#8358;45,000 is too much, add up what you have already spent on marketing that brought you nothing.</p>
+            <p class="section-sub">Before you say <span data-payprice="net">&#8358;45,000</span> is too much, add up what you have already spent on marketing that brought you nothing.</p>
         </div>
         <div class="container">
             <div class="problem-grid">
@@ -1643,7 +1645,7 @@
         <div class="container">
             <div class="value-stack__box">
                 <div class="value-stack__header">
-                    The Complete Online Marketing System &mdash; <span class="highlight">&#8358;45,000</span>
+                    The Complete Online Marketing System &mdash; <span class="highlight" data-payprice="strike">&#8358;45,000</span>
                 </div>
                 <div class="value-stack__items">
                     <!-- Core items -->
@@ -1710,7 +1712,7 @@
                     <div class="value-stack__total-label">If you bought all of this separately</div>
                     <div style="font-size:1.3rem; text-decoration:line-through; color:var(--red); margin:4px 0;">&#8358;255,000+</div>
                     <div class="value-stack__total-label" style="margin-top:8px;">Your early bird price</div>
-                    <div class="value-stack__total">&#8358;45,000</div>
+                    <div class="value-stack__total" data-payprice="strike">&#8358;45,000</div>
                     <div class="value-stack__total-label" style="margin-top:4px;">for the complete 3-month mentorship. All five systems plus implementation support and private WhatsApp access.</div>
                 </div>
             </div>
@@ -1930,9 +1932,9 @@
                     <div class="pricing__tier-body">
                         <div class="pricing__tier-name">The Complete Online Marketing System</div>
                         <div style="font-size:0.85rem; text-decoration:line-through; color:var(--text-light); margin-bottom:4px;">&#8358;255,000+</div>
-                        <div class="pricing__tier-rate">&#8358;45,000</div>
+                        <div class="pricing__tier-rate" data-payprice="strike">&#8358;45,000</div>
                         <div class="pricing__tier-total">One-time payment. Lifetime access.</div>
-                        <div class="pricing__tier-savings">Save &#8358;210,000 (82% off)</div>
+                        <div class="pricing__tier-savings" data-payprice="savings">Save &#8358;210,000 (82% off)</div>
                         <ul class="pricing__tier-features">
                             <li>3-month mentorship with private WhatsApp group (50 members max)</li>
                             <li>Implementation support</li>
@@ -1954,7 +1956,7 @@
             <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:20px;">Want to start with just one? <a href="/academy/sme/meta-ads/" style="color:var(--mia-accent); text-decoration:underline;">Meta Ads</a> · <a href="/academy/sme/tiktok-ads/" style="color:var(--mia-accent); text-decoration:underline;">TikTok Ads</a> · <a href="/academy/sme/page-optimization/" style="color:var(--mia-accent); text-decoration:underline;">Page Optimization</a> · <a href="/academy/sme/automation/" style="color:var(--mia-accent); text-decoration:underline;">Automation</a> · <a href="/academy/sme/safety-net/" style="color:var(--mia-accent); text-decoration:underline;">Safety Net</a> — ₦15,000 each</p>
 
             <!-- Pricing psychology anchors -->
-            <p class="pricing__escalation">&#8358;45,000 for a 3-month mentorship covering 5 marketing systems, with workshops, implementation support, and private WhatsApp access. That is over &#8358;255,000 in value.</p>
+            <p class="pricing__escalation"><span data-payprice="net">&#8358;45,000</span> for a 3-month mentorship covering 5 marketing systems, with workshops, implementation support, and private WhatsApp access. That is over &#8358;255,000 in value.</p>
 
             <div class="pricing__anchors">
                 <p class="pricing__anchor-item">That is less than <strong>&#8358;500/day</strong> for 3 months of mentorship. Less than what most business owners spend on <strong>one week of boosted posts</strong> that bring nothing.</p>
@@ -1972,7 +1974,7 @@
                     Agency retainer (reports you can't read)
                 </div>
                 <div class="pricing__compare-item pricing__compare-item--this">
-                    <strong>&#8358;45,000</strong>
+                    <strong data-payprice="strike">&#8358;45,000</strong>
                     Complete marketing system + community + workshop
                 </div>
             </div>
@@ -2112,7 +2114,7 @@
     <section class="final-cta">
         <div class="container">
             <h2 class="final-cta__headline">Get The Complete Online <span class="highlight">Marketing System</span></h2>
-            <p class="final-cta__sub">&#8358;45,000 for a 3-month mentorship covering 5 marketing systems, with workshops, implementation support, and private WhatsApp access. That is over &#8358;255,000 in value.</p>
+            <p class="final-cta__sub"><span data-payprice="net">&#8358;45,000</span> for a 3-month mentorship covering 5 marketing systems, with workshops, implementation support, and private WhatsApp access. That is over &#8358;255,000 in value.</p>
             <div class="final-cta__buttons" id="finalCtas">
                 <a href="https://selar.com/onlinemarketingbundle?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener">Join the Mentorship &mdash; &#8358;45,000</a>
             </div>
@@ -2126,7 +2128,7 @@
             <div class="sticky-bar__price">
                 <div>
                     <span class="sticky-bar__was">&#8358;155,000+</span>
-                    <span class="sticky-bar__now">&#8358;45,000</span>
+                    <span class="sticky-bar__now" data-payprice="strike">&#8358;45,000</span>
                     <span class="sticky-bar__label">Only <span class="spots-count">48</span> of 50 spots remaining</span>
                 </div>
             </div>
@@ -2161,7 +2163,7 @@
             <p class="exit-modal__text">Boosting posts. Paying influencers. Replying to DMs at midnight. Praying for sales.</p>
             <p class="exit-modal__text" style="margin-top:8px; margin-bottom:12px;">If you make only 20 sales a day at &#8358;30,000 each, that's &#8358;600,000 a day, &#8358;18 million a month. Five workshops and three months of mentorship is what gets you there.</p>
             <p class="exit-modal__text" style="margin-top:12px; margin-bottom:12px;">In the last hour:<br><span class="exit-name"></span> got the mentorship.<br><span class="exit-name"></span> is at checkout.<br><span class="exit-name"></span> just paid.</p>
-            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;">&#8358;45,000. Lock it in today.</p>
+            <p class="exit-modal__text" style="font-weight:600; margin-bottom:16px;"><span data-payprice="net">&#8358;45,000</span>. Lock it in today.</p>
             <a href="https://selar.com/onlinemarketingbundle?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-accent" target="_blank" rel="noopener" style="width:100%;margin-bottom:10px;">Get the Marketing Mentorship, &#8358;45,000</a>
             <a href="https://wa.me/2348180322812?text=Hi%20James%2C%20I'm%20trying%20to%20buy%20the%20Marketing%20Mentorship%20but%20I'm%20having%20a%20payment%20issue.%20Here's%20what's%20happening%3A%20" target="_blank" rel="noopener" style="display:block; text-align:center; font-size:0.85rem; color:var(--text-light); margin-bottom:12px; text-decoration:underline;">Trouble paying? WhatsApp us</a>
             <button class="exit-modal__skip" id="exitSkip">Not today</button>
