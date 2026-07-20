@@ -9,6 +9,7 @@ Disallow: /academy/dime/class-info/
 Disallow: /academy/dime/confirmed-info/
 Disallow: /academy/dime/webinar-info/
 Disallow: /academy/dime/replay-info/
+Disallow: /academy/dime/webinar-test/
 
 Sitemap: https://marketinginaction.xyz/sitemap.xml
 Sitemap: https://marketinginaction.xyz/sitemap-main.xml
