@@ -1529,14 +1529,44 @@
                 <p style="text-align:center; font-size:0.85rem; color:var(--text-muted); margin-top:18px;">Come with a pen and paper. This is a working class, not a motivational talk. See you in the group. &#128293;</p>
             </div>
 
-            <!-- EVERGREEN INTERSTITIAL (default, no ?cohort) -->
-            <div id="evergreenConfirm" style="display:none; max-width:520px; margin:0 auto; text-align:center;">
-                <span class="section-label">You're in</span>
-                <h1 class="section-title">Your class is starting now &#127881;</h1>
-                <p class="section-sub">Before your class begins: make sure your sound is on, close other browser tabs, and find a quiet place with no distractions. Grab a pen and paper. It starts in a few seconds.</p>
-                <div style="font-size:2.2rem; font-weight:750; color:var(--primary-dark); margin:14px 0;">Starting in <span id="countdown">15</span>&hellip;</div>
-                <a href="/academy/dime/webinar-info/" id="startNow" class="btn btn-accent" style="justify-content:center;">Start My Class Now &rarr;</a>
-                <p style="font-size:0.82rem; color:var(--text-muted); margin-top:14px;">We have also emailed your access link, so you can come back if you get interrupted.</p>
+            <!-- EVERGREEN CONFIRMATION (default, no ?cohort): two options, no forced redirect -->
+            <div id="evergreenConfirm" style="display:none; max-width:560px; margin:0 auto;">
+
+                <!-- STATE 1: choose -->
+                <div id="evChoose">
+                    <div style="text-align:center; margin-bottom:22px;">
+                        <span class="section-label">You're registered</span>
+                        <h1 class="section-title">You're in! &#127881; Now do these two things.</h1>
+                        <p class="section-sub">Most people register for something like this and never watch it. That is exactly why they stay broke. You are not most people.</p>
+                    </div>
+
+                    <div style="background:var(--white); border:2px solid var(--primary-dark); border-radius:var(--radius-md); padding:22px 24px; margin-bottom:16px; box-shadow:var(--shadow-card);">
+                        <div style="font-weight:750; color:var(--primary-dark); margin-bottom:6px;">Step 1 &mdash; Watch the class now</div>
+                        <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:12px;">Watch the whole thing while you are here and serious. The people who make money are the ones who actually sit and watch. The ones who save it for &ldquo;later&rdquo; never do.</p>
+                        <p style="font-size:0.95rem; font-style:italic; text-decoration:underline; text-underline-offset:3px; color:var(--primary-dark); margin:0 0 14px;">All you need is one digital product, built once with AI, sold forever. $2,000 a month.</p>
+                        <a href="/academy/dime/webinar-info/" class="btn btn-accent" style="width:100%; justify-content:center;">Watch the Class Now &rarr;</a>
+                    </div>
+
+                    <div style="background:var(--white); border:1px solid var(--border); border-radius:var(--radius-md); padding:20px 24px; margin-bottom:16px;">
+                        <div style="font-weight:750; color:var(--primary-dark); margin-bottom:6px;">Step 2 &mdash; Join the Class WhatsApp Group</div>
+                        <p style="font-size:0.92rem; color:var(--text-muted); margin-bottom:14px;">Your class link is in the group description, and it is where you reach me directly. The group is only for people who watch the webinar and have committed to joining the DIME program this week.</p>
+                        <a href="https://chat.whatsapp.com/F3cCeO9C4W6EYsBynYL8Jn" target="_blank" rel="noopener" id="evJoinGroup" class="btn" style="background:transparent; border:1.5px solid #25d366; color:#128c3e; width:100%; justify-content:center;">Join the WhatsApp Group &rarr;</a>
+                        <p style="font-size:0.78rem; color:var(--text-muted); text-align:center; margin:10px 0 0;">Save my number as "MIA Academy" so you see my updates.</p>
+                    </div>
+
+                    <p style="text-align:center; font-size:0.9rem; color:var(--text-muted); margin-top:14px;">The webinar link is also in your email. But don't wait for later, watch it now.</p>
+                </div>
+
+                <!-- STATE 2: ready to watch (after joining the group) -->
+                <div id="evReady" style="display:none; text-align:center;">
+                    <span class="section-label">You're in the group &#9989;</span>
+                    <h1 class="section-title">You're in. Now let's make it count.</h1>
+                    <p class="section-sub">That group is for people who actually take action, not spectators. Inside, I keep asking two things: have you watched the webinar, and have you joined DIME? If you are not planning to, you will be asked to leave. So start the way you mean to continue. Your class is starting.</p>
+                    <div id="evCountWrap" style="font-size:2.2rem; font-weight:750; color:var(--primary-dark); margin:14px 0;">Starting in <span id="evCountdown">15</span>&hellip;</div>
+                    <a href="/academy/dime/webinar-info/" class="btn btn-accent" style="justify-content:center;">Start My Class Now &rarr;</a>
+                    <div style="margin-top:12px;"><button type="button" id="evCancel" style="background:none; border:none; color:var(--text-muted); font-size:0.85rem; text-decoration:underline; cursor:pointer;">Hold on, not yet</button></div>
+                </div>
+
             </div>
 
         </div>
@@ -1547,15 +1577,34 @@
       document.querySelectorAll('.year').forEach(function(e){ e.textContent = new Date().getFullYear(); });
       try { if (typeof fbq === 'function') fbq('track','ViewContent',{content_name:'DIME Registration Confirmed'}); } catch(e){}
       (function(){
-        var LIVE_END = new Date('2026-06-26T20:30:00+01:00').getTime(); // keep in sync with the opt-in page's cutover. After this, cohort links fall back to evergreen.
         var cohort=(new URLSearchParams(window.location.search).get('cohort')||'').trim();
-        if (cohort && Date.now() < LIVE_END) {
+        if (cohort) {
+          // LIVE cohort confirmation (group + date). No date cap: a ?cohort= link always shows live mode.
           var live=document.getElementById('liveConfirm'); if(live) live.style.display='block';
           var cd=document.getElementById('classDate'); if(cd) cd.textContent=({june26:'Friday, June 26'}[cohort]||cohort);
         } else {
+          // EVERGREEN: two options, no forced redirect. Joining the group swaps to a cancellable countdown to the class.
           var ev=document.getElementById('evergreenConfirm'); if(ev) ev.style.display='block';
-          var n=15, el=document.getElementById('countdown');
-          var t=setInterval(function(){ n--; if(el) el.textContent=n; if(n<=0){ clearInterval(t); window.location.href='/academy/dime/webinar-info/'; } }, 1000);
+          var joined=false, timer=null, swapped=false;
+          var joinBtn=document.getElementById('evJoinGroup');
+          if(joinBtn){ joinBtn.addEventListener('click', function(){ joined=true; }); }
+          function showReady(){
+            swapped=true;
+            var c=document.getElementById('evChoose'); if(c) c.style.display='none';
+            var r=document.getElementById('evReady'); if(r) r.style.display='block';
+            var n=15, el=document.getElementById('evCountdown'); if(el) el.textContent=n;
+            timer=setInterval(function(){ n--; if(el) el.textContent=n; if(n<=0){ clearInterval(timer); window.location.href='/academy/dime/webinar-info/'; } }, 1000);
+          }
+          // Swap to the "ready" state when they return from WhatsApp (mobile app switch back, or desktop tab return).
+          document.addEventListener('visibilitychange', function(){
+            if(joined && !swapped && document.visibilityState==='visible'){ showReady(); }
+          });
+          var cancelBtn=document.getElementById('evCancel');
+          if(cancelBtn){ cancelBtn.addEventListener('click', function(){
+            if(timer) clearInterval(timer);
+            var w=document.getElementById('evCountWrap'); if(w) w.style.display='none';
+            cancelBtn.style.display='none';
+          }); }
         }
       })();
     </script>
