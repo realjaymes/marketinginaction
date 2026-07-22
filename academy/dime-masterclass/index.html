@@ -1488,7 +1488,7 @@
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- BUILD NOTE: checkout = https://selar.com/dimemasterclass (DIME ₦45,000, no coupon — DIMEWEBINAR is webinar-only). Lead capture: buy buttons carry ?add_to_cart=1&email=&fullname=&mobile= and are intercepted by the Prefill (lead-capture) Modal at the bottom of the page (collects name/email/phone → logs to the shared Sheet endpoint + Lead pixel → redirects to Selar prefilled). Same pattern as bundle/meta-ads pages. SHEET_URL in the modal script can be swapped if DIME needs its own sheet. -->
+    <!-- BUILD NOTE: checkout = https://selar.com/dimemasterclass (DIME Masterclass = ₦10,000 tripwire, no coupon. The full DIME program is a separate ₦45,000 product at selar.com/digitalincomemadeeasy; the DIMEWEBINAR coupon is webinar-funnel-only and does NOT apply on this page.) Lead capture: buy buttons carry ?add_to_cart=1&email=&fullname=&mobile= and are intercepted by the Prefill (lead-capture) Modal at the bottom of the page (collects name/email/phone → logs to the shared Sheet endpoint + Lead pixel → redirects to Selar prefilled). Same pattern as bundle/meta-ads pages. SHEET_URL in the modal script can be swapped if DIME needs its own sheet. -->
 
     <!-- ANNOUNCEMENT BAR -->
     <div class="announcement-bar">
@@ -1522,7 +1522,7 @@
 
             <div class="hero__ctas" id="heroCtas">
                 <a href="https://selar.com/dimemasterclass?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="btn btn-accent js-buy" target="_blank" rel="noopener">Get the Masterclass &mdash; &#8358;10,000</a>
-                <a href="#proof" class="btn btn-outline">See What's Inside</a>
+                <a href="#watch" class="btn btn-outline">See How It Works</a>
             </div>
 
             <div class="hero__social-proof">
@@ -1531,6 +1531,26 @@
             <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:8px; font-size:0.8rem; color:rgba(255,255,255,0.45);">
                 <span>&#x1F512; Secure checkout (Selar &amp; Paystack)</span>
                 <span>&#x1F30D; Sell to buyers anywhere</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- WATCH-FIRST VIDEO (8-min DIME machine walkthrough — proof framing, same Bunny video as the ₦45K page #see-inside) -->
+    <section id="watch" style="background:var(--mia-background); padding:64px 0;">
+        <div class="container text-center">
+            <span class="section-label">Watch first</span>
+            <h2 class="section-title">Watch Me Explain the Whole Thing in 8 Minutes</h2>
+            <p class="section-sub">Before you decide, watch this. I walk you through exactly how the DIME machine works &mdash; the ready-made product you promote, how AI makes your content for you, and how you get paid on every sale. No long webinar. Eight minutes, then decide.</p>
+        </div>
+        <div class="container">
+            <div style="max-width:760px; margin:0 auto;">
+                <div style="position:relative; padding-bottom:56.25%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);">
+                    <iframe src="https://iframe.mediadelivery.net/embed/685418/21ccd46f-a08f-468f-83d0-87e0f42c7bc5?autoplay=false&preload=true&responsive=true" title="DIME &mdash; how the machine works (8-minute walkthrough)" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe>
+                </div>
+                <div style="text-align:center; margin-top:24px;">
+                    <a href="https://selar.com/dimemasterclass?add_to_cart=1&amp;email=&amp;fullname=&amp;mobile=" class="btn btn-accent js-buy" target="_blank" rel="noopener">Get the Masterclass &mdash; &#8358;10,000</a>
+                    <div style="font-size:0.8rem; color:var(--text-muted); margin-top:12px;">&#x1F512; Secure checkout (Selar &amp; Paystack) &middot; 30-Day First-Sale Guarantee</div>
+                </div>
             </div>
         </div>
     </section>
