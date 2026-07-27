@@ -2073,7 +2073,7 @@
             var idx=href.indexOf('&email=');
             prefillUrl=idx>-1?href.substring(0,idx):href;
             document.getElementById('prefillForm').reset();
-            document.getElementById('prefillModal').classList.add('open');
+            var _ml;try{_ml=JSON.parse(localStorage.getItem('mia_lead')||'null');}catch(_e){}var _qp=new URLSearchParams(location.search);var _qe=(_qp.get('email')||_qp.get('lead')||'').trim();if((_ml&&_ml.email)||_qe){document.getElementById('prefillName').value=(_ml&&_ml.name)||_qp.get('fullname')||_qp.get('name')||'';document.getElementById('prefillEmail').value=(_ml&&_ml.email)||_qe;document.getElementById('prefillPhone').value=(_ml&&_ml.phone)||'';submitPrefill(e);return;}document.getElementById('prefillModal').classList.add('open');
             var eid='atc_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','AddToCart',{content_name:'DIME',value:45000,currency:'NGN'},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('AddToCart',{content_id:'dime',content_name:'DIME',value:45000,currency:'NGN'});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'add_to_cart',event_id:eid});
             document.body.style.overflow='hidden';
             setTimeout(function(){document.getElementById('prefillName').focus();},100);
@@ -2087,7 +2087,7 @@
             e.preventDefault();
             var name=document.getElementById('prefillName').value.trim();
             var email=document.getElementById('prefillEmail').value.trim();
-            var phone=document.getElementById('prefillPhone').value.trim();
+            var phone=document.getElementById('prefillPhone').value.trim();if(email){try{localStorage.setItem('mia_lead',JSON.stringify({name:name,email:email,phone:phone}));}catch(_e){}}
             var url=prefillUrl+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name);
             if(phone){phone=phone.replace(/\D/g,'');if(phone.startsWith('234'))phone=phone.substring(3);if(phone.startsWith('0'))phone=phone.substring(1);phone='234'+phone;url+='&mobile=0'+phone.substring(3);}
             var productName='DIME – Digital Income Made Easy';var productValue=45000;
