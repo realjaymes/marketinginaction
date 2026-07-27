@@ -74,10 +74,25 @@
             "@type": "Offer",
             "price": "10000",
             "priceCurrency": "NGN",
-            "availability": "https://schema.org/InStock"
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "Marketing In Action" },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "businessDays": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0 }
+                },
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "NGN" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "NG" }
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "NG",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
         },
         "brand": {
-            "@type": "Organization",
+            "@type": "Brand",
             "name": "MIA Academy"
         },
         "creator": {

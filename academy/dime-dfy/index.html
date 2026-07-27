@@ -92,7 +92,7 @@
         "name": "DIME Done-For-You",
         "description": "Done-for-you digital product creation for Nigeria and the diaspora. We find the product, build it with AI, build the high-converting funnel, and set up checkout, so you own a finished, sellable digital product in 14 days. First 5 founding spots, application-based.",
         "brand": {
-            "@type": "Organization",
+            "@type": "Brand",
             "name": "MIA Academy",
             "url": "https://marketinginaction.xyz/academy/"
         },
@@ -101,7 +101,22 @@
             "price": "350000",
             "priceCurrency": "NGN",
             "url": "https://marketinginaction.xyz/academy/dime-dfy/",
-            "availability": "https://schema.org/InStock"
+            "availability": "https://schema.org/InStock",
+            "seller": { "@type": "Organization", "name": "Marketing In Action" },
+            "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "deliveryTime": {
+                    "@type": "ShippingDeliveryTime",
+                    "businessDays": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 0 }
+                },
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "NGN" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "NG" }
+            },
+            "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "NG",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+            }
         },
         "author": {
             "@type": "Person",
