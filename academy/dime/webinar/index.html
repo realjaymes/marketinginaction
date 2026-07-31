@@ -1796,10 +1796,11 @@
         // Preserve everything already on the href (incl. ?quickcheckout=1&coupon=DIMEWEBINAR); append name+email, plus phone (local 0XXXX) when present.
         function openCheckout(u){ try{ var w=window.open(u,'_blank'); if(w){ try{ w.opener=null; }catch(e){} return; } }catch(e){} window.location.href=u; }
         function selarUrl(base, name, email, phone){ var i=base.indexOf('&email='); var u=(i>-1?base.substring(0,i):base); var s=u+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name); if(phone)s+='&mobile=0'+phone.substring(3); return s; }
-        function fireCheckout(){
-          try{ if(typeof fbq==='function') fbq('track','InitiateCheckout',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e){}
-          try{ if(typeof ttq!=='undefined') ttq.track('InitiateCheckout',{content_id:'dime',value:VALUE,currency:'NGN'}); }catch(e){}
-          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'begin_checkout', value:VALUE, currency:'NGN'});
+        function fireLead(name,email,phone){
+          var eid='lead_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);
+          try{ if(typeof fbq==='function') fbq('track','Lead',{content_name:'DIME',value:VALUE,currency:'NGN'},{eventID:eid}); }catch(e){}
+          try{ if(typeof ttq!=='undefined') ttq.track('SubmitForm',{content_id:'dime',content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e){}
+          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'generate_lead', event_id:eid, value:VALUE, currency:'NGN', lead_email:email||'', lead_name:name||'', lead_phone:phone||'', lead_product:'DIME'});
         }
         function logIntent(d){ try{ fetch(INTENT_SHEET,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:d.name||'',email:d.email||'',phone:d.phone||'',product:PRODUCT,pageUrl:location.href,source:SOURCE,event:'clicked_buy'})}); }catch(e){} }
         var pendingBase='';
@@ -1808,13 +1809,14 @@
           var a=e.target.closest('a.js-buy'); if(!a) return;
           e.preventDefault();
           var k=known();
-          if(k.email){ fireCheckout(); logIntent(k); openCheckout(selarUrl(a.href, k.name, k.email, k.phone)); return; } // known → direct
+          if(k.email){ fireLead(k.name,k.email,k.phone); logIntent(k); openCheckout(selarUrl(a.href, k.name, k.email, k.phone)); return; } // known → direct
           pendingBase=a.href; // unknown → collect first
           var form=document.getElementById('prefillForm'); if(form) form.reset();
           if(k.name){ var n=document.getElementById('prefillName'); if(n) n.value=k.name; }
           var m=document.getElementById('prefillModal'); if(m) m.classList.add('open'); document.body.style.overflow='hidden';
-          try{ if(typeof fbq==='function') fbq('track','AddToCart',{content_name:'DIME',value:VALUE,currency:'NGN'}); }catch(e2){}
-          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'add_to_cart', value:VALUE, currency:'NGN'});
+          var atcid='atc_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);
+          try{ if(typeof fbq==='function') fbq('track','AddToCart',{content_name:'DIME',value:VALUE,currency:'NGN'},{eventID:atcid}); }catch(e2){}
+          window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'add_to_cart', event_id:atcid, value:VALUE, currency:'NGN'});
           setTimeout(function(){ try{ document.getElementById('prefillName').focus(); }catch(e3){} },100);
         });
         window.closePrefill=function(){ var m=document.getElementById('prefillModal'); if(m) m.classList.remove('open'); document.body.style.overflow=''; pendingBase=''; };
@@ -1825,7 +1827,7 @@
           var phone=document.getElementById('prefillPhone').value.trim();
           if(phone){ phone=phone.replace(/\D/g,''); if(phone.startsWith('234'))phone=phone.substring(3); if(phone.startsWith('0'))phone=phone.substring(1); phone='234'+phone; }
           try{ localStorage.setItem('dime_lead', JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()})); }catch(e){} // so the next click is "known"
-          fireCheckout(); logIntent({name:name,email:email,phone:phone});
+          fireLead(name,email,phone); logIntent({name:name,email:email,phone:phone});
           var dest=selarUrl(pendingBase||DEFAULT_SELAR, name, email, phone);
           openCheckout(dest); closePrefill();
         };
