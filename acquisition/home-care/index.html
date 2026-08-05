@@ -659,8 +659,8 @@
                         if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)){err.textContent="That email doesn't look right, please double-check it.";err.style.display='block';return false;}
                         err.style.display='none';
                         var payload={
-                            niche:NICHE, clients:chosen('clients'), source:chosen('src'), adStatus:chosen('ads'),
-                            clientValue:chosen('val'), capacity:chosen('capacity'), challenge:fval('hcChallenge'), ready:chosen('ready'),
+                            niche:NICHE, jobs:chosen('clients'), source:chosen('src'), adStatus:chosen('ads'),
+                            avgValue:chosen('val'), capacity:chosen('capacity'), challenge:fval('hcChallenge'), ready:chosen('ready'),
                             fullName:name, businessName:fval('hcBusiness'), email:email, phone:phone,
                             website:fval('hcWebsite'), city:fval('hcCity'), pageUrl:location.href,
                             utmSource:utm('utm_source'), utmMedium:utm('utm_medium'), utmCampaign:utm('utm_campaign')
