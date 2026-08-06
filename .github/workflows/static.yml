@@ -66,3 +66,9 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # GitHub Pages publishes the artifact reliably, but on a slow-backend day it can take
+          # longer than the 10-min default to REPORT "built" back to the action — which then aborts
+          # with "Timeout reached" and marks a successful deploy as failed. 20 min gives the report
+          # time to arrive so those runs go green. See .github/pages-deploy-runbook.md.
+          timeout: 1200000
