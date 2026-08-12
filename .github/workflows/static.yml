@@ -14,14 +14,14 @@ permissions:
   contents: read
   pages: write
   id-token: write
-  deployments: write # needed to inspect + cancel a stuck Pages deployment (see the clear step below)
 
-# Allow only one concurrent deployment. Cancel any queued/in-progress run when a newer push arrives —
-# for a static-content deploy, the latest commit is always what should be live, and queueing causes
-# pile-ups when environment protection rules hold a run in pending state.
+# Allow one concurrent deployment. Do NOT cancel an in-progress run — a Pages deploy that is
+# mid-publish should be allowed to finish, otherwise a newer push can abort a production deploy
+# and leave the site un-updated. (This is the official GitHub Pages starter setting; changing it
+# to cancel-in-progress:true is what caused the Aug-2026 deploy failures.)
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   # Single deploy job since we're just deploying
@@ -32,32 +32,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      # A prior deploy that timed out (GitHub Pages backend queue stalls) can leave a Pages
-      # deployment stuck in-progress. Because the Pages deployment ID is keyed to the commit SHA,
-      # that zombie deployment then blocks EVERY later run — including fresh commits — with
-      # "Deployment request failed ... due to in progress deployment. Please cancel <sha> first."
-      # This best-effort step clears any such stuck deployment so one transient stall can't cascade.
-      # Runbook: .github/pages-deploy-runbook.md
-      - name: Clear any stuck in-progress Pages deployment
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPO: ${{ github.repository }}
-        run: |
-          gh api "repos/$REPO/deployments?environment=github-pages&per_page=10" \
-            --jq '.[] | [.id, .sha] | @tsv' 2>/dev/null | while IFS=$'\t' read -r id sha; do
-            st=$(gh api "repos/$REPO/deployments/$id/statuses?per_page=1" --jq '.[0].state' 2>/dev/null || echo "")
-            case "$st" in
-              in_progress|queued|pending)
-                echo "Cancelling stuck Pages deployment $sha (status=$st)"
-                gh api --method POST "repos/$REPO/pages/deployments/$sha/cancel" 2>/dev/null || true
-                ;;
-            esac
-          done
-          echo "Stuck-deployment check complete."
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -66,9 +43,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        with:
-          # GitHub Pages publishes the artifact reliably, but on a slow-backend day it can take
-          # longer than the 10-min default to REPORT "built" back to the action — which then aborts
-          # with "Timeout reached" and marks a successful deploy as failed. 20 min gives the report
-          # time to arrive so those runs go green. See .github/pages-deploy-runbook.md.
-          timeout: 1200000

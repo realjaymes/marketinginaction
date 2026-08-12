@@ -39,11 +39,17 @@ Symptom: `Deployment request failed for <newSHA> due to in progress deployment. 
 A previous stalled deploy left a zombie in-progress deployment for `<oldSHA>`. Because the Pages
 deployment ID **is** the commit SHA, that zombie blocks every later run — including fresh commits.
 
-The workflow now auto-clears this (the **Clear any stuck in-progress Pages deployment** step), so
-it should self-heal. If it ever slips through, clear it by hand:
+Clear it by hand (only if you have confirmed a real zombie via the `Please cancel <oldSHA> first`
+message — never the current run's own SHA):
 ```bash
 gh api --method POST repos/realjaymes/marketinginaction/pages/deployments/<oldSHA>/cancel
 ```
+
+> **Do not add an automated "clear stuck deployment" step back into the workflow.** That was tried
+> in Aug 2026 and it broke every deploy: at the point the step runs, the *current* run's own
+> deployment for the current commit is already `in_progress`, so the step cancelled its own deploy
+> on every push and the site stopped publishing for a week. The clean, official starter workflow
+> (no clear step, `cancel-in-progress: false`, no timeout override) is the known-good config.
 
 ## How to re-trigger (correctly)
 
@@ -73,5 +79,5 @@ gh run view "$rid" --repo realjaymes/marketinginaction --json jobs \
 |---|---|---|
 | Change is live but Actions is red | Slow report, deploy landed | None — ignore the red X |
 | `deployment_queued` until timeout | GitHub queue stall | Wait, then dispatch a fresh run |
-| `due to in progress deployment` | Zombie deployment from a prior stall | Auto-cleared now; else cancel `<oldSHA>` |
+| `due to in progress deployment` | Zombie deployment from a prior stall | Cancel `<oldSHA>` by hand (confirm it is not the current run's SHA) |
 | `Multiple artifacts named "github-pages"` | Someone hit "Re-run failed jobs" | Dispatch a fresh run instead |
