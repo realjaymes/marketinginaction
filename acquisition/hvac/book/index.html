@@ -9,7 +9,7 @@
     <meta name="description" content="Tell me what brought you here, pick a time, and we'll figure out if working together makes sense.">
     <meta name="robots" content="noindex, nofollow">
 
-    <link rel="canonical" href="https://marketinginaction.xyz/acquisition/book/">
+    <link rel="canonical" href="https://marketinginaction.xyz/acquisition/hvac/book/">
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -160,11 +160,6 @@
             font-size: 0.78rem;
             color: var(--text-muted);
             margin: 0 0 8px;
-        }
-        .book-field__optional {
-            font-weight: 400;
-            color: var(--text-muted);
-            font-size: 0.78rem;
         }
         .book-field input[type="text"],
         .book-field input[type="email"],
@@ -427,13 +422,13 @@
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="challenge">What's your biggest challenge right now? <span class="book-field__optional">(optional)</span></label>
-                            <textarea id="challenge" maxlength="800" placeholder="The lead-gen gap you can't close, the channel that stopped working, the customer pipeline that won't scale. Skip it if you're not sure, we'll cover it on the call."></textarea>
+                            <label class="book-field__label" for="challenge">What's your biggest challenge right now?</label>
+                            <textarea id="challenge" maxlength="800" placeholder="The lead-gen gap you can't close, the channel that stopped working, the customer pipeline that won't scale."></textarea>
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="goals">What are your goals for this meeting? <span class="book-field__optional">(optional)</span></label>
-                            <textarea id="goals" maxlength="800" placeholder="What does a useful 30-minute call look like for you? No pressure if you're still figuring it out."></textarea>
+                            <label class="book-field__label" for="goals">What are your goals for this meeting?</label>
+                            <textarea id="goals" maxlength="800" placeholder="What does a useful 30-minute call look like for you?"></textarea>
                         </div>
 
                         <div class="book-actions">
@@ -462,19 +457,18 @@
 
                         <div class="book-field">
                             <label class="book-field__label" for="email">Email</label>
-                            <p class="book-field__hint">Use a personal Gmail if you have one, so your Google Meet invite for the call lands where you'll see it, not in a shared business inbox.</p>
-                            <input type="email" id="email" autocomplete="email" placeholder="e.g. sarah@gmail.com">
+                            <input type="email" id="email" autocomplete="email" placeholder="e.g. sarah@yourbusiness.com">
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="phone">Mobile Phone / WhatsApp</label>
-                            <p class="book-field__hint">Your personal WhatsApp number, not an office landline.</p>
+                            <label class="book-field__label" for="phone">Phone number</label>
+                            <p class="book-field__hint">International format welcome.</p>
                             <input type="tel" id="phone" autocomplete="tel" placeholder="e.g. +1 555 123 4567">
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="website">Website URL <span class="book-field__optional">(optional)</span></label>
-                            <input type="text" id="website" autocomplete="url" placeholder="yourbusiness.com (or leave blank)">
+                            <label class="book-field__label" for="website">Website URL</label>
+                            <input type="url" id="website" autocomplete="url" placeholder="yourbusiness.com (or 'no website yet')">
                         </div>
 
                         <div class="book-actions">
@@ -543,7 +537,7 @@
             var otherText = document.getElementById('audienceOther').value.trim();
             var err = document.getElementById('step1Error');
 
-            if (!audienceSel || !adsSel || (audienceSel.value === 'other' && !otherText)) {
+            if (!audienceSel || !adsSel || !challenge || !goals || (audienceSel.value === 'other' && !otherText)) {
                 err.classList.add('show');
                 err.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
@@ -594,11 +588,11 @@
             var err = document.getElementById('step2Error');
             var btn = document.getElementById('submitBtn');
 
-            if (!name || !email || !phoneRaw || !isEmail(email)) {
+            if (!name || !email || !phoneRaw || !website || !isEmail(email)) {
                 err.classList.add('show');
                 err.textContent = !isEmail(email)
-                    ? 'Double-check your email, it doesn\'t look quite right.'
-                    : 'Please add your name, email, and phone to book.';
+                    ? 'Double-check your email — it doesn\'t look quite right.'
+                    : 'Please fill out every field before booking.';
                 err.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }

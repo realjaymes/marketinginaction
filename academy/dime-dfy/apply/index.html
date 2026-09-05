@@ -213,13 +213,19 @@
             transition: border-color var(--ease);
         }
         .book-field textarea {
-            min-height: 84px;
+            min-height: 110px;
             resize: vertical;
             line-height: 1.5;
         }
         .book-field input:focus,
         .book-field textarea:focus {
             border-color: var(--color-accent);
+        }
+        .book-field input::placeholder,
+        .book-field textarea::placeholder {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: var(--text-muted);
         }
 
         .book-radio-group {

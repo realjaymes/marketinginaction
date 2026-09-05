@@ -206,7 +206,7 @@
       <!-- Hero -->
       <section class="consulting-hero">
         <div class="container">
-          <div class="svc-hero-inner">
+          <div class="svc-hero-inner reveal-blur">
             <div class="pill">
               <span class="dot" aria-hidden="true"></span>
               Services
@@ -223,13 +223,13 @@
       <section class="section">
         <div class="container">
           <div class="svc-grid">
-            <div class="svc-card">
+            <div class="svc-card reveal-blur card-lift">
               <div class="svc-card__eyebrow">For tech companies &amp; agencies</div>
               <h2>Go-To-Market Systems</h2>
               <p>I build the positioning, GTM infrastructure, and outbound and paid systems that bring you predictable pipeline, then I run them for you. Done-for-you go-to-market for tech companies and agencies, from early-stage founders to growth-stage teams.</p>
               <a class="button button-primary" href="/consulting/">Explore Go-To-Market Systems &rarr;</a>
             </div>
-            <div class="svc-card">
+            <div class="svc-card reveal-blur card-lift">
               <div class="svc-card__eyebrow">For local, ecommerce &amp; creator businesses</div>
               <h2>Paid Acquisition</h2>
               <p>I install the paid, creative, and content systems that bring you customers and revenue predictably, then I run them for you. Done-for-you acquisition for service businesses, ecommerce brands, and online creators.</p>
@@ -393,5 +393,66 @@
       <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9341153&fmt=gif" />
     </noscript>
     <!-- End LinkedIn Insight Tag -->
+
+    <!-- Scroll-triggered reveal (blur + fade + rise), staggered per section -->
+    <script>
+      (function () {
+        var seen = new Map();
+        document.querySelectorAll(".reveal-blur").forEach(function (el) {
+          var parent = el.closest(".svc-grid, section") || el.parentElement;
+          if (!seen.has(parent)) seen.set(parent, []);
+          seen.get(parent).push(el);
+        });
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var siblings = seen.get(entry.target.closest(".svc-grid, section") || entry.target.parentElement) || [entry.target];
+              var idx = siblings.indexOf(entry.target);
+              var delay = Math.max(idx, 0) * 90;
+              setTimeout(function () {
+                entry.target.classList.add("is-visible");
+              }, delay);
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        document.querySelectorAll(".reveal-blur").forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
+
+    <!-- Card directional tilt (service cards) -->
+    <script>
+      (function () {
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) return;
+
+        var TILT_RANGE_DEG = 10;
+        var LIFT_PX = 4;
+
+        document.querySelectorAll(".svc-card").forEach(function (card) {
+          card.style.willChange = "transform";
+
+          card.addEventListener("mousemove", function (e) {
+            var rect = card.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width;
+            var y = (e.clientY - rect.top) / rect.height;
+            var rotateY = (x - 0.5) * TILT_RANGE_DEG;
+            var rotateX = (0.5 - y) * TILT_RANGE_DEG;
+            card.style.transform =
+              "translateY(-" + LIFT_PX + "px) rotateX(" + rotateX.toFixed(2) + "deg) rotateY(" + rotateY.toFixed(2) + "deg)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            card.style.transform = "";
+          });
+        });
+      })();
+    </script>
   </body>
 </html>

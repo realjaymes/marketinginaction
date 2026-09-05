@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="James Praise">
     <meta name="color-scheme" content="light only">
-    <title>Book a Strategy Call | MIA Acquisition</title>
-    <meta name="description" content="Tell me what brought you here, pick a time, and we'll figure out if working together makes sense.">
+    <title>Book a GTM Strategy Call | MIA Consulting</title>
+    <meta name="description" content="Tell me what's going on with your GTM, pick a time, and we'll figure out if working together makes sense.">
     <meta name="robots" content="noindex, nofollow">
 
-    <link rel="canonical" href="https://marketinginaction.xyz/acquisition/book/">
+    <link rel="canonical" href="https://marketinginaction.xyz/consulting/book/">
     <link rel="icon" href="/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -315,10 +315,10 @@
 
     <header class="book-header">
         <div class="container book-header__inner">
-            <a href="/acquisition/" class="book-header__logo" aria-label="MIA Acquisition — back to overview">
+            <a href="/consulting/" class="book-header__logo" aria-label="MIA Consulting — back to overview">
                 <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="book-header__logo-img">
             </a>
-            <!-- No nav links. Intentional. /acquisition is a hidden funnel surface with no siblings worth offering as exit ramps. -->
+            <!-- No nav links. Intentional. /consulting/book is a hidden funnel surface with no siblings worth offering as exit ramps. -->
         </div>
     </header>
 
@@ -329,8 +329,8 @@
             <section class="book-step active" id="step1">
                 <div class="book-card__header">
                     <span class="book-card__step">Step 1 of 2</span>
-                    <h1 class="book-card__title" id="bookTitle">Tell me what brought you here</h1>
-                    <p class="book-card__sub">Two minutes of context now means the call goes straight to what matters.</p>
+                    <h1 class="book-card__title" id="bookTitle">Tell me about your GTM right now</h1>
+                    <p class="book-card__sub">Two minutes of context now means the call goes straight to what's actually important.</p>
                 </div>
                 <div class="book-card__body">
                     <div class="book-error" id="step1Error">Please answer every required question before continuing.</div>
@@ -338,102 +338,83 @@
                     <form id="step1Form" onsubmit="goToStep2(event)" novalidate>
 
                         <div class="book-field">
-                            <span class="book-field__label">Which best describes you?</span>
-                            <div class="book-radio-group" id="audienceGroup">
+                            <span class="book-field__label">What is your role?</span>
+                            <div class="book-radio-group" id="roleGroup">
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="local-service">
-                                    <span class="book-radio__label">I run a local service business (restaurants, spas, gyms, clinics, real estate, etc.)</span>
+                                    <input type="radio" name="role" value="founder-ceo">
+                                    <span class="book-radio__label">Founder / CEO</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="ecom">
-                                    <span class="book-radio__label">I run an ecommerce or D2C brand (clothing, beauty, food, accessories, etc.)</span>
+                                    <input type="radio" name="role" value="cmo-vp-director">
+                                    <span class="book-radio__label">CMO, VP, or Director of Marketing</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="coach-creator">
-                                    <span class="book-radio__label">I'm a coach, consultant, course creator, or agency owner</span>
+                                    <input type="radio" name="role" value="head-of-marketing-growth">
+                                    <span class="book-radio__label">Head of Marketing / Growth</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="audience" value="other">
+                                    <input type="radio" name="role" value="other">
                                     <span class="book-radio__label">Other</span>
                                 </label>
                             </div>
-                            <div class="book-other-input" id="otherWrap">
-                                <input type="text" id="audienceOther" placeholder="Tell me in a few words" maxlength="120">
+                            <div class="book-other-input" id="roleOtherWrap">
+                                <input type="text" id="roleOther" placeholder="Tell me your role" maxlength="120">
                             </div>
                         </div>
 
                         <div class="book-field">
-                            <span class="book-field__label">Approximate monthly revenue <span style="font-weight:400;color:var(--text-muted);font-size:0.78rem;">(optional)</span></span>
-                            <div class="book-radio-group" id="revenueGroup">
+                            <span class="book-field__label">What's your company's current growth stage?</span>
+                            <div class="book-radio-group" id="stageGroup">
                                 <label class="book-radio">
-                                    <input type="radio" name="revenue" value="under-5k">
-                                    <span class="book-radio__label">Under $5K</span>
+                                    <input type="radio" name="stage" value="bootstrapped">
+                                    <span class="book-radio__label">Bootstrapped</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="revenue" value="5k-15k">
-                                    <span class="book-radio__label">$5K – $15K</span>
+                                    <input type="radio" name="stage" value="early-stage">
+                                    <span class="book-radio__label">Early-stage startup (Pre-Seed, Seed)</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="revenue" value="15k-50k">
-                                    <span class="book-radio__label">$15K – $50K</span>
+                                    <input type="radio" name="stage" value="scaling">
+                                    <span class="book-radio__label">Scaling startup (Series A/B)</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="revenue" value="50k-150k">
-                                    <span class="book-radio__label">$50K – $150K</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="revenue" value="150k-plus">
-                                    <span class="book-radio__label">$150K+</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="revenue" value="prefer-not">
-                                    <span class="book-radio__label">Prefer not to share</span>
+                                    <input type="radio" name="stage" value="established">
+                                    <span class="book-radio__label">Established company (Series C+)</span>
                                 </label>
                             </div>
                         </div>
 
                         <div class="book-field">
-                            <span class="book-field__label">Are you running paid ads currently?</span>
-                            <div class="book-radio-group" id="adsGroup">
+                            <span class="book-field__label">What is your monthly budget? <span class="book-field__optional">(optional)</span></span>
+                            <div class="book-radio-group" id="budgetGroup">
                                 <label class="book-radio">
-                                    <input type="radio" name="ads" value="not-running">
-                                    <span class="book-radio__label">Not running ads</span>
+                                    <input type="radio" name="budget" value="1k-5k">
+                                    <span class="book-radio__label">$1,000 – $5,000/month</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="ads" value="running-under-500">
-                                    <span class="book-radio__label">Running ads, under $500/mo</span>
+                                    <input type="radio" name="budget" value="5k-10k">
+                                    <span class="book-radio__label">$5,000 – $10,000/month</span>
                                 </label>
                                 <label class="book-radio">
-                                    <input type="radio" name="ads" value="running-500-1500">
-                                    <span class="book-radio__label">Running ads, $500 – $1.5K/mo</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="ads" value="running-1500-5k">
-                                    <span class="book-radio__label">Running ads, $1.5K – $5K/mo</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="ads" value="running-5k-15k">
-                                    <span class="book-radio__label">Running ads, $5K – $15K/mo</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="ads" value="running-15k-plus">
-                                    <span class="book-radio__label">Running ads, $15K+/mo</span>
-                                </label>
-                                <label class="book-radio">
-                                    <input type="radio" name="ads" value="used-to-stopped">
-                                    <span class="book-radio__label">Used to run ads, stopped</span>
+                                    <input type="radio" name="budget" value="10k-plus">
+                                    <span class="book-radio__label">$10,000+/month</span>
                                 </label>
                             </div>
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="challenge">What's your biggest challenge right now? <span class="book-field__optional">(optional)</span></label>
-                            <textarea id="challenge" maxlength="800" placeholder="The lead-gen gap you can't close, the channel that stopped working, the customer pipeline that won't scale. Skip it if you're not sure, we'll cover it on the call."></textarea>
+                            <label class="book-field__label" for="challenge">What's your biggest GTM challenge right now? <span class="book-field__optional">(optional)</span></label>
+                            <textarea id="challenge" maxlength="800" placeholder="Your offer or message isn't landing, growth feels like random bets, or you can't tell what's actually driving revenue. Skip it if you're not sure, we'll cover it on the call."></textarea>
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="goals">What are your goals for this meeting? <span class="book-field__optional">(optional)</span></label>
+                            <label class="book-field__label" for="goals">What are your goals for this call? <span class="book-field__optional">(optional)</span></label>
                             <textarea id="goals" maxlength="800" placeholder="What does a useful 30-minute call look like for you? No pressure if you're still figuring it out."></textarea>
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="heardAbout">How exactly did you hear about me? <span class="book-field__optional">(optional)</span></label>
+                            <input type="text" id="heardAbout" maxlength="200" placeholder="e.g. LinkedIn, referral, newsletter, Google">
                         </div>
 
                         <div class="book-actions">
@@ -461,20 +442,25 @@
                         </div>
 
                         <div class="book-field">
-                            <label class="book-field__label" for="email">Email</label>
-                            <p class="book-field__hint">Use a personal Gmail if you have one, so your Google Meet invite for the call lands where you'll see it, not in a shared business inbox.</p>
-                            <input type="email" id="email" autocomplete="email" placeholder="e.g. sarah@gmail.com">
+                            <label class="book-field__label" for="email">Work email</label>
+                            <p class="book-field__hint">We'll send your calendar invite here.</p>
+                            <input type="email" id="email" autocomplete="email" placeholder="e.g. sarah@company.com">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="company">Company name</label>
+                            <input type="text" id="company" autocomplete="organization" placeholder="e.g. Acme Inc.">
+                        </div>
+
+                        <div class="book-field">
+                            <label class="book-field__label" for="website">Company website <span class="book-field__optional">(optional)</span></label>
+                            <input type="text" id="website" autocomplete="url" placeholder="yourcompany.com (leave blank if pre-launch)">
                         </div>
 
                         <div class="book-field">
                             <label class="book-field__label" for="phone">Mobile Phone / WhatsApp</label>
-                            <p class="book-field__hint">Your personal WhatsApp number, not an office landline.</p>
+                            <p class="book-field__hint">For quick scheduling notes, not spam.</p>
                             <input type="tel" id="phone" autocomplete="tel" placeholder="e.g. +1 555 123 4567">
-                        </div>
-
-                        <div class="book-field">
-                            <label class="book-field__label" for="website">Website URL <span class="book-field__optional">(optional)</span></label>
-                            <input type="text" id="website" autocomplete="url" placeholder="yourbusiness.com (or leave blank)">
                         </div>
 
                         <div class="book-actions">
@@ -491,8 +477,8 @@
 
     <script>
     (function() {
-        var CALENDAR_URL = 'https://calendar.app.google/HNk2xuhKLamQvKaQ9';
-        var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwDncP_WEi4nLgIo9-hVQGy2JV58_I9WlHYkPxY3zoPDh1wrQ2PAKEY_sm1CoiD9VUU/exec';
+        var CALENDAR_URL = 'https://calendar.app.google/tkKyX6CwcxiWMSxB9';
+        var SHEET_URL = 'https://script.google.com/macros/s/AKfycbwwj0MhEeKuJCPzUT2yY1TkLw_9xM4Wmo5pd6MDh_Gs0oJ9JWryMwOqzeVppZx5ZVTU/exec';
 
         function getUtm(name) {
             try {
@@ -501,12 +487,12 @@
         }
 
         var captured = {
-            audience: '', audienceOther: '',
-            revenue: '', ads: '',
-            challenge: '', goals: ''
+            role: '', roleOther: '',
+            stage: '', budget: '',
+            challenge: '', goals: '', heardAbout: ''
         };
 
-        // Radio highlight + Other reveal for the audience group
+        // Radio highlight + Other reveal for the role group
         function refreshRadioStyles(groupId, otherWrapId) {
             document.querySelectorAll('#' + groupId + ' .book-radio').forEach(function(el) {
                 var input = el.querySelector('input');
@@ -521,41 +507,43 @@
             }
         }
 
-        // Wire all three radio groups
-        document.querySelectorAll('input[name="audience"]').forEach(function(r) {
-            r.addEventListener('change', function() { refreshRadioStyles('audienceGroup', 'otherWrap'); });
+        // Wire all radio groups
+        document.querySelectorAll('input[name="role"]').forEach(function(r) {
+            r.addEventListener('change', function() { refreshRadioStyles('roleGroup', 'roleOtherWrap'); });
         });
-        document.querySelectorAll('input[name="revenue"]').forEach(function(r) {
-            r.addEventListener('change', function() { refreshRadioStyles('revenueGroup', null); });
+        document.querySelectorAll('input[name="stage"]').forEach(function(r) {
+            r.addEventListener('change', function() { refreshRadioStyles('stageGroup', null); });
         });
-        document.querySelectorAll('input[name="ads"]').forEach(function(r) {
-            r.addEventListener('change', function() { refreshRadioStyles('adsGroup', null); });
+        document.querySelectorAll('input[name="budget"]').forEach(function(r) {
+            r.addEventListener('change', function() { refreshRadioStyles('budgetGroup', null); });
         });
 
         // Step 1 validation + advance
         window.goToStep2 = function(e) {
             e.preventDefault();
-            var audienceSel = document.querySelector('input[name="audience"]:checked');
-            var adsSel = document.querySelector('input[name="ads"]:checked');
-            var revenueSel = document.querySelector('input[name="revenue"]:checked'); // optional
+            var roleSel = document.querySelector('input[name="role"]:checked');
+            var stageSel = document.querySelector('input[name="stage"]:checked');
+            var budgetSel = document.querySelector('input[name="budget"]:checked'); // optional
             var challenge = document.getElementById('challenge').value.trim();
             var goals = document.getElementById('goals').value.trim();
-            var otherText = document.getElementById('audienceOther').value.trim();
+            var heardAbout = document.getElementById('heardAbout').value.trim();
+            var otherText = document.getElementById('roleOther').value.trim();
             var err = document.getElementById('step1Error');
 
-            if (!audienceSel || !adsSel || (audienceSel.value === 'other' && !otherText)) {
+            if (!roleSel || !stageSel || (roleSel.value === 'other' && !otherText)) {
                 err.classList.add('show');
                 err.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
             err.classList.remove('show');
 
-            captured.audience = audienceSel.value;
-            captured.audienceOther = audienceSel.value === 'other' ? otherText : '';
-            captured.revenue = revenueSel ? revenueSel.value : '';
-            captured.ads = adsSel.value;
+            captured.role = roleSel.value;
+            captured.roleOther = roleSel.value === 'other' ? otherText : '';
+            captured.stage = stageSel.value;
+            captured.budget = budgetSel ? budgetSel.value : '';
             captured.challenge = challenge;
             captured.goals = goals;
+            captured.heardAbout = heardAbout;
 
             document.getElementById('step1').classList.remove('active');
             document.getElementById('step2').classList.add('active');
@@ -589,16 +577,17 @@
             e.preventDefault();
             var name = document.getElementById('name').value.trim();
             var email = document.getElementById('email').value.trim();
-            var phoneRaw = document.getElementById('phone').value.trim();
+            var company = document.getElementById('company').value.trim();
             var website = document.getElementById('website').value.trim();
+            var phoneRaw = document.getElementById('phone').value.trim();
             var err = document.getElementById('step2Error');
             var btn = document.getElementById('submitBtn');
 
-            if (!name || !email || !phoneRaw || !isEmail(email)) {
+            if (!name || !email || !company || !phoneRaw || !isEmail(email)) {
                 err.classList.add('show');
                 err.textContent = !isEmail(email)
                     ? 'Double-check your email, it doesn\'t look quite right.'
-                    : 'Please add your name, email, and phone to book.';
+                    : 'Please add your name, email, company, and phone to book.';
                 err.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
@@ -609,71 +598,67 @@
             btn.disabled = true;
             btn.textContent = 'Booking…';
 
-            var audienceLabels = {
-                'local-service':  'Local service business',
-                'ecom':           'Ecommerce / D2C brand',
-                'coach-creator':  'Coach, consultant, course creator, or agency',
-                'other':          'Other'
+            var roleLabels = {
+                'founder-ceo':               'Founder / CEO',
+                'cmo-vp-director':           'CMO, VP, or Director of Marketing',
+                'head-of-marketing-growth':  'Head of Marketing / Growth',
+                'other':                     'Other'
             };
 
-            var revenueLabels = {
-                'under-5k':    'Under $5K',
-                '5k-15k':      '$5K – $15K',
-                '15k-50k':     '$15K – $50K',
-                '50k-150k':    '$50K – $150K',
-                '150k-plus':   '$150K+',
-                'prefer-not':  'Prefer not to share'
+            var stageLabels = {
+                'bootstrapped':  'Bootstrapped',
+                'early-stage':   'Early-stage startup (Pre-Seed, Seed)',
+                'scaling':       'Scaling startup (Series A/B)',
+                'established':   'Established company (Series C+)'
             };
 
-            var adsLabels = {
-                'not-running':         'Not running ads',
-                'running-under-500':   'Running ads, under $500/mo',
-                'running-500-1500':    'Running ads, $500 – $1.5K/mo',
-                'running-1500-5k':     'Running ads, $1.5K – $5K/mo',
-                'running-5k-15k':      'Running ads, $5K – $15K/mo',
-                'running-15k-plus':    'Running ads, $15K+/mo',
-                'used-to-stopped':     'Used to run ads, stopped'
+            var budgetLabels = {
+                '1k-5k':     '$1,000 - $5,000/month',
+                '5k-10k':    '$5,000 - $10,000/month',
+                '10k-plus':  '$10,000+/month'
             };
 
             var payload = {
-                audienceType:   audienceLabels[captured.audience] || captured.audience,
-                audienceOther:  captured.audienceOther,
-                monthlyRevenue: revenueLabels[captured.revenue] || captured.revenue,
-                adStatus:       adsLabels[captured.ads] || captured.ads,
-                challenge:      captured.challenge,
-                goals:          captured.goals,
-                fullName:       name,
-                email:          email,
-                phone:          phone,
-                websiteUrl:     website,
-                pageUrl:        window.location.href,
-                utmSource:      getUtm('utm_source'),
-                utmMedium:      getUtm('utm_medium'),
-                utmCampaign:    getUtm('utm_campaign')
+                role:                roleLabels[captured.role] || captured.role,
+                roleOther:           captured.roleOther,
+                growthStage:         stageLabels[captured.stage] || captured.stage,
+                monthlyBudget:       budgetLabels[captured.budget] || captured.budget,
+                challenge:           captured.challenge,
+                goals:               captured.goals,
+                heardAbout:          captured.heardAbout,
+                fullName:            name,
+                email:               email,
+                companyName:         company,
+                companyWebsite:      website,
+                phone:               phone,
+                pageUrl:             window.location.href,
+                utmSource:           getUtm('utm_source'),
+                utmMedium:           getUtm('utm_medium'),
+                utmCampaign:         getUtm('utm_campaign')
             };
 
             // Pixels
-            var eid = 'acq_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            var eid = 'consulting_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
             try {
                 if (typeof fbq === 'function') {
-                    fbq('track', 'Lead', { content_name: 'MIA Acquisition Booking', content_category: 'acquisition' }, { eventID: eid });
+                    fbq('track', 'Lead', { content_name: 'MIA Consulting Booking', content_category: 'consulting' }, { eventID: eid });
                 }
             } catch(_) {}
             try {
                 if (typeof ttq !== 'undefined') {
-                    ttq.track('SubmitForm', { content_id: 'acquisition', content_name: 'MIA Acquisition Booking' });
+                    ttq.track('SubmitForm', { content_id: 'consulting', content_name: 'MIA Consulting Booking' });
                 }
             } catch(_) {}
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
-                event: 'acquisition_form_submitted',
+                event: 'consulting_form_submitted',
                 event_id: eid,
                 lead_email: email,
                 lead_name: name,
                 lead_phone: phone,
-                audience_type: payload.audienceType,
-                monthly_revenue: payload.monthlyRevenue,
-                ad_status: payload.adStatus
+                role: payload.role,
+                growth_stage: payload.growthStage,
+                monthly_budget: payload.monthlyBudget
             });
 
             // Sheet write — fire-and-forget, no-cors

@@ -166,6 +166,7 @@
             gap: var(--space-lg);
             max-width: 980px;
             margin: 0 auto;
+            perspective: 1000px;
         }
         @media (min-width: 820px) {
             .acq-fit-grid { grid-template-columns: 1fr 1fr; }
@@ -249,6 +250,7 @@
             gap: var(--space-lg);
             max-width: 1080px;
             margin: 0 auto;
+            perspective: 1000px;
         }
         @media (min-width: 900px) {
             .acq-process-grid { grid-template-columns: repeat(3, 1fr); }
@@ -306,6 +308,7 @@
             gap: var(--space-lg);
             max-width: 1080px;
             margin: 0 auto var(--space-2xl);
+            perspective: 1000px;
         }
         @media (min-width: 820px) {
             .acq-stats { grid-template-columns: repeat(2, 1fr); }
@@ -462,6 +465,7 @@
             margin: 0 auto;
             display: grid;
             gap: var(--space-lg);
+            perspective: 1000px;
         }
         @media (min-width: 860px) {
             .acq-mech-stack { grid-template-columns: repeat(3, 1fr); align-items: start; }
@@ -553,7 +557,7 @@
 
         <!-- Section 1: Hero -->
         <div class="container">
-            <div class="acq-hero-inner">
+            <div class="acq-hero-inner reveal-blur">
                 <div class="pill">
                     <span class="dot" aria-hidden="true"></span>
                     Predictable customer acquisition for growing businesses
@@ -589,13 +593,13 @@
     <!-- Section 1.5: Trusted By logo strip -->
     <section class="section consulting-under-hero">
         <div class="container">
-            <div class="consulting-logos-head centered-section">
+            <div class="consulting-logos-head centered-section reveal-blur">
                 <p class="muted" style="margin-bottom: var(--space-sm)">
                     Trusted by 30+ brands and businesses across North America and Europe.
                 </p>
             </div>
 
-            <div class="consulting-marquee" aria-label="Company logos marquee">
+            <div class="consulting-marquee reveal-blur" aria-label="Company logos marquee">
                 <div class="consulting-marquee-track">
                     <span>Hank Robotics</span>
                     <span>Komfot Health</span>
@@ -633,7 +637,7 @@
     <!-- Section 2: The problem + who it's for (merged) -->
     <section class="section">
         <div class="container">
-            <div class="acq-head">
+            <div class="acq-head reveal-blur">
                 <h2>Right now, your growth isn't in your hands.</h2>
             </div>
 
@@ -642,7 +646,7 @@
             </p>
 
             <div class="acq-fit-grid">
-                <div class="acq-fit-card acq-fit-card--yes">
+                <div class="acq-fit-card acq-fit-card--yes reveal-blur card-lift">
                     <h3>This is for you if</h3>
                     <ul class="acq-fit-list">
                         <li>You run a service business, ecommerce brand, or online business and you're tired of customers coming in one month and drying up the next</li>
@@ -652,7 +656,7 @@
                     </ul>
                 </div>
 
-                <div class="acq-fit-card acq-fit-card--no">
+                <div class="acq-fit-card acq-fit-card--no reveal-blur card-lift">
                     <h3>Not for you if</h3>
                     <ul class="acq-fit-list">
                         <li>You want a guaranteed number before you invest anything</li>
@@ -671,7 +675,7 @@
     <!-- Section 4: The Three Revenue Engines (mechanisms) -->
     <section class="section acq-mech">
         <div class="container">
-            <div class="acq-head">
+            <div class="acq-head reveal-blur">
                 <h2>The systems I install.</h2>
                 <p>Three revenue engines, one for each kind of business. I diagnose which pieces you're missing and install what you actually need. Some businesses need the whole engine. Some need one part. The Diagnostic tells us which.</p>
             </div>
@@ -679,7 +683,7 @@
             <div class="acq-mech-stack">
 
                 <!-- Local Services engine -->
-                <div class="acq-mech-card">
+                <div class="acq-mech-card reveal-blur card-lift">
                     <span class="acq-mech-card__tag">Local Services</span>
                     <h3>If you run a local service business</h3>
                     <p class="acq-mech-card__promise">Get more booked jobs, month after month, with the system that adds an extra $250K to $1M a year without hiring more staff or working longer hours.</p>
@@ -692,7 +696,7 @@
                 </div>
 
                 <!-- Coaches & Creators engine -->
-                <div class="acq-mech-card">
+                <div class="acq-mech-card reveal-blur card-lift">
                     <span class="acq-mech-card__tag">Coaches &amp; Creators</span>
                     <h3>If you're a coach, consultant, or creator</h3>
                     <p class="acq-mech-card__promise">Get a pipeline that fills every week with the system that adds an extra $500K to $1M a year without cold-calling, posting daily, or burning out.</p>
@@ -706,7 +710,7 @@
                 </div>
 
                 <!-- Ecommerce engine -->
-                <div class="acq-mech-card">
+                <div class="acq-mech-card reveal-blur card-lift">
                     <span class="acq-mech-card__tag">Ecommerce</span>
                     <h3>If you sell products online</h3>
                     <p class="acq-mech-card__promise">Unlock profitable spend that scales with the system that adds an extra $500K to $5M a year without burning through ad budget or discounting to zero.</p>
@@ -731,19 +735,19 @@
     <!-- Section 5: How this works -->
     <section class="section">
         <div class="container">
-            <div class="acq-head">
+            <div class="acq-head reveal-blur">
                 <h2>Here's how this works.</h2>
             </div>
 
             <div class="acq-process-grid">
-                <div class="acq-process-card">
+                <div class="acq-process-card reveal-blur card-lift">
                     <div class="acq-process-card__num">1</div>
                     <h3>Free Strategy Call</h3>
                     <p class="acq-process-card__meta">30 minutes</p>
                     <p>We get on a call. You tell me where you are, what's working, what isn't, and where you want to get to. I tell you honestly whether I can help. If I can't, I'll point you to who can. If I can, we move to the next step.</p>
                 </div>
 
-                <div class="acq-process-card">
+                <div class="acq-process-card reveal-blur card-lift">
                     <div class="acq-process-card__num">2</div>
                     <h3>$250 System Diagnostic</h3>
                     <p class="acq-process-card__meta">7 to 10 business days · credited toward your install</p>
@@ -751,7 +755,7 @@
                     <p>Take it and run with it yourself, hand it to your team, or have me install it. Your call. If we work together, the $250 comes off your install.</p>
                 </div>
 
-                <div class="acq-process-card">
+                <div class="acq-process-card reveal-blur card-lift">
                     <div class="acq-process-card__num">3</div>
                     <h3>Install, then Run</h3>
                     <p class="acq-process-card__meta">one-time install + monthly run</p>
@@ -774,24 +778,24 @@
     <!-- Section 6: Proof -->
     <section class="section acq-proof">
         <div class="container">
-            <div class="acq-head">
+            <div class="acq-head reveal-blur">
                 <h2>Track record.</h2>
             </div>
 
             <div class="acq-stats">
-                <div class="acq-stat">
+                <div class="acq-stat reveal-blur card-lift">
                     <div class="acq-stat__num">30+ brands</div>
                     <p class="acq-stat__copy">Paid acquisition run for 30+ brands and businesses across North America, Europe, and Africa, from D2C and ecommerce to B2B SaaS, services, and info products.</p>
                 </div>
-                <div class="acq-stat">
+                <div class="acq-stat reveal-blur card-lift">
                     <div class="acq-stat__num">$10M+ pipeline</div>
                     <p class="acq-stat__copy">Contributed to more than $10M in qualified pipeline across my career, from early-stage startups to global SaaS companies.</p>
                 </div>
-                <div class="acq-stat">
+                <div class="acq-stat reveal-blur card-lift">
                     <div class="acq-stat__num">6x ROAS</div>
                     <p class="acq-stat__copy">What a long-running D2C client currently returns on Meta and Google. Every $1 in ad spend, about $6 back, week over week.</p>
                 </div>
-                <div class="acq-stat">
+                <div class="acq-stat reveal-blur card-lift">
                     <div class="acq-stat__num">Since 2018</div>
                     <p class="acq-stat__copy">Running paid acquisition on my own money and other people's since 2018, across every major paid channel, often with several offers in market at once.</p>
                 </div>
@@ -802,7 +806,7 @@
                     I've been doing this since 2018, for clients including Cecure Intelligence Limited (global cybersecurity SaaS), FunnelEnvy (US demand-gen agency), and Hank Robotics, across D2C, B2B SaaS, and services. The channel mix changes but the systems don't: the offer, the funnel, fresh creative, ruthless tracking, and follow-up that actually follows up.
                 </p>
 
-                <div class="acq-testimonial">
+                <div class="acq-testimonial reveal-blur">
                     <p class="acq-testimonial__quote">
                         "My business is successful today because I've had James as a partner over the years. Year on year revenue has been growing consistently."
                     </p>
@@ -830,61 +834,61 @@
     <!-- Section 6: FAQs -->
     <section class="section consulting-faq-section">
         <div class="container">
-            <div class="consulting-faq-head">
+            <div class="consulting-faq-head reveal-blur">
                 <h2>Common questions.</h2>
             </div>
 
             <div class="consulting-faqs" aria-label="FAQs">
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>1. Is this just running ads?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">No. Ads are one part. What I install is the whole system around them: the offer, the funnel, the follow-up, the tracking, the creative, and the content that brings people in. Ads are just the traffic. Most acquisition fails because everything around the ads is missing, not because the ads themselves are bad. That is the part I build.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>2. Do you handle the creative?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">Yes, all of it, in your brand. I use AI to generate fresh branded carousels, static ads, and video every week, with the video fronted by an AI clone of you or a branded AI presenter, so you never wait on a shoot or run out of ads. One proven angle becomes dozens of ads, and the same creative powers your organic content and your paid ads. This is the part almost no one else does.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>3. Do I need to be running ads already?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">No. If you're running ads, the Diagnostic shows you what's leaking. If you're not, it shows you what to set up first so you don't waste money the moment you start. If you don't even have a website yet, that's fine too, we start by getting you online. Same Diagnostic either way.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>4. Do I have to buy the whole system?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">No. Some businesses need the whole engine. Some need one part: just the creative, just the content, or just getting online and set up to capture demand. The Diagnostic tells us which pieces you actually need and in what order, so you only pay to install what moves your business. Most clients start with one piece and grow into the system.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>5. Do you guarantee leads or sales?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">I won't promise you a magic number, because the last mile depends on you. What the system does is put your offer in front of the right people at a cost you can see, and bring in demand you can count on. For a service business or a coach, that shows up as leads and booked calls, and closing them is your part. For an ecommerce brand, the sale happens on the ad itself, so you see it as orders and return on ad spend. Either way I promise real work, real reporting, and real results. Run this properly and the customers come.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>6. Can I just buy the Diagnostic and skip the rest?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">Yes. The Diagnostic is a real deliverable on its own: a full document, a Loom walkthrough, and a build map. Take it and execute yourself, hand it to your team, or have me install it. If you do work with me, the fee comes off your install. All of those are fine outcomes.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>7. Who owns the ad account, the data, and everything you build?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">You do. Everything runs on your ad accounts, your pixel, your data. I build inside your accounts, not mine, so if we ever stop working together you keep all of it: the audiences, the creative, the tracking, the funnel. You are never locked in.</p>
                     </div>
                 </details>
 
-                <details class="consulting-faq">
+                <details class="consulting-faq reveal-blur">
                     <summary>8. How long until I see results?</summary>
                     <div class="consulting-faq-body">
                         <p class="muted">You can see the first signs early. Once the ads go live we start getting real responses, and the first customers and sales usually land within the first few weeks. The first month or two is where we test messages and audiences to find your winners, so it starts small and gets steadier as we go. From there it builds, more of what works and less of what doesn't. Anyone promising a flood of sales in week one is selling you a spike that won't last. What I focus on is real progress you can see early and grow every month.</p>
@@ -896,7 +900,7 @@
 
     <!-- Section 7: Final CTA -->
     <section class="section acq-final">
-        <div class="container">
+        <div class="container reveal-blur">
             <h2>Ready to see what to install first?</h2>
             <p>
                 Book the strategy call. 30 minutes, no pressure, no sales pitch. If we're a fit, you leave with a clear next step. If we're not, you leave with the right referral. Worst case, you spend 30 minutes and learn something useful.
@@ -948,6 +952,67 @@
             window.addEventListener('resize', onScroll);
             onScroll();
         })();
+    </script>
+
+    <!-- Scroll-triggered reveal (blur + fade + rise), staggered per section -->
+    <script>
+      (function () {
+        var seen = new Map();
+        document.querySelectorAll(".reveal-blur").forEach(function (el) {
+          var parent = el.closest(".acq-fit-grid, .acq-mech-stack, .acq-process-grid, .acq-stats, .consulting-faqs, section") || el.parentElement;
+          if (!seen.has(parent)) seen.set(parent, []);
+          seen.get(parent).push(el);
+        });
+
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var siblings = seen.get(entry.target.closest(".acq-fit-grid, .acq-mech-stack, .acq-process-grid, .acq-stats, .consulting-faqs, section") || entry.target.parentElement) || [entry.target];
+              var idx = siblings.indexOf(entry.target);
+              var delay = Math.max(idx, 0) * 90;
+              setTimeout(function () {
+                entry.target.classList.add("is-visible");
+              }, delay);
+              observer.unobserve(entry.target);
+            });
+          },
+          { threshold: 0.15 }
+        );
+
+        document.querySelectorAll(".reveal-blur").forEach(function (el) {
+          observer.observe(el);
+        });
+      })();
+    </script>
+
+    <!-- Card directional tilt -->
+    <script>
+      (function () {
+        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        if (prefersReducedMotion) return;
+
+        var TILT_RANGE_DEG = 10;
+        var LIFT_PX = 4;
+
+        document.querySelectorAll(".acq-fit-card, .acq-mech-card, .acq-process-card, .acq-stat").forEach(function (card) {
+          card.style.willChange = "transform";
+
+          card.addEventListener("mousemove", function (e) {
+            var rect = card.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width;
+            var y = (e.clientY - rect.top) / rect.height;
+            var rotateY = (x - 0.5) * TILT_RANGE_DEG;
+            var rotateX = (0.5 - y) * TILT_RANGE_DEG;
+            card.style.transform =
+              "translateY(-" + LIFT_PX + "px) rotateX(" + rotateX.toFixed(2) + "deg) rotateY(" + rotateY.toFixed(2) + "deg)";
+          });
+
+          card.addEventListener("mouseleave", function () {
+            card.style.transform = "";
+          });
+        });
+      })();
     </script>
 </body>
 </html>
