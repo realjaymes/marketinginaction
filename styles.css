@@ -6,7 +6,7 @@
 /* Base reset */
 * { box-sizing: border-box; }
 
-html, body { height: 100%; }
+html, body { min-height: 100%; }
 
 img { max-width: 100%; height: auto; display: block; }
 
