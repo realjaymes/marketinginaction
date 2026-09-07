@@ -20,6 +20,8 @@
     <meta name="twitter:description" content="How a YC-backed FinTech went from outbound-only to a repeatable growth engine: 1,331 MQLs in 6 months and a 500% increase in new B2B customers." />
     <meta name="twitter:image" content="https://marketinginaction.xyz/assets/og-consulting.png" />
     <meta name="twitter:site" content="@marketinginact" />
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../../../styles.css" />
 
@@ -64,7 +66,7 @@
 
     <header>
       <div class="container nav">
-        <a class="logo" href="https://marketinginaction.xyz/" aria-label="Marketing In Action Home"><img src="../../../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" /></a>
+        <a class="logo" href="/" aria-label="Marketing In Action Home"><img src="../../../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" /></a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav"><span class="menu-icon" aria-hidden="true"></span></button>
         <nav id="primary-nav" class="nav-links" aria-label="Primary">
           <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a>
@@ -268,11 +270,55 @@
       const btn = document.querySelector(".menu-button");
       const nav = document.querySelector(".nav-links");
       btn.addEventListener("click", () => { const isOpen = nav.classList.toggle("is-open"); btn.setAttribute("aria-expanded", String(isOpen)); });
-      document.querySelectorAll(".nav-dropdown-trigger").forEach(function(trigger) {
-        trigger.addEventListener("click", function(e) { e.stopPropagation(); var dropdown = this.closest(".nav-dropdown"); var isOpen = dropdown.classList.toggle("is-open"); this.setAttribute("aria-expanded", String(isOpen)); });
+      var navDropdowns = document.querySelectorAll(".nav-dropdown");
+      var dropdownCloseTimer = null;
+
+      function closeDropdown(d) {
+        d.classList.remove("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
+      }
+
+      function openDropdown(d) {
+        clearTimeout(dropdownCloseTimer);
+        navDropdowns.forEach(function(other) {
+          if (other !== d) closeDropdown(other);
+        });
+        d.classList.add("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "true");
+      }
+
+      var isTouch = window.matchMedia("(hover: none)").matches;
+
+      navDropdowns.forEach(function(dropdown) {
+        var trigger = dropdown.querySelector(".nav-dropdown-trigger");
+
+        if (!isTouch) {
+          // Open immediately on hover; delay the close so moving the mouse
+          // diagonally from the trigger into the menu (crossing the small
+          // gap between them) doesn't slam it shut before you can click.
+          dropdown.addEventListener("mouseenter", function() {
+            clearTimeout(dropdownCloseTimer);
+            openDropdown(dropdown);
+          });
+          dropdown.addEventListener("mouseleave", function() {
+            dropdownCloseTimer = setTimeout(function() {
+              closeDropdown(dropdown);
+            }, 300);
+          });
+        }
+
+        trigger.addEventListener("click", function(e) {
+          e.stopPropagation();
+          if (dropdown.classList.contains("is-open")) {
+            closeDropdown(dropdown);
+          } else {
+            openDropdown(dropdown);
+          }
+        });
       });
+
       document.addEventListener("click", function() {
-        document.querySelectorAll(".nav-dropdown.is-open").forEach(function(d) { d.classList.remove("is-open"); d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false"); });
+        navDropdowns.forEach(closeDropdown);
       });
     </script>
 

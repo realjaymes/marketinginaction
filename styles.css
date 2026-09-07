@@ -12,7 +12,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: "Satoshi", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   line-height: 1.6;
   background: #F7F4FA;
   color: #1c1422;
@@ -27,7 +27,7 @@ body {
   --text-muted: rgba(28, 20, 34, 0.62);
 
   --color-accent: #f1de71;
-  --color-black: #1c1422;
+  --color-black: #100a16; /* Darkened from #1c1422 (2026-09-07) — confirmed */
   --color-white: #f7f4fa;
 
   --color-blue: #71c4f1;
@@ -59,10 +59,10 @@ body {
 /* Typography */
 h1, h2, h3 {
   margin: 0 0 var(--space-sm);
-  font-weight: 750;
-  line-height: 1.15;
+  font-weight: 800;
+  line-height: 1.1;
   color: var(--text-primary);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 h1 { font-size: clamp(34px, 4vw, 52px); }
@@ -117,6 +117,7 @@ textarea:focus-visible {
   cursor: pointer;
   transition: transform var(--ease), opacity var(--ease), background-color var(--ease);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .button:active { transform: translateY(1px); }
@@ -394,37 +395,21 @@ nav a:hover {
 .hero,
 .resources-hero {
   background:
-    radial-gradient(
-      1200px 600px at 50% 50%,
-      rgba(241, 222, 113, 0.14),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 600px at 50% 50%,
-      rgba(113, 132, 241, 0.10),
-      transparent 65%
-    ),
-    #1c1422;
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
+    radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
+    #100a16;
 }
 
 /* =========================================
    Academy Hero
-   Offset gradient (intentional emphasis)
+   Normalized to the site-wide hero recipe (2026-09-07)
    ========================================= */
 
 .academy-hero {
   background:
-    radial-gradient(
-      1200px 600px at 30% 10%,
-      rgba(241, 222, 113, 0.12),
-      transparent 55%
-    ),
-    radial-gradient(
-      900px 600px at 80% 20%,
-      rgba(113, 132, 241, 0.10),
-      transparent 50%
-    ),
-    #1c1422;
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
+    radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
+    #100a16;
 }
 
 .hero,
@@ -613,7 +598,7 @@ nav a:hover {
   text-align: center;
   height: 48px;
   line-height: 1;
-  background: #1c1422;
+  background: #100a16;
   color: #f7f4fa;
   border-radius: 12px;
   padding: 12px 16px;
@@ -753,8 +738,8 @@ nav a:hover {
 /* Academy "How it works" (restored) */
 .academy-how {
   background:
-    radial-gradient(900px 600px at 25% 15%, rgba(241, 222, 113, 0.10), transparent 55%),
-    #1c1422;
+    radial-gradient(900px 600px at 25% 15%, rgba(241, 222, 113, 0.045), transparent 55%),
+    #100a16;
 }
 
 .academy-how h2,
@@ -848,7 +833,7 @@ nav a:hover {
 }
 
 .quiz-panel {
-  background: #1c1422;
+  background: #100a16;
   border-radius: 40px;
   padding: clamp(26px, 4vw, 54px);
   box-shadow: 0 26px 80px rgba(0, 0, 0, 0.30);
@@ -969,7 +954,7 @@ nav a:hover {
 .social-proof-wrap { padding-bottom: var(--space-xl); }
 
 .social-proof-panel {
-  background: #1c1422;
+  background: #100a16;
   border: 1px solid rgba(247, 244, 250, 0.14);
   border-radius: var(--radius-lg);
   padding: clamp(20px, 3vw, 40px);
@@ -1291,7 +1276,7 @@ body.home .program-card__title {
   font-size: 1.2rem;
   font-weight: 750;
   margin: 0 0 10px;
-  color: var(--color-black, #1a1a2e);
+  color: var(--color-black, #100a16);
 }
 
 body.home .program-card__desc {
@@ -1305,7 +1290,7 @@ body.home .program-card__desc {
 body.home .program-card__cta {
   display: inline-block;
   padding: 10px 20px;
-  background: var(--color-black, #1a1a2e);
+  background: var(--color-black, #100a16);
   color: #fff;
   border-radius: 8px;
   font-weight: 650;
@@ -1322,7 +1307,7 @@ body.home .program-card__cta:hover {
 
 body.home .program-card__cta--yellow {
   background: #f1de71;
-  color: var(--color-black, #1a1a2e);
+  color: var(--color-black, #100a16);
 }
 
 @media (max-width: 768px) {
@@ -1387,7 +1372,7 @@ body.home .newsletter .button-row {
 }
 
 body.home #subscribe .card {
-  background-color: #1c1422;
+  background-color: #100a16;
 }
 
 body.home #subscribe .card h2, body.home #subscribe .card p {
@@ -1433,9 +1418,9 @@ body.home #subscribe .card p.muted {
 
 .jobs-hero {
   background:
-    radial-gradient(1200px 600px at 50% 45%, rgba(241, 222, 113, 0.14), transparent 60%),
-    radial-gradient(900px 600px at 70% 10%, rgba(113, 132, 241, 0.10), transparent 55%),
-    #1c1422;
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
+    radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
+    #100a16;
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
@@ -1464,11 +1449,18 @@ body.home #subscribe .card p.muted {
   max-width: 860px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 @media (min-width: 980px) {
   .jobs-proof {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  /* 6-stat variant (consulting hero) — one row instead of wrapping 4+2 */
+  .jobs-proof--6col {
+    max-width: 1040px;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
   }
 }
 
@@ -1837,10 +1829,16 @@ body.home #subscribe .card p.muted {
   box-shadow: none;
   overflow: visible;
   padding: 16px 4px;
+  text-align: left;
+  transition: border-color 0.2s ease;
 }
 
 .jobs-faq:first-child {
   border-top: 1px solid rgba(28, 20, 34, 0.12);
+}
+
+.jobs-faq:hover {
+  border-color: var(--color-accent);
 }
 
 .jobs-faq summary {
@@ -1852,6 +1850,11 @@ body.home #subscribe .card p.muted {
   align-items: center;
   justify-content: space-between;
   gap: var(--space-md);
+  transition: padding-left 0.2s ease;
+}
+
+.jobs-faq:hover summary {
+  padding-left: 6px;
 }
 
 .jobs-faq summary::-webkit-details-marker {
@@ -1868,10 +1871,31 @@ body.home #subscribe .card p.muted {
   border: none;
   background: none;
   border-radius: 0;
+  transition: transform 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.jobs-faq:hover summary::after {
+  transform: rotate(90deg);
+  color: var(--color-accent);
 }
 
 .jobs-faq[open] summary::after {
   content: "\2212";
+}
+
+.jobs-faq[open]:hover summary::after {
+  transform: rotate(0deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .jobs-faq,
+  .jobs-faq summary,
+  .jobs-faq summary::after {
+    transition: none;
+  }
+  .jobs-faq:hover summary {
+    padding-left: 0;
+  }
 }
 
 .jobs-faq-body {
@@ -1887,9 +1911,9 @@ body.home #subscribe .card p.muted {
    ========================================= */
 .corporate-hero {
   background:
-    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.14), transparent 60%),
-    radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 55%),
-    #1c1422;
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
+    radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
+    #100a16;
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
@@ -2055,7 +2079,7 @@ body.home #subscribe .card p.muted {
 }
 
 .corporate-cta-section .button-primary {
-  background: #1c1422;
+  background: #100a16;
   color: #f7f4fa;
 }
 
@@ -2079,9 +2103,9 @@ body.home #subscribe .card p.muted {
    not the offset-for-a-right-column formula that caused an off-balance glow here. */
 .consulting-hero {
   background:
-    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.14), transparent 60%),
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
     radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
-    #1c1422;
+    #100a16;
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
@@ -2134,80 +2158,6 @@ body.home #subscribe .card p.muted {
 .consulting-secondary:hover {
   background: rgba(255, 255, 255, 0.06);
   text-decoration: none;
-}
-
-/* Metrics strip (Jobs-style) */
-.consulting-metrics {
-  margin-top: var(--space-xl);
-}
-
-.consulting-proof {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 10px;
-  align-items: stretch;
-
-  padding: 18px 10px;
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.22);
-}
-
-.consulting-proof::-webkit-scrollbar {
-  height: 0;
-}
-
-.consulting-proof-item {
-  padding: 10px 14px;
-  min-height: 56px;
-  display: grid;
-  align-content: center;
-  border-radius: var(--radius-md);
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.consulting-proof-value {
-  color: rgba(241, 222, 113, 0.95);
-  font-weight: 900;
-  font-size: 22px;
-  letter-spacing: -0.02em;
-  line-height: 1.1;
-}
-
-.consulting-proof-label {
-  margin-top: 6px;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-/* On wider screens, revert to a single scrollable row */
-@media (min-width: 980px) {
-  .consulting-proof {
-    grid-template-columns: unset;
-    grid-auto-flow: column;
-    grid-auto-columns: minmax(180px, 1fr);
-    gap: 0;
-    padding: 20px 14px;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .consulting-proof-item {
-    padding: 6px 18px;
-    border-radius: 0;
-    background: transparent;
-  }
-
-  .consulting-proof-item + .consulting-proof-item {
-    border-left: 1px solid rgba(255, 255, 255, 0.18);
-  }
-
-  .consulting-proof-value {
-    font-size: 24px;
-  }
 }
 
 .consulting-video-card {
@@ -2432,16 +2382,16 @@ body.home #subscribe .card p.muted {
    for a right-column visual this section doesn't have. */
 .consulting-services-section {
   background:
-    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.14), transparent 60%),
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
     radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
-    #1c1422;
+    #100a16;
 }
 
 .consulting-meet-james {
   background:
-    radial-gradient(1100px 600px at 50% 100%, rgba(241, 222, 113, 0.12), transparent 60%),
+    radial-gradient(1100px 600px at 50% 100%, rgba(241, 222, 113, 0.05), transparent 60%),
     radial-gradient(1300px 700px at 50% 0%, rgba(113, 132, 241, 0.08), transparent 60%),
-    #1c1422;
+    #100a16;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -2661,7 +2611,7 @@ body.home #subscribe .card p.muted {
   border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: var(--radius-lg);
   background:
-    radial-gradient(circle at 28% 20%, rgba(241, 222, 113, 0.12), transparent 58%),
+    radial-gradient(circle at 28% 20%, rgba(241, 222, 113, 0.05), transparent 58%),
     radial-gradient(circle at 78% 75%, rgba(113, 132, 241, 0.10), transparent 62%),
     rgba(255, 255, 255, 0.03);
   display: grid;
@@ -3324,7 +3274,7 @@ body.panel-open {
   justify-content: center;
   width: 100%;
   height: 48px;
-  background: #1c1422;
+  background: #100a16;
   color: #f7f4fa;
   border-radius: 12px;
   font-weight: 850;
@@ -3363,9 +3313,9 @@ body.panel-open {
 
 .affiliate-hero {
   background:
-    radial-gradient(1200px 600px at 50% 45%, rgba(241, 222, 113, 0.14), transparent 60%),
-    radial-gradient(900px 600px at 70% 10%, rgba(113, 132, 241, 0.10), transparent 55%),
-    #1c1422;
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
+    radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
+    #100a16;
   padding: var(--space-2xl) 0 var(--space-xl);
 }
 
@@ -3473,66 +3423,10 @@ body.panel-open {
   font-weight: 650;
 }
 
-/* FAQ (reuses jobs-faq pattern) */
-.affiliate-faqs {
-  max-width: 980px;
-  margin: 0 auto;
-  display: grid;
-  gap: var(--space-sm);
-}
-
-.affiliate-faq {
-  background: #fff;
-  border: 1px solid rgba(28, 20, 34, 0.10);
-  border-radius: var(--radius-md);
-  box-shadow: 0 14px 40px rgba(28, 20, 34, 0.05);
-  overflow: hidden;
-}
-
-.affiliate-faq summary {
-  list-style: none;
-  cursor: pointer;
-  padding: 14px 14px;
-  font-weight: 850;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-}
-
-.affiliate-faq summary::-webkit-details-marker {
-  display: none;
-}
-
-.affiliate-faq summary::after {
-  content: "+";
-  width: 26px;
-  height: 26px;
-  border-radius: 10px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(28, 20, 34, 0.12);
-  background: rgba(28, 20, 34, 0.02);
-  font-weight: 950;
-  flex-shrink: 0;
-}
-
-.affiliate-faq[open] summary::after {
-  content: "\2013";
-}
-
-.affiliate-faq-body {
-  padding: 0 14px 14px;
-}
-
-.affiliate-faq-body p {
-  margin: 0;
-}
-
 /* Case Studies page */
 .case-studies-hero {
   background:
-    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.14), transparent 60%),
+    radial-gradient(1100px 600px at 50% 0%, rgba(241, 222, 113, 0.06), transparent 60%),
     radial-gradient(1300px 700px at 50% 100%, rgba(113, 132, 241, 0.08), transparent 60%),
     var(--color-black);
   padding: var(--space-2xl) 0 var(--space-xl);
@@ -3668,12 +3562,16 @@ body.panel-open {
   background: #fff;
   border: 1px solid rgba(28, 20, 34, 0.10);
   border-radius: var(--radius-lg);
-  box-shadow: 0 18px 50px rgba(28, 20, 34, 0.06);
+  box-shadow: none;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   text-decoration: none;
   color: inherit;
+  transition: border-color 160ms ease;
+}
+.case-study-card-v2:hover {
+  border-color: rgba(28, 20, 34, 0.22);
 }
 
 .case-study-card-v2[hidden] {
@@ -3713,22 +3611,60 @@ body.panel-open {
 }
 
 .csc-tag {
+  display: inline-block;
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--color-purple);
-  margin-bottom: 6px;
+  background: rgba(113, 132, 241, 0.12);
+  border-radius: 100px;
+  padding: 4px 10px;
+  margin-bottom: 10px;
 }
 
 .csc-headline {
-  font-size: 16px;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
   line-height: 1.4;
   margin-bottom: var(--space-sm);
 }
 
 .csc-headline strong {
   color: var(--text-primary);
+}
+
+/* Bulleted stat list — borrowed from bridged.events' case-study cards:
+   scannable proof points instead of one number buried in a sentence. */
+.csc-stats {
+  list-style: none;
+  margin: 0 0 var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid rgba(28, 20, 34, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.csc-stats li {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  padding-left: 14px;
+  position: relative;
+}
+.csc-stats li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--color-purple);
+}
+.csc-stats li strong {
+  color: var(--color-purple);
+  font-weight: 800;
 }
 
 .csc-credit {
@@ -3965,7 +3901,7 @@ body.panel-open {
    right column instead of a full-bleed section, so the sidebar's grid spans the whole page. */
 .cs-hero-card {
   background:
-    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.14), transparent 60%),
+    radial-gradient(1200px 600px at 30% 10%, rgba(241, 222, 113, 0.06), transparent 60%),
     radial-gradient(900px 600px at 80% 20%, rgba(113, 132, 241, 0.10), transparent 55%),
     var(--color-black);
   border-radius: var(--radius-lg);
@@ -4144,7 +4080,7 @@ body.panel-open {
   display: grid;
   place-items: center;
   background:
-    radial-gradient(600px 300px at 20% 0%, rgba(241, 222, 113, 0.10), transparent 60%),
+    radial-gradient(600px 300px at 20% 0%, rgba(241, 222, 113, 0.045), transparent 60%),
     radial-gradient(500px 300px at 90% 100%, rgba(113, 132, 241, 0.10), transparent 60%),
     var(--color-black);
   color: rgba(255, 255, 255, 0.32);

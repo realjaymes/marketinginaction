@@ -6,6 +6,8 @@
     <meta name="author" content="James Praise">
     <title>Page Not Found | Marketing In Action</title>
     <meta name="robots" content="noindex, nofollow" />
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css" />
 
     <!-- Google Tag Manager -->
@@ -299,20 +301,56 @@
         btn.setAttribute("aria-expanded", String(isOpen));
       });
 
-      document.querySelectorAll(".nav-dropdown-trigger").forEach(function(trigger) {
+      var navDropdowns = document.querySelectorAll(".nav-dropdown");
+      var dropdownCloseTimer = null;
+
+      function closeDropdown(d) {
+        d.classList.remove("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
+      }
+
+      function openDropdown(d) {
+        clearTimeout(dropdownCloseTimer);
+        navDropdowns.forEach(function(other) {
+          if (other !== d) closeDropdown(other);
+        });
+        d.classList.add("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "true");
+      }
+
+      var isTouch = window.matchMedia("(hover: none)").matches;
+
+      navDropdowns.forEach(function(dropdown) {
+        var trigger = dropdown.querySelector(".nav-dropdown-trigger");
+
+        if (!isTouch) {
+          // Desktop: open immediately on hover, close when the mouse leaves
+          // this dropdown (matches bridged.events' behavior instead of
+          // requiring a click and allowing several menus open at once).
+          dropdown.addEventListener("mouseenter", function() {
+            clearTimeout(dropdownCloseTimer);
+            openDropdown(dropdown);
+          });
+          dropdown.addEventListener("mouseleave", function() {
+            dropdownCloseTimer = setTimeout(function() {
+              closeDropdown(dropdown);
+            }, 300);
+          });
+        }
+
+        // Click/tap still works on every device (keyboard + touch access).
         trigger.addEventListener("click", function(e) {
           e.stopPropagation();
-          var dropdown = this.closest(".nav-dropdown");
-          var isOpen = dropdown.classList.toggle("is-open");
-          this.setAttribute("aria-expanded", String(isOpen));
+          if (dropdown.classList.contains("is-open")) {
+            closeDropdown(dropdown);
+          } else {
+            openDropdown(dropdown);
+          }
         });
       });
 
       document.addEventListener("click", function() {
-        document.querySelectorAll(".nav-dropdown.is-open").forEach(function(d) {
-          d.classList.remove("is-open");
-          d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
-        });
+        navDropdowns.forEach(closeDropdown);
       });
     </script>
 </body>

@@ -21,6 +21,8 @@
     <meta name="twitter:description" content="How running growth, GTM, and demand gen across two brands drove a 40% QoQ increase in qualified enterprise leads and a 31% lift in ABM meeting bookings." />
     <meta name="twitter:image" content="https://marketinginaction.xyz/assets/og-consulting.png" />
     <meta name="twitter:site" content="@marketinginact" />
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../../../styles.css" />
 
@@ -94,7 +96,7 @@
 
     <header>
       <div class="container nav">
-        <a class="logo" href="https://marketinginaction.xyz/" aria-label="Marketing In Action Home">
+        <a class="logo" href="/" aria-label="Marketing In Action Home">
           <img src="../../../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
         <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
@@ -157,7 +159,7 @@
             <div class="cs-hero-card">
               <p class="cs-eyebrow reveal-blur">Case Study — FunnelEnvy</p>
               <h1 class="cs-headline reveal-blur">40% More Qualified Enterprise Pipeline While Running Two Brands' Growth and GTM</h1>
-              <p class="cs-subhead reveal-blur">FunnelEnvy is a Growth Funnel Optimization agency for B2B SaaS demand gen teams. I managed growth, GTM, and demand gen — plus product marketing for Reform after FunnelEnvy acquired it.</p>
+              <p class="cs-subhead reveal-blur">FunnelEnvy is a Growth Funnel Optimization agency for B2B SaaS demand gen teams. I managed growth, GTM, and demand gen—plus product marketing for Reform after FunnelEnvy acquired it.</p>
               <div class="cs-credit reveal-blur">
                 <img class="cs-avatar-img" src="../../../assets/case-studies/funnelenvy/headshot.jpg" alt="Arun Sivashankaran" />
                 <p class="cs-credit-text"><strong>Arun Sivashankaran</strong> · CEO, FunnelEnvy</p>
@@ -329,19 +331,55 @@
       const btn = document.querySelector(".menu-button");
       const nav = document.querySelector(".nav-links");
       btn.addEventListener("click", () => { const isOpen = nav.classList.toggle("is-open"); btn.setAttribute("aria-expanded", String(isOpen)); });
-      document.querySelectorAll(".nav-dropdown-trigger").forEach(function(trigger) {
+      var navDropdowns = document.querySelectorAll(".nav-dropdown");
+      var dropdownCloseTimer = null;
+
+      function closeDropdown(d) {
+        d.classList.remove("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
+      }
+
+      function openDropdown(d) {
+        clearTimeout(dropdownCloseTimer);
+        navDropdowns.forEach(function(other) {
+          if (other !== d) closeDropdown(other);
+        });
+        d.classList.add("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "true");
+      }
+
+      var isTouch = window.matchMedia("(hover: none)").matches;
+
+      navDropdowns.forEach(function(dropdown) {
+        var trigger = dropdown.querySelector(".nav-dropdown-trigger");
+
+        if (!isTouch) {
+          // Open immediately on hover; delay the close so moving the mouse
+          // diagonally from the trigger into the menu (crossing the small
+          // gap between them) doesn't slam it shut before you can click.
+          dropdown.addEventListener("mouseenter", function() {
+            clearTimeout(dropdownCloseTimer);
+            openDropdown(dropdown);
+          });
+          dropdown.addEventListener("mouseleave", function() {
+            dropdownCloseTimer = setTimeout(function() {
+              closeDropdown(dropdown);
+            }, 300);
+          });
+        }
+
         trigger.addEventListener("click", function(e) {
           e.stopPropagation();
-          var dropdown = this.closest(".nav-dropdown");
-          var isOpen = dropdown.classList.toggle("is-open");
-          this.setAttribute("aria-expanded", String(isOpen));
+          if (dropdown.classList.contains("is-open")) {
+            closeDropdown(dropdown);
+          } else {
+            openDropdown(dropdown);
+          }
         });
       });
+
       document.addEventListener("click", function() {
-        document.querySelectorAll(".nav-dropdown.is-open").forEach(function(d) {
-          d.classList.remove("is-open");
-          d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
-        });
+        navDropdowns.forEach(closeDropdown);
       });
     </script>
 

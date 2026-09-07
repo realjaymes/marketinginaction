@@ -29,6 +29,8 @@
     />
     <meta name="twitter:image" content="https://marketinginaction.xyz/assets/og-consulting.png" />
     <meta name="twitter:site" content="@marketinginact" />
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="../styles.css" />
 
@@ -220,7 +222,7 @@
     <!-- Header (same configuration as other pages) -->
     <header>
       <div class="container nav">
-        <a class="logo" href="https://marketinginaction.xyz/" aria-label="Marketing In Action Home">
+        <a class="logo" href="/" aria-label="Marketing In Action Home">
           <img src="../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
 
@@ -297,33 +299,31 @@
             </div>
           </div>
 
-          <!-- Metrics strip (moved out of left column for Jobs-style layout) -->
-          <div class="consulting-metrics">
-            <div class="consulting-proof" aria-label="Key metrics">
-              <div class="consulting-proof-item reveal-blur">
-                <div class="consulting-proof-value">$10M+</div>
-                <div class="consulting-proof-label">pipeline influenced</div>
-              </div>
-              <div class="consulting-proof-item reveal-blur">
-                <div class="consulting-proof-value">15+</div>
-                <div class="consulting-proof-label">product launches</div>
-              </div>
-              <div class="consulting-proof-item reveal-blur">
-                <div class="consulting-proof-value">35%</div>
-                <div class="consulting-proof-label">SQL lift</div>
-              </div>
-              <div class="consulting-proof-item reveal-blur">
-                <div class="consulting-proof-value">500%+</div>
-                <div class="consulting-proof-label">client growth</div>
-              </div>
-              <div class="consulting-proof-item reveal-blur">
-                <div class="consulting-proof-value">3</div>
-                <div class="consulting-proof-label">regions: US, Africa, Europe</div>
-              </div>
-              <div class="consulting-proof-item reveal-blur">
-                <div class="consulting-proof-value">2,000+</div>
-                <div class="consulting-proof-label">MIA subscribers</div>
-              </div>
+          <!-- Metrics strip (Jobs/Corporate-style layout) -->
+          <div class="jobs-proof jobs-proof--6col" aria-label="Key metrics">
+            <div class="jobs-proof-item reveal-blur">
+              <div class="jobs-proof-value">$10M+</div>
+              <div class="jobs-proof-label">pipeline influenced</div>
+            </div>
+            <div class="jobs-proof-item reveal-blur">
+              <div class="jobs-proof-value">15+</div>
+              <div class="jobs-proof-label">product launches</div>
+            </div>
+            <div class="jobs-proof-item reveal-blur">
+              <div class="jobs-proof-value">35%</div>
+              <div class="jobs-proof-label">SQL lift</div>
+            </div>
+            <div class="jobs-proof-item reveal-blur">
+              <div class="jobs-proof-value">500%+</div>
+              <div class="jobs-proof-label">client growth</div>
+            </div>
+            <div class="jobs-proof-item reveal-blur">
+              <div class="jobs-proof-value">3</div>
+              <div class="jobs-proof-label">regions: US, Africa, Europe</div>
+            </div>
+            <div class="jobs-proof-item reveal-blur">
+              <div class="jobs-proof-value">2,000+</div>
+              <div class="jobs-proof-label">MIA subscribers</div>
             </div>
           </div>
         </div>
@@ -363,7 +363,7 @@
         <span aria-hidden="true">Bujeti</span>
         <span aria-hidden="true">CIL</span>
         <span aria-hidden="true">Bento</span>
-        <span aria-hidden="true">Utica</span>
+        <span aria-hidden="true">Utiva</span>
         <span aria-hidden="true">Jumia</span>
         <span aria-hidden="true">Startupbootcamp Afritech</span>
         <span aria-hidden="true">Y Combinator</span>
@@ -888,20 +888,56 @@
         btn.setAttribute("aria-expanded", String(isOpen));
       });
 
-      document.querySelectorAll(".nav-dropdown-trigger").forEach(function(trigger) {
+      var navDropdowns = document.querySelectorAll(".nav-dropdown");
+      var dropdownCloseTimer = null;
+
+      function closeDropdown(d) {
+        d.classList.remove("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
+      }
+
+      function openDropdown(d) {
+        clearTimeout(dropdownCloseTimer);
+        navDropdowns.forEach(function(other) {
+          if (other !== d) closeDropdown(other);
+        });
+        d.classList.add("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "true");
+      }
+
+      var isTouch = window.matchMedia("(hover: none)").matches;
+
+      navDropdowns.forEach(function(dropdown) {
+        var trigger = dropdown.querySelector(".nav-dropdown-trigger");
+
+        if (!isTouch) {
+          // Desktop: open immediately on hover, close when the mouse leaves
+          // this dropdown (matches bridged.events' behavior instead of
+          // requiring a click and allowing several menus open at once).
+          dropdown.addEventListener("mouseenter", function() {
+            clearTimeout(dropdownCloseTimer);
+            openDropdown(dropdown);
+          });
+          dropdown.addEventListener("mouseleave", function() {
+            dropdownCloseTimer = setTimeout(function() {
+              closeDropdown(dropdown);
+            }, 300);
+          });
+        }
+
+        // Click/tap still works on every device (keyboard + touch access).
         trigger.addEventListener("click", function(e) {
           e.stopPropagation();
-          var dropdown = this.closest(".nav-dropdown");
-          var isOpen = dropdown.classList.toggle("is-open");
-          this.setAttribute("aria-expanded", String(isOpen));
+          if (dropdown.classList.contains("is-open")) {
+            closeDropdown(dropdown);
+          } else {
+            openDropdown(dropdown);
+          }
         });
       });
 
       document.addEventListener("click", function() {
-        document.querySelectorAll(".nav-dropdown.is-open").forEach(function(d) {
-          d.classList.remove("is-open");
-          d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
-        });
+        navDropdowns.forEach(closeDropdown);
       });
     </script>
 
@@ -910,7 +946,7 @@
       (function () {
         var seen = new Map();
         document.querySelectorAll(".reveal-blur").forEach(function (el) {
-          var parent = el.closest(".consulting-proof, .consulting-problems-grid, .jobs-section-head, .consulting-services-head, .consulting-engagement, .consulting-faqs, section") || el.parentElement;
+          var parent = el.closest(".jobs-proof, .consulting-problems-grid, .jobs-section-head, .consulting-services-head, .consulting-engagement, .consulting-faqs, section") || el.parentElement;
           if (!seen.has(parent)) seen.set(parent, []);
           seen.get(parent).push(el);
         });
@@ -919,7 +955,7 @@
           function (entries) {
             entries.forEach(function (entry) {
               if (!entry.isIntersecting) return;
-              var siblings = seen.get(entry.target.closest(".consulting-proof, .consulting-problems-grid, .jobs-section-head, .consulting-services-head, .consulting-engagement, .consulting-faqs, section") || entry.target.parentElement) || [entry.target];
+              var siblings = seen.get(entry.target.closest(".jobs-proof, .consulting-problems-grid, .jobs-section-head, .consulting-services-head, .consulting-engagement, .consulting-faqs, section") || entry.target.parentElement) || [entry.target];
               var idx = siblings.indexOf(entry.target);
               var delay = Math.max(idx, 0) * 90;
               setTimeout(function () {
