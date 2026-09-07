@@ -11,7 +11,7 @@ Marketing In Action helps marketers put marketing into action through:
 
 The platform is built to reduce the gap between learning marketing and doing marketing.
 ## Founder
-Hi, I’m James. I’m a Product and Growth Marketing consultant with close to a decade of experience helping startups launch, scale, and grow with clarity and execution. 
+Hi, I’m James. I’m a marketing and go-to-market operator with close to a decade of experience helping startups launch, scale, and grow with clarity and execution. 
 I’ve been a founding marketer multiple times, building marketing functions, teams and systems from the ground up.
 I am currently experimenting with vibe coding, and this is one of the projects I’m building with the knowledge. 
 ### Find Me on the Web
