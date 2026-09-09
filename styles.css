@@ -2227,11 +2227,17 @@ body.home #subscribe .card p.muted {
   animation: consulting-marquee 28s linear infinite;
 }
 
-.consulting-marquee-track span {
+.consulting-marquee-track span,
+.consulting-marquee-track a {
   font-weight: 750;
   font-size: 18px;
   color: rgba(255, 255, 255, 0.88);
   white-space: nowrap;
+  text-decoration: none;
+}
+
+.consulting-marquee-track a:hover {
+  color: var(--color-accent);
 }
 
 @keyframes consulting-marquee {
