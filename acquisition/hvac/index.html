@@ -156,6 +156,51 @@
             justify-content: center;
             margin-top: var(--space-lg);
         }
+        /* No-VSL variant: two-column hero (copy+CTAs left, form right),
+           used until a niche has a recorded video to fill that space. */
+        .acq-hero-inner--novsl {
+            max-width: 1160px;
+            text-align: left;
+        }
+        .acq-hero-grid {
+            display: grid;
+            gap: var(--space-2xl);
+            align-items: center;
+        }
+        @media (min-width: 960px) {
+            .acq-hero-grid { grid-template-columns: 0.95fr 1.05fr; }
+        }
+        @media (max-width: 959px) {
+            .acq-hero-grid .acq-hero-form-col { order: 2; }
+        }
+        .acq-hero-inner--novsl .pill { margin: 0 0 var(--space-lg); }
+        .acq-hero-inner--novsl h1 { margin: 0 0 var(--space-md); }
+        .acq-hero-inner--novsl .consulting-hero-sub {
+            margin: 0 0 var(--space-lg);
+            opacity: 0.92;
+            max-width: 520px;
+        }
+        .acq-hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: var(--space-lg);
+        }
+        .acq-hero-ctas .button { margin-top: 0; }
+        .acq-hero-ctas .button-secondary {
+            border: 1.5px solid rgba(255, 255, 255, 0.3);
+            background: transparent;
+            color: #f7f4fa;
+        }
+        .acq-hero-ctas .button-secondary:hover {
+            border-color: var(--color-accent);
+            color: var(--color-accent);
+            background: rgba(255, 255, 255, 0.06);
+        }
+        .acq-hero-inner--novsl .acq-hero-trust {
+            margin-top: 0;
+            text-align: left;
+        }
         .acq-hero-trust {
             color: rgba(247, 244, 250, 0.72);
             font-size: 14px;
@@ -308,6 +353,8 @@
             text-align: center;
             color: var(--text-muted);
             font-style: italic;
+            font-size: 14.5px;
+            line-height: 1.6;
         }
 
         /* Proof — dark stat strip on light background, mirroring consulting-proof inverted */
@@ -635,6 +682,280 @@
             line-height: 1.6;
         }
         .acq-mech-power strong { color: var(--color-accent); }
+
+        /* ROI Calculator */
+        .acq-calc { background: var(--bg-page); }
+        .acq-calc-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 24px 60px rgba(28, 20, 34, 0.12);
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 26px 28px 28px;
+        }
+        .acq-calc-slider-row { margin-bottom: 14px; }
+        .acq-calc-slider-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .acq-calc-slider-value {
+            color: var(--color-black);
+            font-weight: 900;
+            font-size: 20px;
+        }
+        input[type="range"].acq-calc-slider {
+            width: 100%;
+            accent-color: var(--color-accent);
+            height: 6px;
+            cursor: pointer;
+        }
+        .acq-calc-numeric-row {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        @media (min-width: 420px) {
+            .acq-calc-numeric-row { grid-template-columns: repeat(2, 1fr); }
+        }
+        .acq-calc-input-group label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .acq-calc-input-wrap {
+            display: flex;
+            align-items: center;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 0 12px;
+            background: var(--bg-page);
+        }
+        .acq-calc-input-wrap:focus-within { border-color: var(--color-accent); }
+        .acq-calc-input-wrap span {
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 15px;
+        }
+        .acq-calc-input-wrap input[type="number"] {
+            border: none;
+            background: transparent;
+            padding: 8px 6px;
+            font-size: 16px;
+            font-weight: 800;
+            width: 100%;
+            min-width: 0;
+            font-family: inherit;
+            color: var(--color-black);
+        }
+        .acq-calc-input-wrap input[type="number"]:focus { outline: none; }
+        .acq-calc-input-hint {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+        .acq-calc-reset {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--text-muted);
+            text-decoration: underline;
+            margin: -2px 0 10px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            width: 100%;
+            font-family: inherit;
+        }
+        .acq-calc-reset:hover { color: var(--text-primary); }
+
+        /* Two-column merged Process + Calculator layout */
+        .acq-process-calc-grid {
+            display: grid;
+            gap: var(--space-2xl);
+            align-items: start;
+            max-width: 1160px;
+            margin: 0 auto;
+        }
+        @media (min-width: 960px) {
+            .acq-process-calc-grid { grid-template-columns: 0.95fr 1.05fr; }
+        }
+        /* Mobile: show the calculator before the process steps (visual order
+           only, DOM order stays steps-first for a logical reading/tab order). */
+        @media (max-width: 959px) {
+            .acq-process-calc-grid .acq-calc-card { order: -1; }
+        }
+        .acq-process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+        .acq-process-step {
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+        }
+        .acq-process-step__num {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--color-accent);
+            color: var(--color-black);
+            font-weight: 800;
+            flex-shrink: 0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .acq-process-step__meta {
+            font-size: 12.5px;
+            color: var(--text-muted);
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+        .acq-process-step__body h3 { margin: 0 0 8px; font-size: 17px; }
+        .acq-process-step__body p {
+            margin: 0;
+            color: var(--text-muted);
+            font-size: 14.5px;
+            line-height: 1.55;
+        }
+
+        /* Calculator card, SSG-style list layout */
+        .acq-calc-card__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-md);
+            border-bottom: 1px solid var(--border);
+        }
+        .acq-calc-card__head h3 { margin: 0; font-size: 18px; }
+        .acq-calc-card__tag {
+            font-size: 10.5px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 3px 10px;
+            white-space: nowrap;
+        }
+        .acq-calc-slider-range {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11.5px;
+            color: var(--text-muted);
+            margin-top: 6px;
+        }
+        .acq-calc-list {
+            margin: 8px 0 0;
+            border-top: 1px solid var(--border);
+        }
+        .acq-calc-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 13px;
+            line-height: 1.3;
+            flex-wrap: wrap;
+        }
+        .acq-calc-row span:first-child { color: var(--text-muted); }
+        .acq-calc-row span:first-child em { font-size: 11px; font-style: italic; }
+        .acq-calc-row strong {
+            font-weight: 800;
+            color: var(--color-black);
+            white-space: nowrap;
+        }
+        .acq-calc-row--profit strong,
+        .acq-calc-row--roi strong {
+            color: #2e7d4f;
+        }
+        .acq-calc-stamp {
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #2e7d4f;
+            border: 1.5px solid #2e7d4f;
+            border-radius: 6px;
+            padding: 2px 6px;
+            transform: rotate(-5deg);
+            background: rgba(46, 125, 79, 0.06);
+            white-space: nowrap;
+        }
+        .acq-calc-guarantee {
+            background: #100a16;
+            color: #fff;
+            border-radius: 14px;
+            padding: 16px 22px;
+            text-align: center;
+            margin: 14px 0 0;
+        }
+        .acq-calc-guarantee__num {
+            font-size: 36px;
+            font-weight: 900;
+            color: var(--color-accent);
+            line-height: 1;
+            display: block;
+            margin-bottom: 4px;
+            letter-spacing: -0.01em;
+        }
+        .acq-calc-guarantee__label {
+            font-size: 14px;
+            opacity: 0.92;
+            line-height: 1.35;
+        }
+        .acq-calc-proj-label {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            margin: 4px 0 14px;
+        }
+        .acq-calc-proj-grid {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @media (min-width: 600px) {
+            .acq-calc-proj-grid { grid-template-columns: repeat(3, 1fr); }
+        }
+        .acq-calc-tile {
+            background: var(--bg-surface);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 14px 10px;
+            text-align: center;
+        }
+        .acq-calc-tile__num {
+            font-weight: 900;
+            font-size: 19px;
+            color: var(--color-black);
+            display: block;
+            letter-spacing: -0.01em;
+        }
+        .acq-calc-tile__label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            line-height: 1.3;
+        }
+        .acq-calc-cta { text-align: center; margin-top: 14px; }
+        .acq-calc-cta .button { margin-top: 0; }
     </style>
 </head>
 <body>
@@ -645,37 +966,25 @@
 
         <!-- Section 1: Hero -->
         <div class="container">
-            <div class="acq-hero-inner reveal-blur">
-                <div class="pill">
-                    <span class="dot" aria-hidden="true"></span>
-                    For HVAC contractors
-                </div>
-
-                <h1 class="text-white">
-                    More booked HVAC estimates, <span class="text-yellow accent-italic">every month</span>.
-                </h1>
-
-                <p class="text-white consulting-hero-sub">
-                    We bring HVAC contractors 10 or more system-replacement estimates a month, screened so you only quote serious buyers, never price-shoppers or tire-kickers. You only pay when we deliver.
-                </p>
-
+            <div class="acq-hero-inner acq-hero-inner--novsl reveal-blur">
                 <style>
-                    .hvac-card{max-width:900px;margin:34px auto 0;background:#fff;border-radius:20px;box-shadow:0 34px 80px rgba(0,0,0,.4);overflow:hidden;text-align:left;color:#1C1422}
+                    .hvac-card{max-width:100%;margin:0;background:#fff;border-radius:20px;box-shadow:0 34px 80px rgba(0,0,0,.4);overflow:hidden;text-align:left;color:#1C1422}
                     .hvac-card *{box-sizing:border-box}
-                    .hvac-vsl{position:relative;width:100%;aspect-ratio:16/9;background:#0c0a12}
-                    .hvac-vsl__ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:#fff}
-                    .hvac-vsl__play{width:66px;height:66px;border-radius:50%;background:#F1DE71;display:flex;align-items:center;justify-content:center}
-                    .hvac-vsl__play:after{content:"";border-left:19px solid #1C1422;border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px}
-                    .hvac-form{padding:26px 26px 30px}
+                    .hvac-form{padding:22px 22px 26px}
                     .hvac-form__title{font-weight:800;font-size:1.4rem;text-align:center}
-                    .hvac-form__sub{font-size:.9rem;color:#6b6475;text-align:center;margin:4px 0 16px}
+                    .hvac-form__sub{font-size:.9rem;color:#6b6475;text-align:center;margin:4px 0 14px}
                     .hvac-prog{height:6px;background:#eee;border-radius:99px;overflow:hidden;max-width:460px;margin:0 auto}
                     .hvac-prog__bar{display:block;height:100%;width:33.33%;background:#F1DE71;transition:width .25s}
-                    .hvac-prog__label{font-size:.72rem;color:#8a8397;text-align:center;margin:8px 0 18px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-                    .hvac-q{max-width:460px;margin:0 auto 15px}
-                    .hvac-q>label{display:block;font-weight:700;margin-bottom:8px;font-size:.96rem;color:#1C1422}
-                    .hvac-chips{display:flex;flex-wrap:wrap;gap:8px}
-                    .hvac-chips label{flex:1 1 calc(50% - 4px);min-width:calc(50% - 4px);border:1.5px solid #e2ddec;border-radius:10px;padding:10px 12px;font-size:.9rem;cursor:pointer;text-align:center;transition:.12s;position:relative}
+                    .hvac-prog__label{font-size:.72rem;color:#8a8397;text-align:center;margin:6px 0 14px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+                    .hvac-q{max-width:460px;margin:0 auto 11px}
+                    .hvac-q>label{display:block;font-weight:700;margin-bottom:6px;font-size:.96rem;color:#1C1422}
+                    /* Chips: grid instead of flex, so column count can respond to real
+                       available width. Mobile default is 2-per-row (down from a 1-per-row
+                       fallback below 520px, which is where most real phones landed);
+                       desktop widens the question column and auto-fits up to 4 (or 3,
+                       for the "ready to start" question) onto a single row. */
+                    .hvac-chips{display:grid;grid-template-columns:repeat(2,1fr);gap:6px}
+                    .hvac-chips label{border:1.5px solid #e2ddec;border-radius:10px;padding:9px 8px;font-size:.85rem;line-height:1.25;cursor:pointer;text-align:center;transition:.12s;position:relative;display:flex;align-items:center;justify-content:center}
                     .hvac-chips label:hover{border-color:#F1DE71}
                     .hvac-chips input{position:absolute;opacity:0;pointer-events:none}
                     .hvac-chips label:has(input:checked){border-color:#1C1422;background:#faf7ff;font-weight:700}
@@ -688,18 +997,40 @@
                     .hvac-done{text-align:center;max-width:460px;margin:0 auto;padding:16px 0}
                     .hvac-done .big{font-size:2.8rem}
                     .hvac-trust{margin-top:16px}
-                    @media(max-width:520px){.hvac-chips label{flex:1 1 100%;min-width:100%}}
+                    @media(min-width:640px){
+                        .hvac-q{max-width:700px}
+                        .hvac-chips{grid-template-columns:repeat(4,1fr)}
+                    }
                 </style>
 
-                <!-- VSL + MULTI-STEP FORM CARD -->
-                <div id="register" class="hvac-card">
-                    <div class="hvac-vsl">
-                        <div class="hvac-vsl__ph">
-                            <span class="hvac-vsl__play"></span>
-                            <span style="font-weight:700;opacity:.85">Watch the 4-minute video</span>
-                        </div>
-                        <!-- production: <iframe src="[BUNNY EMBED]" allow="accelerometer;gyroscope;encrypted-media;picture-in-picture;" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe> -->
+                <div class="acq-hero-grid">
+                <div class="acq-hero-copy">
+                    <div class="pill">
+                        <span class="dot" aria-hidden="true"></span>
+                        For HVAC contractors
                     </div>
+
+                    <h1 class="text-white">
+                        More booked HVAC estimates, <span class="text-yellow accent-italic">every month</span>.
+                    </h1>
+
+                    <p class="text-white consulting-hero-sub">
+                        We bring HVAC contractors 10 or more system-replacement estimates a month, screened so you only quote serious buyers, never price-shoppers or tire-kickers. You only pay when we deliver.
+                    </p>
+
+                    <div class="acq-hero-ctas">
+                        <a href="#register" class="button button-primary">Apply now &rarr;</a>
+                        <a href="#processCalcSection" class="button button-secondary">See your numbers &rarr;</a>
+                    </div>
+
+                    <p class="acq-hero-trust hvac-trust">
+                        Limited spots. One HVAC contractor per service area. Every application is reviewed.
+                    </p>
+                </div>
+
+                <!-- MULTI-STEP FORM CARD (no-VSL variant: trust strip replaces the video) -->
+                <div class="acq-hero-form-col">
+                <div id="register" class="hvac-card">
                     <div class="hvac-form">
                         <div class="hvac-form__title">Apply for your free strategy call</div>
                         <p class="hvac-form__sub">A few quick questions first. I only work with a limited number of HVAC contractors, so not every business qualifies.</p>
@@ -781,10 +1112,8 @@
                         </form>
                     </div>
                 </div>
-
-                <p class="acq-hero-trust hvac-trust">
-                    Limited spots. One HVAC contractor per service area. Every application is reviewed.
-                </p>
+                </div>
+                </div>
 
                 <script>
                 (function(){
@@ -867,6 +1196,190 @@
         </div>
     </section>
 
+    <!-- Section 3: How this works + ROI Calculator (merged, two-column, SSG-style) -->
+    <section class="section" id="processCalcSection">
+        <div class="container">
+            <div class="acq-head reveal-blur">
+                <h2>Here's how this works, and what it could mean for you.</h2>
+            </div>
+
+            <div class="acq-process-calc-grid">
+                <div class="reveal-blur">
+                    <div class="acq-process-steps">
+                        <div class="acq-process-step">
+                            <span class="acq-process-step__num">1</span>
+                            <div class="acq-process-step__body">
+                                <p class="acq-process-step__meta">30 minutes</p>
+                                <h3>Free Strategy Call</h3>
+                                <p>We get on a call. You tell me where your jobs come from now and where you want to be. This is an application, not a sales pitch. If you're not a fit, I'll tell you, and I won't waste your time.</p>
+                            </div>
+                        </div>
+                        <div class="acq-process-step">
+                            <span class="acq-process-step__num">2</span>
+                            <div class="acq-process-step__body">
+                                <p class="acq-process-step__meta">done for you</p>
+                                <h3>I build it, then run it</h3>
+                                <p>If we're a fit, I build the system that books your estimates: the ads, the landing page, the offer, and the screening that filters out the time-wasters. Then I run it for you, while you focus on the jobs I bring you.</p>
+                            </div>
+                        </div>
+                        <div class="acq-process-step">
+                            <span class="acq-process-step__num">3</span>
+                            <div class="acq-process-step__body">
+                                <p class="acq-process-step__meta">early-client rate</p>
+                                <h3>You pay on results</h3>
+                                <p>You only pay when I deliver qualified estimates. Right now I'm taking on a few HVAC contractors to build more case studies, so you get my lowest rate for doing this together early. If I don't deliver, you don't pay.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="acq-process-close">
+                        The promise: the guaranteed number in the calculator, in qualified system-replacement estimates, in 30 days, or you don't pay my fee. That number scales with your ad budget, not a flat guarantee that doesn't move. I take on a limited number of HVAC contractors, and only one per service area, so it stays exclusive. Every application is reviewed, and not everyone qualifies.
+                    </p>
+
+                    <div class="acq-inline-cta" style="margin-top: var(--space-lg);">
+                        <p>See if your area is still open.</p>
+                        <a class="button button-primary" href="#register">Check if you qualify →</a>
+                    </div>
+                </div>
+
+                <div class="acq-calc-card reveal-blur">
+                    <div class="acq-calc-card__head">
+                        <h3>HVAC ROI Calculator</h3>
+                        <span class="acq-calc-card__tag">Work Order</span>
+                    </div>
+
+                    <div class="acq-calc-slider-row">
+                        <div class="acq-calc-slider-label">
+                            <span>Monthly ad budget</span>
+                            <span class="acq-calc-slider-value" id="calcBudgetLabel">$1,500</span>
+                        </div>
+                        <input type="range" class="acq-calc-slider" id="calcBudget" min="300" max="8000" step="200" value="1500" aria-label="Monthly ad budget">
+                        <div class="acq-calc-slider-range"><span>$300</span><span>$8,000</span></div>
+                    </div>
+
+                    <div class="acq-calc-numeric-row">
+                        <div class="acq-calc-input-group">
+                            <label for="calcClose">Close rate %</label>
+                            <div class="acq-calc-input-wrap"><input type="number" id="calcClose" value="25" min="1" max="100" step="1" inputmode="numeric"><span>%</span></div>
+                        </div>
+                        <div class="acq-calc-input-group">
+                            <label for="calcTicket">Avg job size $</label>
+                            <div class="acq-calc-input-wrap"><span>$</span><input type="number" id="calcTicket" value="12000" min="1000" step="500" inputmode="numeric"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="acq-calc-reset" id="calcReset">Reset to our estimate</button>
+
+                    <div class="acq-calc-list">
+                        <div class="acq-calc-row"><span>Cost per lead (HVAC average, fixed)</span><strong>$115</strong></div>
+                        <div class="acq-calc-row"><span>Leads (30 days)</span><strong id="calcRawLeads">13</strong></div>
+                        <div class="acq-calc-row"><span>Closed (30 days)</span><strong id="calcClosed">3.3</strong></div>
+                        <div class="acq-calc-row"><span>Cost to acquire each customer</span><strong id="calcCAC">$1,060</strong></div>
+                        <div class="acq-calc-row"><span>Revenue (year)</span><strong id="calcRevenue">$469,565</strong></div>
+                        <div class="acq-calc-row"><span>Our fee (per qualified estimate)</span><strong id="calcFee">$150</strong></div>
+                        <div class="acq-calc-row"><span>Total monthly investment</span><strong id="calcTotalCost">$3,457</strong></div>
+                        <div class="acq-calc-row acq-calc-row--profit"><span>Net profit (year) <em>before job costs</em></span><strong id="calcProfit">$428,087</strong></div>
+                        <div class="acq-calc-row acq-calc-row--roi"><span>Return on investment</span><strong id="calcROI">10.3x</strong></div>
+                    </div>
+
+                    <div class="acq-calc-guarantee">
+                        <span class="acq-calc-guarantee__num" id="calcGuarantee">9</span>
+                        <span class="acq-calc-guarantee__label">qualified system-replacement estimates a month <span class="acq-calc-stamp">Guaranteed</span></span>
+                    </div>
+
+                    <div class="acq-calc-cta">
+                        <a class="button button-primary" href="#register">Get my exact number on a call →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        (function () {
+            var DEFAULTS = { budget: 1500, ticket: 12000, close: 25 };
+            var CPL = 115, MARGIN = 0.20, SAFETY = 0.75, TARGET_SHARE = 0.25;
+            var elBudget = document.getElementById('calcBudget');
+            var elTicket = document.getElementById('calcTicket');
+            var elClose = document.getElementById('calcClose');
+            if (!elBudget || !elTicket || !elClose) return;
+            var elBudgetLabel = document.getElementById('calcBudgetLabel');
+            var elGuarantee = document.getElementById('calcGuarantee');
+            var elRawLeads = document.getElementById('calcRawLeads');
+            var elClosed = document.getElementById('calcClosed');
+            var elCAC = document.getElementById('calcCAC');
+            var elRevenue = document.getElementById('calcRevenue');
+            var elFee = document.getElementById('calcFee');
+            var elTotalCost = document.getElementById('calcTotalCost');
+            var elProfit = document.getElementById('calcProfit');
+            var elROI = document.getElementById('calcROI');
+            var elReset = document.getElementById('calcReset');
+
+            function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+            function num(el, fallback) {
+                var v = parseFloat(el.value);
+                return (isNaN(v) || v <= 0) ? fallback : v;
+            }
+
+            function update() {
+                var budget = num(elBudget, DEFAULTS.budget);
+                var ticket = num(elTicket, DEFAULTS.ticket);
+                var closeRate = num(elClose, DEFAULTS.close) / 100;
+
+                elBudgetLabel.textContent = money(budget);
+
+                // Raw projected leads (undiscounted) drive the "typical case"
+                // projection below; the guarantee is a separate, deliberately
+                // conservative floor at a 75% safety margin off the same raw number.
+                var rawLeads = budget / CPL;
+                var guaranteed = Math.max(0, Math.floor(rawLeads * SAFETY));
+                var closed = rawLeads * closeRate;
+
+                // Our fee per qualified estimate, from 06's PPA formula
+                // (ticket x margin x close rate x our target share), rounded
+                // UP to the nearest $5 — a client-facing price should be clean
+                // and quotable, and rounding up (never down) means we never
+                // underquote against what the formula actually supports. Only
+                // visible once inputs move off the defaults, which happen to
+                // land on an already-clean $150.
+                var rawPpa = ticket * MARGIN * closeRate * TARGET_SHARE;
+                var ppa = Math.ceil(rawPpa / 5) * 5;
+                var totalFee = ppa * rawLeads;
+                var totalMonthlyCost = budget + totalFee;
+                var cac = closed > 0 ? totalMonthlyCost / closed : 0;
+                var annualRevenue = closed * 12 * ticket;
+                var annualCost = totalMonthlyCost * 12;
+                // Net profit = revenue minus total investment, no margin haircut
+                // (we don't have verified per-niche margins to defend one).
+                var netProfit = annualRevenue - annualCost;
+                var roiMultiple = annualCost > 0 ? netProfit / annualCost : 0;
+
+                elGuarantee.textContent = guaranteed;
+                elRawLeads.textContent = Math.floor(rawLeads);
+                elClosed.textContent = closed.toFixed(1);
+                elCAC.textContent = closed > 0 ? money(cac) : '—';
+                elRevenue.textContent = money(annualRevenue);
+                elFee.textContent = money(ppa);
+                elTotalCost.textContent = money(totalMonthlyCost);
+                elProfit.textContent = money(netProfit);
+                elROI.textContent = roiMultiple.toFixed(1) + 'x';
+            }
+
+            elBudget.addEventListener('input', update);
+            [elTicket, elClose].forEach(function (el) {
+                el.addEventListener('input', update);
+                el.addEventListener('blur', update);
+            });
+            elReset.addEventListener('click', function () {
+                elBudget.value = DEFAULTS.budget;
+                elTicket.value = DEFAULTS.ticket;
+                elClose.value = DEFAULTS.close;
+                update();
+            });
+
+            update();
+        })();
+        </script>
+    </section>
+
     <!-- Section 4: The Three Revenue Engines (mechanisms) -->
     <section class="section acq-mech">
         <div class="container">
@@ -888,47 +1401,6 @@
 
             <div class="acq-mech-power">
                 <p>The piece most contractors miss is the screening. Before a homeowner ever reaches you, we check that they own the home, have an aging or failing system, and are ready for an estimate. The price-shoppers, renters, and <strong>tire-kickers never hit your calendar</strong>, so every appointment is a homeowner worth quoting.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section 5: How this works -->
-    <section class="section">
-        <div class="container">
-            <div class="acq-head reveal-blur">
-                <h2>Here's how this works.</h2>
-            </div>
-
-            <div class="acq-process-grid">
-                <div class="acq-process-card reveal-blur card-lift">
-                    <div class="acq-process-card__num">1</div>
-                    <h3>Free Strategy Call</h3>
-                    <p class="acq-process-card__meta">30 minutes</p>
-                    <p>We get on a call. You tell me where your jobs come from now and where you want to be. This is an application, not a sales pitch. If you're not a fit, I'll tell you, and I won't waste your time.</p>
-                </div>
-
-                <div class="acq-process-card reveal-blur card-lift">
-                    <div class="acq-process-card__num">2</div>
-                    <h3>I build it, then run it</h3>
-                    <p class="acq-process-card__meta">done for you</p>
-                    <p>If we're a fit, I build the system that books your estimates: the ads, the landing page, the offer, and the screening that filters out the time-wasters. Then I run it for you, while you focus on the jobs I bring you.</p>
-                </div>
-
-                <div class="acq-process-card reveal-blur card-lift">
-                    <div class="acq-process-card__num">3</div>
-                    <h3>You pay on results</h3>
-                    <p class="acq-process-card__meta">early-client rate</p>
-                    <p>You only pay when I deliver qualified estimates. Right now I'm taking on a few HVAC contractors to build more case studies, so you get my lowest rate for doing this together early. If I don't deliver, you don't pay.</p>
-                </div>
-            </div>
-
-            <p class="acq-process-close">
-                The promise: 10 qualified system-replacement estimates in 30 days, or you don't pay my fee. I take on a limited number of HVAC contractors, and only one per service area, so it stays exclusive. Every application is reviewed, and not everyone qualifies.
-            </p>
-
-            <div class="acq-inline-cta">
-                <p>See if your area is still open.</p>
-                <a class="button button-primary" href="#register">Check if you qualify →</a>
             </div>
         </div>
     </section>
@@ -1071,19 +1543,22 @@
             if (el) el.textContent = new Date().getFullYear();
         })();
 
-        // Sticky book-a-call bar: appear after the hero, hide when the final CTA is in view
+        // Sticky book-a-call bar: appear after the hero, hide when the final CTA
+        // or the calculator section is in view (the bar would otherwise sit on
+        // top of the calculator's own CTA and the guarantee box).
         (function(){
             var bar = document.getElementById('acqSticky');
             if (!bar) return;
             var finalCta = document.querySelector('.acq-final');
+            var calcSection = document.getElementById('processCalcSection');
+            function inView(el){
+                if (!el) return false;
+                var r = el.getBoundingClientRect();
+                return r.top < window.innerHeight && r.bottom > 0;
+            }
             function onScroll(){
                 var pastHero = window.scrollY > window.innerHeight * 0.9;
-                var finalInView = false;
-                if (finalCta){
-                    var r = finalCta.getBoundingClientRect();
-                    finalInView = r.top < window.innerHeight && r.bottom > 0;
-                }
-                var show = pastHero && !finalInView;
+                var show = pastHero && !inView(finalCta) && !inView(calcSection);
                 bar.classList.toggle('is-visible', show);
                 bar.setAttribute('aria-hidden', show ? 'false' : 'true');
             }
