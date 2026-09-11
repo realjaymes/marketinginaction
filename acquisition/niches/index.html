@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="James Praise">
     <meta name="color-scheme" content="light only">
-    <title>Industries I Run Paid Acquisition For | MIA</title>
-    <meta name="description" content="Every service-business industry I run done-for-you paid acquisition for, one page each, from roofing and plumbing to medspas and home care.">
+    <title>Industries I Build Customer Acquisition Systems For | MIA</title>
+    <meta name="description" content="Done-for-you customer acquisition systems for local service businesses, one industry page each, from roofing and plumbing to medspas and home care.">
     <meta name="robots" content="index, follow">
 
     <link rel="canonical" href="https://marketinginaction.xyz/acquisition/niches/">
@@ -38,6 +38,21 @@
         { "@type": "ListItem", "position": 19, "name": "HVAC", "url": "https://marketinginaction.xyz/acquisition/hvac/" },
         { "@type": "ListItem", "position": 20, "name": "Roofing", "url": "https://marketinginaction.xyz/acquisition/roofing/" },
         { "@type": "ListItem", "position": 21, "name": "General Contracting", "url": "https://marketinginaction.xyz/acquisition/general-contracting/" }
+      ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Is this just running ads?", "acceptedAnswer": { "@type": "Answer", "text": "No. The ads are only the first step. Around them I build the part that actually turns interest into a booked job: the message that gets the right people to reach out, the page they land on, and the screening that puts only the serious buyers on your calendar. Running ads without all that is why most local businesses waste money." } },
+        { "@type": "Question", "name": "What does it cost me? Do I pay for the ads too?", "acceptedAnswer": { "@type": "Answer", "text": "Two separate things, and I keep them clear. The ad money goes straight to Meta to show your ads. It's yours, and it never comes to me. My fee is separate, and you only pay it when I actually deliver qualified appointments. No appointments, no fee." } },
+        { "@type": "Question", "name": "What if the leads are no good?", "acceptedAnswer": { "@type": "Answer", "text": "Then you don't pay for them. You only pay for appointments that meet the bar we set for your industry. Wrong-fit people and tire-kickers don't count toward your number, and they don't cost you." } },
+        { "@type": "Question", "name": "I'm not a computer person. Do I need a website?", "acceptedAnswer": { "@type": "Answer", "text": "No website needed, and you don't have to be techy at all. I handle every technical part: the ads, the pages, the setup, all of it. Your only job is to show up to the appointments I book and do what you already do best." } },
+        { "@type": "Question", "name": "I already get enough work from referrals.", "acceptedAnswer": { "@type": "Answer", "text": "Good, keep them. The trouble with referrals is they dry up in the slow months, right when you need the work. This gives you a steady flow you can turn up whenever you want more jobs, with referrals still coming in on top." } },
+        { "@type": "Question", "name": "If we stop working together, who keeps everything?", "acceptedAnswer": { "@type": "Answer", "text": "You do. I build everything on your own accounts, so the ads, the results, and all the information stay with you. You're never locked in, and you never lose what we built." } }
       ]
     }
     </script>
@@ -80,280 +95,561 @@
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=660940561182168&ev=PageView&noscript=1"></noscript>
 
     <style>
-        .niches-hero {
-            background: var(--color-black);
-            padding: 88px 0 64px;
-            text-align: center;
-        }
-        .niches-hero .pill {
-            display: inline-flex;
+        .niches-wrap { padding: 72px 0 96px; }
+
+        /* Hero: left copy / right calculator, same pattern as the per-niche LPs */
+        .niches-hero-grid {
+            display: grid;
+            gap: var(--space-2xl);
             align-items: center;
-            gap: 8px;
-            font-size: 12.5px;
-            font-weight: 700;
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-            color: var(--color-accent);
-            background: rgba(241, 222, 113, 0.12);
-            border: 1px solid rgba(241, 222, 113, 0.3);
-            padding: 6px 14px;
-            border-radius: 999px;
-            margin-bottom: var(--space-lg);
-        }
-        .niches-hero .pill .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--color-accent); }
-        .niches-hero h1 {
-            color: var(--color-white);
-            font-size: clamp(30px, 5vw, 46px);
-            font-weight: 900;
-            letter-spacing: -0.02em;
-            line-height: 1.12;
-            margin: 0 auto var(--space-md);
-            max-width: 16ch;
-        }
-        .niches-hero .sub {
-            color: rgba(247, 244, 250, 0.72);
-            font-size: 16px;
-            line-height: 1.6;
-            max-width: 52ch;
+            max-width: 1160px;
             margin: 0 auto;
         }
+        @media (min-width: 960px) {
+            .niches-hero-grid { grid-template-columns: 0.95fr 1.05fr; }
+        }
 
-        .niches-section { padding: var(--space-2xl) 0 96px; }
-        .niches-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-            gap: var(--space-md);
-        }
-        .niche-tile {
-            display: block;
-            background: var(--color-black);
-            border-radius: var(--radius-md);
-            padding: var(--space-lg);
-            text-decoration: none;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.16s ease, box-shadow 0.16s ease;
-        }
-        .niche-tile:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 14px 32px rgba(16, 10, 22, 0.28);
-        }
-        .niche-tile .figure {
-            color: var(--color-accent);
-            font-family: inherit;
-            font-weight: 900;
-            font-size: 30px;
-            letter-spacing: -0.01em;
-            line-height: 1;
-            margin-bottom: 4px;
-        }
-        .niche-tile .basis {
-            color: rgba(247, 244, 250, 0.5);
-            font-size: 11.5px;
-            font-weight: 600;
+        /* Intro (left column) */
+        .niches-intro { text-align: left; }
+        .niches-intro .pill { margin: 0 0 var(--space-lg); }
+        .eyebrow-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            color: var(--color-blue);
             margin-bottom: var(--space-md);
         }
-        .niche-tile .name {
-            color: var(--color-white);
-            font-size: 17px;
-            font-weight: 700;
-            letter-spacing: -0.005em;
-            margin-bottom: 3px;
-        }
-        .niche-tile .tag {
-            color: rgba(247, 244, 250, 0.6);
-            font-size: 12.5px;
-        }
-        .niche-tile .arrow {
-            position: absolute;
-            top: var(--space-lg);
-            right: var(--space-lg);
-            color: rgba(247, 244, 250, 0.35);
-            font-size: 16px;
+        .eyebrow-label .dash { width: 22px; height: 2px; background: var(--color-blue); border-radius: 2px; }
+        .niches-intro h1 {
+            font-size: clamp(30px, 4vw, 42px);
             font-weight: 900;
-            transition: color 0.16s, transform 0.16s;
+            letter-spacing: -0.02em;
+            line-height: 1.15;
+            color: var(--text-primary);
+            margin: 0 0 var(--space-md);
         }
-        .niche-tile:hover .arrow { color: var(--color-accent); transform: translate(2px, -2px); }
+        .niches-intro h1 .hl { background-image: linear-gradient(180deg, transparent 55%, var(--color-accent) 55%); }
+        .niches-intro .sub { color: var(--text-muted); font-size: 16px; line-height: 1.6; margin: 0 0 var(--space-lg); max-width: 46ch; }
+        .niches-intro .button { margin-top: 0; }
+        .niches-trust {
+            margin: var(--space-md) 0 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: rgba(247, 244, 250, 0.6);
+        }
+        .niches-sub { opacity: 0.92; }
 
-        .niches-footer {
-            max-width: 62ch;
-            margin: var(--space-2xl) auto 0;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 13.5px;
-            line-height: 1.6;
+        /* Calculator (right column; shared across all niches, reused from the per-niche LP calculator) */
+        .niches-calc-section { margin: 0; }
+        .acq-calc-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: 0 24px 60px rgba(28, 20, 34, 0.10);
+            padding: 26px 28px 28px;
         }
-        .niches-footer a { color: var(--text-primary); font-weight: 700; }
+        .acq-calc-card__head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+            padding-bottom: var(--space-md);
+            border-bottom: 1px solid var(--border);
+        }
+        .acq-calc-card__head h3 { margin: 0; font-size: 18px; }
+        .acq-calc-card__tag {
+            font-size: 10.5px;
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            padding: 3px 10px;
+            white-space: nowrap;
+        }
+        .acq-calc-select-row { margin-bottom: 16px; }
+        .acq-calc-select-row label {
+            display: block;
+            font-size: 12.5px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        .acq-calc-select {
+            width: 100%;
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 11px 12px;
+            font-size: 15px;
+            font-weight: 800;
+            font-family: inherit;
+            color: var(--color-black);
+            background: var(--bg-page);
+        }
+        .acq-calc-select:focus { outline: none; border-color: var(--color-accent); }
+        .acq-calc-slider-row { margin-bottom: 14px; }
+        .acq-calc-slider-label { display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; margin-bottom: 12px; }
+        .acq-calc-slider-value { color: var(--color-black); font-weight: 900; font-size: 20px; }
+        input[type="range"].acq-calc-slider { width: 100%; accent-color: var(--color-accent); height: 6px; cursor: pointer; }
+        .acq-calc-slider-range { display: flex; justify-content: space-between; font-size: 11.5px; color: var(--text-muted); margin-top: 6px; }
+        .acq-calc-numeric-row { display: grid; gap: 10px; margin-bottom: 10px; }
+        @media (min-width: 420px) { .acq-calc-numeric-row { grid-template-columns: repeat(2, 1fr); } }
+        .acq-calc-input-group label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-primary); margin-bottom: 6px; }
+        .acq-calc-input-wrap { display: flex; align-items: center; border: 1.5px solid var(--border); border-radius: 10px; padding: 0 12px; background: var(--bg-page); }
+        .acq-calc-input-wrap:focus-within { border-color: var(--color-accent); }
+        .acq-calc-input-wrap span { color: var(--text-muted); font-weight: 700; font-size: 15px; }
+        .acq-calc-input-wrap input[type="number"] { border: none; background: transparent; padding: 8px 6px; font-size: 16px; font-weight: 800; width: 100%; min-width: 0; font-family: inherit; color: var(--color-black); }
+        .acq-calc-input-wrap input[type="number"]:focus { outline: none; }
+        .acq-calc-reset { display: block; text-align: center; font-size: 12px; font-weight: 700; color: var(--text-muted); text-decoration: underline; margin: -2px 0 10px; cursor: pointer; background: none; border: none; width: 100%; font-family: inherit; }
+        .acq-calc-reset:hover { color: var(--text-primary); }
+        .acq-calc-list { margin: 8px 0 0; border-top: 1px solid var(--border); }
+        .acq-calc-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 13px; line-height: 1.3; flex-wrap: wrap; }
+        .acq-calc-row span:first-child { color: var(--text-muted); }
+        .acq-calc-row strong { font-weight: 800; color: var(--color-black); white-space: nowrap; }
+        .acq-calc-row--profit strong, .acq-calc-row--roi strong { color: #2e7d4f; }
+        .acq-calc-guarantee { background: #100a16; color: #fff; border-radius: 14px; padding: 16px 22px; text-align: center; margin: 14px 0 0; }
+        .acq-calc-guarantee__num { font-size: 36px; font-weight: 900; color: var(--color-accent); line-height: 1; display: block; margin-bottom: 4px; }
+        .acq-calc-guarantee__label { font-size: 13.5px; color: rgba(247,244,250,0.85); }
+        .acq-calc-stamp {
+            font-size: 9px;
+            font-weight: 900;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            color: #2e7d4f;
+            border: 1.5px solid #2e7d4f;
+            border-radius: 6px;
+            padding: 2px 6px;
+            transform: rotate(-5deg);
+            background: rgba(46, 125, 79, 0.06);
+            white-space: nowrap;
+            display: inline-block;
+            margin-left: 6px;
+        }
+        .acq-calc-visit { display: block; text-align: center; font-size: 12.5px; color: var(--text-muted); margin-top: 10px; }
+        .acq-calc-visit a { color: var(--color-blue); font-weight: 700; }
+
+        /* Industries grid */
+        .niches-section { max-width: 1160px; margin: 0 auto; }
+        .niches-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: var(--space-md); }
+        .niche-tile { background: var(--bg-surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: var(--space-md) var(--space-lg) var(--space-md); transition: border-color 0.15s ease; }
+        .niche-tile:hover { border-color: var(--color-blue); }
+        .tile-main { display: block; width: 100%; text-align: left; background: none; border: none; padding: 0; cursor: pointer; font-family: inherit; }
+        .niche-tile .figure { color: var(--text-primary); font-weight: 900; font-size: 28px; letter-spacing: -0.01em; line-height: 1.2; margin-bottom: 2px; }
+        .niche-tile .name { color: var(--text-primary); font-size: 15.5px; font-weight: 700; margin-bottom: 4px; }
+        .niche-tile .outcome { color: var(--text-muted); font-size: 12.5px; line-height: 1.4; margin-bottom: 10px; }
+        .tile-visit { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: var(--color-blue); text-decoration: none; padding-top: 8px; border-top: 1px solid var(--border); width: 100%; }
+        .tile-visit:hover { color: var(--text-primary); }
+        .niches-caption { max-width: 60ch; margin: var(--space-lg) auto 0; text-align: center; color: var(--text-muted); font-size: 13px; line-height: 1.6; }
+
+        /* How it works */
+        .acq-head { text-align: center; max-width: 70ch; margin: 0 auto var(--space-xl); }
+        .acq-head h2 { margin-bottom: var(--space-sm); }
+        .acq-head p { color: var(--text-muted); margin: 0; }
+        .acq-process-grid { display: grid; gap: var(--space-lg); max-width: 1080px; margin: 0 auto; }
+        @media (min-width: 900px) { .acq-process-grid { grid-template-columns: repeat(3, 1fr); } }
+        .acq-process-card { background: var(--bg-page); border: 1px solid var(--border); border-radius: var(--radius-md); padding: var(--space-xl); box-shadow: 0 8px 30px rgba(28, 20, 34, 0.04); }
+        .acq-process-card__num { width: 36px; height: 36px; border-radius: 50%; background: var(--color-accent); color: var(--color-black); font-weight: 800; display: inline-flex; align-items: center; justify-content: center; margin-bottom: var(--space-md); }
+        .acq-process-card h3 { font-size: 20px; margin: 0 0 4px; }
+        .acq-process-card__meta { color: var(--text-muted); font-size: 14px; margin: 0 0 var(--space-md); font-weight: 600; }
+        .acq-process-card p { margin: 0; color: var(--text-primary); line-height: 1.55; }
+        .acq-inline-cta { text-align: center; max-width: 640px; margin: var(--space-2xl) auto 0; }
+        .acq-inline-cta p { color: var(--text-muted); font-weight: 650; font-size: 18px; margin: 0 0 var(--space-md); }
+        .acq-inline-cta .button { margin-top: 0; }
+
+        /* Final CTA */
+        .acq-final {
+            background:
+                radial-gradient(900px 500px at 50% 30%, rgba(241, 222, 113, 0.14), transparent 60%),
+                radial-gradient(700px 500px at 50% 70%, rgba(113, 132, 241, 0.10), transparent 65%),
+                #100a16;
+            color: var(--color-white);
+            text-align: center;
+            padding: 72px 0;
+            margin-top: 96px;
+        }
+        .acq-final h2 { color: var(--color-white); margin: 0 0 var(--space-md); }
+        .acq-final p { color: rgba(247, 244, 250, 0.85); max-width: 64ch; margin: 0 auto var(--space-xl); line-height: 1.55; }
+        .acq-final .button-row { justify-content: center; margin-top: 0; }
+
+        section.section { padding: 96px 0; }
+        .section-white { background: var(--bg-surface); }
     </style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <section class="niches-hero">
+    <section class="consulting-hero">
         <div class="container">
-            <div class="pill"><span class="dot"></span> The full portfolio</div>
-            <h1>Every industry I run paid acquisition for.</h1>
-            <p class="sub">One page each, built and priced around that industry's own numbers. Tap through to see the exact system.</p>
-        </div>
-    </section>
-
-    <section class="niches-section">
-        <div class="container">
-            <div class="niches-grid">
-                <a class="niche-tile" href="/acquisition/pet-waste-removal/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$180</div>
-                    <div class="basis">2-month value</div>
-                    <div class="name">Pet Waste Removal</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/junk-removal/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">~$250</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Junk Removal</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/pressure-washing/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$350</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Pressure Washing</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/pool-service/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$360</div>
-                    <div class="basis">2-month value</div>
-                    <div class="name">Pool Service</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/handyman/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$390</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Handyman</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/waste-management/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$400</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Waste Management</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/pest-control/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$400</div>
-                    <div class="basis">Annual contract</div>
-                    <div class="name">Pest Control</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/home-cleaning/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$480</div>
-                    <div class="basis">2-month value</div>
-                    <div class="name">Home Cleaning</div>
-                    <div class="tag">Volume-play</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/moving/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">~$1,250</div>
-                    <div class="basis">Local move</div>
-                    <div class="name">Moving Services</div>
-                    <div class="tag">Low-mid</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/water-treatment/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$3,500</div>
-                    <div class="basis">Avg install</div>
-                    <div class="name">Water Treatment</div>
-                    <div class="tag">Mid</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/medspa/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$4,000</div>
-                    <div class="basis">Treatment package</div>
-                    <div class="name">Medspa</div>
-                    <div class="tag">Mid</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/garage-floor-epoxy/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$4,000</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Garage Floor Epoxy</div>
-                    <div class="tag">Mid</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/hearing-aid/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$4,500</div>
-                    <div class="basis">Avg pair</div>
-                    <div class="name">Hearing Aid Practices</div>
-                    <div class="tag">Mid</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/electrical/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$6,000</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Electrical</div>
-                    <div class="tag">Mid-high</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/painting/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$7,500</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Painting</div>
-                    <div class="tag">Mid-high</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/home-care/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$7,600</div>
-                    <div class="basis">Avg package</div>
-                    <div class="name">Home Care</div>
-                    <div class="tag">Mid-high</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/landscaping/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$8,000</div>
-                    <div class="basis">Avg project</div>
-                    <div class="name">Landscaping</div>
-                    <div class="tag">Mid-high</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/plumbing/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$8,000</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Plumbing</div>
-                    <div class="tag">Mid-high</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/hvac/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$12,000</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">HVAC</div>
-                    <div class="tag">High</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/roofing/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">$15,000</div>
-                    <div class="basis">Avg job</div>
-                    <div class="name">Roofing</div>
-                    <div class="tag">High</div>
-                </a>
-                <a class="niche-tile" href="/acquisition/general-contracting/">
-                    <span class="arrow">↗</span>
-                    <div class="figure">~$30,000</div>
-                    <div class="basis">Avg project</div>
-                    <div class="name">General Contracting</div>
-                    <div class="tag">High</div>
-                </a>
+            <div class="niches-hero-grid">
+            <div class="niches-intro">
+                <div class="pill"><span class="dot"></span> For Local Service Businesses</div>
+                <h1 class="text-white">Customer acquisition systems that <span class="text-yellow accent-italic">book real appointments</span> for local service businesses.</h1>
+                <p class="text-white consulting-hero-sub niches-sub">I guarantee a set number of qualified appointments for your business every month, or you don't pay. Every industry has its own number. Pick yours below to see what I can guarantee you.</p>
+                <a class="button button-primary" href="/acquisition/book/" target="_blank" rel="noopener">Get Your Guarantee →</a>
+                <p class="niches-trust">NO RETAINER &middot; NO CONTRACT &middot; PAY ONLY FOR QUALIFIED APPOINTMENTS</p>
             </div>
 
-            <p class="niches-footer">Don't see your industry? <a href="/acquisition/book/">Book a free strategy call</a> and I'll tell you if the system transfers.</p>
+            <div class="niches-calc-section">
+                <div class="acq-calc-card">
+                    <div class="acq-calc-card__head">
+                        <h3 id="calcTitle">Roofing ROI Calculator</h3>
+                        <span class="acq-calc-card__tag">Work Order</span>
+                    </div>
+
+                    <div class="acq-calc-select-row">
+                        <label for="calcNiche">Your industry</label>
+                        <select class="acq-calc-select" id="calcNiche"></select>
+                    </div>
+
+                    <div class="acq-calc-slider-row">
+                        <div class="acq-calc-slider-label">
+                            <span>Monthly ad budget</span>
+                            <span class="acq-calc-slider-value" id="calcBudgetLabel">$1,500</span>
+                        </div>
+                        <input type="range" class="acq-calc-slider" id="calcBudget" min="300" max="8000" step="200" value="1500" aria-label="Monthly ad budget">
+                        <div class="acq-calc-slider-range"><span>$300</span><span>$8,000</span></div>
+                    </div>
+
+                    <div class="acq-calc-numeric-row">
+                        <div class="acq-calc-input-group">
+                            <label for="calcClose">Close rate %</label>
+                            <div class="acq-calc-input-wrap"><input type="number" id="calcClose" value="25" min="1" max="100" step="1" inputmode="numeric"><span>%</span></div>
+                        </div>
+                        <div class="acq-calc-input-group">
+                            <label for="calcTicket" id="calcTicketLabel">Avg job size $</label>
+                            <div class="acq-calc-input-wrap"><span>$</span><input type="number" id="calcTicket" value="15000" min="100" step="50" inputmode="numeric"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="acq-calc-reset" id="calcReset">Reset to our estimate</button>
+
+                    <div class="acq-calc-list">
+                        <div class="acq-calc-row"><span id="calcCplLabel">Cost per lead (estimated, fixed)</span><strong id="calcCplValue">$85</strong></div>
+                        <div class="acq-calc-row"><span>Leads (30 days)</span><strong id="calcRawLeads">13</strong></div>
+                        <div class="acq-calc-row"><span>Closed (30 days)</span><strong id="calcClosed">3.3</strong></div>
+                        <div class="acq-calc-row"><span>Cost to acquire each customer</span><strong id="calcCAC">$1,060</strong></div>
+                        <div class="acq-calc-row"><span>Revenue (year)</span><strong id="calcRevenue">$469,565</strong></div>
+                        <div class="acq-calc-row"><span>Our fee (per qualified appointment)</span><strong id="calcFee">$150</strong></div>
+                        <div class="acq-calc-row"><span>Total monthly investment</span><strong id="calcTotalCost">$3,457</strong></div>
+                        <div class="acq-calc-row acq-calc-row--profit"><span>Net profit (year) <em>before job costs</em></span><strong id="calcProfit">$428,087</strong></div>
+                        <div class="acq-calc-row acq-calc-row--roi"><span>Return on investment</span><strong id="calcROI">10.3x</strong></div>
+                    </div>
+
+                    <div class="acq-calc-guarantee">
+                        <span class="acq-calc-guarantee__num" id="calcGuarantee">9</span>
+                        <span class="acq-calc-guarantee__label"><span id="calcGuaranteeLabel">qualified appointments a month</span> <span class="acq-calc-stamp">Guaranteed</span></span>
+                    </div>
+
+                    <p class="acq-calc-visit">Want the full page for this industry? <a id="calcVisitLink" href="/acquisition/roofing/">See the Roofing page →</a></p>
+                </div>
+            </div>
+            </div>
         </div>
     </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="niches-section">
+                <div class="niches-grid" id="nichesGrid"></div>
+                <p class="niches-caption">Each number assumes a $1,500/mo starting budget. Tap an industry to run its own numbers in the calculator above.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="acq-head reveal-blur">
+                <h2>Here's how this works.</h2>
+                <p>Same process across every industry above. What changes is the offer and the numbers, not the mechanics.</p>
+            </div>
+
+            <div class="acq-process-grid">
+                <div class="acq-process-card reveal-blur card-lift">
+                    <div class="acq-process-card__num">1</div>
+                    <h3>Free Strategy Call</h3>
+                    <p class="acq-process-card__meta">30 minutes</p>
+                    <p>We get on a call. You tell me your industry, your service area, and your average job size. I tell you honestly whether your area is still open and what number I'd guarantee you.</p>
+                </div>
+
+                <div class="acq-process-card reveal-blur card-lift">
+                    <div class="acq-process-card__num">2</div>
+                    <h3>I build and launch it</h3>
+                    <p class="acq-process-card__meta">exclusive to your service area</p>
+                    <p>The ads, the landing page, the qualification questions, all built around your industry's offer, not a generic template. I only take one business per area, so once yours is taken, it's taken.</p>
+                </div>
+
+                <div class="acq-process-card reveal-blur card-lift">
+                    <div class="acq-process-card__num">3</div>
+                    <h3>You pay on results</h3>
+                    <p class="acq-process-card__meta">no retainer, no contract</p>
+                    <p>You only pay for the qualified appointments I actually deliver. The ad spend is yours and goes straight to Meta. My fee is separate, and it only shows up when I've booked you a real job.</p>
+                </div>
+            </div>
+
+            <div class="acq-inline-cta">
+                <p>Start with a free strategy call. 30 minutes, no pressure.</p>
+                <a class="button button-primary" href="/acquisition/book/" target="_blank" rel="noopener">Book a free strategy call →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section consulting-faq-section">
+        <div class="container">
+            <div class="consulting-faq-head reveal-blur">
+                <h2>Common questions.</h2>
+            </div>
+
+            <div class="consulting-faqs" aria-label="FAQs">
+                <details class="consulting-faq reveal-blur">
+                    <summary>1. Is this just running ads?</summary>
+                    <div class="consulting-faq-body">
+                        <p class="muted">No. The ads are only the first step. Around them I build the part that actually turns interest into a booked job: the message that gets the right people to reach out, the page they land on, and the screening that puts only the serious buyers on your calendar. Running ads without all that is why most local businesses waste money.</p>
+                    </div>
+                </details>
+
+                <details class="consulting-faq reveal-blur">
+                    <summary>2. What does it cost me? Do I pay for the ads too?</summary>
+                    <div class="consulting-faq-body">
+                        <p class="muted">Two separate things, and I keep them clear. The ad money goes straight to Meta to show your ads. It's yours, and it never comes to me. My fee is separate, and you only pay it when I actually deliver qualified appointments. No appointments, no fee.</p>
+                    </div>
+                </details>
+
+                <details class="consulting-faq reveal-blur">
+                    <summary>3. What if the leads are no good?</summary>
+                    <div class="consulting-faq-body">
+                        <p class="muted">Then you don't pay for them. You only pay for appointments that meet the bar we set for your industry. Wrong-fit people and tire-kickers don't count toward your number, and they don't cost you.</p>
+                    </div>
+                </details>
+
+                <details class="consulting-faq reveal-blur">
+                    <summary>4. I'm not a computer person. Do I need a website?</summary>
+                    <div class="consulting-faq-body">
+                        <p class="muted">No website needed, and you don't have to be techy at all. I handle every technical part: the ads, the pages, the setup, all of it. Your only job is to show up to the appointments I book and do what you already do best.</p>
+                    </div>
+                </details>
+
+                <details class="consulting-faq reveal-blur">
+                    <summary>5. I already get enough work from referrals.</summary>
+                    <div class="consulting-faq-body">
+                        <p class="muted">Good, keep them. The trouble with referrals is they dry up in the slow months, right when you need the work. This gives you a steady flow you can turn up whenever you want more jobs, with referrals still coming in on top.</p>
+                    </div>
+                </details>
+
+                <details class="consulting-faq reveal-blur">
+                    <summary>6. If we stop working together, who keeps everything?</summary>
+                    <div class="consulting-faq-body">
+                        <p class="muted">You do. I build everything on your own accounts, so the ads, the results, and all the information stay with you. You're never locked in, and you never lose what we built.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="acq-final">
+        <div class="container reveal-blur">
+            <h2>Is your industry still open?</h2>
+            <p>I work with a limited number of businesses per industry, one per service area, and every application is reviewed. Book a free strategy call and I'll tell you honestly whether yours is still open.</p>
+            <div class="button-row">
+                <a class="button button-primary" href="/acquisition/book/" target="_blank" rel="noopener">Book a free strategy call →</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="acq-footer">
+        <div class="container">
+            © <span id="acq-year"></span> Marketing In Action. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        (function(){
+            var el = document.getElementById('acq-year');
+            if (el) el.textContent = new Date().getFullYear();
+        })();
+
+        // Scroll-reveal (same IntersectionObserver pattern used site-wide)
+        (function () {
+          var seen = new Map();
+          document.querySelectorAll(".reveal-blur").forEach(function (el) {
+            var parent = el.closest("section") || el.parentElement;
+            if (!seen.has(parent)) seen.set(parent, []);
+            seen.get(parent).push(el);
+          });
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (!entry.isIntersecting) return;
+              var siblings = seen.get(entry.target.closest("section") || entry.target.parentElement) || [entry.target];
+              var idx = siblings.indexOf(entry.target);
+              var delay = Math.max(idx, 0) * 90;
+              setTimeout(function () { entry.target.classList.add("is-visible"); }, delay);
+              observer.unobserve(entry.target);
+            });
+          }, { threshold: 0.15 });
+          document.querySelectorAll(".reveal-blur").forEach(function (el) { observer.observe(el); });
+        })();
+    </script>
+
+    <script>
+    (function () {
+        var SAFETY = 0.75, TARGET_SHARE = 0.25;
+
+        var NICHES = [
+            { slug: "pet-waste-removal", name: "Pet Waste Removal", ticket: 180, ticketLabel: "2-month value $", cpl: 18, margin: 0.55, close: 30, outcome: "new sign-ups", metaLabel: "2-month value · new sign-ups" },
+            { slug: "junk-removal", name: "Junk Removal", ticket: 250, ticketLabel: "Avg job $", cpl: 30, margin: 0.35, close: 30, outcome: "pickup requests", metaLabel: "avg job · pickup requests", flag: true },
+            { slug: "pressure-washing", name: "Pressure Washing", ticket: 350, ticketLabel: "Avg job $", cpl: 30, margin: 0.50, close: 25, outcome: "quote requests", metaLabel: "avg job · quote requests" },
+            { slug: "pool-service", name: "Pool Service", ticket: 360, ticketLabel: "2-month value $", cpl: 28, margin: 0.45, close: 30, outcome: "new sign-ups", metaLabel: "2-month value · new sign-ups" },
+            { slug: "handyman", name: "Handyman", ticket: 390, ticketLabel: "Avg job $", cpl: 28, margin: 0.35, close: 30, outcome: "job requests", metaLabel: "avg job · job requests" },
+            { slug: "waste-management", name: "Waste Management", ticket: 400, ticketLabel: "Avg job $", cpl: 35, margin: 0.40, close: 30, outcome: "rental inquiries", metaLabel: "avg job · rental inquiries" },
+            { slug: "pest-control", name: "Pest Control", ticket: 400, ticketLabel: "Annual contract value $", cpl: 40, margin: 0.15, close: 25, outcome: "appointments", metaLabel: "annual contract · appointments" },
+            { slug: "home-cleaning", name: "Home Cleaning", ticket: 480, ticketLabel: "2-month value $", cpl: 22, margin: 0.55, close: 30, outcome: "new sign-ups", metaLabel: "2-month value · new sign-ups" },
+            { slug: "moving", name: "Moving Services", ticket: 1250, ticketLabel: "Avg local move $", cpl: 45, margin: 0.12, close: 20, outcome: "move-quote requests", metaLabel: "local move · move-quote requests", flag: true },
+            { slug: "water-treatment", name: "Water Treatment", ticket: 3500, ticketLabel: "Avg install price $", cpl: 70, margin: 0.50, close: 25, outcome: "test appointments", metaLabel: "avg install · test appointments" },
+            { slug: "medspa", name: "Medspa", ticket: 4000, ticketLabel: "Avg treatment package $", cpl: 25, margin: 0.60, close: 25, outcome: "consultations", metaLabel: "treatment package · consultations" },
+            { slug: "garage-floor-epoxy", name: "Garage Floor Epoxy", ticket: 4000, ticketLabel: "Avg job $", cpl: 75, margin: 0.45, close: 25, outcome: "quote appointments", metaLabel: "avg job · quote appointments" },
+            { slug: "hearing-aid", name: "Hearing Aid Practices", ticket: 4500, ticketLabel: "Avg pair price $", cpl: 35, margin: 0.55, close: 25, outcome: "hearing tests", metaLabel: "avg pair · hearing tests" },
+            { slug: "electrical", name: "Electrical", ticket: 6000, ticketLabel: "Avg job $", cpl: 65, margin: 0.50, close: 25, outcome: "estimates", metaLabel: "avg job · estimates" },
+            { slug: "painting", name: "Painting", ticket: 7500, ticketLabel: "Avg job $", cpl: 50, margin: 0.40, close: 25, outcome: "estimates", metaLabel: "avg job · estimates" },
+            { slug: "home-care", name: "Home Care", ticket: 7600, ticketLabel: "Avg package value $", cpl: 60, margin: 0.35, close: 25, outcome: "consultations", metaLabel: "avg package · consultations" },
+            { slug: "landscaping", name: "Landscaping", ticket: 8000, ticketLabel: "Avg project $", cpl: 60, margin: 0.30, close: 25, outcome: "design consultations", metaLabel: "avg project · design consultations" },
+            { slug: "plumbing", name: "Plumbing", ticket: 8000, ticketLabel: "Avg job $", cpl: 75, margin: 0.18, close: 25, outcome: "appointments", metaLabel: "avg job · appointments" },
+            { slug: "hvac", name: "HVAC", ticket: 12000, ticketLabel: "Avg job $", cpl: 115, margin: 0.20, close: 25, outcome: "estimates", metaLabel: "avg job · estimates" },
+            { slug: "roofing", name: "Roofing", ticket: 15000, ticketLabel: "Avg job $", cpl: 85, margin: 0.11, close: 25, outcome: "estimates", metaLabel: "avg job · estimates" },
+            { slug: "general-contracting", name: "General Contracting", ticket: 30000, ticketLabel: "Avg project $", cpl: 90, margin: 0.20, close: 15, outcome: "project consultations", metaLabel: "avg project · project consultations", flag: true }
+        ];
+        var BY_SLUG = {};
+        NICHES.forEach(function (n) { BY_SLUG[n.slug] = n; });
+
+        // Populate the grid — big number is the guaranteed volume in 90 days,
+        // computed from the same formula the calculator runs, at the shared
+        // $1,500/mo default budget (rawLeads = budget/CPL, guaranteed = 75%
+        // safety floor off that, x3 months for a 90-day figure).
+        var DEFAULT_BUDGET = 1500, SAFETY_GRID = 0.75;
+        var grid = document.getElementById('nichesGrid');
+        grid.innerHTML = NICHES.map(function (n) {
+            var rawLeads30 = DEFAULT_BUDGET / n.cpl;
+            var guaranteed30 = Math.max(0, Math.floor(rawLeads30 * SAFETY_GRID));
+            var guaranteed90 = guaranteed30 * 3;
+            return (
+                '<div class="niche-tile">' +
+                  '<button type="button" class="tile-main" data-slug="' + n.slug + '">' +
+                    '<div class="figure">' + guaranteed90 + '</div>' +
+                    '<div class="name">' + n.name + '</div>' +
+                    '<div class="outcome">' + n.outcome + ' · 90 days</div>' +
+                  '</button>' +
+                  '<a class="tile-visit" href="/acquisition/' + n.slug + '/">Visit page &rarr;</a>' +
+                '</div>'
+            );
+        }).join('');
+
+        // Populate the calculator's industry dropdown
+        var elNicheSelect = document.getElementById('calcNiche');
+        elNicheSelect.innerHTML = NICHES.map(function (n) {
+            return '<option value="' + n.slug + '">' + n.name + '</option>';
+        }).join('');
+
+        var elBudget = document.getElementById('calcBudget');
+        var elTicket = document.getElementById('calcTicket');
+        var elClose = document.getElementById('calcClose');
+        var elBudgetLabel = document.getElementById('calcBudgetLabel');
+        var elGuarantee = document.getElementById('calcGuarantee');
+        var elGuaranteeLabel = document.getElementById('calcGuaranteeLabel');
+        var elRawLeads = document.getElementById('calcRawLeads');
+        var elClosed = document.getElementById('calcClosed');
+        var elCAC = document.getElementById('calcCAC');
+        var elRevenue = document.getElementById('calcRevenue');
+        var elFee = document.getElementById('calcFee');
+        var elTotalCost = document.getElementById('calcTotalCost');
+        var elProfit = document.getElementById('calcProfit');
+        var elROI = document.getElementById('calcROI');
+        var elReset = document.getElementById('calcReset');
+        var elTitle = document.getElementById('calcTitle');
+        var elTicketLabel = document.getElementById('calcTicketLabel');
+        var elCplLabel = document.getElementById('calcCplLabel');
+        var elCplValue = document.getElementById('calcCplValue');
+        var elVisitLink = document.getElementById('calcVisitLink');
+
+        var current = BY_SLUG['general-contracting'];
+
+        function money(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+        function num(el, fallback) {
+            var v = parseFloat(el.value);
+            return (isNaN(v) || v <= 0) ? fallback : v;
+        }
+
+        function update() {
+            var budget = num(elBudget, 1500);
+            var ticket = num(elTicket, current.ticket);
+            var closeRate = num(elClose, current.close) / 100;
+
+            elBudgetLabel.textContent = money(budget);
+
+            var rawLeads = budget / current.cpl;
+            var guaranteed = Math.max(0, Math.floor(rawLeads * SAFETY));
+            var closed = rawLeads * closeRate;
+
+            var rawPpa = ticket * current.margin * closeRate * TARGET_SHARE;
+            var ppa = Math.ceil(rawPpa / 5) * 5;
+            var totalFee = ppa * rawLeads;
+            var totalMonthlyCost = budget + totalFee;
+            var cac = closed > 0 ? totalMonthlyCost / closed : 0;
+            var annualRevenue = closed * 12 * ticket;
+            var annualCost = totalMonthlyCost * 12;
+            var netProfit = annualRevenue - annualCost;
+            var roiMultiple = annualCost > 0 ? netProfit / annualCost : 0;
+
+            elGuarantee.textContent = guaranteed;
+            elGuaranteeLabel.textContent = 'qualified ' + current.outcome + ' a month';
+            elRawLeads.textContent = Math.floor(rawLeads);
+            elClosed.textContent = closed.toFixed(1);
+            elCAC.textContent = closed > 0 ? money(cac) : '—';
+            elRevenue.textContent = money(annualRevenue);
+            elFee.textContent = money(ppa);
+            elTotalCost.textContent = money(totalMonthlyCost);
+            elProfit.textContent = money(netProfit);
+            elROI.textContent = roiMultiple.toFixed(1) + 'x';
+        }
+
+        function loadNiche(slug) {
+            current = BY_SLUG[slug] || current;
+            elNicheSelect.value = current.slug;
+            elTitle.textContent = current.name + ' ROI Calculator';
+            elTicketLabel.textContent = current.ticketLabel;
+            elTicket.value = current.ticket;
+            elClose.value = current.close;
+            elCplLabel.textContent = 'Cost per lead (' + current.name + ', estimated)';
+            elCplValue.textContent = money(current.cpl);
+            elVisitLink.href = '/acquisition/' + current.slug + '/';
+            elVisitLink.textContent = 'See the ' + current.name + ' page →';
+            update();
+        }
+
+        elBudget.addEventListener('input', update);
+        [elTicket, elClose].forEach(function (el) {
+            el.addEventListener('input', update);
+            el.addEventListener('blur', update);
+        });
+        elReset.addEventListener('click', function () { loadNiche(current.slug); });
+        elNicheSelect.addEventListener('change', function () { loadNiche(this.value); });
+
+        document.querySelectorAll('.tile-main').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                loadNiche(this.dataset.slug);
+                document.querySelector('.niches-calc-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        loadNiche('general-contracting');
+    })();
+    </script>
 
 </body>
 </html>
