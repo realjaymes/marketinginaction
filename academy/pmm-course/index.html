@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script>/* Identity links (?email=, ?lead=, ?fullname=, ?name=, ?mobile=, ?phone=) must never reach GTM or the ad pixels, which report the page address. This page's own scripts read the original query from window.__idq; the address bar is cleaned before any tag loads. Keep this as the first script in <head>. */(function(){try{var q=location.search;if(!q)return;var p=new URLSearchParams(q),k=['email','lead','fullname','name','mobile','phone'],hit=false;for(var i=0;i<k.length;i++){if(p.has(k[i])){p.delete(k[i]);hit=true;}}if(!hit)return;window.__idq=q;var s=p.toString();history.replaceState(history.state,'',location.pathname+(s?'?'+s:'')+location.hash);}catch(e){}})();</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="James Praise">
@@ -2344,15 +2345,15 @@
                 <form id="prefillForm" onsubmit="submitPrefill(event)">
                     <div class="prefill-modal__field">
                         <label>Full Name *</label>
-                        <input type="text" id="prefillName" required placeholder="e.g. Adaeze Okonkwo">
+                        <input type="text" id="prefillName" name="name" autocomplete="name" required placeholder="e.g. Adaeze Okonkwo">
                     </div>
                     <div class="prefill-modal__field">
                         <label>Email Address *</label>
-                        <input type="email" id="prefillEmail" required placeholder="e.g. adaeze@gmail.com">
+                        <input type="email" id="prefillEmail" name="email" autocomplete="email" required placeholder="e.g. adaeze@gmail.com">
                     </div>
                     <div class="prefill-modal__field">
                         <label>Phone Number <span style="font-weight:400;color:#999;">(optional)</span></label>
-                        <input type="tel" id="prefillPhone" placeholder="e.g. 08012345678">
+                        <input type="tel" id="prefillPhone" name="phone" autocomplete="tel" placeholder="e.g. 08012345678">
                     </div>
                     <button type="submit" class="prefill-modal__btn">Proceed to Payment &rarr;</button>
                     <p class="prefill-modal__trust">Secure payment via Selar &middot; Paystack &middot; Bank Transfer</p>
@@ -2390,7 +2391,7 @@
             var idx=href.indexOf('&email=');
             prefillUrl=idx>-1?href.substring(0,idx):href;
             document.getElementById('prefillForm').reset();
-            var _ml;try{_ml=JSON.parse(localStorage.getItem('mia_lead')||'null');}catch(_e){}var _qp=new URLSearchParams(location.search);var _qe=(_qp.get('email')||_qp.get('lead')||'').trim();if((_ml&&_ml.email)||_qe){document.getElementById('prefillName').value=(_ml&&_ml.name)||_qp.get('fullname')||_qp.get('name')||'';document.getElementById('prefillEmail').value=(_ml&&_ml.email)||_qe;document.getElementById('prefillPhone').value=(_ml&&_ml.phone)||'';submitPrefill(e);return;}document.getElementById('prefillModal').classList.add('open');
+            var _ml;try{_ml=JSON.parse(localStorage.getItem('mia_lead')||'null');}catch(_e){}var _qp=new URLSearchParams(window.__idq||location.search);var _qe=(_qp.get('email')||_qp.get('lead')||'').trim();if((_ml&&_ml.email)||_qe){document.getElementById('prefillName').value=(_ml&&_ml.name)||_qp.get('fullname')||_qp.get('name')||'';document.getElementById('prefillEmail').value=(_ml&&_ml.email)||_qe;document.getElementById('prefillPhone').value=(_ml&&_ml.phone)||'';submitPrefill(e);return;}document.getElementById('prefillModal').classList.add('open');
             var eid='atc_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','AddToCart',{content_name:'The Complete Product Marketing Course',value:15000,currency:'NGN'},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('AddToCart',{content_id:'productmarketingcourse',content_name:'The Complete Product Marketing Course',value:15000,currency:'NGN'});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'add_to_cart',event_id:eid});
             document.body.style.overflow='hidden';
             setTimeout(function(){document.getElementById('prefillName').focus();},100);
