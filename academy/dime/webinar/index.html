@@ -1752,9 +1752,9 @@
       if(PREVIEW){ var pb=document.createElement('div'); pb.textContent='PREVIEW — compressed (poll 3s · results 9s · clears 14s · offer 18s)'; pb.style.cssText='position:fixed;top:0;left:0;right:0;z-index:99998;background:#d4c35e;color:#1c1422;font:600 12px system-ui;text-align:center;padding:6px;'; document.body.appendChild(pb); startClass(); }
       var cv=document.getElementById('classVideo');
       if(cv){ cv.addEventListener('ended', function(){ revealOffer(); var e=document.getElementById('endedBlock'); if(e) e.style.display='block'; var o=document.getElementById('offerBlock'); if(o){ try{ o.scrollIntoView({behavior:'smooth', block:'center'}); }catch(err){} } }); }
-      // === Checkout: known buyer → straight to Selar; unknown → prefill modal first ===
+      // === Checkout: details from their own link → straight to Selar; everyone else → prefill modal first ===
       // Identity from ?email=/?lead= URL param (survives the WhatsApp/email in-app-browser hop) → else localStorage dime_lead (same browser, set at the opt-in).
-      // KNOWN (email present): go direct to Selar and log a complete intent row. UNKNOWN: pop the prefill modal, collect name/email/phone, log, then go.
+      // FROM LINK (email in their own email/WhatsApp link): go direct to Selar and log a complete intent row. SAVED on this device (30-day expiry): open the modal prefilled with "Not you?". NEW: pop the prefill modal, collect name/email/phone, log, then go.
       // Selar gets name + email + phone (local 0XXXX format). Selar's phone-prefill bug was fixed 2026-06-28, so the phone is now prefilled on checkout. The coupon on the href is preserved.
       (function(){
         var INTENT_SHEET="https://script.google.com/macros/s/AKfycbxLVrPk0NzVImYcPVo5X_IONzaGzEmwLUpANs-OD2hMCUfMNNZ_WK6QmdSEd0venQc/exec";
@@ -1763,9 +1763,13 @@
         function known(){
           var qp; try{ qp=new URLSearchParams(window.__idq||location.search); }catch(e){ qp=null; }
           var lead={}; try{ lead=JSON.parse(localStorage.getItem('dime_lead')||'{}')||{}; }catch(e){}
+          if(lead.email && !(lead.ts && Date.now()-lead.ts<2592e6)){ lead={}; try{ localStorage.removeItem('dime_lead'); }catch(e){} } // saved details expire after 30 days
           function pick(k){ return (qp&&(qp.get(k)||''))||''; }
-          return { email:(pick('email')||pick('lead')||lead.email||'').trim(), name:(pick('fullname')||pick('name')||lead.name||'').trim(), phone:(lead.phone||'').trim() };
+          var ue=(pick('email')||pick('lead')).trim(), same=!!(lead.email&&lead.email===ue);
+          if(ue) return { src:'url', email:ue, name:(pick('fullname')||pick('name')||(same?lead.name:'')||'').trim(), phone:(same?(lead.phone||''):'').trim() };
+          return { src:(lead.email?'saved':''), email:(lead.email||'').trim(), name:(lead.name||'').trim(), phone:(lead.phone||'').trim() };
         }
+        function miaNotYou(key){var n=document.getElementById('prefillNotYou');if(n)return n;var f=document.getElementById('prefillForm');n=document.createElement('p');n.id='prefillNotYou';n.style.cssText='margin:0 0 12px;font-size:.85rem;color:#777;';n.innerHTML='Not you? <a href="#" style="color:inherit;text-decoration:underline;">Use different details</a>';n.querySelector('a').addEventListener('click',function(ev){ev.preventDefault();f.reset();try{localStorage.removeItem(key);}catch(_e){}n.style.display='none';var nm=document.getElementById('prefillName');if(nm)nm.focus();});f.insertBefore(n,f.firstChild);return n;}
         // Preserve everything already on the href (incl. ?quickcheckout=1&coupon=DIMEWEBINAR); append name+email, plus phone (local 0XXXX) when present.
         function openCheckout(u){ try{ var w=window.open(u,'_blank'); if(w){ try{ w.opener=null; }catch(e){} return; } }catch(e){} window.location.href=u; }
         function selarUrl(base, name, email, phone){ var i=base.indexOf('&email='); var u=(i>-1?base.substring(0,i):base); var s=u+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name); if(phone)s+='&mobile=0'+phone.substring(3); return s; }
@@ -1782,15 +1786,16 @@
           var a=e.target.closest('a.js-buy'); if(!a) return;
           e.preventDefault();
           var k=known();
-          if(k.email){ fireLead(k.name,k.email,k.phone); logIntent(k); openCheckout(selarUrl(a.href, k.name, k.email, k.phone)); return; } // known → direct
-          pendingBase=a.href; // unknown → collect first
+          if(k.email&&k.src==='url'){ fireLead(k.name,k.email,k.phone); logIntent(k); openCheckout(selarUrl(a.href, k.name, k.email, k.phone)); return; } // details from their own email/WhatsApp link → direct
+          pendingBase=a.href; // otherwise collect (new visitor) or confirm (details saved on this device) first
           var form=document.getElementById('prefillForm'); if(form) form.reset();
           if(k.name){ var n=document.getElementById('prefillName'); if(n) n.value=k.name; }
+          var nu=miaNotYou('dime_lead'); if(k.src==='saved'){ var pe=document.getElementById('prefillEmail'), pp=document.getElementById('prefillPhone'); if(pe) pe.value=k.email; if(pp) pp.value=(k.phone.indexOf('234')===0?'0'+k.phone.substring(3):k.phone); nu.style.display=''; } else { nu.style.display='none'; }
           var m=document.getElementById('prefillModal'); if(m) m.classList.add('open'); document.body.style.overflow='hidden';
           var atcid='atc_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);
           try{ if(typeof fbq==='function') fbq('track','AddToCart',{content_name:'DIME',value:VALUE,currency:'NGN'},{eventID:atcid}); }catch(e2){}
           window.dataLayer=window.dataLayer||[]; window.dataLayer.push({event:'add_to_cart', event_id:atcid, value:VALUE, currency:'NGN'});
-          setTimeout(function(){ try{ document.getElementById('prefillName').focus(); }catch(e3){} },100);
+          setTimeout(function(){ try{ var pn=document.getElementById('prefillName'); if(pn&&!pn.value) pn.focus(); }catch(e3){} },100);
         });
         window.closePrefill=function(){ var m=document.getElementById('prefillModal'); if(m) m.classList.remove('open'); document.body.style.overflow=''; pendingBase=''; };
         window.submitPrefill=function(ev){
