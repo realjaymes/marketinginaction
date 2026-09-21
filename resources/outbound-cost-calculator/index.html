@@ -572,7 +572,7 @@
         <p>
           A sales development rep sends from one company mailbox, and a mailbox is only safe for
           around 30 emails a day whoever is behind it. If you sell services, B2B software, or run an agency, this calculator prices the AI-led outbound
-          go-to-market (GTM) system we build for clients: domains, inboxes, a sequencer, data, and the automation that
+          go-to-market (GTM) system we build for clients: the domains, the inboxes, the software that sends the emails, the contact data, and the automation that
           runs it. Enter a few inputs about your business, and you will see the monthly cost sitting next
           to the pipeline and closed revenue it should return.
         </p>
@@ -595,7 +595,7 @@
           <h2>Your outbound system, in one view</h2>
           <p>
             Tell us who you sell to and how many of them you want to reach each month. You get the monthly
-            cost of the whole stack, the people it actually emails to get there, and the meetings, pipeline
+            cost of everything it runs on, the people it actually emails to get there, and the meetings, pipeline
             and revenue that should come out of it.
           </p>
         </div>
@@ -760,7 +760,7 @@
           <div class="occ-qrow"><span id="occQCPCLab">Stack cost per business reached</span><strong id="occQCPC">$0</strong></div>
           <div class="occ-qrow"><span id="occQCPMLab">Stack cost per meeting</span><strong id="occQCPM">$0</strong></div>
           <div class="occ-qrow occ-qrow--hi"><span id="occQROILab">Return on stack spend</span><strong id="occQROI">0x</strong></div>
-          <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
+          <div class="occ-qrow"><span>What you will be running</span><strong id="occQInfra">0 inboxes</strong></div>
           <div class="occ-qrow"><span id="occQRampLab">First meeting lands</span><strong id="occQRamp">&mdash;</strong></div>
           <div class="occ-qrow"><span>It pays for itself</span><strong id="occQPayback">&mdash;</strong></div>
         </div>
@@ -775,7 +775,7 @@
             <li><strong>20% of replies are positive.</strong> An analysis of more than two million cold emails put the figure near 14%. Strong campaigns reach 50%. The page uses 20%.</li>
             <li><strong>50% of positive replies become a held meeting.</strong> The rest cancel, no-show or go quiet.</li>
             <li><strong>30 safe sends per mailbox per day.</strong> The conservative standard for cold sending from a warmed mailbox. Technical limits are far higher, deliverability limits are not.</li>
-            <li><strong>Every tool price</strong> was read from the vendor's own pricing page rather than a comparison article, and each one is editable in the full stack below.</li>
+            <li><strong>Every tool price</strong> was read from the vendor's own pricing page rather than a comparison article, and each one is editable in the section below.</li>
             <li>At these defaults, 2,100 contacts produce 7.1 held meetings. That is 0.34% of contacts, against a published contact-to-meeting range of 0.5% to 2.5%, so the funnel on this page sits below the benchmark rather than above it.</li>
           </ul>
         </details>
@@ -787,7 +787,7 @@
         <details class="occ-fold">
           <summary>
             <span class="occ-foldlead">For whoever has to sign off on it</span>
-            <span class="occ-foldtitle">Adjust the full stack</span>
+            <span class="occ-foldtitle">Adjust every number</span>
             <span class="occ-foldmeta" id="occBuilderMeta">Eight steps: volume, ICP, sizing, domains and inboxes, tools, automation, outcomes, SDR comparison.</span>
           </summary>
           <div class="occ-builder">
@@ -923,7 +923,7 @@
             <!-- Step 4: fixed core -->
             <div class="occ-card">
               <span class="occ-step">Step 4 — Fixed core</span>
-              <h2>Domains, inboxes, sequencer. Everyone pays these.</h2>
+              <h2>Domains, inboxes, sending software. Everyone pays these.</h2>
               <p class="occ-lede">
                 Domain pricing is the one line that changes materially in year two, which is why the rotation
                 toggle sits here rather than in a footnote.
@@ -1376,7 +1376,7 @@
             unit: "companies",
             unitShort: "company",
             contactUnit: "contacts",
-            perHelp: "Multithreading a company means emailing two or three people at it. It is still one deal.",
+            perHelp: "Emailing two or three people at the same company is still one deal, not three.",
             reply: 3.4,
             accounts: 700,
             deal: 15000,
@@ -1812,8 +1812,8 @@
           $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
           $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
           $("occCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
-          $("occBCpmLab").textContent = (ourFee > 0 ? "Total" : "Stack") + " cost per meeting";
-          $("occBRoiLab").textContent = "Return on " + (ourFee > 0 ? "total" : "stack") + " spend";
+          $("occBCpmLab").textContent = (ourFee > 0 ? "Total" : "Tools") + " cost per meeting";
+          $("occBRoiLab").textContent = "Return on " + (ourFee > 0 ? "total" : "tool") + " spend";
 
           var dealValue = num("occDealValue");
           var closed = meetings * (num("occCloseRate") / 100);
@@ -1861,7 +1861,7 @@
           };
           var M = MODES[state.run];
           var one = function (v) { return v < 10 ? v.toFixed(1) : int(v); };
-          var costWord = state.run === "self" && selfTime <= 0 ? "Stack" : "Total";
+          var costWord = state.run === "self" && selfTime <= 0 ? "Tools" : "Total";
 
           /* Live cost and meetings on every button, so the comparison is the control itself. */
           ["self", "sdr", "mia"].forEach(function (k) {
@@ -1895,7 +1895,7 @@
               (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> a meeting against <strong>" +
               (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong>. Reaching even that assumes the ICP is already " +
               "defined, the list is already built and verified and the sequence is already written, and that " +
-              "they have a sequencer to send it, which is why their tooling is on the bill above. Done by " +
+              "they have the software to send it, which is why their tools are on the bill above. Done by " +
               "hand it is a fraction of that. It also counts email alone, when a rep should be calling " +
               "prospects, working LinkedIn and turning up at events. <strong>The system has to exist either " +
               "way.</strong> Hiring only decides whether a salary sits on top of it, and whether the person " +
