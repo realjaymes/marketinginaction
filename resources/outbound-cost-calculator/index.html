@@ -1800,15 +1800,10 @@
           var bm = $("occBuilderMeta");
           if (bm)
             bm.textContent =
-              "Eight steps behind the numbers above: " + int(inboxes) + " inboxes, " + int(domains) +
+              "Seven steps behind the numbers above: " + int(inboxes) + " inboxes, " + int(domains) +
               " domains, " + seq.label.split(" (")[0] + ", and every price editable.";
           $("occY1").textContent = usd(year1);
           $("occY2").textContent = usd(year2);
-
-          /* ---- per-contact and funnel ---- */
-          $("occContactsOut").textContent = int(contactsMonth);
-          $("occSendsOut").textContent = int(sendsMonth);
-          $("occCPC").textContent = contactsMonth > 0 ? "$" + (totalMonthly / contactsMonth).toFixed(2) : "$0.00";
 
           var replyRate = num("occReply") / 100;
           var replies = contactsMonth * replyRate;
@@ -1819,35 +1814,7 @@
           var posPerContact = Math.min(1, Math.max(0, replyRate * positiveShare));
           var warmAccounts = accounts * (1 - Math.pow(1 - posPerContact, perAccount));
           var meetings = warmAccounts * (num("occMeeting") / 100);
-          $("occReplies").textContent = replies.toFixed(replies < 10 ? 1 : 0);
-          $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
-          $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
-          $("occCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
-          $("occBCpmLab").textContent = (ourFee > 0 ? "Total" : "Tools") + " cost per meeting";
-          $("occBRoiLab").textContent = "Return on " + (ourFee > 0 ? "total" : "tool") + " spend";
 
-          var dealValue = num("occDealValue");
-          var closed = meetings * (num("occCloseRate") / 100);
-          var revenue = closed * dealValue;
-          var showRev = dealValue > 0;
-          $("occRevRow").hidden = !showRev;
-          $("occRoiRow").hidden = !showRev;
-          $("occPipeRow").hidden = !showRev;
-          if (showRev) {
-            $("occPipe").textContent = usd(meetings * dealValue);
-            $("occRev").textContent = usd(revenue);
-            $("occRoi").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
-            /* Green means the spend is returning. Below 1x it is not, so both rows go red. */
-            var panelLosing = totalMonthly > 0 && revenue < totalMonthly;
-            $("occRevRow").classList.toggle("occ-loss", panelLosing);
-            $("occRoiRow").classList.toggle("occ-loss", panelLosing);
-          }
-
-          /* ---- What each path can actually run ----
-           * Reach is capped by deliverability, not by effort or budget. A rep sends from one company
-           * mailbox, and a mailbox is safe for the same number of emails a day whoever is behind it and
-           * wherever they were hired. Everything downstream follows from that cap, which is why the
-           * argument against hiring holds at every salary in every market. */
           var repInboxes = 1;
           var repSendsDay = Math.min(sendsDay, repInboxes * safeSends);
           var repContacts = steps > 0 ? (repSendsDay * workDays) / steps : 0;
@@ -1878,6 +1845,44 @@
           var one = function (v) { return v < 10 ? v.toFixed(1) : int(v); };
           var costWord = state.run === "self" && selfTime <= 0 ? "Tools" : "Total";
 
+          /* ---- per-contact and funnel ----
+           * The breakdown above prices the infrastructure. These rows price the path that is selected,
+           * so the builder and the card divide by the same cost and never disagree on the return. */
+          $("occContactsOut").textContent = int(M.contacts);
+          $("occSendsOut").textContent = int(M.sends);
+          $("occCPC").textContent = M.contacts > 0 ? "$" + (M.monthly / M.contacts).toFixed(2) : "$0.00";
+
+          var mReplies = M.contacts * replyRate;
+          var mPositives = mReplies * positiveShare;
+          $("occReplies").textContent = mReplies.toFixed(mReplies < 10 ? 1 : 0);
+          $("occPos").textContent = mPositives.toFixed(mPositives < 10 ? 1 : 0);
+          $("occMeetings").textContent = M.meetings.toFixed(M.meetings < 10 ? 1 : 0);
+          $("occCPM").textContent = M.meetings > 0.01 ? usd(M.monthly / M.meetings) : "n/a";
+          $("occBCpmLab").textContent = costWord + " cost per meeting";
+          $("occBRoiLab").textContent = "Return on " + costWord.toLowerCase() + " spend";
+
+          var dealValue = num("occDealValue");
+          var closed = M.meetings * (num("occCloseRate") / 100);
+          var revenue = closed * dealValue;
+          var showRev = dealValue > 0;
+          $("occRevRow").hidden = !showRev;
+          $("occRoiRow").hidden = !showRev;
+          $("occPipeRow").hidden = !showRev;
+          if (showRev) {
+            $("occPipe").textContent = usd(M.meetings * dealValue);
+            $("occRev").textContent = usd(revenue);
+            $("occRoi").textContent = M.monthly > 0 ? (revenue / M.monthly).toFixed(1) + "x" : "n/a";
+            /* Green means the spend is returning. Below 1x it is not, so both rows go red. */
+            var panelLosing = M.monthly > 0 && revenue < M.monthly;
+            $("occRevRow").classList.toggle("occ-loss", panelLosing);
+            $("occRoiRow").classList.toggle("occ-loss", panelLosing);
+          }
+
+          /* ---- What each path can actually run ----
+           * Reach is capped by deliverability, not by effort or budget. A rep sends from one company
+           * mailbox, and a mailbox is safe for the same number of emails a day whoever is behind it and
+           * wherever they were hired. Everything downstream follows from that cap, which is why the
+           * argument against hiring holds at every salary in every market. */
           /* Live cost and meetings on every button, so the comparison is the control itself. */
           ["self", "sdr", "mia"].forEach(function (k) {
             var m = MODES[k];
