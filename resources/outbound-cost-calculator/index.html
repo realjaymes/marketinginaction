@@ -1842,11 +1842,13 @@
             $("occRunLine").innerHTML =
               "One mailbox is safe for around <strong>" + int(safeSends) + " emails a day</strong>, so a rep " +
               "reaches <strong>" + int(repAccounts) + "</strong> " + PRESETS[state.preset].unit +
-              " a month against <strong>" + int(accounts) + "</strong> here. Every meeting they book costs " +
-              "<strong>" + (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> against <strong>" +
-              (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong> running it yourself. Paying them more does not " +
-              "lift the cap. This counts email only. A rep should also be calling and working LinkedIn, which " +
-              "is the case for not spending their week as your sending infrastructure.";
+              " a month against <strong>" + int(accounts) + "</strong> here, at <strong>" +
+              (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> a meeting against <strong>" +
+              (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong>. Reaching even that assumes the ICP is already " +
+              "defined, the list is already built and verified, the sequence is already written and they " +
+              "have the tooling to send it. Done by hand, one person at a keyboard, it is a fraction of " +
+              "that. <strong>The system has to exist either way.</strong> Hiring only decides whether a " +
+              "salary sits on top of it, and it counts email alone, when a rep should be on calls.";
           } else {
             var ceilingRev = M.meetings * dealValue * (num("occCloseRate") / 100);
             var ceiling = ceilingRev / 3;
