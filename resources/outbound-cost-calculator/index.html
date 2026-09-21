@@ -1824,7 +1824,7 @@
             d.hidden = d.dataset.runset !== state.run;
           });
 
-          var sysCpm = meetings > 0.005 ? recurring / meetings : 0;
+          var sysCpm = meetings > 0.005 ? MODES.self.monthly / meetings : 0;
           var mCpm = M.meetings > 0.005 ? M.monthly / M.meetings : 0;
 
           /* ---- The line that explains the mode ---- */
@@ -1844,7 +1844,9 @@
               "reaches <strong>" + int(repAccounts) + "</strong> " + PRESETS[state.preset].unit +
               " a month against <strong>" + int(accounts) + "</strong> here. Every meeting they book costs " +
               "<strong>" + (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> against <strong>" +
-              (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong>. Paying them more does not lift the cap.";
+              (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong> running it yourself. Paying them more does not " +
+              "lift the cap. This counts email only. A rep should also be calling and working LinkedIn, which " +
+              "is the case for not spending their week as your sending infrastructure.";
           } else {
             var ceilingRev = M.meetings * dealValue * (num("occCloseRate") / 100);
             var ceiling = ceilingRev / 3;
