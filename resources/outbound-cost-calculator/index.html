@@ -254,7 +254,14 @@
       .occ-icp button[aria-pressed="true"] strong { color: #fff; }
 
       .occ-run { margin-bottom: 14px; }
-      .occ-runprice { max-width: 320px; margin: 0 auto 20px; }
+      .occ-runprice {
+        display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
+        gap: 6px 10px; margin: 0 auto 20px;
+      }
+      .occ-runprice label { font-size: 12.5px; font-weight: 700; color: var(--text); }
+      .occ-runprice .occ-qin { flex: 0 0 auto; padding: 0 10px; }
+      .occ-runprice .occ-qin input { width: 78px; flex: 0 0 auto; padding: 7px 3px; font-size: 14px; }
+      .occ-runhint { font-size: 11.5px; color: var(--text-secondary); }
       .occ-qgrid { display: grid; gap: 14px; margin-bottom: 22px; }
       @media (min-width: 560px) { .occ-qgrid { grid-template-columns: repeat(2, 1fr); } }
       .occ-qslider { grid-column: 1 / -1; }
@@ -579,7 +586,7 @@
         <div class="occ-icp occ-run" role="group" aria-label="Who runs the system">
           <button type="button" data-run="self" aria-pressed="true">
             <strong>You run it</strong>
-            <span>Tools only. Your own time is not on this bill.</span>
+            <span>Tools only. Your own time and expertise is not on this bill.</span>
           </button>
           <button type="button" data-run="agency" aria-pressed="false">
             <strong>An agency runs it</strong>
@@ -587,13 +594,13 @@
           </button>
           <button type="button" data-run="sdr" aria-pressed="false">
             <strong>You hire an SDR</strong>
-            <span>One sales development rep, fully loaded, spread across the year.</span>
+            <span>About $2,200 a month offshore, or $9,200 for a US hire. Switch in step eight.</span>
           </button>
         </div>
-        <div class="occ-qfield occ-runprice" id="occRunPriceField" hidden>
-          <label for="occRunPrice" id="occRunPriceLab">Monthly agency retainer</label>
-          <div class="occ-qin"><span>$</span><input type="number" id="occRunPrice" min="0" step="250" value="4000" inputmode="decimal" /></div>
-          <span class="occ-qnote" id="occRunPriceNote">Editable. Put in whatever quote you are weighing up.</span>
+        <div class="occ-runprice" id="occRunPriceField" hidden>
+          <label for="occRunPrice" id="occRunPriceLab">Agency retainer</label>
+          <span class="occ-qin"><span>$</span><input type="number" id="occRunPrice" min="0" step="250" value="4000" inputmode="decimal" /><span>/ mo</span></span>
+          <span class="occ-runhint" id="occRunPriceNote">Editable, put in the quote you are weighing up</span>
         </div>
 
         <div class="occ-funnel">
@@ -930,8 +937,8 @@
                 replaces or augments, loaded properly with payroll taxes, benefits, tooling, recruiting and ramp.
               </p>
               <div class="occ-seg" style="grid-template-columns: repeat(3, 1fr)" role="group" aria-label="SDR benchmark">
-                <button type="button" data-sdr="us" aria-pressed="true">US in-house</button>
-                <button type="button" data-sdr="offshore" aria-pressed="false">Offshore</button>
+                <button type="button" data-sdr="us" aria-pressed="false">US in-house</button>
+                <button type="button" data-sdr="offshore" aria-pressed="true">Offshore</button>
                 <button type="button" data-sdr="custom" aria-pressed="false">My own</button>
               </div>
               <div class="occ-fields">
@@ -1386,7 +1393,7 @@
         /* ---------------------------------------------------------------
          * State
          * ------------------------------------------------------------- */
-        var state = { mode: "accounts", preset: "local", sdr: "us", run: "self", rowState: {} };
+        var state = { mode: "accounts", preset: "local", sdr: "offshore", run: "self", rowState: {} };
         var overrides = {}; /* id -> true once the user types over a derived field */
 
         var $ = function (id) { return document.getElementById(id); };
@@ -1765,7 +1772,7 @@
           $("occQPipeline").textContent = usd(pipeline);
           $("occQRevenue").textContent = usd(revenue);
           $("occQRoiSub").textContent =
-            totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x on stack spend" : "per month";
+            totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x on " + costWord.toLowerCase() + " spend" : "per month";
           $("occQCPC").textContent = accounts > 0 ? "$" + (totalMonthly / accounts).toFixed(2) : "$0.00";
           $("occQCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
           $("occQROI").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
@@ -2045,12 +2052,12 @@
             $("occAutoPrice").value = AUTOMATION[$("occAuto").value].price;
           }
           if (step === "8") {
-            state.sdr = "us";
+            state.sdr = "offshore";
             document.querySelectorAll("[data-sdr]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o.dataset.sdr === "us"));
+              o.setAttribute("aria-pressed", String(o.dataset.sdr === "offshore"));
             });
-            $("occSdrCost").value = SDRS.us.cost;
-            $("occSdrHelp").textContent = SDRS.us.help;
+            $("occSdrCost").value = SDRS.offshore.cost;
+            $("occSdrHelp").textContent = SDRS.offshore.help;
           }
           compute();
         }
@@ -2097,15 +2104,15 @@
             $("occRunPriceField").hidden = state.run === "self";
             if (state.run === "agency") {
               $("occRunPrice").value = 4000;
-              $("occRunPriceLab").textContent = "Monthly agency retainer";
+              $("occRunPriceLab").textContent = "Agency retainer";
               $("occRunPriceNote").textContent =
-                "Editable. Put in whatever quote you are weighing up.";
+                "Editable, put in the quote you are weighing up";
             }
             if (state.run === "sdr") {
               $("occRunPrice").value = Math.round(Math.max(0, num("occSdrCost")) / 12);
-              $("occRunPriceLab").textContent = "Monthly cost of one SDR";
+              $("occRunPriceLab").textContent = "One SDR, per month";
               $("occRunPriceNote").textContent =
-                "Salary, tax, tooling and ramp, divided across twelve months. Set your own number in step eight.";
+                "Fully loaded and divided across twelve months, from step eight";
             }
             compute();
           });
@@ -2114,8 +2121,8 @@
 
         /* Boot */
         fillTldTable();
-        $("occSdrCost").value = SDRS.us.cost;
-        $("occSdrHelp").textContent = SDRS.us.help;
+        $("occSdrCost").value = SDRS.offshore.cost;
+        $("occSdrHelp").textContent = SDRS.offshore.help;
         $("occAuto").value = "self";
         $("occAutoPrice").value = AUTOMATION.self.price;
         applyPreset();
