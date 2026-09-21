@@ -350,6 +350,22 @@
       .occ-qrow strong { font-weight: 800; color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
       .occ-qrow--hi strong { color: var(--occ-accent); }
       .occ-qrow--hi.occ-loss strong { color: var(--bad); }
+      .occ-breakeven {
+        margin: 12px auto 0; max-width: 68ch; text-align: center;
+        font-size: 12.5px; line-height: 1.55; color: var(--text-secondary);
+      }
+      .occ-breakeven strong { color: var(--text); font-weight: 800; }
+      .occ-guarantee {
+        margin-top: 14px; padding: 12px 14px; border-radius: 10px;
+        background: var(--good-bg); border: 1px solid rgba(26, 127, 26, 0.28);
+        font-size: 12.5px; line-height: 1.55; color: #14541a;
+      }
+      .occ-guarantee strong { color: var(--good); }
+      .occ-guarantee[hidden] { display: none; }
+      .occ-sources { margin-top: 14px; font-size: 12px; }
+      .occ-sources > summary { cursor: pointer; color: var(--text-secondary); font-weight: 700; }
+      .occ-sources ul { margin: 10px 0 0; padding-left: 18px; color: var(--text-secondary); line-height: 1.6; }
+      .occ-sources a { color: var(--text-secondary); }
 
       .occ-callout {
         margin-top: 16px; padding: 14px 16px; border-radius: var(--mia-radius);
@@ -567,7 +583,7 @@
             data-cta="hero-primary"
             >Book a free strategy call &rarr;</a
           >
-          <a href="#calculator" class="mia-btn mia-btn-ghost" data-cta="hero-run">Run the numbers &darr;</a>
+          <a href="#calculator" class="mia-btn mia-btn-ghost" data-cta="hero-run">Run the numbers</a>
         </div>
       </div>
     </section>
@@ -744,7 +760,23 @@
           <div class="occ-qrow"><span id="occQCPMLab">Stack cost per meeting</span><strong id="occQCPM">$0</strong></div>
           <div class="occ-qrow occ-qrow--hi"><span id="occQROILab">Return on stack spend</span><strong id="occQROI">0x</strong></div>
           <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
+          <div class="occ-qrow"><span id="occQRampLab">First meeting lands</span><strong id="occQRamp">&mdash;</strong></div>
+          <div class="occ-qrow"><span>It pays for itself</span><strong id="occQPayback">&mdash;</strong></div>
         </div>
+        <p class="occ-breakeven" id="occBreakeven"></p>
+        <div class="occ-guarantee" id="occGuarantee" hidden></div>
+
+        <details class="occ-sources">
+          <summary>Where these numbers come from</summary>
+          <ul>
+            <li><strong>3.4% reply rate.</strong> The 2026 business-to-business cold email benchmark average, down from 5% in 2025 and 8.5% in 2019. Top performers reach 8 to 12%.</li>
+            <li><strong>20% of replies are positive.</strong> An analysis of more than two million cold emails put the figure near 14%. Strong campaigns reach 50%. The page uses 20%.</li>
+            <li><strong>50% of positive replies become a held meeting.</strong> The rest cancel, no-show or go quiet.</li>
+            <li><strong>30 safe sends per mailbox per day.</strong> The conservative standard for cold sending from a warmed mailbox. Technical limits are far higher, deliverability limits are not.</li>
+            <li><strong>Every tool price</strong> was read from the vendor's own pricing page rather than a comparison article, and each one is editable in the full stack below.</li>
+            <li>At these defaults, 2,100 contacts produce 7.1 held meetings. That is 0.34% of contacts, against a published contact-to-meeting range of 0.5% to 2.5%, so the funnel on this page sits below the benchmark rather than above it.</li>
+          </ul>
+        </details>
 
         <div class="occ-risk" id="occRisk" hidden></div>
 
@@ -1940,6 +1972,54 @@
           $("occQRevenue").parentNode.classList.toggle("occ-loss", losing);
           $("occQROI").parentNode.classList.toggle("occ-loss", losing);
           /* A rep has no throwaway domains, which is the point rather than a missing number. */
+          /* ---- When it lands, and when it pays back ----
+           * A finance reader asks these two before anything else, and the page was answering
+           * neither. Ramp differs by path: a rep has to be hired first, a built system has to
+           * warm its domains first, and someone learning it has to learn it first. */
+          var rampWeeks = state.run === "self" ? selfRamp * 4.33 : state.run === "sdr" ? 8 : 7;
+          $("occQRamp").textContent =
+            rampWeeks <= 0 ? "immediately"
+              : rampWeeks <= 16 ? "around week " + Math.round(rampWeeks)
+              : "around month " + Math.round(rampWeeks / 4.33);
+          $("occQRampLab").textContent =
+            state.run === "sdr" ? "First meeting, after hiring" : "First meeting lands";
+
+          var setupOnce = state.run === "sdr" ? 0 : domainSetup + (state.run === "mia" ? ourSetup : 0);
+          var rampMonths = rampWeeks / 4.33;
+          var payback = 0;
+          for (var n = 1; n <= 60; n++) {
+            if (Math.max(0, n - rampMonths) * dRevenue >= setupOnce + dMonthly * n) { payback = n; break; }
+          }
+          $("occQPayback").textContent =
+            dRevenue <= 0 ? "n/a" : payback === 0 ? "beyond five years" : "month " + payback;
+
+          /* The downside is more persuasive than the upside here. A modelled 24x reads as a pitch,
+           * but the reply rate it would take to stop paying for itself is checkable. */
+          var breakeven = dRevenue > 0 ? num("occReply") * (dMonthly / dRevenue) : 0;
+          $("occBreakeven").innerHTML =
+            dRevenue <= 0
+              ? ""
+              : breakeven >= num("occReply")
+              ? "This only breaks even at a <strong>" + breakeven.toFixed(1) + "% reply rate</strong>, and the " +
+                "2026 benchmark average is " + num("occReply") + "%. There is no room in it."
+              : breakeven > num("occReply") * 0.5
+              ? "Stress it and it falls over. Replies only have to slip to <strong>" + breakeven.toFixed(2) +
+                "%</strong> for this to stop paying for itself, against a benchmark average of " +
+                num("occReply") + "%. One bad quarter takes it under."
+              : "Stress it. Replies would have to fall to <strong>" + breakeven.toFixed(2) + "%</strong> before " +
+                "this stops paying for itself, against a benchmark average of " + num("occReply") + "%. " +
+                "Halve the reply rate and it still returns " +
+                (dMonthly > 0 ? "<strong>" + (dRevenue / 2 / dMonthly).toFixed(1) + "x</strong>" : "") + ".";
+
+          $("occGuarantee").hidden = state.run !== "mia";
+          if (state.run === "mia") {
+            $("occGuarantee").innerHTML =
+              "<strong>We guarantee the build, not your sales team.</strong> If the system is not sending at " +
+              "full volume with inbox placement above 90% by day 45, the " + usd(ourSetup) + " build fee is " +
+              "refunded. We will not promise you meetings, because meetings depend on your offer and your " +
+              "close rate, and we do not control either.";
+          }
+
           $("occQInfra").textContent =
             int(dInboxes) + (dInboxes === 1 ? " inbox" : " inboxes") + " \u00B7 " +
             (state.run === "sdr"
