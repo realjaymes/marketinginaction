@@ -350,6 +350,12 @@
       .occ-qrow strong { font-weight: 800; color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
       .occ-qrow--hi strong { color: var(--occ-accent); }
       .occ-qrow--hi.occ-loss strong { color: var(--bad); }
+      .occ-verdict {
+        margin: 16px 0 0; padding: 14px 16px; border-radius: var(--mia-radius);
+        background: var(--occ-accent-bg); border-left: 3px solid var(--occ-accent);
+        font-size: 14px; line-height: 1.6; color: var(--text);
+      }
+      .occ-verdict strong { color: var(--occ-accent); font-weight: 800; }
       .occ-breakeven {
         margin: 12px auto 0; max-width: 68ch; text-align: center;
         font-size: 12.5px; line-height: 1.55; color: var(--text-secondary);
@@ -755,6 +761,8 @@
             <span class="occ-tsub" id="occQRoiSub">per month</span>
           </div>
         </div>
+
+        <p class="occ-verdict" id="occVerdict"></p>
 
         <div class="occ-qrows">
           <div class="occ-qrow"><span id="occQCPCLab">Stack cost per business reached</span><strong id="occQCPC">$0</strong></div>
@@ -1424,7 +1432,7 @@
            sending address, and HeyReach bills per connected sender with no base fee. */
         /* Accent per ICP, mirroring how the Paid Acquisition Playbook recolours per platform. */
         var ACCENTS = {
-          local: { accent: "#1a7f1a", bg: "#e6f9e6" },
+          local: { accent: "#d4338f", bg: "#fdeef7" },
           b2b: { accent: "#1877f2", bg: "#e7f3ff" },
           hard: { accent: "#7184f1", bg: "#eef0ff" }
         };
@@ -1993,14 +2001,52 @@
           $("occQRampLab").textContent =
             state.run === "sdr" ? "First meeting, after hiring" : "First meeting lands";
 
-          var setupOnce = state.run === "sdr" ? 0 : domainSetup + (state.run === "mia" ? ourSetup : 0);
-          var rampMonths = rampWeeks / 4.33;
-          var payback = 0;
-          for (var n = 1; n <= 60; n++) {
-            if (Math.max(0, n - rampMonths) * dRevenue >= setupOnce + dMonthly * n) { payback = n; break; }
+          var miaSetupAlways = Math.max(0, num("occMiaSetup"));
+          var SETUP = { self: domainSetup, sdr: 0, mia: domainSetup + miaSetupAlways };
+          var RAMPW = { self: selfRamp * 4.33, sdr: 8, mia: 7 };
+          function paybackFor(key) {
+            var m = MODES[key];
+            var revM = m.meetings * dealValue * (num("occCloseRate") / 100);
+            if (revM <= 0) return 0;
+            var rm = RAMPW[key] / 4.33;
+            for (var n = 1; n <= 60; n++) {
+              if (Math.max(0, n - rm) * revM >= SETUP[key] + m.monthly * n) return n;
+            }
+            return 0;
           }
+          var payback = paybackFor(state.run);
+          var miaPayback = paybackFor("mia");
           $("occQPayback").textContent =
             dRevenue <= 0 ? "n/a" : payback === 0 ? "beyond five years" : "month " + payback;
+
+          /* ---- The decision in one sentence ----
+           * Spend, return, payback and risk cover were spread across four places on the card. A
+           * reader who signs cheques wants them in a line, and wants the alternative in it too. */
+          var mth = function (n) { return n === 0 ? "never, inside five years" : "month " + n; };
+          var miaM = MODES.mia;
+          if (dRevenue <= 0) {
+            $("occVerdict").innerHTML =
+              "Put in an average deal value and a close rate above and this will tell you what the " +
+              "whole thing is worth to you.";
+          } else if (state.run === "self") {
+            $("occVerdict").innerHTML =
+              "<strong>Running it yourself</strong> costs " + usd(dMonthly) + " a month once your own time " +
+              "is counted, holds " + one(dMeetings) + " meetings and creates " + usd(pipeline) + " of " +
+              "pipeline. You are square in " + mth(payback) + ". We would run the same volume for <strong>" +
+              usd(miaM.monthly) + " a month</strong>, square in <strong>" + mth(miaPayback) + "</strong>.";
+          } else if (state.run === "sdr") {
+            $("occVerdict").innerHTML =
+              "<strong>One rep</strong> costs " + usd(dMonthly) + " a month, holds " + one(dMeetings) +
+              " meetings and does not pay for itself until " + mth(payback) + ". The same volume through " +
+              "the system holds <strong>" + one(miaM.meetings) + " meetings</strong> for <strong>" +
+              usd(miaM.monthly) + " a month</strong> and pays back in <strong>" + mth(miaPayback) + "</strong>.";
+          } else {
+            $("occVerdict").innerHTML =
+              "<strong>You would spend " + usd(month1) + " in month one and " + usd(dMonthly) + " a month " +
+              "after that</strong>, hold " + one(dMeetings) + " meetings, create " + usd(pipeline) + " of " +
+              "pipeline and be square in <strong>" + mth(payback) + "</strong>. If we miss the build, the " +
+              "build fee comes back.";
+          }
 
           /* The downside is more persuasive than the upside here. A modelled 24x reads as a pitch,
            * but the reply rate it would take to stop paying for itself is checkable. */
