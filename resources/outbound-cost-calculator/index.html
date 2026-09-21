@@ -80,7 +80,7 @@
             "name": "Do I need an automation tool like n8n for cold outbound?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Usually not on a first build. Smartlead already handles sequencing, scheduling, reply detection and bounce handling natively. An automation layer earns its line item only when you have a CRM sync, a lead-routing rule, a multi-source enrichment waterfall, or reply classification to run."
+              "text": "For alerting, yes, and it is cheap. Smartlead sends the email but has no way to tell you when something needs attention: there is no notification when a lead replies, and a campaign auto-paused by its own bounce protection does not alert you either. Two n8n workflows built on Smartlead webhooks solve both, one firing on a reply and one firing only when a campaign moves to paused. Self-hosted n8n is free software, so the real cost is a small server at roughly five to ten dollars a month."
             }
           }
         ]
@@ -292,12 +292,38 @@
       .occ-up { color: var(--occ-red); font-weight: 800; }
       .occ-flat { color: var(--occ-green); font-weight: 800; }
 
+      /* ---- collapsible sections ---- */
+      .occ-fold summary {
+        list-style: none; cursor: pointer; display: block; padding: 2px 34px 2px 0; position: relative;
+      }
+      .occ-fold summary::-webkit-details-marker { display: none; }
+      .occ-fold summary::after {
+        content: ""; position: absolute; right: 4px; top: 12px; width: 9px; height: 9px;
+        border-right: 2.5px solid var(--text-muted); border-bottom: 2.5px solid var(--text-muted);
+        transform: rotate(45deg); transition: transform var(--ease);
+      }
+      .occ-fold[open] summary::after { transform: rotate(-135deg); top: 16px; }
+      .occ-fold summary:hover .occ-foldtitle { text-decoration: underline; }
+      .occ-foldlead { display: block; font-size: 11.5px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
+      .occ-foldtitle { display: block; font-size: 19px; font-weight: 800; line-height: 1.25; }
+      .occ-foldmeta { display: block; margin-top: 5px; font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
+
+      /* ---- per-step reset ---- */
+      .occ-cardfoot { display: flex; justify-content: flex-end; margin-top: 16px; }
+      .occ-cardfoot .occ-reset { margin-top: 0; }
+
       /* ---- CTA ---- */
       .occ-cta { background: var(--occ-ink); color: #f7f4fa; border-radius: var(--radius-lg); padding: 34px 24px; text-align: center; }
       @media (min-width: 640px) { .occ-cta { padding: 48px 40px; } }
       .occ-cta h2 { margin: 0 0 12px; color: #fff; font-size: clamp(22px, 3.4vw, 32px); }
       .occ-cta h2 em { font-style: italic; color: var(--occ-gold); }
       .occ-cta p { margin: 0 auto 22px; max-width: 58ch; color: rgba(247, 244, 250, 0.8); font-size: 15px; line-height: 1.6; }
+      .occ-cta-actions { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; justify-content: center; }
+      .occ-cta-secondary {
+        color: rgba(247, 244, 250, 0.82); font-weight: 700; font-size: 14.5px;
+        text-decoration: underline; text-underline-offset: 3px;
+      }
+      .occ-cta-secondary:hover { color: var(--occ-gold); }
 
       .occ-foot { margin: 34px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
       .occ-foot a { color: #2f6fb3; text-decoration: underline; }
@@ -425,6 +451,9 @@
                   <span class="occ-help">Weekdays only is the safe default.</span>
                 </div>
               </div>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="1">Reset this step</button>
+              </div>
             </div>
 
             <!-- Step 2: ICP -->
@@ -451,6 +480,9 @@
                 </button>
               </div>
               <p class="occ-note" id="occPresetNote"></p>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="2">Reset this step</button>
+              </div>
             </div>
 
             <!-- Step 3: derived infra -->
@@ -494,7 +526,9 @@
                   <span class="occ-help">You always pull more than you keep. This is what you pay to scrape, enrich and verify.</span>
                 </div>
               </div>
-              <button type="button" class="occ-reset" id="occResetDerived">Reset every calculated field</button>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="3" id="occResetDerived">Reset this step</button>
+              </div>
             </div>
 
             <!-- Step 4: fixed core -->
@@ -555,6 +589,9 @@
                   <span class="occ-help">The tier steps up with your volume. Override if you are on a legacy or annual rate.</span>
                 </div>
               </div>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="4">Reset this step</button>
+              </div>
             </div>
 
             <!-- Step 5: variable stack -->
@@ -563,17 +600,20 @@
               <h2>Sourcing, verification, enrichment.</h2>
               <p class="occ-lede" id="occStackLede"></p>
               <div id="occStack"></div>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="5">Reset this step</button>
+              </div>
             </div>
 
             <!-- Step 6: automation -->
             <div class="occ-card">
               <span class="occ-step">Step 6 — Automation</span>
-              <h2>Probably zero, and that is the point.</h2>
+              <h2>Smartlead sends. It does not tell you anything.</h2>
               <p class="occ-lede">
-                Smartlead already handles sequencing, scheduling, reply detection and bounce handling
-                natively. Most first builds need no automation layer at all, so this defaults to nothing.
-                It earns a line only once you have a CRM sync, a lead-routing rule, a multi-source enrichment
-                waterfall, or reply classification to run.
+                There is no "email me when a lead replies", and a campaign that auto-pauses on its own
+                bounce protection does not notify you either. Two n8n workflows on Smartlead's webhooks
+                fix both: one fires on a reply, one fires only when a campaign moves to paused. They share
+                one webhook address, so a new campaign is a settings change rather than a new workflow.
               </p>
               <div class="occ-fields">
                 <div class="occ-field">
@@ -585,6 +625,9 @@
                   <label for="occAutoPrice">Automation cost per month</label>
                   <div class="occ-inp"><span>$</span><input type="number" id="occAutoPrice" min="0" step="1" inputmode="decimal" /></div>
                 </div>
+              </div>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="6">Reset this step</button>
               </div>
             </div>
 
@@ -628,6 +671,9 @@
                   <span class="occ-help">Two to three weeks is standard. Zero sends during this window.</span>
                 </div>
               </div>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="7">Reset this step</button>
+              </div>
             </div>
 
             <!-- Step 8: SDR -->
@@ -649,6 +695,9 @@
                   <div class="occ-inp"><span>$</span><input type="number" id="occSdrCost" min="0" step="500" inputmode="decimal" /></div>
                   <span class="occ-help" id="occSdrHelp"></span>
                 </div>
+              </div>
+              <div class="occ-cardfoot">
+                <button type="button" class="occ-reset" data-reset="8">Reset this step</button>
               </div>
             </div>
           </div>
@@ -710,9 +759,13 @@
     <section class="occ-wrap" style="padding-top: 8px">
       <div class="container">
         <div class="occ-card">
-          <span class="occ-step">The line item nobody budgets for</span>
-          <h2>Your warmup timeline, from today.</h2>
-          <p class="occ-lede">
+          <details class="occ-fold">
+          <summary>
+            <span class="occ-foldlead">The line item nobody budgets for</span>
+            <span class="occ-foldtitle">Your warmup timeline, from today</span>
+            <span class="occ-foldmeta" id="occFoldDates"></span>
+          </summary>
+          <p class="occ-lede" style="margin-top:18px">
             This is the single most common reason an outbound engagement feels like it failed at week four.
             The client counts from the day they paid. The system counts from the first send, which is
             three weeks later. Both parties are looking at the same campaign and reading completely
@@ -723,6 +776,7 @@
             <strong>Read this before you set expectations.</strong>
             <span id="occTimelineNote"></span>
           </p>
+          </details>
         </div>
       </div>
     </section>
@@ -731,9 +785,13 @@
     <section class="occ-wrap" style="padding-top: 8px">
       <div class="container">
         <div class="occ-card">
-          <span class="occ-step">Verified 21 September 2026</span>
-          <h2>Domain pricing, and why year two moves.</h2>
-          <p class="occ-lede">
+          <details class="occ-fold">
+          <summary>
+            <span class="occ-foldlead">Verified 21 September 2026</span>
+            <span class="occ-foldtitle">Domain pricing, and why year two moves</span>
+            <span class="occ-foldmeta">10 extensions, first-year against renewal</span>
+          </summary>
+          <p class="occ-lede" style="margin-top:18px">
             Registrar pricing at Spaceship, checked live. The pattern is consistent across registrars even
             where the exact figures differ: the cheaper the first year, the steeper the renewal. This is the
             table behind the rotation toggle.
@@ -759,12 +817,17 @@
             and less every year after, so the right extension is a function of the rotation toggle above,
             not a matter of taste.
           </p>
+          </details>
         </div>
 
         <div class="occ-card">
-          <span class="occ-step">Sources</span>
-          <h2>Every default price, and where it came from.</h2>
-          <p class="occ-lede">
+          <details class="occ-fold">
+          <summary>
+            <span class="occ-foldlead">Sources</span>
+            <span class="occ-foldtitle">Every default price, and where it came from</span>
+            <span class="occ-foldmeta">19 tools, each linked to its own pricing page</span>
+          </summary>
+          <p class="occ-lede" style="margin-top:18px">
             Published list pricing as of 21 September 2026. Reseller, annual and legacy rates differ, which
             is exactly why every field on this page is editable.
           </p>
@@ -791,6 +854,36 @@
                   <td>$97 / mo</td>
                   <td>Hypergrowth: 100,000 emails and 25,000 contacts a month. $77.60 billed annually.</td>
                   <td><a href="https://instantly.ai/pricing" target="_blank" rel="noreferrer">instantly.ai</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Lemlist</strong></td>
+                  <td>$79 / user / mo</td>
+                  <td>Email Pro monthly, $63 annual. Multichannel Expert is $109 monthly. Only 3 sending addresses are included and each extra mailbox is $9 a month, which is the line that decides the real cost at cold-email volume.</td>
+                  <td><a href="https://www.lemlist.com/pricing" target="_blank" rel="noreferrer">lemlist.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Reply.io</strong></td>
+                  <td>$49 / user / mo</td>
+                  <td>Starter billed annually, no multichannel or CRM sync. Professional is $89. Monthly billing runs 20 to 30% higher and LinkedIn automation is a separate $69 per account.</td>
+                  <td><a href="https://reply.io/pricing/" target="_blank" rel="noreferrer">reply.io</a></td>
+                </tr>
+                <tr>
+                  <td><strong>HeyReach</strong></td>
+                  <td>$79 / sender / mo</td>
+                  <td>Growth plan, billed per connected LinkedIn sender rather than per seat, about $59 on annual. This is LinkedIn outreach, so it normally sits alongside an email sequencer rather than replacing one.</td>
+                  <td><a href="https://www.heyreach.io/pricing" target="_blank" rel="noreferrer">heyreach.io</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Salesloft</strong></td>
+                  <td>$150 / user / mo (estimate)</td>
+                  <td>No published pricing. Every quote is custom. Reported ranges land at $150 to $165 per user a month on Advanced at the 10-seat minimum, with 8 to 12% annual increases standard. Treat the default as a placeholder, not a quote.</td>
+                  <td><a href="https://www.salesloft.com/pricing" target="_blank" rel="noreferrer">salesloft.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Outreach</strong></td>
+                  <td>$110 / user / mo (estimate)</td>
+                  <td>No published pricing. Amplify Core is reported at $100 to $120 per user a month on a mandatory annual contract, with a consumption-based AI credit layer on top. Treat the default as a placeholder, not a quote.</td>
+                  <td><a href="https://www.outreach.io/pricing" target="_blank" rel="noreferrer">outreach.io</a></td>
                 </tr>
                 <tr>
                   <td><strong>Outscraper</strong></td>
@@ -836,7 +929,7 @@
                 </tr>
                 <tr>
                   <td><strong>n8n</strong></td>
-                  <td>$0 by default</td>
+                  <td>$7 / mo</td>
                   <td>Self-hosted Community edition is free with unlimited executions, so you pay only for a small server at roughly $5 to $10 a month. Cloud Starter is &euro;24 monthly, about $26, for 2,500 executions.</td>
                   <td><a href="https://n8n.io/pricing/" target="_blank" rel="noreferrer">n8n.io</a></td>
                 </tr>
@@ -865,21 +958,30 @@
             Prices move. If you are reading this long after 21 September 2026, treat these as a starting
             point and check the linked pages. Nothing here is a quote, an endorsement, or an affiliate link.
           </p>
+          </details>
         </div>
 
         <div class="occ-cta">
-          <h2>Knowing the cost is the easy half. <em>Building the system is the other one.</em></h2>
+          <h2>Ready to put these numbers to work?</h2>
           <p>
-            This page gives you the number. Turning it into booked meetings takes positioning that earns a
-            reply, infrastructure that survives warmup, and a sequence worth opening. That is the work we do
-            for technology companies and agencies: positioning, GTM infrastructure, outbound, paid, and
-            AI-assisted execution, pointed at predictable growth.
+            Book a 30-minute strategy call. We'll look at what you're spending on outbound today, show you
+            where the gaps are, and walk you through what building and running the system above would look
+            like for your business.
           </p>
-          <a
-            class="button button-primary"
-            href="/consulting/?utm_source=resources&utm_medium=tool&utm_campaign=outbound-cost-calculator&utm_content=footer-cta"
-            >See how we build GTM engines &rarr;</a
-          >
+          <div class="occ-cta-actions">
+            <a
+              class="button button-primary"
+              data-cta="footer-primary"
+              href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-primary"
+              >Book a free strategy call &rarr;</a
+            >
+            <a
+              class="occ-cta-secondary"
+              data-cta="footer-secondary"
+              href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-secondary"
+              >Read more about how we work</a
+            >
+          </div>
         </div>
       </div>
     </section>
@@ -964,9 +1066,13 @@
           }
         };
 
+        /* Sequencers. `mailboxIncluded` / `mailboxExtra` matter more than the headline
+           price: Smartlead and Instantly bundle unlimited inboxes, Lemlist charges per
+           sending address, and HeyReach bills per connected sender with no base fee. */
         var SEQUENCERS = {
           smartlead: {
             label: "Smartlead",
+            mailbox: "Unlimited inboxes on every tier.",
             tiers: [
               { name: "Basic", price: 39, contacts: 2000, sends: 6000 },
               { name: "Pro", price: 94, contacts: 30000, sends: Infinity },
@@ -975,17 +1081,54 @@
           },
           instantly: {
             label: "Instantly",
+            mailbox: "Unlimited inboxes.",
             tiers: [{ name: "Hypergrowth", price: 97, contacts: 25000, sends: 100000 }]
+          },
+          lemlist: {
+            label: "Lemlist",
+            mailboxIncluded: 3,
+            mailboxExtra: 9,
+            mailbox: "Only 3 sending addresses included, then $9 per extra mailbox per month.",
+            tiers: [
+              { name: "Email Pro", price: 79, contacts: Infinity, sends: Infinity },
+              { name: "Multichannel Expert", price: 109, contacts: Infinity, sends: Infinity }
+            ]
+          },
+          reply: {
+            label: "Reply.io",
+            mailbox: "Per user. LinkedIn automation is a separate $69 per account per month.",
+            tiers: [
+              { name: "Starter", price: 49, contacts: Infinity, sends: Infinity },
+              { name: "Professional", price: 89, contacts: Infinity, sends: Infinity }
+            ]
+          },
+          heyreach: {
+            label: "HeyReach (LinkedIn, not email)",
+            perSender: 79,
+            mailbox: "Billed per connected LinkedIn sender, not per inbox. This is a LinkedIn tool, so it usually sits alongside an email sequencer rather than replacing one.",
+            tiers: [{ name: "Growth", price: 0, contacts: Infinity, sends: Infinity }]
+          },
+          salesloft: {
+            label: "Salesloft (quote-based)",
+            quote: true,
+            mailbox: "No published pricing. Custom quote, 10-seat minimum, annual contract.",
+            tiers: [{ name: "Advanced", price: 150, contacts: Infinity, sends: Infinity }]
+          },
+          outreach: {
+            label: "Outreach (quote-based)",
+            quote: true,
+            mailbox: "No published pricing. Custom quote, mandatory annual contract, plus a consumption-based AI credit layer.",
+            tiers: [{ name: "Amplify Core", price: 110, contacts: Infinity, sends: Infinity }]
           }
         };
 
         var AUTOMATION = {
-          none: { label: "None (recommended to start)", price: 0,
-            help: "Smartlead handles sequencing, scheduling, reply detection and bounce handling on its own. Nothing to add." },
-          self: { label: "n8n self-hosted", price: 7,
-            help: "Community edition is free with unlimited executions. You pay for a small server, roughly $5 to $10 a month." },
+          self: { label: "n8n self-hosted (default)", price: 7,
+            help: "Community edition is free with unlimited executions, so you pay only for a small server, roughly $5 to $10 a month. This is what reply and auto-pause alerting actually costs." },
           cloud: { label: "n8n Cloud Starter", price: 26,
-            help: "About $26 a month (€24 billed monthly) for 2,500 executions. Worth it when you do not want to run a server." }
+            help: "About $26 a month (€24 billed monthly) for 2,500 executions. Worth it when you would rather not run a server." },
+          none: { label: "None, I will watch the dashboard", price: 0,
+            help: "Workable, but it means opening Smartlead several times a day to catch a reply or spot a paused campaign. One missed reply on a hot lead usually costs more than the server." }
         };
 
         var SDRS = {
@@ -1166,15 +1309,45 @@
               break;
             }
           }
-          var seqCost = derived("occSeqPrice", tier.price);
-          var capNote =
-            tier.sends === Infinity
-              ? int(tier.contacts === Infinity ? 0 : tier.contacts) + " contacts a month."
-              : int(tier.contacts) + " contacts and " + int(tier.sends) + " sends a month.";
-          $("occSeqHelp").textContent =
-            seq.label + " " + tier.name + " at " + usd(tier.price) + " a month covers " +
-            (tier.contacts === Infinity ? "unlimited volume." : capNote) +
-            " You need " + int(contactsMonth) + " contacts and " + int(sendsMonth) + " sends.";
+          /* Base tier, plus whatever the tool charges for mailboxes beyond the bundle. */
+          var extraMailboxes = 0;
+          var listPrice;
+          if (seq.perSender) {
+            listPrice = inboxes * seq.perSender;
+          } else {
+            listPrice = tier.price;
+            if (seq.mailboxExtra) {
+              extraMailboxes = Math.max(0, inboxes - (seq.mailboxIncluded || 0));
+              listPrice += extraMailboxes * seq.mailboxExtra;
+            }
+          }
+          var seqCost = derived("occSeqPrice", listPrice);
+
+          var help;
+          if (seq.perSender) {
+            help =
+              seq.label + " bills " + usd(seq.perSender) + " per connected sender, so " +
+              int(inboxes) + " senders is " + usd(inboxes * seq.perSender) + " a month. " + seq.mailbox;
+          } else if (extraMailboxes > 0) {
+            help =
+              seq.label + " " + tier.name + " is " + usd(tier.price) + " with " +
+              int(seq.mailboxIncluded) + " mailboxes included. Your " + int(inboxes) +
+              " inboxes add " + int(extraMailboxes) + " at " + usd(seq.mailboxExtra) +
+              " each, so " + usd(listPrice) + " a month. " + seq.mailbox;
+          } else {
+            var capNote =
+              tier.contacts === Infinity
+                ? "unlimited volume."
+                : tier.sends === Infinity
+                ? int(tier.contacts) + " contacts a month."
+                : int(tier.contacts) + " contacts and " + int(tier.sends) + " sends a month.";
+            help =
+              seq.label + " " + tier.name + " at " + usd(tier.price) + " a month covers " + capNote +
+              " You need " + int(contactsMonth) + " contacts and " + int(sendsMonth) + " sends. " +
+              (seq.mailbox || "");
+          }
+          if (seq.quote) help = seq.label + ": " + seq.mailbox + " The figure shown is a published estimate, not a quote. Replace it with yours.";
+          $("occSeqHelp").textContent = help;
 
           /* 5. Variable stack. */
           var preset = PRESETS[state.preset];
@@ -1211,7 +1384,11 @@
           $("occRec1").textContent = usd(recurring);
           $("occInboxLbl").textContent = int(inboxes) + " inboxes";
           $("occInboxCost").textContent = usd2(inboxCost);
-          $("occSeqLbl").textContent = seq.label + " " + tier.name;
+          $("occSeqLbl").textContent =
+            seq.perSender
+              ? seq.label.split(" (")[0] + " \u00D7 " + int(inboxes)
+              : seq.label.split(" (")[0] + " " + tier.name +
+                (extraMailboxes > 0 ? " + " + int(extraMailboxes) + " mailboxes" : "");
           $("occSeqCost").textContent = usd2(seqCost);
           $("occSrcLbl").textContent = labels.src;
           $("occSrcCost").textContent = usd2(costs.src);
@@ -1347,6 +1524,10 @@
             host.appendChild(row);
           });
 
+          var fd = $("occFoldDates");
+          if (fd)
+            fd.textContent =
+              "First send " + fmt(firstSend) + ". Full volume " + fmt(fullVolume) + ".";
           $("occTimelineNote").textContent =
             " Starting today, your first email reaches a prospect on " + fmt(firstSend) +
             " and you reach full volume on " + fmt(fullVolume) +
@@ -1477,9 +1658,73 @@
           });
         });
 
-        $("occResetDerived").addEventListener("click", function () {
-          overrides = {};
+        /* Per-step reset. Boot defaults are captured once, after the first preset is
+           applied, so "reset" means the state the page opened in. Fields the preset owns
+           reset to the active preset's value rather than the boot one. */
+        var BOOT = {};
+        var PRESET_FIELDS = { occDeliverable: "deliverable", occReply: "reply" };
+
+        function captureDefaults() {
+          document.querySelectorAll(".occ-inputs input, .occ-inputs select").forEach(function (el) {
+            if (!el.id) return;
+            BOOT[el.id] = el.type === "checkbox" ? el.checked : el.value;
+          });
+        }
+
+        function resetCard(card, step) {
+          card.querySelectorAll("input, select").forEach(function (el) {
+            if (!el.id) return;
+            if (PRESET_FIELDS[el.id]) {
+              el.value = PRESETS[state.preset][PRESET_FIELDS[el.id]];
+            } else if (el.id in BOOT) {
+              if (el.type === "checkbox") el.checked = BOOT[el.id];
+              else el.value = BOOT[el.id];
+            }
+            delete overrides[el.id];
+          });
+
+          if (step === "1") {
+            state.mode = "sends";
+            document.querySelectorAll("[data-mode]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o.dataset.mode === "sends"));
+            });
+            document.querySelectorAll("[data-show]").forEach(function (f) {
+              f.hidden = f.dataset.show !== "sends";
+            });
+          }
+          if (step === "2") {
+            state.preset = "local";
+            document.querySelectorAll("[data-preset]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o.dataset.preset === "local"));
+            });
+            applyPreset();
+            return;
+          }
+          if (step === "4") applyTld();
+          if (step === "5") {
+            Object.keys(state.rowState).forEach(function (k) {
+              if (k.indexOf(state.preset + ":") === 0) delete state.rowState[k];
+            });
+            buildStack();
+          }
+          if (step === "6") {
+            $("occAutoPrice").value = AUTOMATION[$("occAuto").value].price;
+          }
+          if (step === "8") {
+            state.sdr = "us";
+            document.querySelectorAll("[data-sdr]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o.dataset.sdr === "us"));
+            });
+            $("occSdrCost").value = SDRS.us.cost;
+            $("occSdrHelp").textContent = SDRS.us.help;
+          }
           compute();
+        }
+
+        document.querySelectorAll("[data-reset]").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            resetCard(btn.closest(".occ-card"), btn.dataset.reset);
+          });
         });
 
         /* Any other input recomputes */
@@ -1493,8 +1738,10 @@
         fillTldTable();
         $("occSdrCost").value = SDRS.us.cost;
         $("occSdrHelp").textContent = SDRS.us.help;
-        $("occAutoPrice").value = 0;
+        $("occAuto").value = "self";
+        $("occAutoPrice").value = AUTOMATION.self.price;
         applyPreset();
+        captureDefaults();
       })();
     </script>
     <footer>
