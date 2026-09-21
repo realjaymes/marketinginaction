@@ -17,7 +17,7 @@
     <meta property="og:title" content="Outbound GTM Cost &amp; ROI Calculator" />
     <meta
       property="og:description"
-      content="One rep is capped at one mailbox. Price the system that is not, and see the meetings, pipeline and revenue it returns against what a rep or an agency would cost you."
+      content="One rep is capped at one mailbox. Price the system that is not, and see the meetings, pipeline and revenue it returns against running it yourself or hiring for it."
     />
     <meta property="og:url" content="https://marketinginaction.xyz/resources/outbound-cost-calculator/" />
     <meta property="og:image" content="https://marketinginaction.xyz/og-image.png" />
@@ -34,7 +34,7 @@
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "author": { "@type": "Person", "name": "James Praise" },
         "publisher": { "@type": "Organization", "name": "Marketing In Action" },
-        "description": "A free calculator that sizes and prices a full AI-led outbound go-to-market system from the number of companies you want to reach each month: inboxes, domains, sequencer, sourcing, verification, enrichment and automation, priced across month one, year one and year two, and compared against hiring a sales development rep or retaining an agency."
+        "description": "A free calculator that sizes and prices a full AI-led outbound go-to-market system from the number of companies you want to reach each month: inboxes, domains, sequencer, sourcing, verification, enrichment and automation, priced across month one, year one and year two, and compared against running it yourself or hiring a sales development rep."
       }
     </script>
 
@@ -254,7 +254,27 @@
       }
       .occ-icp button[aria-pressed="true"] strong { color: #fff; }
 
-      .occ-run { margin-bottom: 14px; }
+      .occ-run { margin-bottom: 12px; }
+      .occ-runnum {
+        display: block; margin-top: 7px; padding-top: 7px; font-style: normal;
+        border-top: 1px dashed var(--border); font-size: 12.5px; font-weight: 800; color: var(--text);
+      }
+      .occ-icp button[aria-pressed="true"] .occ-runnum { border-top-color: rgba(0, 0, 0, 0.18); }
+      .occ-runset { display: grid; gap: 12px; grid-template-columns: 1fr; margin-bottom: 12px; }
+      @media (min-width: 560px) { .occ-runset { grid-template-columns: repeat(2, 1fr); } }
+      .occ-runset[hidden] { display: none; }
+      .occ-runline {
+        margin-bottom: 14px; font-size: 12.5px; line-height: 1.5; color: var(--text-secondary);
+        text-align: center;
+      }
+      .occ-runline strong { color: var(--text); }
+      .occ-risk {
+        margin-bottom: 14px; padding: 12px 14px; border-radius: 10px;
+        background: var(--bad-bg); border: 1px solid rgba(204, 0, 0, 0.25);
+        font-size: 12.5px; line-height: 1.55; color: #7a0f0f;
+      }
+      .occ-risk strong { color: var(--bad); }
+      .occ-risk[hidden] { display: none; }
       .occ-runprice {
         display: flex; align-items: center; justify-content: center; flex-wrap: wrap;
         gap: 6px 10px; margin: 0 auto 20px;
@@ -614,22 +634,57 @@
         <div class="occ-icp occ-run" role="group" aria-label="Who runs the system">
           <button type="button" data-run="self" aria-pressed="true">
             <strong>You run it</strong>
-            <span>Tools only. Your own time and expertise is not on this bill.</span>
+            <span>Tools only. Your hours and the months spent learning are the real bill.</span>
+            <em class="occ-runnum" id="occRunNumself">&nbsp;</em>
           </button>
           <button type="button" data-run="sdr" aria-pressed="false">
-            <strong>You hire an SDR</strong>
-            <span>About $3,750 a month for a nearshore rep. Offshore runs less, a US hire runs far more.</span>
+            <strong>You hire a rep</strong>
+            <span>One person sending from one company mailbox. That mailbox is the ceiling.</span>
+            <em class="occ-runnum" id="occRunNumsdr">&nbsp;</em>
           </button>
-          <button type="button" data-run="agency" aria-pressed="false">
-            <strong>An agency runs it</strong>
-            <span>$3,000 to $8,000 a month, all in. They run it on their own stack, so the tools below sit inside that fee.</span>
+          <button type="button" data-run="mia" aria-pressed="false">
+            <strong>We build it with you</strong>
+            <span>The same volume, no cap, and the system stays yours when we are done.</span>
+            <em class="occ-runnum" id="occRunNummia">&nbsp;</em>
           </button>
         </div>
-        <div class="occ-runprice" id="occRunPriceField" hidden>
-          <label for="occRunPrice" id="occRunPriceLab">Agency retainer</label>
-          <span class="occ-qin"><span>$</span><input type="number" id="occRunPrice" min="0" step="250" value="4000" inputmode="decimal" /><span>/ mo</span></span>
-          <span class="occ-runhint" id="occRunPriceNote">Editable, put in the quote you are weighing up</span>
+
+        <div class="occ-runset" data-runset="self">
+          <div class="occ-qfield">
+            <label for="occSelfHours">Hours a week you will put into it</label>
+            <div class="occ-qin"><input type="number" id="occSelfHours" min="0" max="60" step="1" value="6" inputmode="numeric" /></div>
+            <span class="occ-qnote">Sourcing, copy, deliverability, replies.</span>
+          </div>
+          <div class="occ-qfield">
+            <label for="occSelfRate">What an hour of that time is worth</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occSelfRate" min="0" step="5" value="50" inputmode="decimal" /></div>
+            <span class="occ-qnote">Yours, or whoever picks this up.</span>
+          </div>
         </div>
+
+        <div class="occ-runset" data-runset="sdr" hidden>
+          <div class="occ-qfield">
+            <label for="occRepCost">What a rep costs you a month</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occRepCost" min="0" step="100" value="1500" inputmode="decimal" /></div>
+            <span class="occ-qnote">Fully loaded, in your own market.</span>
+          </div>
+          <div class="occ-qfield">
+            <label for="occDomainRev">Monthly revenue that needs email to land</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occDomainRev" min="0" step="1000" value="0" inputmode="decimal" /></div>
+            <span class="occ-qnote">Invoices, contracts, renewals, support.</span>
+          </div>
+        </div>
+
+        <div class="occ-runset" data-runset="mia" hidden>
+          <div class="occ-qfield">
+            <label for="occMiaFee">What you would pay a month</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occMiaFee" min="0" step="100" value="0" placeholder="0" inputmode="decimal" /></div>
+            <span class="occ-qnote">We price on volume and scope, so put in your own number.</span>
+          </div>
+        </div>
+
+        <div class="occ-runline" id="occRunLine"></div>
+        <div class="occ-risk" id="occRisk" hidden></div>
 
         <div class="occ-funnel">
           <div class="occ-tile occ-tile--cost">
@@ -956,36 +1011,6 @@
               </div>
             </div>
 
-            <!-- Step 8: SDR -->
-            <div class="occ-card">
-              <span class="occ-step">Step 8 — The comparison that matters</span>
-              <h2>One rep against this system.</h2>
-              <p class="occ-lede">
-                A rep and a system do not reach the same number of companies, so comparing what they cost a
-                month tells you very little. A rep sends from one company mailbox, and a mailbox is only safe
-                for around 30 emails a day whoever is behind it. The system spreads the same sending across
-                ten. Compare what each one costs to book a meeting instead.
-              </p>
-              <div class="occ-seg" role="group" aria-label="Rep benchmark">
-                <button type="button" data-sdr="typical" aria-pressed="true">A typical hire</button>
-                <button type="button" data-sdr="custom" aria-pressed="false">My own number</button>
-              </div>
-              <div class="occ-fields occ-2">
-                <div class="occ-field">
-                  <label for="occSdrCost">Fully loaded cost per year</label>
-                  <div class="occ-inp"><span>$</span><input type="number" id="occSdrCost" min="0" step="500" inputmode="decimal" /></div>
-                  <span class="occ-help" id="occSdrHelp"></span>
-                </div>
-                <div class="occ-field">
-                  <label for="occSdrInboxes">Sending inboxes they have</label>
-                  <div class="occ-inp"><input type="number" id="occSdrInboxes" value="1" min="1" max="50" step="1" inputmode="numeric" /></div>
-                  <span class="occ-help">One company mailbox is the norm. A rep who spins up ten warmed domains is doing GTM engineering, which is the whole point.</span>
-                </div>
-              </div>
-              <div class="occ-cardfoot">
-                <button type="button" class="occ-reset" data-reset="8">Reset this step</button>
-              </div>
-            </div>
           </div>
           <div class="occ-results">
             <div class="occ-out">
@@ -998,14 +1023,13 @@
               <div class="occ-line"><span>One-time setup (domains)</span><strong id="occOneTime">$0</strong></div>
               <div class="occ-line"><span>Recurring, first month</span><strong id="occRec1">$0</strong></div>
 
-              <div class="occ-sub" id="occSteadySub">Steady state, month two onward</div>
+              <div class="occ-sub">Steady state, month two onward</div>
               <div class="occ-line occ-line--sub"><span id="occInboxLbl">Inboxes</span><strong id="occInboxCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occSeqLbl">Sequencer</span><strong id="occSeqCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occSrcLbl">Sourcing</span><strong id="occSrcCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
-              <div class="occ-line occ-line--sub" id="occMarginRow" hidden><span>Their margin and management</span><strong id="occMarginCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
@@ -1029,21 +1053,6 @@
               <div class="occ-line occ-line--key" id="occRoiRow"><span id="occBRoiLab">Return on stack spend</span><strong id="occRoi">0x</strong></div>
             </div>
 
-            <div class="occ-out">
-              <h2>One rep against this system</h2>
-              <div class="occ-cmp">
-                <div class="occ-cmprow occ-cmphead"><span></span><b id="occCmpLbl">One SDR</b><b>This outbound GTM system</b></div>
-                <div class="occ-cmprow"><span>Sending inboxes</span><b id="occCmpInbA">1</b><b id="occCmpInbB">0</b></div>
-                <div class="occ-cmprow"><span>Emails a day</span><b id="occCmpSndA">0</b><b id="occCmpSndB">0</b></div>
-                <div class="occ-cmprow"><span id="occCmpReachLbl">Businesses reached a month</span><b id="occCmpAccA">0</b><b id="occCmpAccB">0</b></div>
-                <div class="occ-cmprow"><span>Meetings held a month</span><b id="occCmpMeetA">0</b><b id="occCmpMeetB">0</b></div>
-                <div class="occ-cmprow"><span>Cost a month</span><b id="occCmpCostA">$0</b><b id="occCmpCostB">$0</b></div>
-                <div class="occ-cmprow"><span>Meetings in a first year</span><b id="occCmpYrA">0</b><b id="occCmpYrB">0</b></div>
-                <div class="occ-cmprow"><span id="occSdrLbl">Cost in a first year</span><b id="occSdrOut">$0</b><b id="occY1b">$0</b></div>
-                <div class="occ-cmprow occ-cmprow--key"><span>Cost per meeting</span><b id="occCmpCpmA">$0</b><b id="occCmpCpmB">$0</b></div>
-              </div>
-              <div class="occ-delta" id="occSdrDelta"></div>
-            </div>
           </div>
           </div>
         </details>
@@ -1427,15 +1436,10 @@
             help: "Workable, but it means opening Smartlead several times a day to catch a reply or spot a paused campaign. One missed reply on a hot lead usually costs more than the server." }
         };
 
-        var SDRS = {
-          typical: { cost: 45000, help: "A nearshore rep, fully loaded. Offshore runs $1,000 to $3,500 a month. A US hire runs $113,000 to $162,000 in year one." },
-          custom: { cost: 45000, help: "Enter your own number. Remember to load it: salary alone is typically only 40 to 60 percent of the real cost." }
-        };
-
         /* ---------------------------------------------------------------
          * State
          * ------------------------------------------------------------- */
-        var state = { mode: "accounts", preset: "b2b", sdr: "typical", run: "self", rowState: {} };
+        var state = { mode: "accounts", preset: "b2b", run: "self", rowState: {} };
         var overrides = {}; /* id -> true once the user types over a derived field */
 
         var $ = function (id) { return document.getElementById(id); };
@@ -1681,19 +1685,13 @@
 
           /* ---- totals ---- */
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
-          var managed = state.run === "agency";
-          var runCost = managed ? Math.max(0, num("occRunPrice")) : 0;
-          /* A fully managed agency runs the system on its own domains, inboxes, sequencer and
-           * data. The retainer is all in, so it replaces the stack cost rather than sitting on
-           * top of it. Adding both would bill the same tools twice. */
-          var totalMonthly = managed ? runCost : recurring;
-          var margin = Math.max(0, runCost - recurring);
-          var isRep = state.run === "sdr";
-          var costWord = isRep ? "Rep" : managed ? "Total" : "Stack";
-          var oneTime = managed ? 0 : domains * domFirst;
+          /* The builder prices the system itself. Who runs it is a commercial layer on top, priced
+           * in the one-view card, so this breakdown stays the same whichever path is selected. */
+          var totalMonthly = recurring;
+          var oneTime = domains * domFirst;
           var month1 = oneTime + totalMonthly;
           var year1 = oneTime + totalMonthly * 12;
-          var year2 = (managed ? 0 : domains * (rotate ? domFirst : domRenew)) + totalMonthly * 12;
+          var year2 = domains * (rotate ? domFirst : domRenew) + totalMonthly * 12;
 
           $("occM1").textContent = usd(month1);
           $("occOneTime").textContent = usd(oneTime);
@@ -1714,11 +1712,6 @@
           $("occEnrCost").textContent = usd2(costs.enr);
           $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
           $("occAutoCost").textContent = usd2(autoCost);
-          $("occSteadySub").textContent = managed
-            ? "Steady state \u2014 what their retainer covers"
-            : "Steady state, month two onward";
-          $("occMarginRow").hidden = !managed;
-          $("occMarginCost").textContent = usd2(margin);
           $("occSteady").textContent = usd(totalMonthly);
           var bm = $("occBuilderMeta");
           if (bm)
@@ -1766,8 +1759,8 @@
           $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
           $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
           $("occCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
-          $("occBCpmLab").textContent = (managed ? "Total" : "Stack") + " cost per meeting";
-          $("occBRoiLab").textContent = "Return on " + (managed ? "total" : "stack") + " spend";
+          $("occBCpmLab").textContent = "Stack cost per meeting";
+          $("occBRoiLab").textContent = "Return on stack spend";
 
           var dealValue = num("occDealValue");
           var closed = meetings * (num("occCloseRate") / 100);
@@ -1782,85 +1775,120 @@
             $("occRoi").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
           }
 
-          /* ---- What one rep can actually run ----
-           * The cap is deliverability, not effort. A rep sends from their own mailbox, and a mailbox is
-           * safe for the same number of emails a day whoever is behind it. Everything downstream follows. */
-          var sdrCost = num("occSdrCost");
-          var sdrInboxes = Math.max(1, num("occSdrInboxes"));
-          var sdrSendsDay = Math.min(sendsDay, sdrInboxes * safeSends);
-          var sdrSendsMonth = sdrSendsDay * workDays;
-          var sdrContacts = steps > 0 ? sdrSendsMonth / steps : 0;
-          var sdrAccounts = perAccount > 0 ? sdrContacts / perAccount : 0;
-          var sdrWarm = sdrAccounts * (1 - Math.pow(1 - posPerContact, perAccount));
-          var sdrMeetings = sdrWarm * (num("occMeeting") / 100);
-          var sdrMonthly = Math.max(0, sdrCost) / 12;
-          var sdrCpm = sdrMeetings > 0.005 ? sdrMonthly / sdrMeetings : 0;
-          var sysCpm = meetings > 0.005 ? totalMonthly / meetings : 0;
+          /* ---- What each path can actually run ----
+           * Reach is capped by deliverability, not by effort or budget. A rep sends from one company
+           * mailbox, and a mailbox is safe for the same number of emails a day whoever is behind it and
+           * wherever they were hired. Everything downstream follows from that cap, which is why the
+           * argument against hiring holds at every salary in every market. */
+          var repInboxes = 1;
+          var repSendsDay = Math.min(sendsDay, repInboxes * safeSends);
+          var repContacts = steps > 0 ? (repSendsDay * workDays) / steps : 0;
+          var repAccounts = perAccount > 0 ? repContacts / perAccount : 0;
+          var repWarm = repAccounts * (1 - Math.pow(1 - posPerContact, perAccount));
+          var repMeetings = repWarm * (num("occMeeting") / 100);
 
-          $("occSdrOut").textContent = usd(sdrCost);
-          $("occY1b").textContent = usd(year1);
-          $("occSdrLbl").textContent = "Cost in a first year";
+          var selfHoursMonth = Math.max(0, num("occSelfHours")) * 4.33;
+          var selfTime = selfHoursMonth * Math.max(0, num("occSelfRate"));
 
+          /* Four paths, four different volumes at four different prices. Holding output constant across
+           * them would turn the page into a price fight, which is not the comparison that matters. */
+          var MODES = {
+            self: { monthly: recurring + selfTime, accounts: accounts, contacts: contactsMonth,
+              sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
+              inboxes: inboxes, domains: domains, hours: selfHoursMonth, ramp: 4 },
+            sdr: { monthly: Math.max(0, num("occRepCost")), accounts: repAccounts, contacts: repContacts,
+              sends: repSendsDay * workDays, sendsDay: repSendsDay, warm: repWarm, meetings: repMeetings,
+              inboxes: repInboxes, domains: 0, hours: 4, ramp: 3 },
+            mia: { monthly: Math.max(0, num("occMiaFee")), accounts: accounts, contacts: contactsMonth,
+              sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
+              inboxes: inboxes, domains: domains, hours: 2, ramp: 1 }
+          };
+          var M = MODES[state.run];
           var one = function (v) { return v < 10 ? v.toFixed(1) : int(v); };
-          $("occCmpLbl").textContent = state.sdr === "typical" ? "One rep" : "Your rep";
-          $("occCmpReachLbl").textContent =
-            PRESETS[state.preset].unit.charAt(0).toUpperCase() +
-            PRESETS[state.preset].unit.slice(1) + " reached a month";
-          $("occCmpInbA").textContent = int(sdrInboxes);
-          $("occCmpInbB").textContent = int(inboxes);
-          $("occCmpSndA").textContent = int(sdrSendsDay);
-          $("occCmpSndB").textContent = int(sendsDay);
-          $("occCmpAccA").textContent = int(sdrAccounts);
-          $("occCmpAccB").textContent = int(accounts);
-          $("occCmpMeetA").textContent = one(sdrMeetings);
-          $("occCmpMeetB").textContent = one(meetings);
-          $("occCmpCostA").textContent = usd(sdrMonthly);
-          $("occCmpCostB").textContent = usd(totalMonthly);
-          $("occCmpCpmA").textContent = sdrCpm > 0 ? usd(sdrCpm) : "n/a";
-          $("occCmpCpmB").textContent = sysCpm > 0 ? usd(sysCpm) : "n/a";
-          $("occCmpYrA").textContent = int(Math.round(sdrMeetings * 11));
-          $("occCmpYrB").textContent = int(Math.round(meetings * 11));
+          var costWord = state.run === "self" && selfTime <= 0 ? "Stack" : "Total";
 
-          var meetingsYear = meetings * 11; /* month one is warmup, so eleven sending months */
-          if (meetingsYear <= 0.5 || sdrCost <= 0) {
-            $("occSdrDelta").innerHTML =
-              "Set a reply rate above zero in step seven to see the cost per meeting on both sides.";
-          } else if (sdrSendsDay >= sendsDay - 0.5) {
-            $("occSdrDelta").innerHTML =
-              "At this volume one rep can run the whole thing from " +
-              (sdrInboxes === 1 ? "<strong>a single mailbox</strong>" : "<strong>" + int(sdrInboxes) +
-              " mailboxes</strong>") + ", so the only question left is what they cost. Raise the number of " +
-              PRESETS[state.preset].unit + " you want to reach and the cap starts to bite.";
+          /* Live cost and meetings on every button, so the comparison is the control itself. */
+          ["self", "sdr", "mia"].forEach(function (k) {
+            var m = MODES[k];
+            $("occRunNum" + k).textContent =
+              (k === "mia" && m.monthly <= 0 ? "Your number" : usd(m.monthly) + " / mo") +
+              " \u00B7 " + one(m.meetings) + (m.meetings === 1 ? " meeting" : " meetings");
+          });
+          document.querySelectorAll("[data-runset]").forEach(function (d) {
+            d.hidden = d.dataset.runset !== state.run;
+          });
+
+          var sysCpm = meetings > 0.005 ? recurring / meetings : 0;
+          var mCpm = M.meetings > 0.005 ? M.monthly / M.meetings : 0;
+
+          /* ---- The line that explains the mode ---- */
+          if (state.run === "self") {
+            $("occRunLine").innerHTML =
+              "The tools come to <strong>" + usd(recurring) + "</strong> a month. Your own time at " +
+              int(selfHoursMonth) + " hours adds <strong>" + usd(selfTime) + "</strong>, which is " +
+              (recurring > 0 ? "<strong>" + (selfTime / recurring).toFixed(1) + " times</strong> the tool bill" :
+              "the larger number") + ". Most of it goes on learning rather than running.";
+          } else if (state.run === "sdr") {
+            $("occRunLine").innerHTML =
+              "One mailbox is safe for around <strong>" + int(safeSends) + " emails a day</strong>, so a rep " +
+              "reaches <strong>" + int(repAccounts) + "</strong> " + PRESETS[state.preset].unit +
+              " a month against <strong>" + int(accounts) + "</strong> here. Every meeting they book costs " +
+              "<strong>" + (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> against <strong>" +
+              (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong>. Paying them more does not lift the cap.";
           } else {
-            $("occSdrDelta").innerHTML =
-              "Over a first year the rep books about <strong>" + int(Math.round(sdrMeetings * 11)) +
-              " meetings</strong> and this system books <strong>" + int(Math.round(meetingsYear)) +
-              "</strong>. Every meeting the rep books costs <strong>" + usd(sdrCpm) + "</strong> against " +
-              "<strong>" + usd(sysCpm) + "</strong> here, because one mailbox caps them at <strong>" +
-              int(sdrSendsDay) + " emails a day</strong> where the system runs <strong>" + int(sendsDay) +
-              "</strong>. Hiring does not remove that cap. It puts a salary behind it.";
+            var ceilingRev = M.meetings * dealValue * (num("occCloseRate") / 100);
+            var ceiling = ceilingRev / 3;
+            $("occRunLine").innerHTML =
+              "We build the same <strong>" + int(inboxes) + "-inbox</strong> system on your own domains, run " +
+              "it or teach your team to run it, and hand it over. You keep the infrastructure. " +
+              (ceiling > 1
+                ? "At this volume the system closes <strong>" + usd(ceilingRev) + "</strong> a month, so " +
+                  "anything under <strong>" + usd(ceiling) + "</strong> a month still returns three times " +
+                  "what you spend. A fully managed agency charges $3,000 to $8,000 for the same work and " +
+                  "keeps the infrastructure. We price on volume and scope, so put in your own number."
+                : "Set a deal value and close rate above to see what this is worth to you.");
           }
+
+          /* ---- The risk a rep carries that a bill does not show ---- */
+          var burnWeeks = 6;
+          if (state.run === "sdr") {
+            var domainRev = Math.max(0, num("occDomainRev"));
+            $("occRisk").hidden = false;
+            $("occRisk").innerHTML =
+              "<strong>A rep sends cold from your company domain.</strong> Spam complaints land on the " +
+              "domain that also sends your invoices, contracts, renewals and password resets, and " +
+              "reputation takes around " + burnWeeks + " weeks to recover if it recovers at all. " +
+              (domainRev > 0
+                ? "At " + usd(domainRev) + " a month of revenue that needs email to land, that is <strong>" +
+                  usd((domainRev * burnWeeks) / 4.33) + "</strong> exposed. "
+                : "Put your monthly revenue that depends on email above to size that exposure. ") +
+              "The separate sending domains that prevent it cost " + usd2(domains * domRenew / 12) + " a month.";
+          } else {
+            $("occRisk").hidden = true;
+          }
+
 
           /* ---- one-view card ----
            * A rep is not a way of running this system, it is an alternative to having one, so picking the
            * rep swaps the whole funnel to what a rep can actually reach rather than only changing the bill. */
-          var dAccounts = isRep ? sdrAccounts : accounts;
-          var dContacts = isRep ? sdrContacts : contactsMonth;
-          var dSends = isRep ? sdrSendsMonth : sendsMonth;
-          var dReplies = isRep ? sdrContacts * replyRate : replies;
-          var dWarm = isRep ? sdrWarm : warmAccounts;
-          var dMeetings = isRep ? sdrMeetings : meetings;
-          var dMonthly = isRep ? sdrMonthly : totalMonthly;
-          var dInboxes = isRep ? sdrInboxes : inboxes;
-          var dDomains = isRep ? 1 : domains;
+          var dAccounts = M.accounts;
+          var dContacts = M.contacts;
+          var dSends = M.sends;
+          var dReplies = M.contacts * replyRate;
+          var dWarm = M.warm;
+          var dMeetings = M.meetings;
+          var dMonthly = M.monthly;
+          var dInboxes = M.inboxes;
+          var dDomains = M.domains;
           var pipeline = dMeetings * dealValue;
           var dRevenue = pipeline * (num("occCloseRate") / 100);
           $("occQCost").textContent = usd(dMonthly);
-          $("occQCostSub").textContent = isRep
-            ? "one rep, fully loaded, tools not included"
-            : managed
-            ? "their fee, all in \u2014 " + usd(recurring) + " of it is the tools"
-            : "tools and infrastructure, your time not included";
+          $("occQCostSub").textContent =
+            state.run === "sdr"
+              ? "one rep, fully loaded, in your market"
+              : state.run === "mia"
+              ? "all in, on infrastructure you keep"
+              : usd(recurring) + " of tools and " + usd(selfTime) + " of your time";
           $("occQCPCLab").textContent =
             costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
           $("occQCPMLab").textContent = costWord + " cost per meeting";
@@ -1879,12 +1907,6 @@
             dMonthly > 0 ? (dRevenue / dMonthly).toFixed(1) + "x on " + costWord.toLowerCase() + " spend" : "per month";
           $("occQCPC").textContent = dAccounts > 0 ? "$" + (dMonthly / dAccounts).toFixed(2) : "$0.00";
           $("occQCPM").textContent = dMeetings > 0.01 ? usd(dMonthly / dMeetings) : "n/a";
-          if (state.run === "agency" && meetings > 0.01) {
-            $("occRunPriceNote").innerHTML =
-              "At $3,000 that is <strong>" + usd(3000 / meetings) +
-              "</strong> a meeting. At $8,000 it is <strong>" + usd(8000 / meetings) +
-              "</strong>. The same stack run in house costs <strong>" + usd(recurring / meetings) + "</strong>.";
-          }
           $("occQROI").textContent = dMonthly > 0 ? (dRevenue / dMonthly).toFixed(1) + "x" : "n/a";
           var losing = dMonthly > 0 && dRevenue < dMonthly;
           $("occQRevenue").parentNode.classList.toggle("occ-loss", losing);
@@ -2068,18 +2090,6 @@
           });
         });
 
-        document.querySelectorAll("[data-sdr]").forEach(function (b) {
-          b.addEventListener("click", function () {
-            state.sdr = b.dataset.sdr;
-            document.querySelectorAll("[data-sdr]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o === b));
-            });
-            if (state.sdr !== "custom") $("occSdrCost").value = SDRS[state.sdr].cost;
-            $("occSdrHelp").textContent = SDRS[state.sdr].help;
-            compute();
-          });
-        });
-
         /* Sequencer + automation selects */
         Object.keys(SEQUENCERS).forEach(function (k) {
           var o = document.createElement("option");
@@ -2166,14 +2176,6 @@
           if (step === "6") {
             $("occAutoPrice").value = AUTOMATION[$("occAuto").value].price;
           }
-          if (step === "8") {
-            state.sdr = "typical";
-            document.querySelectorAll("[data-sdr]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o.dataset.sdr === "typical"));
-            });
-            $("occSdrCost").value = SDRS.typical.cost;
-            $("occSdrHelp").textContent = SDRS.typical.help;
-          }
           compute();
         }
 
@@ -2216,38 +2218,15 @@
             document.querySelectorAll("[data-run]").forEach(function (o) {
               o.setAttribute("aria-pressed", String(o.dataset.run === state.run));
             });
-            $("occRunPriceField").hidden = state.run === "self";
-            if (state.run === "agency") {
-              $("occRunPrice").value = 4000;
-              $("occRunPriceLab").textContent = "Agency retainer";
-              $("occRunPriceNote").textContent =
-                "Editable, put in the quote you are weighing up";
-            }
-            if (state.run === "sdr") {
-              $("occRunPrice").value = Math.round(Math.max(0, num("occSdrCost")) / 12);
-              $("occRunPriceLab").textContent = "One SDR, per month";
-              $("occRunPriceNote").textContent =
-                "Fully loaded and divided across twelve months, from step eight";
-            }
             compute();
           });
         });
-        $("occRunPrice").addEventListener("input", function () {
-          /* For the rep, the inline field edits step eight's loaded cost so both stay in step. */
-          if (state.run === "sdr") {
-            $("occSdrCost").value = Math.round(Math.max(0, num("occRunPrice")) * 12);
-            state.sdr = "custom";
-            document.querySelectorAll("[data-sdr]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o.dataset.sdr === "custom"));
-            });
-          }
-          compute();
-        });
+        ["occSelfHours", "occSelfRate", "occRepCost", "occDomainRev", "occMiaFee"].forEach(
+          function (id) { $(id).addEventListener("input", compute); }
+        );
 
         /* Boot */
         fillTldTable();
-        $("occSdrCost").value = SDRS.typical.cost;
-        $("occSdrHelp").textContent = SDRS.typical.help;
         $("occAuto").value = "self";
         $("occAutoPrice").value = AUTOMATION.self.price;
         applyPreset();
