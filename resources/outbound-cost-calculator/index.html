@@ -231,15 +231,23 @@
 
       .occ-icp { display: grid; gap: 8px; margin-bottom: 18px; }
       @media (min-width: 620px) { .occ-icp { grid-template-columns: repeat(3, 1fr); } }
+      .occ-icplab {
+        margin: 0 0 8px; font-size: 13px; font-weight: 700; color: var(--text);
+        text-align: center;
+      }
       .occ-icp button {
+        display: flex; flex-direction: column; gap: 4px; text-align: left;
         border: 1.5px solid var(--border); background: var(--bg); border-radius: 10px;
-        padding: 10px 12px; font-family: inherit; font-size: 13.5px; font-weight: 700;
-        color: var(--text-secondary); cursor: pointer; transition: all 0.16s;
+        padding: 12px 14px; font-family: inherit; color: var(--text-secondary);
+        cursor: pointer; transition: all 0.16s;
       }
-      .occ-icp button:hover { border-color: var(--text-secondary); color: var(--text); }
+      .occ-icp button strong { font-size: 13.5px; font-weight: 800; color: var(--text); line-height: 1.25; }
+      .occ-icp button span { font-size: 12px; font-weight: 500; line-height: 1.4; }
+      .occ-icp button:hover { border-color: var(--text-secondary); }
       .occ-icp button[aria-pressed="true"] {
-        background: var(--occ-accent); border-color: var(--occ-accent); color: #fff;
+        background: var(--occ-accent); border-color: var(--occ-accent); color: rgba(255, 255, 255, 0.82);
       }
+      .occ-icp button[aria-pressed="true"] strong { color: #fff; }
 
       .occ-qgrid { display: grid; gap: 14px; margin-bottom: 22px; }
       @media (min-width: 560px) { .occ-qgrid { grid-template-columns: 1fr 1fr; } }
@@ -475,13 +483,18 @@
         <span class="mia-eyebrow">Free Tool</span>
         <h1>What a cold outbound system actually costs, and what it returns.</h1>
         <p>
-          Send volume drives everything. Set yours below and the whole stack prices itself, all the way
-          through to pipeline and closed revenue. Every figure stays editable, because your rates are not
-          the list rates.
+          If you sell B2B software or run an agency, this prices the AI-led outbound system we build for
+          clients: domains, inboxes, a sequencer, data, and the automation that runs it. Set your send
+          volume and you see the monthly cost sitting next to the pipeline and closed revenue it should
+          return. Every figure stays editable, because your rates are not the list rates.
         </p>
-        <div class="mia-verified">
-          <strong>Prices verified 21 September 2026.</strong>
-          <span>Sources at the bottom of the page.</span>
+        <div class="mia-hero-actions">
+          <a
+            href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=hero-primary"
+            class="mia-btn mia-btn-primary"
+            data-cta="hero-primary"
+            >Book a free strategy call &rarr;</a
+          >
         </div>
       </div>
     </section>
@@ -491,13 +504,27 @@
       <section class="occ-panel">
         <div class="occ-qhead">
           <h2>Your outbound system, in one view</h2>
-          <p>Four numbers in, the whole funnel out. Cost, contacts, replies, meetings, pipeline, revenue.</p>
+          <p>
+            Tell us who you sell to and how many emails you want to send a day. You get the monthly cost of
+            the whole stack, how many people it actually reaches, and the meetings, pipeline and revenue
+            that should come out of it.
+          </p>
         </div>
 
-        <div class="occ-icp" role="group" aria-label="Who you are targeting">
-          <button type="button" data-preset="local" aria-pressed="true">Local service businesses</button>
-          <button type="button" data-preset="b2b" aria-pressed="false">B2B and technology</button>
-          <button type="button" data-preset="hard" aria-pressed="false">Hard-to-source niches</button>
+        <p class="occ-icplab">Who do you sell to?</p>
+        <div class="occ-icp" role="group" aria-label="Who you sell to">
+          <button type="button" data-preset="local" aria-pressed="true">
+            <strong>Local businesses</strong>
+            <span>Clinics, contractors, medspas, schools, dealerships</span>
+          </button>
+          <button type="button" data-preset="b2b" aria-pressed="false">
+            <strong>B2B software and technology</strong>
+            <span>Anyone you target by job title and find in a contact database</span>
+          </button>
+          <button type="button" data-preset="hard" aria-pressed="false">
+            <strong>Niches with no contact list</strong>
+            <span>Marketplace sellers, directory listings, job boards, association members</span>
+          </button>
         </div>
 
         <div class="occ-qgrid">
@@ -528,11 +555,6 @@
             <span class="occ-qnote">Your own close rate beats any benchmark.</span>
           </div>
 
-          <div class="occ-qfield">
-            <label for="occQMgmt">Running it, per month</label>
-            <div class="occ-qin"><span>$</span><input type="number" id="occQMgmt" min="0" step="250" value="2000" inputmode="decimal" /></div>
-            <span class="occ-qnote">Your time, an operator, or a retainer. Set it to 0 for tools only.</span>
-          </div>
         </div>
 
         <div class="occ-funnel">
@@ -569,13 +591,12 @@
         </div>
 
         <div class="occ-qrows">
-          <div class="occ-qrow"><span>Cost per contact reached</span><strong id="occQCPC">$0</strong></div>
-          <div class="occ-qrow"><span>Cost per meeting held</span><strong id="occQCPM">$0</strong></div>
-          <div class="occ-qrow occ-qrow--hi"><span>Return on total spend</span><strong id="occQROI">0x</strong></div>
+          <div class="occ-qrow"><span>Stack cost per contact reached</span><strong id="occQCPC">$0</strong></div>
+          <div class="occ-qrow"><span>Stack cost per meeting</span><strong id="occQCPM">$0</strong></div>
+          <div class="occ-qrow occ-qrow--hi"><span>Return on stack spend</span><strong id="occQROI">0x</strong></div>
           <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
         </div>
 
-        <p class="occ-callout" id="occQCallout"></p>
       </section>
 
       <!-- ================= FULL BUILDER (collapsed) ================= -->
@@ -640,15 +661,15 @@
               </p>
               <div class="occ-presets" role="group" aria-label="Ideal customer profile preset">
                 <button type="button" class="occ-preset" data-preset="local" aria-pressed="true">
-                  <strong>Local service businesses</strong>
+                  <strong>Local businesses</strong>
                   <span>Clinics, contractors, medspas, schools, dealerships. Scraped from Google Maps, emails sit on the business website.</span>
                 </button>
                 <button type="button" class="occ-preset" data-preset="b2b" aria-pressed="false">
-                  <strong>B2B and technology</strong>
+                  <strong>B2B software and technology</strong>
                   <span>Anything targeted by job title. Pulled from a contact database, verification usually bundled.</span>
                 </button>
                 <button type="button" class="occ-preset" data-preset="hard" aria-pressed="false">
-                  <strong>Hard-to-source niches</strong>
+                  <strong>Niches with no contact list</strong>
                   <span>Marketplace sellers, directory listings, job boards, association member lists. Listings rarely carry contact details.</span>
                 </button>
               </div>
@@ -893,7 +914,6 @@
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span>Tools subtotal</span><strong id="occToolsCost">$0</strong></div>
-              <div class="occ-line"><span>Running it (your time or a retainer)</span><strong id="occMgmtCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
@@ -911,7 +931,7 @@
               <div class="occ-line occ-line--sub"><span>Replies per month</span><strong id="occReplies">0</strong></div>
               <div class="occ-line occ-line--sub"><span>Positive responses per month</span><strong id="occPos">0</strong></div>
               <div class="occ-line"><span>Meetings held per month</span><strong id="occMeetings">0</strong></div>
-              <div class="occ-line occ-line--key"><span>Cost per meeting held</span><strong id="occCPM">$0</strong></div>
+              <div class="occ-line occ-line--key"><span>Stack cost per meeting</span><strong id="occCPM">$0</strong></div>
               <div class="occ-line" id="occPipeRow"><span>Pipeline created per month</span><strong id="occPipe">$0</strong></div>
               <div class="occ-line" id="occRevRow"><span>Closed won revenue per month</span><strong id="occRev">$0</strong></div>
               <div class="occ-line occ-line--key" id="occRoiRow"><span>Return on stack spend</span><strong id="occRoi">0x</strong></div>
@@ -928,6 +948,12 @@
           </div>
         </details>
       </section>
+      <!-- Reference material, retained in the source but not rendered.
+           Warmup timeline, per-TLD domain pricing (first year vs renewal) and the full
+           19-tool source table with links to each vendor pricing page.
+           Prices last verified 2026-09-21. Refresh these tables when tool prices change,
+           then update the matching defaults in the engine below. -->
+      <div hidden data-reference="price-sourcing">
       <section class="occ-panel">
           <details class="occ-fold">
           <summary>
@@ -1123,6 +1149,7 @@
           </p>
           </details>
       </section>
+      </div>
     <script>
       (function () {
         "use strict";
@@ -1527,8 +1554,7 @@
 
           /* ---- totals ---- */
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
-          var management = Math.max(0, num("occQMgmt"));
-          var totalMonthly = recurring + management;
+          var totalMonthly = recurring;
           var oneTime = domains * domFirst;
           var month1 = oneTime + totalMonthly;
           var year1 = oneTime + totalMonthly * 12;
@@ -1553,7 +1579,6 @@
           $("occEnrCost").textContent = usd2(costs.enr);
           $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
           $("occAutoCost").textContent = usd2(autoCost);
-          $("occMgmtCost").textContent = usd2(management);
           $("occToolsCost").textContent = usd2(recurring);
           $("occSteady").textContent = usd(totalMonthly);
           var bm = $("occBuilderMeta");
@@ -1638,9 +1663,7 @@
           /* ---- one-view card ---- */
           var pipeline = meetings * dealValue;
           $("occQCost").textContent = usd(totalMonthly);
-          $("occQCostSub").textContent = management > 0
-            ? usd(recurring) + " tools + " + usd(management) + " running it"
-            : "tools only, nothing for running it";
+          $("occQCostSub").textContent = "tools and infrastructure, your time not included";
           $("occQContacts").textContent = int(contactsMonth);
           $("occQSendsSub").textContent = int(sendsMonth) + " emails a month";
           $("occQReplies").textContent = replies < 10 ? replies.toFixed(1) : int(replies);
@@ -1650,7 +1673,7 @@
           $("occQPipeline").textContent = usd(pipeline);
           $("occQRevenue").textContent = usd(revenue);
           $("occQRoiSub").textContent =
-            totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x on spend" : "per month";
+            totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x on stack spend" : "per month";
           $("occQCPC").textContent = contactsMonth > 0 ? "$" + (totalMonthly / contactsMonth).toFixed(2) : "$0.00";
           $("occQCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
           $("occQROI").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
@@ -1724,14 +1747,6 @@
             fd.textContent =
               "First send " + fmt(firstSend) + ". Full volume " + fmt(fullVolume) + ".";
 
-          /* The warmup gap, stated in the one-view card rather than buried in a fold. */
-          var co = $("occQCallout");
-          if (co)
-            co.innerHTML =
-              "Nothing sends for the first <strong>" + warmup + " days</strong>. Your first email reaches " +
-              "a prospect on <strong>" + fmt(firstSend) + "</strong> and you hit full volume on <strong>" +
-              fmt(fullVolume) + "</strong>. You are paying from day one either way, which is why outbound " +
-              "gets judged a failure at week four.";
           $("occTimelineNote").textContent =
             " Starting today, your first email reaches a prospect on " + fmt(firstSend) +
             " and you reach full volume on " + fmt(fullVolume) +
@@ -1966,7 +1981,6 @@
             compute();
           });
         });
-        $("occQMgmt").addEventListener("input", compute);
 
         /* Boot */
         fillTldTable();
