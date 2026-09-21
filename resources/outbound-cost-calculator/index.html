@@ -2020,10 +2020,11 @@
           $("occGuarantee").hidden = state.run !== "mia";
           if (state.run === "mia") {
             $("occGuarantee").innerHTML =
-              "<strong>We guarantee the build, not your sales team.</strong> If the system is not sending at " +
-              "full volume with inbox placement above 90% by day 45, the " + usd(ourSetup) + " build fee is " +
-              "refunded. We will not promise you meetings, because meetings depend on your offer and your " +
-              "close rate, and we do not control either.";
+              "<strong>We guarantee the build, not your sales team.</strong> Within 45 days your inboxes are " +
+              "warmed up and sending at full speed, and more than nine in ten of your emails land in the " +
+              "inbox rather than in spam. If they do not, you get the " + usd(ourSetup) + " build fee back " +
+              "and keep the domains. We will not promise you meetings, because that depends on your offer " +
+              "and your sales team, and we do not control either.";
           }
 
           $("occQInfra").textContent =
