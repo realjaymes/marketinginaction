@@ -1922,9 +1922,12 @@
           var losing = dMonthly > 0 && dRevenue < dMonthly;
           $("occQRevenue").parentNode.classList.toggle("occ-loss", losing);
           $("occQROI").parentNode.classList.toggle("occ-loss", losing);
+          /* A rep has no throwaway domains, which is the point rather than a missing number. */
           $("occQInfra").textContent =
             int(dInboxes) + (dInboxes === 1 ? " inbox" : " inboxes") + " \u00B7 " +
-            int(dDomains) + (dDomains === 1 ? " domain" : " domains");
+            (state.run === "sdr"
+              ? "your company domain"
+              : int(dDomains) + (dDomains === 1 ? " domain" : " domains"));
 
           /* Push builder values back up to the quick card, unless it is being typed in. */
           MIRRORS.forEach(function (pair) {
