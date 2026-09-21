@@ -263,14 +263,14 @@
       .occ-runset { display: grid; gap: 12px; grid-template-columns: 1fr; margin-bottom: 12px; }
       @media (min-width: 560px) { .occ-runset { grid-template-columns: repeat(2, 1fr); } }
       .occ-runset[hidden] { display: none; }
-      @media (min-width: 860px) { .occ-runset[data-runset="self"] { grid-template-columns: repeat(3, 1fr); } }
+      @media (min-width: 860px) { .occ-runset[data-runset="self"], .occ-runset[data-runset="sdr"] { grid-template-columns: repeat(3, 1fr); } }
       .occ-runline {
         margin-bottom: 14px; font-size: 12.5px; line-height: 1.5; color: var(--text-secondary);
         text-align: center;
       }
       .occ-runline strong { color: var(--text); }
       .occ-risk {
-        margin-bottom: 14px; padding: 12px 14px; border-radius: 10px;
+        margin-top: 14px; padding: 12px 14px; border-radius: 10px;
         background: var(--bad-bg); border: 1px solid rgba(204, 0, 0, 0.25);
         font-size: 12.5px; line-height: 1.55; color: #7a0f0f;
       }
@@ -675,6 +675,11 @@
             <span class="occ-qnote">Fully loaded, in your own market.</span>
           </div>
           <div class="occ-qfield">
+            <label for="occRepTools">Tools they still need</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occRepTools" min="0" step="25" value="100" inputmode="decimal" /></div>
+            <span class="occ-qnote">One sequencer seat and a data source at their volume.</span>
+          </div>
+          <div class="occ-qfield">
             <label for="occDomainRev">Monthly revenue that needs email to land</label>
             <div class="occ-qin"><span>$</span><input type="number" id="occDomainRev" min="0" step="1000" value="0" inputmode="decimal" /></div>
             <span class="occ-qnote">Starts at what this system alone closes. Your real number, with invoices and renewals, is higher.</span>
@@ -690,7 +695,6 @@
         </div>
 
         <div class="occ-runline" id="occRunLine"></div>
-        <div class="occ-risk" id="occRisk" hidden></div>
 
         <div class="occ-funnel">
           <div class="occ-tile occ-tile--cost">
@@ -731,6 +735,8 @@
           <div class="occ-qrow occ-qrow--hi"><span id="occQROILab">Return on stack spend</span><strong id="occQROI">0x</strong></div>
           <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
         </div>
+
+        <div class="occ-risk" id="occRisk" hidden></div>
 
       </section>
 
@@ -1803,7 +1809,8 @@
             self: { monthly: recurring + selfTime, accounts: accounts, contacts: contactsMonth,
               sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
               inboxes: inboxes, domains: domains, hours: selfHoursMonth, ramp: selfRamp },
-            sdr: { monthly: Math.max(0, num("occRepCost")), accounts: repAccounts, contacts: repContacts,
+            sdr: { monthly: Math.max(0, num("occRepCost")) + Math.max(0, num("occRepTools")),
+              accounts: repAccounts, contacts: repContacts,
               sends: repSendsDay * workDays, sendsDay: repSendsDay, warm: repWarm, meetings: repMeetings,
               inboxes: repInboxes, domains: 0, hours: 4, ramp: 3 },
             mia: { monthly: Math.max(0, num("occMiaFee")), accounts: accounts, contacts: contactsMonth,
@@ -1845,12 +1852,12 @@
               " a month against <strong>" + int(accounts) + "</strong> here, at <strong>" +
               (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> a meeting against <strong>" +
               (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong>. Reaching even that assumes the ICP is already " +
-              "defined, the list is already built and verified, the sequence is already written and they have " +
-              "the tooling to send it. Done by hand, one person at a keyboard, it is a fraction of that. It " +
-              "also counts email alone, when a rep should be calling prospects, working LinkedIn and turning " +
-              "up at events. <strong>The system has to exist either way.</strong> Hiring only decides whether " +
-              "a salary sits on top of it, and whether the person you hired spends their week as your " +
-              "sending infrastructure.";
+              "defined, the list is already built and verified and the sequence is already written, and that " +
+              "they have a sequencer to send it, which is why their tooling is on the bill above. Done by " +
+              "hand it is a fraction of that. It also counts email alone, when a rep should be calling " +
+              "prospects, working LinkedIn and turning up at events. <strong>The system has to exist either " +
+              "way.</strong> Hiring only decides whether a salary sits on top of it, and whether the person " +
+              "you hired spends their week as your sending infrastructure.";
           } else {
             var ceilingRev = M.meetings * dealValue * (num("occCloseRate") / 100);
             var ceiling = ceilingRev / 3;
@@ -1872,14 +1879,14 @@
             var domainRev = Math.max(0, derived("occDomainRev", meetings * dealValue * (num("occCloseRate") / 100)));
             $("occRisk").hidden = false;
             $("occRisk").innerHTML =
-              "<strong>A rep sends cold from your company domain.</strong> Spam complaints land on the " +
-              "domain that also sends your invoices, contracts, renewals and password resets, and " +
-              "reputation takes around " + burnWeeks + " weeks to recover if it recovers at all. " +
+              "<strong>A rep sends cold from the domain your invoices, contracts and renewals go out on.</strong> " +
+              "Spam complaints land there, and reputation takes around " + burnWeeks + " weeks to recover if " +
+              "it recovers at all. " +
               (domainRev > 0
-                ? "At " + usd(domainRev) + " a month of revenue that needs email to land, that is <strong>" +
-                  usd((domainRev * burnWeeks) / 4.33) + "</strong> exposed. "
-                : "Put your monthly revenue that depends on email above to size that exposure. ") +
-              "The separate sending domains that prevent it cost " + usd2(domains * domRenew / 12) + " a month.";
+                ? "At " + usd(domainRev) + " a month riding on email, that is <strong>" +
+                  usd((domainRev * burnWeeks) / 4.33) + "</strong> exposed, against " +
+                  usd2(domains * domRenew / 12) + " a month for the separate sending domains that prevent it."
+                : "Put your monthly revenue that depends on email above to size that exposure.");
           } else {
             $("occRisk").hidden = true;
           }
@@ -1902,7 +1909,7 @@
           $("occQCost").textContent = usd(dMonthly);
           $("occQCostSub").textContent =
             state.run === "sdr"
-              ? "one rep, fully loaded, in your market"
+              ? usd(Math.max(0, num("occRepCost"))) + " of rep and " + usd(Math.max(0, num("occRepTools"))) + " of tools"
               : state.run === "mia"
               ? "all in, on infrastructure you keep"
               : usd(recurring) + " of tools and " + usd(selfTime) + " of your time";
@@ -2241,7 +2248,7 @@
             compute();
           });
         });
-        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occMiaFee"].forEach(
+        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occRepTools", "occMiaFee"].forEach(
           function (id) { $(id).addEventListener("input", compute); }
         );
         $("occDomainRev").addEventListener("input", function () {
