@@ -1044,7 +1044,8 @@
               <div class="occ-sub">Month one</div>
               <div class="occ-line"><span>One-time setup (domains)</span><strong id="occOneTime">$0</strong></div>
               <div class="occ-line" id="occSetupRow" hidden><span>Our one-time build and setup</span><strong id="occSetupCost">$0</strong></div>
-              <div class="occ-line"><span>Recurring, first month</span><strong id="occRec1">$0</strong></div>
+              <div class="occ-line"><span>Tools, first month</span><strong id="occRec1">$0</strong></div>
+              <div class="occ-line" id="occFee1Row" hidden><span>Our fee, first month</span><strong id="occFee1">$0</strong></div>
 
               <div class="occ-sub">Steady state, month two onward</div>
               <div class="occ-line occ-line--sub"><span id="occInboxLbl">Inboxes</span><strong id="occInboxCost">$0</strong></div>
@@ -1053,13 +1054,12 @@
               <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
-              <div class="occ-line occ-line--sub" id="occFeeRow" hidden><span>Our setup and management fee</span><strong id="occFeeCost">$0</strong></div>
+              <div class="occ-line occ-line--sub" id="occFeeRow" hidden><span>Our monthly fee</span><strong id="occFeeCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
               <div class="occ-line"><span>Full first year</span><strong id="occY1">$0</strong></div>
               <div class="occ-line"><span>Full second year</span><strong id="occY2">$0</strong></div>
-              <div class="occ-delta" id="occRotateDelta"></div>
             </div>
 
             <div class="occ-out">
@@ -1722,7 +1722,9 @@
 
           $("occM1").textContent = usd(month1);
           $("occOneTime").textContent = usd(domainSetup);
-          $("occRec1").textContent = usd(totalMonthly);
+          $("occRec1").textContent = usd(recurring);
+          $("occFee1Row").hidden = ourFee <= 0;
+          $("occFee1").textContent = usd2(ourFee);
           $("occInboxLbl").textContent = int(inboxes) + " inboxes";
           $("occInboxCost").textContent = usd2(inboxCost);
           $("occSeqLbl").textContent =
@@ -1753,26 +1755,6 @@
               " domains, " + seq.label.split(" (")[0] + ", and every price editable.";
           $("occY1").textContent = usd(year1);
           $("occY2").textContent = usd(year2);
-
-          /* Year-two delta: the whole reason the rotation toggle exists. */
-          var alt = domains * (rotate ? domRenew : domFirst) + totalMonthly * 12;
-          var diff = Math.abs(year2 - alt);
-          var tldName = $("occTld").value;
-          if (diff < 1) {
-            $("occRotateDelta").innerHTML =
-              "<strong>" + tldName + " renews at exactly its first-year price</strong>, so rotating and " +
-              "keeping cost the same in year two. The choice is purely a deliverability one here.";
-          } else if (year2 < alt) {
-            $("occRotateDelta").innerHTML =
-              "<strong>" + usd(diff) + " cheaper</strong> in year two than the other choice. With " +
-              tldName + " at " + usd2(domFirst) + " new and " + usd2(domRenew) + " to renew, across " +
-              int(domains) + " domains, " + (rotate ? "rotating" : "keeping") + " is the cheaper option.";
-          } else {
-            $("occRotateDelta").innerHTML =
-              "<strong>" + usd(diff) + " more expensive</strong> in year two than the other choice. " +
-              tldName + " costs " + usd2(domFirst) + " new and " + usd2(domRenew) + " to renew, so across " +
-              int(domains) + " domains you would save that by " + (rotate ? "keeping" : "rotating") + " instead.";
-          }
 
           /* ---- per-contact and funnel ---- */
           $("occContactsOut").textContent = int(contactsMonth);
