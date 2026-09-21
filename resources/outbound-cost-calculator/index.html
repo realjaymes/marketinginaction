@@ -87,9 +87,6 @@
       }
     </script>
 
-    <link rel="preconnect" href="https://api.fontshare.com" />
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="/styles.css" />
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
@@ -122,298 +119,474 @@
       gtag("config", "AW-17909542714");
     </script>
     <style>
-      /* ---- Outbound Cost Calculator (page-scoped, --occ-* namespace) ---- */
+      /* ============================================================
+         MIA CHROME — identical palette to /resources/paid-ads-playbook/
+         ============================================================ */
       :root {
-        --occ-ink: #100a16;
-        --occ-gold: #f1de71;
-        --occ-green: #2e7d4f;
-        --occ-red: #c0392b;
-        --occ-panel: #ffffff;
-        --occ-line: rgba(28, 20, 34, 0.12);
-        --occ-line-strong: rgba(28, 20, 34, 0.22);
-        --occ-soft: rgba(28, 20, 34, 0.04);
+        --mia-bg: #f7f4fa;
+        --mia-surface: #ffffff;
+        --mia-ink: #100a16;
+        --mia-ink-muted: rgba(28, 20, 34, 0.62);
+        --mia-accent: #f1de71;
+        --mia-border: rgba(28, 20, 34, 0.12);
+        --mia-shadow: 0 8px 30px rgba(28, 20, 34, 0.08);
+        --mia-radius: 14px;
+        --mia-radius-lg: 22px;
+        --mia-max: 1100px;
+
+        /* Tool palette, same shape as the playbook's inner tool */
+        --bg: #f0f2f5;
+        --card: #ffffff;
+        --text: #1c1e21;
+        --text-secondary: #65676b;
+        --border: #e4e6eb;
+        --good: #1a7f1a;
+        --good-bg: #e6f9e6;
+        --bad: #cc0000;
+
+        /* Accent switches per ICP preset, as the playbook switches per platform */
+        --occ-accent: #1a7f1a;
+        --occ-accent-bg: #e6f9e6;
       }
 
-      .occ-hero {
-        background: var(--occ-ink);
-        color: #f7f4fa;
-        padding: calc(var(--header-height) + 48px) 0 56px;
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--mia-bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.5;
       }
-      .occ-hero h1 { margin: 12px 0 14px; font-size: clamp(30px, 5.2vw, 52px); line-height: 1.08; color: #f7f4fa; }
-      .occ-hero h1 em { font-style: italic; color: var(--occ-gold); }
-      .occ-hero p { margin: 0; max-width: 62ch; font-size: clamp(15px, 2vw, 18px); color: rgba(247, 244, 250, 0.82); line-height: 1.6; }
-      .occ-pill {
-        display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
-        background: rgba(241, 222, 113, 0.14); border: 1px solid rgba(241, 222, 113, 0.4);
-        color: var(--occ-gold); font-size: 12.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
-      }
-      .occ-verified {
-        display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px;
-        padding: 9px 15px; border-radius: 999px; background: rgba(247, 244, 250, 0.08);
-        border: 1px solid rgba(247, 244, 250, 0.16); font-size: 13px; color: rgba(247, 244, 250, 0.9);
-      }
-      .occ-verified strong { color: var(--occ-gold); font-weight: 800; }
-      .occ-verified a { color: var(--occ-gold); text-decoration: underline; }
+      h1, h2, h3 { margin: 0; letter-spacing: -0.01em; }
+      a { color: inherit; }
 
-      .occ-wrap { padding: 56px 0 24px; }
-      .occ-grid { display: grid; gap: 28px; align-items: start; }
-      @media (min-width: 1000px) { .occ-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 34px; } }
-
-      .occ-card {
-        background: var(--occ-panel); border: 1px solid var(--occ-line);
-        border-radius: var(--radius-lg); padding: 22px; margin-bottom: 18px; box-shadow: var(--shadow);
+      /* ---------- top bar ---------- */
+      .mia-topbar {
+        background: var(--mia-surface);
+        border-bottom: 1px solid var(--mia-border);
+        padding: 14px 0;
+        position: sticky;
+        top: 0;
+        z-index: 50;
       }
-      @media (min-width: 560px) { .occ-card { padding: 26px 28px; } }
-      .occ-card > h2 { margin: 0 0 4px; font-size: 19px; line-height: 1.25; }
-      .occ-step { display: block; font-size: 11.5px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
-      .occ-card > p.occ-lede { margin: 0 0 18px; font-size: 13.5px; color: var(--text-muted); line-height: 1.55; }
+      .mia-topbar-inner {
+        max-width: var(--mia-max); margin: 0 auto; padding: 0 24px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      }
+      .mia-logo { display: inline-flex; align-items: center; color: var(--mia-ink); text-decoration: none; }
+      .mia-logo-img { height: 28px; width: auto; display: block; }
+      .mia-topbar-cta {
+        display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px;
+        background: var(--mia-ink); color: #fff; text-decoration: none; font-size: 13px; font-weight: 600;
+        transition: opacity 0.2s, transform 0.2s; white-space: nowrap;
+      }
+      .mia-topbar-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+      @media (max-width: 640px) {
+        .mia-logo-img { height: 24px; }
+        .mia-topbar-inner { padding: 0 16px; }
+        .mia-topbar-cta { font-size: 12px; padding: 7px 13px; }
+      }
 
-      .occ-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+      /* ---------- hero ---------- */
+      .mia-hero {
+        background: linear-gradient(180deg, var(--mia-bg) 0%, var(--mia-surface) 100%);
+        padding: 52px 24px 36px;
+      }
+      .mia-hero-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+      .mia-eyebrow {
+        display: inline-block; padding: 5px 13px; border-radius: 999px;
+        background: var(--mia-accent); color: var(--mia-ink);
+        font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+      }
+      .mia-hero h1 {
+        margin: 16px 0 12px; font-size: clamp(27px, 4.6vw, 42px); font-weight: 800;
+        line-height: 1.12; color: var(--mia-ink);
+      }
+      .mia-hero p { margin: 0 auto; max-width: 60ch; font-size: 16px; color: var(--mia-ink-muted); line-height: 1.55; }
+      .mia-verified {
+        display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+        margin-top: 18px; padding: 7px 14px; border-radius: 999px;
+        background: var(--mia-surface); border: 1px solid var(--mia-border);
+        font-size: 12.5px; color: var(--mia-ink-muted);
+      }
+      .mia-verified strong { color: var(--mia-ink); font-weight: 700; }
+      @media (max-width: 640px) { .mia-hero { padding: 36px 18px 26px; } }
+
+      /* ---------- shell ---------- */
+      .occ-shell { max-width: var(--mia-max); margin: 26px auto 0; padding: 0 24px 40px; }
+      @media (max-width: 640px) { .occ-shell { padding: 0 14px 28px; margin-top: 18px; } }
+
+      .occ-panel {
+        background: var(--card); border: 1px solid var(--mia-border);
+        border-radius: var(--mia-radius-lg); box-shadow: var(--mia-shadow);
+        padding: 26px 24px; margin-bottom: 16px;
+      }
+      @media (max-width: 640px) { .occ-panel { padding: 20px 16px; } }
+
+      /* ---------- one-view card ---------- */
+      .occ-qhead { text-align: center; margin-bottom: 20px; }
+      .occ-qhead h2 { font-size: clamp(20px, 3vw, 26px); font-weight: 800; color: var(--mia-ink); }
+      .occ-qhead p { margin: 8px auto 0; max-width: 56ch; font-size: 14px; color: var(--text-secondary); }
+
+      .occ-icp { display: grid; gap: 8px; margin-bottom: 18px; }
+      @media (min-width: 620px) { .occ-icp { grid-template-columns: repeat(3, 1fr); } }
+      .occ-icp button {
+        border: 1.5px solid var(--border); background: var(--bg); border-radius: 10px;
+        padding: 10px 12px; font-family: inherit; font-size: 13.5px; font-weight: 700;
+        color: var(--text-secondary); cursor: pointer; transition: all 0.16s;
+      }
+      .occ-icp button:hover { border-color: var(--text-secondary); color: var(--text); }
+      .occ-icp button[aria-pressed="true"] {
+        background: var(--occ-accent); border-color: var(--occ-accent); color: #fff;
+      }
+
+      .occ-qgrid { display: grid; gap: 14px; margin-bottom: 22px; }
+      @media (min-width: 560px) { .occ-qgrid { grid-template-columns: 1fr 1fr; } }
+      @media (min-width: 900px) { .occ-qgrid { grid-template-columns: repeat(4, 1fr); } }
+      .occ-qslider { grid-column: 1 / -1; }
+      .occ-qlab { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 7px; }
+      .occ-qlab span:first-child { font-size: 12.5px; font-weight: 700; color: var(--text); }
+      .occ-qlab strong { font-size: 18px; font-weight: 800; color: var(--occ-accent); font-variant-numeric: tabular-nums; }
+      input[type="range"].occ-range { width: 100%; accent-color: var(--occ-accent); height: 6px; cursor: pointer; }
+      .occ-qrange { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-secondary); margin-top: 4px; }
+      .occ-qfield label { display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+      .occ-qin {
+        display: flex; align-items: center; border: 1.5px solid var(--border);
+        border-radius: 10px; padding: 0 11px; background: var(--bg); transition: border-color 0.16s;
+      }
+      .occ-qin:focus-within { border-color: var(--occ-accent); background: #fff; }
+      .occ-qin span { font-size: 13.5px; font-weight: 700; color: var(--text-secondary); flex: 0 0 auto; }
+      .occ-qin input {
+        border: 0; background: transparent; padding: 9px 3px; font-family: inherit; font-size: 15px;
+        font-weight: 800; color: var(--text); width: 100%; min-width: 0; flex: 1 1 auto;
+      }
+      .occ-qin input:focus { outline: none; }
+      .occ-qnote { display: block; margin-top: 5px; font-size: 11px; color: var(--text-secondary); line-height: 1.4; }
+
+      /* ---------- the funnel strip ---------- */
+      .occ-funnel {
+        display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
+        background: var(--border); border: 1px solid var(--border);
+        border-radius: var(--mia-radius); overflow: hidden;
+      }
+      @media (min-width: 720px) { .occ-funnel { grid-template-columns: repeat(6, 1fr); } }
+      .occ-tile { background: var(--card); padding: 15px 12px; text-align: center; }
+      .occ-tile--cost { background: var(--mia-ink); }
+      .occ-tile--cost .occ-tval { color: var(--mia-accent); }
+      .occ-tile--cost .occ-tlab { color: rgba(247, 244, 250, 0.7); }
+      .occ-tile--rev { background: var(--occ-accent-bg); }
+      .occ-tile--rev .occ-tval { color: var(--occ-accent); }
+      .occ-tval {
+        display: block; font-size: clamp(19px, 3.4vw, 25px); font-weight: 800; line-height: 1.1;
+        color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
+      }
+      .occ-tlab {
+        display: block; margin-top: 5px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.05em;
+        text-transform: uppercase; color: var(--text-secondary); line-height: 1.3;
+      }
+      .occ-tsub { display: block; margin-top: 3px; font-size: 10.5px; color: var(--text-secondary); }
+      .occ-tile--cost .occ-tsub { color: rgba(247, 244, 250, 0.5); }
+
+      /* ---------- key rows under the funnel ---------- */
+      .occ-qrows { display: grid; gap: 1px; margin-top: 16px; background: var(--border); border: 1px solid var(--border); border-radius: var(--mia-radius); overflow: hidden; }
+      @media (min-width: 640px) { .occ-qrows { grid-template-columns: repeat(2, 1fr); } }
+      .occ-qrow { background: var(--card); display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 11px 14px; font-size: 13px; }
+      .occ-qrow span { color: var(--text-secondary); }
+      .occ-qrow strong { font-weight: 800; color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
+      .occ-qrow--hi strong { color: var(--occ-accent); }
+
+      .occ-callout {
+        margin-top: 16px; padding: 14px 16px; border-radius: var(--mia-radius);
+        background: var(--occ-accent-bg); border-left: 3px solid var(--occ-accent);
+        font-size: 13px; line-height: 1.55; color: var(--text);
+      }
+      .occ-callout strong { color: var(--occ-accent); font-weight: 800; }
+
+      /* ---------- collapsible sections ---------- */
+      .occ-fold > summary { list-style: none; cursor: pointer; display: block; padding: 2px 34px 2px 0; position: relative; }
+      .occ-fold > summary::-webkit-details-marker { display: none; }
+      .occ-fold > summary::after {
+        content: ""; position: absolute; right: 4px; top: 11px; width: 9px; height: 9px;
+        border-right: 2.5px solid var(--text-secondary); border-bottom: 2.5px solid var(--text-secondary);
+        transform: rotate(45deg); transition: transform 0.18s;
+      }
+      .occ-fold[open] > summary::after { transform: rotate(-135deg); top: 15px; }
+      .occ-fold > summary:hover .occ-foldtitle { color: var(--occ-accent); }
+      .occ-foldlead { display: block; font-size: 11px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 5px; }
+      .occ-foldtitle { display: block; font-size: 17.5px; font-weight: 800; line-height: 1.25; color: var(--mia-ink); transition: color 0.16s; }
+      .occ-foldmeta { display: block; margin-top: 5px; font-size: 12.5px; color: var(--text-secondary); line-height: 1.5; }
+
+      /* ---------- builder (inside its fold) ---------- */
+      .occ-builder { display: grid; gap: 20px; margin-top: 22px; align-items: start; }
+      @media (min-width: 1000px) { .occ-builder { grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 26px; } }
+
+      .occ-card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--mia-radius); padding: 20px; margin-bottom: 14px; }
+      .occ-card > h2 { font-size: 17px; margin-bottom: 4px; color: var(--mia-ink); }
+      .occ-step { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 7px; }
+      .occ-card > p.occ-lede { margin: 0 0 16px; font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
+
+      .occ-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 16px; }
       .occ-seg button {
-        border: 1.5px solid var(--occ-line); background: var(--bg-page); border-radius: 12px; padding: 11px 10px;
-        font-family: inherit; font-size: 13.5px; font-weight: 800; color: var(--text-muted); cursor: pointer; transition: var(--ease);
+        border: 1.5px solid var(--border); background: var(--card); border-radius: 9px; padding: 10px 8px;
+        font-family: inherit; font-size: 13px; font-weight: 700; color: var(--text-secondary); cursor: pointer; transition: all 0.16s;
       }
-      .occ-seg button:hover { border-color: var(--occ-line-strong); color: var(--text-primary); }
-      .occ-seg button[aria-pressed="true"] { background: var(--occ-ink); border-color: var(--occ-ink); color: var(--occ-gold); }
+      .occ-seg button:hover { border-color: var(--text-secondary); color: var(--text); }
+      .occ-seg button[aria-pressed="true"] { background: var(--mia-ink); border-color: var(--mia-ink); color: var(--mia-accent); }
 
-      .occ-presets { display: grid; gap: 10px; }
+      .occ-presets { display: grid; gap: 9px; }
       @media (min-width: 640px) { .occ-presets { grid-template-columns: repeat(3, 1fr); } }
-      .occ-preset {
-        text-align: left; border: 1.5px solid var(--occ-line); background: var(--bg-page); border-radius: 14px;
-        padding: 14px; font-family: inherit; cursor: pointer; transition: var(--ease); color: var(--text-primary);
-      }
-      .occ-preset:hover { border-color: var(--occ-line-strong); }
-      .occ-preset[aria-pressed="true"] { border-color: var(--occ-ink); background: #fff; box-shadow: 0 0 0 3px rgba(241, 222, 113, 0.5); }
-      .occ-preset strong { display: block; font-size: 14px; margin-bottom: 5px; }
-      .occ-preset span { display: block; font-size: 12px; color: var(--text-muted); line-height: 1.45; }
+      .occ-preset { text-align: left; border: 1.5px solid var(--border); background: var(--card); border-radius: 11px; padding: 13px; font-family: inherit; cursor: pointer; transition: all 0.16s; color: var(--text); }
+      .occ-preset:hover { border-color: var(--text-secondary); }
+      .occ-preset[aria-pressed="true"] { border-color: var(--occ-accent); box-shadow: 0 0 0 2px var(--occ-accent-bg); }
+      .occ-preset strong { display: block; font-size: 13.5px; margin-bottom: 4px; }
+      .occ-preset span { display: block; font-size: 11.5px; color: var(--text-secondary); line-height: 1.45; }
 
-      .occ-fields { display: grid; gap: 14px; }
+      .occ-fields { display: grid; gap: 13px; }
       @media (min-width: 520px) { .occ-fields.occ-2 { grid-template-columns: 1fr 1fr; } }
-      .occ-field label { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; font-size: 12.5px; font-weight: 800; margin-bottom: 6px; }
-      .occ-field .occ-help { display: block; font-size: 11.5px; color: var(--text-muted); margin-top: 6px; line-height: 1.45; font-weight: 400; }
-      .occ-inp {
-        display: flex; align-items: center; gap: 4px; border: 1.5px solid var(--occ-line); border-radius: 11px;
-        padding: 0 12px; background: var(--bg-page); transition: var(--ease);
-      }
-      .occ-inp:focus-within { border-color: var(--occ-ink); background: #fff; }
-      .occ-inp span { color: var(--text-muted); font-weight: 800; font-size: 14px; flex-shrink: 0; }
+      .occ-field label { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 12px; font-weight: 700; margin-bottom: 5px; }
+      .occ-field .occ-help { display: block; font-size: 11px; color: var(--text-secondary); margin-top: 5px; line-height: 1.45; font-weight: 400; }
+      .occ-inp { display: flex; align-items: center; gap: 3px; border: 1.5px solid var(--border); border-radius: 9px; padding: 0 11px; background: var(--card); transition: border-color 0.16s; }
+      .occ-inp:focus-within { border-color: var(--occ-accent); }
+      .occ-inp span { color: var(--text-secondary); font-weight: 700; font-size: 13.5px; flex-shrink: 0; }
       .occ-inp input, .occ-inp select {
-        border: 0; background: transparent; padding: 10px 2px; font-family: inherit; font-size: 15.5px;
-        font-weight: 800; color: var(--occ-ink); width: 100%; min-width: 0; flex: 1 1 auto;
-        -moz-appearance: textfield;
+        border: 0; background: transparent; padding: 9px 2px; font-family: inherit; font-size: 14.5px;
+        font-weight: 800; color: var(--text); width: 100%; min-width: 0; flex: 1 1 auto; -moz-appearance: textfield;
       }
       .occ-inp input:focus, .occ-inp select:focus { outline: none; }
-      .occ-inp select { cursor: pointer; padding-right: 4px; }
+      .occ-inp select { cursor: pointer; }
       .occ-inp--auto { border-style: dashed; }
-      .occ-inp--auto input { color: var(--text-muted); }
-      .occ-inp--edited { border-style: solid; border-color: var(--occ-ink); }
-      .occ-inp--edited input { color: var(--occ-ink); }
+      .occ-inp--auto input { color: var(--text-secondary); }
+      .occ-inp--edited { border-style: solid; border-color: var(--occ-accent); }
+      .occ-inp--edited input { color: var(--text); }
 
-      .occ-tag {
-        font-size: 9.5px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
-        padding: 3px 7px; border-radius: 5px; background: var(--occ-soft); color: var(--text-muted);
-      }
-      .occ-tag--edited { background: var(--occ-gold); color: var(--occ-ink); }
-      .occ-tag--opt { background: rgba(113, 132, 241, 0.16); color: #4b52b8; }
+      .occ-tag { font-size: 9px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; padding: 3px 6px; border-radius: 4px; background: var(--border); color: var(--text-secondary); }
+      .occ-tag--edited { background: var(--occ-accent); color: #fff; }
+      .occ-tag--opt { background: #eef0ff; color: #4b52b8; }
 
-      .occ-toggle { display: flex; align-items: flex-start; gap: 11px; padding: 13px 0; border-top: 1px solid var(--occ-line); }
+      .occ-toggle { display: flex; align-items: flex-start; gap: 10px; padding: 12px 0; border-top: 1px solid var(--border); }
       .occ-toggle:first-of-type { border-top: 0; }
-      .occ-toggle input { margin: 3px 0 0; width: 17px; height: 17px; flex-shrink: 0; accent-color: var(--occ-ink); cursor: pointer; }
-      .occ-toggle label { font-size: 13.5px; font-weight: 800; cursor: pointer; line-height: 1.4; }
-      .occ-toggle .occ-help { font-size: 11.5px; color: var(--text-muted); font-weight: 400; margin-top: 4px; line-height: 1.5; display: block; }
+      .occ-toggle input { margin: 3px 0 0; width: 16px; height: 16px; flex-shrink: 0; accent-color: var(--occ-accent); cursor: pointer; }
+      .occ-toggle label { font-size: 13px; font-weight: 700; cursor: pointer; line-height: 1.4; }
+      .occ-toggle .occ-help { font-size: 11px; color: var(--text-secondary); font-weight: 400; margin-top: 4px; line-height: 1.5; display: block; }
       .occ-toggle-body { min-width: 0; flex: 1; }
-      .occ-toggle-price { margin-top: 10px; max-width: 260px; }
+      .occ-toggle-price { margin-top: 9px; max-width: 250px; }
 
-      .occ-note {
-        margin: 16px 0 0; padding: 13px 15px; border-radius: 12px; background: rgba(241, 222, 113, 0.18);
-        border-left: 3px solid var(--occ-gold); font-size: 12.5px; line-height: 1.55; color: var(--text-primary);
-      }
-      .occ-note strong { font-weight: 900; }
+      .occ-note { margin: 15px 0 0; padding: 12px 14px; border-radius: 10px; background: var(--occ-accent-bg); border-left: 3px solid var(--occ-accent); font-size: 12px; line-height: 1.55; color: var(--text); }
+      .occ-reset { display: inline-flex; align-items: center; gap: 5px; background: none; border: 0; font-family: inherit; font-size: 12px; font-weight: 700; color: var(--text-secondary); text-decoration: underline; cursor: pointer; padding: 0; }
+      .occ-reset:hover { color: var(--occ-accent); }
+      .occ-cardfoot { display: flex; justify-content: flex-end; margin-top: 14px; }
 
-      .occ-reset {
-        display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: none; border: 0;
-        font-family: inherit; font-size: 12.5px; font-weight: 800; color: var(--text-muted);
-        text-decoration: underline; cursor: pointer; padding: 0;
-      }
-      .occ-reset:hover { color: var(--occ-ink); }
-
-      /* ---- results ---- */
-      .occ-results { position: sticky; top: calc(var(--header-height) + 14px); }
+      /* ---------- detailed breakdown panel ---------- */
+      .occ-results { position: sticky; top: 86px; }
       @media (max-width: 999px) { .occ-results { position: static; } }
-      .occ-out {
-        background: var(--occ-ink); color: #f7f4fa; border-radius: var(--radius-lg); padding: 24px 22px; margin-bottom: 18px;
-      }
-      @media (min-width: 560px) { .occ-out { padding: 28px; } }
-      .occ-out h2 { margin: 0 0 18px; font-size: 18px; color: #fff; }
-      .occ-headline { text-align: center; padding: 18px 0 20px; border-bottom: 1px solid rgba(247, 244, 250, 0.16); margin-bottom: 4px; }
-      .occ-headline .occ-big { display: block; font-size: clamp(38px, 8vw, 54px); font-weight: 900; color: var(--occ-gold); line-height: 1; letter-spacing: -0.02em; }
-      .occ-headline .occ-cap { display: block; margin-top: 8px; font-size: 13px; color: rgba(247, 244, 250, 0.72); }
-      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-bottom: 1px solid rgba(247, 244, 250, 0.1); font-size: 13.5px; }
-      .occ-line span { color: rgba(247, 244, 250, 0.72); min-width: 0; }
-      .occ-line strong { font-weight: 800; color: #fff; white-space: nowrap; }
-      .occ-line--sub span, .occ-line--sub strong { font-size: 12.5px; color: rgba(247, 244, 250, 0.55); font-weight: 600; }
-      .occ-line--sub strong { font-weight: 700; }
-      .occ-line--key { padding: 13px 0; border-bottom: 0; border-top: 1px solid rgba(247, 244, 250, 0.22); margin-top: 4px; }
-      .occ-line--key span { color: #fff; font-weight: 800; font-size: 14px; }
-      .occ-line--key strong { color: var(--occ-gold); font-size: 19px; }
-      .occ-sub { margin: 18px 0 8px; font-size: 11px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(241, 222, 113, 0.75); }
+      .occ-out { background: var(--mia-ink); color: #f7f4fa; border-radius: var(--mia-radius); padding: 22px 20px; margin-bottom: 14px; }
+      .occ-out h2 { margin: 0 0 16px; font-size: 16px; color: #fff; }
+      .occ-headline { text-align: center; padding: 14px 0 17px; border-bottom: 1px solid rgba(247, 244, 250, 0.16); margin-bottom: 4px; }
+      .occ-headline .occ-big { display: block; font-size: clamp(32px, 7vw, 44px); font-weight: 800; color: var(--mia-accent); line-height: 1; letter-spacing: -0.02em; }
+      .occ-headline .occ-cap { display: block; margin-top: 7px; font-size: 12.5px; color: rgba(247, 244, 250, 0.7); }
+      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 11px; padding: 8px 0; border-bottom: 1px solid rgba(247, 244, 250, 0.1); font-size: 13px; }
+      .occ-line span { color: rgba(247, 244, 250, 0.7); min-width: 0; }
+      .occ-line strong { font-weight: 700; color: #fff; white-space: nowrap; font-variant-numeric: tabular-nums; }
+      .occ-line--sub span, .occ-line--sub strong { font-size: 12px; color: rgba(247, 244, 250, 0.55); }
+      .occ-line--key { padding: 12px 0; border-bottom: 0; border-top: 1px solid rgba(247, 244, 250, 0.22); margin-top: 4px; }
+      .occ-line--key span { color: #fff; font-weight: 700; font-size: 13.5px; }
+      .occ-line--key strong { color: var(--mia-accent); font-size: 18px; font-weight: 800; }
+      .occ-sub { margin: 16px 0 7px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(241, 222, 113, 0.75); }
+      .occ-delta { margin-top: 13px; padding: 12px 14px; border-radius: 10px; font-size: 12px; line-height: 1.55; background: rgba(241, 222, 113, 0.13); border: 1px solid rgba(241, 222, 113, 0.3); color: rgba(247, 244, 250, 0.92); }
+      .occ-delta strong { color: var(--mia-accent); }
 
-      .occ-delta {
-        margin-top: 14px; padding: 13px 15px; border-radius: 12px; font-size: 12.5px; line-height: 1.55;
-        background: rgba(241, 222, 113, 0.14); border: 1px solid rgba(241, 222, 113, 0.32); color: rgba(247, 244, 250, 0.92);
-      }
-      .occ-delta strong { color: var(--occ-gold); }
-
-      /* ---- timeline ---- */
-      .occ-time { display: grid; gap: 0; margin: 18px 0 0; }
-      .occ-tstep { display: grid; grid-template-columns: 22px 1fr; gap: 14px; }
+      /* ---------- timeline ---------- */
+      .occ-time { display: grid; margin: 16px 0 0; }
+      .occ-tstep { display: grid; grid-template-columns: 22px 1fr; gap: 13px; }
       .occ-trail { position: relative; display: flex; justify-content: center; }
-      .occ-trail::before { content: ""; position: absolute; top: 4px; bottom: -4px; width: 2px; background: var(--occ-line); }
+      .occ-trail::before { content: ""; position: absolute; top: 4px; bottom: -4px; width: 2px; background: var(--border); }
       .occ-tstep:last-child .occ-trail::before { display: none; }
-      .occ-dot { position: relative; width: 12px; height: 12px; border-radius: 50%; background: var(--occ-line-strong); margin-top: 4px; }
-      .occ-tstep--live .occ-dot { background: var(--occ-green); box-shadow: 0 0 0 4px rgba(46, 125, 79, 0.16); }
-      .occ-tstep--dead .occ-dot { background: var(--occ-red); box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.12); }
-      .occ-tbody { padding-bottom: 20px; min-width: 0; }
-      .occ-tdate { font-size: 12px; font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: var(--occ-ink); }
-      .occ-tstep--dead .occ-tdate { color: var(--occ-red); }
-      .occ-tstep--live .occ-tdate { color: var(--occ-green); }
-      .occ-ttitle { margin: 3px 0 4px; font-size: 14.5px; font-weight: 800; }
-      .occ-tnote { margin: 0; font-size: 12.5px; color: var(--text-muted); line-height: 1.55; }
+      .occ-dot { position: relative; width: 11px; height: 11px; border-radius: 50%; background: var(--border); margin-top: 4px; }
+      .occ-tstep--live .occ-dot { background: var(--good); box-shadow: 0 0 0 4px var(--good-bg); }
+      .occ-tstep--dead .occ-dot { background: var(--bad); box-shadow: 0 0 0 4px #ffe6e6; }
+      .occ-tbody { padding-bottom: 18px; min-width: 0; }
+      .occ-tdate { font-size: 11.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase; color: var(--text); }
+      .occ-tstep--dead .occ-tdate { color: var(--bad); }
+      .occ-tstep--live .occ-tdate { color: var(--good); }
+      .occ-ttitle { margin: 3px 0 4px; font-size: 14px; font-weight: 800; }
+      .occ-tnote { margin: 0; font-size: 12px; color: var(--text-secondary); line-height: 1.55; }
 
-      /* ---- sources table ---- */
-      .occ-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 18px; }
-      .occ-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 520px; }
-      .occ-table th, .occ-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--occ-line); vertical-align: top; }
-      .occ-table th { font-size: 11px; font-weight: 900; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
-      .occ-table td strong { font-weight: 800; }
+      /* ---------- tables ---------- */
+      .occ-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 16px; }
+      .occ-table { width: 100%; border-collapse: collapse; font-size: 12.5px; min-width: 520px; }
+      .occ-table th, .occ-table td { text-align: left; padding: 9px 11px; border-bottom: 1px solid var(--border); vertical-align: top; }
+      .occ-table th { font-size: 10.5px; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-secondary); white-space: nowrap; }
       .occ-table tbody tr:last-child td { border-bottom: 0; }
-      .occ-table a { color: #2f6fb3; text-decoration: underline; }
+      .occ-table a { color: #1877f2; text-decoration: underline; }
       .occ-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
-      .occ-up { color: var(--occ-red); font-weight: 800; }
-      .occ-flat { color: var(--occ-green); font-weight: 800; }
+      .occ-up { color: var(--bad); font-weight: 700; }
+      .occ-flat { color: var(--good); font-weight: 700; }
+      .occ-foot { margin: 20px 0 0; font-size: 11.5px; color: var(--text-secondary); line-height: 1.6; }
+      .occ-foot a { color: #1877f2; text-decoration: underline; }
 
-      /* ---- collapsible sections ---- */
-      .occ-fold summary {
-        list-style: none; cursor: pointer; display: block; padding: 2px 34px 2px 0; position: relative;
+      /* ---------- footer CTA ---------- */
+      .mia-footer-cta { background: var(--mia-ink); color: #fff; padding: 64px 24px; text-align: center; margin-top: 32px; }
+      .mia-footer-cta-inner { max-width: 720px; margin: 0 auto; }
+      .mia-footer-cta h2 { font-size: clamp(25px, 4vw, 37px); font-weight: 800; margin: 0 0 14px; }
+      .mia-footer-cta p { color: rgba(255, 255, 255, 0.78); font-size: 16px; line-height: 1.55; margin: 0 0 24px; }
+      .mia-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+      .mia-btn {
+        display: inline-flex; align-items: center; gap: 7px; padding: 13px 24px; border-radius: 999px;
+        font-size: 15px; font-weight: 700; text-decoration: none; border: 1.5px solid transparent;
+        transition: opacity 0.2s, transform 0.2s, background 0.2s, color 0.2s;
       }
-      .occ-fold summary::-webkit-details-marker { display: none; }
-      .occ-fold summary::after {
-        content: ""; position: absolute; right: 4px; top: 12px; width: 9px; height: 9px;
-        border-right: 2.5px solid var(--text-muted); border-bottom: 2.5px solid var(--text-muted);
-        transform: rotate(45deg); transition: transform var(--ease);
+      .mia-btn-primary { background: var(--mia-accent); color: var(--mia-ink); }
+      .mia-btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+      .mia-btn-secondary { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
+      .mia-btn-secondary:hover { background: #fff; color: var(--mia-ink); }
+      @media (max-width: 640px) {
+        .mia-footer-cta { padding: 44px 18px; }
+        .mia-hero-actions { flex-direction: column; align-items: stretch; }
+        .mia-btn { justify-content: center; }
       }
-      .occ-fold[open] summary::after { transform: rotate(-135deg); top: 16px; }
-      .occ-fold summary:hover .occ-foldtitle { text-decoration: underline; }
-      .occ-foldlead { display: block; font-size: 11.5px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 6px; }
-      .occ-foldtitle { display: block; font-size: 19px; font-weight: 800; line-height: 1.25; }
-      .occ-foldmeta { display: block; margin-top: 5px; font-size: 12.5px; color: var(--text-muted); line-height: 1.5; }
-
-      /* ---- per-step reset ---- */
-      .occ-cardfoot { display: flex; justify-content: flex-end; margin-top: 16px; }
-      .occ-cardfoot .occ-reset { margin-top: 0; }
-
-      /* ---- CTA ---- */
-      .occ-cta { background: var(--occ-ink); color: #f7f4fa; border-radius: var(--radius-lg); padding: 34px 24px; text-align: center; }
-      @media (min-width: 640px) { .occ-cta { padding: 48px 40px; } }
-      .occ-cta h2 { margin: 0 0 12px; color: #fff; font-size: clamp(22px, 3.4vw, 32px); }
-      .occ-cta h2 em { font-style: italic; color: var(--occ-gold); }
-      .occ-cta p { margin: 0 auto 22px; max-width: 58ch; color: rgba(247, 244, 250, 0.8); font-size: 15px; line-height: 1.6; }
-      .occ-cta-actions { display: flex; flex-wrap: wrap; gap: 12px 18px; align-items: center; justify-content: center; }
-      .occ-cta-secondary {
-        color: rgba(247, 244, 250, 0.82); font-weight: 700; font-size: 14.5px;
-        text-decoration: underline; text-underline-offset: 3px;
-      }
-      .occ-cta-secondary:hover { color: var(--occ-gold); }
-
-      .occ-foot { margin: 34px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
-      .occ-foot a { color: #2f6fb3; text-decoration: underline; }
 
       @media print {
-        header, footer, .occ-cta, .menu-button { display: none !important; }
+        .mia-topbar, .mia-footer-cta { display: none !important; }
         .occ-results { position: static; }
+        .occ-panel { box-shadow: none; }
       }
     </style>
   </head>
-  <body class="resources-page">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript>
-      <iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27"
-        height="0"
-        width="0"
-        style="display: none; visibility: hidden"
-      ></iframe>
-    </noscript>
-    <!-- End Google Tag Manager (noscript) -->
+  <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <!-- Header -->
-    <header>
-      <div class="container nav">
-        <a class="logo" href="/" aria-label="Marketing In Action Home">
-          <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
+    <header class="mia-topbar">
+      <div class="mia-topbar-inner">
+        <a href="/resources/" class="mia-logo" aria-label="Marketing In Action &mdash; back to resources">
+          <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="mia-logo-img" />
         </a>
-
-        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
-          <span class="menu-icon" aria-hidden="true"></span>
-        </button>
-
-        <nav id="primary-nav" class="nav-links" aria-label="Primary">
-          <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a>
-          <div class="nav-dropdown">
-            <button class="nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
-              MIA Academy
-              <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="nav-dropdown-menu" role="menu">
-              <a href="/academy/" role="menuitem">For Marketers in Tech</a>
-              <a href="/academy/sme/" role="menuitem">For SME Business Owners</a>
-              <a href="/academy/corporate/" role="menuitem">For Corporate</a>
-            </div>
-          </div>
-          <a href="/resources/" aria-current="page">MIA Resources</a>
-          <a href="/jobs/">MIA Jobs</a>
-          <!--
-          <a href="/events/">MIA Events</a>
-          -->
-          <div class="nav-dropdown">
-            <button class="nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
-              MIA Services
-              <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </button>
-            <div class="nav-dropdown-menu" role="menu">
-              <a href="/services/" role="menuitem">Services Overview</a>
-              <a href="/consulting/" role="menuitem">Go-To-Market Systems</a>
-              <a href="/acquisition/" role="menuitem">Paid Acquisition</a>
-            </div>
-          </div>
-        </nav>
+        <a
+          href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=topbar"
+          class="mia-topbar-cta"
+          data-cta="topbar"
+          >Book a free strategy call &rarr;</a
+        >
       </div>
     </header>
-    <section class="occ-hero">
-      <div class="container">
-        <span class="occ-pill"><span class="dot"></span> Free Tool</span>
-        <h1>What a cold outbound system <em>actually costs</em>.</h1>
+
+    <section class="mia-hero">
+      <div class="mia-hero-inner">
+        <span class="mia-eyebrow">Free Tool</span>
+        <h1>What a cold outbound system actually costs, and what it returns.</h1>
         <p>
-          Most outbound budgets are built backwards, starting from a tool list. Send volume is what
-          drives everything: it sets your inbox count, your inbox count sets your domain count, and your
-          contact volume sets your verification and enrichment spend. Enter one number below and the whole
-          stack prices itself. Every figure stays editable, because your rates are not the list rates.
+          Send volume drives everything. Set yours below and the whole stack prices itself, all the way
+          through to pipeline and closed revenue. Every figure stays editable, because your rates are not
+          the list rates.
         </p>
-        <div class="occ-verified">
+        <div class="mia-verified">
           <strong>Prices verified 21 September 2026.</strong>
-          <span>Sources listed in full at the bottom of this page.</span>
+          <span>Sources at the bottom of the page.</span>
         </div>
       </div>
     </section>
 
-    <section class="occ-wrap">
-      <div class="container">
-        <div class="occ-grid">
-          <!-- ============ INPUTS ============ -->
+    <main class="occ-shell">
+      <!-- ================= ONE-VIEW CARD ================= -->
+      <section class="occ-panel">
+        <div class="occ-qhead">
+          <h2>Your outbound system, in one view</h2>
+          <p>Four numbers in, the whole funnel out. Cost, contacts, replies, meetings, pipeline, revenue.</p>
+        </div>
+
+        <div class="occ-icp" role="group" aria-label="Who you are targeting">
+          <button type="button" data-preset="local" aria-pressed="true">Local service businesses</button>
+          <button type="button" data-preset="b2b" aria-pressed="false">B2B and technology</button>
+          <button type="button" data-preset="hard" aria-pressed="false">Hard-to-source niches</button>
+        </div>
+
+        <div class="occ-qgrid">
+          <div class="occ-qslider">
+            <div class="occ-qlab">
+              <span>Emails sent per day</span>
+              <strong id="occQSendsLab">300</strong>
+            </div>
+            <input type="range" class="occ-range" id="occQSends" min="50" max="3000" step="50" value="300" aria-label="Emails sent per day" />
+            <div class="occ-qrange"><span>50</span><span>3,000</span></div>
+          </div>
+
+          <div class="occ-qfield">
+            <label for="occQReply">Reply rate</label>
+            <div class="occ-qin"><input type="number" id="occQReply" min="0" max="100" step="0.1" inputmode="decimal" /><span>%</span></div>
+            <span class="occ-qnote">2026 B2B average is 3.4%.</span>
+          </div>
+
+          <div class="occ-qfield">
+            <label for="occQDeal">Average deal value</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occQDeal" min="0" step="500" inputmode="decimal" /></div>
+            <span class="occ-qnote">What one closed customer is worth.</span>
+          </div>
+
+          <div class="occ-qfield">
+            <label for="occQClose">Meeting to closed won</label>
+            <div class="occ-qin"><input type="number" id="occQClose" min="0" max="100" step="1" inputmode="decimal" /><span>%</span></div>
+            <span class="occ-qnote">Your own close rate beats any benchmark.</span>
+          </div>
+
+          <div class="occ-qfield">
+            <label for="occQMgmt">Running it, per month</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occQMgmt" min="0" step="250" value="2000" inputmode="decimal" /></div>
+            <span class="occ-qnote">Your time, an operator, or a retainer. Set it to 0 for tools only.</span>
+          </div>
+        </div>
+
+        <div class="occ-funnel">
+          <div class="occ-tile occ-tile--cost">
+            <span class="occ-tval" id="occQCost">$0</span>
+            <span class="occ-tlab">Cost / month</span>
+            <span class="occ-tsub" id="occQCostSub">tools + running it</span>
+          </div>
+          <div class="occ-tile">
+            <span class="occ-tval" id="occQContacts">0</span>
+            <span class="occ-tlab">Contacts reached</span>
+            <span class="occ-tsub" id="occQSendsSub">per month</span>
+          </div>
+          <div class="occ-tile">
+            <span class="occ-tval" id="occQReplies">0</span>
+            <span class="occ-tlab">Replies</span>
+            <span class="occ-tsub" id="occQReplySub">per month</span>
+          </div>
+          <div class="occ-tile">
+            <span class="occ-tval" id="occQMeetings">0</span>
+            <span class="occ-tlab">Meetings held</span>
+            <span class="occ-tsub" id="occQMeetSub">per month</span>
+          </div>
+          <div class="occ-tile">
+            <span class="occ-tval" id="occQPipeline">$0</span>
+            <span class="occ-tlab">Pipeline created</span>
+            <span class="occ-tsub">per month</span>
+          </div>
+          <div class="occ-tile occ-tile--rev">
+            <span class="occ-tval" id="occQRevenue">$0</span>
+            <span class="occ-tlab">Closed revenue</span>
+            <span class="occ-tsub" id="occQRoiSub">per month</span>
+          </div>
+        </div>
+
+        <div class="occ-qrows">
+          <div class="occ-qrow"><span>Cost per contact reached</span><strong id="occQCPC">$0</strong></div>
+          <div class="occ-qrow"><span>Cost per meeting held</span><strong id="occQCPM">$0</strong></div>
+          <div class="occ-qrow occ-qrow--hi"><span>Return on total spend</span><strong id="occQROI">0x</strong></div>
+          <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
+        </div>
+
+        <p class="occ-callout" id="occQCallout"></p>
+      </section>
+
+      <!-- ================= FULL BUILDER (collapsed) ================= -->
+      <section class="occ-panel">
+        <details class="occ-fold">
+          <summary>
+            <span class="occ-foldlead">For whoever has to sign off on it</span>
+            <span class="occ-foldtitle">Adjust the full stack</span>
+            <span class="occ-foldmeta" id="occBuilderMeta">Eight steps: volume, ICP, sizing, domains and inboxes, tools, automation, outcomes, SDR comparison.</span>
+          </summary>
+          <div class="occ-builder">
           <div class="occ-inputs">
             <!-- Step 1: volume -->
             <div class="occ-card">
@@ -643,12 +816,12 @@
                 <div class="occ-field">
                   <label for="occReply">Reply rate</label>
                   <div class="occ-inp"><input type="number" id="occReply" min="0" max="100" step="0.1" inputmode="decimal" /><span>%</span></div>
-                  <span class="occ-help">Any reply, of contacts reached.</span>
+                  <span class="occ-help">Any reply, of contacts reached. The 2026 B2B benchmark average is 3.43%; top performers reach 8 to 12%.</span>
                 </div>
                 <div class="occ-field">
                   <label for="occPositive">Positive share of replies</label>
-                  <div class="occ-inp"><input type="number" id="occPositive" value="5" min="0" max="100" step="0.5" inputmode="decimal" /><span>%</span></div>
-                  <span class="occ-help">Most replies are declines, bounces and unsubscribes.</span>
+                  <div class="occ-inp"><input type="number" id="occPositive" value="20" min="0" max="100" step="0.5" inputmode="decimal" /><span>%</span></div>
+                  <span class="occ-help">Most replies are declines and opt-outs. Across 2M+ emails only about 14% of replies were positive; strong campaigns reach 50%.</span>
                 </div>
                 <div class="occ-field">
                   <label for="occMeeting">Positive to meeting held</label>
@@ -701,8 +874,6 @@
               </div>
             </div>
           </div>
-
-          <!-- ============ RESULTS ============ -->
           <div class="occ-results">
             <div class="occ-out">
               <div class="occ-headline">
@@ -721,6 +892,8 @@
               <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
+              <div class="occ-line occ-line--sub"><span>Tools subtotal</span><strong id="occToolsCost">$0</strong></div>
+              <div class="occ-line"><span>Running it (your time or a retainer)</span><strong id="occMgmtCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
@@ -739,6 +912,7 @@
               <div class="occ-line occ-line--sub"><span>Positive responses per month</span><strong id="occPos">0</strong></div>
               <div class="occ-line"><span>Meetings held per month</span><strong id="occMeetings">0</strong></div>
               <div class="occ-line occ-line--key"><span>Cost per meeting held</span><strong id="occCPM">$0</strong></div>
+              <div class="occ-line" id="occPipeRow"><span>Pipeline created per month</span><strong id="occPipe">$0</strong></div>
               <div class="occ-line" id="occRevRow"><span>Closed won revenue per month</span><strong id="occRev">$0</strong></div>
               <div class="occ-line occ-line--key" id="occRoiRow"><span>Return on stack spend</span><strong id="occRoi">0x</strong></div>
             </div>
@@ -751,14 +925,10 @@
               <div class="occ-delta" id="occSdrDelta"></div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WARMUP TIMELINE ============ -->
-    <section class="occ-wrap" style="padding-top: 8px">
-      <div class="container">
-        <div class="occ-card">
+          </div>
+        </details>
+      </section>
+      <section class="occ-panel">
           <details class="occ-fold">
           <summary>
             <span class="occ-foldlead">The line item nobody budgets for</span>
@@ -777,14 +947,8 @@
             <span id="occTimelineNote"></span>
           </p>
           </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PRICE SOURCES ============ -->
-    <section class="occ-wrap" style="padding-top: 8px">
-      <div class="container">
-        <div class="occ-card">
+      </section>
+      <section class="occ-panel">
           <details class="occ-fold">
           <summary>
             <span class="occ-foldlead">Verified 21 September 2026</span>
@@ -818,9 +982,8 @@
             not a matter of taste.
           </p>
           </details>
-        </div>
-
-        <div class="occ-card">
+      </section>
+      <section class="occ-panel">
           <details class="occ-fold">
           <summary>
             <span class="occ-foldlead">Sources</span>
@@ -959,32 +1122,7 @@
             point and check the linked pages. Nothing here is a quote, an endorsement, or an affiliate link.
           </p>
           </details>
-        </div>
-
-        <div class="occ-cta">
-          <h2>Ready to put these numbers to work?</h2>
-          <p>
-            Book a 30-minute strategy call. We'll look at what you're spending on outbound today, show you
-            where the gaps are, and walk you through what building and running the system above would look
-            like for your business.
-          </p>
-          <div class="occ-cta-actions">
-            <a
-              class="button button-primary"
-              data-cta="footer-primary"
-              href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-primary"
-              >Book a free strategy call &rarr;</a
-            >
-            <a
-              class="occ-cta-secondary"
-              data-cta="footer-secondary"
-              href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-secondary"
-              >Read more about how we work</a
-            >
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
     <script>
       (function () {
         "use strict";
@@ -1016,7 +1154,7 @@
               "Sourced from Google Maps. Outscraper pulls the listings and the emails, MillionVerifier " +
               "throws away the ones that would bounce.",
             deliverable: 62,
-            reply: 1.2,
+            reply: 4.0,
             rows: [
               { id: "src", on: true, locked: true, label: "Outscraper (Maps + email enrichment)", mode: "usage", rate: 9,
                 help: "Usage-based. $3 per 1,000 base results, about $9 per 1,000 once emails and verification are added. First 500 free." },
@@ -1035,7 +1173,7 @@
               "Sourced from a contact database. Verification usually comes bundled, so the verifier is off " +
               "by default. Turn it on if you are exporting to a cold domain and want a second opinion.",
             deliverable: 90,
-            reply: 2.0,
+            reply: 3.4,
             rows: [
               { id: "src", on: true, locked: true, label: "Apollo Basic", mode: "flat", price: 49,
                 help: "$49 per user per month on annual billing, $59 monthly. Professional is $79 annual and $99 monthly. Alternatives: Prospeo Starter at $49 for 2,000 credits, or SalesQL Starter at $39 but only 100 credits." },
@@ -1054,7 +1192,7 @@
               "Scraped with Apify actors, then run through a separate email finder because listings rarely " +
               "carry contact details. Both lines are load-bearing here.",
             deliverable: 70,
-            reply: 1.5,
+            reply: 3.0,
             rows: [
               { id: "src", on: true, locked: true, label: "Apify actors", mode: "flat", price: 29,
                 help: "Starter at $29 a month, paid as prepaid platform credit rather than a flat fee. Compute units burn it down and it does not roll over. Scale is $199." },
@@ -1069,6 +1207,21 @@
         /* Sequencers. `mailboxIncluded` / `mailboxExtra` matter more than the headline
            price: Smartlead and Instantly bundle unlimited inboxes, Lemlist charges per
            sending address, and HeyReach bills per connected sender with no base fee. */
+        /* Accent per ICP, mirroring how the Paid Acquisition Playbook recolours per platform. */
+        var ACCENTS = {
+          local: { accent: "#1a7f1a", bg: "#e6f9e6" },
+          b2b: { accent: "#1877f2", bg: "#e7f3ff" },
+          hard: { accent: "#7184f1", bg: "#eef0ff" }
+        };
+
+        /* Quick-card field <-> builder field. The builder stays the source of truth. */
+        var MIRRORS = [
+          ["occQSends", "occSendsDay"],
+          ["occQReply", "occReply"],
+          ["occQDeal", "occDealValue"],
+          ["occQClose", "occCloseRate"]
+        ];
+
         var SEQUENCERS = {
           smartlead: {
             label: "Smartlead",
@@ -1374,14 +1527,16 @@
 
           /* ---- totals ---- */
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
+          var management = Math.max(0, num("occQMgmt"));
+          var totalMonthly = recurring + management;
           var oneTime = domains * domFirst;
-          var month1 = oneTime + recurring;
-          var year1 = oneTime + recurring * 12;
-          var year2 = domains * (rotate ? domFirst : domRenew) + recurring * 12;
+          var month1 = oneTime + totalMonthly;
+          var year1 = oneTime + totalMonthly * 12;
+          var year2 = domains * (rotate ? domFirst : domRenew) + totalMonthly * 12;
 
           $("occM1").textContent = usd(month1);
           $("occOneTime").textContent = usd(oneTime);
-          $("occRec1").textContent = usd(recurring);
+          $("occRec1").textContent = usd(totalMonthly);
           $("occInboxLbl").textContent = int(inboxes) + " inboxes";
           $("occInboxCost").textContent = usd2(inboxCost);
           $("occSeqLbl").textContent =
@@ -1398,7 +1553,14 @@
           $("occEnrCost").textContent = usd2(costs.enr);
           $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
           $("occAutoCost").textContent = usd2(autoCost);
-          $("occSteady").textContent = usd(recurring);
+          $("occMgmtCost").textContent = usd2(management);
+          $("occToolsCost").textContent = usd2(recurring);
+          $("occSteady").textContent = usd(totalMonthly);
+          var bm = $("occBuilderMeta");
+          if (bm)
+            bm.textContent =
+              "Eight steps behind the numbers above: " + int(inboxes) + " inboxes, " + int(domains) +
+              " domains, " + seq.label.split(" (")[0] + ", and every price editable.";
           $("occY1").textContent = usd(year1);
           $("occY2").textContent = usd(year2);
 
@@ -1425,7 +1587,7 @@
           /* ---- per-contact and funnel ---- */
           $("occContactsOut").textContent = int(contactsMonth);
           $("occSendsOut").textContent = int(sendsMonth);
-          $("occCPC").textContent = contactsMonth > 0 ? "$" + (recurring / contactsMonth).toFixed(2) : "$0.00";
+          $("occCPC").textContent = contactsMonth > 0 ? "$" + (totalMonthly / contactsMonth).toFixed(2) : "$0.00";
 
           var replies = contactsMonth * (num("occReply") / 100);
           var positives = replies * (num("occPositive") / 100);
@@ -1433,7 +1595,7 @@
           $("occReplies").textContent = replies.toFixed(replies < 10 ? 1 : 0);
           $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
           $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
-          $("occCPM").textContent = meetings > 0.01 ? usd(recurring / meetings) : "n/a";
+          $("occCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
 
           var dealValue = num("occDealValue");
           var closed = meetings * (num("occCloseRate") / 100);
@@ -1441,9 +1603,11 @@
           var showRev = dealValue > 0;
           $("occRevRow").hidden = !showRev;
           $("occRoiRow").hidden = !showRev;
+          $("occPipeRow").hidden = !showRev;
           if (showRev) {
+            $("occPipe").textContent = usd(meetings * dealValue);
             $("occRev").textContent = usd(revenue);
-            $("occRoi").textContent = recurring > 0 ? (revenue / recurring).toFixed(1) + "x" : "n/a";
+            $("occRoi").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
           }
 
           /* ---- SDR comparison ---- */
@@ -1470,6 +1634,37 @@
             $("occSdrDelta").innerHTML =
               "Set a reply rate above zero in step seven to see the cost per meeting on both sides.";
           }
+
+          /* ---- one-view card ---- */
+          var pipeline = meetings * dealValue;
+          $("occQCost").textContent = usd(totalMonthly);
+          $("occQCostSub").textContent = management > 0
+            ? usd(recurring) + " tools + " + usd(management) + " running it"
+            : "tools only, nothing for running it";
+          $("occQContacts").textContent = int(contactsMonth);
+          $("occQSendsSub").textContent = int(sendsMonth) + " emails a month";
+          $("occQReplies").textContent = replies < 10 ? replies.toFixed(1) : int(replies);
+          $("occQReplySub").textContent = num("occReply") + "% of contacts";
+          $("occQMeetings").textContent = meetings < 10 ? meetings.toFixed(1) : int(meetings);
+          $("occQMeetSub").textContent = (positives < 10 ? positives.toFixed(1) : int(positives)) + " positive replies";
+          $("occQPipeline").textContent = usd(pipeline);
+          $("occQRevenue").textContent = usd(revenue);
+          $("occQRoiSub").textContent =
+            totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x on spend" : "per month";
+          $("occQCPC").textContent = contactsMonth > 0 ? "$" + (totalMonthly / contactsMonth).toFixed(2) : "$0.00";
+          $("occQCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
+          $("occQROI").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
+          $("occQInfra").textContent = int(inboxes) + " inboxes \u00B7 " + int(domains) + " domains";
+
+          /* Push builder values back up to the quick card, unless it is being typed in. */
+          MIRRORS.forEach(function (pair) {
+            var q = $(pair[0]);
+            if (!q || document.activeElement === q) return;
+            var v = $(pair[1]).value;
+            if (q.type === "range") v = Math.min(Number(q.max), Math.max(Number(q.min), Number(v)));
+            q.value = v;
+          });
+          $("occQSendsLab").textContent = int(sendsDay);
 
           buildTimeline(sendsDay);
         }
@@ -1528,6 +1723,15 @@
           if (fd)
             fd.textContent =
               "First send " + fmt(firstSend) + ". Full volume " + fmt(fullVolume) + ".";
+
+          /* The warmup gap, stated in the one-view card rather than buried in a fold. */
+          var co = $("occQCallout");
+          if (co)
+            co.innerHTML =
+              "Nothing sends for the first <strong>" + warmup + " days</strong>. Your first email reaches " +
+              "a prospect on <strong>" + fmt(firstSend) + "</strong> and you hit full volume on <strong>" +
+              fmt(fullVolume) + "</strong>. You are paying from day one either way, which is why outbound " +
+              "gets judged a failure at week four.";
           $("occTimelineNote").textContent =
             " Starting today, your first email reaches a prospect on " + fmt(firstSend) +
             " and you reach full volume on " + fmt(fullVolume) +
@@ -1573,8 +1777,15 @@
               : t.tld + " renews " + prem.toLocaleString("en-US") + "% above its first year. " + t.best;
         }
 
+        function applyAccent() {
+          var a = ACCENTS[state.preset] || ACCENTS.local;
+          document.documentElement.style.setProperty("--occ-accent", a.accent);
+          document.documentElement.style.setProperty("--occ-accent-bg", a.bg);
+        }
+
         function applyPreset() {
           var p = PRESETS[state.preset];
+          applyAccent();
           overrides["occSourced"] = false;
           $("occDeliverable").value = p.deliverable;
           $("occReply").value = p.reply;
@@ -1602,11 +1813,13 @@
           });
         });
 
+        /* Two sets of preset buttons exist (quick card + builder), so sync by value,
+           not by element identity. */
         document.querySelectorAll("[data-preset]").forEach(function (b) {
           b.addEventListener("click", function () {
             state.preset = b.dataset.preset;
             document.querySelectorAll("[data-preset]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o === b));
+              o.setAttribute("aria-pressed", String(o.dataset.preset === b.dataset.preset));
             });
             applyPreset();
           });
@@ -1734,6 +1947,27 @@
           if (el.type === "checkbox") el.addEventListener("change", compute);
         });
 
+        /* Quick card drives the builder, then the builder recomputes everything. */
+        MIRRORS.forEach(function (pair) {
+          var q = $(pair[0]);
+          if (!q) return;
+          q.addEventListener("input", function () {
+            if (pair[0] === "occQSends" && state.mode !== "sends") {
+              state.mode = "sends";
+              document.querySelectorAll("[data-mode]").forEach(function (o) {
+                o.setAttribute("aria-pressed", String(o.dataset.mode === "sends"));
+              });
+              document.querySelectorAll("[data-show]").forEach(function (f) {
+                f.hidden = f.dataset.show !== "sends";
+              });
+            }
+            $(pair[1]).value = q.value;
+            delete overrides[pair[1]];
+            compute();
+          });
+        });
+        $("occQMgmt").addEventListener("input", compute);
+
         /* Boot */
         fillTldTable();
         $("occSdrCost").value = SDRS.us.cost;
@@ -1744,196 +1978,47 @@
         captureDefaults();
       })();
     </script>
-    <footer>
-      <div class="container">
-        <div class="footer-grid">
-          <div>
-            <div class="footer-title">Marketing In Action</div>
-            <p class="muted">
-              Execution-first marketing ecosystem helping more than 5,000 marketers, founders, and business owners unlock predictable revenue with templates, tools, community, and expert services.
-            </p>
+    </main>
 
-            <div class="footer-social">
-              <a
-                href="https://www.linkedin.com/company/marketinginactionnewsletter"
-                aria-label="LinkedIn"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <!-- LinkedIn -->
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z"
-                  />
-                </svg>
-              </a>
-
-              <a href="https://x.com/marketinginact" aria-label="Twitter" target="_blank" rel="noreferrer">
-                <!-- Twitter -->
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.48 8.48 0 01-2.7 1.03A4.24 4.24 0 0016.1 4c-2.36 0-4.27 1.91-4.27 4.27 0 .33.04.66.11.97A12.05 12.05 0 013 5.1a4.27 4.27 0 001.32 5.69 4.2 4.2 0 01-1.93-.53v.05c0 2.07 1.47 3.8 3.42 4.19a4.3 4.3 0 01-1.92.07 4.27 4.27 0 003.99 2.96A8.5 8.5 0 012 19.54a12.02 12.02 0 006.53 1.91c7.84 0 12.13-6.5 12.13-12.13l-.01-.55A8.7 8.7 0 0022.46 6z"
-                  />
-                </svg>
-              </a>
-
-              <a href="https://www.instagram.com/marketinginact" aria-label="Instagram" target="_blank" rel="noreferrer">
-                <!-- Instagram -->
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.6.23 1.03.5 1.48.95.45.45.72.88.95 1.48.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.23.6-.5 1.03-.95 1.48-.45.45-.88.72-1.48.95-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.6-.23-1.03-.5-1.48-.95-.45-.45-.72-.88-.95-1.48-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.23-.6.5-1.03.95-1.48.45-.45.88-.72 1.48-.95.46-.16 1.26-.35 2.43-.4 1.27-.06 1.65-.07 4.85-.07zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.88a4.28 4.28 0 110-8.56 4.28 4.28 0 010 8.56zm6.84-11.14a1.54 1.54 0 110 3.08 1.54 1.54 0 010-3.08z"
-                  />
-                </svg>
-              </a>
-
-              <a
-                href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp"
-                aria-label="YouTube"
-                target="_blank"
-                rel="noreferrer"
-              >
-                <!-- YouTube -->
-                <svg viewBox="0 0 24 24">
-                  <path
-                    d="M23.5 6.5s-.23-1.62-.93-2.34c-.88-.93-1.87-.93-2.33-.98C16.97 3 12 3 12 3h-.01s-4.97 0-8.24.18c-.46.05-1.45.05-2.33.98C.72 4.88.5 6.5.5 6.5S0 8.41 0 10.33v1.34c0 1.91.5 3.83.5 3.83s.23 1.62.93 2.34c.88.93 2.04.9 2.56 1C5.86 19 12 19 12 19s4.97 0 8.24-.18c.46-.05 1.45-.05 2.33-.98.7-.72.93-2.34.93-2.34s.5-1.91.5-3.83v-1.34c0-1.91-.5-3.83-.5-3.83zM9.75 14.57V8.93l5.5 2.82-5.5 2.82z"
-                  />
-                </svg>
-              </a>
-</div>
-          </div>
-
-          <div>
-            <div class="footer-title">MIA Ecosystem</div>
-            <ul class="footer-list">
-              <li><a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a></li>
-              <li><a href="https://newsletter.marketinginaction.xyz/s/events" target="_blank" rel="noreferrer">MIA Events</a></li>
-              <li><a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a></li>
-              <li><a href="/academy/">MIA Academy</a></li>
-              <li><a href="/jobs/">MIA Jobs</a></li>
-              <li><a href="/services/">MIA Services</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <div class="footer-title">MIA Academy</div>
-            <ul class="footer-list">
-              <li><a href="/academy/dime/">Digital Income Made Easy (DIME)</a></li>
-              <li><a href="/academy/pro-bootcamp/">Product &amp; Growth Marketing with AI Bootcamp</a></li>
-              <li><a href="/academy/sme/bundle/">Online Marketing Mentorship for Business Owners</a></li>
-              <li><a href="/academy/ai-prompts/">AI Prompt Frameworks &amp; Templates</a></li>
-              <li><a href="/academy/templates/">Product Marketing Templates &amp; Resources</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <div class="footer-title">Resources &amp; More</div>
-            <ul class="footer-list">
-              <li><a href="/affiliate/">MIA Affiliate Program (Earn 40%)</a></li>
-              <li><a href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">The State of Marketing In African Tech</a></li>
-              <li><a href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7" target="_blank" rel="noreferrer">Marketing &amp; AI Product Database</a></li>
-              <li><a href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89" target="_blank" rel="noreferrer">Marketing Thought Leaders Database</a></li>
-              <li><a href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096" target="_blank" rel="noreferrer">Annual Tech Events Calendar</a></li>
-              <li><a href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing" target="_blank" rel="noreferrer">MIA Resource Library (Free)</a></li>
-              <li><a href="https://drive.google.com/file/d/1u209WbBYXV7572Lc2QmjL91DmxUmkvo6/view?usp=sharing" target="_blank" rel="noreferrer">Advertise with MIA</a></li>
-              <li><a href="/services/">Work with MIA</a></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="muted">Copyright <span id="year"></span>, Marketing In Action Hub.</div>
-          <div class="footer-legal">
-            <a href="/privacy/">Privacy Policy</a>
-            <a href="/terms/">Terms & Conditions</a>
-          </div>
+    <section class="mia-footer-cta">
+      <div class="mia-footer-cta-inner">
+        <h2>Ready to put these numbers to work?</h2>
+        <p>
+          Book a 30-minute strategy call. We'll look at what you're spending on outbound today, show you
+          where the gaps are, and walk you through what building and running the system above would look
+          like for your business.
+        </p>
+        <div class="mia-hero-actions">
+          <a
+            href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-primary"
+            class="mia-btn mia-btn-primary"
+            data-cta="footer-primary"
+            >Book a free strategy call &rarr;</a
+          >
+          <a
+            href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-secondary"
+            class="mia-btn mia-btn-secondary"
+            data-cta="footer-secondary"
+            >Read more about how we work</a
+          >
         </div>
       </div>
-    </footer>
+    </section>
 
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-
-    <script>
-      const btn = document.querySelector(".menu-button");
-      const nav = document.querySelector(".nav-links");
-      btn.addEventListener("click", () => {
-        const isOpen = nav.classList.toggle("is-open");
-        btn.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      var navDropdowns = document.querySelectorAll(".nav-dropdown");
-      var dropdownCloseTimer = null;
-
-      function closeDropdown(d) {
-        d.classList.remove("is-open");
-        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
-      }
-
-      function openDropdown(d) {
-        clearTimeout(dropdownCloseTimer);
-        navDropdowns.forEach(function(other) {
-          if (other !== d) closeDropdown(other);
-        });
-        d.classList.add("is-open");
-        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "true");
-      }
-
-      var isTouch = window.matchMedia("(hover: none)").matches;
-
-      navDropdowns.forEach(function(dropdown) {
-        var trigger = dropdown.querySelector(".nav-dropdown-trigger");
-
-        if (!isTouch) {
-          // Desktop: open immediately on hover, close when the mouse leaves
-          // this dropdown (matches bridged.events' behavior instead of
-          // requiring a click and allowing several menus open at once).
-          dropdown.addEventListener("mouseenter", function() {
-            clearTimeout(dropdownCloseTimer);
-            openDropdown(dropdown);
+      /* CTA tracking, same shape as the Paid Acquisition Playbook */
+      (function () {
+        document.querySelectorAll("[data-cta]").forEach(function (link) {
+          link.addEventListener("click", function () {
+            var loc = link.getAttribute("data-cta");
+            try {
+              window.dataLayer = window.dataLayer || [];
+              window.dataLayer.push({ event: "calculator_cta_click", cta_location: loc });
+            } catch (e) {}
+            try { if (window.fbq) fbq("trackCustom", "OutboundCalculatorCTA", { cta_location: loc }); } catch (e) {}
           });
-          dropdown.addEventListener("mouseleave", function() {
-            dropdownCloseTimer = setTimeout(function() {
-              closeDropdown(dropdown);
-            }, 300);
-          });
-        }
-
-        // Click/tap still works on every device (keyboard + touch access).
-        trigger.addEventListener("click", function(e) {
-          e.stopPropagation();
-          if (dropdown.classList.contains("is-open")) {
-            closeDropdown(dropdown);
-          } else {
-            openDropdown(dropdown);
-          }
         });
-      });
-
-      document.addEventListener("click", function() {
-        navDropdowns.forEach(closeDropdown);
-      });
+      })();
     </script>
-    <!-- LinkedIn Insight Tag -->
-    <script type="text/javascript">
-      _linkedin_partner_id = "9341153";
-      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
-      window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-    </script>
-    <script type="text/javascript">
-      (function(l) {
-        if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
-        window.lintrk.q=[]}
-        var s = document.getElementsByTagName("script")[0];
-        var b = document.createElement("script");
-        b.type = "text/javascript";b.async = true;
-        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
-        s.parentNode.insertBefore(b, s);
-      })(window.lintrk);
-    </script>
-    <noscript>
-      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9341153&fmt=gif" />
-    </noscript>
-    <!-- End LinkedIn Insight Tag -->
   </body>
 </html>
