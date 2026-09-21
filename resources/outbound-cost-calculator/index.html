@@ -1028,7 +1028,7 @@
             <div class="occ-out">
               <div class="occ-headline">
                 <span class="occ-big" id="occM1">$0</span>
-                <span class="occ-cap">Month one, all in</span>
+                <span class="occ-cap">Month one, setup included</span>
               </div>
 
               <div class="occ-sub">Month one</div>
@@ -1813,7 +1813,7 @@
               accounts: repAccounts, contacts: repContacts,
               sends: repSendsDay * workDays, sendsDay: repSendsDay, warm: repWarm, meetings: repMeetings,
               inboxes: repInboxes, domains: 0, hours: 4, ramp: 3 },
-            mia: { monthly: Math.max(0, num("occMiaFee")), accounts: accounts, contacts: contactsMonth,
+            mia: { monthly: recurring + Math.max(0, num("occMiaFee")), accounts: accounts, contacts: contactsMonth,
               sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
               inboxes: inboxes, domains: domains, hours: 2, ramp: 1 }
           };
@@ -1862,14 +1862,16 @@
             var ceilingRev = M.meetings * dealValue * (num("occCloseRate") / 100);
             var ceiling = ceilingRev / 3;
             $("occRunLine").innerHTML =
-              "We build the same <strong>" + int(inboxes) + "-inbox</strong> system on your own domains, run " +
-              "it or teach your team to run it, and hand it over. You keep the infrastructure. " +
+              "We build the same <strong>" + int(inboxes) + "-inbox</strong> system on your own domains and " +
+              "in your own accounts, run it or teach your team to run it, and hand it over. You keep the " +
+              "infrastructure, which is why the tool bill is yours and our fee sits on top of it rather " +
+              "than swallowing it. " +
               (ceiling > 1
                 ? "At this volume the system closes <strong>" + usd(ceilingRev) + "</strong> a month, so " +
-                  "anything under <strong>" + usd(ceiling) + "</strong> a month still returns three times " +
-                  "what you spend. A fully managed agency charges $3,000 to $8,000 for the same work and " +
-                  "keeps the infrastructure. We price on volume and scope rather than a list, so change the " +
-                  "number above and watch the return move."
+                  "anything under <strong>" + usd(ceiling) + "</strong> a month in total still returns three " +
+                  "times what you spend. A fully managed agency charges $3,000 to $8,000 for the same work " +
+                  "and keeps the infrastructure at the end of it. We price on volume and scope rather than a " +
+                  "list, so change the number above and watch the return move."
                 : "Set a deal value and close rate above to see what this is worth to you.");
           }
 
@@ -1911,7 +1913,7 @@
             state.run === "sdr"
               ? usd(Math.max(0, num("occRepCost"))) + " of rep and " + usd(Math.max(0, num("occRepTools"))) + " of tools"
               : state.run === "mia"
-              ? "all in, on infrastructure you keep"
+              ? usd(recurring) + " of tools you own and " + usd(Math.max(0, num("occMiaFee"))) + " of us"
               : usd(recurring) + " of tools and " + usd(selfTime) + " of your time";
           $("occQCPCLab").textContent =
             costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
