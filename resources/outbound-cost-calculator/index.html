@@ -289,6 +289,11 @@
       .occ-qslider { grid-column: 1 / -1; }
       .occ-qfield { display: flex; flex-direction: column; }
       .occ-qfield .occ-qnote { margin-top: auto; padding-top: 5px; }
+      .occ-runset .occ-qfield .occ-qnote { margin-top: 5px; padding-top: 0; }
+      @supports (grid-template-rows: subgrid) {
+        .occ-runset { grid-template-rows: auto auto auto; }
+        .occ-runset .occ-qfield { display: grid; grid-row: span 3; grid-template-rows: subgrid; }
+      }
       .occ-qlab { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 7px; }
       .occ-qlab span:first-child { font-size: 12.5px; font-weight: 700; color: var(--text); }
       .occ-qlab strong { font-size: 18px; font-weight: 800; color: var(--occ-accent); font-variant-numeric: tabular-nums; }
@@ -688,9 +693,14 @@
 
         <div class="occ-runset" data-runset="mia" hidden>
           <div class="occ-qfield">
-            <label for="occMiaFee">What you would pay a month</label>
-            <div class="occ-qin"><span>$</span><input type="number" id="occMiaFee" min="0" step="100" value="1000" inputmode="decimal" /></div>
-            <span class="occ-qnote">A starting point. Edit it and watch the return move.</span>
+            <label for="occMiaSetup">One-time build and setup</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occMiaSetup" min="0" step="250" value="1000" inputmode="decimal" /></div>
+            <span class="occ-qnote">We stand the whole system up and hand you the keys.</span>
+          </div>
+          <div class="occ-qfield">
+            <label for="occMiaFee">Monthly after that</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occMiaFee" min="0" step="100" value="500" inputmode="decimal" /></div>
+            <span class="occ-qnote">We keep running it, or your team does and we stay on call.</span>
           </div>
         </div>
 
@@ -1033,6 +1043,7 @@
 
               <div class="occ-sub">Month one</div>
               <div class="occ-line"><span>One-time setup (domains)</span><strong id="occOneTime">$0</strong></div>
+              <div class="occ-line" id="occSetupRow" hidden><span>Our one-time build and setup</span><strong id="occSetupCost">$0</strong></div>
               <div class="occ-line"><span>Recurring, first month</span><strong id="occRec1">$0</strong></div>
 
               <div class="occ-sub">Steady state, month two onward</div>
@@ -1698,17 +1709,19 @@
 
           /* ---- totals ---- */
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
-          /* The builder prices the system itself. Who runs it is a commercial layer on top, priced
-           * in the one-view card, so this breakdown stays the same whichever path is selected. */
+          /* Setup plus retainer: month one carries the build, then it settles to the monthly. The
+           * tools stay on the client's own bill throughout, because the accounts are theirs. */
           var ourFee = state.run === "mia" ? Math.max(0, num("occMiaFee")) : 0;
+          var ourSetup = state.run === "mia" ? Math.max(0, num("occMiaSetup")) : 0;
           var totalMonthly = recurring + ourFee;
-          var oneTime = domains * domFirst;
+          var domainSetup = domains * domFirst;
+          var oneTime = domainSetup + ourSetup;
           var month1 = oneTime + totalMonthly;
           var year1 = oneTime + totalMonthly * 12;
           var year2 = domains * (rotate ? domFirst : domRenew) + totalMonthly * 12;
 
           $("occM1").textContent = usd(month1);
-          $("occOneTime").textContent = usd(oneTime);
+          $("occOneTime").textContent = usd(domainSetup);
           $("occRec1").textContent = usd(totalMonthly);
           $("occInboxLbl").textContent = int(inboxes) + " inboxes";
           $("occInboxCost").textContent = usd2(inboxCost);
@@ -1728,8 +1741,10 @@
           $("occAutoCost").textContent = usd2(autoCost);
           $("occFeeRow").hidden = ourFee <= 0;
           $("occFeeCost").textContent = usd2(ourFee);
+          $("occSetupRow").hidden = ourSetup <= 0;
+          $("occSetupCost").textContent = usd2(ourSetup);
           $("occCap").textContent =
-            state.run === "mia" && ourFee > 0 ? "Month one, with our fee" : "Month one, tools and domains";
+            state.run === "mia" ? "Month one, build included" : "Month one, tools and domains";
           $("occSteady").textContent = usd(totalMonthly);
           var bm = $("occBuilderMeta");
           if (bm)
@@ -1819,6 +1834,7 @@
               accounts: repAccounts, contacts: repContacts,
               sends: repSendsDay * workDays, sendsDay: repSendsDay, warm: repWarm, meetings: repMeetings,
               inboxes: repInboxes, domains: 0, hours: 4, ramp: 3 },
+            /* Read the field directly: every button shows its own cost whichever mode is active. */
             mia: { monthly: recurring + Math.max(0, num("occMiaFee")), accounts: accounts, contacts: contactsMonth,
               sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
               inboxes: inboxes, domains: domains, hours: 2, ramp: 1 }
@@ -1870,14 +1886,15 @@
             $("occRunLine").innerHTML =
               "We build the same <strong>" + int(inboxes) + "-inbox</strong> system on your own domains and " +
               "in your own accounts, run it or teach your team to run it, and hand it over. You keep the " +
-              "infrastructure, which is why the tool bill is yours and our fee sits on top of it rather " +
-              "than swallowing it. " +
+              "infrastructure, which is why the tool bill is yours and our fee sits on top of it rather than " +
+              "swallowing it. Month one carries the build at <strong>" + usd(month1) + "</strong>, then it " +
+              "settles to <strong>" + usd(totalMonthly) + "</strong> a month. " +
               (ceiling > 1
                 ? "At this volume the system closes <strong>" + usd(ceilingRev) + "</strong> a month, so " +
                   "anything under <strong>" + usd(ceiling) + "</strong> a month in total still returns three " +
                   "times what you spend. A fully managed agency charges $3,000 to $8,000 for the same work " +
                   "and keeps the infrastructure at the end of it. We price on volume and scope rather than a " +
-                  "list, so change the number above and watch the return move."
+                  "list, so change either number above and watch the return move."
                 : "Set a deal value and close rate above to see what this is worth to you.");
           }
 
@@ -1919,7 +1936,7 @@
             state.run === "sdr"
               ? usd(Math.max(0, num("occRepCost"))) + " of rep and " + usd(Math.max(0, num("occRepTools"))) + " of tools"
               : state.run === "mia"
-              ? "the tools, plus our setup and management fee"
+              ? "the tools you own, plus our monthly fee"
               : usd(recurring) + " of tools and " + usd(selfTime) + " of your time";
           $("occQCPCLab").textContent =
             costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
@@ -2256,7 +2273,7 @@
             compute();
           });
         });
-        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occRepTools", "occMiaFee"].forEach(
+        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occRepTools", "occMiaSetup", "occMiaFee"].forEach(
           function (id) { $(id).addEventListener("input", compute); }
         );
         $("occDomainRev").addEventListener("input", function () {
