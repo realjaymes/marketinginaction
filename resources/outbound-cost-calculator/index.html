@@ -1045,7 +1045,6 @@
               <div class="occ-line"><span>One-time setup (domains)</span><strong id="occOneTime">$0</strong></div>
               <div class="occ-line" id="occSetupRow" hidden><span>Our one-time build and setup</span><strong id="occSetupCost">$0</strong></div>
               <div class="occ-line"><span>Tools, first month</span><strong id="occRec1">$0</strong></div>
-              <div class="occ-line" id="occFee1Row" hidden><span>Our fee, first month</span><strong id="occFee1">$0</strong></div>
 
               <div class="occ-sub">Steady state, month two onward</div>
               <div class="occ-line occ-line--sub"><span id="occInboxLbl">Inboxes</span><strong id="occInboxCost">$0</strong></div>
@@ -1716,15 +1715,13 @@
           var totalMonthly = recurring + ourFee;
           var domainSetup = domains * domFirst;
           var oneTime = domainSetup + ourSetup;
-          var month1 = oneTime + totalMonthly;
-          var year1 = oneTime + totalMonthly * 12;
+          var month1 = oneTime + recurring;
+          var year1 = oneTime + recurring * 12 + ourFee * 11;
           var year2 = domains * (rotate ? domFirst : domRenew) + totalMonthly * 12;
 
           $("occM1").textContent = usd(month1);
           $("occOneTime").textContent = usd(domainSetup);
           $("occRec1").textContent = usd(recurring);
-          $("occFee1Row").hidden = ourFee <= 0;
-          $("occFee1").textContent = usd2(ourFee);
           $("occInboxLbl").textContent = int(inboxes) + " inboxes";
           $("occInboxCost").textContent = usd2(inboxCost);
           $("occSeqLbl").textContent =
