@@ -1028,7 +1028,7 @@
             <div class="occ-out">
               <div class="occ-headline">
                 <span class="occ-big" id="occM1">$0</span>
-                <span class="occ-cap">Month one, setup included</span>
+                <span class="occ-cap" id="occCap">Month one</span>
               </div>
 
               <div class="occ-sub">Month one</div>
@@ -1042,6 +1042,7 @@
               <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
+              <div class="occ-line occ-line--sub" id="occFeeRow" hidden><span>Our setup and management fee</span><strong id="occFeeCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
@@ -1699,7 +1700,8 @@
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
           /* The builder prices the system itself. Who runs it is a commercial layer on top, priced
            * in the one-view card, so this breakdown stays the same whichever path is selected. */
-          var totalMonthly = recurring;
+          var ourFee = state.run === "mia" ? Math.max(0, num("occMiaFee")) : 0;
+          var totalMonthly = recurring + ourFee;
           var oneTime = domains * domFirst;
           var month1 = oneTime + totalMonthly;
           var year1 = oneTime + totalMonthly * 12;
@@ -1724,6 +1726,10 @@
           $("occEnrCost").textContent = usd2(costs.enr);
           $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
           $("occAutoCost").textContent = usd2(autoCost);
+          $("occFeeRow").hidden = ourFee <= 0;
+          $("occFeeCost").textContent = usd2(ourFee);
+          $("occCap").textContent =
+            state.run === "mia" && ourFee > 0 ? "Month one, with our fee" : "Month one, tools and domains";
           $("occSteady").textContent = usd(totalMonthly);
           var bm = $("occBuilderMeta");
           if (bm)
@@ -1771,8 +1777,8 @@
           $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
           $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
           $("occCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
-          $("occBCpmLab").textContent = "Stack cost per meeting";
-          $("occBRoiLab").textContent = "Return on stack spend";
+          $("occBCpmLab").textContent = (ourFee > 0 ? "Total" : "Stack") + " cost per meeting";
+          $("occBRoiLab").textContent = "Return on " + (ourFee > 0 ? "total" : "stack") + " spend";
 
           var dealValue = num("occDealValue");
           var closed = meetings * (num("occCloseRate") / 100);
@@ -1913,7 +1919,7 @@
             state.run === "sdr"
               ? usd(Math.max(0, num("occRepCost"))) + " of rep and " + usd(Math.max(0, num("occRepTools"))) + " of tools"
               : state.run === "mia"
-              ? usd(recurring) + " of tools you own and " + usd(Math.max(0, num("occMiaFee"))) + " of us"
+              ? "the tools, plus our setup and management fee"
               : usd(recurring) + " of tools and " + usd(selfTime) + " of your time";
           $("occQCPCLab").textContent =
             costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
