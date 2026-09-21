@@ -641,7 +641,7 @@
           <div class="occ-qfield">
             <label for="occQDeal">Average deal value</label>
             <div class="occ-qin"><span>$</span><input type="number" id="occQDeal" min="0" step="500" inputmode="decimal" /></div>
-            <span class="occ-qnote">What one closed customer is worth.</span>
+            <span class="occ-qnote">What one closed customer is worth in the first year.</span>
           </div>
 
           <div class="occ-qfield">
@@ -1346,6 +1346,8 @@
               "throws away the ones that would bounce.",
             deliverable: 62,
             reply: 4.0,
+            deal: 5000,
+            close: 25,
             perCompany: 1,
             unit: "local businesses",
             unitShort: "business",
@@ -1375,6 +1377,8 @@
             contactUnit: "contacts",
             perHelp: "Multithreading a company means emailing two or three people at it. It is still one deal.",
             reply: 3.4,
+            deal: 15000,
+            close: 18,
             rows: [
               { id: "src", on: true, locked: true, label: "Apollo Basic", mode: "flat", price: 49,
                 help: "$49 per user per month on annual billing, $59 monthly. Professional is $79 annual and $99 monthly. Alternatives: Prospeo Starter at $49 for 2,000 credits, or SalesQL Starter at $39 but only 100 credits." },
@@ -1399,6 +1403,8 @@
             contactUnit: "contacts",
             perHelp: "These listings rarely resolve to more than one person, so plan on one contact each.",
             reply: 3.0,
+            deal: 3000,
+            close: 22,
             rows: [
               { id: "src", on: true, locked: true, label: "Apify actors", mode: "flat", price: 29,
                 help: "Starter at $29 a month, paid as prepaid platform credit rather than a flat fee. Compute units burn it down and it does not roll over. Scale is $199." },
@@ -2151,6 +2157,12 @@
           overrides["occSourced"] = false;
           $("occDeliverable").value = p.deliverable;
           $("occReply").value = p.reply;
+          /* Deal value and close rate move with the audience. A clinic and a software company are
+           * not worth the same, and a flat default made two of the three presets wrong. */
+          $("occDealValue").value = p.deal;
+          $("occQDeal").value = p.deal;
+          $("occCloseRate").value = p.close;
+          $("occQClose").value = p.close;
           $("occPerAccount").value = p.perCompany;
           $("occQPerAcc").value = p.perCompany;
           $("occPerAccHelp").textContent = p.perHelp;
