@@ -615,7 +615,7 @@
           </button>
           <button type="button" data-run="agency" aria-pressed="false">
             <strong>An agency runs it</strong>
-            <span>$3,000 to $8,000 a month is the going rate for fully managed outbound.</span>
+            <span>$3,000 to $8,000 a month, all in. They run it on their own stack, so the tools below sit inside that fee.</span>
           </button>
         </div>
         <div class="occ-runprice" id="occRunPriceField" hidden>
@@ -991,13 +991,14 @@
               <div class="occ-line"><span>One-time setup (domains)</span><strong id="occOneTime">$0</strong></div>
               <div class="occ-line"><span>Recurring, first month</span><strong id="occRec1">$0</strong></div>
 
-              <div class="occ-sub">Steady state, month two onward</div>
+              <div class="occ-sub" id="occSteadySub">Steady state, month two onward</div>
               <div class="occ-line occ-line--sub"><span id="occInboxLbl">Inboxes</span><strong id="occInboxCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occSeqLbl">Sequencer</span><strong id="occSeqCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occSrcLbl">Sourcing</span><strong id="occSrcCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
+              <div class="occ-line occ-line--sub" id="occMarginRow" hidden><span>Their margin and management</span><strong id="occMarginCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
@@ -1024,7 +1025,7 @@
             <div class="occ-out">
               <h2>One rep against this system</h2>
               <div class="occ-cmp">
-                <div class="occ-cmprow occ-cmphead"><span></span><b id="occCmpLbl">One SDR</b><b>This system</b></div>
+                <div class="occ-cmprow occ-cmphead"><span></span><b id="occCmpLbl">One SDR</b><b>This outbound GTM system</b></div>
                 <div class="occ-cmprow"><span>Sending inboxes</span><b id="occCmpInbA">1</b><b id="occCmpInbB">0</b></div>
                 <div class="occ-cmprow"><span>Emails a day</span><b id="occCmpSndA">0</b><b id="occCmpSndB">0</b></div>
                 <div class="occ-cmprow"><span id="occCmpReachLbl">Businesses reached a month</span><b id="occCmpAccA">0</b><b id="occCmpAccB">0</b></div>
@@ -1673,14 +1674,19 @@
 
           /* ---- totals ---- */
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
-          var runCost = state.run === "agency" ? Math.max(0, num("occRunPrice")) : 0;
-          var totalMonthly = recurring + runCost;
+          var managed = state.run === "agency";
+          var runCost = managed ? Math.max(0, num("occRunPrice")) : 0;
+          /* A fully managed agency runs the system on its own domains, inboxes, sequencer and
+           * data. The retainer is all in, so it replaces the stack cost rather than sitting on
+           * top of it. Adding both would bill the same tools twice. */
+          var totalMonthly = managed ? runCost : recurring;
+          var margin = Math.max(0, runCost - recurring);
           var isRep = state.run === "sdr";
-          var costWord = isRep ? "Rep" : runCost > 0 ? "Total" : "Stack";
-          var oneTime = domains * domFirst;
+          var costWord = isRep ? "Rep" : managed ? "Total" : "Stack";
+          var oneTime = managed ? 0 : domains * domFirst;
           var month1 = oneTime + totalMonthly;
           var year1 = oneTime + totalMonthly * 12;
-          var year2 = domains * (rotate ? domFirst : domRenew) + totalMonthly * 12;
+          var year2 = (managed ? 0 : domains * (rotate ? domFirst : domRenew)) + totalMonthly * 12;
 
           $("occM1").textContent = usd(month1);
           $("occOneTime").textContent = usd(oneTime);
@@ -1701,6 +1707,11 @@
           $("occEnrCost").textContent = usd2(costs.enr);
           $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
           $("occAutoCost").textContent = usd2(autoCost);
+          $("occSteadySub").textContent = managed
+            ? "Steady state \u2014 what their retainer covers"
+            : "Steady state, month two onward";
+          $("occMarginRow").hidden = !managed;
+          $("occMarginCost").textContent = usd2(margin);
           $("occSteady").textContent = usd(totalMonthly);
           var bm = $("occBuilderMeta");
           if (bm)
@@ -1748,8 +1759,8 @@
           $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
           $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
           $("occCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
-          $("occBCpmLab").textContent = (runCost > 0 ? "Total" : "Stack") + " cost per meeting";
-          $("occBRoiLab").textContent = "Return on " + (runCost > 0 ? "total" : "stack") + " spend";
+          $("occBCpmLab").textContent = (managed ? "Total" : "Stack") + " cost per meeting";
+          $("occBRoiLab").textContent = "Return on " + (managed ? "total" : "stack") + " spend";
 
           var dealValue = num("occDealValue");
           var closed = meetings * (num("occCloseRate") / 100);
@@ -1840,8 +1851,8 @@
           $("occQCost").textContent = usd(dMonthly);
           $("occQCostSub").textContent = isRep
             ? "one rep, fully loaded, tools not included"
-            : runCost > 0
-            ? usd(recurring) + " tools + " + usd(runCost) + " to run it"
+            : managed
+            ? "their fee, all in \u2014 " + usd(recurring) + " of it is the tools"
             : "tools and infrastructure, your time not included";
           $("occQCPCLab").textContent =
             costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
@@ -1863,8 +1874,9 @@
           $("occQCPM").textContent = dMeetings > 0.01 ? usd(dMonthly / dMeetings) : "n/a";
           if (state.run === "agency" && meetings > 0.01) {
             $("occRunPriceNote").innerHTML =
-              "At $3,000 that is <strong>" + usd((recurring + 3000) / meetings) +
-              "</strong> a meeting. At $8,000 it is <strong>" + usd((recurring + 8000) / meetings) + "</strong>.";
+              "At $3,000 that is <strong>" + usd(3000 / meetings) +
+              "</strong> a meeting. At $8,000 it is <strong>" + usd(8000 / meetings) +
+              "</strong>. The same stack run in house costs <strong>" + usd(recurring / meetings) + "</strong>.";
           }
           $("occQROI").textContent = dMonthly > 0 ? (dRevenue / dMonthly).toFixed(1) + "x" : "n/a";
           var losing = dMonthly > 0 && dRevenue < dMonthly;
