@@ -195,15 +195,19 @@
       }
       .mia-hero-inner { max-width: 760px; margin: 0 auto; text-align: center; }
       .mia-eyebrow {
-        display: inline-block; padding: 5px 13px; border-radius: 999px;
+        display: inline-block; padding: 6px 14px; border-radius: 999px;
         background: var(--mia-accent); color: var(--mia-ink);
-        font-size: 11.5px; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase;
+        font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+        margin-bottom: 20px;
       }
       .mia-hero h1 {
-        margin: 16px 0 12px; font-size: clamp(27px, 4.6vw, 42px); font-weight: 800;
-        line-height: 1.12; color: var(--mia-ink);
+        margin: 0 0 16px; font-size: clamp(30px, 5vw, 48px); font-weight: 800;
+        line-height: 1.1; letter-spacing: -0.02em; color: var(--mia-ink);
       }
-      .mia-hero p { margin: 0 auto; max-width: 60ch; font-size: 16px; color: var(--mia-ink-muted); line-height: 1.55; }
+      .mia-hero p {
+        margin: 0 auto 28px; max-width: 64ch; font-size: clamp(16px, 2vw, 18px);
+        color: var(--mia-ink-muted); line-height: 1.55;
+      }
       .mia-verified {
         display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px;
         margin-top: 18px; padding: 7px 14px; border-radius: 999px;
@@ -250,7 +254,7 @@
       .occ-icp button[aria-pressed="true"] strong { color: #fff; }
 
       .occ-qgrid { display: grid; gap: 14px; margin-bottom: 22px; }
-      @media (min-width: 560px) { .occ-qgrid { grid-template-columns: repeat(3, 1fr); } }
+      @media (min-width: 560px) { .occ-qgrid { grid-template-columns: repeat(2, 1fr); } }
       .occ-qslider { grid-column: 1 / -1; }
       .occ-qfield { display: flex; flex-direction: column; }
       .occ-qfield .occ-qnote { margin-top: auto; padding-top: 5px; }
@@ -335,7 +339,7 @@
       .occ-step { display: block; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 7px; }
       .occ-card > p.occ-lede { margin: 0 0 16px; font-size: 13px; color: var(--text-secondary); line-height: 1.55; }
 
-      .occ-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-bottom: 16px; }
+      .occ-seg { display: grid; grid-template-columns: repeat(auto-fit, minmax(108px, 1fr)); gap: 7px; margin-bottom: 16px; }
       .occ-seg button {
         border: 1.5px solid var(--border); background: var(--card); border-radius: 9px; padding: 10px 8px;
         font-family: inherit; font-size: 13px; font-weight: 700; color: var(--text-secondary); cursor: pointer; transition: all 0.16s;
@@ -389,21 +393,26 @@
       /* ---------- detailed breakdown panel ---------- */
       .occ-results { position: sticky; top: 86px; }
       @media (max-width: 999px) { .occ-results { position: static; } }
-      .occ-out { background: var(--mia-accent); color: var(--mia-ink); border-radius: var(--mia-radius); padding: 22px 20px; margin-bottom: 14px; }
-      .occ-out h2 { margin: 0 0 16px; font-size: 16px; color: var(--mia-ink); }
-      .occ-headline { text-align: center; padding: 14px 0 17px; border-bottom: 1px solid rgba(16, 10, 22, 0.2); margin-bottom: 4px; }
-      .occ-headline .occ-big { display: block; font-size: clamp(32px, 7vw, 44px); font-weight: 800; color: var(--mia-ink); line-height: 1; letter-spacing: -0.02em; }
-      .occ-headline .occ-cap { display: block; margin-top: 7px; font-size: 12.5px; color: rgba(16, 10, 22, 0.66); }
-      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 11px; padding: 8px 0; border-bottom: 1px solid rgba(16, 10, 22, 0.13); font-size: 13px; }
-      .occ-line span { color: rgba(16, 10, 22, 0.68); min-width: 0; }
-      .occ-line strong { font-weight: 700; color: var(--mia-ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
-      .occ-line--sub span, .occ-line--sub strong { font-size: 12px; color: rgba(16, 10, 22, 0.62); }
-      .occ-line--key { padding: 12px 0; border-bottom: 0; border-top: 1px solid rgba(16, 10, 22, 0.28); margin-top: 4px; }
-      .occ-line--key span { color: var(--mia-ink); font-weight: 700; font-size: 13.5px; }
-      .occ-line--key strong { color: var(--mia-ink); font-size: 18px; font-weight: 800; }
-      .occ-sub { margin: 16px 0 7px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(16, 10, 22, 0.55); }
-      .occ-delta { margin-top: 13px; padding: 12px 14px; border-radius: 10px; font-size: 12px; line-height: 1.55; background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(16, 10, 22, 0.16); color: rgba(16, 10, 22, 0.88); }
-      .occ-delta strong { color: var(--mia-ink); }
+      .occ-out { background: var(--mia-ink); color: #f7f4fa; border-radius: var(--mia-radius); padding: 22px 20px; margin-bottom: 14px; }
+      .occ-out h2 { margin: 0 0 16px; font-size: 16px; color: #fff; }
+      .occ-headline { text-align: center; padding: 14px 0 17px; border-bottom: 1px solid rgba(247, 244, 250, 0.16); margin-bottom: 4px; }
+      .occ-headline .occ-big { display: block; font-size: clamp(32px, 7vw, 44px); font-weight: 800; color: var(--mia-accent); line-height: 1; letter-spacing: -0.02em; }
+      .occ-headline .occ-cap { display: block; margin-top: 7px; font-size: 12.5px; color: rgba(247, 244, 250, 0.7); }
+      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 11px; padding: 8px 0; border-bottom: 1px solid rgba(247, 244, 250, 0.1); font-size: 13px; }
+      .occ-line span { color: rgba(247, 244, 250, 0.7); min-width: 0; }
+      .occ-line strong { font-weight: 700; color: #fff; white-space: nowrap; font-variant-numeric: tabular-nums; }
+      .occ-line--sub span, .occ-line--sub strong { font-size: 12px; color: rgba(247, 244, 250, 0.58); }
+      .occ-line--key { padding: 12px 0; border-bottom: 0; border-top: 1px solid rgba(247, 244, 250, 0.22); margin-top: 4px; }
+      .occ-line--key span { color: #fff; font-weight: 700; font-size: 13.5px; }
+      .occ-line--key strong { color: var(--mia-accent); font-size: 18px; font-weight: 800; }
+      .occ-sub { margin: 16px 0 7px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(241, 222, 113, 0.75); }
+      .occ-delta {
+        margin-top: 15px; padding: 13px 15px; border-radius: 0 10px 10px 0;
+        font-size: 12.5px; line-height: 1.6;
+        background: rgba(247, 244, 250, 0.07); border-left: 3px solid var(--mia-accent);
+        color: #e9e4ef;
+      }
+      .occ-delta strong { color: var(--mia-accent); font-weight: 700; }
 
       /* ---------- timeline ---------- */
       .occ-time { display: grid; margin: 16px 0 0; }
@@ -471,7 +480,7 @@
           <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="mia-logo-img" />
         </a>
         <a
-          href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=topbar"
+          href="/consulting/book/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=topbar"
           class="mia-topbar-cta"
           data-cta="topbar"
           >Book a free strategy call &rarr;</a
@@ -491,7 +500,7 @@
         </p>
         <div class="mia-hero-actions">
           <a
-            href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=hero-primary"
+            href="/consulting/book/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=hero-primary"
             class="mia-btn mia-btn-primary"
             data-cta="hero-primary"
             >Book a free strategy call &rarr;</a
@@ -506,9 +515,9 @@
         <div class="occ-qhead">
           <h2>Your outbound system, in one view</h2>
           <p>
-            Tell us who you sell to and how many emails you want to send a day. You get the monthly cost of
-            the whole stack, how many people it actually reaches, and the meetings, pipeline and revenue
-            that should come out of it.
+            Tell us who you sell to and how many of them you want to reach each month. You get the monthly
+            cost of the whole stack, the people it actually emails to get there, and the meetings, pipeline
+            and revenue that should come out of it.
           </p>
         </div>
 
@@ -531,11 +540,17 @@
         <div class="occ-qgrid">
           <div class="occ-qslider">
             <div class="occ-qlab">
-              <span>Emails sent per day</span>
-              <strong id="occQSendsLab">300</strong>
+              <span id="occQAccLab">Local businesses you want to reach each month</span>
+              <strong id="occQAccVal">2,100</strong>
             </div>
-            <input type="range" class="occ-range" id="occQSends" min="50" max="3000" step="50" value="300" aria-label="Emails sent per day" />
-            <div class="occ-qrange"><span>50</span><span>3,000</span></div>
+            <input type="range" class="occ-range" id="occQAccounts" min="100" max="10000" step="100" value="2100" aria-label="Accounts you want to reach each month" />
+            <div class="occ-qrange"><span>100</span><span>10,000</span></div>
+          </div>
+
+          <div class="occ-qfield">
+            <label for="occQPerAcc" id="occQPerAccLab">Decision makers you email at each one</label>
+            <div class="occ-qin"><input type="number" id="occQPerAcc" min="1" max="10" step="1" inputmode="numeric" /></div>
+            <span class="occ-qnote" id="occQPerAccNote">One owner per business.</span>
           </div>
 
           <div class="occ-qfield">
@@ -565,9 +580,9 @@
             <span class="occ-tsub" id="occQCostSub">tools + running it</span>
           </div>
           <div class="occ-tile">
-            <span class="occ-tval" id="occQContacts">0</span>
-            <span class="occ-tlab">Contacts reached</span>
-            <span class="occ-tsub" id="occQSendsSub">per month</span>
+            <span class="occ-tval" id="occQReach">0</span>
+            <span class="occ-tlab" id="occQReachLab">Businesses reached</span>
+            <span class="occ-tsub" id="occQReachSub">per month</span>
           </div>
           <div class="occ-tile">
             <span class="occ-tval" id="occQReplies">0</span>
@@ -592,7 +607,7 @@
         </div>
 
         <div class="occ-qrows">
-          <div class="occ-qrow"><span>Stack cost per contact reached</span><strong id="occQCPC">$0</strong></div>
+          <div class="occ-qrow"><span id="occQCPCLab">Stack cost per business reached</span><strong id="occQCPC">$0</strong></div>
           <div class="occ-qrow"><span>Stack cost per meeting</span><strong id="occQCPM">$0</strong></div>
           <div class="occ-qrow occ-qrow--hi"><span>Return on stack spend</span><strong id="occQROI">0x</strong></div>
           <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
@@ -615,25 +630,37 @@
               <span class="occ-step">Step 1 — Volume</span>
               <h2>Start with what you want to send.</h2>
               <p class="occ-lede">
-                Pick whichever number you actually know. The other one is calculated from it, so you can
-                work forward from capacity or backward from a pipeline target.
+                An account is one business you are trying to win, and it is worth one deal however many
+                people you email inside it. Drive the model from whichever number you actually know. The
+                other two are calculated from it.
               </p>
 
               <div class="occ-seg" role="group" aria-label="Volume input mode">
-                <button type="button" data-mode="sends" aria-pressed="true">Sends per day</button>
-                <button type="button" data-mode="contacts" aria-pressed="false">New contacts per month</button>
+                <button type="button" data-mode="accounts" aria-pressed="true">Accounts per month</button>
+                <button type="button" data-mode="contacts" aria-pressed="false">Contacts per month</button>
+                <button type="button" data-mode="sends" aria-pressed="false">Sends per day</button>
               </div>
 
               <div class="occ-fields occ-2">
-                <div class="occ-field" data-show="sends">
-                  <label for="occSendsDay">Target sends per day</label>
-                  <div class="occ-inp"><input type="number" id="occSendsDay" value="300" min="1" step="10" inputmode="numeric" /></div>
-                  <span class="occ-help">Total emails leaving all inboxes each sending day.</span>
+                <div class="occ-field" data-show="accounts">
+                  <label for="occAccounts" id="occAccLab">Local businesses per month</label>
+                  <div class="occ-inp"><input type="number" id="occAccounts" value="2100" min="1" step="50" inputmode="numeric" /></div>
+                  <span class="occ-help">Accounts entering the sequence each month. One account is one possible deal.</span>
                 </div>
                 <div class="occ-field" data-show="contacts" hidden>
                   <label for="occContacts">New contacts per month</label>
                   <div class="occ-inp"><input type="number" id="occContacts" value="2100" min="1" step="50" inputmode="numeric" /></div>
-                  <span class="occ-help">Fresh prospects entering the sequence each month.</span>
+                  <span class="occ-help">Individual people entering the sequence each month, across all accounts.</span>
+                </div>
+                <div class="occ-field" data-show="sends" hidden>
+                  <label for="occSendsDay">Target sends per day</label>
+                  <div class="occ-inp"><input type="number" id="occSendsDay" value="300" min="1" step="10" inputmode="numeric" /></div>
+                  <span class="occ-help">Total emails leaving all inboxes each sending day.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occPerAccount" id="occPerAccLab">Decision makers per business</label>
+                  <div class="occ-inp"><input type="number" id="occPerAccount" value="1" min="1" max="10" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help" id="occPerAccHelp">One owner per business.</span>
                 </div>
                 <div class="occ-field">
                   <label for="occSteps">Emails per contact</label>
@@ -1182,6 +1209,11 @@
               "throws away the ones that would bounce.",
             deliverable: 62,
             reply: 4.0,
+            perCompany: 1,
+            unit: "local businesses",
+            unitShort: "business",
+            contactUnit: "decision makers",
+            perHelp: "Local businesses have one decision maker worth emailing, usually the owner.",
             rows: [
               { id: "src", on: true, locked: true, label: "Outscraper (Maps + email enrichment)", mode: "usage", rate: 9,
                 help: "Usage-based. $3 per 1,000 base results, about $9 per 1,000 once emails and verification are added. First 500 free." },
@@ -1200,6 +1232,11 @@
               "Sourced from a contact database. Verification usually comes bundled, so the verifier is off " +
               "by default. Turn it on if you are exporting to a cold domain and want a second opinion.",
             deliverable: 90,
+            perCompany: 3,
+            unit: "companies",
+            unitShort: "company",
+            contactUnit: "contacts",
+            perHelp: "Multithreading a company means emailing two or three people at it. It is still one deal.",
             reply: 3.4,
             rows: [
               { id: "src", on: true, locked: true, label: "Apollo Basic", mode: "flat", price: 49,
@@ -1219,6 +1256,11 @@
               "Scraped with Apify actors, then run through a separate email finder because listings rarely " +
               "carry contact details. Both lines are load-bearing here.",
             deliverable: 70,
+            perCompany: 1,
+            unit: "businesses",
+            unitShort: "business",
+            contactUnit: "contacts",
+            perHelp: "These listings rarely resolve to more than one person, so plan on one contact each.",
             reply: 3.0,
             rows: [
               { id: "src", on: true, locked: true, label: "Apify actors", mode: "flat", price: 29,
@@ -1243,7 +1285,8 @@
 
         /* Quick-card field <-> builder field. The builder stays the source of truth. */
         var MIRRORS = [
-          ["occQSends", "occSendsDay"],
+          ["occQAccounts", "occAccounts"],
+          ["occQPerAcc", "occPerAccount"],
           ["occQReply", "occReply"],
           ["occQDeal", "occDealValue"],
           ["occQClose", "occCloseRate"]
@@ -1320,7 +1363,7 @@
         /* ---------------------------------------------------------------
          * State
          * ------------------------------------------------------------- */
-        var state = { mode: "sends", preset: "local", sdr: "us", rowState: {} };
+        var state = { mode: "accounts", preset: "local", sdr: "us", rowState: {} };
         var overrides = {}; /* id -> true once the user types over a derived field */
 
         var $ = function (id) { return document.getElementById(id); };
@@ -1445,17 +1488,29 @@
           var workDays = Math.max(1, num("occWorkDays"));
 
           /* 1. Volume. Whichever field is visible drives the other. */
-          var sendsDay, sendsMonth, contactsMonth;
-          if (state.mode === "sends") {
+          var perAccount = Math.max(1, num("occPerAccount"));
+          var sendsDay, sendsMonth, contactsMonth, accounts;
+          if (state.mode === "accounts") {
+            accounts = Math.max(0, num("occAccounts"));
+            contactsMonth = accounts * perAccount;
+            sendsMonth = contactsMonth * steps;
+            sendsDay = sendsMonth / workDays;
+            $("occContacts").value = Math.round(contactsMonth);
+            $("occSendsDay").value = Math.round(sendsDay);
+          } else if (state.mode === "sends") {
             sendsDay = Math.max(0, num("occSendsDay"));
             sendsMonth = sendsDay * workDays;
             contactsMonth = sendsMonth / steps;
+            accounts = contactsMonth / perAccount;
             $("occContacts").value = Math.round(contactsMonth);
+            $("occAccounts").value = Math.round(accounts);
           } else {
             contactsMonth = Math.max(0, num("occContacts"));
+            accounts = contactsMonth / perAccount;
             sendsMonth = contactsMonth * steps;
             sendsDay = sendsMonth / workDays;
             $("occSendsDay").value = Math.round(sendsDay);
+            $("occAccounts").value = Math.round(accounts);
           }
 
           /* 2. Inboxes from sends per day, domains from inboxes. */
@@ -1613,9 +1668,15 @@
           $("occSendsOut").textContent = int(sendsMonth);
           $("occCPC").textContent = contactsMonth > 0 ? "$" + (totalMonthly / contactsMonth).toFixed(2) : "$0.00";
 
-          var replies = contactsMonth * (num("occReply") / 100);
-          var positives = replies * (num("occPositive") / 100);
-          var meetings = positives * (num("occMeeting") / 100);
+          var replyRate = num("occReply") / 100;
+          var replies = contactsMonth * replyRate;
+          var positiveShare = num("occPositive") / 100;
+          var positives = replies * positiveShare;
+          /* A company that answers from two desks is still one opportunity, so positive replies are
+             collapsed to the account before they become meetings. */
+          var posPerContact = Math.min(1, Math.max(0, replyRate * positiveShare));
+          var warmAccounts = accounts * (1 - Math.pow(1 - posPerContact, perAccount));
+          var meetings = warmAccounts * (num("occMeeting") / 100);
           $("occReplies").textContent = replies.toFixed(replies < 10 ? 1 : 0);
           $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
           $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
@@ -1662,17 +1723,19 @@
           var pipeline = meetings * dealValue;
           $("occQCost").textContent = usd(totalMonthly);
           $("occQCostSub").textContent = "tools and infrastructure, your time not included";
-          $("occQContacts").textContent = int(contactsMonth);
-          $("occQSendsSub").textContent = int(sendsMonth) + " emails a month";
+          $("occQReach").textContent = int(accounts);
+          $("occQReachSub").textContent =
+            int(contactsMonth) + " people \u00B7 " + int(sendsMonth) + " emails a month";
           $("occQReplies").textContent = replies < 10 ? replies.toFixed(1) : int(replies);
           $("occQReplySub").textContent = num("occReply") + "% of contacts";
           $("occQMeetings").textContent = meetings < 10 ? meetings.toFixed(1) : int(meetings);
-          $("occQMeetSub").textContent = (positives < 10 ? positives.toFixed(1) : int(positives)) + " positive replies";
+          $("occQMeetSub").textContent =
+            (warmAccounts < 10 ? warmAccounts.toFixed(1) : int(warmAccounts)) + " accounts answered yes";
           $("occQPipeline").textContent = usd(pipeline);
           $("occQRevenue").textContent = usd(revenue);
           $("occQRoiSub").textContent =
             totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x on stack spend" : "per month";
-          $("occQCPC").textContent = contactsMonth > 0 ? "$" + (totalMonthly / contactsMonth).toFixed(2) : "$0.00";
+          $("occQCPC").textContent = accounts > 0 ? "$" + (totalMonthly / accounts).toFixed(2) : "$0.00";
           $("occQCPM").textContent = meetings > 0.01 ? usd(totalMonthly / meetings) : "n/a";
           $("occQROI").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
           $("occQInfra").textContent = int(inboxes) + " inboxes \u00B7 " + int(domains) + " domains";
@@ -1685,7 +1748,7 @@
             if (q.type === "range") v = Math.min(Number(q.max), Math.max(Number(q.min), Number(v)));
             q.value = v;
           });
-          $("occQSendsLab").textContent = int(sendsDay);
+          $("occQAccVal").textContent = int(accounts);
 
           buildTimeline(sendsDay);
         }
@@ -1802,6 +1865,21 @@
           overrides["occSourced"] = false;
           $("occDeliverable").value = p.deliverable;
           $("occReply").value = p.reply;
+          $("occPerAccount").value = p.perCompany;
+          $("occQPerAcc").value = p.perCompany;
+          $("occPerAccHelp").textContent = p.perHelp;
+          $("occQPerAccNote").textContent = p.perHelp;
+          $("occQAccLab").textContent =
+            p.unit.charAt(0).toUpperCase() + p.unit.slice(1) + " you want to reach each month";
+          $("occAccLab").textContent =
+            p.unit.charAt(0).toUpperCase() + p.unit.slice(1) + " per month";
+          $("occQPerAccLab").textContent =
+            p.contactUnit.charAt(0).toUpperCase() + p.contactUnit.slice(1) + " you email at each one";
+          $("occPerAccLab").textContent =
+            p.contactUnit.charAt(0).toUpperCase() + p.contactUnit.slice(1) + " per " + p.unitShort;
+          $("occQReachLab").textContent =
+            p.unit.charAt(0).toUpperCase() + p.unit.slice(1) + " reached";
+          $("occQCPCLab").textContent = "Stack cost per " + p.unitShort + " reached";
           $("occDelivHelp").textContent =
             state.preset === "local"
               ? "Website-scraped addresses are junk-heavy, so a large share never survives verification."
@@ -1888,7 +1966,7 @@
            applied, so "reset" means the state the page opened in. Fields the preset owns
            reset to the active preset's value rather than the boot one. */
         var BOOT = {};
-        var PRESET_FIELDS = { occDeliverable: "deliverable", occReply: "reply" };
+        var PRESET_FIELDS = { occDeliverable: "deliverable", occReply: "reply", occPerAccount: "perCompany" };
 
         function captureDefaults() {
           document.querySelectorAll(".occ-inputs input, .occ-inputs select").forEach(function (el) {
@@ -1910,12 +1988,12 @@
           });
 
           if (step === "1") {
-            state.mode = "sends";
+            state.mode = "accounts";
             document.querySelectorAll("[data-mode]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o.dataset.mode === "sends"));
+              o.setAttribute("aria-pressed", String(o.dataset.mode === "accounts"));
             });
             document.querySelectorAll("[data-show]").forEach(function (f) {
-              f.hidden = f.dataset.show !== "sends";
+              f.hidden = f.dataset.show !== "accounts";
             });
           }
           if (step === "2") {
@@ -1965,13 +2043,13 @@
           var q = $(pair[0]);
           if (!q) return;
           q.addEventListener("input", function () {
-            if (pair[0] === "occQSends" && state.mode !== "sends") {
-              state.mode = "sends";
+            if (pair[0] === "occQAccounts" && state.mode !== "accounts") {
+              state.mode = "accounts";
               document.querySelectorAll("[data-mode]").forEach(function (o) {
-                o.setAttribute("aria-pressed", String(o.dataset.mode === "sends"));
+                o.setAttribute("aria-pressed", String(o.dataset.mode === "accounts"));
               });
               document.querySelectorAll("[data-show]").forEach(function (f) {
-                f.hidden = f.dataset.show !== "sends";
+                f.hidden = f.dataset.show !== "accounts";
               });
             }
             $(pair[1]).value = q.value;
@@ -2002,7 +2080,7 @@
         </p>
         <div class="mia-hero-actions">
           <a
-            href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-primary"
+            href="/consulting/book/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=outbound-cost-calculator&amp;utm_content=footer-primary"
             class="mia-btn mia-btn-primary"
             data-cta="footer-primary"
             >Book a free strategy call &rarr;</a
