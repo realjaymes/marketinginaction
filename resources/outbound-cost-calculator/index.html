@@ -479,6 +479,9 @@
       .mia-footer-cta h2 { font-size: clamp(25px, 4vw, 37px); font-weight: 800; margin: 0 0 14px; }
       .mia-footer-cta p { color: rgba(255, 255, 255, 0.78); font-size: 16px; line-height: 1.55; margin: 0 0 24px; }
       .mia-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+      html { scroll-behavior: smooth; }
+      #calculator { scroll-margin-top: 84px; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
       .mia-btn {
         display: inline-flex; align-items: center; gap: 7px; padding: 13px 24px; border-radius: 999px;
         font-size: 15px; font-weight: 700; text-decoration: none; border: 1.5px solid transparent;
@@ -488,6 +491,8 @@
       .mia-btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
       .mia-btn-secondary { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
       .mia-btn-secondary:hover { background: #fff; color: var(--mia-ink); }
+      .mia-btn-ghost { color: var(--mia-ink); border-color: rgba(17, 17, 17, 0.22); }
+      .mia-btn-ghost:hover { background: var(--mia-ink); color: #fff; border-color: var(--mia-ink); }
       @media (max-width: 640px) {
         .mia-footer-cta { padding: 44px 18px; }
         .mia-hero-actions { flex-direction: column; align-items: stretch; }
@@ -536,13 +541,14 @@
             data-cta="hero-primary"
             >Book a free strategy call &rarr;</a
           >
+          <a href="#calculator" class="mia-btn mia-btn-ghost" data-cta="hero-run">Run the numbers &darr;</a>
         </div>
       </div>
     </section>
 
     <main class="occ-shell">
       <!-- ================= ONE-VIEW CARD ================= -->
-      <section class="occ-panel">
+      <section class="occ-panel" id="calculator">
         <div class="occ-qhead">
           <h2>Your outbound system, in one view</h2>
           <p>
