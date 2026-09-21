@@ -142,12 +142,13 @@
         --border: #e4e6eb;
         --good: #1a7f1a;
         --good-bg: #e6f9e6;
+        --good-lite: #4ade80; /* the money green, lifted to carry on the ink panel */
         --bad: #cc0000;
         --bad-bg: #ffe9e9;
 
         /* Accent switches per ICP preset, as the playbook switches per platform */
-        --occ-accent: #1a7f1a;
-        --occ-accent-bg: #e6f9e6;
+        --occ-accent: #1877f2;
+        --occ-accent-bg: #e7f3ff;
       }
 
       * { box-sizing: border-box; }
@@ -324,8 +325,8 @@
       .occ-tile--cost { background: var(--mia-ink); }
       .occ-tile--cost .occ-tval { color: var(--mia-accent); }
       .occ-tile--cost .occ-tlab { color: rgba(247, 244, 250, 0.7); }
-      .occ-tile--rev { background: var(--occ-accent-bg); }
-      .occ-tile--rev .occ-tval { color: var(--occ-accent); }
+      .occ-tile--rev { background: var(--good-bg); }
+      .occ-tile--rev .occ-tval { color: var(--good); }
       /* Below 1x the spend is not returning, so the page says so rather than colouring it like a win. */
       .occ-tile--rev.occ-loss { background: var(--bad-bg); }
       .occ-tile--rev.occ-loss .occ-tval,
@@ -348,7 +349,7 @@
       .occ-qrow { background: var(--card); display: flex; justify-content: space-between; align-items: baseline; gap: 10px; padding: 11px 14px; font-size: 13px; }
       .occ-qrow span { color: var(--text-secondary); }
       .occ-qrow strong { font-weight: 800; color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
-      .occ-qrow--hi strong { color: var(--occ-accent); }
+      .occ-qrow--hi strong { color: var(--good); }
       .occ-qrow--hi.occ-loss strong { color: var(--bad); }
       .occ-verdict {
         margin: 16px 0 0; padding: 14px 16px; border-radius: var(--mia-radius);
@@ -469,6 +470,8 @@
       .occ-line--key { padding: 12px 0; border-bottom: 0; border-top: 1px solid rgba(247, 244, 250, 0.22); margin-top: 4px; }
       .occ-line--key span { color: #fff; font-weight: 700; font-size: 13.5px; }
       .occ-line--key strong { color: var(--mia-accent); font-size: 18px; font-weight: 800; }
+      #occRevRow strong, #occRoiRow strong { color: var(--good-lite); }
+      #occRoiRow.occ-loss strong, #occRevRow.occ-loss strong { color: #ff8080; }
       .occ-sub { margin: 16px 0 7px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(241, 222, 113, 0.75); }
       .occ-cmp { margin: 4px 0 14px; }
       .occ-cmprow {
@@ -1834,6 +1837,10 @@
             $("occPipe").textContent = usd(meetings * dealValue);
             $("occRev").textContent = usd(revenue);
             $("occRoi").textContent = totalMonthly > 0 ? (revenue / totalMonthly).toFixed(1) + "x" : "n/a";
+            /* Green means the spend is returning. Below 1x it is not, so both rows go red. */
+            var panelLosing = totalMonthly > 0 && revenue < totalMonthly;
+            $("occRevRow").classList.toggle("occ-loss", panelLosing);
+            $("occRoiRow").classList.toggle("occ-loss", panelLosing);
           }
 
           /* ---- What each path can actually run ----
