@@ -553,13 +553,13 @@
 
         <p class="occ-icplab">Who do you sell to?</p>
         <div class="occ-icp" role="group" aria-label="Who you sell to">
-          <button type="button" data-preset="local" aria-pressed="true">
-            <strong>Local businesses</strong>
-            <span>Clinics, contractors, medspas, schools, dealerships</span>
-          </button>
-          <button type="button" data-preset="b2b" aria-pressed="false">
+          <button type="button" data-preset="b2b" aria-pressed="true">
             <strong>B2B software and technology</strong>
             <span>Anyone you target by job title and find in a contact database</span>
+          </button>
+          <button type="button" data-preset="local" aria-pressed="false">
+            <strong>Local businesses</strong>
+            <span>Clinics, contractors, medspas, schools, dealerships</span>
           </button>
           <button type="button" data-preset="hard" aria-pressed="false">
             <strong>Niches with no contact list</strong>
@@ -571,9 +571,9 @@
           <div class="occ-qslider">
             <div class="occ-qlab">
               <span id="occQAccLab">Local businesses you want to reach each month</span>
-              <strong id="occQAccVal">2,100</strong>
+              <strong id="occQAccVal">700</strong>
             </div>
-            <input type="range" class="occ-range" id="occQAccounts" min="100" max="10000" step="100" value="2100" aria-label="Accounts you want to reach each month" />
+            <input type="range" class="occ-range" id="occQAccounts" min="100" max="10000" step="100" value="700" aria-label="Accounts you want to reach each month" />
             <div class="occ-qrange"><span>100</span><span>10,000</span></div>
           </div>
 
@@ -695,7 +695,7 @@
               <div class="occ-fields occ-2">
                 <div class="occ-field" data-show="accounts">
                   <label for="occAccounts" id="occAccLab">Local businesses per month</label>
-                  <div class="occ-inp"><input type="number" id="occAccounts" value="2100" min="1" step="50" inputmode="numeric" /></div>
+                  <div class="occ-inp"><input type="number" id="occAccounts" value="700" min="1" step="50" inputmode="numeric" /></div>
                   <span class="occ-help">Accounts entering the sequence each month. One account is one possible deal.</span>
                 </div>
                 <div class="occ-field" data-show="contacts" hidden>
@@ -739,13 +739,13 @@
                 than the entire sending bill.
               </p>
               <div class="occ-presets" role="group" aria-label="Ideal customer profile preset">
-                <button type="button" class="occ-preset" data-preset="local" aria-pressed="true">
-                  <strong>Local businesses</strong>
-                  <span>Clinics, contractors, medspas, schools, dealerships. Scraped from Google Maps, emails sit on the business website.</span>
-                </button>
-                <button type="button" class="occ-preset" data-preset="b2b" aria-pressed="false">
+                <button type="button" class="occ-preset" data-preset="b2b" aria-pressed="true">
                   <strong>B2B software and technology</strong>
                   <span>Anything targeted by job title. Pulled from a contact database, verification usually bundled.</span>
+                </button>
+                <button type="button" class="occ-preset" data-preset="local" aria-pressed="false">
+                  <strong>Local businesses</strong>
+                  <span>Clinics, contractors, medspas, schools, dealerships. Scraped from Google Maps, emails sit on the business website.</span>
                 </button>
                 <button type="button" class="occ-preset" data-preset="hard" aria-pressed="false">
                   <strong>Niches with no contact list</strong>
@@ -1429,7 +1429,7 @@
         /* ---------------------------------------------------------------
          * State
          * ------------------------------------------------------------- */
-        var state = { mode: "accounts", preset: "local", sdr: "typical", run: "self", rowState: {} };
+        var state = { mode: "accounts", preset: "b2b", sdr: "typical", run: "self", rowState: {} };
         var overrides = {}; /* id -> true once the user types over a derived field */
 
         var $ = function (id) { return document.getElementById(id); };
@@ -2132,9 +2132,9 @@
             });
           }
           if (step === "2") {
-            state.preset = "local";
+            state.preset = "b2b";
             document.querySelectorAll("[data-preset]").forEach(function (o) {
-              o.setAttribute("aria-pressed", String(o.dataset.preset === "local"));
+              o.setAttribute("aria-pressed", String(o.dataset.preset === "b2b"));
             });
             applyPreset();
             return;
