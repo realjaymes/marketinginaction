@@ -143,6 +143,7 @@
         --good: #1a7f1a;
         --good-bg: #e6f9e6;
         --bad: #cc0000;
+        --bad-bg: #ffe9e9;
 
         /* Accent switches per ICP preset, as the playbook switches per platform */
         --occ-accent: #1a7f1a;
@@ -299,6 +300,11 @@
       .occ-tile--cost .occ-tlab { color: rgba(247, 244, 250, 0.7); }
       .occ-tile--rev { background: var(--occ-accent-bg); }
       .occ-tile--rev .occ-tval { color: var(--occ-accent); }
+      /* Below 1x the spend is not returning, so the page says so rather than colouring it like a win. */
+      .occ-tile--rev.occ-loss { background: var(--bad-bg); }
+      .occ-tile--rev.occ-loss .occ-tval,
+      .occ-tile--rev.occ-loss .occ-tsub { color: var(--bad); }
+      .occ-tile--rev.occ-loss .occ-tsub { font-weight: 700; }
       .occ-tval {
         display: block; font-size: clamp(19px, 3.4vw, 25px); font-weight: 800; line-height: 1.1;
         color: var(--text); font-variant-numeric: tabular-nums; letter-spacing: -0.02em;
@@ -317,6 +323,7 @@
       .occ-qrow span { color: var(--text-secondary); }
       .occ-qrow strong { font-weight: 800; color: var(--text); white-space: nowrap; font-variant-numeric: tabular-nums; }
       .occ-qrow--hi strong { color: var(--occ-accent); }
+      .occ-qrow--hi.occ-loss strong { color: var(--bad); }
 
       .occ-callout {
         margin-top: 16px; padding: 14px 16px; border-radius: var(--mia-radius);
@@ -1863,6 +1870,9 @@
               "</strong> a meeting. At $8,000 it is <strong>" + usd((recurring + 8000) / meetings) + "</strong>.";
           }
           $("occQROI").textContent = dMonthly > 0 ? (dRevenue / dMonthly).toFixed(1) + "x" : "n/a";
+          var losing = dMonthly > 0 && dRevenue < dMonthly;
+          $("occQRevenue").parentNode.classList.toggle("occ-loss", losing);
+          $("occQROI").parentNode.classList.toggle("occ-loss", losing);
           $("occQInfra").textContent =
             int(dInboxes) + (dInboxes === 1 ? " inbox" : " inboxes") + " \u00B7 " +
             int(dDomains) + (dDomains === 1 ? " domain" : " domains");
