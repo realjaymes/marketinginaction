@@ -250,9 +250,10 @@
       .occ-icp button[aria-pressed="true"] strong { color: #fff; }
 
       .occ-qgrid { display: grid; gap: 14px; margin-bottom: 22px; }
-      @media (min-width: 560px) { .occ-qgrid { grid-template-columns: 1fr 1fr; } }
-      @media (min-width: 900px) { .occ-qgrid { grid-template-columns: repeat(4, 1fr); } }
+      @media (min-width: 560px) { .occ-qgrid { grid-template-columns: repeat(3, 1fr); } }
       .occ-qslider { grid-column: 1 / -1; }
+      .occ-qfield { display: flex; flex-direction: column; }
+      .occ-qfield .occ-qnote { margin-top: auto; padding-top: 5px; }
       .occ-qlab { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; margin-bottom: 7px; }
       .occ-qlab span:first-child { font-size: 12.5px; font-weight: 700; color: var(--text); }
       .occ-qlab strong { font-size: 18px; font-weight: 800; color: var(--occ-accent); font-variant-numeric: tabular-nums; }
@@ -388,21 +389,21 @@
       /* ---------- detailed breakdown panel ---------- */
       .occ-results { position: sticky; top: 86px; }
       @media (max-width: 999px) { .occ-results { position: static; } }
-      .occ-out { background: var(--mia-ink); color: #f7f4fa; border-radius: var(--mia-radius); padding: 22px 20px; margin-bottom: 14px; }
-      .occ-out h2 { margin: 0 0 16px; font-size: 16px; color: #fff; }
-      .occ-headline { text-align: center; padding: 14px 0 17px; border-bottom: 1px solid rgba(247, 244, 250, 0.16); margin-bottom: 4px; }
-      .occ-headline .occ-big { display: block; font-size: clamp(32px, 7vw, 44px); font-weight: 800; color: var(--mia-accent); line-height: 1; letter-spacing: -0.02em; }
-      .occ-headline .occ-cap { display: block; margin-top: 7px; font-size: 12.5px; color: rgba(247, 244, 250, 0.7); }
-      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 11px; padding: 8px 0; border-bottom: 1px solid rgba(247, 244, 250, 0.1); font-size: 13px; }
-      .occ-line span { color: rgba(247, 244, 250, 0.7); min-width: 0; }
-      .occ-line strong { font-weight: 700; color: #fff; white-space: nowrap; font-variant-numeric: tabular-nums; }
-      .occ-line--sub span, .occ-line--sub strong { font-size: 12px; color: rgba(247, 244, 250, 0.55); }
-      .occ-line--key { padding: 12px 0; border-bottom: 0; border-top: 1px solid rgba(247, 244, 250, 0.22); margin-top: 4px; }
-      .occ-line--key span { color: #fff; font-weight: 700; font-size: 13.5px; }
-      .occ-line--key strong { color: var(--mia-accent); font-size: 18px; font-weight: 800; }
-      .occ-sub { margin: 16px 0 7px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(241, 222, 113, 0.75); }
-      .occ-delta { margin-top: 13px; padding: 12px 14px; border-radius: 10px; font-size: 12px; line-height: 1.55; background: rgba(241, 222, 113, 0.13); border: 1px solid rgba(241, 222, 113, 0.3); color: rgba(247, 244, 250, 0.92); }
-      .occ-delta strong { color: var(--mia-accent); }
+      .occ-out { background: var(--mia-accent); color: var(--mia-ink); border-radius: var(--mia-radius); padding: 22px 20px; margin-bottom: 14px; }
+      .occ-out h2 { margin: 0 0 16px; font-size: 16px; color: var(--mia-ink); }
+      .occ-headline { text-align: center; padding: 14px 0 17px; border-bottom: 1px solid rgba(16, 10, 22, 0.2); margin-bottom: 4px; }
+      .occ-headline .occ-big { display: block; font-size: clamp(32px, 7vw, 44px); font-weight: 800; color: var(--mia-ink); line-height: 1; letter-spacing: -0.02em; }
+      .occ-headline .occ-cap { display: block; margin-top: 7px; font-size: 12.5px; color: rgba(16, 10, 22, 0.66); }
+      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 11px; padding: 8px 0; border-bottom: 1px solid rgba(16, 10, 22, 0.13); font-size: 13px; }
+      .occ-line span { color: rgba(16, 10, 22, 0.68); min-width: 0; }
+      .occ-line strong { font-weight: 700; color: var(--mia-ink); white-space: nowrap; font-variant-numeric: tabular-nums; }
+      .occ-line--sub span, .occ-line--sub strong { font-size: 12px; color: rgba(16, 10, 22, 0.62); }
+      .occ-line--key { padding: 12px 0; border-bottom: 0; border-top: 1px solid rgba(16, 10, 22, 0.28); margin-top: 4px; }
+      .occ-line--key span { color: var(--mia-ink); font-weight: 700; font-size: 13.5px; }
+      .occ-line--key strong { color: var(--mia-ink); font-size: 18px; font-weight: 800; }
+      .occ-sub { margin: 16px 0 7px; font-size: 10.5px; font-weight: 800; letter-spacing: 0.09em; text-transform: uppercase; color: rgba(16, 10, 22, 0.55); }
+      .occ-delta { margin-top: 13px; padding: 12px 14px; border-radius: 10px; font-size: 12px; line-height: 1.55; background: rgba(255, 255, 255, 0.55); border: 1px solid rgba(16, 10, 22, 0.16); color: rgba(16, 10, 22, 0.88); }
+      .occ-delta strong { color: var(--mia-ink); }
 
       /* ---------- timeline ---------- */
       .occ-time { display: grid; margin: 16px 0 0; }
@@ -480,13 +481,13 @@
 
     <section class="mia-hero">
       <div class="mia-hero-inner">
-        <span class="mia-eyebrow">Free Tool</span>
+        <span class="mia-eyebrow">Free resource &middot; Interactive</span>
         <h1>What a cold outbound system actually costs, and what it returns.</h1>
         <p>
-          If you sell B2B software or run an agency, this prices the AI-led outbound system we build for
-          clients: domains, inboxes, a sequencer, data, and the automation that runs it. Set your send
-          volume and you see the monthly cost sitting next to the pipeline and closed revenue it should
-          return. Every figure stays editable, because your rates are not the list rates.
+          If you sell services, B2B software, or run an agency, this calculator prices the AI-led outbound
+          GTM system we build for clients: domains, inboxes, a sequencer, data, and the automation that
+          runs it. Enter a few inputs about your business, and you will see the monthly cost sitting next
+          to the pipeline and closed revenue it should return.
         </p>
         <div class="mia-hero-actions">
           <a
@@ -913,7 +914,6 @@
               <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
               <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
-              <div class="occ-line occ-line--sub"><span>Tools subtotal</span><strong id="occToolsCost">$0</strong></div>
               <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
 
               <div class="occ-sub">Multi-year</div>
@@ -1579,7 +1579,6 @@
           $("occEnrCost").textContent = usd2(costs.enr);
           $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
           $("occAutoCost").textContent = usd2(autoCost);
-          $("occToolsCost").textContent = usd2(recurring);
           $("occSteady").textContent = usd(totalMonthly);
           var bm = $("occBuilderMeta");
           if (bm)
@@ -1651,8 +1650,7 @@
             var stackPerMeeting = year1 / meetingsYear;
             $("occSdrDelta").innerHTML =
               "At this volume the stack reaches <strong>" + int(contactsMonth * 11) + " contacts</strong> and " +
-              "holds <strong>" + meetingsYear.toFixed(0) + " meetings</strong> in its first year, counting " +
-              "eleven sending months rather than twelve because month one is warmup. That is <strong>" +
+              "holds <strong>" + meetingsYear.toFixed(0) + " meetings</strong> in its first year. That is <strong>" +
               usd(stackPerMeeting) + " per meeting</strong>. For one SDR to justify the same spend they would " +
               "have to book those same meetings at <strong>" + usd(sdrPerMeeting) + " each</strong>.";
           } else {
