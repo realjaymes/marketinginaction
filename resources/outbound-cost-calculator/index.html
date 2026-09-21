@@ -263,6 +263,7 @@
       .occ-runset { display: grid; gap: 12px; grid-template-columns: 1fr; margin-bottom: 12px; }
       @media (min-width: 560px) { .occ-runset { grid-template-columns: repeat(2, 1fr); } }
       .occ-runset[hidden] { display: none; }
+      @media (min-width: 860px) { .occ-runset[data-runset="self"] { grid-template-columns: repeat(3, 1fr); } }
       .occ-runline {
         margin-bottom: 14px; font-size: 12.5px; line-height: 1.5; color: var(--text-secondary);
         text-align: center;
@@ -652,13 +653,18 @@
         <div class="occ-runset" data-runset="self">
           <div class="occ-qfield">
             <label for="occSelfHours">Hours a week you will put into it</label>
-            <div class="occ-qin"><input type="number" id="occSelfHours" min="0" max="60" step="1" value="6" inputmode="numeric" /></div>
-            <span class="occ-qnote">Sourcing, copy, deliverability, replies.</span>
+            <div class="occ-qin"><input type="number" id="occSelfHours" min="0" max="60" step="1" value="10" inputmode="numeric" /></div>
+            <span class="occ-qnote">Domains, deliverability, lists, copy, replies.</span>
           </div>
           <div class="occ-qfield">
             <label for="occSelfRate">What an hour of that time is worth</label>
             <div class="occ-qin"><span>$</span><input type="number" id="occSelfRate" min="0" step="5" value="50" inputmode="decimal" /></div>
             <span class="occ-qnote">Yours, or whoever picks this up.</span>
+          </div>
+          <div class="occ-qfield">
+            <label for="occSelfRamp">Months before it books anything</label>
+            <div class="occ-qin"><input type="number" id="occSelfRamp" min="0" max="24" step="1" value="6" inputmode="numeric" /></div>
+            <span class="occ-qnote">Learning it from scratch usually runs 6 to 12.</span>
           </div>
         </div>
 
@@ -678,8 +684,8 @@
         <div class="occ-runset" data-runset="mia" hidden>
           <div class="occ-qfield">
             <label for="occMiaFee">What you would pay a month</label>
-            <div class="occ-qin"><span>$</span><input type="number" id="occMiaFee" min="0" step="100" value="0" placeholder="0" inputmode="decimal" /></div>
-            <span class="occ-qnote">We price on volume and scope, so put in your own number.</span>
+            <div class="occ-qin"><span>$</span><input type="number" id="occMiaFee" min="0" step="100" value="1000" inputmode="decimal" /></div>
+            <span class="occ-qnote">A starting point. Edit it and watch the return move.</span>
           </div>
         </div>
 
@@ -1789,13 +1795,14 @@
 
           var selfHoursMonth = Math.max(0, num("occSelfHours")) * 4.33;
           var selfTime = selfHoursMonth * Math.max(0, num("occSelfRate"));
+          var selfRamp = Math.max(0, num("occSelfRamp"));
 
           /* Four paths, four different volumes at four different prices. Holding output constant across
            * them would turn the page into a price fight, which is not the comparison that matters. */
           var MODES = {
             self: { monthly: recurring + selfTime, accounts: accounts, contacts: contactsMonth,
               sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
-              inboxes: inboxes, domains: domains, hours: selfHoursMonth, ramp: 4 },
+              inboxes: inboxes, domains: domains, hours: selfHoursMonth, ramp: selfRamp },
             sdr: { monthly: Math.max(0, num("occRepCost")), accounts: repAccounts, contacts: repContacts,
               sends: repSendsDay * workDays, sendsDay: repSendsDay, warm: repWarm, meetings: repMeetings,
               inboxes: repInboxes, domains: 0, hours: 4, ramp: 3 },
@@ -1811,8 +1818,7 @@
           ["self", "sdr", "mia"].forEach(function (k) {
             var m = MODES[k];
             $("occRunNum" + k).textContent =
-              (k === "mia" && m.monthly <= 0 ? "Your number" : usd(m.monthly) + " / mo") +
-              " \u00B7 " + one(m.meetings) + (m.meetings === 1 ? " meeting" : " meetings");
+              usd(m.monthly) + " / mo \u00B7 " + one(m.meetings) + (m.meetings === 1 ? " meeting" : " meetings");
           });
           document.querySelectorAll("[data-runset]").forEach(function (d) {
             d.hidden = d.dataset.runset !== state.run;
@@ -1827,7 +1833,11 @@
               "The tools come to <strong>" + usd(recurring) + "</strong> a month. Your own time at " +
               int(selfHoursMonth) + " hours adds <strong>" + usd(selfTime) + "</strong>, which is " +
               (recurring > 0 ? "<strong>" + (selfTime / recurring).toFixed(1) + " times</strong> the tool bill" :
-              "the larger number") + ". Most of it goes on learning rather than running.";
+              "the larger number") + ". " +
+              (selfRamp > 0
+                ? "Spend " + int(selfRamp) + " months learning it before it books anything and you are <strong>" +
+                  usd((recurring + selfTime) * selfRamp) + "</strong> down before the first meeting."
+                : "Most of that time goes on learning rather than running.");
           } else if (state.run === "sdr") {
             $("occRunLine").innerHTML =
               "One mailbox is safe for around <strong>" + int(safeSends) + " emails a day</strong>, so a rep " +
@@ -1845,7 +1855,8 @@
                 ? "At this volume the system closes <strong>" + usd(ceilingRev) + "</strong> a month, so " +
                   "anything under <strong>" + usd(ceiling) + "</strong> a month still returns three times " +
                   "what you spend. A fully managed agency charges $3,000 to $8,000 for the same work and " +
-                  "keeps the infrastructure. We price on volume and scope, so put in your own number."
+                  "keeps the infrastructure. We price on volume and scope rather than a list, so change the " +
+                  "number above and watch the return move."
                 : "Set a deal value and close rate above to see what this is worth to you.");
           }
 
@@ -2221,7 +2232,7 @@
             compute();
           });
         });
-        ["occSelfHours", "occSelfRate", "occRepCost", "occDomainRev", "occMiaFee"].forEach(
+        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occDomainRev", "occMiaFee"].forEach(
           function (id) { $(id).addEventListener("input", compute); }
         );
 
