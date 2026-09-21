@@ -963,18 +963,16 @@
                 <button type="button" data-sdr="typical" aria-pressed="true">A typical hire</button>
                 <button type="button" data-sdr="custom" aria-pressed="false">My own number</button>
               </div>
-              <div class="occ-fields occ-2" style="margin-bottom: 4px">
+              <div class="occ-fields occ-2">
                 <div class="occ-field">
-                  <label for="occSdrInboxes">Sending inboxes the rep has</label>
-                  <div class="occ-inp"><input type="number" id="occSdrInboxes" value="1" min="1" max="50" step="1" inputmode="numeric" /></div>
-                  <span class="occ-help">One company mailbox is the norm. A rep who spins up ten warmed domains is doing GTM engineering, which is the whole point.</span>
-                </div>
-              </div>
-              <div class="occ-fields">
-                <div class="occ-field">
-                  <label for="occSdrCost">Fully loaded SDR cost per year</label>
+                  <label for="occSdrCost">Fully loaded cost per year</label>
                   <div class="occ-inp"><span>$</span><input type="number" id="occSdrCost" min="0" step="500" inputmode="decimal" /></div>
                   <span class="occ-help" id="occSdrHelp"></span>
+                </div>
+                <div class="occ-field">
+                  <label for="occSdrInboxes">Sending inboxes they have</label>
+                  <div class="occ-inp"><input type="number" id="occSdrInboxes" value="1" min="1" max="50" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help">One company mailbox is the norm. A rep who spins up ten warmed domains is doing GTM engineering, which is the whole point.</span>
                 </div>
               </div>
               <div class="occ-cardfoot">
