@@ -1879,11 +1879,11 @@
             var domainRev = Math.max(0, derived("occDomainRev", meetings * dealValue * (num("occCloseRate") / 100)));
             $("occRisk").hidden = false;
             $("occRisk").innerHTML =
-              "<strong>A rep sends cold from the domain your invoices, contracts and renewals go out on.</strong> " +
+              "<strong>A rep sends cold email from the domain your invoices, contracts and renewals go out on.</strong> " +
               "Spam complaints land there, and reputation takes around " + burnWeeks + " weeks to recover if " +
               "it recovers at all. " +
               (domainRev > 0
-                ? "At " + usd(domainRev) + " a month riding on email, that is <strong>" +
+                ? "At " + usd(domainRev) + " a month of your revenue riding on email, that is <strong>" +
                   usd((domainRev * burnWeeks) / 4.33) + "</strong> exposed, against " +
                   usd2(domains * domRenew / 12) + " a month for the separate sending domains that prevent it."
                 : "Put your monthly revenue that depends on email above to size that exposure.");
