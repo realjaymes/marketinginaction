@@ -269,6 +269,11 @@
         text-align: center;
       }
       .occ-runline strong { color: var(--text); }
+      .occ-runpoint {
+        margin: -4px auto 14px; max-width: 62ch; text-align: center;
+        font-size: 13.5px; line-height: 1.5; font-weight: 600; color: var(--text);
+      }
+      .occ-runpoint[hidden] { display: none; }
       .occ-risk {
         margin-bottom: 14px; padding: 12px 14px; border-radius: 10px;
         background: var(--bad-bg); border: 1px solid rgba(204, 0, 0, 0.25);
@@ -690,6 +695,7 @@
         </div>
 
         <div class="occ-runline" id="occRunLine"></div>
+        <p class="occ-runpoint" id="occRunPoint" hidden></p>
         <div class="occ-risk" id="occRisk" hidden></div>
 
         <div class="occ-funnel">
@@ -1845,10 +1851,10 @@
               " a month against <strong>" + int(accounts) + "</strong> here, at <strong>" +
               (mCpm > 0 ? usd(mCpm) : "n/a") + "</strong> a meeting against <strong>" +
               (sysCpm > 0 ? usd(sysCpm) : "n/a") + "</strong>. Reaching even that assumes the ICP is already " +
-              "defined, the list is already built and verified, the sequence is already written and they " +
-              "have the tooling to send it. Done by hand, one person at a keyboard, it is a fraction of " +
-              "that. <strong>The system has to exist either way.</strong> Hiring only decides whether a " +
-              "salary sits on top of it, and it counts email alone, when a rep should be on calls.";
+              "defined, the list is already built and verified, the sequence is already written and they have " +
+              "the tooling to send it. Done by hand, one person at a keyboard, it is a fraction of that. " +
+              "<strong>The system has to exist either way.</strong> Hiring only decides whether a salary sits " +
+              "on top of it.";
           } else {
             var ceilingRev = M.meetings * dealValue * (num("occCloseRate") / 100);
             var ceiling = ceilingRev / 3;
@@ -1862,6 +1868,16 @@
                   "keeps the infrastructure. We price on volume and scope rather than a list, so change the " +
                   "number above and watch the return move."
                 : "Set a deal value and close rate above to see what this is worth to you.");
+          }
+
+          /* The conclusion the arithmetic is pointing at. */
+          if (state.run === "sdr") {
+            $("occRunPoint").hidden = false;
+            $("occRunPoint").innerHTML =
+              "This counts email alone. A rep should be calling prospects, working LinkedIn and turning up " +
+              "at events, which is the case for not spending their week as your sending infrastructure.";
+          } else {
+            $("occRunPoint").hidden = true;
           }
 
           /* ---- The risk a rep carries that a bill does not show ---- */
