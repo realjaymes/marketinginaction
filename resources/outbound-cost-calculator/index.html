@@ -1,0 +1,1692 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="James Praise" />
+    <meta name="color-scheme" content="light only" />
+    <title>Outbound Email Infrastructure Cost Calculator | Marketing In Action</title>
+    <meta
+      name="description"
+      content="Work out what a cold outbound system actually costs. Enter your send volume and the calculator sizes inboxes, domains, verification and enrichment, then prices the whole stack across month one, year one and year two. Every price verified 21 September 2026."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://marketinginaction.xyz/resources/outbound-cost-calculator/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Outbound Email Infrastructure Cost Calculator" />
+    <meta
+      property="og:description"
+      content="Send volume drives everything. Enter yours and see the inboxes, domains, credits and real monthly cost of a cold outbound system, plus the warmup timeline nobody budgets for."
+    />
+    <meta property="og:url" content="https://marketinginaction.xyz/resources/outbound-cost-calculator/" />
+    <meta property="og:image" content="https://marketinginaction.xyz/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Outbound Email Infrastructure Cost Calculator",
+        "url": "https://marketinginaction.xyz/resources/outbound-cost-calculator/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "James Praise" },
+        "publisher": { "@type": "Organization", "name": "Marketing In Action" },
+        "description": "A free calculator that sizes and prices a full cold outbound stack from a target send volume: inboxes, domains, sequencer, sourcing, verification, enrichment and automation, across month one, year one and year two."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many inboxes do I need for cold email?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Divide your target sends per day by a safe per-inbox limit. Thirty sends per inbox per day is the conservative default most senders settle on. At 300 sends a day that is 10 inboxes. Push a single inbox much past that and you trade deliverability for volume."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many inboxes should I put on one domain?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Three is the common ceiling. Domains are the unit that gets burned when a campaign goes wrong, so spreading inboxes across more domains limits the blast radius. At 10 inboxes you need 4 domains."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long before a cold email campaign can send?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Two to three weeks of warmup with zero sends, then roughly 10 more days ramping to full volume. Most outbound engagements that feel like failures at week four are actually being judged from the day the client paid rather than from the first send date."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the domain extension change the cost of outbound?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Materially, in year two. Cheap first-year extensions carry the steepest renewals. At Spaceship in September 2026, .online and .site register at $0.98 and renew at $15.08, a 1,439 percent jump, and .info registers at $3.11 and renews at $21.74. Flat renewers like .us at $6.48 and .net at $11.20 cost more on day one and less every year after. If you rotate domains between campaigns you keep paying first-year pricing and the cheap extensions win. If you keep them, the flat renewers win."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need an automation tool like n8n for cold outbound?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Usually not on a first build. Smartlead already handles sequencing, scheduling, reply detection and bounce handling natively. An automation layer earns its line item only when you have a CRM sync, a lead-routing rule, a multi-source enrichment waterfall, or reply classification to run."
+            }
+          }
+        ]
+      }
+    </script>
+
+    <link rel="preconnect" href="https://api.fontshare.com" />
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles.css" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KRT2BT27");
+    </script>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17909542714"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17909542714");
+    </script>
+    <style>
+      /* ---- Outbound Cost Calculator (page-scoped, --occ-* namespace) ---- */
+      :root {
+        --occ-ink: #100a16;
+        --occ-gold: #f1de71;
+        --occ-green: #2e7d4f;
+        --occ-red: #c0392b;
+        --occ-panel: #ffffff;
+        --occ-line: rgba(28, 20, 34, 0.12);
+        --occ-line-strong: rgba(28, 20, 34, 0.22);
+        --occ-soft: rgba(28, 20, 34, 0.04);
+      }
+
+      .occ-hero {
+        background: var(--occ-ink);
+        color: #f7f4fa;
+        padding: calc(var(--header-height) + 48px) 0 56px;
+      }
+      .occ-hero h1 { margin: 12px 0 14px; font-size: clamp(30px, 5.2vw, 52px); line-height: 1.08; color: #f7f4fa; }
+      .occ-hero h1 em { font-style: italic; color: var(--occ-gold); }
+      .occ-hero p { margin: 0; max-width: 62ch; font-size: clamp(15px, 2vw, 18px); color: rgba(247, 244, 250, 0.82); line-height: 1.6; }
+      .occ-pill {
+        display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px;
+        background: rgba(241, 222, 113, 0.14); border: 1px solid rgba(241, 222, 113, 0.4);
+        color: var(--occ-gold); font-size: 12.5px; font-weight: 800; letter-spacing: 0.04em; text-transform: uppercase;
+      }
+      .occ-verified {
+        display: inline-flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px;
+        padding: 9px 15px; border-radius: 999px; background: rgba(247, 244, 250, 0.08);
+        border: 1px solid rgba(247, 244, 250, 0.16); font-size: 13px; color: rgba(247, 244, 250, 0.9);
+      }
+      .occ-verified strong { color: var(--occ-gold); font-weight: 800; }
+      .occ-verified a { color: var(--occ-gold); text-decoration: underline; }
+
+      .occ-wrap { padding: 56px 0 24px; }
+      .occ-grid { display: grid; gap: 28px; align-items: start; }
+      @media (min-width: 1000px) { .occ-grid { grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: 34px; } }
+
+      .occ-card {
+        background: var(--occ-panel); border: 1px solid var(--occ-line);
+        border-radius: var(--radius-lg); padding: 22px; margin-bottom: 18px; box-shadow: var(--shadow);
+      }
+      @media (min-width: 560px) { .occ-card { padding: 26px 28px; } }
+      .occ-card > h2 { margin: 0 0 4px; font-size: 19px; line-height: 1.25; }
+      .occ-step { display: block; font-size: 11.5px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+      .occ-card > p.occ-lede { margin: 0 0 18px; font-size: 13.5px; color: var(--text-muted); line-height: 1.55; }
+
+      .occ-seg { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+      .occ-seg button {
+        border: 1.5px solid var(--occ-line); background: var(--bg-page); border-radius: 12px; padding: 11px 10px;
+        font-family: inherit; font-size: 13.5px; font-weight: 800; color: var(--text-muted); cursor: pointer; transition: var(--ease);
+      }
+      .occ-seg button:hover { border-color: var(--occ-line-strong); color: var(--text-primary); }
+      .occ-seg button[aria-pressed="true"] { background: var(--occ-ink); border-color: var(--occ-ink); color: var(--occ-gold); }
+
+      .occ-presets { display: grid; gap: 10px; }
+      @media (min-width: 640px) { .occ-presets { grid-template-columns: repeat(3, 1fr); } }
+      .occ-preset {
+        text-align: left; border: 1.5px solid var(--occ-line); background: var(--bg-page); border-radius: 14px;
+        padding: 14px; font-family: inherit; cursor: pointer; transition: var(--ease); color: var(--text-primary);
+      }
+      .occ-preset:hover { border-color: var(--occ-line-strong); }
+      .occ-preset[aria-pressed="true"] { border-color: var(--occ-ink); background: #fff; box-shadow: 0 0 0 3px rgba(241, 222, 113, 0.5); }
+      .occ-preset strong { display: block; font-size: 14px; margin-bottom: 5px; }
+      .occ-preset span { display: block; font-size: 12px; color: var(--text-muted); line-height: 1.45; }
+
+      .occ-fields { display: grid; gap: 14px; }
+      @media (min-width: 520px) { .occ-fields.occ-2 { grid-template-columns: 1fr 1fr; } }
+      .occ-field label { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; font-size: 12.5px; font-weight: 800; margin-bottom: 6px; }
+      .occ-field .occ-help { display: block; font-size: 11.5px; color: var(--text-muted); margin-top: 6px; line-height: 1.45; font-weight: 400; }
+      .occ-inp {
+        display: flex; align-items: center; gap: 4px; border: 1.5px solid var(--occ-line); border-radius: 11px;
+        padding: 0 12px; background: var(--bg-page); transition: var(--ease);
+      }
+      .occ-inp:focus-within { border-color: var(--occ-ink); background: #fff; }
+      .occ-inp span { color: var(--text-muted); font-weight: 800; font-size: 14px; flex-shrink: 0; }
+      .occ-inp input, .occ-inp select {
+        border: 0; background: transparent; padding: 10px 2px; font-family: inherit; font-size: 15.5px;
+        font-weight: 800; color: var(--occ-ink); width: 100%; min-width: 0; flex: 1 1 auto;
+        -moz-appearance: textfield;
+      }
+      .occ-inp input:focus, .occ-inp select:focus { outline: none; }
+      .occ-inp select { cursor: pointer; padding-right: 4px; }
+      .occ-inp--auto { border-style: dashed; }
+      .occ-inp--auto input { color: var(--text-muted); }
+      .occ-inp--edited { border-style: solid; border-color: var(--occ-ink); }
+      .occ-inp--edited input { color: var(--occ-ink); }
+
+      .occ-tag {
+        font-size: 9.5px; font-weight: 900; letter-spacing: 0.08em; text-transform: uppercase;
+        padding: 3px 7px; border-radius: 5px; background: var(--occ-soft); color: var(--text-muted);
+      }
+      .occ-tag--edited { background: var(--occ-gold); color: var(--occ-ink); }
+      .occ-tag--opt { background: rgba(113, 132, 241, 0.16); color: #4b52b8; }
+
+      .occ-toggle { display: flex; align-items: flex-start; gap: 11px; padding: 13px 0; border-top: 1px solid var(--occ-line); }
+      .occ-toggle:first-of-type { border-top: 0; }
+      .occ-toggle input { margin: 3px 0 0; width: 17px; height: 17px; flex-shrink: 0; accent-color: var(--occ-ink); cursor: pointer; }
+      .occ-toggle label { font-size: 13.5px; font-weight: 800; cursor: pointer; line-height: 1.4; }
+      .occ-toggle .occ-help { font-size: 11.5px; color: var(--text-muted); font-weight: 400; margin-top: 4px; line-height: 1.5; display: block; }
+      .occ-toggle-body { min-width: 0; flex: 1; }
+      .occ-toggle-price { margin-top: 10px; max-width: 260px; }
+
+      .occ-note {
+        margin: 16px 0 0; padding: 13px 15px; border-radius: 12px; background: rgba(241, 222, 113, 0.18);
+        border-left: 3px solid var(--occ-gold); font-size: 12.5px; line-height: 1.55; color: var(--text-primary);
+      }
+      .occ-note strong { font-weight: 900; }
+
+      .occ-reset {
+        display: inline-flex; align-items: center; gap: 6px; margin-top: 16px; background: none; border: 0;
+        font-family: inherit; font-size: 12.5px; font-weight: 800; color: var(--text-muted);
+        text-decoration: underline; cursor: pointer; padding: 0;
+      }
+      .occ-reset:hover { color: var(--occ-ink); }
+
+      /* ---- results ---- */
+      .occ-results { position: sticky; top: calc(var(--header-height) + 14px); }
+      @media (max-width: 999px) { .occ-results { position: static; } }
+      .occ-out {
+        background: var(--occ-ink); color: #f7f4fa; border-radius: var(--radius-lg); padding: 24px 22px; margin-bottom: 18px;
+      }
+      @media (min-width: 560px) { .occ-out { padding: 28px; } }
+      .occ-out h2 { margin: 0 0 18px; font-size: 18px; color: #fff; }
+      .occ-headline { text-align: center; padding: 18px 0 20px; border-bottom: 1px solid rgba(247, 244, 250, 0.16); margin-bottom: 4px; }
+      .occ-headline .occ-big { display: block; font-size: clamp(38px, 8vw, 54px); font-weight: 900; color: var(--occ-gold); line-height: 1; letter-spacing: -0.02em; }
+      .occ-headline .occ-cap { display: block; margin-top: 8px; font-size: 13px; color: rgba(247, 244, 250, 0.72); }
+      .occ-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 9px 0; border-bottom: 1px solid rgba(247, 244, 250, 0.1); font-size: 13.5px; }
+      .occ-line span { color: rgba(247, 244, 250, 0.72); min-width: 0; }
+      .occ-line strong { font-weight: 800; color: #fff; white-space: nowrap; }
+      .occ-line--sub span, .occ-line--sub strong { font-size: 12.5px; color: rgba(247, 244, 250, 0.55); font-weight: 600; }
+      .occ-line--sub strong { font-weight: 700; }
+      .occ-line--key { padding: 13px 0; border-bottom: 0; border-top: 1px solid rgba(247, 244, 250, 0.22); margin-top: 4px; }
+      .occ-line--key span { color: #fff; font-weight: 800; font-size: 14px; }
+      .occ-line--key strong { color: var(--occ-gold); font-size: 19px; }
+      .occ-sub { margin: 18px 0 8px; font-size: 11px; font-weight: 900; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(241, 222, 113, 0.75); }
+
+      .occ-delta {
+        margin-top: 14px; padding: 13px 15px; border-radius: 12px; font-size: 12.5px; line-height: 1.55;
+        background: rgba(241, 222, 113, 0.14); border: 1px solid rgba(241, 222, 113, 0.32); color: rgba(247, 244, 250, 0.92);
+      }
+      .occ-delta strong { color: var(--occ-gold); }
+
+      /* ---- timeline ---- */
+      .occ-time { display: grid; gap: 0; margin: 18px 0 0; }
+      .occ-tstep { display: grid; grid-template-columns: 22px 1fr; gap: 14px; }
+      .occ-trail { position: relative; display: flex; justify-content: center; }
+      .occ-trail::before { content: ""; position: absolute; top: 4px; bottom: -4px; width: 2px; background: var(--occ-line); }
+      .occ-tstep:last-child .occ-trail::before { display: none; }
+      .occ-dot { position: relative; width: 12px; height: 12px; border-radius: 50%; background: var(--occ-line-strong); margin-top: 4px; }
+      .occ-tstep--live .occ-dot { background: var(--occ-green); box-shadow: 0 0 0 4px rgba(46, 125, 79, 0.16); }
+      .occ-tstep--dead .occ-dot { background: var(--occ-red); box-shadow: 0 0 0 4px rgba(192, 57, 43, 0.12); }
+      .occ-tbody { padding-bottom: 20px; min-width: 0; }
+      .occ-tdate { font-size: 12px; font-weight: 900; letter-spacing: 0.04em; text-transform: uppercase; color: var(--occ-ink); }
+      .occ-tstep--dead .occ-tdate { color: var(--occ-red); }
+      .occ-tstep--live .occ-tdate { color: var(--occ-green); }
+      .occ-ttitle { margin: 3px 0 4px; font-size: 14.5px; font-weight: 800; }
+      .occ-tnote { margin: 0; font-size: 12.5px; color: var(--text-muted); line-height: 1.55; }
+
+      /* ---- sources table ---- */
+      .occ-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-top: 18px; }
+      .occ-table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 520px; }
+      .occ-table th, .occ-table td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--occ-line); vertical-align: top; }
+      .occ-table th { font-size: 11px; font-weight: 900; letter-spacing: 0.07em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+      .occ-table td strong { font-weight: 800; }
+      .occ-table tbody tr:last-child td { border-bottom: 0; }
+      .occ-table a { color: #2f6fb3; text-decoration: underline; }
+      .occ-num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+      .occ-up { color: var(--occ-red); font-weight: 800; }
+      .occ-flat { color: var(--occ-green); font-weight: 800; }
+
+      /* ---- CTA ---- */
+      .occ-cta { background: var(--occ-ink); color: #f7f4fa; border-radius: var(--radius-lg); padding: 34px 24px; text-align: center; }
+      @media (min-width: 640px) { .occ-cta { padding: 48px 40px; } }
+      .occ-cta h2 { margin: 0 0 12px; color: #fff; font-size: clamp(22px, 3.4vw, 32px); }
+      .occ-cta h2 em { font-style: italic; color: var(--occ-gold); }
+      .occ-cta p { margin: 0 auto 22px; max-width: 58ch; color: rgba(247, 244, 250, 0.8); font-size: 15px; line-height: 1.6; }
+
+      .occ-foot { margin: 34px 0 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+      .occ-foot a { color: #2f6fb3; text-decoration: underline; }
+
+      @media print {
+        header, footer, .occ-cta, .menu-button { display: none !important; }
+        .occ-results { position: static; }
+      }
+    </style>
+  </head>
+  <body class="resources-page">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+      <div class="container nav">
+        <a class="logo" href="/" aria-label="Marketing In Action Home">
+          <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
+        </a>
+
+        <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+          <span class="menu-icon" aria-hidden="true"></span>
+        </button>
+
+        <nav id="primary-nav" class="nav-links" aria-label="Primary">
+          <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a>
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+              MIA Academy
+              <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/academy/" role="menuitem">For Marketers in Tech</a>
+              <a href="/academy/sme/" role="menuitem">For SME Business Owners</a>
+              <a href="/academy/corporate/" role="menuitem">For Corporate</a>
+            </div>
+          </div>
+          <a href="/resources/" aria-current="page">MIA Resources</a>
+          <a href="/jobs/">MIA Jobs</a>
+          <!--
+          <a href="/events/">MIA Events</a>
+          -->
+          <div class="nav-dropdown">
+            <button class="nav-dropdown-trigger" type="button" aria-expanded="false" aria-haspopup="true">
+              MIA Services
+              <svg class="nav-dropdown-arrow" width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+                <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="/services/" role="menuitem">Services Overview</a>
+              <a href="/consulting/" role="menuitem">Go-To-Market Systems</a>
+              <a href="/acquisition/" role="menuitem">Paid Acquisition</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <section class="occ-hero">
+      <div class="container">
+        <span class="occ-pill"><span class="dot"></span> Free Tool</span>
+        <h1>What a cold outbound system <em>actually costs</em>.</h1>
+        <p>
+          Most outbound budgets are built backwards, starting from a tool list. Send volume is what
+          drives everything: it sets your inbox count, your inbox count sets your domain count, and your
+          contact volume sets your verification and enrichment spend. Enter one number below and the whole
+          stack prices itself. Every figure stays editable, because your rates are not the list rates.
+        </p>
+        <div class="occ-verified">
+          <strong>Prices verified 21 September 2026.</strong>
+          <span>Sources listed in full at the bottom of this page.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="occ-wrap">
+      <div class="container">
+        <div class="occ-grid">
+          <!-- ============ INPUTS ============ -->
+          <div class="occ-inputs">
+            <!-- Step 1: volume -->
+            <div class="occ-card">
+              <span class="occ-step">Step 1 — Volume</span>
+              <h2>Start with what you want to send.</h2>
+              <p class="occ-lede">
+                Pick whichever number you actually know. The other one is calculated from it, so you can
+                work forward from capacity or backward from a pipeline target.
+              </p>
+
+              <div class="occ-seg" role="group" aria-label="Volume input mode">
+                <button type="button" data-mode="sends" aria-pressed="true">Sends per day</button>
+                <button type="button" data-mode="contacts" aria-pressed="false">New contacts per month</button>
+              </div>
+
+              <div class="occ-fields occ-2">
+                <div class="occ-field" data-show="sends">
+                  <label for="occSendsDay">Target sends per day</label>
+                  <div class="occ-inp"><input type="number" id="occSendsDay" value="300" min="1" step="10" inputmode="numeric" /></div>
+                  <span class="occ-help">Total emails leaving all inboxes each sending day.</span>
+                </div>
+                <div class="occ-field" data-show="contacts" hidden>
+                  <label for="occContacts">New contacts per month</label>
+                  <div class="occ-inp"><input type="number" id="occContacts" value="2100" min="1" step="50" inputmode="numeric" /></div>
+                  <span class="occ-help">Fresh prospects entering the sequence each month.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occSteps">Emails per contact</label>
+                  <div class="occ-inp"><input type="number" id="occSteps" value="3" min="1" max="12" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help">Steps in the sequence. One contact at 3 steps is 3 sends.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occWorkDays">Sending days per month</label>
+                  <div class="occ-inp"><input type="number" id="occWorkDays" value="21" min="1" max="31" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help">Weekdays only is the safe default.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: ICP -->
+            <div class="occ-card">
+              <span class="occ-step">Step 2 — Who you are targeting</span>
+              <h2>The data stack depends entirely on your ICP.</h2>
+              <p class="occ-lede">
+                This is where most cost estimates go wrong. Sending infrastructure is nearly identical for
+                everyone. What changes is how hard your contacts are to find, and that difference is larger
+                than the entire sending bill.
+              </p>
+              <div class="occ-presets" role="group" aria-label="Ideal customer profile preset">
+                <button type="button" class="occ-preset" data-preset="local" aria-pressed="true">
+                  <strong>Local service businesses</strong>
+                  <span>Clinics, contractors, medspas, schools, dealerships. Scraped from Google Maps, emails sit on the business website.</span>
+                </button>
+                <button type="button" class="occ-preset" data-preset="b2b" aria-pressed="false">
+                  <strong>B2B and technology</strong>
+                  <span>Anything targeted by job title. Pulled from a contact database, verification usually bundled.</span>
+                </button>
+                <button type="button" class="occ-preset" data-preset="hard" aria-pressed="false">
+                  <strong>Hard-to-source niches</strong>
+                  <span>Marketplace sellers, directory listings, job boards, association member lists. Listings rarely carry contact details.</span>
+                </button>
+              </div>
+              <p class="occ-note" id="occPresetNote"></p>
+            </div>
+
+            <!-- Step 3: derived infra -->
+            <div class="occ-card">
+              <span class="occ-step">Step 3 — Infrastructure needed</span>
+              <h2>Sizing, derived from your volume.</h2>
+              <p class="occ-lede">
+                Dashed fields are calculated. Type over any of them to override, and the badge turns gold so
+                you can see what you have changed.
+              </p>
+
+              <div class="occ-fields occ-2">
+                <div class="occ-field">
+                  <label for="occSafeSends">Safe sends per inbox per day</label>
+                  <div class="occ-inp"><input type="number" id="occSafeSends" value="30" min="1" max="200" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help">Thirty is the conservative standard. Higher trades deliverability for volume.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occPerDomain">Inboxes per domain</label>
+                  <div class="occ-inp"><input type="number" id="occPerDomain" value="3" min="1" max="10" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help">Domains are what get burned. Three limits the blast radius.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occInboxes">Inboxes needed <span class="occ-tag" data-tag="occInboxes">auto</span></label>
+                  <div class="occ-inp occ-inp--auto" data-wrap="occInboxes"><input type="number" id="occInboxes" min="1" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help" id="occInboxHelp"></span>
+                </div>
+                <div class="occ-field">
+                  <label for="occDomains">Domains needed <span class="occ-tag" data-tag="occDomains">auto</span></label>
+                  <div class="occ-inp occ-inp--auto" data-wrap="occDomains"><input type="number" id="occDomains" min="1" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help" id="occDomainHelp"></span>
+                </div>
+                <div class="occ-field">
+                  <label for="occDeliverable">Usable contacts per 100 sourced</label>
+                  <div class="occ-inp"><input type="number" id="occDeliverable" min="1" max="100" step="1" inputmode="numeric" /><span>%</span></div>
+                  <span class="occ-help" id="occDelivHelp"></span>
+                </div>
+                <div class="occ-field">
+                  <label for="occSourced">Records sourced per month <span class="occ-tag" data-tag="occSourced">auto</span></label>
+                  <div class="occ-inp occ-inp--auto" data-wrap="occSourced"><input type="number" id="occSourced" min="1" step="10" inputmode="numeric" /></div>
+                  <span class="occ-help">You always pull more than you keep. This is what you pay to scrape, enrich and verify.</span>
+                </div>
+              </div>
+              <button type="button" class="occ-reset" id="occResetDerived">Reset every calculated field</button>
+            </div>
+
+            <!-- Step 4: fixed core -->
+            <div class="occ-card">
+              <span class="occ-step">Step 4 — Fixed core</span>
+              <h2>Domains, inboxes, sequencer. Everyone pays these.</h2>
+              <p class="occ-lede">
+                Domain pricing is the one line that changes materially in year two, which is why the rotation
+                toggle sits here rather than in a footnote.
+              </p>
+
+              <div class="occ-fields occ-2">
+                <div class="occ-field">
+                  <label for="occTld">Domain extension</label>
+                  <div class="occ-inp"><select id="occTld"></select></div>
+                  <span class="occ-help" id="occTldHelp"></span>
+                </div>
+                <div class="occ-field">
+                  <label for="occDomFirst">First-year price per domain</label>
+                  <div class="occ-inp"><span>$</span><input type="number" id="occDomFirst" min="0" step="0.01" inputmode="decimal" /></div>
+                  <span class="occ-help">What you pay on day one.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occDomRenew">Renewal price per domain</label>
+                  <div class="occ-inp"><span>$</span><input type="number" id="occDomRenew" min="0" step="0.01" inputmode="decimal" /></div>
+                  <span class="occ-help">What you pay every year after, if you keep them.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occInboxPrice">Price per inbox per month</label>
+                  <div class="occ-inp"><span>$</span><input type="number" id="occInboxPrice" value="3.50" min="0" step="0.01" inputmode="decimal" /></div>
+                  <span class="occ-help">
+                    Google Workspace list price is $8.40 a month. Cold-email resellers run $1.50 to $4.50 per
+                    inbox for the same thing, so enter what you actually pay.
+                  </span>
+                </div>
+              </div>
+
+              <div class="occ-toggle" style="margin-top: 6px">
+                <input type="checkbox" id="occRotate" />
+                <div class="occ-toggle-body">
+                  <label for="occRotate">I rotate domains between campaigns</label>
+                  <span class="occ-help">
+                    Rotating means buying fresh domains rather than renewing, so year two is charged at
+                    first-year pricing again. Leave this off if you keep and warm the same domains.
+                  </span>
+                </div>
+              </div>
+
+              <div class="occ-fields" style="margin-top: 16px">
+                <div class="occ-field">
+                  <label for="occSeq">Sequencer</label>
+                  <div class="occ-inp"><select id="occSeq"></select></div>
+                  <span class="occ-help" id="occSeqHelp"></span>
+                </div>
+                <div class="occ-field">
+                  <label for="occSeqPrice">Sequencer cost per month <span class="occ-tag" data-tag="occSeqPrice">auto</span></label>
+                  <div class="occ-inp occ-inp--auto" data-wrap="occSeqPrice"><span>$</span><input type="number" id="occSeqPrice" min="0" step="1" inputmode="decimal" /></div>
+                  <span class="occ-help">The tier steps up with your volume. Override if you are on a legacy or annual rate.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 5: variable stack -->
+            <div class="occ-card">
+              <span class="occ-step">Step 5 — Variable stack</span>
+              <h2>Sourcing, verification, enrichment.</h2>
+              <p class="occ-lede" id="occStackLede"></p>
+              <div id="occStack"></div>
+            </div>
+
+            <!-- Step 6: automation -->
+            <div class="occ-card">
+              <span class="occ-step">Step 6 — Automation</span>
+              <h2>Probably zero, and that is the point.</h2>
+              <p class="occ-lede">
+                Smartlead already handles sequencing, scheduling, reply detection and bounce handling
+                natively. Most first builds need no automation layer at all, so this defaults to nothing.
+                It earns a line only once you have a CRM sync, a lead-routing rule, a multi-source enrichment
+                waterfall, or reply classification to run.
+              </p>
+              <div class="occ-fields">
+                <div class="occ-field">
+                  <label for="occAuto">Automation layer</label>
+                  <div class="occ-inp"><select id="occAuto"></select></div>
+                  <span class="occ-help" id="occAutoHelp"></span>
+                </div>
+                <div class="occ-field" id="occAutoPriceField" hidden>
+                  <label for="occAutoPrice">Automation cost per month</label>
+                  <div class="occ-inp"><span>$</span><input type="number" id="occAutoPrice" min="0" step="1" inputmode="decimal" /></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 7: outcomes -->
+            <div class="occ-card">
+              <span class="occ-step">Step 7 — Outcomes</span>
+              <h2>What the spend is supposed to buy.</h2>
+              <p class="occ-lede">
+                Cost only means something next to what it returns. These defaults are conservative
+                industry benchmarks, not promises. Replace them with your own numbers the moment you have them.
+              </p>
+              <div class="occ-fields occ-2">
+                <div class="occ-field">
+                  <label for="occReply">Reply rate</label>
+                  <div class="occ-inp"><input type="number" id="occReply" min="0" max="100" step="0.1" inputmode="decimal" /><span>%</span></div>
+                  <span class="occ-help">Any reply, of contacts reached.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occPositive">Positive share of replies</label>
+                  <div class="occ-inp"><input type="number" id="occPositive" value="5" min="0" max="100" step="0.5" inputmode="decimal" /><span>%</span></div>
+                  <span class="occ-help">Most replies are declines, bounces and unsubscribes.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occMeeting">Positive to meeting held</label>
+                  <div class="occ-inp"><input type="number" id="occMeeting" value="50" min="0" max="100" step="1" inputmode="decimal" /><span>%</span></div>
+                  <span class="occ-help">Interest that survives to a meeting actually happening.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occDealValue">Average deal value</label>
+                  <div class="occ-inp"><span>$</span><input type="number" id="occDealValue" value="12000" min="0" step="500" inputmode="decimal" /></div>
+                  <span class="occ-help">Optional. Leave at zero to hide the revenue lines.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occCloseRate">Meeting to closed won</label>
+                  <div class="occ-inp"><input type="number" id="occCloseRate" value="20" min="0" max="100" step="1" inputmode="decimal" /><span>%</span></div>
+                  <span class="occ-help">Your own historical close rate beats any benchmark.</span>
+                </div>
+                <div class="occ-field">
+                  <label for="occWarmup">Warmup days before first send</label>
+                  <div class="occ-inp"><input type="number" id="occWarmup" value="21" min="0" max="120" step="1" inputmode="numeric" /></div>
+                  <span class="occ-help">Two to three weeks is standard. Zero sends during this window.</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 8: SDR -->
+            <div class="occ-card">
+              <span class="occ-step">Step 8 — The comparison that matters</span>
+              <h2>Against the cost of one sales development representative.</h2>
+              <p class="occ-lede">
+                The month-one sticker price is the wrong benchmark. The right one is the headcount this
+                replaces or augments, loaded properly with payroll taxes, benefits, tooling, recruiting and ramp.
+              </p>
+              <div class="occ-seg" style="grid-template-columns: repeat(3, 1fr)" role="group" aria-label="SDR benchmark">
+                <button type="button" data-sdr="us" aria-pressed="true">US in-house</button>
+                <button type="button" data-sdr="offshore" aria-pressed="false">Offshore</button>
+                <button type="button" data-sdr="custom" aria-pressed="false">My own</button>
+              </div>
+              <div class="occ-fields">
+                <div class="occ-field">
+                  <label for="occSdrCost">Fully loaded SDR cost per year</label>
+                  <div class="occ-inp"><span>$</span><input type="number" id="occSdrCost" min="0" step="500" inputmode="decimal" /></div>
+                  <span class="occ-help" id="occSdrHelp"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ============ RESULTS ============ -->
+          <div class="occ-results">
+            <div class="occ-out">
+              <div class="occ-headline">
+                <span class="occ-big" id="occM1">$0</span>
+                <span class="occ-cap">Month one, all in</span>
+              </div>
+
+              <div class="occ-sub">Month one</div>
+              <div class="occ-line"><span>One-time setup (domains)</span><strong id="occOneTime">$0</strong></div>
+              <div class="occ-line"><span>Recurring, first month</span><strong id="occRec1">$0</strong></div>
+
+              <div class="occ-sub">Steady state, month two onward</div>
+              <div class="occ-line occ-line--sub"><span id="occInboxLbl">Inboxes</span><strong id="occInboxCost">$0</strong></div>
+              <div class="occ-line occ-line--sub"><span id="occSeqLbl">Sequencer</span><strong id="occSeqCost">$0</strong></div>
+              <div class="occ-line occ-line--sub"><span id="occSrcLbl">Sourcing</span><strong id="occSrcCost">$0</strong></div>
+              <div class="occ-line occ-line--sub"><span id="occVerLbl">Verification</span><strong id="occVerCost">$0</strong></div>
+              <div class="occ-line occ-line--sub"><span id="occEnrLbl">Enrichment</span><strong id="occEnrCost">$0</strong></div>
+              <div class="occ-line occ-line--sub"><span id="occAutoLbl">Automation</span><strong id="occAutoCost">$0</strong></div>
+              <div class="occ-line occ-line--key"><span>Monthly from month two</span><strong id="occSteady">$0</strong></div>
+
+              <div class="occ-sub">Multi-year</div>
+              <div class="occ-line"><span>Full first year</span><strong id="occY1">$0</strong></div>
+              <div class="occ-line"><span>Full second year</span><strong id="occY2">$0</strong></div>
+              <div class="occ-delta" id="occRotateDelta"></div>
+            </div>
+
+            <div class="occ-out">
+              <h2>Cost per contact, and per meeting</h2>
+              <div class="occ-line"><span>Contacts reached per month</span><strong id="occContactsOut">0</strong></div>
+              <div class="occ-line"><span>Emails sent per month</span><strong id="occSendsOut">0</strong></div>
+              <div class="occ-line occ-line--key"><span>Cost per contact reached</span><strong id="occCPC">$0</strong></div>
+              <div class="occ-sub">Down the funnel</div>
+              <div class="occ-line occ-line--sub"><span>Replies per month</span><strong id="occReplies">0</strong></div>
+              <div class="occ-line occ-line--sub"><span>Positive responses per month</span><strong id="occPos">0</strong></div>
+              <div class="occ-line"><span>Meetings held per month</span><strong id="occMeetings">0</strong></div>
+              <div class="occ-line occ-line--key"><span>Cost per meeting held</span><strong id="occCPM">$0</strong></div>
+              <div class="occ-line" id="occRevRow"><span>Closed won revenue per month</span><strong id="occRev">$0</strong></div>
+              <div class="occ-line occ-line--key" id="occRoiRow"><span>Return on stack spend</span><strong id="occRoi">0x</strong></div>
+            </div>
+
+            <div class="occ-out">
+              <h2>Against one SDR</h2>
+              <div class="occ-line"><span id="occSdrLbl">Fully loaded SDR, per year</span><strong id="occSdrOut">$0</strong></div>
+              <div class="occ-line"><span>Your stack, first year</span><strong id="occY1b">$0</strong></div>
+              <div class="occ-line occ-line--key"><span>Stack as a share of one SDR</span><strong id="occShare">0%</strong></div>
+              <div class="occ-delta" id="occSdrDelta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WARMUP TIMELINE ============ -->
+    <section class="occ-wrap" style="padding-top: 8px">
+      <div class="container">
+        <div class="occ-card">
+          <span class="occ-step">The line item nobody budgets for</span>
+          <h2>Your warmup timeline, from today.</h2>
+          <p class="occ-lede">
+            This is the single most common reason an outbound engagement feels like it failed at week four.
+            The client counts from the day they paid. The system counts from the first send, which is
+            three weeks later. Both parties are looking at the same campaign and reading completely
+            different results.
+          </p>
+          <div class="occ-time" id="occTimeline"></div>
+          <p class="occ-note">
+            <strong>Read this before you set expectations.</strong>
+            <span id="occTimelineNote"></span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICE SOURCES ============ -->
+    <section class="occ-wrap" style="padding-top: 8px">
+      <div class="container">
+        <div class="occ-card">
+          <span class="occ-step">Verified 21 September 2026</span>
+          <h2>Domain pricing, and why year two moves.</h2>
+          <p class="occ-lede">
+            Registrar pricing at Spaceship, checked live. The pattern is consistent across registrars even
+            where the exact figures differ: the cheaper the first year, the steeper the renewal. This is the
+            table behind the rotation toggle.
+          </p>
+          <div class="occ-scroll">
+            <table class="occ-table">
+              <thead>
+                <tr>
+                  <th>Extension</th>
+                  <th class="occ-num">First year</th>
+                  <th class="occ-num">Renewal</th>
+                  <th class="occ-num">Renewal premium</th>
+                  <th>Best for</th>
+                </tr>
+              </thead>
+              <tbody id="occTldTable"></tbody>
+            </table>
+          </div>
+          <p class="occ-note">
+            <strong>The counterintuitive part.</strong> Cheap first-year extensions are only cheap if you
+            rotate. Keep a <code>.online</code> for two years and it costs more than a <code>.com</code>.
+            Flat renewers like <code>.us</code>, <code>.net</code> and <code>.biz</code> cost more on day one
+            and less every year after, so the right extension is a function of the rotation toggle above,
+            not a matter of taste.
+          </p>
+        </div>
+
+        <div class="occ-card">
+          <span class="occ-step">Sources</span>
+          <h2>Every default price, and where it came from.</h2>
+          <p class="occ-lede">
+            Published list pricing as of 21 September 2026. Reseller, annual and legacy rates differ, which
+            is exactly why every field on this page is editable.
+          </p>
+          <div class="occ-scroll">
+            <table class="occ-table">
+              <thead>
+                <tr><th>Tool</th><th>Default used</th><th>What it buys</th><th>Source</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Google Workspace</strong></td>
+                  <td>$8.40 / inbox / mo</td>
+                  <td>Business Starter, monthly billing. $7.00 on an annual commitment. Cold-email resellers sell the same mailbox at $1.50 to $4.50, which is why the field defaults to $3.50.</td>
+                  <td><a href="https://workspace.google.com/pricing" target="_blank" rel="noreferrer">workspace.google.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Smartlead</strong></td>
+                  <td>$39 / mo</td>
+                  <td>Basic: 2,000 leads and 6,000 sends a month, unlimited inboxes and warmup. Pro is $94 for 30,000 leads. The calculator steps the tier up automatically when your volume outgrows Basic.</td>
+                  <td><a href="https://www.smartlead.ai/pricing" target="_blank" rel="noreferrer">smartlead.ai</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Instantly</strong></td>
+                  <td>$97 / mo</td>
+                  <td>Hypergrowth: 100,000 emails and 25,000 contacts a month. $77.60 billed annually.</td>
+                  <td><a href="https://instantly.ai/pricing" target="_blank" rel="noreferrer">instantly.ai</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Outscraper</strong></td>
+                  <td>$9 / 1,000 records</td>
+                  <td>$3 per 1,000 base Google Maps results, roughly $6 with email enrichment and $9 with verification added. First 500 free. Usage-based, so it scales with your sourcing volume rather than sitting flat.</td>
+                  <td><a href="https://outscraper.com/google-maps-scraper-pricing-enrichment-cost/" target="_blank" rel="noreferrer">outscraper.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>MillionVerifier</strong></td>
+                  <td>$3.90 / 1,000 credits</td>
+                  <td>$39 for 10,000 credits, one-time, never expiring. Charged here per thousand so the monthly maths stays honest, but you buy it in lumps.</td>
+                  <td><a href="https://www.millionverifier.com/" target="_blank" rel="noreferrer">millionverifier.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Apollo</strong></td>
+                  <td>$49 / user / mo</td>
+                  <td>Basic on annual billing, $59 monthly. Professional is $79 annual and $99 monthly. Credits and seats are the costs teams underestimate.</td>
+                  <td><a href="https://www.apollo.io/pricing" target="_blank" rel="noreferrer">apollo.io</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Prospeo</strong></td>
+                  <td>$49 / mo</td>
+                  <td>Starter, 2,000 credits a month, $37 billed yearly. One credit per email, ten per mobile number. Credits roll over.</td>
+                  <td><a href="https://prospeo.io/pricing" target="_blank" rel="noreferrer">prospeo.io</a></td>
+                </tr>
+                <tr>
+                  <td><strong>SalesQL</strong></td>
+                  <td>$39 / mo</td>
+                  <td>Starter, but only 100 credits a month. Advanced is $79 for 300 and Pro is $119 for 600. Check the credit line before the price line, because these volumes are small for outbound.</td>
+                  <td><a href="https://salesql.com/pricing" target="_blank" rel="noreferrer">salesql.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Clay</strong></td>
+                  <td>$185 / mo</td>
+                  <td>Launch: 2,500 data credits and 15,000 actions. Growth is $495 for 6,000 credits and 40,000 actions. The old $149 Starter tier is legacy and closed to new customers, so quotes citing it are stale.</td>
+                  <td><a href="https://www.clay.com/pricing" target="_blank" rel="noreferrer">clay.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Apify</strong></td>
+                  <td>$29 / mo</td>
+                  <td>Starter, where the fee is prepaid platform credit rather than a flat subscription. Compute units burn it down and unused credit does not roll over. Scale is $199.</td>
+                  <td><a href="https://apify.com/pricing" target="_blank" rel="noreferrer">apify.com</a></td>
+                </tr>
+                <tr>
+                  <td><strong>n8n</strong></td>
+                  <td>$0 by default</td>
+                  <td>Self-hosted Community edition is free with unlimited executions, so you pay only for a small server at roughly $5 to $10 a month. Cloud Starter is &euro;24 monthly, about $26, for 2,500 executions.</td>
+                  <td><a href="https://n8n.io/pricing/" target="_blank" rel="noreferrer">n8n.io</a></td>
+                </tr>
+                <tr>
+                  <td><strong>SDR, US in-house</strong></td>
+                  <td>$110,000 / year</td>
+                  <td>Base of $55,000 to $60,000 and on-target earnings of $83,000 to $95,000, loaded with 7.65% payroll tax, roughly $18,000 of health cover, $3,000 to $5,000 of tooling, plus recruiting and ramp. Published fully loaded ranges run $95,000 to $210,000.</td>
+                  <td><a href="https://saleshive.com/blog/true-cost-sdr-sales-development-rep" target="_blank" rel="noreferrer">SalesHive</a></td>
+                </tr>
+                <tr>
+                  <td><strong>SDR, offshore</strong></td>
+                  <td>$26,400 / year</td>
+                  <td>$2,200 a month loaded for a dedicated offshore rep. Published ranges run $1,000 to $3,500 a month depending on region and whether management is included.</td>
+                  <td><a href="https://remotegrowthpartners.com/blog/real-cost-hiring-sdrs-in-house-vs-offshore-2026" target="_blank" rel="noreferrer">Remote Growth Partners</a></td>
+                </tr>
+                <tr>
+                  <td><strong>Domains</strong></td>
+                  <td>See table above</td>
+                  <td>Spaceship registration and renewal pricing, read from each extension's own pricing page.</td>
+                  <td><a href="https://www.spaceship.com/domains/" target="_blank" rel="noreferrer">spaceship.com</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="occ-foot">
+            Prices move. If you are reading this long after 21 September 2026, treat these as a starting
+            point and check the linked pages. Nothing here is a quote, an endorsement, or an affiliate link.
+          </p>
+        </div>
+
+        <div class="occ-cta">
+          <h2>Knowing the cost is the easy half. <em>Building the system is the other one.</em></h2>
+          <p>
+            This page gives you the number. Turning it into booked meetings takes positioning that earns a
+            reply, infrastructure that survives warmup, and a sequence worth opening. That is the work we do
+            for technology companies and agencies: positioning, GTM infrastructure, outbound, paid, and
+            AI-assisted execution, pointed at predictable growth.
+          </p>
+          <a
+            class="button button-primary"
+            href="/consulting/?utm_source=resources&utm_medium=tool&utm_campaign=outbound-cost-calculator&utm_content=footer-cta"
+            >See how we build GTM engines &rarr;</a
+          >
+        </div>
+      </div>
+    </section>
+    <script>
+      (function () {
+        "use strict";
+
+        /* ---------------------------------------------------------------
+         * Reference data. Every figure verified 2026-09-21 against the
+         * vendor's own pricing page; sources are listed in the page table.
+         * ------------------------------------------------------------- */
+        var TLDS = [
+          { tld: ".com",    first: 8.88,  renew: 9.98,  best: "Keeping. Cheap to hold, and the most trusted extension." },
+          { tld: ".net",    first: 11.20, renew: 11.20, best: "Keeping. Flat forever, so year five costs what year one did." },
+          { tld: ".us",     first: 6.48,  renew: 6.48,  best: "Keeping. The cheapest flat renewer, US presence required." },
+          { tld: ".org",    first: 6.65,  renew: 11.39, best: "Either. Cheap enough to rotate, mild enough to keep." },
+          { tld: ".biz",    first: 18.63, renew: 18.63, best: "Keeping, if you can live with the day-one price." },
+          { tld: ".co",     first: 31.05, renew: 31.05, best: "Neither, on cost. Flat, but the most expensive on this list." },
+          { tld: ".xyz",    first: 1.86,  renew: 13.77, best: "Rotating. Very cheap to buy, painful to hold." },
+          { tld: ".info",   first: 3.11,  renew: 21.74, best: "Rotating only. Holding it costs seven times the first year." },
+          { tld: ".online", first: 0.98,  renew: 15.08, best: "Rotating only. Renews at fifteen times the first year." },
+          { tld: ".site",   first: 0.98,  renew: 15.08, best: "Rotating only. Renews at fifteen times the first year." }
+        ];
+
+        var PRESETS = {
+          local: {
+            note:
+              "Emails live on the business website, not in a contact database, so you scrape them and " +
+              "a large share are junk: role addresses, defunct sites, generic contact forms. Verification " +
+              "matters more here than anywhere else, and it is the cheapest insurance in the stack.",
+            lede:
+              "Sourced from Google Maps. Outscraper pulls the listings and the emails, MillionVerifier " +
+              "throws away the ones that would bounce.",
+            deliverable: 62,
+            reply: 1.2,
+            rows: [
+              { id: "src", on: true, locked: true, label: "Outscraper (Maps + email enrichment)", mode: "usage", rate: 9,
+                help: "Usage-based. $3 per 1,000 base results, about $9 per 1,000 once emails and verification are added. First 500 free." },
+              { id: "ver", on: true, label: "MillionVerifier", mode: "usage", rate: 3.9,
+                help: "$39 per 10,000 credits, one-time and non-expiring. Website-scraped addresses are junk-heavy, so do not skip this." },
+              { id: "enr", on: false, label: "Clay (waterfall enrichment)", mode: "flat", price: 185,
+                help: "Launch tier: 2,500 data credits and 15,000 actions. Rarely needed for local businesses, where the owner name is usually all you want." }
+            ]
+          },
+          b2b: {
+            note:
+              "Anything targeted by job title. The contact database is the whole sourcing layer and it " +
+              "bundles verification, so your per-contact data cost is flat and predictable. The trap here " +
+              "is seats and credits, not the headline subscription price.",
+            lede:
+              "Sourced from a contact database. Verification usually comes bundled, so the verifier is off " +
+              "by default. Turn it on if you are exporting to a cold domain and want a second opinion.",
+            deliverable: 90,
+            reply: 2.0,
+            rows: [
+              { id: "src", on: true, locked: true, label: "Apollo Basic", mode: "flat", price: 49,
+                help: "$49 per user per month on annual billing, $59 monthly. Professional is $79 annual and $99 monthly. Alternatives: Prospeo Starter at $49 for 2,000 credits, or SalesQL Starter at $39 but only 100 credits." },
+              { id: "ver", on: false, label: "MillionVerifier (second pass)", mode: "usage", rate: 3.9,
+                help: "Optional. Database emails are already verified, but a second pass before a cold domain is cheap peace of mind." },
+              { id: "enr", on: false, label: "Clay (waterfall enrichment)", mode: "flat", price: 185,
+                help: "Launch tier. Worth it when one provider's coverage is not enough and you want to chain several. Credits climb fast." }
+            ]
+          },
+          hard: {
+            note:
+              "Marketplace sellers, directory listings, job boards, association member lists. The listing " +
+              "gives you the company but almost never the person, so you pay twice: once to scrape the " +
+              "listing and again to find an actual email behind it.",
+            lede:
+              "Scraped with Apify actors, then run through a separate email finder because listings rarely " +
+              "carry contact details. Both lines are load-bearing here.",
+            deliverable: 70,
+            reply: 1.5,
+            rows: [
+              { id: "src", on: true, locked: true, label: "Apify actors", mode: "flat", price: 29,
+                help: "Starter at $29 a month, paid as prepaid platform credit rather than a flat fee. Compute units burn it down and it does not roll over. Scale is $199." },
+              { id: "enr", on: true, label: "Email finder (Prospeo Starter)", mode: "flat", price: 49,
+                help: "2,000 credits a month. The listing gives you a company, this turns it into a person you can email." },
+              { id: "ver", on: true, label: "MillionVerifier", mode: "usage", rate: 3.9,
+                help: "$39 per 10,000 credits, one-time and non-expiring. Found emails are guesses until something verifies them." }
+            ]
+          }
+        };
+
+        var SEQUENCERS = {
+          smartlead: {
+            label: "Smartlead",
+            tiers: [
+              { name: "Basic", price: 39, contacts: 2000, sends: 6000 },
+              { name: "Pro", price: 94, contacts: 30000, sends: Infinity },
+              { name: "Unlimited Smart", price: 174, contacts: Infinity, sends: Infinity }
+            ]
+          },
+          instantly: {
+            label: "Instantly",
+            tiers: [{ name: "Hypergrowth", price: 97, contacts: 25000, sends: 100000 }]
+          }
+        };
+
+        var AUTOMATION = {
+          none: { label: "None (recommended to start)", price: 0,
+            help: "Smartlead handles sequencing, scheduling, reply detection and bounce handling on its own. Nothing to add." },
+          self: { label: "n8n self-hosted", price: 7,
+            help: "Community edition is free with unlimited executions. You pay for a small server, roughly $5 to $10 a month." },
+          cloud: { label: "n8n Cloud Starter", price: 26,
+            help: "About $26 a month (€24 billed monthly) for 2,500 executions. Worth it when you do not want to run a server." }
+        };
+
+        var SDRS = {
+          us: { cost: 110000, help: "Base of $55,000 to $60,000, on-target earnings of $83,000 to $95,000, loaded with payroll tax, benefits, tooling, recruiting and ramp. Published fully loaded ranges run $95,000 to $210,000." },
+          offshore: { cost: 26400, help: "$2,200 a month for a dedicated offshore rep. Published ranges run $1,000 to $3,500 a month depending on region and whether management is included." },
+          custom: { cost: 110000, help: "Enter your own number. Remember to load it: salary alone is typically only 40 to 60 percent of the real cost." }
+        };
+
+        /* ---------------------------------------------------------------
+         * State
+         * ------------------------------------------------------------- */
+        var state = { mode: "sends", preset: "local", sdr: "us", rowState: {} };
+        var overrides = {}; /* id -> true once the user types over a derived field */
+
+        var $ = function (id) { return document.getElementById(id); };
+        var num = function (id) { var v = parseFloat($(id).value); return isFinite(v) ? v : 0; };
+        var usd = function (n) {
+          if (!isFinite(n)) n = 0;
+          return "$" + Math.round(n).toLocaleString("en-US");
+        };
+        var usd2 = function (n) {
+          if (!isFinite(n)) n = 0;
+          if (n >= 100) return usd(n);
+          return "$" + n.toFixed(2);
+        };
+        var int = function (n) {
+          if (!isFinite(n)) n = 0;
+          return Math.round(n).toLocaleString("en-US");
+        };
+
+        /* Write a derived value into a field unless the user has overridden it. */
+        function derived(id, value, decimals) {
+          var el = $(id);
+          var wrap = document.querySelector('[data-wrap="' + id + '"]');
+          var tag = document.querySelector('[data-tag="' + id + '"]');
+          if (!overrides[id]) {
+            el.value = decimals ? value.toFixed(decimals) : Math.round(value);
+            if (wrap) { wrap.classList.add("occ-inp--auto"); wrap.classList.remove("occ-inp--edited"); }
+            if (tag) { tag.textContent = "auto"; tag.classList.remove("occ-tag--edited"); }
+            return decimals ? value : Math.round(value);
+          }
+          if (wrap) { wrap.classList.remove("occ-inp--auto"); wrap.classList.add("occ-inp--edited"); }
+          if (tag) { tag.textContent = "yours"; tag.classList.add("occ-tag--edited"); }
+          return num(id);
+        }
+
+        /* ---------------------------------------------------------------
+         * Build the variable-stack rows for the active preset
+         * ------------------------------------------------------------- */
+        function buildStack() {
+          var preset = PRESETS[state.preset];
+          var host = $("occStack");
+          host.innerHTML = "";
+          $("occStackLede").textContent = preset.lede;
+          $("occPresetNote").textContent = preset.note;
+
+          preset.rows.forEach(function (row) {
+            var key = state.preset + ":" + row.id;
+            if (!(key in state.rowState)) state.rowState[key] = row.on;
+
+            var wrap = document.createElement("div");
+            wrap.className = "occ-toggle";
+
+            var cb = document.createElement("input");
+            cb.type = "checkbox";
+            cb.id = "occRow_" + row.id;
+            cb.checked = state.rowState[key];
+            cb.disabled = !!row.locked;
+            cb.addEventListener("change", function () {
+              state.rowState[key] = cb.checked;
+              compute();
+            });
+
+            var body = document.createElement("div");
+            body.className = "occ-toggle-body";
+
+            var lab = document.createElement("label");
+            lab.setAttribute("for", cb.id);
+            lab.textContent = row.label;
+            if (row.locked) {
+              var t = document.createElement("span");
+              t.className = "occ-tag";
+              t.textContent = "required";
+              t.style.marginLeft = "7px";
+              lab.appendChild(t);
+            } else {
+              var o = document.createElement("span");
+              o.className = "occ-tag occ-tag--opt";
+              o.textContent = "optional";
+              o.style.marginLeft = "7px";
+              lab.appendChild(o);
+            }
+
+            var help = document.createElement("span");
+            help.className = "occ-help";
+            help.textContent = row.help;
+
+            var priceField = document.createElement("div");
+            priceField.className = "occ-toggle-price";
+            var inp = document.createElement("div");
+            inp.className = "occ-inp";
+            var dollar = document.createElement("span");
+            dollar.textContent = "$";
+            var field = document.createElement("input");
+            field.type = "number";
+            field.min = "0";
+            field.step = "0.01";
+            field.inputMode = "decimal";
+            field.id = "occPrice_" + row.id;
+            field.value = row.mode === "usage" ? row.rate : row.price;
+            field.addEventListener("input", compute);
+            var unit = document.createElement("span");
+            unit.textContent = row.mode === "usage" ? "/ 1,000" : "/ mo";
+            unit.style.fontSize = "12px";
+            inp.appendChild(dollar);
+            inp.appendChild(field);
+            inp.appendChild(unit);
+            priceField.appendChild(inp);
+
+            body.appendChild(lab);
+            body.appendChild(help);
+            body.appendChild(priceField);
+            wrap.appendChild(cb);
+            wrap.appendChild(body);
+            host.appendChild(wrap);
+          });
+        }
+
+        /* ---------------------------------------------------------------
+         * The cascade
+         * ------------------------------------------------------------- */
+        function compute() {
+          var steps = Math.max(1, num("occSteps"));
+          var workDays = Math.max(1, num("occWorkDays"));
+
+          /* 1. Volume. Whichever field is visible drives the other. */
+          var sendsDay, sendsMonth, contactsMonth;
+          if (state.mode === "sends") {
+            sendsDay = Math.max(0, num("occSendsDay"));
+            sendsMonth = sendsDay * workDays;
+            contactsMonth = sendsMonth / steps;
+            $("occContacts").value = Math.round(contactsMonth);
+          } else {
+            contactsMonth = Math.max(0, num("occContacts"));
+            sendsMonth = contactsMonth * steps;
+            sendsDay = sendsMonth / workDays;
+            $("occSendsDay").value = Math.round(sendsDay);
+          }
+
+          /* 2. Inboxes from sends per day, domains from inboxes. */
+          var safeSends = Math.max(1, num("occSafeSends"));
+          var perDomain = Math.max(1, num("occPerDomain"));
+          var inboxes = derived("occInboxes", Math.max(1, Math.ceil(sendsDay / safeSends)));
+          var domains = derived("occDomains", Math.max(1, Math.ceil(inboxes / perDomain)));
+
+          $("occInboxHelp").textContent =
+            int(Math.round(sendsDay)) + " sends a day ÷ " + int(safeSends) + " per inbox.";
+          $("occDomainHelp").textContent =
+            int(inboxes) + " inboxes ÷ " + int(perDomain) + " per domain.";
+
+          /* 3. Sourced records from contacts and the usable rate. */
+          var deliverable = Math.min(100, Math.max(1, num("occDeliverable"))) / 100;
+          var sourced = derived("occSourced", Math.ceil(contactsMonth / deliverable));
+
+          /* 4. Fixed core. */
+          var domFirst = num("occDomFirst");
+          var domRenew = num("occDomRenew");
+          var rotate = $("occRotate").checked;
+          var inboxCost = inboxes * num("occInboxPrice");
+
+          /* Sequencer tier auto-steps with volume. */
+          var seqKey = $("occSeq").value;
+          var seq = SEQUENCERS[seqKey];
+          var tier = seq.tiers[seq.tiers.length - 1];
+          for (var i = 0; i < seq.tiers.length; i++) {
+            if (contactsMonth <= seq.tiers[i].contacts && sendsMonth <= seq.tiers[i].sends) {
+              tier = seq.tiers[i];
+              break;
+            }
+          }
+          var seqCost = derived("occSeqPrice", tier.price);
+          var capNote =
+            tier.sends === Infinity
+              ? int(tier.contacts === Infinity ? 0 : tier.contacts) + " contacts a month."
+              : int(tier.contacts) + " contacts and " + int(tier.sends) + " sends a month.";
+          $("occSeqHelp").textContent =
+            seq.label + " " + tier.name + " at " + usd(tier.price) + " a month covers " +
+            (tier.contacts === Infinity ? "unlimited volume." : capNote) +
+            " You need " + int(contactsMonth) + " contacts and " + int(sendsMonth) + " sends.";
+
+          /* 5. Variable stack. */
+          var preset = PRESETS[state.preset];
+          var costs = { src: 0, ver: 0, enr: 0 };
+          var labels = { src: "Sourcing", ver: "Verification", enr: "Enrichment" };
+          preset.rows.forEach(function (row) {
+            var key = state.preset + ":" + row.id;
+            var on = row.locked ? true : state.rowState[key];
+            var field = $("occPrice_" + row.id);
+            if (!field) return;
+            var v = parseFloat(field.value);
+            if (!isFinite(v)) v = 0;
+            var c = 0;
+            if (on) c = row.mode === "usage" ? (sourced / 1000) * v : v;
+            costs[row.id] += c;
+            labels[row.id] = row.label + (on ? "" : " (off)");
+          });
+
+          /* 6. Automation. */
+          var autoKey = $("occAuto").value;
+          var autoCost = autoKey === "none" ? 0 : num("occAutoPrice");
+          $("occAutoHelp").textContent = AUTOMATION[autoKey].help;
+          $("occAutoPriceField").hidden = autoKey === "none";
+
+          /* ---- totals ---- */
+          var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
+          var oneTime = domains * domFirst;
+          var month1 = oneTime + recurring;
+          var year1 = oneTime + recurring * 12;
+          var year2 = domains * (rotate ? domFirst : domRenew) + recurring * 12;
+
+          $("occM1").textContent = usd(month1);
+          $("occOneTime").textContent = usd(oneTime);
+          $("occRec1").textContent = usd(recurring);
+          $("occInboxLbl").textContent = int(inboxes) + " inboxes";
+          $("occInboxCost").textContent = usd2(inboxCost);
+          $("occSeqLbl").textContent = seq.label + " " + tier.name;
+          $("occSeqCost").textContent = usd2(seqCost);
+          $("occSrcLbl").textContent = labels.src;
+          $("occSrcCost").textContent = usd2(costs.src);
+          $("occVerLbl").textContent = labels.ver;
+          $("occVerCost").textContent = usd2(costs.ver);
+          $("occEnrLbl").textContent = labels.enr;
+          $("occEnrCost").textContent = usd2(costs.enr);
+          $("occAutoLbl").textContent = "Automation — " + AUTOMATION[autoKey].label;
+          $("occAutoCost").textContent = usd2(autoCost);
+          $("occSteady").textContent = usd(recurring);
+          $("occY1").textContent = usd(year1);
+          $("occY2").textContent = usd(year2);
+
+          /* Year-two delta: the whole reason the rotation toggle exists. */
+          var alt = domains * (rotate ? domRenew : domFirst) + recurring * 12;
+          var diff = Math.abs(year2 - alt);
+          var tldName = $("occTld").value;
+          if (diff < 1) {
+            $("occRotateDelta").innerHTML =
+              "<strong>" + tldName + " renews at exactly its first-year price</strong>, so rotating and " +
+              "keeping cost the same in year two. The choice is purely a deliverability one here.";
+          } else if (year2 < alt) {
+            $("occRotateDelta").innerHTML =
+              "<strong>" + usd(diff) + " cheaper</strong> in year two than the other choice. With " +
+              tldName + " at " + usd2(domFirst) + " new and " + usd2(domRenew) + " to renew, across " +
+              int(domains) + " domains, " + (rotate ? "rotating" : "keeping") + " is the cheaper option.";
+          } else {
+            $("occRotateDelta").innerHTML =
+              "<strong>" + usd(diff) + " more expensive</strong> in year two than the other choice. " +
+              tldName + " costs " + usd2(domFirst) + " new and " + usd2(domRenew) + " to renew, so across " +
+              int(domains) + " domains you would save that by " + (rotate ? "keeping" : "rotating") + " instead.";
+          }
+
+          /* ---- per-contact and funnel ---- */
+          $("occContactsOut").textContent = int(contactsMonth);
+          $("occSendsOut").textContent = int(sendsMonth);
+          $("occCPC").textContent = contactsMonth > 0 ? "$" + (recurring / contactsMonth).toFixed(2) : "$0.00";
+
+          var replies = contactsMonth * (num("occReply") / 100);
+          var positives = replies * (num("occPositive") / 100);
+          var meetings = positives * (num("occMeeting") / 100);
+          $("occReplies").textContent = replies.toFixed(replies < 10 ? 1 : 0);
+          $("occPos").textContent = positives.toFixed(positives < 10 ? 1 : 0);
+          $("occMeetings").textContent = meetings.toFixed(meetings < 10 ? 1 : 0);
+          $("occCPM").textContent = meetings > 0.01 ? usd(recurring / meetings) : "n/a";
+
+          var dealValue = num("occDealValue");
+          var closed = meetings * (num("occCloseRate") / 100);
+          var revenue = closed * dealValue;
+          var showRev = dealValue > 0;
+          $("occRevRow").hidden = !showRev;
+          $("occRoiRow").hidden = !showRev;
+          if (showRev) {
+            $("occRev").textContent = usd(revenue);
+            $("occRoi").textContent = recurring > 0 ? (revenue / recurring).toFixed(1) + "x" : "n/a";
+          }
+
+          /* ---- SDR comparison ---- */
+          var sdrCost = num("occSdrCost");
+          var share = sdrCost > 0 ? (year1 / sdrCost) * 100 : 0;
+          $("occSdrOut").textContent = usd(sdrCost);
+          $("occY1b").textContent = usd(year1);
+          $("occShare").textContent = share.toFixed(share < 10 ? 1 : 0) + "%";
+          $("occSdrLbl").textContent =
+            (state.sdr === "us" ? "US in-house SDR" : state.sdr === "offshore" ? "Offshore SDR" : "Your SDR") +
+            ", fully loaded";
+
+          var meetingsYear = meetings * 11; /* month one is warmup, so eleven sending months */
+          if (meetingsYear > 0.5 && sdrCost > 0) {
+            var sdrPerMeeting = sdrCost / meetingsYear;
+            var stackPerMeeting = year1 / meetingsYear;
+            $("occSdrDelta").innerHTML =
+              "At this volume the stack reaches <strong>" + int(contactsMonth * 11) + " contacts</strong> and " +
+              "holds <strong>" + meetingsYear.toFixed(0) + " meetings</strong> in its first year, counting " +
+              "eleven sending months rather than twelve because month one is warmup. That is <strong>" +
+              usd(stackPerMeeting) + " per meeting</strong>. For one SDR to justify the same spend they would " +
+              "have to book those same meetings at <strong>" + usd(sdrPerMeeting) + " each</strong>.";
+          } else {
+            $("occSdrDelta").innerHTML =
+              "Set a reply rate above zero in step seven to see the cost per meeting on both sides.";
+          }
+
+          buildTimeline(sendsDay);
+        }
+
+        /* ---------------------------------------------------------------
+         * Warmup timeline
+         * ------------------------------------------------------------- */
+        function buildTimeline(sendsDay) {
+          var warmup = Math.max(0, num("occWarmup"));
+          var ramp = 10;
+          var today = new Date();
+          var fmt = function (d) {
+            return d.toLocaleDateString("en-GB", { weekday: "short", day: "numeric", month: "long", year: "numeric" });
+          };
+          var plus = function (days) {
+            var d = new Date(today.getTime());
+            d.setDate(d.getDate() + days);
+            return d;
+          };
+
+          var firstSend = plus(warmup);
+          var fullVolume = plus(warmup + ramp);
+          var week4 = plus(28);
+
+          var steps = [
+            { cls: "", date: fmt(today), title: "Day 0 — build and buy",
+              note: "Domains registered, DNS records published, inboxes provisioned, SPF, DKIM, DMARC and MX verified. You are paying from today. You are sending nothing." },
+            { cls: "occ-tstep--dead", date: "Days 1 to " + warmup + " — warmup",
+              title: "Zero emails reach a prospect",
+              note: "Inboxes talk only to warmup pools. Every cost on this page is running. Nothing measurable is happening, and no amount of budget shortens this window." },
+            { cls: "occ-tstep--live", date: fmt(firstSend), title: "First campaign send",
+              note: "Day " + warmup + ". This is the date your results should be measured from, and it is the date almost nobody writes into the contract." },
+            { cls: "", date: fmt(fullVolume), title: "Full volume reached",
+              note: "After roughly " + ramp + " days of ramping you hit " + int(Math.round(sendsDay)) + " sends a day. Only now is the system running at the capacity you are paying for." },
+            { cls: "", date: fmt(week4), title: "Week four, when the question gets asked",
+              note: "By the calendar the client has been paying for a month. By the campaign you are " +
+                Math.max(0, 28 - warmup) + " days into sending. That gap is the whole reason outbound engagements get judged as failures before they have had a chance to work." }
+          ];
+
+          var host = $("occTimeline");
+          host.innerHTML = "";
+          steps.forEach(function (s) {
+            var row = document.createElement("div");
+            row.className = "occ-tstep " + s.cls;
+            row.innerHTML =
+              '<div class="occ-trail"><div class="occ-dot"></div></div>' +
+              '<div class="occ-tbody"><div class="occ-tdate"></div>' +
+              '<div class="occ-ttitle"></div><p class="occ-tnote"></p></div>';
+            row.querySelector(".occ-tdate").textContent = s.date;
+            row.querySelector(".occ-ttitle").textContent = s.title;
+            row.querySelector(".occ-tnote").textContent = s.note;
+            host.appendChild(row);
+          });
+
+          $("occTimelineNote").textContent =
+            " Starting today, your first email reaches a prospect on " + fmt(firstSend) +
+            " and you reach full volume on " + fmt(fullVolume) +
+            ". Put both dates in writing before anyone signs anything.";
+        }
+
+        /* ---------------------------------------------------------------
+         * Wiring
+         * ------------------------------------------------------------- */
+        function fillTldTable() {
+          var body = $("occTldTable");
+          var sel = $("occTld");
+          TLDS.forEach(function (t) {
+            var opt = document.createElement("option");
+            opt.value = t.tld;
+            var prem = t.first > 0 ? Math.round((t.renew / t.first - 1) * 100) : 0;
+            opt.textContent = t.tld + "  —  " + usd2(t.first) + " new, " + usd2(t.renew) + " renewal";
+            sel.appendChild(opt);
+
+            var tr = document.createElement("tr");
+            tr.innerHTML =
+              "<td><strong>" + t.tld + "</strong></td>" +
+              '<td class="occ-num">' + usd2(t.first) + "</td>" +
+              '<td class="occ-num">' + usd2(t.renew) + "</td>" +
+              '<td class="occ-num ' + (prem === 0 ? "occ-flat" : "occ-up") + '">' +
+              (prem === 0 ? "flat" : "+" + prem.toLocaleString("en-US") + "%") + "</td>" +
+              "<td>" + t.best + "</td>";
+            body.appendChild(tr);
+          });
+          sel.value = ".com";
+          applyTld();
+        }
+
+        function applyTld() {
+          var t = TLDS.filter(function (x) { return x.tld === $("occTld").value; })[0];
+          if (!t) return;
+          $("occDomFirst").value = t.first.toFixed(2);
+          $("occDomRenew").value = t.renew.toFixed(2);
+          var prem = t.first > 0 ? Math.round((t.renew / t.first - 1) * 100) : 0;
+          $("occTldHelp").textContent =
+            prem === 0
+              ? t.tld + " renews at the same price it registers for. " + t.best
+              : t.tld + " renews " + prem.toLocaleString("en-US") + "% above its first year. " + t.best;
+        }
+
+        function applyPreset() {
+          var p = PRESETS[state.preset];
+          overrides["occSourced"] = false;
+          $("occDeliverable").value = p.deliverable;
+          $("occReply").value = p.reply;
+          $("occDelivHelp").textContent =
+            state.preset === "local"
+              ? "Website-scraped addresses are junk-heavy, so a large share never survives verification."
+              : state.preset === "b2b"
+              ? "Database contacts arrive pre-verified, so very little is thrown away."
+              : "Listings give you a company but rarely a person, so a meaningful share never resolves to an email.";
+          buildStack();
+          compute();
+        }
+
+        /* Segmented controls */
+        document.querySelectorAll("[data-mode]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            state.mode = b.dataset.mode;
+            document.querySelectorAll("[data-mode]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o === b));
+            });
+            document.querySelectorAll("[data-show]").forEach(function (f) {
+              f.hidden = f.dataset.show !== state.mode;
+            });
+            compute();
+          });
+        });
+
+        document.querySelectorAll("[data-preset]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            state.preset = b.dataset.preset;
+            document.querySelectorAll("[data-preset]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o === b));
+            });
+            applyPreset();
+          });
+        });
+
+        document.querySelectorAll("[data-sdr]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            state.sdr = b.dataset.sdr;
+            document.querySelectorAll("[data-sdr]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o === b));
+            });
+            if (state.sdr !== "custom") $("occSdrCost").value = SDRS[state.sdr].cost;
+            $("occSdrHelp").textContent = SDRS[state.sdr].help;
+            compute();
+          });
+        });
+
+        /* Sequencer + automation selects */
+        Object.keys(SEQUENCERS).forEach(function (k) {
+          var o = document.createElement("option");
+          o.value = k;
+          o.textContent = SEQUENCERS[k].label;
+          $("occSeq").appendChild(o);
+        });
+        Object.keys(AUTOMATION).forEach(function (k) {
+          var o = document.createElement("option");
+          o.value = k;
+          o.textContent = AUTOMATION[k].label;
+          $("occAuto").appendChild(o);
+        });
+        $("occAuto").addEventListener("change", function () {
+          $("occAutoPrice").value = AUTOMATION[$("occAuto").value].price;
+          compute();
+        });
+        $("occSeq").addEventListener("change", function () {
+          overrides["occSeqPrice"] = false;
+          compute();
+        });
+        $("occTld").addEventListener("change", function () {
+          applyTld();
+          compute();
+        });
+
+        /* Mark derived fields as overridden once typed into */
+        ["occInboxes", "occDomains", "occSourced", "occSeqPrice"].forEach(function (id) {
+          $(id).addEventListener("input", function () {
+            overrides[id] = true;
+            compute();
+          });
+        });
+
+        $("occResetDerived").addEventListener("click", function () {
+          overrides = {};
+          compute();
+        });
+
+        /* Any other input recomputes */
+        document.querySelectorAll(".occ-inputs input, .occ-inputs select").forEach(function (el) {
+          if (["occInboxes", "occDomains", "occSourced", "occSeqPrice"].indexOf(el.id) !== -1) return;
+          el.addEventListener("input", compute);
+          if (el.type === "checkbox") el.addEventListener("change", compute);
+        });
+
+        /* Boot */
+        fillTldTable();
+        $("occSdrCost").value = SDRS.us.cost;
+        $("occSdrHelp").textContent = SDRS.us.help;
+        $("occAutoPrice").value = 0;
+        applyPreset();
+      })();
+    </script>
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-title">Marketing In Action</div>
+            <p class="muted">
+              Execution-first marketing ecosystem helping more than 5,000 marketers, founders, and business owners unlock predictable revenue with templates, tools, community, and expert services.
+            </p>
+
+            <div class="footer-social">
+              <a
+                href="https://www.linkedin.com/company/marketinginactionnewsletter"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <!-- LinkedIn -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M4.98 3.5a2.48 2.48 0 110 4.96 2.48 2.48 0 010-4.96zM3 8.98h3.96V21H3zM9.5 8.98h3.8v1.64h.05c.53-1 1.82-2.05 3.75-2.05 4.01 0 4.75 2.64 4.75 6.08V21h-3.96v-5.45c0-1.3-.03-2.98-1.82-2.98-1.83 0-2.11 1.42-2.11 2.89V21H9.5z"
+                  />
+                </svg>
+              </a>
+
+              <a href="https://x.com/marketinginact" aria-label="Twitter" target="_blank" rel="noreferrer">
+                <!-- Twitter -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M22.46 6c-.77.35-1.6.58-2.46.69a4.27 4.27 0 001.88-2.36 8.48 8.48 0 01-2.7 1.03A4.24 4.24 0 0016.1 4c-2.36 0-4.27 1.91-4.27 4.27 0 .33.04.66.11.97A12.05 12.05 0 013 5.1a4.27 4.27 0 001.32 5.69 4.2 4.2 0 01-1.93-.53v.05c0 2.07 1.47 3.8 3.42 4.19a4.3 4.3 0 01-1.92.07 4.27 4.27 0 003.99 2.96A8.5 8.5 0 012 19.54a12.02 12.02 0 006.53 1.91c7.84 0 12.13-6.5 12.13-12.13l-.01-.55A8.7 8.7 0 0022.46 6z"
+                  />
+                </svg>
+              </a>
+
+              <a href="https://www.instagram.com/marketinginact" aria-label="Instagram" target="_blank" rel="noreferrer">
+                <!-- Instagram -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.97.24 2.43.4.6.23 1.03.5 1.48.95.45.45.72.88.95 1.48.16.46.35 1.26.4 2.43.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.24 1.97-.4 2.43-.23.6-.5 1.03-.95 1.48-.45.45-.88.72-1.48.95-.46.16-1.26.35-2.43.4-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.97-.24-2.43-.4-.6-.23-1.03-.5-1.48-.95-.45-.45-.72-.88-.95-1.48-.16-.46-.35-1.26-.4-2.43-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.24-1.97.4-2.43.23-.6.5-1.03.95-1.48.45-.45.88-.72 1.48-.95.46-.16 1.26-.35 2.43-.4 1.27-.06 1.65-.07 4.85-.07zm0 3.24a6.6 6.6 0 100 13.2 6.6 6.6 0 000-13.2zm0 10.88a4.28 4.28 0 110-8.56 4.28 4.28 0 010 8.56zm6.84-11.14a1.54 1.54 0 110 3.08 1.54 1.54 0 010-3.08z"
+                  />
+                </svg>
+              </a>
+
+              <a
+                href="https://www.youtube.com/playlist?list=PL9hp_79BJlXocm6UIhKXPgfddYuX0ZNLp"
+                aria-label="YouTube"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <!-- YouTube -->
+                <svg viewBox="0 0 24 24">
+                  <path
+                    d="M23.5 6.5s-.23-1.62-.93-2.34c-.88-.93-1.87-.93-2.33-.98C16.97 3 12 3 12 3h-.01s-4.97 0-8.24.18c-.46.05-1.45.05-2.33.98C.72 4.88.5 6.5.5 6.5S0 8.41 0 10.33v1.34c0 1.91.5 3.83.5 3.83s.23 1.62.93 2.34c.88.93 2.04.9 2.56 1C5.86 19 12 19 12 19s4.97 0 8.24-.18c.46-.05 1.45-.05 2.33-.98.7-.72.93-2.34.93-2.34s.5-1.91.5-3.83v-1.34c0-1.91-.5-3.83-.5-3.83zM9.75 14.57V8.93l5.5 2.82-5.5 2.82z"
+                  />
+                </svg>
+              </a>
+</div>
+          </div>
+
+          <div>
+            <div class="footer-title">MIA Ecosystem</div>
+            <ul class="footer-list">
+              <li><a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a></li>
+              <li><a href="https://newsletter.marketinginaction.xyz/s/events" target="_blank" rel="noreferrer">MIA Events</a></li>
+              <li><a href="https://chat.whatsapp.com/FJ4mXSOmac9Ft0CxIq6gd1" target="_blank" rel="noreferrer">MIA Community</a></li>
+              <li><a href="/academy/">MIA Academy</a></li>
+              <li><a href="/jobs/">MIA Jobs</a></li>
+              <li><a href="/services/">MIA Services</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-title">MIA Academy</div>
+            <ul class="footer-list">
+              <li><a href="/academy/dime/">Digital Income Made Easy (DIME)</a></li>
+              <li><a href="/academy/pro-bootcamp/">Product &amp; Growth Marketing with AI Bootcamp</a></li>
+              <li><a href="/academy/sme/bundle/">Online Marketing Mentorship for Business Owners</a></li>
+              <li><a href="/academy/ai-prompts/">AI Prompt Frameworks &amp; Templates</a></li>
+              <li><a href="/academy/templates/">Product Marketing Templates &amp; Resources</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-title">Resources &amp; More</div>
+            <ul class="footer-list">
+              <li><a href="/affiliate/">MIA Affiliate Program (Earn 40%)</a></li>
+              <li><a href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">The State of Marketing In African Tech</a></li>
+              <li><a href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7" target="_blank" rel="noreferrer">Marketing &amp; AI Product Database</a></li>
+              <li><a href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89" target="_blank" rel="noreferrer">Marketing Thought Leaders Database</a></li>
+              <li><a href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096" target="_blank" rel="noreferrer">Annual Tech Events Calendar</a></li>
+              <li><a href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing" target="_blank" rel="noreferrer">MIA Resource Library (Free)</a></li>
+              <li><a href="https://drive.google.com/file/d/1u209WbBYXV7572Lc2QmjL91DmxUmkvo6/view?usp=sharing" target="_blank" rel="noreferrer">Advertise with MIA</a></li>
+              <li><a href="/services/">Work with MIA</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="muted">Copyright <span id="year"></span>, Marketing In Action Hub.</div>
+          <div class="footer-legal">
+            <a href="/privacy/">Privacy Policy</a>
+            <a href="/terms/">Terms & Conditions</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      const btn = document.querySelector(".menu-button");
+      const nav = document.querySelector(".nav-links");
+      btn.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("is-open");
+        btn.setAttribute("aria-expanded", String(isOpen));
+      });
+
+      var navDropdowns = document.querySelectorAll(".nav-dropdown");
+      var dropdownCloseTimer = null;
+
+      function closeDropdown(d) {
+        d.classList.remove("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "false");
+      }
+
+      function openDropdown(d) {
+        clearTimeout(dropdownCloseTimer);
+        navDropdowns.forEach(function(other) {
+          if (other !== d) closeDropdown(other);
+        });
+        d.classList.add("is-open");
+        d.querySelector(".nav-dropdown-trigger").setAttribute("aria-expanded", "true");
+      }
+
+      var isTouch = window.matchMedia("(hover: none)").matches;
+
+      navDropdowns.forEach(function(dropdown) {
+        var trigger = dropdown.querySelector(".nav-dropdown-trigger");
+
+        if (!isTouch) {
+          // Desktop: open immediately on hover, close when the mouse leaves
+          // this dropdown (matches bridged.events' behavior instead of
+          // requiring a click and allowing several menus open at once).
+          dropdown.addEventListener("mouseenter", function() {
+            clearTimeout(dropdownCloseTimer);
+            openDropdown(dropdown);
+          });
+          dropdown.addEventListener("mouseleave", function() {
+            dropdownCloseTimer = setTimeout(function() {
+              closeDropdown(dropdown);
+            }, 300);
+          });
+        }
+
+        // Click/tap still works on every device (keyboard + touch access).
+        trigger.addEventListener("click", function(e) {
+          e.stopPropagation();
+          if (dropdown.classList.contains("is-open")) {
+            closeDropdown(dropdown);
+          } else {
+            openDropdown(dropdown);
+          }
+        });
+      });
+
+      document.addEventListener("click", function() {
+        navDropdowns.forEach(closeDropdown);
+      });
+    </script>
+    <!-- LinkedIn Insight Tag -->
+    <script type="text/javascript">
+      _linkedin_partner_id = "9341153";
+      window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+      window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+      (function(l) {
+        if (!l){window.lintrk = function(a,b){window.lintrk.q.push([a,b])};
+        window.lintrk.q=[]}
+        var s = document.getElementsByTagName("script")[0];
+        var b = document.createElement("script");
+        b.type = "text/javascript";b.async = true;
+        b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+        s.parentNode.insertBefore(b, s);
+      })(window.lintrk);
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9341153&fmt=gif" />
+    </noscript>
+    <!-- End LinkedIn Insight Tag -->
+  </body>
+</html>
