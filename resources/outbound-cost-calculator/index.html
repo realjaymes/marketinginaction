@@ -770,7 +770,7 @@
           <div class="occ-qrow occ-qrow--hi"><span id="occQROILab">Return on stack spend</span><strong id="occQROI">0x</strong></div>
           <div class="occ-qrow"><span>What you will be running</span><strong id="occQInfra">0 inboxes</strong></div>
           <div class="occ-qrow"><span id="occQRampLab">First meeting lands</span><strong id="occQRamp">&mdash;</strong></div>
-          <div class="occ-qrow"><span>It pays for itself</span><strong id="occQPayback">&mdash;</strong></div>
+          <div class="occ-qrow"><span>You break even</span><strong id="occQPayback">&mdash;</strong></div>
         </div>
         <p class="occ-breakeven" id="occBreakeven"></p>
         <div class="occ-risk" id="occRisk" hidden></div>
@@ -2032,19 +2032,19 @@
             $("occVerdict").innerHTML =
               "<strong>Running it yourself</strong> costs " + usd(dMonthly) + " a month once your own time " +
               "is counted, holds " + one(dMeetings) + " meetings and creates " + usd(pipeline) + " of " +
-              "pipeline. You are square in " + mth(payback) + ". We would run the same volume for <strong>" +
-              usd(miaM.monthly) + " a month</strong>, square in <strong>" + mth(miaPayback) + "</strong>.";
+              "pipeline. You break even in " + mth(payback) + ". We would run the same volume for <strong>" +
+              usd(miaM.monthly) + " a month</strong>, breaking even in <strong>" + mth(miaPayback) + "</strong>.";
           } else if (state.run === "sdr") {
             $("occVerdict").innerHTML =
               "<strong>One rep</strong> costs " + usd(dMonthly) + " a month, holds " + one(dMeetings) +
-              " meetings and does not pay for itself until " + mth(payback) + ". The same volume through " +
+              " meetings and does not break even until " + mth(payback) + ". The same volume through " +
               "the system holds <strong>" + one(miaM.meetings) + " meetings</strong> for <strong>" +
               usd(miaM.monthly) + " a month</strong> and pays back in <strong>" + mth(miaPayback) + "</strong>.";
           } else {
             $("occVerdict").innerHTML =
               "<strong>You would spend " + usd(month1) + " in month one and " + usd(dMonthly) + " a month " +
               "after that</strong>, hold " + one(dMeetings) + " meetings, create " + usd(pipeline) + " of " +
-              "pipeline and be square in <strong>" + mth(payback) + "</strong>. If we miss the build, the " +
+              "pipeline and break even in <strong>" + mth(payback) + "</strong>. If we miss the build, the " +
               "build fee comes back.";
           }
 
@@ -2055,14 +2055,14 @@
             dRevenue <= 0
               ? ""
               : breakeven >= num("occReply")
-              ? "This only breaks even at a <strong>" + breakeven.toFixed(1) + "% reply rate</strong>, and the " +
+              ? "This only covers its own cost at a <strong>" + breakeven.toFixed(1) + "% reply rate</strong>, and the " +
                 "2026 benchmark average is " + num("occReply") + "%. There is no room in it."
               : breakeven > num("occReply") * 0.5
               ? "Stress it and it falls over. Replies only have to slip to <strong>" + breakeven.toFixed(2) +
-                "%</strong> for this to stop paying for itself, against a benchmark average of " +
+                "%</strong> for this to stop covering its own cost, against a benchmark average of " +
                 num("occReply") + "%. One bad quarter takes it under."
               : "Stress it. Replies would have to fall to <strong>" + breakeven.toFixed(2) + "%</strong> before " +
-                "this stops paying for itself, against a benchmark average of " + num("occReply") + "%. " +
+                "this stops covering its own cost, against a benchmark average of " + num("occReply") + "%. " +
                 "Halve the reply rate and it still returns " +
                 (dMonthly > 0 ? "<strong>" + (dRevenue / 2 / dMonthly).toFixed(1) + "x</strong>" : "") + ".";
 
