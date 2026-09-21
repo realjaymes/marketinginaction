@@ -265,6 +265,7 @@
       @media (min-width: 560px) { .occ-runset { grid-template-columns: repeat(2, 1fr); } }
       .occ-runset[hidden] { display: none; }
       @media (min-width: 860px) { .occ-runset[data-runset="self"], .occ-runset[data-runset="sdr"] { grid-template-columns: repeat(3, 1fr); } }
+      @media (min-width: 860px) { .occ-runset--four { grid-template-columns: repeat(4, 1fr); } }
       .occ-runline {
         margin-bottom: 14px; font-size: 12.5px; line-height: 1.5; color: var(--text-secondary);
         text-align: center;
@@ -717,7 +718,7 @@
           </div>
         </div>
 
-        <div class="occ-runset" data-runset="mia" hidden>
+        <div class="occ-runset occ-runset--four" data-runset="mia" hidden>
           <div class="occ-qfield">
             <label for="occMiaSetup">One-time build and setup</label>
             <div class="occ-qin"><span>$</span><input type="number" id="occMiaSetup" min="0" step="250" value="1000" inputmode="decimal" /></div>
@@ -727,6 +728,16 @@
             <label for="occMiaFee">Monthly after that</label>
             <div class="occ-qin"><span>$</span><input type="number" id="occMiaFee" min="0" step="100" value="500" inputmode="decimal" /></div>
             <span class="occ-qnote">We keep running it, or your team does and we stay on call.</span>
+          </div>
+          <div class="occ-qfield">
+            <label for="occMiaHours">Hours a week you will still put in</label>
+            <div class="occ-qin"><input type="number" id="occMiaHours" min="0" max="40" step="1" value="2" inputmode="numeric" /></div>
+            <span class="occ-qnote">Approving the copy, reviewing lists, and taking the meetings we book.</span>
+          </div>
+          <div class="occ-qfield">
+            <label for="occMiaRate">What an hour of that time is worth</label>
+            <div class="occ-qin"><span>$</span><input type="number" id="occMiaRate" min="0" step="5" value="50" inputmode="decimal" /></div>
+            <span class="occ-qnote">The same rate you set for running it yourself.</span>
           </div>
         </div>
 
@@ -1446,7 +1457,9 @@
           ["occQPerAcc", "occPerAccount"],
           ["occQReply", "occReply"],
           ["occQDeal", "occDealValue"],
-          ["occQClose", "occCloseRate"]
+          ["occQClose", "occCloseRate"],
+          /* One rate for an hour of the client's time, editable from whichever path they are on. */
+          ["occMiaRate", "occSelfRate"]
         ];
 
         var SEQUENCERS = {
@@ -1822,9 +1835,16 @@
           var repWarm = repAccounts * (1 - Math.pow(1 - posPerContact, perAccount));
           var repMeetings = repWarm * (num("occMeeting") / 100);
 
+          var hourRate = Math.max(0, num("occSelfRate"));
           var selfHoursMonth = Math.max(0, num("occSelfHours")) * 4.33;
-          var selfTime = selfHoursMonth * Math.max(0, num("occSelfRate"));
+          var selfTime = selfHoursMonth * hourRate;
           var selfRamp = Math.max(0, num("occSelfRamp"));
+          /* Running it yourself charges your hours to the path. Ours has to charge them too, or the
+           * comparison flatters us by leaving out the only labour the client still supplies. */
+          var miaHoursMonth = Math.max(0, num("occMiaHours")) * 4.33;
+          var miaTime = miaHoursMonth * hourRate;
+          /* What we actually invoice, which is not the same as what the path costs them. */
+          var miaCash = recurring + Math.max(0, num("occMiaFee"));
 
           /* Four paths, four different volumes at four different prices. Holding output constant across
            * them would turn the page into a price fight, which is not the comparison that matters. */
@@ -1835,11 +1855,11 @@
             sdr: { monthly: Math.max(0, num("occRepCost")) + Math.max(0, num("occRepTools")),
               accounts: repAccounts, contacts: repContacts,
               sends: repSendsDay * workDays, sendsDay: repSendsDay, warm: repWarm, meetings: repMeetings,
-              inboxes: repInboxes, domains: 0, hours: 4, ramp: 3 },
+              inboxes: repInboxes, domains: 0, hours: 0, ramp: 3 },
             /* Read the field directly: every button shows its own cost whichever mode is active. */
-            mia: { monthly: recurring + Math.max(0, num("occMiaFee")), accounts: accounts, contacts: contactsMonth,
+            mia: { monthly: recurring + Math.max(0, num("occMiaFee")) + miaTime, accounts: accounts, contacts: contactsMonth,
               sends: sendsMonth, sendsDay: sendsDay, warm: warmAccounts, meetings: meetings,
-              inboxes: inboxes, domains: domains, hours: 2, ramp: 1 }
+              inboxes: inboxes, domains: domains, hours: miaHoursMonth, ramp: 1 }
           };
           var M = MODES[state.run];
           var one = function (v) { return v < 10 ? v.toFixed(1) : int(v); };
@@ -1976,7 +1996,7 @@
             state.run === "sdr"
               ? usd(Math.max(0, num("occRepCost"))) + " of rep and " + usd(Math.max(0, num("occRepTools"))) + " of tools"
               : state.run === "mia"
-              ? "the tools you own, plus our monthly fee"
+              ? usd(totalMonthly) + " of tools and our fee, plus " + usd(miaTime) + " of your time"
               : usd(recurring) + " of tools and " + usd(selfTime) + " of your time";
           $("occQCPCLab").textContent =
             costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
@@ -2045,16 +2065,17 @@
               "<strong>Running it yourself</strong> costs " + usd(dMonthly) + " a month once your own time " +
               "is counted, holds " + one(dMeetings) + " meetings and creates " + usd(pipeline) + " of " +
               "pipeline. You break even in " + mth(payback) + ". We would run the same volume for <strong>" +
-              usd(miaM.monthly) + " a month</strong>, breaking even in <strong>" + mth(miaPayback) + "</strong>.";
+              usd(miaCash) + " a month</strong>, or <strong>" + usd(miaM.monthly) + "</strong> counting your " +
+              "time the same way, breaking even in <strong>" + mth(miaPayback) + "</strong>.";
           } else if (state.run === "sdr") {
             $("occVerdict").innerHTML =
               "<strong>One rep</strong> costs " + usd(dMonthly) + " a month, holds " + one(dMeetings) +
               " meetings and does not break even until " + mth(payback) + ". The same volume through " +
               "the system holds <strong>" + one(miaM.meetings) + " meetings</strong> for <strong>" +
-              usd(miaM.monthly) + " a month</strong> and pays back in <strong>" + mth(miaPayback) + "</strong>.";
+              usd(miaCash) + " a month</strong> and pays back in <strong>" + mth(miaPayback) + "</strong>.";
           } else {
             $("occVerdict").innerHTML =
-              "<strong>You would spend " + usd(month1) + " in month one and " + usd(dMonthly) + " a month " +
+              "<strong>You would pay " + usd(month1) + " in month one and " + usd(totalMonthly) + " a month " +
               "after that</strong>, hold " + one(dMeetings) + " meetings, create " + usd(pipeline) + " of " +
               "pipeline and break even in <strong>" + mth(payback) + "</strong>. If we miss the build, the " +
               "build fee comes back.";
@@ -2417,7 +2438,8 @@
             compute();
           });
         });
-        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occRepTools", "occMiaSetup", "occMiaFee"].forEach(
+        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occRepTools", "occMiaSetup", "occMiaFee",
+          "occMiaHours", "occMiaRate"].forEach(
           function (id) { $(id).addEventListener("input", compute); }
         );
         $("occDomainRev").addEventListener("input", function () {
