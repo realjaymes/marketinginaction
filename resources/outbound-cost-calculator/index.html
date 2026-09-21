@@ -677,7 +677,7 @@
           <div class="occ-qfield">
             <label for="occDomainRev">Monthly revenue that needs email to land</label>
             <div class="occ-qin"><span>$</span><input type="number" id="occDomainRev" min="0" step="1000" value="0" inputmode="decimal" /></div>
-            <span class="occ-qnote">Invoices, contracts, renewals, support.</span>
+            <span class="occ-qnote">Starts at what this system alone closes. Your real number, with invoices and renewals, is higher.</span>
           </div>
         </div>
 
@@ -1865,7 +1865,7 @@
           /* ---- The risk a rep carries that a bill does not show ---- */
           var burnWeeks = 6;
           if (state.run === "sdr") {
-            var domainRev = Math.max(0, num("occDomainRev"));
+            var domainRev = Math.max(0, derived("occDomainRev", meetings * dealValue * (num("occCloseRate") / 100)));
             $("occRisk").hidden = false;
             $("occRisk").innerHTML =
               "<strong>A rep sends cold from your company domain.</strong> Spam complaints land on the " +
@@ -2237,9 +2237,13 @@
             compute();
           });
         });
-        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occDomainRev", "occMiaFee"].forEach(
+        ["occSelfHours", "occSelfRate", "occSelfRamp", "occRepCost", "occMiaFee"].forEach(
           function (id) { $(id).addEventListener("input", compute); }
         );
+        $("occDomainRev").addEventListener("input", function () {
+          overrides["occDomainRev"] = true;
+          compute();
+        });
 
         /* Boot */
         fillTldTable();
