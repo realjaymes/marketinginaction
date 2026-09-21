@@ -253,6 +253,8 @@
       }
       .occ-icp button[aria-pressed="true"] strong { color: #fff; }
 
+      .occ-run { margin-bottom: 14px; }
+      .occ-runprice { max-width: 320px; margin: 0 auto 20px; }
       .occ-qgrid { display: grid; gap: 14px; margin-bottom: 22px; }
       @media (min-width: 560px) { .occ-qgrid { grid-template-columns: repeat(2, 1fr); } }
       .occ-qslider { grid-column: 1 / -1; }
@@ -573,6 +575,27 @@
 
         </div>
 
+        <p class="occ-icplab">Who runs it?</p>
+        <div class="occ-icp occ-run" role="group" aria-label="Who runs the system">
+          <button type="button" data-run="self" aria-pressed="true">
+            <strong>You run it</strong>
+            <span>Tools only. Your own time is not on this bill.</span>
+          </button>
+          <button type="button" data-run="agency" aria-pressed="false">
+            <strong>An agency runs it</strong>
+            <span>$3,000 to $8,000 a month is the going rate for fully managed outbound.</span>
+          </button>
+          <button type="button" data-run="sdr" aria-pressed="false">
+            <strong>You hire an SDR</strong>
+            <span>One sales development rep, fully loaded, spread across the year.</span>
+          </button>
+        </div>
+        <div class="occ-qfield occ-runprice" id="occRunPriceField" hidden>
+          <label for="occRunPrice" id="occRunPriceLab">Monthly agency retainer</label>
+          <div class="occ-qin"><span>$</span><input type="number" id="occRunPrice" min="0" step="250" value="4000" inputmode="decimal" /></div>
+          <span class="occ-qnote" id="occRunPriceNote">Editable. Put in whatever quote you are weighing up.</span>
+        </div>
+
         <div class="occ-funnel">
           <div class="occ-tile occ-tile--cost">
             <span class="occ-tval" id="occQCost">$0</span>
@@ -608,8 +631,8 @@
 
         <div class="occ-qrows">
           <div class="occ-qrow"><span id="occQCPCLab">Stack cost per business reached</span><strong id="occQCPC">$0</strong></div>
-          <div class="occ-qrow"><span>Stack cost per meeting</span><strong id="occQCPM">$0</strong></div>
-          <div class="occ-qrow occ-qrow--hi"><span>Return on stack spend</span><strong id="occQROI">0x</strong></div>
+          <div class="occ-qrow"><span id="occQCPMLab">Stack cost per meeting</span><strong id="occQCPM">$0</strong></div>
+          <div class="occ-qrow occ-qrow--hi"><span id="occQROILab">Return on stack spend</span><strong id="occQROI">0x</strong></div>
           <div class="occ-qrow"><span>Infrastructure you need</span><strong id="occQInfra">0 inboxes</strong></div>
         </div>
 
@@ -1363,7 +1386,7 @@
         /* ---------------------------------------------------------------
          * State
          * ------------------------------------------------------------- */
-        var state = { mode: "accounts", preset: "local", sdr: "us", rowState: {} };
+        var state = { mode: "accounts", preset: "local", sdr: "us", run: "self", rowState: {} };
         var overrides = {}; /* id -> true once the user types over a derived field */
 
         var $ = function (id) { return document.getElementById(id); };
@@ -1609,7 +1632,8 @@
 
           /* ---- totals ---- */
           var recurring = inboxCost + seqCost + costs.src + costs.ver + costs.enr + autoCost;
-          var totalMonthly = recurring;
+          var runCost = state.run === "self" ? 0 : Math.max(0, num("occRunPrice"));
+          var totalMonthly = recurring + runCost;
           var oneTime = domains * domFirst;
           var month1 = oneTime + totalMonthly;
           var year1 = oneTime + totalMonthly * 12;
@@ -1722,7 +1746,14 @@
           /* ---- one-view card ---- */
           var pipeline = meetings * dealValue;
           $("occQCost").textContent = usd(totalMonthly);
-          $("occQCostSub").textContent = "tools and infrastructure, your time not included";
+          var costWord = runCost > 0 ? "Total" : "Stack";
+          $("occQCostSub").textContent = runCost > 0
+            ? usd(recurring) + " tools + " + usd(runCost) + " to run it"
+            : "tools and infrastructure, your time not included";
+          $("occQCPCLab").textContent =
+            costWord + " cost per " + PRESETS[state.preset].unitShort + " reached";
+          $("occQCPMLab").textContent = costWord + " cost per meeting";
+          $("occQROILab").textContent = "Return on " + costWord.toLowerCase() + " spend";
           $("occQReach").textContent = int(accounts);
           $("occQReachSub").textContent =
             int(contactsMonth) + " people \u00B7 " + int(sendsMonth) + " emails a month";
@@ -1879,7 +1910,6 @@
             p.contactUnit.charAt(0).toUpperCase() + p.contactUnit.slice(1) + " per " + p.unitShort;
           $("occQReachLab").textContent =
             p.unit.charAt(0).toUpperCase() + p.unit.slice(1) + " reached";
-          $("occQCPCLab").textContent = "Stack cost per " + p.unitShort + " reached";
           $("occDelivHelp").textContent =
             state.preset === "local"
               ? "Website-scraped addresses are junk-heavy, so a large share never survives verification."
@@ -2057,6 +2087,30 @@
             compute();
           });
         });
+
+        document.querySelectorAll("[data-run]").forEach(function (b) {
+          b.addEventListener("click", function () {
+            state.run = b.dataset.run;
+            document.querySelectorAll("[data-run]").forEach(function (o) {
+              o.setAttribute("aria-pressed", String(o.dataset.run === state.run));
+            });
+            $("occRunPriceField").hidden = state.run === "self";
+            if (state.run === "agency") {
+              $("occRunPrice").value = 4000;
+              $("occRunPriceLab").textContent = "Monthly agency retainer";
+              $("occRunPriceNote").textContent =
+                "Editable. Put in whatever quote you are weighing up.";
+            }
+            if (state.run === "sdr") {
+              $("occRunPrice").value = Math.round(Math.max(0, num("occSdrCost")) / 12);
+              $("occRunPriceLab").textContent = "Monthly cost of one SDR";
+              $("occRunPriceNote").textContent =
+                "Salary, tax, tooling and ramp, divided across twelve months. Set your own number in step eight.";
+            }
+            compute();
+          });
+        });
+        $("occRunPrice").addEventListener("input", compute);
 
         /* Boot */
         fillTldTable();
