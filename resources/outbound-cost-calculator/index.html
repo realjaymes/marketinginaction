@@ -1231,6 +1231,12 @@
                   <td><a href="https://instantly.ai/pricing" target="_blank" rel="noreferrer">instantly.ai</a></td>
                 </tr>
                 <tr>
+                  <td><strong>EmailBison</strong></td>
+                  <td>$599 / mo</td>
+                  <td>One flat plan: 500,000 emails a month, unlimited leads, workspaces, seats and sending accounts, on an isolated network with dedicated IPs. Warmup, API and support are bundled with no add-on fees, and extra send volume is bought in blocks beyond the 500,000. There is no free trial and no self-serve checkout, so access runs through a demo call.</td>
+                  <td><a href="https://emailbison.com/pricing" target="_blank" rel="noreferrer">emailbison.com</a></td>
+                </tr>
+                <tr>
                   <td><strong>Lemlist</strong></td>
                   <td>$79 / user / mo</td>
                   <td>Email Pro monthly, $63 annual. Multichannel Expert is $109 monthly. Only 3 sending addresses are included and each extra mailbox is $9 a month, which is the line that decides the real cost at cold-email volume.</td>
@@ -1442,8 +1448,10 @@
         };
 
         /* Sequencers. `mailboxIncluded` / `mailboxExtra` matter more than the headline
-           price: Smartlead and Instantly bundle unlimited inboxes, Lemlist charges per
-           sending address, and HeyReach bills per connected sender with no base fee. */
+           price: Smartlead, Instantly and EmailBison bundle unlimited inboxes, Lemlist charges per
+           sending address, and HeyReach bills per connected sender with no base fee. EmailBison is
+           the one that changes the shape of the bill rather than the size of it, because at $599 it
+           costs more than the rest of the stack put together. */
         /* Accent per ICP, mirroring how the Paid Acquisition Playbook recolours per platform. */
         var ACCENTS = {
           local: { accent: "#d4338f", bg: "#fdeef7" },
@@ -1476,6 +1484,11 @@
             label: "Instantly",
             mailbox: "Unlimited inboxes.",
             tiers: [{ name: "Hypergrowth", price: 97, contacts: 25000, sends: 100000 }]
+          },
+          emailbison: {
+            label: "EmailBison",
+            mailbox: "Unlimited sending accounts, workspaces and seats on its own network with dedicated IPs. Sold through a demo call rather than self-serve signup, and there is no free trial, so you cannot start on it today.",
+            tiers: [{ name: "Base", price: 599, contacts: Infinity, sends: 500000 }]
           },
           lemlist: {
             label: "Lemlist",
@@ -1734,9 +1747,12 @@
               " inboxes add " + int(extraMailboxes) + " at " + usd(seq.mailboxExtra) +
               " each, so " + usd(listPrice) + " a month. " + seq.mailbox;
           } else {
+            /* Either limit can be the binding one, so the note names whichever caps actually exist. */
             var capNote =
-              tier.contacts === Infinity
+              tier.contacts === Infinity && tier.sends === Infinity
                 ? "unlimited volume."
+                : tier.contacts === Infinity
+                ? int(tier.sends) + " sends a month, with no contact limit."
                 : tier.sends === Infinity
                 ? int(tier.contacts) + " contacts a month."
                 : int(tier.contacts) + " contacts and " + int(tier.sends) + " sends a month.";
