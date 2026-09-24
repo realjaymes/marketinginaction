@@ -456,6 +456,13 @@
       .occ-reset:hover { color: var(--occ-accent); }
       .occ-cardfoot { display: flex; justify-content: flex-end; margin-top: 14px; }
 
+      /* ---------- share and export ---------- */
+      .occ-share { display: flex; flex-wrap: wrap; align-items: center; gap: 9px; margin-top: 18px; }
+      .occ-share button { font-family: inherit; font-size: 13px; font-weight: 700; color: var(--mia-ink); background: #fff; border: 1px solid rgba(16, 10, 22, 0.18); border-radius: 999px; padding: 9px 16px; cursor: pointer; }
+      .occ-share button:hover { border-color: var(--mia-ink); }
+      .occ-sharenote { font-size: 12px; font-weight: 700; color: var(--text-secondary); }
+      @media print { .occ-share { display: none; } }
+
       /* ---------- detailed breakdown panel ---------- */
       .occ-results { position: sticky; top: 86px; }
       @media (max-width: 999px) { .occ-results { position: static; } }
@@ -789,6 +796,12 @@
         <p class="occ-breakeven" id="occBreakeven"></p>
         <div class="occ-risk" id="occRisk" hidden></div>
         <div class="occ-guarantee" id="occGuarantee" hidden></div>
+
+        <div class="occ-share">
+          <button type="button" id="occCopy">Copy summary</button>
+          <button type="button" id="occLink">Copy link to these numbers</button>
+          <span class="occ-sharenote" id="occShareNote" hidden></span>
+        </div>
 
         <details class="occ-sources">
           <summary>Where these numbers come from</summary>
@@ -2463,12 +2476,199 @@
           compute();
         });
 
+        /* ---------------------------------------------------------------
+         * Share and export
+         *
+         * The link carries only what the visitor changed. Everything still
+         * sitting at its boot value is left out, so a typical link is short
+         * and a preset switch does not drag forty fields along with it.
+         * ------------------------------------------------------------- */
+        var PRICED_AT = "21 September 2026";
+        var SNAP = {};
+
+        function fields() {
+          return document.querySelectorAll('input[id^="occ"], select[id^="occ"]');
+        }
+
+        function snapshot() {
+          SNAP = {};
+          fields().forEach(function (el) {
+            SNAP[el.id] = el.type === "checkbox" ? (el.checked ? "1" : "0") : el.value;
+          });
+        }
+
+        function pressed(sel, key, val) {
+          document.querySelectorAll(sel).forEach(function (o) {
+            o.setAttribute("aria-pressed", String(o.dataset[key] === val));
+          });
+        }
+
+        function labelFor(sel, key, val) {
+          var b = document.querySelector(sel + '[data-' + key + '="' + val + '"]');
+          return b ? b.textContent.trim().split("\n")[0] : val;
+        }
+
+        function b64(str) {
+          return btoa(unescape(encodeURIComponent(str))).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+        }
+
+        function unb64(str) {
+          var t = str.replace(/-/g, "+").replace(/_/g, "/");
+          while (t.length % 4) t += "=";
+          return decodeURIComponent(escape(atob(t)));
+        }
+
+        function serialise() {
+          var f = {};
+          fields().forEach(function (el) {
+            var v = el.type === "checkbox" ? (el.checked ? "1" : "0") : el.value;
+            if (SNAP[el.id] !== v) f[el.id] = v;
+          });
+          var ov = Object.keys(overrides).filter(function (k) { return overrides[k]; });
+          return b64(JSON.stringify({
+            m: state.mode, p: state.preset, r: state.run,
+            rs: state.rowState, f: f, ov: ov
+          }));
+        }
+
+        function restore() {
+          var raw = location.hash.replace(/^#/, "");
+          if (raw.indexOf("s=") !== 0) return false;
+          var o;
+          try { o = JSON.parse(unb64(raw.slice(2))); } catch (e) { return false; }
+          if (!o || typeof o !== "object") return false;
+
+          if (o.p && PRESETS[o.p]) { state.preset = o.p; pressed("[data-preset]", "preset", o.p); }
+          if (o.m) {
+            state.mode = o.m;
+            pressed("[data-mode]", "mode", o.m);
+            document.querySelectorAll("[data-show]").forEach(function (fl) { fl.hidden = fl.dataset.show !== o.m; });
+          }
+          if (o.r) { state.run = o.r; pressed("[data-run]", "run", o.r); }
+          if (o.rs && typeof o.rs === "object") state.rowState = o.rs;
+
+          /* Rebuilds the stack against the restored preset and row toggles. */
+          applyPreset();
+
+          Object.keys(o.f || {}).forEach(function (id) {
+            var el = document.getElementById(id);
+            if (!el) return;
+            if (el.type === "checkbox") el.checked = o.f[id] === "1";
+            else el.value = o.f[id];
+          });
+          (o.ov || []).forEach(function (k) { overrides[k] = true; });
+          compute();
+          return true;
+        }
+
+        function summary() {
+          /* Screen labels use an em dash and a middle dot as separators. Neither
+             survives a paste into an email well, so the export normalises them. */
+          var t = function (id) {
+            var el = $(id);
+            if (!el) return "";
+            var v = el.textContent.trim();
+            if (/^[\u2014\u2013-]+$/.test(v)) return "not calculated yet";
+            return v.replace(/\s*[\u2014\u2013]\s*/g, ", ").replace(/\s*\u00b7\s*/g, ", ");
+          };
+          var L = [];
+          L.push("Outbound GTM Cost & ROI Calculator");
+          L.push("Marketing In Action, " + new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" }));
+          L.push("Tool pricing verified " + PRICED_AT);
+          L.push("");
+          L.push("SETUP");
+          L.push("  Selling to: " + labelFor("[data-preset]", "preset", state.preset));
+          L.push("  Run by: " + labelFor("[data-run]", "run", state.run));
+          L.push("  " + t("occQAccLab") + ": " + t("occQAccVal"));
+          L.push("  Inboxes and domains: " + t("occQInfra"));
+          L.push("  First meeting lands: " + t("occQRamp"));
+          L.push("");
+          L.push("MONTH ONE: " + t("occM1"));
+          L.push("  One-time setup (domains) " + t("occOneTime"));
+          if (!$("occSetupRow").hidden) L.push("  Our one-time build and setup " + t("occSetupCost"));
+          L.push("  Tools, first month " + t("occRec1"));
+          L.push("");
+          L.push("STEADY STATE, MONTH TWO ONWARD: " + t("occSteady"));
+          L.push("  " + t("occInboxLbl") + " " + t("occInboxCost"));
+          L.push("  " + t("occSeqLbl") + " " + t("occSeqCost"));
+          L.push("  " + t("occSrcLbl") + " " + t("occSrcCost"));
+          L.push("  " + t("occVerLbl") + " " + t("occVerCost"));
+          L.push("  " + t("occEnrLbl") + " " + t("occEnrCost"));
+          L.push("  " + t("occAutoLbl") + " " + t("occAutoCost"));
+          if (!$("occFeeRow").hidden) L.push("  Our monthly fee " + t("occFeeCost"));
+          L.push("");
+          L.push("MULTI-YEAR");
+          L.push("  Full first year " + t("occY1"));
+          L.push("  Full second year " + t("occY2"));
+          L.push("");
+          L.push("WHAT THE SPEND BUYS, PER MONTH");
+          L.push("  Contacts reached " + t("occContactsOut"));
+          L.push("  Emails sent " + t("occSendsOut"));
+          L.push("  Cost per contact reached " + t("occCPC"));
+          L.push("  Replies " + t("occReplies"));
+          L.push("  Positive responses " + t("occPos"));
+          L.push("  Meetings held " + t("occMeetings"));
+          L.push("  " + t("occBCpmLab") + " " + t("occCPM"));
+          L.push("  Pipeline created " + t("occPipe"));
+          L.push("  Closed won revenue " + t("occRev"));
+          L.push("  " + t("occBRoiLab") + " " + t("occRoi"));
+          L.push("  You break even " + t("occQPayback"));
+          L.push("");
+          L.push("These numbers: " + shareURL());
+          L.push("Built with the free calculator at marketinginaction.xyz/resources/outbound-cost-calculator/");
+          return L.join("\n");
+        }
+
+        function shareURL() {
+          return location.origin + location.pathname + "#s=" + serialise();
+        }
+
+        function note(msg) {
+          var n = $("occShareNote");
+          n.textContent = msg;
+          n.hidden = false;
+          clearTimeout(n._t);
+          n._t = setTimeout(function () { n.hidden = true; }, 2600);
+        }
+
+        function copy(text, msg) {
+          var done = function () { note(msg); };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, function () { fallbackCopy(text, done); });
+          } else {
+            fallbackCopy(text, done);
+          }
+        }
+
+        function fallbackCopy(text, done) {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.style.position = "fixed";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          try { document.execCommand("copy"); done(); } catch (e) { note("Press Ctrl or Cmd and C to copy."); }
+          document.body.removeChild(ta);
+        }
+
+        $("occCopy").addEventListener("click", function () {
+          copy(summary(), "Summary copied.");
+        });
+
+        $("occLink").addEventListener("click", function () {
+          var url = shareURL();
+          history.replaceState(null, "", "#s=" + serialise());
+          copy(url, "Link copied. It carries every number on this page.");
+        });
+
         /* Boot */
         fillTldTable();
         $("occAuto").value = "self";
         $("occAutoPrice").value = AUTOMATION.self.price;
         applyPreset();
         captureDefaults();
+        snapshot();
+        restore();
       })();
     </script>
     </main>
