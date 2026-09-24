@@ -4596,3 +4596,35 @@ body.panel-open {
 .consulting-tier-list li {
   margin: 6px 0;
 }
+
+/* Section-level CTA under a featured grid (home) */
+body.home .featured-cta {
+  display: flex;
+  justify-content: center;
+  margin-top: var(--space-2xl);
+}
+
+body.home .featured-cta a {
+  font-size: 0.95rem;
+  font-weight: 650;
+  color: var(--color-black, #100a16);
+  text-decoration: none;
+  padding-bottom: 3px;
+  border-bottom: 2px solid var(--color-accent, #f1de71);
+  transition: opacity 0.2s;
+}
+
+body.home .featured-cta a:hover {
+  opacity: 0.7;
+}
+
+/* Two-card variant of the featured grid (home services) */
+body.home .featured-programs--two {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  body.home .featured-programs--two {
+    grid-template-columns: 1fr;
+  }
+}
