@@ -409,22 +409,77 @@
         <div class="container">
           <div class="consulting-services-head reveal-blur">
             <div class="consulting-services-eyebrow">How I Deliver</div>
-            <h2>You’d normally need six marketers, but I’ll do it faster with AI-powered GTM workflows and growth frameworks.</h2>
-            <p class="muted" style="margin-top: 10px">Pick the piece you need most below, or run all six as one connected GTM system.</p>
+            <h2>You’d normally need <span class="js-service-count">seven</span> marketers, but I’ll do it faster with AI-powered GTM workflows and growth frameworks.</h2>
+            <p class="muted" style="margin-top: 10px">Pick the piece you need most below, or run all <span class="js-service-count">seven</span> as one connected GTM system.</p>
           </div>
 
           <div class="consulting-services-tabs reveal-blur" role="tablist" aria-label="Services">
-            <button class="consulting-service-tab is-active" type="button" data-service="positioning" role="tab" aria-selected="true">Positioning<span class="consulting-service-tab-progress"></span></button>
+            <button class="consulting-service-tab is-active" type="button" data-service="gtm-engineering" role="tab" aria-selected="true">GTM Engineering<span class="consulting-service-tab-progress"></span></button>
+            <button class="consulting-service-tab" type="button" data-service="seo-geo-aeo" role="tab" aria-selected="false">SEO &amp; AI Visibility<span class="consulting-service-tab-progress"></span></button>
+            <button class="consulting-service-tab" type="button" data-service="positioning" role="tab" aria-selected="false">Positioning<span class="consulting-service-tab-progress"></span></button>
             <button class="consulting-service-tab" type="button" data-service="website" role="tab" aria-selected="false">Landing Pages<span class="consulting-service-tab-progress"></span></button>
             <button class="consulting-service-tab" type="button" data-service="gtm" role="tab" aria-selected="false">Launches<span class="consulting-service-tab-progress"></span></button>
             <button class="consulting-service-tab" type="button" data-service="lifecycle" role="tab" aria-selected="false">Lifecycle<span class="consulting-service-tab-progress"></span></button>
-            <button class="consulting-service-tab" type="button" data-service="gtm-engineering" role="tab" aria-selected="false">GTM Engineering<span class="consulting-service-tab-progress"></span></button>
             <button class="consulting-service-tab" type="button" data-service="growth-experiments" role="tab" aria-selected="false">Experiments<span class="consulting-service-tab-progress"></span></button>
           </div>
 
           <div class="consulting-services-grid">
             <!-- 1 -->
-            <article class="consulting-service-card is-active reveal-blur" data-panel="positioning">
+            <article class="consulting-service-card is-active reveal-blur" data-panel="gtm-engineering">
+              <div class="consulting-service-media">
+                <picture>
+                  <source srcset="../assets/gtm-engineering-service.webp" type="image/webp" />
+                  <img src="../assets/gtm-engineering-service.jpeg" alt="GTM Engineering and Automation service" loading="lazy" />
+                </picture>
+              </div>
+              <div class="consulting-service-body">
+                <div class="consulting-service-eyebrow">The Infrastructure Behind The Pipeline</div>
+                <h3>GTM Engineering &amp; Automation</h3>
+                <p class="muted">
+                  I help you craft an irresistible offer and get it in front of your full total addressable market (TAM) through hyperpersonalized, scalable outbound campaigns that book meetings and fill your pipeline. I build the infrastructure behind it: automations and integrations connecting AI agents to your real GTM tools to turn that pipeline into revenue.
+                </p>
+                <p class="consulting-service-impact consulting-service-impact--green">27% increase in outbound reply rates for FunnelEnvy</p>
+                <ul class="consulting-bullets">
+                  <li>Hyperpersonalized outbound campaigns that book meetings</li>
+                  <li>Scrapers, enrichment pipelines, automations &amp; integrations</li>
+                  <li>Email deliverability &amp; inbox infrastructure</li>
+                </ul>
+                <a
+                  class="consulting-case-link"
+                  href="case-studies/#filter=gtm-engineering"
+                  >See the systems working behind real campaigns →</a
+                >
+              </div>
+            </article>
+            <!-- 2 -->
+            <article class="consulting-service-card" data-panel="seo-geo-aeo">
+              <div class="consulting-service-media">
+                <picture>
+                  <source srcset="../assets/seo-ai-visibility-service.webp" type="image/webp" />
+                  <img src="../assets/seo-ai-visibility-service.jpeg" alt="SEO and AI visibility service" loading="lazy" />
+                </picture>
+              </div>
+              <div class="consulting-service-body">
+                <div class="consulting-service-eyebrow">Found By Search, And By AI</div>
+                <h3>SEO, GEO &amp; AEO</h3>
+                <p class="muted">
+                  Buyers used to type into Google. Now they also ask ChatGPT, Claude, Perplexity, Gemini and Google's AI overviews, and those tools only name a brand they can read and verify. I audit both at once: whether search engines can crawl, read and rank your site, and whether AI assistants can find anything on it worth quoting. Then I fix what is costing you revenue from search and AI, in the order that pays.
+                </p>
+                <p class="consulting-service-impact consulting-service-impact--green">3,000+ keywords ranked in 90 days for Distrobird</p>
+                <ul class="consulting-bullets">
+                  <li>Technical foundations, crawling, indexing and site speed</li>
+                  <li>Content built against what already ranks, not word count</li>
+                  <li>AI answer visibility: who gets recommended, and whether it is you</li>
+                </ul>
+                <a
+                  class="consulting-case-link"
+                  href="case-studies/#filter=seo-geo-aeo"
+                  >See the organic growth this produced →</a
+                >
+              </div>
+            </article>
+            <!-- 3 -->
+            <article class="consulting-service-card" data-panel="positioning">
               <div class="consulting-service-media">
                 <picture>
                   <source srcset="../assets/positioning-service.webp" type="image/webp" />
@@ -450,8 +505,7 @@
                 >
               </div>
             </article>
-
-            <!-- 2 -->
+            <!-- 4 -->
             <article class="consulting-service-card" data-panel="website">
               <div class="consulting-service-media">
                 <picture>
@@ -478,8 +532,7 @@
                 >
               </div>
             </article>
-
-            <!-- 3 -->
+            <!-- 5 -->
             <article class="consulting-service-card" data-panel="gtm">
               <div class="consulting-service-media">
                 <picture>
@@ -506,8 +559,7 @@
                 >
               </div>
             </article>
-
-            <!-- 4 -->
+            <!-- 6 -->
             <article class="consulting-service-card" data-panel="lifecycle">
               <div class="consulting-service-media">
                 <picture>
@@ -534,36 +586,7 @@
                 >
               </div>
             </article>
-
-            <!-- 5 -->
-            <article class="consulting-service-card" data-panel="gtm-engineering">
-              <div class="consulting-service-media">
-                <picture>
-                  <source srcset="../assets/gtm-engineering-service.webp" type="image/webp" />
-                  <img src="../assets/gtm-engineering-service.jpeg" alt="GTM Engineering and Automation service" loading="lazy" />
-                </picture>
-              </div>
-              <div class="consulting-service-body">
-                <div class="consulting-service-eyebrow">The Infrastructure Behind The Pipeline</div>
-                <h3>GTM Engineering &amp; Automation</h3>
-                <p class="muted">
-                  I help you craft an irresistible offer and get it in front of your full total addressable market (TAM) through hyperpersonalized, scalable outbound campaigns that book meetings and fill your pipeline. I build the infrastructure behind it: automations and integrations connecting AI agents to your real GTM tools to turn that pipeline into revenue.
-                </p>
-                <p class="consulting-service-impact consulting-service-impact--green">27% increase in outbound reply rates for FunnelEnvy</p>
-                <ul class="consulting-bullets">
-                  <li>Hyperpersonalized outbound campaigns that book meetings</li>
-                  <li>Scrapers, enrichment pipelines, automations &amp; integrations</li>
-                  <li>Email deliverability &amp; inbox infrastructure</li>
-                </ul>
-                <a
-                  class="consulting-case-link"
-                  href="case-studies/#filter=gtm-engineering"
-                  >See the systems working behind real campaigns →</a
-                >
-              </div>
-            </article>
-
-            <!-- 6 -->
+            <!-- 7 -->
             <article class="consulting-service-card" data-panel="growth-experiments">
               <div class="consulting-service-media">
                 <picture>
@@ -701,7 +724,7 @@
               <summary>2. What’s your specialty, and how are you different from other advisors or agencies?</summary>
               <div class="consulting-faq-body">
                 <p class="muted">
-                  I run your whole go-to-market: positioning, GTM infrastructure, outbound, paid, and lifecycle, as one system pointed at growth.
+                  I run your whole go-to-market: positioning, GTM infrastructure, outbound, paid, SEO &amp; AI visibility, and lifecycle, as one system pointed at growth.
                   I don’t hand you a deck and walk away. And unlike agencies that only run ads or PR, I join your team and execute all of it.
                 </p>
               </div>
@@ -856,14 +879,11 @@
           <div>
             <div class="footer-title">Resources &amp; More</div>
             <ul class="footer-list">
-              <li><a href="/affiliate/">MIA Affiliate Program (Earn 40%)</a></li>
-              <li><a href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">The State of Marketing In African Tech</a></li>
-              <li><a href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7" target="_blank" rel="noreferrer">Marketing &amp; AI Product Database</a></li>
-              <li><a href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89" target="_blank" rel="noreferrer">Marketing Thought Leaders Database</a></li>
-              <li><a href="https://www.notion.so/realjaymes/Annual-Tech-Events-Calendar-2e2a6d41709c80dc8181cdbcb4c01096" target="_blank" rel="noreferrer">Annual Tech Events Calendar</a></li>
-              <li><a href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing" target="_blank" rel="noreferrer">MIA Resource Library (Free)</a></li>
-              <li><a href="https://drive.google.com/file/d/1u209WbBYXV7572Lc2QmjL91DmxUmkvo6/view?usp=sharing" target="_blank" rel="noreferrer">Advertise with MIA</a></li>
-              <li><a href="/services/">Work with MIA</a></li>
+              <li><a href="/resources/seo-geo-aeo-playbook/">SEO, GEO &amp; AEO Playbook</a></li>
+              <li><a href="/resources/outbound-cost-calculator/">Outbound GTM Cost &amp; ROI Calculator</a></li>
+              <li><a href="/resources/paid-ads-playbook/">The Paid Acquisition Playbook</a></li>
+              <li><a href="/resources/claude-code-for-marketers/">Claude Code for Marketers</a></li>
+              <li><a href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noreferrer">Marketing Agent Skills for Claude Code</a></li>
             </ul>
           </div>
         </div>
@@ -979,6 +999,14 @@
     <script>
       (function () {
         var tabs = Array.prototype.slice.call(document.querySelectorAll(".consulting-service-tab"));
+
+        // Keep the copy above the tabs honest about how many services there are.
+        // Add or remove a tab and the sentences update themselves.
+        var WORDS = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve"];
+        var countWord = WORDS[tabs.length] || String(tabs.length);
+        Array.prototype.forEach.call(document.querySelectorAll(".js-service-count"), function (el) {
+          el.textContent = countWord;
+        });
         var panels = document.querySelectorAll(".consulting-service-card[data-panel]");
         var tabsBar = document.querySelector(".consulting-services-tabs");
         var grid = document.querySelector(".consulting-services-grid");

@@ -2505,7 +2505,16 @@ body.home #subscribe .card p.muted {
 
 @media (min-width: 980px) {
   .consulting-services-tabs {
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    /* Seven services. Equal columns would size every tab to the longest label,
+       so the columns follow their content and the row stays one line. */
+    grid-template-columns: repeat(7, minmax(0, auto));
+    gap: var(--space-sm) var(--space-sm);
+  }
+
+  .consulting-service-tab {
+    padding-left: 8px;
+    padding-right: 8px;
+    white-space: nowrap;
   }
 }
 
