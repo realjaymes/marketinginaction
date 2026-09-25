@@ -33,6 +33,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          # Full history: generate-sitemap.py dates each <lastmod> from the file's
+          # last commit. A shallow clone would collapse every page to one date.
+          fetch-depth: 0
+      - name: Generate sitemap
+        # sitemap-main.xml is a derived artifact, rebuilt from the pages actually
+        # on disk so it can never drift from the site. Regenerating here (rather
+        # than failing the build on a stale file) means a forgotten commit still
+        # deploys a correct sitemap. sitemap.xml is the hand-written index that
+        # points at this file plus the newsletter subdomain, so it is left alone.
+        run: python3 tools/generate-sitemap.py --base-url https://marketinginaction.xyz/ --output sitemap-main.xml
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
