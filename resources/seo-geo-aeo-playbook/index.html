@@ -1725,10 +1725,19 @@ function score(){
     // 'na' does not apply to this site. 'nodata' does apply, but the evidence
     // to answer it does not exist yet. Neither is a failure, so neither sits
     // in the denominator. Only a blank step is genuinely unreviewed.
-    if(st==='na'){return}
+    // Both of these leave the denominator, which is what the spec has always
+    // said. 'na' used to leave the score but stay in the step count, so a
+    // finished pillar read 7/8 and looked unfinished.
+    if(st==='na'){per[p].t--; total--; return}
     if(st==='nodata'){nodata++; per[p].t--; total--; return}
+    // A step nobody has answered is unknown, not failed. It used to sit in the
+    // denominator, so a run that answered 13 of 52 steps could only ever show a
+    // single-digit score no matter how the site was doing. The score is now the
+    // share of what has actually been reviewed, and the step count beside it
+    // says how much that is.
+    if(!st){return}
     per[p].m+=w; max+=w;
-    if(st){per[p].d++; done++;}
+    per[p].d++; done++;
     if(st==='pass'){per[p].g+=w; got+=w}
   });
   Object.keys(per).forEach(function(p){
@@ -1893,7 +1902,8 @@ function boot(){
   // the business context seeded nothing: the browser had already recorded
   // that stamp and skipped the whole block, leaving the report telling its
   // own reader it had been answered without context.
-  var stamp=PRESET?[PRESET.site,PRESET.run_date,Object.keys(PRESET.results||{}).length,
+  var stamp=PRESET?[PRESET.site,PRESET.run_date,PRESET.digest||'',
+                    Object.keys(PRESET.results||{}).length,
                     JSON.stringify(PRESET.context||{})].join('|'):'';
   if(PRESET&&PRESET.results&&s.__seeded!==stamp){
     Object.keys(PRESET.results).forEach(function(id){
