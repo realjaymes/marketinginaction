@@ -598,7 +598,7 @@
 
             var rawLeads = budget / current.cpl;
             var guaranteed = Math.max(0, Math.floor(rawLeads * SAFETY));
-            var closed = rawLeads * closeRate;
+            var closed = guaranteed * closeRate;
 
             var rawPpa = ticket * current.margin * closeRate * TARGET_SHARE;
             var ppa = Math.ceil(rawPpa / 5) * 5;

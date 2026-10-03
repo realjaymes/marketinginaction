@@ -1326,12 +1326,13 @@
 
                 elBudgetLabel.textContent = money(budget);
 
-                // Raw projected leads (undiscounted) drive the "typical case"
-                // projection below; the guarantee is a separate, deliberately
-                // conservative floor at a 75% safety margin off the same raw number.
+                // The guaranteed number, a 75% safety floor off raw projected
+                // leads, is what the projection below runs on. Closes, cost per
+                // customer, revenue and ROI all follow the count we put in
+                // writing, never the undiscounted raw one.
                 var rawLeads = budget / CPL;
                 var guaranteed = Math.max(0, Math.floor(rawLeads * SAFETY));
-                var closed = rawLeads * closeRate;
+                var closed = guaranteed * closeRate;
 
                 // Our fee per qualified estimate, from 06's PPA formula
                 // (ticket x margin x close rate x our target share), rounded
