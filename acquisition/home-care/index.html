@@ -1045,7 +1045,7 @@
         <script>
         (function () {
             var DEFAULTS = { budget: 1500, ticket: 7600, close: 25 };
-            var CPL = 60, MARGIN = 0.35, SAFETY = 0.75, TARGET_SHARE = 0.25;
+            var CPL = 60, MARGIN = 0.35, SAFETY = 0.75, TARGET_SHARE = 0.22;
             var elBudget = document.getElementById('calcBudget');
             var elTicket = document.getElementById('calcTicket');
             var elClose = document.getElementById('calcClose');
@@ -1084,11 +1084,10 @@
 
                 // Our fee per qualified consultation, from 06's PPA formula
                 // (60-day client value x margin x close rate x our target share),
-                // rounded UP to the nearest $5 — a client-facing price should be
-                // clean and quotable, and rounding up (never down) means we never
-                // underquote against what the formula actually supports. Matches
-                // 06's own worked example, which prices the raw $166 at a clean
-                // $150 rather than quoting the decimal-heavy figure.
+                // rounded UP to the nearest $5 so the price stays clean and quotable
+                // and we never underquote what the formula supports. At a 22% target
+                // share the home-care default lands on $150, which is the fee actually
+                // contracted with Purecare LLC, our live home-care client.
                 var rawPpa = ticket * MARGIN * closeRate * TARGET_SHARE;
                 var ppa = Math.ceil(rawPpa / 5) * 5;
                 var totalFee = ppa * rawLeads;
