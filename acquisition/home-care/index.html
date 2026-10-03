@@ -1091,7 +1091,10 @@
                 // contracted with Purecare LLC, our live home-care client.
                 var rawPpa = ticket * MARGIN * closeRate * TARGET_SHARE;
                 var ppa = Math.ceil(rawPpa / 5) * 5;
-                var totalFee = ppa * rawLeads;
+                // We bill on the guaranteed count, the same number the projection
+                // above runs on, so the cost side and the revenue side of this
+                // calculator never assume different volumes.
+                var totalFee = ppa * guaranteed;
                 var totalMonthlyCost = budget + totalFee;
                 var cac = closed > 0 ? totalMonthlyCost / closed : 0;
                 // Revenue uses the same conservative 60-day client-value figure

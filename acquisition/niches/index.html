@@ -602,7 +602,10 @@
 
             var rawPpa = ticket * current.margin * closeRate * TARGET_SHARE;
             var ppa = Math.ceil(rawPpa / 5) * 5;
-            var totalFee = ppa * rawLeads;
+            // We bill on the guaranteed count, the same number the
+            // projection above runs on, so the cost side and the revenue
+            // side of this calculator never assume different volumes.
+            var totalFee = ppa * guaranteed;
             var totalMonthlyCost = budget + totalFee;
             var cac = closed > 0 ? totalMonthlyCost / closed : 0;
             var annualRevenue = closed * 12 * ticket;
