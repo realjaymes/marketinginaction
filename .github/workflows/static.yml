@@ -37,6 +37,15 @@ jobs:
           # Full history: generate-sitemap.py dates each <lastmod> from the file's
           # last commit. A shallow clone would collapse every page to one date.
           fetch-depth: 0
+      - name: Verify acquisition calculators
+        # The ROI calculators are cloned by hand, so nothing ties a page's numbers
+        # to the pricing model they come from. This fails the deploy on a wrong
+        # constant, a broken guaranteed-leads invariant, or a static fallback value
+        # that does not match what the page's own script computes. Unlike the
+        # sitemap below it does not self-heal: a bad number is a decision someone
+        # has to make, not an artifact to regenerate.
+        run: python3 tools/verify-calculators.py
+
       - name: Generate sitemap
         # sitemap-main.xml is a derived artifact, rebuilt from the pages actually
         # on disk so it can never drift from the site. Regenerating here (rather
