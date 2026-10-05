@@ -31,9 +31,10 @@ What it checks
    script computes at its own defaults. These are what ships in the HTML before
    JavaScript runs and what anyone reading the page source sees, and they are the
    values a clone silently inherits.
-5. **The spend floor.** The budget slider's ``min`` is $900 on every page, so no
-   page can display a guarantee below the budget that funds it, and the flat count
-   in the hero equals ``FLOOR((900 / CPL) * SAFETY)`` for that niche. A flat 10 was
+5. **The spend floor.** The budget slider's ``min`` is ``SPEND_FLOOR`` ($1,200) on
+   every page, so no page can display a guarantee below the budget that funds it,
+   and the flat count in the hero equals ``FLOOR((SPEND_FLOOR / CPL) * SAFETY)`` for
+   that niche. A flat 10 was
    shipped on all 25 pages until 2026-10-03, which overpromised seven niches (HVAC
    worst, at double what the floor funds) and underclaimed pet waste removal by
    nearly four times. The hero must also name the floor, because a count with no
@@ -62,8 +63,9 @@ EXPECTED_TARGET_SHARE = 0.22
 
 # The minimum monthly ad budget we take an engagement on. The published guarantee
 # on every page is what this funds, never a flat number reused across niches.
-SPEND_FLOOR = 900
-FLOOR_SENTENCE = "That is at our $900 minimum ad budget, and it scales from there."
+SPEND_FLOOR = 1200
+FLOOR_SENTENCE = (f"That is at our ${SPEND_FLOOR:,} minimum ad budget, "
+                  "and it scales from there.")
 
 # The niches index runs the same chain off a selector; it opens on roofing.
 NICHES_INDEX = "acquisition/niches/index.html"
@@ -198,7 +200,7 @@ def check_page(path, html):
                 f"hero claims {hero.group(1)}, the ${SPEND_FLOOR} floor funds "
                 f"{floor_count} at ${int(cpl)} per lead")
         if FLOOR_SENTENCE not in html:
-            failures.append("hero does not state the $900 minimum ad budget")
+            failures.append(f"hero does not state the ${SPEND_FLOOR:,} minimum ad budget")
 
     for element_id, want in project(
             budget, ticket, close_rate, cpl, margin, safety, target_share).items():
