@@ -1,0 +1,11 @@
+#!/bin/sh
+# Runs the same calculator check the deploy runs, so a push that would fail the
+# Pages deploy is stopped here instead. Enable once per clone with:
+#   git config core.hooksPath .githooks
+# Bypass for a push that touches no calculator: git push --no-verify
+root=$(git rev-parse --show-toplevel)
+if ! python3 "$root/tools/verify-calculators.py"; then
+  echo "pre-push: calculator check failed, push stopped. Fix the pages or the" >&2
+  echo "verifier constants (tools/verify-calculators.py) so they agree." >&2
+  exit 1
+fi

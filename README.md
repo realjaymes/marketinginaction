@@ -45,6 +45,7 @@ Live site: https://marketinginaction.xyz
 ### Version Control & Collaboration
 - Git for version control and change tracking
 - GitHub for repository hosting and collaboration
+- A pre-push hook in `.githooks/` runs `tools/verify-calculators.py`, the same check the Pages deploy runs. Enable it once per clone with `git config core.hooksPath .githooks`
 ### Hosting, DNS & Delivery
 - GitHub Pages for static site hosting and continuous deployment (v1)
 - Netlify for static site hosting and continuous deployment (v2)
