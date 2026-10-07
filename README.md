@@ -45,10 +45,10 @@ Live site: https://marketinginaction.xyz
 ### Version Control & Collaboration
 - Git for version control and change tracking
 - GitHub for repository hosting and collaboration
-- A pre-push hook in `.githooks/` runs `tools/verify-calculators.py`, the same check the Pages deploy runs. Enable it once per clone with `git config core.hooksPath .githooks`
+- A pre-push hook in `.githooks/` runs the calculator, wording and Open Graph checks, the same checks the Netlify build runs. Enable it once per clone with `git config core.hooksPath .githooks`
 ### Hosting, DNS & Delivery
-- GitHub Pages for static site hosting and continuous deployment (v1)
-- Netlify for static site hosting and continuous deployment (v2)
+- Netlify serves the live site. `netlify.toml` runs the calculator, wording and Open Graph checks and rebuilds `sitemap-main.xml` in every build, so a failed check keeps the last good deploy live
+- GitHub Pages hosts a copy through `.github/workflows/static.yml`, which runs the same checks
 - Cloudflare for DNS management, SSL, CDN, and redirect rules
 ### Content & Publishing
 - Substack for newsletter publishing and content management on a custom subdomain
