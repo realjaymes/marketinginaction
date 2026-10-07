@@ -46,6 +46,19 @@ jobs:
         # has to make, not an artifact to regenerate.
         run: python3 tools/verify-calculators.py
 
+      - name: Check template wording
+        # Niche pages are cloned by hand and the clone step pluralises nouns
+        # mechanically. This fails the deploy on known errors ("companys",
+        # the "More Booked Qualifieds" placeholder title) before a new page
+        # copies them. Patterns live in the script.
+        run: python3 tools/check-wording.py
+
+      - name: Check Open Graph tags
+        # Every page needs a full Open Graph and Twitter block with a 1200x630
+        # image, or shared links preview badly. Cloned pages drop or copy stale
+        # tags, so this fails the deploy; tools/og-tags.py writes the fix.
+        run: python3 tools/check-og.py
+
       - name: Generate sitemap
         # sitemap-main.xml is a derived artifact, rebuilt from the pages actually
         # on disk so it can never drift from the site. Regenerating here (rather
