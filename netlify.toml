@@ -1,0 +1,18 @@
+# Netlify serves marketinginaction.xyz, so the site checks run here, inside the
+# Netlify build. A failed check fails the build, and Netlify keeps the last good
+# deploy live. The GitHub Actions workflow runs the same checks for its GitHub
+# Pages copy; keep the two lists in step.
+[build]
+  publish = "."
+  # set -e stops the build at the first failing step.
+  # 1. Full git history, so the sitemap dates each page from its last commit.
+  # 2. The three checks: calculators, template wording, Open Graph tags.
+  # 3. Rebuild sitemap-main.xml from the pages on disk.
+  command = """
+    set -e
+    if [ "$(git rev-parse --is-shallow-repository 2>/dev/null)" = "true" ]; then git fetch --unshallow --quiet || true; fi
+    python3 tools/verify-calculators.py
+    python3 tools/check-wording.py
+    python3 tools/check-og.py
+    python3 tools/generate-sitemap.py --base-url https://marketinginaction.xyz/ --output sitemap-main.xml
+  """
