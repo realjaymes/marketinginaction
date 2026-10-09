@@ -1,0 +1,41 @@
+# Tells Bing and the other IndexNow engines which sitemap pages a push changed,
+# so they recrawl within hours. ChatGPT search leans on Bing's index.
+#
+# Netlify serves marketinginaction.xyz and builds on its own, outside GitHub, so
+# this workflow waits for the live site before pinging: first until the IndexNow
+# key file is reachable (needed on the very first run), then a fixed pause that
+# covers a normal Netlify build. A manual "Run workflow" has no previous commit,
+# so it submits the whole sitemap.
+name: Notify IndexNow
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "indexnow"
+  cancel-in-progress: true
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - name: Wait for the Netlify deploy
+        run: |
+          key=$(ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1)
+          for i in $(seq 1 40); do
+            curl -sf "https://marketinginaction.xyz/$key" >/dev/null && break
+            sleep 15
+          done
+          sleep 120
+      - name: Notify IndexNow
+        continue-on-error: true
+        run: python3 tools/indexnow.py --base-url https://marketinginaction.xyz/ --before "${{ github.event.before }}" --after "${{ github.sha }}"
