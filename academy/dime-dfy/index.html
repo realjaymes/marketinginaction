@@ -478,6 +478,18 @@ html.js .panel[hidden]{display:none}
 .cp-award{background:#E6E4F7!important}
 .mod b,.cell b{background:#E6E4F7!important}
 </style>
+<style id="lb-css">
+html.lb-open,html.lb-open body{overflow:hidden}
+.lb-trigger{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:56px 16px 16px;background:rgba(16,10,22,.9);opacity:0;visibility:hidden;transition:opacity .18s ease-out,visibility 0s linear .18s}
+.lb.is-open{opacity:1;visibility:visible;transition:opacity .18s ease-out}
+.lb__box{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:95vw;max-height:100%;overflow:auto}
+.lb__img{display:block;width:auto;height:auto;max-width:95vw;max-height:min(90vh,calc(100vh - 11rem));min-width:min(95vw,720px);object-fit:contain;background:#fff;border:2px solid #fff;border-radius:12px}
+.lb__cap{max-width:min(95vw,760px);color:#fff;font-size:.95rem;line-height:1.45;text-align:center}
+.lb__cap strong{display:block;font-size:1.15rem;font-weight:750;letter-spacing:-.02em;margin-bottom:2px}
+.lb__x{position:absolute;top:8px;right:8px;width:44px;height:44px;display:grid;place-items:center;border:2px solid #100a16;border-radius:50%;background:#fff;color:#100a16;font:800 1.5rem/1 system-ui,sans-serif;cursor:pointer;padding:0}
+.lb__x:focus-visible{outline:3px solid #f1de71;outline-offset:3px}
+</style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -824,6 +836,45 @@ html.js .panel[hidden]{display:none}
     }
     tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.t)})});
     show(tabs[0].dataset.t);
+  });
+})();
+</script>
+<script id="lb-js">
+/* Tap any proof or testimonial screenshot to see it full size. Same viewer as the MIA Business pages. */
+(function(){
+  var box=document.createElement('div');
+  box.className='lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Screenshot, full size');
+  box.innerHTML='<button type="button" class="lb__x" aria-label="Close full-size view">&times;</button><div class="lb__box"><img class="lb__img" alt=""><div class="lb__cap"></div></div>';
+  document.body.appendChild(box);
+  var big=box.querySelector('.lb__img'),cap=box.querySelector('.lb__cap'),x=box.querySelector('.lb__x'),from=null;
+  function open(src,alt,html,trigger){
+    from=trigger;big.src=src;big.alt=alt||'';cap.innerHTML=html||'';cap.style.display=html?'':'none';
+    box.classList.add('is-open');document.documentElement.classList.add('lb-open');x.focus();
+  }
+  function close(){
+    if(!box.classList.contains('is-open'))return;
+    box.classList.remove('is-open');document.documentElement.classList.remove('lb-open');
+    if(from&&from.focus)from.focus();from=null;
+  }
+  function capFor(im){
+    var f=im.closest('figure');var c=f&&f.querySelector('figcaption');
+    if(c)return c.innerHTML;
+    var d=document.createElement('div');d.textContent=im.alt||'';return d.innerHTML;
+  }
+  x.addEventListener('click',close);
+  box.addEventListener('click',function(e){if(!e.target.closest('.lb__img,.lb__cap,.lb__x'))close()});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){e.preventDefault();close()}
+    else if(e.key==='Tab'){e.preventDefault();x.focus()}
+  });
+  document.querySelectorAll('img[data-proof-img], .pgrid figure img, .msgs figure img').forEach(function(im){
+    if(im.closest('a,button,.lb'))return;
+    im.classList.add('lb-trigger');im.setAttribute('role','button');im.setAttribute('tabindex','0');
+    im.setAttribute('aria-label','Expand screenshot: '+(im.alt||''));
+    function go(){open(im.currentSrc||im.src,im.alt,capFor(im),im)}
+    im.addEventListener('click',go);
+    im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
   });
 })();
 </script>
