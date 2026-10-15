@@ -379,12 +379,12 @@ html .hvac-form__title,html .acq-calc-card__head,html .book-card__title{text-wra
 html .acq-hero-vsl{border:3px solid var(--ink);border-radius:16px;box-shadow:var(--st-lg)}
 @media(max-width:600px){html .pill{font-size:.8rem;border-radius:18px;text-align:left;line-height:1.3}}
 
-/* Service tags keep their original colours: rotating blue, purple, pink and green on case study pages, purple on the index */
+/* Service tags keep their original colours: rotating blue, purple, pink and green on case study pages, one fixed colour per service on the index and case study pages */
 .cs-fact-tag.cs-fact-tag--blue,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--blue{background:var(--blue)!important}
 .cs-fact-tag.cs-fact-tag--purple,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--purple{background:var(--purple)!important;color:var(--ink)!important}
 .cs-fact-tag.cs-fact-tag--pink,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--pink{background:var(--pink)!important}
 .cs-fact-tag.cs-fact-tag--green,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--green{background:var(--green)!important}
-.csc-tag{background:var(--purple)!important;color:var(--ink)!important}
+.csc-tag--pink{background:var(--pink)!important}.csc-tag--purple{background:var(--purple)!important}.csc-tag--green{background:var(--green)!important}.csc-tag--blue{background:var(--blue)!important}
 </style>
 <style id="lb-css">
 html.lb-open,html.lb-open body{overflow:hidden}
@@ -507,7 +507,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="gtm gtm-engineering growth-experiments paid-acquisition" data-industry="services" id="funnelenvy" href="/consulting/case-studies/funnelenvy/">
               <div class="csc-thumb"><img src="/assets/case-studies/funnelenvy/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">GTM &amp; Product Launches</div>
+                <div class="csc-tag csc-tag--purple">GTM &amp; Product Launches</div>
                 <h3 class="csc-headline"><strong>40% more qualified pipeline:</strong> FunnelEnvy’s growth, GTM, and demand gen across two brands</h3>
                 <p class="csc-credit">Arun Sivashankaran, CEO, FunnelEnvy</p>
               </div>
@@ -517,7 +517,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="positioning website lifecycle gtm paid-acquisition seo-geo-aeo" data-industry="saas" id="reform" href="/consulting/case-studies/reform/">
               <div class="csc-thumb"><img src="/assets/case-studies/reform/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">Positioning &amp; Messaging</div>
+                <div class="csc-tag csc-tag--pink">Positioning &amp; Messaging</div>
                 <h3 class="csc-headline"><strong>34% trial activation lift:</strong> Reform’s post-acquisition SaaS repositioning</h3>
                 <p class="csc-credit">Arun Sivashankaran, CEO, Reform</p>
               </div>
@@ -527,7 +527,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="gtm lifecycle growth-experiments" data-industry="fintech" id="bujeti" href="/consulting/case-studies/bujeti/">
               <div class="csc-thumb"><img src="/assets/case-studies/bujeti/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">GTM &amp; Product Launches</div>
+                <div class="csc-tag csc-tag--purple">GTM &amp; Product Launches</div>
                 <h3 class="csc-headline"><strong>1,331 MQLs in 6 months:</strong> Bujeti’s first real growth engine</h3>
                 <p class="csc-credit">Achille Arouko, CEO, Bujeti</p>
               </div>
@@ -537,7 +537,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="gtm gtm-engineering paid-acquisition" data-industry="services" id="cil" href="/consulting/case-studies/cil/">
               <div class="csc-thumb"><img src="/assets/case-studies/cil/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">GTM &amp; Product Launches</div>
+                <div class="csc-tag csc-tag--purple">GTM &amp; Product Launches</div>
                 <h3 class="csc-headline"><strong>1,646 MQLs, 5 countries:</strong> CIL’s Academy launch across Africa</h3>
                 <p class="csc-credit">OJ Adekoya, CEO, Cecure Intelligence Limited</p>
               </div>
@@ -547,7 +547,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="gtm growth-experiments seo-geo-aeo" data-industry="saas" id="distrobird" href="/consulting/case-studies/distrobird/">
               <div class="csc-thumb"><img src="/assets/case-studies/distrobird/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">GTM Engineering, AI &amp; Automation</div>
+                <div class="csc-tag csc-tag--green">GTM Engineering, AI &amp; Automation</div>
                 <h3 class="csc-headline"><strong>3,000+ keywords in 90 days:</strong> Distrobird’s inbound engine from zero</h3>
                 <p class="csc-credit">Edwin Elodimuor, CEO, Distrobird</p>
               </div>
@@ -557,7 +557,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="positioning website gtm-engineering paid-acquisition seo-geo-aeo" data-industry="robotics" id="hank-robotics" href="/consulting/case-studies/hank-robotics/">
               <div class="csc-thumb"><img src="/assets/case-studies/hank-robotics/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">Positioning &amp; Messaging</div>
+                <div class="csc-tag csc-tag--pink">Positioning &amp; Messaging</div>
                 <h3 class="csc-headline"><strong>2,064% more organic traffic:</strong> Hank Robotics’ GTM before commercialization</h3>
                 <p class="csc-credit">Hanu Fejiro, CEO, Hank Robotics</p>
               </div>
@@ -567,7 +567,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="positioning gtm paid-acquisition" data-industry="healthtech" id="komfot-health" href="/consulting/case-studies/komfot-health/">
               <div class="csc-thumb"><img src="/assets/case-studies/komfot-health/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">Positioning &amp; Messaging</div>
+                <div class="csc-tag csc-tag--pink">Positioning &amp; Messaging</div>
                 <h3 class="csc-headline"><strong>3-country GTM structure:</strong> Komfot Health’s compliant market entry</h3>
                 <p class="csc-credit">Sanasi Amos, Founder, Komfot Health</p>
               </div>
@@ -577,7 +577,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="lifecycle growth-experiments" data-industry="fintech" id="bento-africa" href="/consulting/case-studies/bento-africa/">
               <div class="csc-thumb"><img src="/assets/case-studies/bento-africa/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">Lifecycle Programs</div>
+                <div class="csc-tag csc-tag--blue">Lifecycle Programs</div>
                 <h3 class="csc-headline"><strong>194% peak MoM growth:</strong> Bento’s full-funnel AARRR rebuild</h3>
                 <p class="csc-credit">Ebun Okubanjo, CEO, Bento</p>
               </div>
@@ -587,7 +587,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="positioning lifecycle" data-industry="travel" id="arinka-travel" href="/consulting/case-studies/arinka-travel/">
               <div class="csc-thumb"><img src="/assets/case-studies/arinka-travel/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">Positioning &amp; Messaging</div>
+                <div class="csc-tag csc-tag--pink">Positioning &amp; Messaging</div>
                 <h3 class="csc-headline"><strong>Full lifecycle rebuild:</strong> Arinka Travel’s positioning and CRM overhaul</h3>
                 <p class="csc-credit">Fisayo Bamidele, CEO, Arinka Travel</p>
               </div>
@@ -597,7 +597,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="gtm" data-industry="saas" id="forage-mail" href="/consulting/case-studies/forage-mail/">
               <div class="csc-thumb"><img src="/assets/case-studies/forage-mail/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">GTM &amp; Product Launches</div>
+                <div class="csc-tag csc-tag--purple">GTM &amp; Product Launches</div>
                 <h3 class="csc-headline"><strong>13+ verified signups:</strong> Forage Mail’s community-led product showcase</h3>
                 <p class="csc-credit">Richie Bonilla, CEO, Forage Mail</p>
               </div>
@@ -607,7 +607,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <a class="case-study-card-v2 card-lift" data-tags="gtm" data-industry="fintech" id="vban" href="/consulting/case-studies/vban/">
               <div class="csc-thumb"><img src="/assets/case-studies/vban/website.jpg" alt="" loading="lazy" /></div>
               <div class="csc-body">
-                <div class="csc-tag">GTM &amp; Product Launches</div>
+                <div class="csc-tag csc-tag--purple">GTM &amp; Product Launches</div>
                 <h3 class="csc-headline"><strong>2,306 people reached:</strong> Vban’s African fintech launch</h3>
                 <p class="csc-credit">Ayoni Jimoh, Product Marketing Manager, Oval Labs Inc.</p>
               </div>
