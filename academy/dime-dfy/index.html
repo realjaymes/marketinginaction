@@ -200,6 +200,19 @@ h2.t{font-size:clamp(1.9rem,3.8vw,2.8rem);max-width:26ch}
 .hero__sub{font-size:1.12rem;color:var(--muted);max-width:30em;margin-bottom:22px}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px}
 .hero h1 .band{white-space:nowrap}
+/* desktop: keep the whole hero, buttons included, on the first laptop screen */
+@media(min-width:901px){
+ .hero{padding:36px 0 52px}
+ .hero .wrap{grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:44px}
+ .hero .tag{margin-bottom:10px}
+ .hero h1{font-size:clamp(1.65rem,2.45vw,2.25rem);margin:10px 0 12px}
+ .hero__sub{font-size:1.02rem;line-height:1.55;max-width:34em;margin-bottom:16px}
+ .proofbox{padding:10px 16px;margin-bottom:18px;max-width:520px}
+ .proofbox__n{font-size:1.45rem}
+ .proofbox__t{font-size:.84rem;line-height:1.4}
+ .hero__ctas{flex-wrap:nowrap;margin-bottom:0}
+ .hero__ctas .btn{padding:13px 22px;font-size:.98rem;white-space:nowrap}
+}
 .proofbox{background:var(--white);border:2px solid var(--ink);border-radius:18px;padding:14px 18px;box-shadow:var(--st-sm);max-width:470px;margin-bottom:22px}
 .proofbox__n{font-size:1.8rem;font-weight:750;line-height:1.1;letter-spacing:-.02em;margin-bottom:4px}
 .proofbox__t{font-size:.9rem;color:var(--muted);line-height:1.45}
