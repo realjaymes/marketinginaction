@@ -214,6 +214,19 @@
         .book-howto strong{color:var(--ink)}
 
         a.book-btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+        .book-follow__lead{font-weight:700;margin:18px 0 10px}
+        .book-follow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+        .book-follow .book-btn{padding-left:10px;padding-right:10px}
+        /* Platform buttons in each brand's own colours, an agreed exception to gold-only actions */
+        .book-social{gap:8px;color:#fff;box-shadow:var(--st)}
+        .book-social svg{width:18px;height:18px;flex:none}
+        .book-social:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+        .book-social--x{background:#000}
+        .book-social--ig{background:linear-gradient(45deg,#F58529 0%,#DD2A7B 45%,#8134AF 75%,#515BD4 100%)}
+        .book-social--li{background:#0A66C2}
+        @media(max-width:400px){.book-social{font-size:.85rem;gap:6px}.book-social svg{width:16px;height:16px}}
+        .book-follow__news{font-size:.92rem;margin:16px 0 0}
+        .book-follow__news a{color:var(--ink);font-weight:700}
         a.book-btn:hover{text-decoration:none}
         #recBody{font-size:1rem;color:var(--ink);line-height:1.6;margin:4px 0 22px}
         #recBullets li{font-weight:600}
@@ -273,6 +286,10 @@
                                     <span class="book-radio__label">I want to make money online / learn to build and sell digital products</span>
                                 </label>
                                 <label class="book-radio">
+                                    <input type="radio" name="intent" value="dollar">
+                                    <span class="book-radio__label">I have a skill and want to earn in dollars from remote jobs or foreign clients</span>
+                                </label>
+                                <label class="book-radio">
                                     <input type="radio" name="intent" value="marketer">
                                     <span class="book-radio__label">I work in marketing and want to grow my career</span>
                                 </label>
@@ -302,10 +319,10 @@
                     <form id="step2Form" onsubmit="goFromAdBudget(event)" novalidate>
                         <div class="book-field">
                             <div class="book-radio-group" id="adBudgetGroup">
-                                <label class="book-radio"><input type="radio" name="adBudget" value="500k-plus"><span class="book-radio__label">₦500,000+</span></label>
-                                <label class="book-radio"><input type="radio" name="adBudget" value="250-500k"><span class="book-radio__label">₦250,000 – ₦500,000</span></label>
-                                <label class="book-radio"><input type="radio" name="adBudget" value="100-250k"><span class="book-radio__label">₦100,000 – ₦250,000</span></label>
-                                <label class="book-radio"><input type="radio" name="adBudget" value="under-100k"><span class="book-radio__label">Under ₦100,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="5m-plus"><span class="book-radio__label">Over ₦5,000,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="2m-5m"><span class="book-radio__label">₦2,000,000 to ₦5,000,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="1m-2m"><span class="book-radio__label">₦1,000,000 to ₦2,000,000</span></label>
+                                <label class="book-radio"><input type="radio" name="adBudget" value="500k-1m"><span class="book-radio__label">₦500,000 to ₦1,000,000</span></label>
                                 <label class="book-radio"><input type="radio" name="adBudget" value="unsure"><span class="book-radio__label">I'm not sure yet</span></label>
                             </div>
                         </div>
@@ -331,7 +348,7 @@
                             <span class="book-field__label">There are a few ways to work with us, depending on your budget and how hands-on you want to be.</span>
                             <p class="book-field__hint">Pick the one that fits where you are right now.</p>
                             <div class="book-radio-group" id="retainerGroup">
-                                <label class="book-radio"><input type="radio" name="retainer" value="ready"><span class="book-radio__label"><strong>Run it all for me (done-for-you).</strong> My team sets up, runs, and optimises your ads every month so you just focus on your business. ₦500,000/month, or ₦450,000/mo on a 3-month plan and ₦400,000/mo on 6 months.</span></label>
+                                <label class="book-radio"><input type="radio" name="retainer" value="ready"><span class="book-radio__label"><strong>Run it all for me (done-for-you).</strong> My team sets up, runs and improves your ads every month, so you can focus on running your business. Our fee is ₦500,000 a month, ₦450,000 a month on a 3-month plan, or ₦400,000 a month on a 6-month plan. On top of our fee, you need at least ₦500,000 a month to spend on ads.</span></label>
                                 <label class="book-radio"><input type="radio" name="retainer" value="learn-more"><span class="book-radio__label"><strong>I'm interested in done-for-you, but I want to learn more first.</strong> Book a call to see if the monthly service is right for your business.</span></label>
                                 <label class="book-radio"><input type="radio" name="retainer" value="setup"><span class="book-radio__label"><strong>Set it up for me once, then I'll run it.</strong> We build your ad account, pixel, and the audiences that reach your real target buyers, then hand it over with a blueprint and implementation support so you run profitable ads. ₦75,000 one-time.</span></label>
                                 <label class="book-radio"><input type="radio" name="retainer" value="diy"><span class="book-radio__label"><strong>Teach me to do it myself.</strong> We give you the workshops, templates, mentorship, and implementation support to run your own marketing with guidance. From ₦45,000.</span></label>
@@ -343,6 +360,94 @@
                             <button type="submit" class="book-btn book-btn--primary">Continue →</button>
                         </div>
                     </form>
+                </div>
+            </section>
+
+            <!-- STEP 2: DOLLAR OFFER BLUEPRINT (skilled professionals) -->
+            <section class="book-step" id="step2dollar">
+                <div class="book-card__header">
+                    <span class="book-card__step">Earn in dollars</span>
+                    <h2 class="book-card__title">Where are you right now?</h2>
+                    <p class="book-card__sub">Two quick questions so we know what you need.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step2dError">Please answer both questions to continue.</div>
+
+                    <form id="step2dForm" onsubmit="goFromDollarStage(event)" novalidate>
+                        <div class="book-field">
+                            <div class="book-radio-group" id="dollarStageGroup">
+                                <label class="book-radio"><input type="radio" name="dollarStage" value="no-dollar-yet"><span class="book-radio__label">I have a skill people pay for, but no dollar job or client yet</span></label>
+                                <label class="book-radio"><input type="radio" name="dollarStage" value="want-more"><span class="book-radio__label">I've had a dollar job or client before, and I want more</span></label>
+                                <label class="book-radio"><input type="radio" name="dollarStage" value="learning"><span class="book-radio__label">I'm still learning my skill</span></label>
+                            </div>
+                        </div>
+                        <div class="book-field" id="dollarGoalField">
+                            <span class="book-field__label">What do you want most?</span>
+                            <div class="book-radio-group" id="dollarGoalGroup">
+                                <label class="book-radio"><input type="radio" name="dollarGoal" value="remote-job"><span class="book-radio__label">A remote job that pays in dollars</span></label>
+                                <label class="book-radio"><input type="radio" name="dollarGoal" value="foreign-clients"><span class="book-radio__label">Foreign clients for my freelance work</span></label>
+                                <label class="book-radio"><input type="radio" name="dollarGoal" value="both"><span class="book-radio__label">Both</span></label>
+                            </div>
+                        </div>
+                        <div class="book-actions">
+                            <button type="button" class="book-btn book-btn--secondary" onclick="backTo('step1')">← Back</button>
+                            <button type="submit" class="book-btn book-btn--primary">Continue →</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- STEP 3: BLUEPRINT WAITLIST (captures to the Blueprint Waitlist tab) -->
+            <section class="book-step" id="step3dollar">
+                <div class="book-card__header">
+                    <span class="book-card__step">Last step</span>
+                    <h2 class="book-card__title">Join the waitlist</h2>
+                    <p class="book-card__sub">The Dollar Offer Blueprint opens soon. It shows you where high-paying clients and employers hire, how to contact the person who makes the decision, and how to pitch on any platform. Join the waitlist, and we will message you on WhatsApp first when it opens.</p>
+                </div>
+                <div class="book-card__body">
+                    <div class="book-error" id="step3dError">Please fill in every field to join.</div>
+
+                    <form id="step3dForm" onsubmit="submitWaitlist(event)" novalidate>
+                        <div class="book-field">
+                            <label class="book-field__label" for="wlSkill">What skill do people pay you for?</label>
+                            <input type="text" id="wlSkill" maxlength="120" placeholder="e.g. graphic design, writing, video editing, marketing, coding">
+                        </div>
+                        <div class="book-field">
+                            <label class="book-field__label" for="wlName">Full name</label>
+                            <input type="text" id="wlName" autocomplete="name" placeholder="e.g. Adaeze Okonkwo">
+                        </div>
+                        <div class="book-field">
+                            <label class="book-field__label" for="wlEmail">Email</label>
+                            <input type="email" id="wlEmail" autocomplete="email" placeholder="e.g. adaeze@gmail.com">
+                        </div>
+                        <div class="book-field">
+                            <label class="book-field__label" for="wlPhone">WhatsApp number</label>
+                            <p class="book-field__hint">Nigerian or international format welcome.</p>
+                            <input type="tel" id="wlPhone" autocomplete="tel" placeholder="e.g. 08012345678">
+                        </div>
+                        <div class="book-actions">
+                            <button type="button" class="book-btn book-btn--secondary" onclick="backTo('step2dollar')">← Back</button>
+                            <button type="submit" class="book-btn book-btn--primary" id="wlBtn">Join the waitlist →</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- BLUEPRINT WAITLIST: done -->
+            <section class="book-step" id="stepWlDone">
+                <div class="book-card__header">
+                    <span class="book-card__step">You're in</span>
+                    <h2 class="book-card__title">You're on the waitlist</h2>
+                </div>
+                <div class="book-card__body">
+                    <p>We will message you on WhatsApp when The Dollar Offer Blueprint opens. Waitlist members hear first.</p>
+                    <p class="book-follow__lead">Follow James for updates while you wait.</p>
+                    <div class="book-follow">
+                        <a class="book-btn book-social book-social--x" href="https://x.com/realjaymes" target="_blank" rel="noopener" data-follow="x"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg><span>X</span></a>
+                        <a class="book-btn book-social book-social--ig" href="https://www.instagram.com/jamestalksmarketing" target="_blank" rel="noopener" data-follow="instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="4.3" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="17.6" cy="6.4" r="1.35" fill="currentColor"/></svg><span>Instagram</span></a>
+                        <a class="book-btn book-social book-social--li" href="https://www.linkedin.com/in/jamespraise" target="_blank" rel="noopener" data-follow="linkedin"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 1 1 0-4.125 2.062 2.062 0 0 1 0 4.125zM7.119 20.452H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg><span>LinkedIn</span></a>
+                    </div>
+                    <p class="book-follow__news" id="wlNews" hidden>You work in marketing, so the <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noopener" data-follow="newsletter">MIA Newsletter</a> is worth reading too.</p>
                 </div>
             </section>
 
@@ -417,21 +522,32 @@
             } catch(e) { return ''; }
         }
 
-        var captured = { intent:'', adBudget:'', retainer:'' };
+        var captured = { intent:'', adBudget:'', retainer:'', dollarStage:'', dollarGoal:'' };
 
         // Human-readable labels written to the Sheet
         var adBudgetLabels = {
             'unsure':     'I\'m not sure yet',
-            'under-100k': 'Under ₦100,000',
-            '100-250k':   '₦100,000 – ₦250,000',
-            '250-500k':   '₦250,000 – ₦500,000',
-            '500k-plus':  '₦500,000+'
+            '500k-1m':    '₦500,000 to ₦1,000,000',
+            '1m-2m':      '₦1,000,000 to ₦2,000,000',
+            '2m-5m':      '₦2,000,000 to ₦5,000,000',
+            '5m-plus':    'Over ₦5,000,000'
         };
         var retainerLabels = {
             'ready':      'Ready to invest in done-for-you',
             'learn-more': 'Wants to learn more on a call',
             'diy':        'Prefers cheaper DIY',
             'not-now':    'Not right now'
+        };
+
+        var dollarStageLabels = {
+            'no-dollar-yet': 'Has a skill, no dollar job or client yet',
+            'want-more':     'Has had a dollar job or client, wants more',
+            'learning':      'Still learning the skill'
+        };
+        var dollarGoalLabels = {
+            'remote-job':      'Remote job paid in dollars',
+            'foreign-clients': 'Foreign clients for freelance work',
+            'both':            'Both'
         };
 
         // Recommendation cards
@@ -478,7 +594,7 @@
         };
 
         // Radio highlight wiring (generic, all groups)
-        ['intentGroup', 'adBudgetGroup', 'retainerGroup'].forEach(function(groupId) {
+        ['intentGroup', 'adBudgetGroup', 'retainerGroup', 'dollarStageGroup', 'dollarGoalGroup'].forEach(function(groupId) {
             var group = document.getElementById(groupId);
             if (!group) return;
             group.addEventListener('change', function() {
@@ -515,6 +631,7 @@
             captured.intent = v;
             if (v === 'business-owner') { show('step2biz'); }
             else if (v === 'make-money-online') { showRec('dime'); }
+            else if (v === 'dollar') { show('step2dollar'); }
             else if (v === 'marketer') { showRec('bootcamp'); }
             else { showRec('academy'); }
         };
@@ -526,6 +643,8 @@
             if (!v) { showError('step2Error'); return; }
             hideError('step2Error');
             captured.adBudget = adBudgetLabels[v] || v;
+            // No budget in mind yet: done-for-you needs ₦1M a month all in, so send them to the Mentorship
+            if (v === 'unsure') { showRec('bundle', 'step2biz'); return; }
             show('step3biz');
         };
 
@@ -549,9 +668,23 @@
             }
         };
 
+        // Step 2 — Dollar Offer Blueprint: stage + goal. Still learning → Bootcamp
+        window.goFromDollarStage = function(e) {
+            e.preventDefault();
+            var st = checkedVal('dollarStage');
+            var g = checkedVal('dollarGoal');
+            if (st === 'learning') { hideError('step2dError'); captured.dollarStage = dollarStageLabels[st]; showRec('bootcamp', 'step2dollar'); return; }
+            if (!st || !g) { showError('step2dError'); return; }
+            hideError('step2dError');
+            captured.dollarStage = dollarStageLabels[st] || st;
+            captured.dollarGoal = dollarGoalLabels[g] || g;
+            show('step3dollar');
+            setTimeout(function() { var el = document.getElementById('wlSkill'); if (el) el.focus(); }, 150);
+        };
+
         // Recommendation card
         var currentRecBack = 'step1';
-        function showRec(type) {
+        function showRec(type, backOverride) {
             var r = REC[type];
             document.getElementById('recTitle').textContent = r.title;
             document.getElementById('recBody').textContent = r.body;
@@ -568,7 +701,7 @@
             var btn = document.getElementById('recBtn');
             btn.textContent = r.btn;
             btn.setAttribute('href', r.href);
-            currentRecBack = r.back;
+            currentRecBack = backOverride || r.back;
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({ event: 'router_route_selected', route: type, destination: r.href });
             show('stepRec');
@@ -586,7 +719,71 @@
             return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
         }
 
-        // Step 4 — Consulting contact + book (only path that captures a lead)
+        // Keeps a +44 or +1 number as entered; Nigerian local numbers get the 234 prefix
+        function normalizeIntlPhone(raw) {
+            var t = (raw || '').trim();
+            var p = t.replace(/\D/g, '');
+            if (!p) return '';
+            if (t.charAt(0) === '+' || p.startsWith('234')) return p;
+            if (p.startsWith('0')) return '234' + p.substring(1);
+            return p;
+        }
+
+        // Step 3 — Blueprint waitlist. Writes to the "Blueprint Waitlist" tab. Fires a custom
+        // pixel event, not Lead, so consulting campaigns that optimise on Lead stay clean.
+        window.submitWaitlist = function(e) {
+            e.preventDefault();
+            var skill = document.getElementById('wlSkill').value.trim();
+            var name = document.getElementById('wlName').value.trim();
+            var email = document.getElementById('wlEmail').value.trim();
+            var phoneRaw = document.getElementById('wlPhone').value.trim();
+            var err = document.getElementById('step3dError');
+            var btn = document.getElementById('wlBtn');
+            if (!skill || !name || !email || !phoneRaw || !isEmail(email)) {
+                err.textContent = (email && !isEmail(email))
+                    ? 'Double-check your email. It doesn\'t look quite right.'
+                    : 'Please fill in every field to join.';
+                err.classList.add('show');
+                err.scrollIntoView({ behavior:'smooth', block:'center' });
+                return;
+            }
+            err.classList.remove('show');
+            btn.disabled = true;
+            btn.textContent = 'Joining…';
+            var phone = normalizeIntlPhone(phoneRaw);
+            var payload = {
+                form: 'blueprint-waitlist',
+                fullName: name,
+                email: email,
+                phone: phone,
+                skill: skill,
+                stage: captured.dollarStage,
+                goal: captured.dollarGoal,
+                pageUrl: window.location.href,
+                utmSource: getUtm('utm_source'),
+                utmMedium: getUtm('utm_medium'),
+                utmCampaign: getUtm('utm_campaign')
+            };
+            var eid = 'dob_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+            try { if (typeof fbq === 'function') { fbq('trackCustom', 'BlueprintWaitlist', { content_name: 'Dollar Offer Blueprint Waitlist' }, { eventID: eid }); } } catch(_) {}
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({ event: 'blueprint_waitlist_submitted', event_id: eid, stage: captured.dollarStage, goal: captured.dollarGoal });
+            try {
+                fetch(SHEET_URL, { method: 'POST', mode: 'no-cors', keepalive: true, headers: { 'Content-Type': 'text/plain' }, body: JSON.stringify(payload) });
+            } catch(_) {}
+            var news = document.getElementById('wlNews');
+            if (news) news.hidden = !/market|gtm|go[- ]to[- ]market|growth|seo|content|copy|ads|advert|brand|social media|pr\b|demand|lifecycle|email/i.test(skill);
+            setTimeout(function() { show('stepWlDone'); }, 400);
+        };
+
+        document.querySelectorAll('[data-follow]').forEach(function(a) {
+            a.addEventListener('click', function() {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'blueprint_waitlist_follow_click', channel: a.getAttribute('data-follow'), destination: a.getAttribute('href') });
+            });
+        });
+
+        // Step 4 — Consulting contact + book
         window.submitBooking = function(e) {
             e.preventDefault();
             var challenge = document.getElementById('challenge').value.trim();
@@ -667,6 +864,14 @@
                 window.location.href = CALENDAR_URL;
             }, 600);
         };
+        try {
+            if (new URLSearchParams(window.location.search).get('path') === 'dollar') {
+                var r = document.querySelector('input[name="intent"][value="dollar"]');
+                if (r) { r.checked = true; r.closest('.book-radio').classList.add('book-radio--checked'); }
+                captured.intent = 'dollar';
+                show('step2dollar');
+            }
+        } catch(_) {}
     })();
     </script>
 </body>
