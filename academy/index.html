@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://api.fontshare.com">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="/styles.css">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -421,20 +421,218 @@
       ttq.load('D7831IRC77U97CC2V3KG');
       ttq.page();
     </script>
-  </head>
+  
+<style>
+:root{--ink:#100a16;--white:#fff;--gold:#f1de71;--gold-t:#FBF3C6;--sa:#F7F4FA;--sb:#E6E0EE;--line:#E3DDEA;--muted:rgba(16,10,22,.68);--light:rgba(16,10,22,.45);
+--st:4px 4px 0 var(--ink);--st-sm:3px 3px 0 var(--ink);--st-lg:7px 7px 0 var(--ink);--max:1120px;
+--sans:"Satoshi",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--sa);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--sans);font-weight:750;line-height:1.12;letter-spacing:-.02em;color:var(--ink);text-wrap:balance;margin:0 0 .5em}
+p{margin:0 0 1rem}
+ul{margin:0;padding:0;list-style:none}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.center{text-align:center}
+main .s{padding:84px 0}
+main .s-a{background:var(--sa)}
+main .s-b{background:var(--sb)}
+.band{background-image:linear-gradient(180deg,transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.tag{display:inline-block;font-size:.86rem;font-weight:800;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:6px 16px;line-height:1.35}
+h2.t{font-size:clamp(1.7rem,3.6vw,2.6rem);max-width:26ch}
+.center h2.t{margin-left:auto;margin-right:auto}
+.sub{font-size:1.08rem;color:var(--muted);max-width:640px;margin:0 0 32px}
+.center .sub{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:800;font-size:1.02rem;background:var(--gold);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:14px 28px;box-shadow:var(--st);cursor:pointer;transition:transform .14s ease,box-shadow .14s ease;text-align:center;text-decoration:none}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);text-decoration:none}
+.btn-ghost{background:var(--white)}
+.btn-lg{padding:16px 30px;font-size:1.05rem}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:800;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:3px 12px;line-height:1.3;letter-spacing:.02em}
+.card{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg)}
+/* hero */
+.nh{padding:56px 0 76px;background:var(--gold-t);border-bottom:2px solid var(--ink);position:relative;overflow:hidden}
+.nh::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--gold);opacity:.55;right:-180px;top:-220px}
+.nh .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.98fr);gap:56px;align-items:start}
+.nh h1{font-size:clamp(1.65rem,2.75vw,2.5rem);margin:14px 0 16px;line-height:1.14}
+.nh__sub{font-size:1.12rem;color:var(--muted);max-width:32em;margin-bottom:24px}
+.nh__ctas{display:flex;flex-wrap:wrap;gap:12px}
+.nh h1,.nh__sub,.nh__ctas{animation:rise .5s cubic-bezier(.23,1,.32,1) both}
+.nh__sub{animation-delay:.06s}.nh__ctas{animation-delay:.12s}
+.win{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg);position:relative;animation:rise .6s cubic-bezier(.23,1,.32,1) .1s both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.win__top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:2px solid var(--ink)}
+.win__title{font-weight:750;letter-spacing:-.02em;font-size:1.2rem}
+.tabs{display:flex;gap:6px;padding:12px 14px 0;overflow-x:auto}
+.tab{font-family:var(--sans);font-weight:800;font-size:.86rem;background:var(--sa);border:2px solid var(--ink);border-radius:999px;padding:6px 15px;cursor:pointer;color:var(--ink);white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.tp{padding:16px 18px 22px}
+html.js .tp[hidden]{display:none}
+.win__note{font-size:.8rem;color:var(--muted);margin:12px 2px 0;line-height:1.45}
+.res{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:start}
+.res.one{grid-template-columns:1fr}
+.res figure{margin:0;border:2px solid var(--ink);border-radius:18px;overflow:hidden;background:var(--sa)}
+.res a.imglink{display:block;border-bottom:2px solid var(--ink)}
+.res img{display:block;width:100%;height:auto}
+.res.crop img{height:auto;object-fit:cover;object-position:top}
+/* contract screenshots end at the "Payment due" row, matching the live Pro Bootcamp page */
+img[src*="contract-3350"]{aspect-ratio:800/818}
+img[src*="contract-1250"]{aspect-ratio:800/878}
+.res figcaption{padding:9px 11px;font-size:.8rem;line-height:1.4;color:var(--muted)}
+.res figcaption strong{display:block;font-weight:750;letter-spacing:-.02em;font-size:1.1rem;color:var(--ink);line-height:1.2;margin-bottom:2px}
+.qmini{border:2px solid var(--ink);border-radius:18px;background:var(--sb);padding:12px 14px;margin-top:12px;font-size:.88rem;line-height:1.45}
+.qmini b{display:block;font-size:.8rem;margin-top:6px}
+.plist{display:grid;gap:7px}
+.plist a{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid var(--ink);border-radius:16px;padding:9px 13px;background:var(--sa);color:var(--ink);text-decoration:none;font-weight:800;font-size:.9rem;line-height:1.3}
+.plist a:hover{background:var(--sb)}
+.plist a span{flex:none;font-weight:750;font-size:.84rem;text-align:right;color:var(--ink)}
+.plist a em{display:block;font-style:normal;font-weight:700;font-size:.74rem;color:var(--muted)}
+.mods{display:grid;gap:8px}
+.mod{display:flex;align-items:center;gap:12px;border:2px solid var(--ink);border-radius:16px;padding:9px 12px;background:var(--sb)}
+.mod b{display:grid;place-items:center;width:30px;height:30px;border:2px solid var(--ink);border-radius:50%;background:#fff;font-size:.85rem;flex:none}
+.mod span{flex:1;font-weight:800;font-size:.93rem;line-height:1.3}
+.tp .startcopy{font-size:.92rem;color:var(--muted);margin:0 0 12px}
+.tp .btn{width:100%;margin-top:12px}
+.truststrip{background:var(--sb);border-bottom:2px solid var(--ink)}
+.truststrip .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 28px;padding-top:14px;padding-bottom:14px;font-weight:800;font-size:.9rem}
+.truststrip .lab{font-size:.78rem;letter-spacing:.08em;color:var(--muted)}
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.quote{background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:22px;display:flex;flex-direction:column;gap:18px}
+.quote p{margin:0;font-size:.98rem;line-height:1.55}
+.who{display:flex;align-items:center;gap:12px;margin-top:auto}
+.av{display:grid;place-items:center;width:40px;height:40px;border-radius:50%;border:2px solid var(--ink);background:var(--sb);font-weight:750;flex:none}
+.who b{display:block;font-size:.92rem;line-height:1.25}
+.who div span{display:block;font-size:.8rem;color:var(--muted);line-height:1.3}
+/* programs */
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.pc{background:var(--white);border:3px solid var(--ink);border-radius:24px;box-shadow:var(--st);padding:24px;display:flex;flex-direction:column;gap:12px}
+.pc h3{font-size:1.2rem;margin:0}
+.pc .d{margin:0;color:var(--muted);font-size:.95rem;line-height:1.55}
+.pc .inc{font-size:.76rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--light);margin:2px 0 0}
+.pc ul.il li{position:relative;padding:3px 0 3px 22px;font-size:.92rem;line-height:1.45}
+.pc ul.il li::before{content:"";position:absolute;left:3px;top:8px;width:5px;height:9px;border:solid var(--ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.pc hr{border:0;border-top:2px dashed rgba(16,10,22,.18);margin:4px 0}
+.pm{display:grid;gap:10px;margin-top:auto}
+.pm dt{font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.06em;color:var(--light)}
+.pm dd{margin:0;font-size:.95rem;line-height:1.4}
+.pm dd.price{font-weight:750;font-size:1.1rem}
+.pm dd small{display:block;font-size:.84rem;color:var(--muted)}
+.pc .btn{width:100%;margin-top:6px}
+/* how */
+.how{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.how__l{position:sticky;top:100px}
+.how__l p{color:var(--muted);max-width:40ch}
+.callout{margin-top:24px;background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:20px}
+.callout b{display:block;font-size:1.05rem;margin-bottom:6px}
+.callout p{margin:0;font-size:.96rem}
+.steps{display:grid;gap:14px}
+.steps li{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:18px 20px}
+.steps h3{font-size:1.1rem;margin-bottom:4px}
+.steps p{margin:0;color:var(--muted);font-size:.97rem}
+.num{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sb);font-weight:750;font-size:1.05rem;flex:none}
+/* quiz */
+.quiz .card{padding:52px 28px;max-width:860px;margin:0 auto;text-align:center}
+.quiz h2{font-size:clamp(1.7rem,4vw,2.5rem);margin-bottom:12px}
+.quiz .card>p{max-width:600px;margin:0 auto 22px;color:var(--muted)}
+.qsteps{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:0 auto 26px;max-width:640px}
+.qsteps div{display:flex;gap:12px;align-items:center;text-align:left;flex:1 1 260px;border:2px solid var(--ink);border-radius:18px;background:var(--sa);padding:12px 14px}
+.qsteps p{margin:0;font-size:.94rem;color:var(--ink)}
+/* footer */
+footer{background:var(--ink);color:#fff}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media(max-width:1080px){.quotes{grid-template-columns:1fr 1fr}.pgrid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){
+ main .s{padding:56px 0}
+ .nh .wrap{grid-template-columns:1fr;gap:36px}
+ .nh h1{font-size:clamp(1.65rem,5.2vw,2.4rem)}
+ .how{grid-template-columns:1fr;gap:28px}
+ .how__l{position:static}
+}
+@media(max-width:700px){.quotes,.pgrid{grid-template-columns:1fr}}
+@media(max-width:600px){
+ body{font-size:16px}
+ .wrap{padding:0 16px}
+ .nh{padding:36px 0 56px}
+ .nh__ctas .btn{width:100%}
+ .tp{padding:14px 14px 18px}
+ .win__top{padding:12px 14px}
+ .quiz .card{padding:36px 18px}
+ .quiz .btn{width:100%}
+ .res.crop img{height:auto}
+}
 
-  <body>
-    
-    <!-- Google Tag Manager (noscript) -->
+/* MIA accent tags: 2px ink outline, accent fill, ink text. Gold stays for actions only. */
+:root{--pink:#f171c4;--blue:#71c4f1;--green:#71f19e;--purple:#7184f1}
+.ptag,.chip{color:var(--ink)}
+.ptag{display:inline-flex;align-items:center;font-size:.68rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;line-height:1.3;background:var(--white);white-space:nowrap}
+.c-pink{background:var(--pink)}.c-blue{background:var(--blue)}.c-green{background:var(--green)}.c-purple{background:var(--purple)}
+.chip.c-pink{background:var(--pink)}.chip.c-blue{background:var(--blue)}.chip.c-green{background:var(--green)}.chip.c-purple{background:var(--purple)}
+.tag.c-pink{background:var(--pink)}.tag.c-blue{background:var(--blue)}.tag.c-green{background:var(--green)}.tag.c-purple{background:var(--purple)}
+@media(min-width:901px){.nh{padding:40px 0 48px}}
+/* compact hero programs */
+.pg{display:grid;gap:7px}
+.prow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:10px;border:2px solid var(--ink);border-radius:16px;padding:9px 12px;background:var(--white);color:var(--ink);text-decoration:none;box-shadow:var(--st-sm)}
+.prow:hover{background:var(--sb);text-decoration:none}
+.prow__t b{display:block;font-size:.92rem;line-height:1.25}
+.prow__t em{display:block;font-style:normal;font-weight:600;font-size:.76rem;color:var(--muted);line-height:1.3}
+.prow__p{font-weight:750;font-size:.8rem;text-align:right;line-height:1.25}
+.pg-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-top:2px}
+.pchip{display:flex;flex-direction:column;align-items:flex-start;gap:3px;border:2px solid var(--ink);border-radius:14px;padding:7px 10px;background:var(--sa);color:var(--ink);text-decoration:none;line-height:1.25}
+.pchip:hover{background:var(--sb);text-decoration:none}
+.pchip b{font-size:.82rem;font-weight:800}
+.pchip i{font-style:normal;font-weight:700;font-size:.74rem;color:var(--muted)}
+.pg-all{display:block;text-align:center;font-weight:800;font-size:.86rem;color:var(--ink);text-decoration:underline;text-underline-offset:3px;padding:4px 0 0}
+@media(max-width:600px){
+ .prow{grid-template-columns:minmax(0,1fr) auto;row-gap:4px}
+ .prow .ptag{grid-column:1 / -1;justify-self:start}
+ .pchip b{font-size:.78rem}
+}
+
+/* quiz */
+.quiz .card.qz{text-align:left;padding:0;max-width:640px;overflow:hidden}
+.qz__intro{max-width:640px;margin:0 auto 26px;text-align:center}
+.qz__intro h2{font-size:clamp(1.7rem,4vw,2.5rem);margin:12px auto 10px}
+.qz__intro p{color:var(--muted);margin:0 auto;max-width:34em}
+.qz__head{padding:22px 28px 0}
+.qz__prog{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.qz__bar{flex:1;height:10px;border:2px solid var(--ink);border-radius:999px;background:var(--sb);overflow:hidden}
+.qz__bar span{display:block;height:100%;width:0;background:var(--ink);transition:width .25s ease}
+.qz__title{font-size:1.4rem;margin:0 0 4px}
+.qz__body{padding:16px 28px 28px}
+.qz-opts{display:grid;gap:9px;margin:0 0 18px}
+.qz-opt{display:flex;align-items:flex-start;gap:12px;border:2px solid var(--ink);border-radius:16px;padding:12px 14px;cursor:pointer;background:var(--white);font-size:.98rem;line-height:1.4;font-weight:600}
+.qz-opt:hover{background:var(--sa)}
+.qz-opt input{margin-top:4px;accent-color:var(--ink);flex:none}
+.qz-opt.on{background:var(--sb);box-shadow:var(--st-sm)}
+.qz-err{display:none;border:2px solid var(--ink);border-radius:12px;background:#fde8e8;padding:8px 12px;font-size:.88rem;margin-bottom:12px}
+.qz-err.show{display:block}
+.qz-actions{display:flex;gap:10px;flex-wrap:wrap}
+.qz-actions .btn{flex:1 1 auto}
+.qz-back{background:var(--white)}
+.qz [hidden]{display:none!important}
+.qz-step{display:none}.qz-step.active{display:block}
+.qz-rec__tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.qz-rec__price{font-weight:750;font-size:1.05rem;margin:0 0 10px}
+.qz-rec p.why{color:var(--ink);margin:0 0 12px}
+.qz-rec ul{margin:0 0 16px}
+.qz-rec li{position:relative;padding:3px 0 3px 24px;font-size:.95rem;line-height:1.45}
+.qz-rec li::before{content:"";position:absolute;left:4px;top:8px;width:5px;height:9px;border:solid var(--ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.qz-rec .hint{font-size:.84rem;color:var(--muted);margin:10px 0 0}
+.qz-links{display:flex;gap:18px;flex-wrap:wrap;margin-top:16px;font-weight:800;font-size:.9rem}
+.qz-links a,.qz-links button{color:var(--ink);text-decoration:underline;text-underline-offset:3px;background:none;border:0;padding:0;font:inherit;font-weight:800;cursor:pointer}
+@media(max-width:600px){.qz__head{padding:20px 18px 0}.qz__body{padding:14px 18px 22px}}
+
+</style>
+  </head>
+<body>
+<!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-
-    <!-- Header -->
-    <header>
+<!-- Header -->
+    <header class="sticky-nav">
       <div class="container nav">
         <a class="logo" href="/">
-          <img src="../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
+          <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
 
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="primary-nav">
@@ -474,632 +672,60 @@
         </nav>
       </div>
     </header>
-
-    <main>
-      <!-- HERO -->
-      <section class="academy-hero">
-        <div class="container academy-hero-grid">
-          <!-- Left -->
-          <div class="reveal-blur">
-            <div class="academy-pill">
-              <span class="dot" aria-hidden="true"></span>
-              MIA Academy
-            </div>
-
-            <h1 style="margin-top: 18px">
-              Marketing Simplified for <span class="text-yellow accent-italic">Marketers</span> and <span class="text-yellow accent-italic">Business Owners</span>
-            </h1>
-
-            <p class="muted" style="max-width: 58ch; margin-top: 10px">
-              Learn how to run marketing that works. From strategy to execution, MIA Academy teaches the systems, workflows, and AI tools behind real campaigns.
-            </p>
-
-            <div class="button-row" style="margin-top: 18px">
-              <a class="button button-primary" href="#programs">For Marketers</a>
-              <a
-                class="button button-secondary"
-                href="/academy/sme/"
-              >
-                For Business Owners
-              </a>
-            </div>
-
-            <hr class="academy-hero-divider" />
-
-            <div class="alumni-row">
-              <div class="alumni-label">OUR ALUMNI WORK AT</div>
-              <div class="alumni-logos" aria-label="Alumni companies">
-                <span>REFORM</span>
-                <span>KUDA</span>
-                <span>BUJETI</span>
-                <span>MONIEPOINT</span>
-                <span>PIGGYVEST</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Right -->
-          <div class="testimonial-col" aria-label="Testimonials">
-            <div class="testimonial-card reveal-blur card-lift">
-              <p class="testimonial-quote">
-                “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
-              </p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">T</div>
-                <div>
-                  <div class="testimonial-name">Theodore Nnah</div>
-                  <div class="testimonial-role">Product Marketer</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card reveal-blur card-lift">
-              <p class="testimonial-quote">
-                “I’ve taken courses before, but this actually changed how I approach product marketing in my day-to-day work.”
-              </p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">C</div>
-                <div>
-                  <div class="testimonial-name">Chidinma Ezeani</div>
-                  <div class="testimonial-role">Marketing Manager</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card reveal-blur card-lift">
-              <p class="testimonial-quote">
-                “I’ve been in product marketing for a while, but this helped me think more clearly about what I was already doing.”
-              </p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">T</div>
-                <div>
-                  <div class="testimonial-name">Tunde Adewale</div>
-                  <div class="testimonial-role">Senior Product Marketing Manager</div>
-                </div>
-              </div>
-            </div>
-
-            <div class="testimonial-card reveal-blur card-lift">
-              <p class="testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
-              <div class="testimonial-person">
-                <div class="testimonial-avatar">D</div>
-                <div>
-                  <div class="testimonial-name">Despina Maris</div>
-                  <div class="testimonial-role">Product Marketer</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    <!-- PROGRAMS -->
-      <section id="programs" class="section academy-programs">
-        <div class="container">
-          <div class="programs-head reveal-blur">
-            <h2>Get Started with MIA Academy Programs</h2>
-            <p>
-              Choose the learning path that matches the level of depth, support, and speed you need right now. All programs are built around applied
-              execution, not passive learning.
-            </p>
-          </div>
-
-          <div class="program-grid">
-            <!-- 1 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-blue)"></div>
-              <div class="program-inner">
-                <div class="program-tag">BOOTCAMP</div>
-                <h3 class="program-title">Product & Growth Marketing with AI – Bootcamp</h3>
-                <p class="program-desc">
-                  The non-technical path into tech. Learn product marketing, growth marketing, and AI skills from scratch. Build 12 portfolio-ready deliverables. No degree or coding required.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>Monthly live sessions + career coaching + mentorship</li>
-                    <li>50+ templates, 40+ AI tools, certification</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">Pro ₦75,000 · Core ₦45,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">12 weeks, recorded lessons, live sessions, assessments</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/pro-bootcamp/">Apply Now</a>
-              </div>
-            </article>
-
-            <!-- DIME Done-For-You -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-purple)"></div>
-              <div class="program-inner">
-                <div class="program-tag">DONE-FOR-YOU</div>
-                <h3 class="program-title">DIME Done-For-You – We Build Your Digital Product</h3>
-                <p class="program-desc">
-                  We build you a digital product you can sell, and you do none of the work. You do not even need an idea. We pick the product, make it, write the page that sells it, and set up how you get paid, then hand you the finished thing in 14 days. Built for people who want to earn from a digital product but have no time to build one.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>Product idea, the product, sales page &amp; payment setup</li>
-                    <li>Launch posts, 30 days of WhatsApp support &amp; the full DIME course</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦350,000 (founding)</p>
-                    <p class="meta-sub">Split available</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Done for you, ready in 14 days</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/dime-dfy/">Apply Now</a>
-              </div>
-            </article>
-
-            <!-- DIME – Digital Income Made Easy -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-accent)"></div>
-              <div class="program-inner">
-                <div class="program-tag">PROGRAM</div>
-                <h3 class="program-title">DIME – Digital Income Made Easy (with AI)</h3>
-                <p class="program-desc">
-                  Build one digital product with AI, sell it forever, and make $2,000 a month. DIME teaches the digital marketing to package it, make your first sale fast, and get paid, with AI doing 80% of the work. Built for complete beginners.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>AI prompts, templates & ready-made funnels (ads, landing pages, email)</li>
-                    <li>Lifetime access, and private community</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦45,000 (founding)</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Self-paced + free live class</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/dime/">Get Started</a>
-              </div>
-            </article>
-
-            <!-- DIME Masterclass -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-blue)"></div>
-              <div class="program-inner">
-                <div class="program-tag">MASTERCLASS</div>
-                <h3 class="program-title">DIME Masterclass</h3>
-                <p class="program-desc">
-                  The simplest way to make your first sale online this week, from digital products. Promote a ready-made product, let AI make your content, and keep a commission. No product to build, no audience, no ad budget. Built for complete beginners.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>Masterclass + playbook, done-for-you promo kit & AI content prompts</li>
-                    <li>7-day first-sale plan, Partner Challenge & 30-day first-sale guarantee</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦10,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Self-paced masterclass + playbook</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/dime-masterclass/">Get Started</a>
-              </div>
-            </article>
-
-            <!-- Core Bootcamp card removed — both tiers shown on the Pro Bootcamp landing page -->
-            <!-- 2 -->
-            <article class="program-card" style="display:none;">
-              <div class="program-inner"></div>
-            </article>
-
-            <!-- 3 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-pink)"></div>
-              <div class="program-inner">
-                <div class="program-tag">COURSE</div>
-                <h3 class="program-title">The Complete Product Marketing Training Course</h3>
-                <p class="program-desc">
-                  10-module self-paced course covering the full PMM lifecycle, from fundamentals to GTM execution. Includes a 100+ page PMM Handbook with every framework and template.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>10 video modules + 100+ page handbook</li>
-                    <li>Templates for positioning, messaging, launches</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦15,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Pre-recorded videos + handbook</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/pmm-course/">Get Access</a>
-              </div>
-            </article>
-
-            <!-- 3 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: #111016"></div>
-              <div class="program-inner">
-                <div class="program-tag">COURSE</div>
-                <h3 class="program-title">The Complete Tech Sales Training Course for Sales Reps, AEs & AMs</h3>
-                <p class="program-desc">
-                  7-module self-paced course covering the end-to-end SaaS sales process, from team structure and prospecting to cold outreach, tool fluency, and performance metrics. Built to help sales reps transition from Naira roles to remote USD contracts.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>7 video modules + sales handbook</li>
-                    <li>Cold outreach templates, scripts & interview prep</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦15,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Pre-recorded videos + handbook</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/tech-sales/">Get Access</a>
-              </div>
-            </article>
-
-            <!-- 4 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-green)"></div>
-              <div class="program-inner">
-                <div class="program-tag">LIBRARY</div>
-                <h3 class="program-title">Product Marketing Templates & Resources Library</h3>
-                <p class="program-desc">
-                  12+ PMM templates, 12+ growth marketing templates, book reviews, handbooks, productivity systems, ChatGPT prompts, marketing reports, and MIA community access. Updated monthly.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>24+ templates (Google Docs, Sheets, Notion)</li>
-                    <li>Handbooks, book reviews, community access</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦20,000/yr</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Annual Subscription</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/templates/">Get Access</a>
-              </div>
-            </article>
-
-            <!-- 5 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-accent)"></div>
-              <div class="program-inner">
-                <div class="program-tag">LIBRARY</div>
-                <h3 class="program-title">AI Prompt Frameworks & Templates for Marketers</h3>
-                <p class="program-desc">
-                  40+ production-ready prompt templates, 4+ hours of video tutorials, platform setup guides for ChatGPT/Claude/Gemini, and agent-style workflow architectures. Lifetime updates.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>40+ prompt templates + 4+ hours video</li>
-                    <li>Platform setups, agent workflows, lifetime updates</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦20,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Instant Access</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/ai-prompts/">Get Access</a>
-              </div>
-            </article>
-
-            <!-- 6 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: var(--color-purple)"></div>
-              <div class="program-inner">
-                <div class="program-tag">HANDBOOK</div>
-                <h3 class="program-title">The Complete Growth Marketing Handbook</h3>
-                <p class="program-desc">
-                  The complete growth marketing operating system: AARRR framework, A/B testing, onboarding, virality, ads, B2B sales, and content marketing. Built by a practitioner who contributed to over $10M in pipeline.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>AARRR framework + experiment templates</li>
-                    <li>Playbooks for acquisition, onboarding, ads</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦10,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Digital Handbook</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/growth-handbook/">Get Access</a>
-              </div>
-            </article>
-
-            <!-- 7 -->
-            <article class="program-card reveal-blur card-lift">
-              <div class="program-rail" style="background: #111016"></div>
-              <div class="program-inner">
-                <div class="program-tag">HANDBOOK</div>
-                <h3 class="program-title">The Complete Digital Marketing Guide</h3>
-                <p class="program-desc">
-                  A structured guide covering every major digital marketing discipline: social media, content, SEO, LinkedIn and Google Ads, programmatic advertising, attribution, and a 200+ term glossary.
-                </p>
-
-                <div class="program-includes" style="margin-top: 6px">
-                  <p class="meta-label" style="margin-bottom: 8px">INCLUDES:</p>
-                  <ul style="margin: 0; padding-left: 18px; color: rgba(28, 20, 34, 0.62)">
-                    <li>7 digital channels + attribution models</li>
-                    <li>200+ term glossary + templates</li>
-                  </ul>
-                </div>
-
-                <hr class="program-hr" />
-
-                <div class="program-meta">
-                  <div>
-                    <p class="meta-label">COST</p>
-                    <p class="meta-value">₦5,000</p>
-                  </div>
-                  <div>
-                    <p class="meta-label">FORMAT</p>
-                    <p class="meta-sub">Digital Handbook</p>
-                  </div>
-                </div>
-
-                <a class="program-btn" href="/academy/digital-marketing/">Get Access</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-  
-
-      <!-- HOW IT WORKS -->
-      <section class="section academy-how" id="how">
-        <div class="container academy-how-grid">
-          <div class="academy-how-sticky reveal-blur">
-            <h2>How MIA Academy works</h2>
-            <p class="muted" style="max-width: 40ch; margin-top: 10px">
-              MIA Academy is not a one-off course. It’s a learning-to-career system designed to help you build skill, apply it in context, and turn it
-              into opportunity.
-            </p>
-
-            <div class="how-callout">
-              <p class="how-callout-title">Proactive Career Path</p>
-              <p class="how-callout-text">
-                We focus on usable output rather than simple completion certificates. You build assets you can show employers.
-              </p>
-            </div>
-          </div>
-
-          <div class="how-steps" aria-label="How it works steps">
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">1</div>
-              <div>
-                <h3 class="step-title">Start with the right program</h3>
-                <p class="step-text">
-                  You begin by enrolling in the program that fits where you are right now. Whether it's a bootcamp for guided execution or a self-paced
-                  course for flexibility.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">2</div>
-              <div>
-                <h3 class="step-title">Learn with real context</h3>
-                <p class="step-text">
-                  You don't just consume content. You learn frameworks and approaches grounded in real product, growth, and GTM work.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">3</div>
-              <div>
-                <h3 class="step-title">Apply what you’re learning</h3>
-                <p class="step-text">
-                  As you go through a program, you apply what you learn to real scenarios, practical exercises, and portfolio-style work.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">4</div>
-              <div>
-                <h3 class="step-title">Get feedback from people doing the work</h3>
-                <p class="step-text">
-                  You don't learn in isolation. Through the MIA Community, you share work, ask questions, and get feedback from peers and practitioners.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">5</div>
-              <div>
-                <h3 class="step-title">Access the full MIA resource ecosystem</h3>
-                <p class="step-text">
-                  As a learner, you get ongoing access to templates, frameworks, playbooks, and supporting tools that evolve with the market.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">6</div>
-              <div>
-                <h3 class="step-title">Attend MIA events and deepen your network</h3>
-                <p class="step-text">
-                  MIA hosts focused virtual and in-person events designed to deepen trust and connect people doing similar work.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">7</div>
-              <div>
-                <h3 class="step-title">Become job-ready through proof of work</h3>
-                <p class="step-text">
-                  By applying what you learn, you build clear examples of execution and artifacts you can talk through with confidence.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">8</div>
-              <div>
-                <h3 class="step-title">Find opportunities through MIA Jobs</h3>
-                <p class="step-text">
-                  MIA Jobs connects marketers to roles based on execution skill and proof of work, not just resumes alone.
-                </p>
-              </div>
-            </div>
-
-            <div class="how-step reveal-blur card-lift">
-              <div class="step-num">9</div>
-              <div>
-                <h3 class="step-title">Get continuous career support</h3>
-                <p class="step-text">
-                  Your journey doesn't end after one program. You continue to get access to new resources, learning opportunities, and guidance.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- QUIZ CTA -->
-      <section class="quiz-wrap" id="start">
-        <div class="container">
-          <div class="quiz-panel reveal-blur">
-            <h2>Not sure where to start?</h2>
-            <p>
-              If you’re unsure whether to start with a bootcamp, a self-paced course, or a resource library, we can help you decide in a few minutes.
-            </p>
-
-            <hr class="quiz-divider" />
-
-            <div class="quiz-steps" aria-label="Quiz steps">
-              <div class="quiz-step">
-                <div class="step-num">1</div>
-                <p>Answer a short set of questions about your role and goals.</p>
-              </div>
-
-              <div class="quiz-step">
-                <div class="step-num">2</div>
-                <p>Get a clear recommendation on which MIA program fits you best.</p>
-              </div>
-            </div>
-
-            <div class="quiz-divider"></div>
-
-            <div class="quiz-cta">
-            <a
-              class="quiz-btn"
-              href="https://tally.so/r/0QBXqy"
-              aria-label="Take the 3 minute MIA Academy quiz"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Take the 3-Minute Quiz
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
+<main>
+<div class="nh"><div class="wrap">
+<div>
+<span class="tag">MIA Academy</span>
+<h1>Marketing Simplified for&nbsp;<span class="band">Marketers and Business&nbsp;Owners</span></h1>
+<p class="nh__sub">Learn how to run marketing that works. From strategy to execution, MIA Academy teaches the systems, workflows, and AI tools behind real campaigns.</p>
+<div class="nh__ctas"><a class="btn btn-lg" href="#programs">For Marketers</a><a class="btn btn-lg btn-ghost" href="/academy/sme/">For Business Owners</a></div>
+</div>
+<div class="win" data-tabs>
+<div class="win__top"><span class="win__title">MIA Academy</span></div>
+<div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-t="res">Results</button><button class="tab" role="tab" aria-selected="false" data-t="prog">Programs</button><button class="tab" role="tab" aria-selected="false" data-t="start">Start here</button></div>
+<div class="tp" data-p="res">
+<div class="res crop">
+<figure><a class="imglink" href="/assets/credibility/contract-3350-usd.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/contract-3350-usd.jpg" alt="$3,350/month USD contract" loading="eager" width="800" height="1012"></a><figcaption><strong>$3,350/month</strong>Remote marketing contract. $40,200/year. Earned from Nigeria.</figcaption></figure>
+<figure><a class="imglink" href="/assets/credibility/contract-1250-usd.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/contract-1250-usd.jpg" alt="$2,500 monthly USD contract" loading="eager" width="800" height="1731"></a><figcaption><strong>$2,500 monthly</strong>$30,000/year. Paid bi-weekly. Another contract from the same skill set.</figcaption></figure>
+</div>
+<p class="win__note">Contract screenshots from the Bootcamp sales page. Tap an image to see it full size. Learner testimonials are below.</p>
+</div>
+<div class="tp" data-p="prog"><div class="pg"><a class="prow" href="/academy/dime/"><span class="ptag c-green">Program</span><span class="prow__t"><b>DIME: Digital Income Made Easy</b><em>Build and sell a digital product with AI</em></span><span class="prow__p">&#8358;45,000</span></a><a class="prow" href="/academy/pro-bootcamp/"><span class="ptag c-blue">Bootcamp</span><span class="prow__t"><b>Marketing &amp; AI Bootcamp</b><em>Learn marketing and AI skills to get hired</em></span><span class="prow__p">Pro &#8358;75,000<br>Core &#8358;45,000</span></a><div class="pg-grid"><a class="pchip" href="/academy/dime-dfy/"><span class="ptag c-pink">Done-for-you</span><b>DIME Done-For-You</b><i>&#8358;350,000</i></a><a class="pchip" href="/academy/dime-masterclass/"><span class="ptag c-green">Masterclass</span><b>DIME Masterclass</b><i>&#8358;10,000</i></a><a class="pchip" href="/academy/pmm-course/"><span class="ptag c-blue">Course</span><b>Product Marketing Course</b><i>&#8358;15,000</i></a><a class="pchip" href="/academy/tech-sales/"><span class="ptag c-blue">Course</span><b>Tech Sales Course</b><i>&#8358;15,000</i></a><a class="pchip" href="/academy/templates/"><span class="ptag c-blue">Library</span><b>PMM Templates Library</b><i>&#8358;20,000/yr</i></a><a class="pchip" href="/academy/ai-prompts/"><span class="ptag c-purple">Library</span><b>AI Prompt Templates</b><i>&#8358;20,000</i></a><a class="pchip" href="/academy/growth-handbook/"><span class="ptag c-green">Handbook</span><b>Growth Marketing Handbook</b><i>&#8358;10,000</i></a><a class="pchip" href="/academy/digital-marketing/"><span class="ptag c-green">Handbook</span><b>Digital Marketing Guide</b><i>&#8358;5,000</i></a></div><a class="pg-all" href="#programs">See all programs &darr;</a></div></div>
+<div class="tp" data-p="start">
+<p class="startcopy">Not sure whether to start with DIME, the Bootcamp or something else? Answer three quick questions and get one clear recommendation.</p>
+<div class="mods"><div class="mod"><b>1</b><span>Tell us where you are and what you want.</span></div><div class="mod"><b>2</b><span>Get one program recommended, with the reason.</span></div></div>
+<a class="btn" href="#start">Take the 1-minute quiz</a>
+</div>
+</div>
+</div></div>
+<div class="truststrip"><div class="wrap"><span class="lab">OUR ALUMNI WORK AT</span><span>REFORM</span><span>KUDA</span><span>BUJETI</span><span>MONIEPOINT</span><span>PIGGYVEST</span></div></div>
+
+<section class="s s-a" id="results"><div class="wrap">
+<div class="center"><span class="tag c-green">What learners say</span></div>
+<div class="quotes" style="margin-top:28px"><figure class="quote" style="margin:0"><p>“What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”</p><div class="who"><span class="av">T</span><div><b>Theodore Nnah</b><span>Product Marketer</span></div></div></figure><figure class="quote" style="margin:0"><p>“I’ve taken courses before, but this actually changed how I approach product marketing in my day-to-day work.”</p><div class="who"><span class="av">C</span><div><b>Chidinma Ezeani</b><span>Marketing Manager</span></div></div></figure><figure class="quote" style="margin:0"><p>“I’ve been in product marketing for a while, but this helped me think more clearly about what I was already doing.”</p><div class="who"><span class="av">T</span><div><b>Tunde Adewale</b><span>Senior Product Marketing Manager</span></div></div></figure><figure class="quote" style="margin:0"><p>“The way things were broken down made it easier to act, not just understand.”</p><div class="who"><span class="av">D</span><div><b>Despina Maris</b><span>Product Marketer</span></div></div></figure></div>
+</div></section>
+
+<section class="s s-b" id="programs"><div class="wrap">
+<div class="center"><h2 class="t">Get Started with MIA Academy Programs</h2><p class="sub">Choose the learning path that matches the level of depth, support, and speed you need right now. All programs are built around applied execution, not passive learning.</p></div>
+<div class="pgrid"><article class="pc"><div><span class="chip c-blue">BOOTCAMP</span></div><h3>Product & Growth Marketing with AI – Bootcamp</h3><p class="d">The non-technical path into tech. Learn product marketing, growth marketing, and AI skills from scratch. Build 12 portfolio-ready deliverables. No degree or coding required.</p><p class="inc">Includes</p><ul class="il"><li>Monthly live sessions + career coaching + mentorship</li><li>50+ templates, 40+ AI tools, certification</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">Pro ₦75,000 · Core ₦45,000</dd></div><div><dt>Format</dt><dd>12 weeks, recorded lessons, live sessions, assessments</dd></div></dl><a class="btn" href="/academy/pro-bootcamp/">Apply Now</a></article><article class="pc"><div><span class="chip c-pink">DONE-FOR-YOU</span></div><h3>DIME Done-For-You – We Build Your Digital Product</h3><p class="d">We build you a digital product you can sell, and you do none of the work. You do not even need an idea. We pick the product, make it, write the page that sells it, and set up how you get paid, then hand you the finished thing in 14 days. Built for people who want to earn from a digital product but have no time to build one.</p><p class="inc">Includes</p><ul class="il"><li>Product idea, the product, sales page &amp; payment setup</li><li>Launch posts, 30 days of WhatsApp support &amp; the full DIME course</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦350,000 (founding)<small>Split available</small></dd></div><div><dt>Format</dt><dd>Done for you, ready in 14 days</dd></div></dl><a class="btn" href="/academy/dime-dfy/">Apply Now</a></article><article class="pc"><div><span class="chip c-green">PROGRAM</span></div><h3>DIME – Digital Income Made Easy (with AI)</h3><p class="d">Build one digital product with AI, sell it forever, and make $2,000 a month. DIME teaches the digital marketing to package it, make your first sale fast, and get paid, with AI doing 80% of the work. Built for complete beginners.</p><p class="inc">Includes</p><ul class="il"><li>AI prompts, templates & ready-made funnels (ads, landing pages, email)</li><li>Lifetime access, and private community</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦45,000 (founding)</dd></div><div><dt>Format</dt><dd>Self-paced + free live class</dd></div></dl><a class="btn" href="/academy/dime/">Get Started</a></article><article class="pc"><div><span class="chip c-green">MASTERCLASS</span></div><h3>DIME Masterclass</h3><p class="d">The simplest way to make your first sale online this week, from digital products. Promote a ready-made product, let AI make your content, and keep a commission. No product to build, no audience, no ad budget. Built for complete beginners.</p><p class="inc">Includes</p><ul class="il"><li>Masterclass + playbook, done-for-you promo kit & AI content prompts</li><li>7-day first-sale plan, Partner Challenge & 30-day first-sale guarantee</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦10,000</dd></div><div><dt>Format</dt><dd>Self-paced masterclass + playbook</dd></div></dl><a class="btn" href="/academy/dime-masterclass/">Get Started</a></article><article class="pc"><div><span class="chip c-blue">COURSE</span></div><h3>The Complete Product Marketing Training Course</h3><p class="d">10-module self-paced course covering the full PMM lifecycle, from fundamentals to GTM execution. Includes a 100+ page PMM Handbook with every framework and template.</p><p class="inc">Includes</p><ul class="il"><li>10 video modules + 100+ page handbook</li><li>Templates for positioning, messaging, launches</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦15,000</dd></div><div><dt>Format</dt><dd>Pre-recorded videos + handbook</dd></div></dl><a class="btn" href="/academy/pmm-course/">Get Access</a></article><article class="pc"><div><span class="chip c-blue">COURSE</span></div><h3>The Complete Tech Sales Training Course for Sales Reps, AEs & AMs</h3><p class="d">7-module self-paced course covering the end-to-end SaaS sales process, from team structure and prospecting to cold outreach, tool fluency, and performance metrics. Built to help sales reps transition from Naira roles to remote USD contracts.</p><p class="inc">Includes</p><ul class="il"><li>7 video modules + sales handbook</li><li>Cold outreach templates, scripts & interview prep</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦15,000</dd></div><div><dt>Format</dt><dd>Pre-recorded videos + handbook</dd></div></dl><a class="btn" href="/academy/tech-sales/">Get Access</a></article><article class="pc"><div><span class="chip c-blue">LIBRARY</span></div><h3>Product Marketing Templates & Resources Library</h3><p class="d">12+ PMM templates, 12+ growth marketing templates, book reviews, handbooks, productivity systems, ChatGPT prompts, marketing reports, and MIA community access. Updated monthly.</p><p class="inc">Includes</p><ul class="il"><li>24+ templates (Google Docs, Sheets, Notion)</li><li>Handbooks, book reviews, community access</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦20,000/yr</dd></div><div><dt>Format</dt><dd>Annual Subscription</dd></div></dl><a class="btn" href="/academy/templates/">Get Access</a></article><article class="pc"><div><span class="chip c-purple">LIBRARY</span></div><h3>AI Prompt Frameworks & Templates for Marketers</h3><p class="d">40+ production-ready prompt templates, 4+ hours of video tutorials, platform setup guides for ChatGPT/Claude/Gemini, and agent-style workflow architectures. Lifetime updates.</p><p class="inc">Includes</p><ul class="il"><li>40+ prompt templates + 4+ hours video</li><li>Platform setups, agent workflows, lifetime updates</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦20,000</dd></div><div><dt>Format</dt><dd>Instant Access</dd></div></dl><a class="btn" href="/academy/ai-prompts/">Get Access</a></article><article class="pc"><div><span class="chip c-green">HANDBOOK</span></div><h3>The Complete Growth Marketing Handbook</h3><p class="d">The complete growth marketing operating system: AARRR framework, A/B testing, onboarding, virality, ads, B2B sales, and content marketing. Built by a practitioner who contributed to over $10M in pipeline.</p><p class="inc">Includes</p><ul class="il"><li>AARRR framework + experiment templates</li><li>Playbooks for acquisition, onboarding, ads</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦10,000</dd></div><div><dt>Format</dt><dd>Digital Handbook</dd></div></dl><a class="btn" href="/academy/growth-handbook/">Get Access</a></article><article class="pc"><div><span class="chip c-green">HANDBOOK</span></div><h3>The Complete Digital Marketing Guide</h3><p class="d">A structured guide covering every major digital marketing discipline: social media, content, SEO, LinkedIn and Google Ads, programmatic advertising, attribution, and a 200+ term glossary.</p><p class="inc">Includes</p><ul class="il"><li>7 digital channels + attribution models</li><li>200+ term glossary + templates</li></ul><hr><dl class="pm"><div><dt>Cost</dt><dd class="price">₦5,000</dd></div><div><dt>Format</dt><dd>Digital Handbook</dd></div></dl><a class="btn" href="/academy/digital-marketing/">Get Access</a></article></div>
+</div></section>
+
+<section class="s s-a" id="how"><div class="wrap how">
+<div class="how__l"><h2 class="t">How MIA Academy works</h2><p>MIA Academy is not a one-off course. It’s a learning-to-career system designed to help you build skill, apply it in context, and turn it into opportunity.</p><div class="callout"><b>Proactive Career Path</b><p>We focus on usable output rather than simple completion certificates. You build assets you can show employers.</p></div></div>
+<ol class="steps" aria-label="How it works steps"><li><span class="num">1</span><div><h3>Start with the right program</h3><p>You begin by enrolling in the program that fits where you are right now. Whether it's a bootcamp for guided execution or a self-paced course for flexibility.</p></div></li><li><span class="num">2</span><div><h3>Learn with real context</h3><p>You don't just consume content. You learn frameworks and approaches grounded in real product, growth, and GTM work.</p></div></li><li><span class="num">3</span><div><h3>Apply what you’re learning</h3><p>As you go through a program, you apply what you learn to real scenarios, practical exercises, and portfolio-style work.</p></div></li><li><span class="num">4</span><div><h3>Get feedback from people doing the work</h3><p>You don't learn in isolation. Through the MIA Community, you share work, ask questions, and get feedback from peers and practitioners.</p></div></li><li><span class="num">5</span><div><h3>Access the full MIA resource ecosystem</h3><p>As a learner, you get ongoing access to templates, frameworks, playbooks, and supporting tools that evolve with the market.</p></div></li><li><span class="num">6</span><div><h3>Attend MIA events and deepen your network</h3><p>MIA hosts focused virtual and in-person events designed to deepen trust and connect people doing similar work.</p></div></li><li><span class="num">7</span><div><h3>Become job-ready through proof of work</h3><p>By applying what you learn, you build clear examples of execution and artifacts you can talk through with confidence.</p></div></li><li><span class="num">8</span><div><h3>Find opportunities through MIA Jobs</h3><p>MIA Jobs connects marketers to roles based on execution skill and proof of work, not just resumes alone.</p></div></li><li><span class="num">9</span><div><h3>Get continuous career support</h3><p>Your journey doesn't end after one program. You continue to get access to new resources, learning opportunities, and guidance.</p></div></li></ol>
+</div></section>
+
+<section class="s s-b quiz" id="start"><div class="wrap">
+<div class="qz__intro"><span class="tag c-green">Find your program</span><h2>Not sure where to start?</h2><p>Answer three quick questions about where you are and what you want. We point you to the MIA program that fits.</p></div>
+<div class="card qz" id="qz" role="group" aria-labelledby="qzTitle">
+<div class="qz-step active" id="qzQ"><div class="qz__head"><div class="qz__prog"><span class="ptag c-purple" id="qzStep">Question 1 of 3</span><span class="qz__bar" aria-hidden="true"><span id="qzBar"></span></span></div><h3 class="qz__title" id="qzTitle"></h3></div>
+<div class="qz__body"><div class="qz-err" id="qzErr" role="alert">Please choose one to continue.</div><form id="qzForm" novalidate><div class="qz-opts" id="qzOpts"></div><div class="qz-actions"><button type="button" class="btn qz-back" id="qzBack" hidden>&larr; Back</button><button type="submit" class="btn" id="qzNext">Continue &rarr;</button></div></form></div></div>
+<div class="qz-step" id="qzR"><div class="qz__head"><div class="qz__prog"><span class="ptag c-green">Your recommendation</span></div></div>
+<div class="qz__body qz-rec"><div class="qz-rec__tags" id="qzRTags"></div><h3 class="qz__title" id="qzRTitle"></h3><p class="qz-rec__price" id="qzRPrice"></p><p class="why" id="qzRWhy"></p><ul id="qzRList"></ul><div class="qz-actions"><a class="btn btn-lg" id="qzRBtn" href="#">Continue</a></div><p class="hint" id="qzRHint" hidden></p><div class="qz-links"><a href="#programs" id="qzAll">See all programs</a><button type="button" id="qzRetake">Retake the quiz</button></div></div></div>
+<noscript><div class="qz__body"><p>The quiz needs JavaScript. You can <a href="#programs">browse every program</a> instead.</p></div></noscript>
+</div></div></section>
+</main>
+<!-- Footer -->
     <footer>
       <div class="container">
         <div class="footer-grid">
@@ -1296,66 +922,172 @@
       <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9341153&fmt=gif" />
     </noscript>
     <!-- End LinkedIn Insight Tag -->
-
-    <!-- Scroll-triggered reveal (blur + fade + rise), staggered per section -->
-    <script>
-      (function () {
-        var seen = new Map();
-        document.querySelectorAll(".reveal-blur").forEach(function (el) {
-          var parent = el.closest(".testimonial-col, .program-grid, .how-steps, section") || el.parentElement;
-          if (!seen.has(parent)) seen.set(parent, []);
-          seen.get(parent).push(el);
-        });
-
-        var observer = new IntersectionObserver(
-          function (entries) {
-            entries.forEach(function (entry) {
-              if (!entry.isIntersecting) return;
-              var siblings = seen.get(entry.target.closest(".testimonial-col, .program-grid, .how-steps, section") || entry.target.parentElement) || [entry.target];
-              var idx = siblings.indexOf(entry.target);
-              var delay = Math.max(idx, 0) * 90;
-              setTimeout(function () {
-                entry.target.classList.add("is-visible");
-              }, delay);
-              observer.unobserve(entry.target);
-            });
-          },
-          { threshold: 0.15 }
-        );
-
-        document.querySelectorAll(".reveal-blur").forEach(function (el) {
-          observer.observe(el);
-        });
-      })();
+  <script>
+    (function(){
+      document.documentElement.classList.add('js');
+      document.querySelectorAll('[data-tabs]').forEach(function(box){
+        var tabs=box.querySelectorAll('.tab'), panels=box.querySelectorAll('[data-p]');
+        function show(id){
+          tabs.forEach(function(x){x.setAttribute('aria-selected',x.dataset.t===id?'true':'false')});
+          panels.forEach(function(p){p.hidden=p.dataset.p!==id});
+        }
+        tabs.forEach(function(x){x.addEventListener('click',function(){show(x.dataset.t)})});
+        show(tabs[0].dataset.t);
+      });
+    })();
     </script>
+  <script>
+(function(){
+  var NEWS='https://newsletter.marketinginaction.xyz/';
+  var QS=[
+   {t:'Which sounds most like you right now?',o:[
+     ['I have a skill and want to earn in dollars from a remote job or foreign clients',{dollar:3}],
+     ['I want to build and sell my own digital product',{dime:3}],
+     ['I want to learn marketing and AI skills to get hired',{boot:3}],
+     ['I am not sure yet, I am exploring',{}]]},
+   {t:'What do you have today?',o:[
+     ['A skill people pay for, but no dollar job or client yet',{dollar:2}],
+     ['Little or no experience, so I am starting from scratch',{dime:1,boot:1}],
+     ['Some marketing or work experience and a wish to move up',{boot:2}],
+     ['Knowledge or an idea I could turn into a product',{dime:2}]]},
+   {t:'What would count as a win in the next three months?',o:[
+     ['A dollar-paying job or client',{dollar:2}],
+     ['My first online sales from a product',{dime:2}],
+     ['Skills and a portfolio that get me hired',{boot:2}],
+     ['Clarity on what to learn first',{boot:1,dime:1}]]}
+  ];
+  var REC={
+   dime:{tag:'Program',col:'c-green',title:'DIME: Digital Income Made Easy (with AI)',price:'₦45,000 (founding)',
+     why:'Build one digital product with AI, sell it forever, and make $2,000 a month. DIME teaches the digital marketing to package it, make your first sale fast, and get paid, with AI doing 80% of the work. Built for complete beginners.',
+     bullets:['AI prompts, templates and ready-made funnels (ads, landing pages, email)','Lifetime access and a private community'],
+     btn:'Get started with DIME',href:'/academy/dime/'},
+   boot:{tag:'Bootcamp',col:'c-blue',title:'Product & Growth Marketing with AI Bootcamp',price:'Pro ₦75,000 · Core ₦45,000',
+     why:'The non-technical path into tech. Learn product marketing, growth marketing and AI skills from scratch, and build 12 portfolio-ready deliverables. No degree or coding required.',
+     bullets:['Monthly live sessions, career coaching and mentorship','50+ templates, 40+ AI tools and certification'],
+     btn:'Apply for the Bootcamp',href:'/academy/pro-bootcamp/'},
+   dollar:{tag:'Coming soon',col:'c-blue',title:'The Dollar Offer Blueprint',price:'',
+     why:'You already have a skill and want dollar-paying remote jobs or foreign clients. The Dollar Offer Blueprint is a planned MIA course that shows you where high-paying clients and employers hire, how to reach the founder directly and how to pitch on any platform. It is not on sale yet.',
+     bullets:[],btn:'Get launch updates',href:NEWS,ext:true,
+     hint:'We announce new MIA programs in the MIA Newsletter, so subscribing is how you hear first.'}
+  };
+  var box=document.getElementById('qz'); if(!box) return;
+  var $=function(i){return document.getElementById(i)};
+  var ans=[], cur=0, started=false;
+  function dl(o){window.dataLayer=window.dataLayer||[];window.dataLayer.push(o)}
+  function esc(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+  function show(id){ [].forEach.call(box.querySelectorAll('.qz-step'),function(s){s.classList.remove('active')}); $(id).classList.add('active'); }
+  function render(){
+    var q=QS[cur];
+    $('qzStep').textContent='Question '+(cur+1)+' of '+QS.length;
+    $('qzBar').style.width=(((cur+1)/QS.length)*100)+'%';
+    $('qzTitle').textContent=q.t;
+    $('qzOpts').innerHTML=q.o.map(function(o,i){return '<label class="qz-opt'+(ans[cur]===i?' on':'')+'"><input type="radio" name="qz" value="'+i+'"'+(ans[cur]===i?' checked':'')+'><span>'+esc(o[0])+'</span></label>'}).join('');
+    $('qzBack').hidden=cur===0;
+    $('qzNext').innerHTML=(cur===QS.length-1?'See my recommendation':'Continue')+' &rarr;';
+    $('qzErr').classList.remove('show');
+  }
+  $('qzOpts').addEventListener('change',function(e){
+    var v=e.target.value; ans[cur]=+v;
+    [].forEach.call($('qzOpts').children,function(l){l.classList.toggle('on',l.querySelector('input').checked)});
+    $('qzErr').classList.remove('show');
+    if(!started){started=true;dl({event:'academy_quiz_started',quiz:'academy_program_picker'});}
+  });
+  $('qzBack').addEventListener('click',function(){ if(cur>0){cur--;render();} });
+  function pick(){
+    var s={dime:0,boot:0,dollar:0};
+    ans.forEach(function(a,i){var w=QS[i].o[a][1];for(var k in w)s[k]+=w[k];});
+    var order=['dime','boot','dollar'];
+    var first=QS[0].o[ans[0]][1], lead=null;
+    for(var k in first) lead=k;
+    var best=order[0];
+    order.forEach(function(k){ if(s[k]>s[best]) best=k; });
+    if(lead && s[lead]===s[best]) best=lead;
+    return best;
+  }
+  $('qzForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    if(ans[cur]===undefined){ $('qzErr').classList.add('show'); return; }
+    if(cur<QS.length-1){ cur++; render(); return; }
+    var r=pick(), R=REC[r];
+    $('qzRTags').innerHTML='<span class="ptag '+R.col+'">'+R.tag+'</span>';
+    $('qzRTitle').textContent=R.title;
+    $('qzRPrice').textContent=R.price; $('qzRPrice').hidden=!R.price;
+    $('qzRWhy').textContent=R.why;
+    $('qzRList').innerHTML=R.bullets.map(function(b){return '<li>'+esc(b)+'</li>'}).join('');
+    var b=$('qzRBtn'); b.textContent=R.btn+' →'; b.setAttribute('href',R.href);
+    if(R.ext){b.setAttribute('target','_blank');b.setAttribute('rel','noreferrer')}else{b.removeAttribute('target');b.removeAttribute('rel')}
+    b.setAttribute('data-route',r);
+    $('qzRHint').textContent=R.hint||''; $('qzRHint').hidden=!R.hint;
+    show('qzR');
+    dl({event:'academy_quiz_result',quiz:'academy_program_picker',route:r,destination:R.href});
+    box.scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  $('qzRBtn').addEventListener('click',function(){ dl({event:'academy_quiz_cta_click',quiz:'academy_program_picker',route:this.getAttribute('data-route'),destination:this.getAttribute('href')}); });
+  $('qzRetake').addEventListener('click',function(){ ans=[];cur=0;started=false;render();show('qzQ'); });
+  window.__qzPick=pick;
+  render();
+})();
+</script>
+<style id="lb-css">
+html.lb-open,html.lb-open body{overflow:hidden}
+.lb-trigger{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:56px 16px 16px;background:rgba(16,10,22,.9);opacity:0;visibility:hidden;transition:opacity .18s ease-out,visibility 0s linear .18s}
+.lb.is-open{opacity:1;visibility:visible;transition:opacity .18s ease-out}
+.lb__box{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:95vw;max-height:100%;overflow:auto}
+.lb__img{display:block;width:auto;height:auto;max-width:95vw;max-height:min(90vh,calc(100vh - 11rem));min-width:min(95vw,720px);object-fit:contain;background:#fff;border:2px solid #fff;border-radius:12px}
+.lb__cap{max-width:min(95vw,760px);color:#fff;font-size:.95rem;line-height:1.45;text-align:center}
+.lb__cap strong{display:block;font-size:1.15rem;font-weight:750;letter-spacing:-.02em;margin-bottom:2px}
+.lb__x{position:absolute;top:8px;right:8px;width:44px;height:44px;display:grid;place-items:center;border:2px solid #100a16;border-radius:50%;background:#fff;color:#100a16;font:800 1.5rem/1 system-ui,sans-serif;cursor:pointer;padding:0}
+.lb__x:focus-visible{outline:3px solid #f1de71;outline-offset:3px}
+</style>
+<script id="lb-js">
+(function(){
+  var IMG=/\.(?:jpe?g|png|webp|gif)(?:[?#].*)?$/i;
+  var box=document.createElement('div');
+  box.className='lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Screenshot, full size');
+  box.innerHTML='<button type="button" class="lb__x" aria-label="Close full-size view">&times;</button><div class="lb__box"><img class="lb__img" alt=""><div class="lb__cap"></div></div>';
+  document.body.appendChild(box);
+  var big=box.querySelector('.lb__img'),cap=box.querySelector('.lb__cap'),x=box.querySelector('.lb__x'),from=null;
+  function open(src,alt,html,trigger){
+    from=trigger;big.src=src;big.alt=alt||'';cap.innerHTML=html||'';cap.style.display=html?'':'none';
+    box.classList.add('is-open');document.documentElement.classList.add('lb-open');x.focus();
+  }
+  function close(){
+    if(!box.classList.contains('is-open'))return;
+    box.classList.remove('is-open');document.documentElement.classList.remove('lb-open');
+    if(from&&from.focus)from.focus();from=null;
+  }
+  function capFor(el){
+    var f=el.closest('figure');var c=f&&f.querySelector('figcaption');
+    return c?c.innerHTML:'';
+  }
+  x.addEventListener('click',close);
+  box.addEventListener('click',function(e){if(!e.target.closest('.lb__img,.lb__cap,.lb__x'))close()});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){e.preventDefault();close()}
+    else if(e.key==='Tab'){e.preventDefault();x.focus()}
+  });
+  /* image links: keep href as the no-JavaScript fallback, open the overlay instead */
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var im=a.querySelector('img');
+    if(!im||!IMG.test(a.getAttribute('href')))return;
+    a.removeAttribute('target');a.removeAttribute('rel');a.classList.add('lb-trigger');
+    a.setAttribute('aria-label','Expand screenshot');
+    a.addEventListener('click',function(e){if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();open(a.href,im.alt,capFor(a),a)});
+  });
+  /* hero Results images without a link: make them tappable too */
+  document.querySelectorAll('.win [data-p="res"] figure').forEach(function(f){
+    var im=f.querySelector('img');
+    if(!im||im.closest('a'))return;
+    var t=im.closest('.shot')||im;
+    t.classList.add('lb-trigger');t.setAttribute('role','button');t.setAttribute('aria-label','Expand screenshot');
+    if(!t.hasAttribute('tabindex'))t.setAttribute('tabindex','0');
+    t.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(t),t)});
+    t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(t),t)}});
+  });
+})();
+</script>
 
-    <!-- Card directional tilt (testimonial, program, and step cards) -->
-    <script>
-      (function () {
-        var prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-        if (prefersReducedMotion) return;
-
-        var TILT_RANGE_DEG = 10;
-        var LIFT_PX = 4;
-
-        document.querySelectorAll(".testimonial-card, .program-card, .how-step").forEach(function (card) {
-          card.style.willChange = "transform";
-
-          card.addEventListener("mousemove", function (e) {
-            var rect = card.getBoundingClientRect();
-            var x = (e.clientX - rect.left) / rect.width;
-            var y = (e.clientY - rect.top) / rect.height;
-            var rotateY = (x - 0.5) * TILT_RANGE_DEG;
-            var rotateX = (0.5 - y) * TILT_RANGE_DEG;
-            card.style.transform =
-              "translateY(-" + LIFT_PX + "px) rotateX(" + rotateX.toFixed(2) + "deg) rotateY(" + rotateY.toFixed(2) + "deg)";
-          });
-
-          card.addEventListener("mouseleave", function () {
-            card.style.transform = "";
-          });
-        });
-      })();
-    </script>
-  </body>
+</body>
 </html>
