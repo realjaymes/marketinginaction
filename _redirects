@@ -2,3 +2,5 @@
 /s/*  https://newsletter.marketinginaction.xyz/:splat  301!
 /academy/sme/account-recovery/*  /academy/sme/support/:splat  301!
 /academy/sme/account-recovery  /academy/sme/support/  301!
+/academy/dollar-blueprint  /book/?path=dollar  302
+/academy/dollar-blueprint/*  /book/?path=dollar  302
