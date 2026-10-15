@@ -248,9 +248,10 @@ html .niche-tile.card-lift.card-lift:hover,html .niche-tile:hover{border-color:v
 
 /* ---------- case studies index ---------- */
 .case-studies-sidebar-filters .csf-label{color:var(--muted)!important}
-.csf-group .case-filter-btn{color:var(--ink)!important;opacity:.75;border-radius:999px}
+.csf-group .case-filter-btn{color:var(--ink)!important;opacity:.8;border-radius:10px;padding:7px 12px!important;margin:0 -12px 2px;width:calc(100% + 24px)!important;line-height:1.35}
 .csf-group .case-filter-btn:hover{opacity:1;background:var(--sb)!important}
-.csf-group .case-filter-btn.is-active{opacity:1;color:var(--ink)!important;background:var(--sb)!important;font-weight:800}
+.csf-group .case-filter-btn.is-active{opacity:1;color:#fff!important;background:var(--ink)!important;font-weight:800}
+.csf-group .case-filter-btn.is-active .csf-count{color:#fff!important;opacity:.8}
 .csf-count{color:inherit}
 .csc-thumb,.case-study-thumb{background:var(--sb)!important;border-bottom:3px solid var(--ink)}
 .csc-tag{display:inline-block;width:fit-content;max-width:100%;align-self:flex-start;color:var(--ink)!important;background:var(--blue)!important;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;font-weight:800}
@@ -377,6 +378,13 @@ html .hvac-form__title,html .acq-calc-card__head,html .book-card__title{text-wra
 /* hero video: dark player kept, framed like an Academy card instead of a soft glow */
 html .acq-hero-vsl{border:3px solid var(--ink);border-radius:16px;box-shadow:var(--st-lg)}
 @media(max-width:600px){html .pill{font-size:.8rem;border-radius:18px;text-align:left;line-height:1.3}}
+
+/* Service tags keep their original colours: rotating blue, purple, pink and green on case study pages, purple on the index */
+.cs-fact-tag.cs-fact-tag--blue,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--blue{background:var(--blue)!important}
+.cs-fact-tag.cs-fact-tag--purple,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--purple{background:var(--purple)!important;color:var(--ink)!important}
+.cs-fact-tag.cs-fact-tag--pink,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--pink{background:var(--pink)!important}
+.cs-fact-tag.cs-fact-tag--green,.cs-fact-tag-link:hover .cs-fact-tag.cs-fact-tag--green{background:var(--green)!important}
+.csc-tag{background:var(--purple)!important;color:var(--ink)!important}
 </style>
 <style id="lb-css">
 html.lb-open,html.lb-open body{overflow:hidden}
