@@ -977,6 +977,263 @@
         /* even out heading lines so no word is left alone */
         h1,h2,h3{text-wrap:balance}
     </style>
+<style id="academy-style">
+/* Academy styling layer for the MIA services pages (services, consulting, case studies, acquisition, niche pages, booking).
+   Styling only: every section, element and word stays where the live page has it.
+   Source: the shipped Academy pages (academy/pro-bootcamp, academy/sme/consulting, academy/). */
+:root{
+ --ink:#100a16;--white:#fff;--gold:#f1de71;--gold-t:#FBF3C6;--sa:#F7F4FA;--sb:#E6E0EE;--line:#E3DDEA;
+ --muted:rgba(16,10,22,.68);--light:rgba(16,10,22,.45);
+ --st:4px 4px 0 var(--ink);--st-sm:3px 3px 0 var(--ink);--st-lg:7px 7px 0 var(--ink);
+ --sys:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --pink:#f171c4;--blue:#71c4f1;--green:#71f19e;--purple:#7184f1;
+ --text-primary:#100a16;--text-muted:rgba(16,10,22,.68);--border:#E3DDEA;--bg-page:#F7F4FA;--color-white:#F7F4FA;
+ color-scheme:light only;
+}
+/* accent pills, one meaning per colour: pink = page tag, blue = service, purple = industry or stage, green = result */
+
+/* ---------- base ---------- */
+html body{font-family:var(--sys);color:var(--ink);background:var(--sa);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit}
+html h1,html h2,html h3,html h4{font-family:var(--sys);font-weight:750!important;letter-spacing:-.02em;text-wrap:balance;color:var(--ink)}
+.muted{color:var(--muted)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+
+/* headline highlight: gold band behind ink text (the only gold outside buttons) */
+html .text-yellow,html .niches-intro h1 .hl{color:inherit!important;background-image:linear-gradient(180deg,transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.accent-italic{font-style:normal}
+
+/* ---------- sticky nav ---------- */
+html body>header,html .book-header{position:sticky;top:0;z-index:100;background:rgba(247,244,250,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+.nav-dropdown-trigger{font-weight:800;color:var(--ink);border-radius:999px}
+.nav-dropdown-trigger:hover,.nav-dropdown-menu a:hover{background:var(--sb)}
+.nav-links>a{font-weight:800;color:var(--ink)}
+.nav-dropdown-menu{background:var(--white);border:2px solid var(--ink);border-radius:16px;box-shadow:var(--st-sm)}
+.nav-dropdown-menu a{font-weight:700;border-radius:10px}
+.menu-button{border:2px solid var(--ink);background:var(--white);border-radius:999px}
+
+/* ---------- buttons ---------- */
+html .button,html .book-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sys);font-weight:800;color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:13px 24px;box-shadow:var(--st);text-decoration:none;opacity:1;transition:transform .14s ease,box-shadow .14s ease}
+html .button:hover,html .book-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);text-decoration:none;opacity:1}
+html .button:active,html .book-btn:active{transform:translate(3px,3px) scale(.98);box-shadow:1px 1px 0 var(--ink)}
+html .button-primary,html .book-btn--primary{background:var(--gold);color:var(--ink)}
+html .button-secondary,html .consulting-secondary,html .book-btn--secondary,html .cs-final-card .button-secondary{background:var(--white)!important;color:var(--ink)!important;border:2px solid var(--ink)!important}
+html .button-secondary:hover,html .consulting-secondary:hover,html .book-btn--secondary:hover{background:var(--white)!important;color:var(--ink)!important;border-color:var(--ink)!important}
+
+/* ---------- pills and labels ---------- */
+html .pill{display:inline-flex;align-items:center;gap:8px;background:var(--pink);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:5px 14px;font-weight:800;font-size:.86rem;line-height:1.35}
+html .pill .dot{background:var(--ink);width:8px;height:8px}
+.svc-card__eyebrow,.consulting-services-eyebrow,.consulting-tier-eyebrow,.consulting-meet-james .consulting-services-eyebrow{display:inline-block;width:auto;background:var(--white);color:var(--ink)!important;border:2px solid var(--ink);border-radius:999px;padding:3px 12px;font-size:.72rem;font-weight:800;letter-spacing:.08em;line-height:1.35;width:fit-content;max-width:100%;align-self:flex-start}
+
+/* ---------- hero: pale gold with the gold circle ---------- */
+html .consulting-hero,html .case-studies-hero{background:var(--gold-t)!important;border-bottom:2px solid var(--ink);position:relative;overflow:hidden}
+html .consulting-hero::before,html .case-studies-hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--gold);opacity:.55;right:-180px;top:-220px;pointer-events:none}
+html .consulting-hero>.container,html .case-studies-hero>.container{position:relative}
+html .consulting-hero h1,html .case-studies-hero h1,html .consulting-hero .text-white,html .case-studies-hero .text-white{color:var(--ink)!important}
+html .consulting-hero .consulting-hero-sub,html .case-studies-hero .consulting-hero-sub,html .consulting-hero p,html .consulting-hero .muted{color:var(--muted)!important}
+.jobs-proof-value{color:var(--ink);font-weight:750}
+.jobs-proof-label{color:var(--muted)}
+.jobs-proof-item:not(:first-child)::before{background:rgba(16,10,22,.2)!important}
+
+/* ---------- sections: strict alternation after the hero ---------- */
+html :is(main,body)>section:nth-of-type(even){background:var(--sa)!important}
+html :is(main,body)>section:nth-of-type(odd):not(:first-of-type){background:var(--sb)!important}
+html :is(main,body)>section{border-top:0}
+html :is(main,body)>section .text-white{color:var(--ink)!important}
+
+/* logo strip: lilac band with ink rules, like the Academy trust strip */
+.consulting-marquee{background:var(--sb)!important;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.consulting-marquee-track a,.consulting-marquee-track span{color:var(--ink)!important;font-weight:800}
+.consulting-marquee-track a:hover{text-decoration:underline}
+html :is(main,body)>section:nth-of-type(even) .consulting-marquee{background:var(--sb)!important}
+
+/* ---------- cards ---------- */
+.svc-card,.consulting-problem-card,.consulting-tier-card,.consulting-service-card,.case-study-card-v2,.case-study-pitch-card,
+.acq-fit-card,.acq-mech-card,.acq-process-card,.acq-stat,.acq-testimonial,html .acq-calc-card,html .hvac-card,.book-card,.cs-final-card,.cs-testimonial-panel,
+.case-studies-sidebar-filters,.cs-sidebar,.cs-crosssell,.consulting-table-wrap,.consulting-agency-card{
+ background:var(--white)!important;border:3px solid var(--ink)!important;border-radius:26px;box-shadow:var(--st)!important;color:var(--ink)}
+.niche-tile,.acq-mech-node,.cs-stat,.cs-final-preview{background:var(--white)!important;border:2px solid var(--ink)!important;border-radius:18px;box-shadow:var(--st-sm)!important}
+html .card-lift.card-lift:hover{transform:translate(-2px,-2px);box-shadow:6px 6px 0 var(--ink)!important}
+html .niche-tile.card-lift.card-lift:hover,html .niche-tile:hover{border-color:var(--ink)!important}
+
+/* ---------- services hub ---------- */
+.svc-card h2{color:var(--ink)}
+.svc-card p{color:var(--muted)}
+
+/* ---------- consulting ---------- */
+.consulting-problem-num{display:inline-grid;place-items:center;min-width:36px;height:36px;padding:0 6px;border:2px solid var(--ink);border-radius:999px;background:var(--white);color:var(--ink);font-weight:800}
+.consulting-problem-close{color:var(--ink)}
+.consulting-services-head h2,.consulting-service-body h3,.consulting-meet-body h2{color:var(--ink)!important}
+.consulting-services-head .muted,.consulting-service-body>.muted,.consulting-meet-body p.consulting-meet-sub{color:var(--muted)!important}
+.consulting-service-eyebrow,.consulting-meet-credit{color:var(--muted)!important}
+.consulting-services-tabs{border-color:var(--ink)!important}
+.consulting-service-tab{color:var(--ink)!important;opacity:.7;font-weight:800}
+.consulting-service-tab:hover{opacity:1}
+.consulting-service-tab.is-active{opacity:1;color:var(--ink)!important}
+.consulting-service-tab-progress{background:var(--ink)!important}
+.consulting-service-media{background:var(--sb)!important;border:2px solid var(--ink)!important;border-radius:18px}
+.consulting-service-media img{box-shadow:none!important;border:2px solid var(--ink);border-radius:12px}
+.consulting-service-impact{display:inline-block;width:fit-content;max-width:100%;color:var(--ink)!important;background:var(--green);border:2px solid var(--ink);border-radius:999px;padding:3px 12px;font-weight:800}
+.consulting-bullets,.consulting-bullets li{color:var(--muted)!important}
+.consulting-case-link,.consulting-service-body .consulting-bullets a{color:var(--ink)!important;text-decoration:underline;text-underline-offset:3px}
+.consulting-case-link:hover{color:var(--ink)!important}
+.consulting-meet-photo{border:3px solid var(--ink)!important;box-shadow:var(--st-lg)!important;background:var(--sb)}
+.consulting-meet-tag{background:var(--white);color:var(--ink);border:2px solid var(--ink);border-radius:999px;box-shadow:var(--st-sm);font-weight:800}
+.consulting-tier-card.is-featured{box-shadow:var(--st-lg)!important}
+.consulting-tier-price{color:var(--ink);font-weight:750}
+.consulting-tier-list{color:var(--muted)}
+.consulting-faq{background:var(--white)!important;border:3px solid var(--ink)!important;border-radius:22px!important;box-shadow:var(--st-sm)!important;overflow:hidden;padding:16px 20px!important}
+.consulting-faq summary::after{display:grid;place-items:center;width:28px;height:28px;border:2px solid var(--ink);border-radius:50%;background:var(--white);font-size:18px!important;line-height:1;font-weight:700!important}
+.consulting-faq+.consulting-faq{margin-top:14px}
+.consulting-faq summary{font-weight:800;color:var(--ink)}
+.consulting-faq:hover{border-color:var(--ink)!important}
+.consulting-faq:hover summary::after,.consulting-faq summary::after{color:var(--ink)!important}
+.consulting-faqs{border:0!important}
+
+/* ---------- case studies index ---------- */
+.case-studies-sidebar-filters .csf-label{color:var(--muted)!important}
+.csf-group .case-filter-btn{color:var(--ink)!important;opacity:.75;border-radius:999px}
+.csf-group .case-filter-btn:hover{opacity:1;background:var(--sb)!important}
+.csf-group .case-filter-btn.is-active{opacity:1;color:var(--ink)!important;background:var(--sb)!important;font-weight:800}
+.csf-count{color:inherit}
+.csc-thumb,.case-study-thumb{background:var(--sb)!important;border-bottom:3px solid var(--ink)}
+.csc-tag{display:inline-block;width:fit-content;max-width:100%;align-self:flex-start;color:var(--ink)!important;background:var(--blue)!important;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;font-weight:800}
+.csc-headline,.csc-headline strong{color:var(--ink)}
+.csc-stats li strong{color:var(--ink)!important}
+.csc-stats li::before{background:var(--ink)!important}
+.case-study-pitch-top{background:var(--sb)!important;border-bottom:3px solid var(--ink)}
+.case-study-pitch-bar{background:var(--white)!important;border-bottom:2px solid var(--ink)}
+.case-study-pitch-dot{background:var(--ink)!important;opacity:.35}
+.case-study-pitch-url{color:var(--muted)!important}
+.case-study-pitch-frame{border-color:rgba(16,10,22,.35)!important}
+.case-study-pitch-frame span{color:var(--muted)!important}
+.case-study-pitch-badge{background:var(--white)!important;border:2px solid var(--ink)!important;color:var(--ink)!important}
+.case-study-pitch-stats strong{color:var(--ink);font-weight:750}
+
+/* final CTA card shared by the case study pages */
+.cs-final-main h2{color:var(--ink)!important}
+.cs-final-main p{color:var(--muted)!important}
+.cs-final-preview-name{color:var(--ink)!important}
+.cs-final-preview-stats strong{color:var(--ink)!important;font-weight:750}
+.cs-final-preview-stats span{color:var(--muted)!important}
+.cs-logo-strip{border-color:var(--ink)!important}
+.cs-logo-strip-track a{color:var(--ink)!important;opacity:.7}
+.cs-logo-strip-track a:hover{opacity:1}
+
+/* ---------- case study detail ---------- */
+.cs-breadcrumb,.cs-breadcrumb a{color:var(--ink)}
+.cs-sidebar .cs-fact-label{color:var(--muted)!important}
+.cs-sidebar .cs-fact-value{color:var(--ink)!important}
+.cs-sidebar .cs-fact-value a{color:var(--ink)!important;text-decoration:underline;text-underline-offset:3px}
+.cs-fact{border-color:var(--line)!important}
+.cs-fact-tag{color:var(--ink)!important;background:var(--blue)!important;border:2px solid var(--ink)!important;font-weight:800}
+.cs-fact-tag-link:hover .cs-fact-tag{background:var(--blue)!important;text-decoration:underline}
+html .cs-hero-card{background:var(--gold-t)!important;border:3px solid var(--ink)!important;border-radius:26px;box-shadow:var(--st-lg)!important;position:relative;overflow:hidden}
+html .cs-hero-card::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--gold);opacity:.55;right:-160px;top:-200px;pointer-events:none}
+html .cs-hero-card>*{position:relative}
+.cs-eyebrow{color:var(--muted)!important}
+.cs-headline{color:var(--ink)!important}
+.cs-subhead{color:var(--muted)!important}
+.cs-credit-text{color:var(--muted)!important}
+.cs-credit-text strong{color:var(--ink)!important}
+.cs-avatar-img{border:2px solid var(--ink)!important}
+.cs-shot{background:var(--white)!important;border:3px solid var(--ink)!important;box-shadow:var(--st)!important}
+.cs-shot-bar{background:var(--sb)!important;border-bottom:2px solid var(--ink)}
+.cs-shot-dot{background:var(--ink)!important;opacity:.35}
+.cs-shot-url{color:var(--muted)!important}
+.cs-stat strong{color:var(--ink)!important;font-weight:750}
+.cs-stat span{color:var(--muted)!important}
+.cs-body-section h2{color:var(--ink)}
+.cs-testimonial-panel,.cs-testimonial-panel blockquote{color:var(--ink)!important}
+.cs-testimonial-panel .cs-credit-text strong{color:var(--ink)!important}
+
+/* ---------- acquisition ---------- */
+.acq-hero-trust,.acq-hero-trust *{color:var(--muted)!important}
+.acq-head p{color:var(--muted)}
+.acq-fit-card--yes .acq-fit-list li::before,.acq-fit-card--no .acq-fit-list li::before{color:var(--ink)}
+.acq-mech-card__tag{color:var(--ink)!important;background:var(--blue)!important;border:2px solid var(--ink);border-radius:999px}
+.acq-mech-node__num,.acq-process-card__num,.acq-process-step__num{background:var(--white)!important;color:var(--ink)!important;border:2px solid var(--ink)}
+.acq-mech-power{background:var(--white)!important;color:var(--ink)!important;border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st)}
+.acq-mech-power *{color:var(--ink)!important}
+.acq-mech-power strong{background-image:none}
+.acq-mech-arrow{color:var(--ink)!important}
+.acq-stat__num{color:var(--ink)!important}
+.acq-stat__copy{color:var(--muted)!important}
+.acq-honesty{background:var(--white)!important;border:2px solid var(--ink)!important;border-left-width:2px!important;border-radius:18px}
+.acq-testimonial{border-left-width:3px!important}
+.acq-testimonial__quote{color:var(--ink)}
+.acq-proof-lead__num{color:var(--ink)!important}
+.acq-proof-point{border-top:3px solid var(--ink)!important}
+html :is(main,body)>section.acq-final{color:var(--ink)}
+html .acq-final>.container{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg);padding:48px 28px;max-width:900px}
+html .acq-final h2{color:var(--ink)!important}
+html .acq-final p{color:var(--muted)!important}
+html .acq-footer{background:var(--ink)!important;color:#fff;border-top:2px solid var(--ink)}
+html .acq-footer,html .acq-footer *{color:rgba(255,255,255,.72)!important}
+html .acq-sticky{background:var(--ink)!important;border-top:2px solid var(--ink)}
+
+/* calculator */
+html .acq-calc-card__tag,html .acq-calc-stamp{color:var(--ink)!important;background:var(--white)!important;border:2px solid var(--ink)!important;border-radius:999px}
+html .acq-calc-stamp{background:var(--green)!important}
+html .acq-calc-input-wrap,html .acq-calc-select{border:2px solid var(--ink)!important;border-radius:12px;background:var(--white)!important}
+html .acq-calc-row{border-color:var(--line)}
+html .acq-calc-row--profit strong,html .acq-calc-row--roi strong{color:var(--ink)!important}
+html .acq-calc-guarantee{background:var(--ink)!important;color:#fff;border-radius:18px}
+html .acq-calc-guarantee__num{color:#fff!important}
+html .acq-calc-visit a,html .tile-visit{color:var(--ink)!important;text-decoration:underline;text-underline-offset:3px}
+html input[type="range"].acq-calc-slider,html .acq-calc-slider{accent-color:var(--ink)}
+html .niches-group-title{color:var(--ink);border-color:var(--ink)}
+html .eyebrow-label{color:var(--ink)}
+html .eyebrow-label .dash{background:var(--ink)}
+html .niche-tile .figure{font-weight:750}
+
+/* HVAC-style lead form in the niche hero */
+html .hvac-card{overflow:hidden}
+html .hvac-prog{background:var(--sb);border:2px solid var(--ink);height:12px}
+html .hvac-prog__bar{background:var(--gold);border-right:2px solid var(--ink)}
+html .hvac-chips label{border:2px solid var(--ink);border-radius:999px;background:var(--white)}
+html .hvac-chips label:hover{border-color:var(--ink);background:var(--sa)}
+html .hvac-chips label:has(input:checked){background:var(--ink);color:#fff;border-color:var(--ink)}
+html .hvac-in{border:2px solid var(--ink);border-radius:12px}
+
+/* ---------- booking pages ---------- */
+html .book-main{background:var(--sa)}
+html .book-card__step{background:var(--white)!important;color:var(--ink)!important;border:2px solid var(--ink)}
+html .book-radio{border:2px solid var(--ink)!important;border-radius:14px;background:var(--white)}
+html .book-radio:has(input:checked){background:var(--sb)!important;box-shadow:var(--st-sm)}
+html .book-field input,html .book-field textarea,html .book-field select,html .book-other-input{border:2px solid var(--ink)!important;border-radius:12px}
+html .book-radio input{accent-color:var(--ink)}
+
+/* ---------- footer: black ---------- */
+html body>footer{background:var(--ink)!important;color:#fff;border-top:2px solid var(--ink)}
+html body>footer .footer-list a:hover{color:#fff;text-decoration:underline}
+
+@media(prefers-reduced-motion:reduce){html .button,html .book-btn,.card-lift{transition:none!important}html .button:hover,html .card-lift.card-lift:hover{transform:none}}
+@media(max-width:600px){html .acq-final>.container{padding:36px 18px}}
+/* hero headline scale from the Academy heroes; phones avoid a one-word last line */
+html .consulting-hero h1,html .case-studies-hero h1,html .cs-hero-card h1{font-size:clamp(1.65rem,2.75vw,2.5rem);line-height:1.14}
+@media(max-width:900px){html .consulting-hero h1,html .case-studies-hero h1,html .cs-hero-card h1{font-size:clamp(1.65rem,5.2vw,2.4rem)}}
+/* Paid Acquisition hub: its one-line headline would leave "predictably" alone on a phone, so it stays on one line */
+@media(max-width:600px){html .acq-hero-inner:not(.acq-hero-inner--novsl) h1{font-size:min(1.5rem,6.1vw)}}
+html .hvac-form__title,html .acq-calc-card__head,html .book-card__title{text-wrap:balance}
+/* phones: a smaller gold circle so it never sits behind the headline highlight */
+@media(max-width:900px){html .consulting-hero::before,html .case-studies-hero::before,html .cs-hero-card::before{width:260px;height:260px;right:-110px;top:-150px}}
+/* hero video: dark player kept, framed like an Academy card instead of a soft glow */
+html .acq-hero-vsl{border:3px solid var(--ink);border-radius:16px;box-shadow:var(--st-lg)}
+@media(max-width:600px){html .pill{font-size:.8rem;border-radius:18px;text-align:left;line-height:1.3}}
+</style>
+<style id="lb-css">
+html.lb-open,html.lb-open body{overflow:hidden}
+.lb-trigger{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:56px 16px 16px;background:rgba(16,10,22,.9);opacity:0;visibility:hidden;transition:opacity .18s ease-out,visibility 0s linear .18s}
+.lb.is-open{opacity:1;visibility:visible;transition:opacity .18s ease-out}
+.lb__box{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:95vw;max-height:100%;overflow:auto}
+.lb__img{display:block;width:auto;height:auto;max-width:95vw;max-height:min(90vh,calc(100vh - 11rem));min-width:min(95vw,720px);object-fit:contain;background:#fff;border:2px solid #fff;border-radius:12px}
+.lb__cap{max-width:min(95vw,760px);color:#fff;font-size:.95rem;line-height:1.45;text-align:center}
+.lb__cap strong{display:block;font-size:1.15rem;font-weight:750;letter-spacing:-.02em;margin-bottom:2px}
+.lb__x{position:absolute;top:8px;right:8px;width:44px;height:44px;display:grid;place-items:center;border:2px solid #100a16;border-radius:50%;background:#fff;color:#100a16;font:800 1.5rem/1 system-ui,sans-serif;cursor:pointer;padding:0}
+.lb__x:focus-visible{outline:3px solid #f1de71;outline-offset:3px}
+</style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -1652,5 +1909,61 @@
         });
       })();
     </script>
+<script id="lb-js">
+(function(){
+  var IMG=/\.(?:jpe?g|png|webp|gif)(?:[?#].*)?$/i;
+  var box=document.createElement('div');
+  box.className='lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Screenshot, full size');
+  box.innerHTML='<button type="button" class="lb__x" aria-label="Close full-size view">&times;</button><div class="lb__box"><img class="lb__img" alt=""><div class="lb__cap"></div></div>';
+  document.body.appendChild(box);
+  var big=box.querySelector('.lb__img'),cap=box.querySelector('.lb__cap'),x=box.querySelector('.lb__x'),from=null;
+  function open(src,alt,html,trigger){
+    from=trigger;big.src=src;big.alt=alt||'';cap.innerHTML=html||'';cap.style.display=html?'':'none';
+    box.classList.add('is-open');document.documentElement.classList.add('lb-open');x.focus();
+  }
+  function close(){
+    if(!box.classList.contains('is-open'))return;
+    box.classList.remove('is-open');document.documentElement.classList.remove('lb-open');
+    if(from&&from.focus)from.focus();from=null;
+  }
+  function capFor(el){
+    var f=el.closest('figure');var c=f&&f.querySelector('figcaption');
+    return c?c.innerHTML:'';
+  }
+  x.addEventListener('click',close);
+  box.addEventListener('click',function(e){if(!e.target.closest('.lb__img,.lb__cap,.lb__x'))close()});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){e.preventDefault();close()}
+    else if(e.key==='Tab'){e.preventDefault();x.focus()}
+  });
+  /* image links: keep href as the no-JavaScript fallback, open the overlay instead */
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var im=a.querySelector('img');
+    if(!im||!IMG.test(a.getAttribute('href')))return;
+    a.removeAttribute('target');a.removeAttribute('rel');a.classList.add('lb-trigger');
+    a.setAttribute('aria-label','Expand screenshot');
+    a.addEventListener('click',function(e){if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();open(a.href,im.alt,capFor(a),a)});
+  });
+  /* hero Results images without a link: make them tappable too */
+  document.querySelectorAll('.win [data-p="res"] figure').forEach(function(f){
+    var im=f.querySelector('img');
+    if(!im||im.closest('a'))return;
+    var t=im.closest('.shot')||im;
+    t.classList.add('lb-trigger');t.setAttribute('role','button');t.setAttribute('aria-label','Expand screenshot');
+    if(!t.hasAttribute('tabindex'))t.setAttribute('tabindex','0');
+    t.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(t),t)});
+    t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(t),t)}});
+  });
+  /* screenshots shown without a link (service screenshots, case study site shots): tappable too */
+  document.querySelectorAll('.consulting-service-media img,.cs-shot-img').forEach(function(im){
+    if(im.closest('a'))return;
+    im.classList.add('lb-trigger');im.setAttribute('role','button');im.setAttribute('aria-label','Expand screenshot');
+    if(!im.hasAttribute('tabindex'))im.setAttribute('tabindex','0');
+    im.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(im),im)});
+    im.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(im),im)}});
+  });
+})();
+</script>
 </body>
 </html>
