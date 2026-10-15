@@ -24,18 +24,24 @@ For each URL and width it reports:
   tabs        hero tab labels and which one is selected
   footer      the footer's background colour
   robots      the robots meta tag (previews should be noindex)
+  fold        bottom edge of the hero's buttons against the viewport height
+              (--height, default 900), so a hero that hides its call to action
+              below the first screen shows up as BELOW FOLD
 Exit code 1 when any page overflows or has a broken image.
 */
 import { spawn } from "node:child_process";
 import { homedir } from "node:os";
-import { existsSync, readdirSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, mkdtempSync, rmSync } from "node:fs";
 import { join } from "node:path";
+import { tmpdir } from "node:os";
 
 const args = process.argv.slice(2);
 let widths = [390, 1280];
+let height = 900;
 const urls = [];
 for (let i = 0; i < args.length; i++) {
   if (args[i] === "--widths") widths = args[++i].split(",").map(Number);
+  else if (args[i] === "--height") height = Number(args[++i]);
   else urls.push(args[i]);
 }
 if (!urls.length) {
@@ -54,17 +60,21 @@ function findChrome() {
   throw new Error("Playwright chromium_headless_shell not found under " + base);
 }
 
-const PORT = 9333;
+// Each run gets its own profile folder and lets Chrome pick a free debugging
+// port, so several runs (for example from parallel agents) never collide.
+const profile = mkdtempSync(join(tmpdir(), "page-qa-"));
 const chrome = spawn(findChrome(), [
   "--headless", "--disable-gpu", "--hide-scrollbars",
-  `--remote-debugging-port=${PORT}`, "about:blank",
+  `--user-data-dir=${profile}`, "--remote-debugging-port=0", "about:blank",
 ], { stdio: "ignore" });
+let PORT = null;
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
 async function cdpTarget() {
   for (let i = 0; i < 50; i++) {
     try {
+      if (!PORT) PORT = Number(readFileSync(join(profile, "DevToolsActivePort"), "utf8").split("\n")[0]);
       const list = await (await fetch(`http://127.0.0.1:${PORT}/json/list`)).json();
       const page = list.find((t) => t.type === "page");
       if (page) return page.webSocketDebuggerUrl;
@@ -138,11 +148,18 @@ const MEASURE = `(async () => {
     h1info = { lines: lines.length, lone: lines.filter(l => !/\\s/.test(l.trim())), text: lines };
   }
   const tabs = [...document.querySelectorAll('[role=tab]')].slice(0, 4).map(t => t.textContent.trim() + (t.getAttribute('aria-selected') === 'true' ? '*' : ''));
+  const hero = document.querySelector('header.hero, section.hero, .hero, .academy-hero, .resources-hero');
+  let fold = null;
+  if (hero) {
+    const btns = [...hero.querySelectorAll('a.btn, a.button, button.btn')].filter(b => b.getBoundingClientRect().width > 0 && !b.closest('[role=tabpanel], .panel, .tabs'));
+    const bottom = btns.length ? Math.max(...btns.map(b => b.getBoundingClientRect().bottom)) : null;
+    fold = { buttonsBottom: bottom === null ? null : Math.round(bottom), heroBottom: Math.round(hero.getBoundingClientRect().bottom), vh: window.innerHeight };
+  }
   const footer = document.querySelector('footer');
   const robots = document.querySelector('meta[name=robots]');
   return JSON.stringify({ vw, sw, wide: wide.slice(0, 6), broken, h1: h1info, tabs,
     footer: footer ? getComputedStyle(footer).backgroundColor : null,
-    robots: robots ? robots.content : null });
+    robots: robots ? robots.content : null, fold });
 })()`;
 
 async function main() {
@@ -153,7 +170,7 @@ async function main() {
   let failed = false;
   for (const url of urls) {
     for (const w of widths) {
-      await c.send("Emulation.setDeviceMetricsOverride", { width: w, height: 900, deviceScaleFactor: 1, mobile: w < 600 });
+      await c.send("Emulation.setDeviceMetricsOverride", { width: w, height, deviceScaleFactor: 1, mobile: w < 600 });
       const loaded = new Promise((r) => c.on((m) => m.method === "Page.loadEventFired" && r()));
       await c.send("Page.navigate", { url });
       await Promise.race([loaded, sleep(15000)]);
@@ -169,12 +186,18 @@ async function main() {
       if (d.h1) console.log(`  h1: ${d.h1.lines} lines${d.h1.lone.length ? `, LONE WORD: ${d.h1.lone.join(" | ")}` : ""}  [${d.h1.text.join(" / ")}]`);
       console.log(`  tabs: ${d.tabs.length ? d.tabs.join(", ") : "none"}`);
       console.log(`  footer: ${d.footer}   robots: ${d.robots}`);
+      if (d.fold) console.log(`  fold: hero buttons end at ${d.fold.buttonsBottom}px, hero ends at ${d.fold.heroBottom}px, viewport ${d.fold.vh}px${d.fold.buttonsBottom > d.fold.vh ? "  BELOW FOLD" : ""}`);
     }
   }
   c.ws.close();
   return failed;
 }
 
+function done(code) {
+  chrome.kill();
+  setTimeout(() => { rmSync(profile, { recursive: true, force: true }); process.exit(code); }, 300);
+}
+
 main()
-  .then((failed) => { chrome.kill(); process.exit(failed ? 1 : 0); })
-  .catch((e) => { console.error(e); chrome.kill(); process.exit(2); });
+  .then((failed) => done(failed ? 1 : 0))
+  .catch((e) => { console.error(e); done(2); });

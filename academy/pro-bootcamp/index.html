@@ -298,10 +298,7 @@ html.js .panel[hidden]{display:none}
 .phones figure{margin:0}
 .phones figure>div{border:3px solid var(--ink)!important;box-shadow:var(--st)!important;border-radius:26px!important;background:var(--white)}
 .phones figcaption{font-size:.85rem!important}
-.filters{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:34px 0 24px}
-.filt{font-family:var(--sans);font-weight:800;font-size:.88rem;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:7px 16px;cursor:pointer;color:var(--ink)}
-.filt[aria-pressed="true"]{background:var(--ink);color:#fff}
-.feed{columns:3;column-gap:18px}
+.feed{columns:3;column-gap:18px;margin-top:34px}
 .fc{break-inside:avoid;margin-bottom:18px;background:var(--white);border:3px solid var(--ink);border-radius:24px;box-shadow:var(--st);padding:18px;display:flex;flex-direction:column;gap:12px}
 .fc[hidden]{display:none}
 .fc__who{display:flex;align-items:center;gap:11px}
@@ -515,10 +512,10 @@ html.js .panel[hidden]{display:none}
 .prob li{background:linear-gradient(90deg,var(--c) 0,var(--c) 10px,var(--white) 10px)}
 .tc h3{margin-bottom:10px}
 /* tap targets and motion (design-engineering) */
-.tab,.filt{min-height:40px}
+.tab{min-height:40px}
 .btn:active{transform:translate(3px,3px) scale(.98);box-shadow:1px 1px 0 var(--ink)}
-.tab,.filt{transition:background-color .15s ease-out,color .15s ease-out,transform .12s ease-out}
-.tab:active,.filt:active{transform:scale(.96)}
+.tab{transition:background-color .15s ease-out,color .15s ease-out,transform .12s ease-out}
+.tab:active{transform:scale(.96)}
 .panel,.rp{animation:swap .22s cubic-bezier(.23,1,.32,1)}
 @keyframes swap{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .hero h1,.hero__sub,.hero__ctas,.seats{animation:rise .5s cubic-bezier(.23,1,.32,1) both}
@@ -530,7 +527,7 @@ html.js .panel[hidden]{display:none}
 @media(max-width:900px){.compare{grid-template-columns:1fr}}
 .cmp{min-width:0}.cmp strong{overflow-wrap:anywhere}
 .win{margin-bottom:26px}
-@media(max-width:600px){.panel{padding-bottom:50px}.tab,.filt{min-height:44px}.truststrip .wrap{flex-direction:column;align-items:center;gap:4px}}
+@media(max-width:600px){.panel{padding-bottom:50px}.tab{min-height:44px}.truststrip .wrap{flex-direction:column;align-items:center;gap:4px}}
 
     
 /* colour versions for review: ?tone=gold | mono | dark (default is the full palette) */
@@ -751,12 +748,6 @@ html[data-tone="mono"] section:nth-of-type(even){background:var(--sec-b)}
 <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/e_y_lphdtOQ" title="Emmanuella David - Product &amp; Growth Marketing Bootcamp student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Emmanuella David</strong> &middot; Transitioning into PMM, Canada</figcaption></figure>
 <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/ivrbZ8UJ9Co" title="Dayo Akin - Product &amp; Growth Marketing Bootcamp student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Dayo Akin</strong> &middot; Breaking into Marketing, Lagos</figcaption></figure>
 <figure style="margin:0;"><div style="position:relative; padding-bottom:177.78%; height:0; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-card);"><iframe src="https://www.youtube-nocookie.com/embed/M9H3pmL0ym8" title="Zainab Oladoja - Product &amp; Growth Marketing Bootcamp student testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%; border:0;"></iframe></div><figcaption style="text-align:center; margin-top:8px; font-size:0.85rem; color:var(--text-muted);"><strong style="color:var(--primary-dark);">Zainab Oladoja</strong> &middot; SaaS Product Marketing Manager, Abuja</figcaption></figure>
-            </div>
-            <div class="filters" role="group" aria-label="Filter results">
-                <button class="filt" aria-pressed="true" data-f="all">All</button>
-                <button class="filt" aria-pressed="false" data-f="Verified Student">Verified Student</button>
-                <button class="filt" aria-pressed="false" data-f="Verified Alumni">Verified Alumni</button>
-                <button class="filt" aria-pressed="false" data-f="Verified Result">Verified Result</button>
             </div>
             <div class="feed">
                 <article class="fc" data-k="Verified Student"><div class="fc__who"><span class="av" style="--c:var(--gold)">D</span><div><div class="fc__name">Dayo Akin</div><div class="fc__role">Cohort 1 Graduate</div></div></div><p class="fc__q">"If you're not sure which kind of marketing you want to do, the Product & Growth Marketing Bootcamp gives you a clear pathway. Whether it's growth or product marketing, you come out knowing the direction you want to take your career."</p><span class="chip tick mint">Verified Student</span></article>
@@ -1614,12 +1605,6 @@ html[data-tone="mono"] section:nth-of-type(even){background:var(--sec-b)}
     tabs.forEach(function(t){t.addEventListener('click',function(){show(t.dataset.t,t.dataset.w)})});
     var f=tabs[0]; show(f.dataset.t,f.dataset.w);
   });
-  /* testimonial filter */
-  var fb=document.querySelectorAll('.filt'), cards=document.querySelectorAll('.fc');
-  fb.forEach(function(b){b.addEventListener('click',function(){
-    fb.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
-    cards.forEach(function(c){c.hidden=b.dataset.f!=='all'&&c.dataset.k!==b.dataset.f});
-  })});
   /* seat bar follows the spots counter */
   var bar=document.getElementById('seatBar'),sc=document.querySelector('.spots-count');
   function seat(){if(bar&&sc){var n=parseInt(sc.textContent,10)||12;bar.style.width=Math.max(0,Math.min(100,(50-n)/50*100))+'%'}}
