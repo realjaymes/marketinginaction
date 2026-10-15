@@ -496,7 +496,10 @@
           }
           .tec-link:hover { opacity: 0.85; text-decoration: underline; }
           @media (max-width: 560px) { .tec-grid { grid-template-columns: 1fr; } }
-        </style>
+        
+        /* even out heading lines so no word is left alone */
+        h1,h2,h3{text-wrap:balance}
+    </style>
         <div class="container">
           <div class="tec-head reveal-blur">
             <h2>Estimate your training investment</h2>

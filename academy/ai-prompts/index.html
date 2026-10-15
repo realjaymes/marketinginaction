@@ -422,6 +422,9 @@
         }
         @media (max-width: 380px) { .hero__headline { font-size: 1.5rem; } .section-title { font-size: 1.35rem; } .announcement-bar { font-size: 0.72rem; } .pricing__single-price { font-size: 2rem; } }
         /* sticky-bar visible on all viewports; hidden by IntersectionObserver when pricing is in view */
+    
+        /* even out heading lines so no word is left alone */
+        h1,h2,h3{text-wrap:balance}
     </style>
     <!-- BreadcrumbList schema -->
     <script type="application/ld+json">

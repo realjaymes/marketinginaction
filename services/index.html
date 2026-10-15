@@ -195,7 +195,10 @@
         .svc-card h2 { margin: 0 0 var(--space-sm); font-size: clamp(22px, 2.6vw, 28px); }
         .svc-card p { color: var(--text-primary); line-height: 1.6; margin: 0 0 var(--space-xl); flex: 1; }
         .svc-card .button { align-self: flex-start; margin-top: 0; }
-      </style>
+      
+        /* even out heading lines so no word is left alone */
+        h1,h2,h3{text-wrap:balance}
+    </style>
 
       <!-- Hero -->
       <section class="consulting-hero">
