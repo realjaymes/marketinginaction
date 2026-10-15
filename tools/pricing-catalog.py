@@ -112,7 +112,7 @@ def main():
     out.append("")
     out.append("Notes:")
     out.append("- DIME founding price is ₦45,000; webinar attendees get a discounted ₦35,000.")
-    out.append("- Consulting: ₦250,000/mo (1-mo), ₦225,000/mo (3-mo = ₦675,000), ₦200,000/mo (6-mo = ₦1,200,000).")
+    out.append("- Consulting: ₦500,000/mo (1-mo), ₦450,000/mo (3-mo = ₦1,350,000), ₦400,000/mo (6-mo = ₦2,400,000).")
     out.append("- Bootcamp: Pro ₦75,000 / Core ₦45,000 (upgrade = ₦30,000 difference).")
     out.append("- $ figures on career pages are salary/market context, NOT product prices.")
 

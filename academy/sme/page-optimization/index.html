@@ -117,7 +117,7 @@
             {
                 "@type": "Question",
                 "name": "What if I want someone to do it all for me?",
-                "acceptedAnswer": { "@type": "Answer", "text": "We run everything for you with The Business Owner's Marketing Machine at ₦250,000/month. Our team manages your ads across Meta, TikTok, and Google, optimizes your pages, and sets up your email and automation, then reports the numbers to you every month in plain language. You get a full audit and setup in the first month, bi-weekly strategy calls, weekly optimization, and direct WhatsApp access, and you keep the complete playbook at the end. Rates drop to ₦225,000/month on a 3-month commitment and ₦200,000/month on 6 months. See the consulting page for details." }
+                "acceptedAnswer": { "@type": "Answer", "text": "We run everything for you with The Business Owner's Marketing Machine at ₦500,000/month. Our team manages your ads across Meta, TikTok, and Google, optimizes your pages, and sets up your email and automation, then reports the numbers to you every month in plain language. You get a full audit and setup in the first month, bi-weekly strategy calls, weekly optimization, and direct WhatsApp access, and you keep the complete playbook at the end. Rates drop to ₦225,000/month on a 3-month commitment and ₦200,000/month on 6 months. See the consulting page for details." }
             }
         ]
     }
@@ -506,6 +506,62 @@ html.js .panel[hidden]{display:none}
   ]
 }
     </script>
+<style id="hero-fit">
+/* Results pager: one screenshot at a time, whole image, thumbnail buttons */
+.is-paged .pg-off,.is-paged [hidden]{display:none!important}
+.is-paged .rq,.is-paged .rqs{margin-top:0}
+.is-paged .rq blockquote,.is-paged figure.rq{font-size:.9rem;line-height:1.5;padding:14px 16px}
+.is-paged .rq cite,.is-paged figure.rq b{font-size:.84rem}
+.respager{display:flex;flex-wrap:nowrap;align-items:center;gap:5px;margin-top:10px;overflow:hidden}
+.respager::-webkit-scrollbar{display:none}
+.respager__n{font-size:.76rem;font-weight:800;color:var(--muted);margin-right:2px;white-space:nowrap;flex:none}
+.respager button{font-family:var(--font);font-weight:800;font-size:.76rem;line-height:1.2;white-space:nowrap;background:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:5px 10px;min-height:34px;cursor:pointer;color:var(--ink);transition:background-color .15s ease-out,color .15s ease-out}
+.respager button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.respager button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.is-paged .rqs{display:block!important;grid-template-columns:1fr!important}
+.is-paged figure.rq{width:100%;max-width:none}
+.is-paged figure.rq b{display:inline}
+.is-paged figure.rq span{display:inline;margin-left:6px}
+.respager button{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:600px){.respager{gap:4px}.respager__n{display:none}.respager button{font-size:.72rem;padding:4px 8px;min-height:32px}}
+@media(min-width:901px){
+ .hero{padding:32px 0 32px}
+ .hero .container,.hero .wrap{grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:44px;align-items:start}
+ .hero h1{font-size:clamp(1.65rem,2.45vw,2.25rem);margin:10px 0 12px}
+ .hero__tag,.hero .tag{padding:5px 14px;font-size:.8rem;margin-bottom:2px}
+ .hero__cities{font-size:.8rem;line-height:1.4;margin:8px 0 0}
+ .hero__sub{font-size:1rem;line-height:1.5;margin-bottom:12px;max-width:none}
+ .herostat{padding:8px 14px;margin-bottom:12px;max-width:none}
+ .herostat strong{font-size:1.35rem}
+ .herostat span{font-size:.8rem;line-height:1.4}
+ .hero__ctas{gap:10px;margin-bottom:12px}
+ .hero__ctas .btn{white-space:nowrap;padding:11px 20px;font-size:.98rem}
+ .seats{padding:8px 14px;margin-bottom:8px;max-width:none}
+ .seats__t{margin-bottom:6px}
+ .herosmall{font-size:.8rem;line-height:1.4;margin-bottom:3px;max-width:none}
+ .win{margin-bottom:0}
+ .win__top{padding:10px 16px}
+ .win__title{font-size:1.05rem}
+ .tabs{padding:10px 14px 0}
+ .tab{min-height:36px;padding:4px 14px}
+ .panel{padding:12px 16px 16px}
+ .res figcaption{padding:7px 10px}
+ .seal{display:none}
+}
+@media(max-width:900px){.seal{position:static;transform:none;display:inline-block;margin:10px 0 0 16px}.win{margin-bottom:0}}
+</style>
+<style id="lb-css">
+html.lb-open,html.lb-open body{overflow:hidden}
+.lb-trigger{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:56px 16px 16px;background:rgba(16,10,22,.9);opacity:0;visibility:hidden;transition:opacity .18s ease-out,visibility 0s linear .18s}
+.lb.is-open{opacity:1;visibility:visible;transition:opacity .18s ease-out}
+.lb__box{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:95vw;max-height:100%;overflow:auto}
+.lb__img{display:block;width:auto;height:auto;max-width:95vw;max-height:min(90vh,calc(100vh - 11rem));min-width:min(95vw,720px);object-fit:contain;background:#fff;border:2px solid #fff;border-radius:12px}
+.lb__cap{max-width:min(95vw,760px);color:#fff;font-size:.95rem;line-height:1.45;text-align:center}
+.lb__cap strong{display:block;font-size:1.15rem;font-weight:750;letter-spacing:-.02em;margin-bottom:2px}
+.lb__x{position:absolute;top:8px;right:8px;width:44px;height:44px;display:grid;place-items:center;border:2px solid #100a16;border-radius:50%;background:#fff;color:#100a16;font:800 1.5rem/1 system-ui,sans-serif;cursor:pointer;padding:0}
+.lb__x:focus-visible{outline:3px solid #f1de71;outline-offset:3px}
+</style>
 </head>
 <body>
 
@@ -532,7 +588,7 @@ html.js .panel[hidden]{display:none}
     <header class="hero">
         <div class="container">
             <div>
-                <span class="hero__audience-tag">For business owners whose Instagram and TikTok pages are not converting visitors</span>
+                <span class="hero__audience-tag">For business owners with quiet pages</span>
                 <h1 class="hero__headline">People Visit Your Page and Leave&nbsp;<span class="band">Without Buying.</span> Fix That Today.</h1>
                 <p class="hero__sub">We helped one business generate over &#8358;30 million in sales in 4 months. The ads brought the traffic. But the page is what converted them. If your page doesn't sell in 8 seconds, every naira you spend on ads is wasted. This workshop fixes your page in one afternoon.</p>
                 <div class="callout"><div class="callout__n">&#8358;30M+ in sales</div><div class="callout__t">Page optimization was one of three pillars behind this result. The ads brought traffic. The page converted it. This workshop teaches you the page side.</div></div>
@@ -559,7 +615,7 @@ html.js .panel[hidden]{display:none}
                 </div>
                 <div class="panel" data-p="res">
                     <div class="res">
-                        <figure><a href="/assets/credibility/client-result-6x-roas.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Meta Ads Manager table with ROAS between 6.25 and 6.34 across six rows" width="800" height="322" loading="eager"></a><figcaption><strong>6x ROAS</strong>Ads Manager table. Six rows with ROAS from 6.25 to 6.34 and 34 to 77 website purchases each.</figcaption></figure>
+                        <figure><a href="/assets/credibility/client-result-6x-roas.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Meta Ads Manager table with ROAS between 6.25 and 6.34 across six rows" width="800" height="322" loading="eager"></a><figcaption><strong>6x ROAS</strong>Ads Manager table. Six rows with ROAS from 6.25 to 6.34 and 34 to 77 website purchases each.</figcaption></figure>
                     </div>
                     <div class="rqs"><figure class="rq"><p>&ldquo;Changed my IG name field the way they told me. Tuesday, 6 new DMs from people who found me through search. I didn't even post anything. They just found me.&rdquo;</p><b>Funke</b><span>Boutique Owner</span></figure><figure class="rq"><p>&ldquo;The handbook feels like you wrote all my problems and I'm reading it out. The course is too good for only me to enjoy. I just had to drop this and let me continue reading my handbook.&rdquo;</p><b>Ayaabaalasooke</b><span>Asooke Vendor, Lagos</span></figure></div>
                     <p class="win__note">Real Meta Ads Manager screenshot from a real client campaign using the same strategies in this program.</p>
@@ -594,7 +650,7 @@ html.js .panel[hidden]{display:none}
         </div>
         <div class="container">
             <figure class="proof__fig">
-                <a href="/assets/credibility/client-result-6x-roas.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Client result: 6x ROAS" width="800" height="322" loading="lazy"></a>
+                <a href="/assets/credibility/client-result-6x-roas.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Client result: 6x ROAS" width="800" height="322" loading="lazy"></a>
                 <figcaption><strong>6x ROAS from the complete system</strong><span>&#8358;82,450 ad spend. 77 purchases. Ads brought traffic. The optimized page converted it. Automation captured every lead. This workshop teaches one part of that system.</span></figcaption>
             </figure>
             <p class="proof__note">Real Meta Ads Manager screenshot from a real client campaign using the same strategies in this program.</p>
@@ -1194,7 +1250,7 @@ html.js .panel[hidden]{display:none}
                         <span class="faq-item__icon">+</span>
                     </button>
                     <div class="faq-item__a">
-                        <div class="faq-item__a-inner">We run everything for you with The Business Owner's Marketing Machine at &#8358;250,000/month. Our team manages your ads across Meta, TikTok, and Google, optimizes your pages, and sets up your email and automation, then reports the numbers to you every month in plain language. You get a full audit and setup in the first month, bi-weekly strategy calls, weekly optimization, and direct WhatsApp access, and you keep the complete playbook at the end. Rates drop to &#8358;225,000/month on a 3-month commitment and &#8358;200,000/month on 6 months. <a href="/academy/sme/consulting/">See consulting here.</a></div>
+                        <div class="faq-item__a-inner">We run everything for you with The Business Owner's Marketing Machine at &#8358;500,000/month. Our team manages your ads across Meta, TikTok, and Google, optimizes your pages, and sets up your email and automation, then reports the numbers to you every month in plain language. You get a full audit and setup in the first month, bi-weekly strategy calls, weekly optimization, and direct WhatsApp access, and you keep the complete playbook at the end. Rates drop to &#8358;225,000/month on a 3-month commitment and &#8358;200,000/month on 6 months. <a href="/academy/sme/consulting/">See consulting here.</a></div>
                     </div>
                 </div>
             </div>
@@ -1655,7 +1711,7 @@ html.js .panel[hidden]{display:none}
             var phone=document.getElementById('prefillPhone').value.trim();if(email){try{localStorage.setItem('mia_lead',JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()}));}catch(_e){}}
             var url=prefillUrl+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name);
             if(phone){phone=phone.replace(/\D/g,'');if(phone.startsWith('234'))phone=phone.substring(3);if(phone.startsWith('0'))phone=phone.substring(1);phone='234'+phone;url+='&mobile=0'+phone.substring(3);}
-            var PRODUCTS={'marketingprogram':'Product & Growth Marketing with AI for Modern Marketers','marketingprogramcore':'Product & Growth Marketing with AI for Modern Marketers Core','productmarketingcourse':'The Complete Product Marketing Training Course for Product Marketers & PMMs','techsalescourse':'The Complete Tech Sales Training Course for Sales Reps, Account Executives & Account Managers','marketingresources':'Product Marketing Templates & Resources','aipromptplaybook':'AI Prompt Frameworks & Templates for Marketers','growthmarketinghandbook':'The Complete Growth Marketing Handbook for Growth Marketers','digitalmarketingguide':'The Complete Digital Marketing Guide for Brand & Product Success','onlinemarketingbundle':'Online Marketing Mentorship for Business Owners','metaadssolutions':'Meta Ads Simplified for Business Owners','tiktokadssolutions':'TikTok Ads Simplified for Business Owners','socialoptimizationsolutions':'Business Page Optimization Simplified for Business Owners','socialautomationsolutions':'Social Automation Simplified for Business Owners','metaaccountsolutions':'Meta Account Recovery Handbook for FB & IG','onlinemarketingconsulting':'Online Marketing Consulting for Business Owners'};var slug=(prefillUrl.match(/selar\.com\/([^?]+)/)||[])[1]||'';var productName=PRODUCTS[slug]||document.title;var PRICES={'marketingprogram':75000,'marketingprogramcore':45000,'productmarketingcourse':15000,'techsalescourse':15000,'marketingresources':20000,'aipromptplaybook':20000,'growthmarketinghandbook':10000,'digitalmarketingguide':5000,'onlinemarketingbundle':45000,'metaadssolutions':15000,'tiktokadssolutions':15000,'socialoptimizationsolutions':15000,'socialautomationsolutions':15000,'metaaccountsolutions':15000,'onlinemarketingconsulting':250000};var productValue=PRICES[slug]||15000;var eid='lead_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','Lead',{content_name:productName,value:productValue,currency:'NGN'},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('SubmitForm',{content_id:slug,content_name:productName,value:productValue,currency:'NGN'});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',event_id:eid,value:productValue,currency:'NGN',lead_email:email,lead_name:name,lead_phone:phone,lead_product:productName});try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:productName,pageUrl:window.location.href})});}catch(err){}setTimeout(function(){window.location.href=url;},500);
+            var PRODUCTS={'marketingprogram':'Product & Growth Marketing with AI for Modern Marketers','marketingprogramcore':'Product & Growth Marketing with AI for Modern Marketers Core','productmarketingcourse':'The Complete Product Marketing Training Course for Product Marketers & PMMs','techsalescourse':'The Complete Tech Sales Training Course for Sales Reps, Account Executives & Account Managers','marketingresources':'Product Marketing Templates & Resources','aipromptplaybook':'AI Prompt Frameworks & Templates for Marketers','growthmarketinghandbook':'The Complete Growth Marketing Handbook for Growth Marketers','digitalmarketingguide':'The Complete Digital Marketing Guide for Brand & Product Success','onlinemarketingbundle':'Online Marketing Mentorship for Business Owners','metaadssolutions':'Meta Ads Simplified for Business Owners','tiktokadssolutions':'TikTok Ads Simplified for Business Owners','socialoptimizationsolutions':'Business Page Optimization Simplified for Business Owners','socialautomationsolutions':'Social Automation Simplified for Business Owners','metaaccountsolutions':'Meta Account Recovery Handbook for FB & IG','onlinemarketingconsulting':'Online Marketing Consulting for Business Owners'};var slug=(prefillUrl.match(/selar\.com\/([^?]+)/)||[])[1]||'';var productName=PRODUCTS[slug]||document.title;var PRICES={'marketingprogram':75000,'marketingprogramcore':45000,'productmarketingcourse':15000,'techsalescourse':15000,'marketingresources':20000,'aipromptplaybook':20000,'growthmarketinghandbook':10000,'digitalmarketingguide':5000,'onlinemarketingbundle':45000,'metaadssolutions':15000,'tiktokadssolutions':15000,'socialoptimizationsolutions':15000,'socialautomationsolutions':15000,'metaaccountsolutions':15000,'onlinemarketingconsulting':500000};var productValue=PRICES[slug]||15000;var eid='lead_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','Lead',{content_name:productName,value:productValue,currency:'NGN'},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('SubmitForm',{content_id:slug,content_name:productName,value:productValue,currency:'NGN'});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',event_id:eid,value:productValue,currency:'NGN',lead_email:email,lead_name:name,lead_phone:phone,lead_product:productName});try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:productName,pageUrl:window.location.href})});}catch(err){}setTimeout(function(){window.location.href=url;},500);
         };
         document.getElementById('prefillModal').addEventListener('click',function(e){
             if(e.target===this)closePrefill();
@@ -1702,6 +1758,91 @@ html.js .panel[hidden]{display:none}
   var bar=document.getElementById('seatBar'),sc=document.querySelector('.spots-count');
   function seat(){if(bar&&sc){var n=parseInt(sc.textContent,10)||25;bar.style.width=Math.max(0,Math.min(100,(50-n)/50*100))+'%'}}
   setTimeout(seat,150); setInterval(seat,2000);
+})();
+</script>
+<script id="hero-fit-js">
+(function(){
+  document.querySelectorAll('.win [data-p="res"]').forEach(function(panel){
+    var units=[].slice.call(panel.querySelectorAll('.res > figure, .rqs > figure, .rq > blockquote'));
+    if(units.length<2)return;
+    panel.classList.add('is-paged');
+    var bar=document.createElement('div');bar.className='respager';bar.setAttribute('role','group');bar.setAttribute('aria-label','Choose a result');
+    var n=document.createElement('span');n.className='respager__n';bar.appendChild(n);
+    function label(u,i){
+      var s=u.querySelector('figcaption strong');
+      if(s)return s.textContent.replace(/\.$/,'');
+      var c=u.querySelector('cite,b');
+      if(c)return c.textContent.split(',')[0];
+      return 'Result '+(i+1);
+    }
+    var btns=units.map(function(u,i){
+      var b=document.createElement('button');b.type='button';b.textContent=label(u,i);
+      b.addEventListener('click',function(){show(i)});
+      bar.appendChild(b);return b;
+    });
+    var boxes=[];units.forEach(function(u){var p=u.parentNode;if(boxes.indexOf(p)<0)boxes.push(p)});
+    function show(k){
+      units.forEach(function(u,i){u.classList.toggle('pg-off',i!==k)});
+      boxes.forEach(function(b){b.hidden=!units.some(function(u,i){return u.parentNode===b&&i===k})});
+      btns.forEach(function(b,i){b.setAttribute('aria-pressed',i===k?'true':'false')});
+      n.textContent=(k+1)+' of '+units.length;
+    }
+    var note=panel.querySelector('.win__note');
+    if(note)panel.insertBefore(bar,note);else panel.appendChild(bar);
+    show(0);
+    /* keep the buttons on one row: drop the "1 of 3" counter only when a label would be cut */
+    function fit(){n.style.display='';if(btns.some(function(b){return b.scrollWidth>b.clientWidth+1}))n.style.display='none';}
+    fit();window.addEventListener('resize',fit);
+    panel.closest('.hero')&&panel.closest('.hero').addEventListener('click',function(){setTimeout(fit,0)});
+  });
+})();
+</script>
+<script id="lb-js">
+(function(){
+  var IMG=/\.(?:jpe?g|png|webp|gif)(?:[?#].*)?$/i;
+  var box=document.createElement('div');
+  box.className='lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Screenshot, full size');
+  box.innerHTML='<button type="button" class="lb__x" aria-label="Close full-size view">&times;</button><div class="lb__box"><img class="lb__img" alt=""><div class="lb__cap"></div></div>';
+  document.body.appendChild(box);
+  var big=box.querySelector('.lb__img'),cap=box.querySelector('.lb__cap'),x=box.querySelector('.lb__x'),from=null;
+  function open(src,alt,html,trigger){
+    from=trigger;big.src=src;big.alt=alt||'';cap.innerHTML=html||'';cap.style.display=html?'':'none';
+    box.classList.add('is-open');document.documentElement.classList.add('lb-open');x.focus();
+  }
+  function close(){
+    if(!box.classList.contains('is-open'))return;
+    box.classList.remove('is-open');document.documentElement.classList.remove('lb-open');
+    if(from&&from.focus)from.focus();from=null;
+  }
+  function capFor(el){
+    var f=el.closest('figure');var c=f&&f.querySelector('figcaption');
+    return c?c.innerHTML:'';
+  }
+  x.addEventListener('click',close);
+  box.addEventListener('click',function(e){if(!e.target.closest('.lb__img,.lb__cap,.lb__x'))close()});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){e.preventDefault();close()}
+    else if(e.key==='Tab'){e.preventDefault();x.focus()}
+  });
+  /* image links: keep href as the no-JavaScript fallback, open the overlay instead */
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var im=a.querySelector('img');
+    if(!im||!IMG.test(a.getAttribute('href')))return;
+    a.removeAttribute('target');a.removeAttribute('rel');a.classList.add('lb-trigger');
+    a.setAttribute('aria-label','Expand screenshot');
+    a.addEventListener('click',function(e){if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();open(a.href,im.alt,capFor(a),a)});
+  });
+  /* hero Results images without a link: make them tappable too */
+  document.querySelectorAll('.win [data-p="res"] figure').forEach(function(f){
+    var im=f.querySelector('img');
+    if(!im||im.closest('a'))return;
+    var t=im.closest('.shot')||im;
+    t.classList.add('lb-trigger');t.setAttribute('role','button');t.setAttribute('aria-label','Expand screenshot');
+    if(!t.hasAttribute('tabindex'))t.setAttribute('tabindex','0');
+    t.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(t),t)});
+    t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(t),t)}});
+  });
 })();
 </script>
 </body>

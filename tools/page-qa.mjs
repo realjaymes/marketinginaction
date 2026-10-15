@@ -148,7 +148,7 @@ const MEASURE = `(async () => {
     h1info = { lines: lines.length, lone: lines.filter(l => !/\\s/.test(l.trim())), text: lines };
   }
   const tabs = [...document.querySelectorAll('[role=tab]')].slice(0, 4).map(t => t.textContent.trim() + (t.getAttribute('aria-selected') === 'true' ? '*' : ''));
-  const hero = document.querySelector('header.hero, section.hero, .hero, .academy-hero, .resources-hero');
+  const hero = document.querySelector('header.hero, section.hero, .hero, .nh, .academy-hero, .resources-hero');
   let fold = null;
   if (hero) {
     const btns = [...hero.querySelectorAll('a.btn, a.button, button.btn')].filter(b => b.getBoundingClientRect().width > 0 && !b.closest('[role=tabpanel], .panel, .tabs'));

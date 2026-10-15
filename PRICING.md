@@ -24,11 +24,11 @@ price edit. Do not hand-edit this file.
 | Target Buyer Sales Masterclass | ₦5,000 | /academy/sme/target-buyer/ |
 | Online Marketing Mentorship (Bundle) | ₦45,000 | /academy/sme/bundle/ |
 | The Profitable Ads Targeting Setup | ₦75,000 | /academy/sme/targeting-setup/ |
-| Online Marketing Consulting | ₦250,000/mo | /academy/sme/consulting/ |
+| Online Marketing Consulting | ₦500,000/mo | /academy/sme/consulting/ |
 | SME Team Training | From ₦950,000 | /academy/sme/team-training/ |
 
 Notes:
 - DIME founding price is ₦45,000; webinar attendees get a discounted ₦35,000.
-- Consulting: ₦250,000/mo (1-mo), ₦225,000/mo (3-mo = ₦675,000), ₦200,000/mo (6-mo = ₦1,200,000).
+- Consulting: ₦500,000/mo (1-mo), ₦450,000/mo (3-mo = ₦1,350,000), ₦400,000/mo (6-mo = ₦2,400,000).
 - Bootcamp: Pro ₦75,000 / Core ₦45,000 (upgrade = ₦30,000 difference).
 - $ figures on career pages are salary/market context, NOT product prices.

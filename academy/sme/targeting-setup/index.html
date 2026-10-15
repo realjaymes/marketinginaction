@@ -258,7 +258,7 @@ section:nth-of-type(even){background:var(--sec-b)}
 /* problem */
 .problem-grid{display:grid;gap:14px;max-width:820px;margin:0 auto}
 .problem-card{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:16px 18px;font-size:.98rem;color:var(--muted);text-align:left}
-.problem-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);flex:none;font-size:1.2rem}
+.problem-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--white);flex:none;font-size:1.2rem}
 .problem-card__text strong{color:var(--ink)}
 .problem-close{font-size:1.2rem;font-weight:750;letter-spacing:-.02em;line-height:1.35;margin:26px auto 0;max-width:640px;text-align:center}
 
@@ -299,7 +299,7 @@ section:nth-of-type(even){background:var(--sec-b)}
 /* transformation */
 .transform-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
 .transform-card{border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st);padding:24px;background:var(--white);text-align:left}
-.transform-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);margin-bottom:14px;font-size:1.2rem}
+.transform-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--white);margin-bottom:14px;font-size:1.2rem}
 .transform-card__title{font-size:1.25rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px;text-wrap:balance}
 .transform-card__text{margin:0;color:var(--muted);font-size:.97rem}
 
@@ -326,7 +326,7 @@ section:nth-of-type(even){background:var(--sec-b)}
 /* achievements (steps, month by month) */
 .achievement-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:900px;margin:0 auto}
 .achievement-card{border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st);padding:24px;background:var(--white);text-align:left}
-.achievement-card__badge{display:inline-grid;place-items:center;min-width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);margin-bottom:12px;font-size:1rem;font-weight:800;padding:0 6px}
+.achievement-card__badge{display:inline-grid;place-items:center;min-width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--white);margin-bottom:12px;font-size:1rem;font-weight:800;padding:0 6px}
 .achievement-card__title{font-size:1.25rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;margin-bottom:4px}
 .achievement-card__worth{font-weight:800;margin-bottom:10px;font-size:.9rem}
 .achievement-card__condition{color:var(--muted);font-size:.95rem}
@@ -510,6 +510,62 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
   ]
 }
     </script>
+<style id="hero-fit">
+/* Results pager: one screenshot at a time, whole image, thumbnail buttons */
+.is-paged .pg-off,.is-paged [hidden]{display:none!important}
+.is-paged .rq,.is-paged .rqs{margin-top:0}
+.is-paged .rq blockquote,.is-paged figure.rq{font-size:.9rem;line-height:1.5;padding:14px 16px}
+.is-paged .rq cite,.is-paged figure.rq b{font-size:.84rem}
+.respager{display:flex;flex-wrap:nowrap;align-items:center;gap:5px;margin-top:10px;overflow:hidden}
+.respager::-webkit-scrollbar{display:none}
+.respager__n{font-size:.76rem;font-weight:800;color:var(--muted);margin-right:2px;white-space:nowrap;flex:none}
+.respager button{font-family:var(--font);font-weight:800;font-size:.76rem;line-height:1.2;white-space:nowrap;background:var(--cream);border:2px solid var(--ink);border-radius:999px;padding:5px 10px;min-height:34px;cursor:pointer;color:var(--ink);transition:background-color .15s ease-out,color .15s ease-out}
+.respager button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.respager button:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+.is-paged .rqs{display:block!important;grid-template-columns:1fr!important}
+.is-paged figure.rq{width:100%;max-width:none}
+.is-paged figure.rq b{display:inline}
+.is-paged figure.rq span{display:inline;margin-left:6px}
+.respager button{flex:0 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:600px){.respager{gap:4px}.respager__n{display:none}.respager button{font-size:.72rem;padding:4px 8px;min-height:32px}}
+@media(min-width:901px){
+ .hero{padding:32px 0 32px}
+ .hero .container,.hero .wrap{grid-template-columns:minmax(0,1.14fr) minmax(0,.86fr);gap:44px;align-items:start}
+ .hero h1{font-size:clamp(1.65rem,2.45vw,2.25rem);margin:10px 0 12px}
+ .hero__tag,.hero .tag{padding:5px 14px;font-size:.8rem;margin-bottom:2px}
+ .hero__cities{font-size:.8rem;line-height:1.4;margin:8px 0 0}
+ .hero__sub{font-size:1rem;line-height:1.5;margin-bottom:12px;max-width:none}
+ .herostat{padding:8px 14px;margin-bottom:12px;max-width:none}
+ .herostat strong{font-size:1.35rem}
+ .herostat span{font-size:.8rem;line-height:1.4}
+ .hero__ctas{gap:10px;margin-bottom:12px}
+ .hero__ctas .btn{white-space:nowrap;padding:11px 20px;font-size:.98rem}
+ .seats{padding:8px 14px;margin-bottom:8px;max-width:none}
+ .seats__t{margin-bottom:6px}
+ .herosmall{font-size:.8rem;line-height:1.4;margin-bottom:3px;max-width:none}
+ .win{margin-bottom:0}
+ .win__top{padding:10px 16px}
+ .win__title{font-size:1.05rem}
+ .tabs{padding:10px 14px 0}
+ .tab{min-height:36px;padding:4px 14px}
+ .panel{padding:12px 16px 16px}
+ .res figcaption{padding:7px 10px}
+ .seal{display:none}
+}
+@media(max-width:900px){.seal{position:static;transform:none;display:inline-block;margin:10px 0 0 16px}.win{margin-bottom:0}}
+</style>
+<style id="lb-css">
+html.lb-open,html.lb-open body{overflow:hidden}
+.lb-trigger{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:10000;display:flex;align-items:center;justify-content:center;padding:56px 16px 16px;background:rgba(16,10,22,.9);opacity:0;visibility:hidden;transition:opacity .18s ease-out,visibility 0s linear .18s}
+.lb.is-open{opacity:1;visibility:visible;transition:opacity .18s ease-out}
+.lb__box{display:flex;flex-direction:column;align-items:center;gap:12px;max-width:95vw;max-height:100%;overflow:auto}
+.lb__img{display:block;width:auto;height:auto;max-width:95vw;max-height:min(90vh,calc(100vh - 11rem));min-width:min(95vw,720px);object-fit:contain;background:#fff;border:2px solid #fff;border-radius:12px}
+.lb__cap{max-width:min(95vw,760px);color:#fff;font-size:.95rem;line-height:1.45;text-align:center}
+.lb__cap strong{display:block;font-size:1.15rem;font-weight:750;letter-spacing:-.02em;margin-bottom:2px}
+.lb__x{position:absolute;top:8px;right:8px;width:44px;height:44px;display:grid;place-items:center;border:2px solid #100a16;border-radius:50%;background:#fff;color:#100a16;font:800 1.5rem/1 system-ui,sans-serif;cursor:pointer;padding:0}
+.lb__x:focus-visible{outline:3px solid #f1de71;outline-offset:3px}
+</style>
 </head>
 <body>
 
@@ -537,7 +593,7 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
     <header class="hero">
         <div class="container">
             <div>
-                <span class="hero__tag">For business owners who are tired of wasting money on ads that don't bring customers</span>
+                <span class="hero__tag">For ads that reach the wrong people</span>
                 <h1>Your ad account, pixel, and target buyer audiences,&nbsp;<span class="band">built right in 5 days.</span></h1>
                 <p class="hero__sub">We set up your ad account, pixel, and the 5-10 audiences that actually find your real target buyers, then hand it all to you with a simple blueprint, the platform walkthrough videos, and WhatsApp implementation support so you (or your team) run your own profitable ads. No more boosting posts to people who'll never buy.</p>
                 <div class="herostat"><strong>&#8358;30M+ in sales</strong><span>Generated for one client in 4 months from ₦3.5M ad spend, using the same targeting approach we build into your account. Your setup, your ads, your results.</span></div>
@@ -567,9 +623,9 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
                 </div>
                 <div class="panel" data-p="res">
                     <div class="res">
-                        <figure><a href="/assets/credibility/client-result-20x-roas.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-20x-roas.jpg" alt="Meta Ads results table with website purchases, cost per result and ROAS" loading="eager"></a><figcaption><strong>Meta Ads results</strong>Client campaign table: amount spent, website purchases, cost per purchase and ROAS.</figcaption></figure>
-                        <figure><a href="/assets/credibility/client-result-6x-roas.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Meta Ads results table showing 6.34 ROAS" loading="eager"></a><figcaption><strong>6.34 ROAS</strong>Meta Ads table, top row: &#8358;82,450 spent, 77 website purchases at &#8358;1,071 each.</figcaption></figure>
-                        <figure><a href="/assets/credibility/sales-backend.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/sales-backend.jpg" alt="Sales spreadsheet with gross revenue, customers, net income and ROAS" loading="eager"></a><figcaption><strong>309% ROAS</strong>Sales sheet summary: &#8358;2,152,890 gross revenue, 317 customers, &#8358;1,456,467 net income.</figcaption></figure>
+                        <figure><a href="/assets/credibility/client-result-20x-roas.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-20x-roas.jpg" alt="Meta Ads results table with website purchases, cost per result and ROAS" loading="eager"></a><figcaption><strong>Meta Ads results</strong>Client campaign table: amount spent, website purchases, cost per purchase and ROAS.</figcaption></figure>
+                        <figure><a href="/assets/credibility/client-result-6x-roas.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Meta Ads results table showing 6.34 ROAS" loading="eager"></a><figcaption><strong>6.34 ROAS</strong>Meta Ads table, top row: &#8358;82,450 spent, 77 website purchases at &#8358;1,071 each.</figcaption></figure>
+                        <figure><a href="/assets/credibility/sales-backend.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/sales-backend.jpg" alt="Sales spreadsheet with gross revenue, customers, net income and ROAS" loading="eager"></a><figcaption><strong>309% ROAS</strong>Sales sheet summary: &#8358;2,152,890 gross revenue, 317 customers, &#8358;1,456,467 net income.</figcaption></figure>
                     </div>
                     <p class="win__note">Real screenshots from client campaigns and a business sales sheet. Customer details are blurred.</p>
                 </div>
@@ -613,9 +669,9 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
         </div>
         <div class="container">
             <div class="bento">
-                <figure><a href="/assets/credibility/client-result-20x-roas.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-20x-roas.jpg" alt="Client result: 62 purchases from Meta Ads" loading="lazy"></a><figcaption><strong>62 Purchases. &#8358;4,073 Each.</strong>&#8358;265,540 ad spend. 62 purchases at &#8358;4,073 per customer. One client. Real Meta Ads dashboard.</figcaption></figure>
-                <figure><a href="/assets/credibility/client-result-6x-roas.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Client result: 6x ROAS from Meta Ads" loading="lazy"></a><figcaption><strong>6x ROAS</strong>&#8358;82,450 ad spend. 77 purchases. 6.34x return. A different client, smaller budget, same system.</figcaption></figure>
-                <figure class="wide"><a href="/assets/credibility/sales-backend.jpg" target="_blank" rel="noopener" aria-label="Open the full screenshot"><img src="/assets/credibility/sales-backend.jpg" alt="Sales backend showing ₦1.4M+ net income, 309% ROAS" loading="lazy"></a><figcaption><strong>&#8358;2.1M+ in revenue. 309% ROAS. 317 customers.</strong>Real sales backend from real marketing campaigns. &#8358;204K ad spend. &#8358;2.1M gross revenue. &#8358;1.4M net income. 317 customers. The same system we build for every client.</figcaption></figure>
+                <figure><a href="/assets/credibility/client-result-20x-roas.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-20x-roas.jpg" alt="Client result: 62 purchases from Meta Ads" loading="lazy"></a><figcaption><strong>62 Purchases. &#8358;4,073 Each.</strong>&#8358;265,540 ad spend. 62 purchases at &#8358;4,073 per customer. One client. Real Meta Ads dashboard.</figcaption></figure>
+                <figure><a href="/assets/credibility/client-result-6x-roas.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Client result: 6x ROAS from Meta Ads" loading="lazy"></a><figcaption><strong>6x ROAS</strong>&#8358;82,450 ad spend. 77 purchases. 6.34x return. A different client, smaller budget, same system.</figcaption></figure>
+                <figure class="wide"><a href="/assets/credibility/sales-backend.jpg" aria-label="Open the full screenshot"><img src="/assets/credibility/sales-backend.jpg" alt="Sales backend showing ₦1.4M+ net income, 309% ROAS" loading="lazy"></a><figcaption><strong>&#8358;2.1M+ in revenue. 309% ROAS. 317 customers.</strong>Real sales backend from real marketing campaigns. &#8358;204K ad spend. &#8358;2.1M gross revenue. &#8358;1.4M net income. 317 customers. The same system we build for every client.</figcaption></figure>
             </div>
             <p class="proofnote">Real dashboards from real campaigns. Customer details blurred for privacy.</p>
         </div>
@@ -1053,7 +1109,7 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
                 <div class="faq-item"><button class="faq-item__q"><span>What if I get stuck running it?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">You get WhatsApp implementation support for the first 30 days, so you are never stuck alone.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q"><span>What if my ad account was disabled before?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Tell us on the call. Recovery is not part of this setup; if the account is blocked we cannot build in it until it is recovered.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q"><span>How is this different from your workshops?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">The workshops teach you to do it yourself. This does the technical setup for you and hands you the controls, so you skip the learning curve and the wasted spend while you figure it out. You even get the workshop videos included here. <a href="/academy/sme/" style="color:var(--mia-accent-dark); text-decoration:underline;">See all SME programs.</a></div></div></div>
-                <div class="faq-item"><button class="faq-item__q"><span>What if I would rather you just run my ads every month?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Then the full done-for-you service is for you, The Business Owner's Marketing Machine at &#8358;250,000/month. Your &#8358;75,000 setup is the foundation it builds on: from there our team runs and optimizes everything month to month, ads across Meta, TikTok, and Google, page optimization, and email and automation, with a full audit in the first month, bi-weekly strategy calls, weekly optimization, and monthly reporting in plain language. You get direct WhatsApp access and keep the complete playbook at the end. Rates drop to &#8358;225,000/month on a 3-month commitment and &#8358;200,000/month on 6 months. <a href="/academy/sme/consulting/" style="color:var(--mia-accent-dark); text-decoration:underline;">See Done-For-You Marketing.</a></div></div></div>
+                <div class="faq-item"><button class="faq-item__q"><span>What if I would rather you just run my ads every month?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Then the full done-for-you service is for you, The Business Owner's Marketing Machine at &#8358;500,000/month. Your &#8358;75,000 setup is the foundation it builds on: from there our team runs and optimizes everything month to month, ads across Meta, TikTok, and Google, page optimization, and email and automation, with a full audit in the first month, bi-weekly strategy calls, weekly optimization, and monthly reporting in plain language. You get direct WhatsApp access and keep the complete playbook at the end. Rates drop to &#8358;225,000/month on a 3-month commitment and &#8358;200,000/month on 6 months. <a href="/academy/sme/consulting/" style="color:var(--mia-accent-dark); text-decoration:underline;">See Done-For-You Marketing.</a></div></div></div>
                 <div class="faq-item"><button class="faq-item__q"><span>Is this a subscription?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No. One-time setup, one-time fee. The only recurring option is the separate monthly retainer, if you ever want us running it.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q"><span>How do I get started?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Use the payment button on this page to pay. You then get an intake form and a link to book your short setup call. On the call we confirm your channel, look at your data, and you grant access. We build it and hand it over.</div></div></div>
             </div>
@@ -1519,7 +1575,7 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
             var phone=document.getElementById('prefillPhone').value.trim();if(email){try{localStorage.setItem('mia_lead',JSON.stringify({name:name,email:email,phone:phone,ts:Date.now()}));}catch(_e){}}
             var url=prefillUrl+'&email='+encodeURIComponent(email)+'&fullname='+encodeURIComponent(name);
             if(phone){phone=phone.replace(/\D/g,'');if(phone.startsWith('234'))phone=phone.substring(3);if(phone.startsWith('0'))phone=phone.substring(1);phone='234'+phone;url+='&mobile=0'+phone.substring(3);}
-            var PRODUCTS={'marketingprogram':'Product & Growth Marketing with AI for Modern Marketers','marketingprogramcore':'Product & Growth Marketing with AI for Modern Marketers Core','productmarketingcourse':'The Complete Product Marketing Training Course for Product Marketers & PMMs','techsalescourse':'The Complete Tech Sales Training Course for Sales Reps, Account Executives & Account Managers','marketingresources':'Product Marketing Templates & Resources','aipromptplaybook':'AI Prompt Frameworks & Templates for Marketers','growthmarketinghandbook':'The Complete Growth Marketing Handbook for Growth Marketers','digitalmarketingguide':'The Complete Digital Marketing Guide for Brand & Product Success','onlinemarketingbundle':'Online Marketing Mentorship for Business Owners','metaadssolutions':'Meta Ads Simplified for Business Owners','tiktokadssolutions':'TikTok Ads Simplified for Business Owners','socialoptimizationsolutions':'Business Page Optimization Simplified for Business Owners','socialautomationsolutions':'Social Automation Simplified for Business Owners','metaaccountsolutions':'Meta Account Recovery Handbook for FB & IG','onlinemarketingconsulting':'The Profitable Ads Targeting Setup','targetaudiencesetup':'Target Audience & Advertising Setup'};var slug=(prefillUrl.match(/selar\.com\/([^?]+)/)||[])[1]||'';var productName=PRODUCTS[slug]||document.title;var PRICES={'marketingprogram':75000,'marketingprogramcore':45000,'productmarketingcourse':15000,'techsalescourse':15000,'marketingresources':20000,'aipromptplaybook':20000,'growthmarketinghandbook':10000,'digitalmarketingguide':5000,'onlinemarketingbundle':45000,'metaadssolutions':15000,'tiktokadssolutions':15000,'socialoptimizationsolutions':15000,'socialautomationsolutions':15000,'metaaccountsolutions':15000,'onlinemarketingconsulting':250000,'targetaudiencesetup':75000};var productValue=PRICES[slug]||150000;var eid='lead_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','Lead',{content_name:productName,value:productValue,currency:'NGN'},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('SubmitForm',{content_id:slug,content_name:productName,value:productValue,currency:'NGN'});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',event_id:eid,value:productValue,currency:'NGN',lead_email:email,lead_name:name,lead_phone:phone,lead_product:productName});try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:productName,pageUrl:window.location.href})});}catch(err){}setTimeout(function(){window.location.href=url;},500);
+            var PRODUCTS={'marketingprogram':'Product & Growth Marketing with AI for Modern Marketers','marketingprogramcore':'Product & Growth Marketing with AI for Modern Marketers Core','productmarketingcourse':'The Complete Product Marketing Training Course for Product Marketers & PMMs','techsalescourse':'The Complete Tech Sales Training Course for Sales Reps, Account Executives & Account Managers','marketingresources':'Product Marketing Templates & Resources','aipromptplaybook':'AI Prompt Frameworks & Templates for Marketers','growthmarketinghandbook':'The Complete Growth Marketing Handbook for Growth Marketers','digitalmarketingguide':'The Complete Digital Marketing Guide for Brand & Product Success','onlinemarketingbundle':'Online Marketing Mentorship for Business Owners','metaadssolutions':'Meta Ads Simplified for Business Owners','tiktokadssolutions':'TikTok Ads Simplified for Business Owners','socialoptimizationsolutions':'Business Page Optimization Simplified for Business Owners','socialautomationsolutions':'Social Automation Simplified for Business Owners','metaaccountsolutions':'Meta Account Recovery Handbook for FB & IG','onlinemarketingconsulting':'The Profitable Ads Targeting Setup','targetaudiencesetup':'Target Audience & Advertising Setup'};var slug=(prefillUrl.match(/selar\.com\/([^?]+)/)||[])[1]||'';var productName=PRODUCTS[slug]||document.title;var PRICES={'marketingprogram':75000,'marketingprogramcore':45000,'productmarketingcourse':15000,'techsalescourse':15000,'marketingresources':20000,'aipromptplaybook':20000,'growthmarketinghandbook':10000,'digitalmarketingguide':5000,'onlinemarketingbundle':45000,'metaadssolutions':15000,'tiktokadssolutions':15000,'socialoptimizationsolutions':15000,'socialautomationsolutions':15000,'metaaccountsolutions':15000,'onlinemarketingconsulting':500000,'targetaudiencesetup':75000};var productValue=PRICES[slug]||150000;var eid='lead_'+Date.now()+'_'+Math.random().toString(36).substr(2,9);if(typeof fbq==='function')fbq('track','Lead',{content_name:productName,value:productValue,currency:'NGN'},{eventID:eid});if(typeof ttq!=='undefined')ttq.track('SubmitForm',{content_id:slug,content_name:productName,value:productValue,currency:'NGN'});window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'generate_lead',event_id:eid,value:productValue,currency:'NGN',lead_email:email,lead_name:name,lead_phone:phone,lead_product:productName});try{fetch(SHEET_URL,{method:'POST',mode:'no-cors',keepalive:true,headers:{'Content-Type':'text/plain'},body:JSON.stringify({name:name,email:email,phone:phone,product:productName,pageUrl:window.location.href})});}catch(err){}setTimeout(function(){window.location.href=url;},500);
         };
         document.getElementById('prefillModal').addEventListener('click',function(e){
             if(e.target===this)closePrefill();
@@ -1566,6 +1622,91 @@ img[src*="sales-backend"]{aspect-ratio:800/300}
   var bar=document.getElementById('seatBar'),sc=document.querySelector('.spots-count');
   function seat(){if(bar&&sc){var tot=parseInt(bar.dataset.total,10)||50;var n=parseInt(sc.textContent,10);if(isNaN(n))n=Math.ceil(tot/2);bar.style.width=Math.max(0,Math.min(100,(tot-n)/tot*100))+'%'}}
   setTimeout(seat,150); setInterval(seat,2000);
+})();
+</script>
+<script id="hero-fit-js">
+(function(){
+  document.querySelectorAll('.win [data-p="res"]').forEach(function(panel){
+    var units=[].slice.call(panel.querySelectorAll('.res > figure, .rqs > figure, .rq > blockquote'));
+    if(units.length<2)return;
+    panel.classList.add('is-paged');
+    var bar=document.createElement('div');bar.className='respager';bar.setAttribute('role','group');bar.setAttribute('aria-label','Choose a result');
+    var n=document.createElement('span');n.className='respager__n';bar.appendChild(n);
+    function label(u,i){
+      var s=u.querySelector('figcaption strong');
+      if(s)return s.textContent.replace(/\.$/,'');
+      var c=u.querySelector('cite,b');
+      if(c)return c.textContent.split(',')[0];
+      return 'Result '+(i+1);
+    }
+    var btns=units.map(function(u,i){
+      var b=document.createElement('button');b.type='button';b.textContent=label(u,i);
+      b.addEventListener('click',function(){show(i)});
+      bar.appendChild(b);return b;
+    });
+    var boxes=[];units.forEach(function(u){var p=u.parentNode;if(boxes.indexOf(p)<0)boxes.push(p)});
+    function show(k){
+      units.forEach(function(u,i){u.classList.toggle('pg-off',i!==k)});
+      boxes.forEach(function(b){b.hidden=!units.some(function(u,i){return u.parentNode===b&&i===k})});
+      btns.forEach(function(b,i){b.setAttribute('aria-pressed',i===k?'true':'false')});
+      n.textContent=(k+1)+' of '+units.length;
+    }
+    var note=panel.querySelector('.win__note');
+    if(note)panel.insertBefore(bar,note);else panel.appendChild(bar);
+    show(0);
+    /* keep the buttons on one row: drop the "1 of 3" counter only when a label would be cut */
+    function fit(){n.style.display='';if(btns.some(function(b){return b.scrollWidth>b.clientWidth+1}))n.style.display='none';}
+    fit();window.addEventListener('resize',fit);
+    panel.closest('.hero')&&panel.closest('.hero').addEventListener('click',function(){setTimeout(fit,0)});
+  });
+})();
+</script>
+<script id="lb-js">
+(function(){
+  var IMG=/\.(?:jpe?g|png|webp|gif)(?:[?#].*)?$/i;
+  var box=document.createElement('div');
+  box.className='lb';box.setAttribute('role','dialog');box.setAttribute('aria-modal','true');box.setAttribute('aria-label','Screenshot, full size');
+  box.innerHTML='<button type="button" class="lb__x" aria-label="Close full-size view">&times;</button><div class="lb__box"><img class="lb__img" alt=""><div class="lb__cap"></div></div>';
+  document.body.appendChild(box);
+  var big=box.querySelector('.lb__img'),cap=box.querySelector('.lb__cap'),x=box.querySelector('.lb__x'),from=null;
+  function open(src,alt,html,trigger){
+    from=trigger;big.src=src;big.alt=alt||'';cap.innerHTML=html||'';cap.style.display=html?'':'none';
+    box.classList.add('is-open');document.documentElement.classList.add('lb-open');x.focus();
+  }
+  function close(){
+    if(!box.classList.contains('is-open'))return;
+    box.classList.remove('is-open');document.documentElement.classList.remove('lb-open');
+    if(from&&from.focus)from.focus();from=null;
+  }
+  function capFor(el){
+    var f=el.closest('figure');var c=f&&f.querySelector('figcaption');
+    return c?c.innerHTML:'';
+  }
+  x.addEventListener('click',close);
+  box.addEventListener('click',function(e){if(!e.target.closest('.lb__img,.lb__cap,.lb__x'))close()});
+  document.addEventListener('keydown',function(e){
+    if(!box.classList.contains('is-open'))return;
+    if(e.key==='Escape'){e.preventDefault();close()}
+    else if(e.key==='Tab'){e.preventDefault();x.focus()}
+  });
+  /* image links: keep href as the no-JavaScript fallback, open the overlay instead */
+  document.querySelectorAll('a[href]').forEach(function(a){
+    var im=a.querySelector('img');
+    if(!im||!IMG.test(a.getAttribute('href')))return;
+    a.removeAttribute('target');a.removeAttribute('rel');a.classList.add('lb-trigger');
+    a.setAttribute('aria-label','Expand screenshot');
+    a.addEventListener('click',function(e){if(e.metaKey||e.ctrlKey||e.shiftKey)return;e.preventDefault();open(a.href,im.alt,capFor(a),a)});
+  });
+  /* hero Results images without a link: make them tappable too */
+  document.querySelectorAll('.win [data-p="res"] figure').forEach(function(f){
+    var im=f.querySelector('img');
+    if(!im||im.closest('a'))return;
+    var t=im.closest('.shot')||im;
+    t.classList.add('lb-trigger');t.setAttribute('role','button');t.setAttribute('aria-label','Expand screenshot');
+    if(!t.hasAttribute('tabindex'))t.setAttribute('tabindex','0');
+    t.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(t),t)});
+    t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(t),t)}});
+  });
 })();
 </script>
 </body>
