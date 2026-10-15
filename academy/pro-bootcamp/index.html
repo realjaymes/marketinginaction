@@ -591,6 +591,11 @@ html[data-palette="mia"][data-tone="mono"]{--lilac-t:#E6E0EE;--blue-t:#E6E0EE;--
 html[data-palette="mia"][data-tone="mono"] .weeks i{--m:#E6E0EE!important}
 html[data-palette="mia"][data-tone="mono"] .weeks i.on{--m:var(--ink)!important}
 html[data-palette="mia"][data-tone="mono"] .invoice__h,html[data-palette="mia"][data-tone="mono"] .coach__photo{background:#E6E0EE}
+/* contract screenshots show everything down to "Payment due" (rate, annual payment, invoice cycle, payment terms) instead of a fixed-height crop */
+.res img[src*="contract-"],.bento img[src*="contract-"]{height:auto}
+img[src*="contract-3350"]{aspect-ratio:800/818}
+img[src*="contract-1250"]{aspect-ratio:800/878}
+.mega__n{white-space:nowrap}
 /* mono section rhythm: exactly two neutrals, alternating strictly in page order.
    The gold hero is the only coloured block; gold elsewhere marks actions only. */
 html[data-tone="mono"]{--sec-a:var(--cream);--sec-b:#EEE6D3}
