@@ -24,7 +24,6 @@
     <meta name="twitter:description" content="Answer a couple of quick questions and we'll point you to the right MIA program, or book a free consultation if done-for-you marketing is your fit.">
     <meta name="twitter:image" content="https://marketinginaction.xyz/assets/og-homepage.png">
     <meta name="twitter:image:alt" content="Marketing In Action: put marketing into action, unlock revenue">
-    <meta name="robots" content="noindex, nofollow">
 
     <link rel="canonical" href="https://marketinginaction.xyz/book/">
     <link rel="icon" href="/favicon.ico">
@@ -33,8 +32,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="preconnect" href="https://api.fontshare.com">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/styles.css">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -77,319 +74,161 @@
     </script>
 
     <style>
-        body {
-            background: var(--bg-page);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+        :root{
+            --ink:#100a16; --white:#fff; --cream:#F7F4FA; --lilac:#E6E0EE;
+            --gold:#f1de71; --gold-t:#FBF3C6;
+            --muted:rgba(16,10,22,.68); --line:#E3DDEA; --red:#C62828;
+            --st:4px 4px 0 var(--ink); --st-sm:3px 3px 0 var(--ink); --st-lg:7px 7px 0 var(--ink);
+            --font:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+            /* names the page script's inline styles still use */
+            --mia-accent-dark:#100a16; --text-primary:#100a16; --text-muted:rgba(16,10,22,.68);
+            color-scheme:light only;
+        }
+        *,*::before,*::after{box-sizing:border-box}
+        html{scroll-behavior:smooth}
+        body{
+            margin:0; font-family:var(--font); font-size:17px; line-height:1.6;
+            color:var(--ink); background:var(--cream); -webkit-font-smoothing:antialiased;
+            overflow-x:hidden; min-height:100vh; display:flex; flex-direction:column;
+        }
+        img{max-width:100%;height:auto;display:block}
+        a{color:inherit;text-decoration:none}
+        h1,h2,h3{font-family:var(--font);font-weight:750;letter-spacing:-.02em;line-height:1.14;margin:0 0 .5em;text-wrap:balance}
+        p{margin:0 0 1rem}
+        .container{max-width:1120px;margin:0 auto;padding:0 20px;width:100%}
+
+        .book-header{
+            padding:0; border-bottom:2px solid var(--ink);
+            background:rgba(247,244,250,.94);
+            position:sticky; top:0; z-index:100;
+            backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+        }
+        .book-header__inner{display:flex;align-items:center;justify-content:space-between;min-height:66px}
+        .book-header__logo{display:inline-flex;align-items:center;line-height:0}
+        .book-header__logo-img{height:28px;width:auto;display:block}
+        .book-header__nav{display:flex;align-items:center;gap:8px}
+        .book-header__divider{display:none}
+        .book-header__link{
+            font-size:.86rem; font-weight:800; color:var(--ink);
+            background:var(--white); border:2px solid var(--ink); border-radius:999px;
+            padding:6px 15px; min-height:38px; display:inline-flex; align-items:center;
+            transition:background-color .15s ease-out,color .15s ease-out,transform .12s ease-out;
+        }
+        .book-header__link:hover{background:var(--ink);color:#fff}
+        .book-header__link:active{transform:scale(.96)}
+        .book-header__link:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+        @media (max-width:520px){
+            .book-header__logo-img{height:24px}
+            .book-header__inner{gap:10px;padding-top:8px;padding-bottom:8px}
+            .book-header__nav{gap:6px}
+            .book-header__link{font-size:.78rem;padding:5px 11px;min-height:34px}
         }
 
-        .book-header {
-            padding: 18px 0;
-            border-bottom: 1px solid var(--border);
-            background: var(--bg-surface);
-        }
-        .book-header__inner {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-        .book-header__logo {
-            display: inline-flex;
-            align-items: center;
-            line-height: 0;
-        }
-        .book-header__logo:hover {
-            text-decoration: none;
-        }
-        .book-header__logo-img {
-            height: 28px;
-            width: auto;
-            display: block;
-        }
-        @media (max-width: 520px) {
-            .book-header__logo-img { height: 24px; }
-        }
-        .book-header__nav {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-        .book-header__divider {
-            width: 2px;
-            height: 18px;
-            background: var(--color-accent);
-            border-radius: 2px;
-        }
-        .book-header__link {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            padding: 6px 0;
-            border-bottom: 1.5px solid transparent;
-            transition: border-color var(--ease);
-        }
-        .book-header__link:hover {
-            text-decoration: none;
-            border-bottom-color: var(--color-accent);
-        }
-        @media (max-width: 520px) {
-            .book-header__inner {
-                flex-direction: column;
-                gap: 10px;
-                align-items: flex-start;
-            }
-            .book-header__nav {
-                gap: 18px;
-            }
-            .book-header__link {
-                font-size: 0.85rem;
-            }
+        .book-main{
+            flex:1; display:flex; align-items:flex-start; justify-content:center;
+            padding:48px 20px 88px;
+            background:linear-gradient(180deg,var(--gold-t) 0,var(--gold-t) 250px,var(--ink) 250px,var(--ink) 252px,var(--cream) 252px);
         }
 
-        .book-main {
-            flex: 1;
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 40px 20px 80px;
+        .book-card{
+            background:var(--white); border:3px solid var(--ink); border-radius:26px;
+            width:100%; max-width:600px; box-shadow:var(--st-lg); overflow:hidden;
+            animation:bookSlideUp .25s ease;
         }
+        @keyframes bookSlideUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        @media (prefers-reduced-motion:reduce){.book-card{animation:none}}
 
-        .book-card {
-            background: var(--bg-surface);
-            border-radius: 16px;
-            width: 100%;
-            max-width: 560px;
-            box-shadow: 0 20px 60px rgba(28, 20, 34, 0.10);
-            overflow: hidden;
-            animation: bookSlideUp 0.25s ease;
+        .book-card__header{padding:26px 30px 0}
+        .book-card__step{
+            display:inline-block; font-size:.74rem; font-weight:800; text-transform:uppercase;
+            letter-spacing:.08em; color:var(--ink); background:var(--white);
+            border:2px solid var(--ink); border-radius:999px; padding:5px 14px; margin-bottom:14px;
         }
-        @keyframes bookSlideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to   { opacity: 1; transform: translateY(0); }
-        }
+        .book-card__title{font-size:clamp(1.45rem,3.4vw,1.9rem);font-weight:750;color:var(--ink);margin:0 0 8px}
+        .book-card__sub{font-size:1rem;color:var(--muted);margin:0}
+        .book-card__body{padding:22px 30px 30px}
 
-        .book-card__header {
-            padding: 22px 28px 0;
-        }
-        .book-card__step {
-            display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-muted);
-            background: var(--color-accent);
-            padding: 4px 10px;
-            border-radius: 999px;
-            margin-bottom: 10px;
-        }
-        .book-card__title {
-            font-size: 1.45rem;
-            font-weight: 750;
-            color: var(--text-primary);
-            margin: 0 0 6px;
-            letter-spacing: -0.01em;
-        }
-        .book-card__sub {
-            font-size: 0.95rem;
-            color: var(--text-muted);
-            margin: 0;
-        }
-
-        .book-card__body {
-            padding: 22px 28px 28px;
-        }
-
-        .book-field {
-            margin-bottom: 18px;
-        }
-        .book-field__label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 6px;
-        }
-        .book-field__hint {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            margin: 0 0 8px;
-        }
+        .book-field{margin-bottom:20px}
+        .book-field__label{display:block;font-size:.92rem;font-weight:800;color:var(--ink);margin-bottom:8px}
+        .book-field__hint{font-size:.82rem;color:var(--muted);margin:0 0 10px}
         .book-field input[type="text"],
         .book-field input[type="email"],
         .book-field input[type="tel"],
-        .book-field textarea {
-            width: 100%;
-            padding: 11px 13px;
-            border: 1.5px solid var(--border);
-            border-radius: 10px;
-            font-size: 0.95rem;
-            font-family: inherit;
-            color: var(--text-primary);
-            background: var(--bg-surface);
-            outline: none;
-            transition: border-color var(--ease);
+        .book-field textarea{
+            width:100%; padding:12px 14px; border:2px solid var(--ink); border-radius:14px;
+            font-size:1rem; font-family:inherit; color:var(--ink); background:var(--white);
+            outline:none; transition:box-shadow .15s ease;
         }
-        .book-field textarea {
-            min-height: 110px;
-            resize: vertical;
-            line-height: 1.5;
-        }
+        .book-field textarea{min-height:120px;resize:vertical;line-height:1.5}
         .book-field input:focus,
-        .book-field textarea:focus {
-            border-color: var(--color-accent);
-        }
+        .book-field textarea:focus{box-shadow:var(--st-sm)}
+        .book-field input:focus-visible,
+        .book-field textarea:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
         .book-field input::placeholder,
-        .book-field textarea::placeholder {
-            font-size: 0.85rem;
-            line-height: 1.4;
-            color: var(--text-muted);
-        }
+        .book-field textarea::placeholder{font-size:.88rem;line-height:1.4;color:var(--muted)}
 
-        .book-radio-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
+        .book-radio-group{display:flex;flex-direction:column;gap:10px}
+        .book-radio{
+            display:flex; align-items:flex-start; gap:12px; padding:13px 16px;
+            border:2px solid var(--ink); border-radius:16px; background:var(--white); cursor:pointer;
+            transition:background-color .15s ease-out,transform .14s ease,box-shadow .14s ease;
         }
-        .book-radio {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            padding: 12px 14px;
-            border: 1.5px solid var(--border);
-            border-radius: 10px;
-            cursor: pointer;
-            transition: border-color var(--ease), background-color var(--ease);
-        }
-        .book-radio:hover {
-            border-color: rgba(28, 20, 34, 0.28);
-        }
-        .book-radio input {
-            margin-top: 3px;
-            accent-color: var(--text-primary);
-        }
-        .book-radio--checked {
-            border-color: var(--color-accent);
-            background: rgba(241, 222, 113, 0.12);
-        }
-        .book-radio__label {
-            font-size: 0.92rem;
-            color: var(--text-primary);
-            line-height: 1.35;
-        }
+        .book-radio:hover{background:var(--cream);box-shadow:var(--st-sm);transform:translate(-1px,-1px)}
+        .book-radio:has(input:focus-visible){outline:3px solid var(--ink);outline-offset:2px}
+        .book-radio input:focus-visible{outline:none}
+        .book-radio input{margin-top:4px;accent-color:var(--ink);width:16px;height:16px;flex:none}
+        .book-radio--checked{background:var(--lilac);box-shadow:var(--st-sm)}
+        .book-radio--checked:hover{background:var(--lilac)}
+        .book-radio__label{font-size:.96rem;color:var(--ink);line-height:1.4}
 
-        .book-other-input {
-            margin-top: 8px;
-            display: none;
-        }
-        .book-other-input.show {
-            display: block;
-        }
+        .book-other-input{margin-top:8px;display:none}
+        .book-other-input.show{display:block}
 
-        .book-actions {
-            display: flex;
-            gap: 12px;
-            margin-top: 6px;
+        .book-actions{display:flex;gap:12px;margin-top:8px}
+        .book-btn{
+            flex:1; padding:14px 18px; border-radius:999px; border:2px solid var(--ink);
+            font-size:1rem; font-weight:800; cursor:pointer; font-family:inherit; line-height:1.3;
+            transition:transform .14s ease,box-shadow .14s ease,background-color .15s ease-out;
         }
-        .book-btn {
-            flex: 1;
-            padding: 14px 16px;
-            border-radius: 10px;
-            border: none;
-            font-size: 0.98rem;
-            font-weight: 700;
-            cursor: pointer;
-            font-family: inherit;
-            transition: opacity var(--ease), transform var(--ease);
-        }
-        .book-btn--primary {
-            background: var(--color-accent);
-            color: var(--text-primary);
-        }
-        .book-btn--primary:hover {
-            opacity: 0.9;
-        }
-        .book-btn--primary:disabled {
-            opacity: 0.55;
-            cursor: not-allowed;
-        }
-        .book-btn--secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 1.5px solid var(--border);
-        }
-        .book-btn--secondary:hover {
-            border-color: var(--text-primary);
-        }
+        .book-btn--primary{background:var(--gold);color:var(--ink);box-shadow:var(--st)}
+        .book-btn--primary:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+        .book-btn--primary:active{transform:translate(3px,3px) scale(.98);box-shadow:1px 1px 0 var(--ink)}
+        .book-btn--primary:disabled{opacity:.55;cursor:not-allowed;transform:none;box-shadow:var(--st)}
+        .book-btn--secondary{background:var(--white);color:var(--ink)}
+        .book-btn--secondary:hover{background:var(--lilac)}
+        .book-btn:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
 
-        .book-error {
-            background: rgba(241, 113, 113, 0.10);
-            border: 1px solid rgba(241, 113, 113, 0.35);
-            color: #b03a3a;
-            padding: 10px 12px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            margin-bottom: 16px;
-            display: none;
+        .book-error{
+            background:#fdeaea; border:2px solid var(--ink); color:var(--red);
+            padding:11px 14px; border-radius:14px; font-size:.9rem; font-weight:700;
+            margin-bottom:18px; display:none;
         }
-        .book-error.show {
-            display: block;
-        }
+        .book-error.show{display:block}
 
-        .book-trust {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            text-align: center;
-            margin: 14px 0 0;
-        }
+        .book-trust{font-size:.82rem;color:var(--muted);text-align:center;margin:16px 0 0}
 
-        .book-howto {
-            background: rgba(0, 0, 0, 0.035);
-            border: 1px solid rgba(0, 0, 0, 0.08);
-            border-radius: 8px;
-            padding: 12px 14px;
-            margin: 0 0 16px;
-            font-size: 0.85rem;
-            line-height: 1.55;
-            color: var(--text-muted);
+        .book-howto{
+            background:var(--cream); border:2px solid var(--ink); border-radius:16px;
+            padding:13px 16px; margin:0 0 18px; font-size:.88rem; line-height:1.55; color:var(--muted);
         }
-        .book-howto strong {
-            color: var(--text-strong, inherit);
-        }
+        .book-howto strong{color:var(--ink)}
 
-        a.book-btn {
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-        }
-        a.book-btn:hover {
-            text-decoration: none;
-        }
-        #recBody {
-            font-size: 0.98rem;
-            color: var(--text-primary);
-            line-height: 1.55;
-            margin: 4px 0 22px;
-        }
+        a.book-btn{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+        a.book-btn:hover{text-decoration:none}
+        #recBody{font-size:1rem;color:var(--ink);line-height:1.6;margin:4px 0 22px}
+        #recBullets li{font-weight:600}
 
-        .book-step {
-            display: none;
-        }
-        .book-step.active {
-            display: block;
-        }
+        .book-step{display:none}
+        .book-step.active{display:block}
 
-        @media (max-width: 520px) {
-            .book-main { padding: 24px 14px 60px; }
-            .book-card__header { padding: 20px 20px 0; }
-            .book-card__body { padding: 18px 20px 24px; }
-            .book-card__title { font-size: 1.25rem; }
+        @media (max-width:520px){
+            .book-main{padding:28px 14px 60px;background:linear-gradient(180deg,var(--gold-t) 0,var(--gold-t) 210px,var(--ink) 210px,var(--ink) 212px,var(--cream) 212px)}
+            .book-card{border-radius:22px;box-shadow:var(--st)}
+            .book-card__header{padding:22px 18px 0}
+            .book-card__body{padding:18px 18px 24px}
+            .book-actions{gap:10px}
+            .book-btn{padding:13px 12px;font-size:.95rem}
         }
-    
-        /* even out heading lines so no word is left alone */
-        h1,h2,h3{text-wrap:balance}
     </style>
 </head>
 <body>
