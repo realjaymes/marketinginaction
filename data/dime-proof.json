@@ -1,0 +1,45 @@
+{
+  "as_of": "2026-10-15",
+  "source_dir": "~/Downloads/Screenshots & Visuals/DIME Product Screenshots",
+  "values": {
+    "selar_sales": "831",
+    "selar_ngn": "&#8358;12,886,850",
+    "selar_usd": "$481.82",
+    "selar_gbp": "&pound;23.25",
+    "selar_ghs": "GH&#8373;694.84",
+    "selar_zar": "R623.96",
+    "selar_currencies": "naira, dollars, pounds, cedis and rand",
+    "selar_milestone": "$10,000",
+    "selar_milestones_line": "$1,000 on 9 March, $5,000 on 29 May and $10,000 on 3 October 2026",
+    "best_month": "May 2026",
+    "best_month_ngn": "&#8358;4,769,290",
+    "top_product_sales": "203",
+    "meta_roas": "4.84&times;",
+    "meta_purchases": "106"
+  },
+  "unscanned_keys": [
+    "best_month",
+    "selar_sales",
+    "top_product_sales",
+    "meta_purchases"
+  ],
+  "screenshots": {
+    "academy/dime/assets/selar-dashboard.png": "James Selar Dashboard All Sales Update 2.png",
+    "academy/dime/assets/selar-milestones.png": "Selar Milestones.png",
+    "academy/dime/assets/monthly-revenue.png": "James Backend Last 3 Monthly Revenue Update 1.png"
+  },
+  "pages": [
+    "academy/dime/index.html",
+    "academy/dime-masterclass/index.html",
+    "academy/dime-dfy/index.html",
+    "academy/dime/replay/index.html",
+    "academy/dime/replay-info/index.html",
+    "academy/dime/class/index.html",
+    "academy/dime/class-info/index.html"
+  ],
+  "retired": [
+    "&#8358;9,209,500",
+    "645 sales",
+    "$465.54"
+  ]
+}

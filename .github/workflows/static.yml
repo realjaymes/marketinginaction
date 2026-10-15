@@ -61,6 +61,12 @@ jobs:
         # tags, so this fails the deploy; tools/og-tags.py writes the fix.
         run: python3 tools/check-og.py
 
+      - name: Check DIME proof figures
+        # data/dime-proof.json holds James's Selar figures and screenshots. Every
+        # DIME page must show them through data-proof markers and current
+        # screenshot cache-busters; tools/dime-proof.py --write fixes drift.
+        run: python3 tools/dime-proof.py
+
       - name: Generate sitemap
         # sitemap-main.xml is a derived artifact, rebuilt from the pages actually
         # on disk so it can never drift from the site. Regenerating here (rather
