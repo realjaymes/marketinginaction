@@ -246,8 +246,8 @@ section:nth-of-type(even){background:var(--sec-b)}
 /* whatsapp testimonials */
 .wa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:820px;margin:0 auto}
 .wa-card{background:var(--white)!important;border:3px solid var(--ink);border-radius:24px;box-shadow:var(--st);padding:20px;position:relative;display:flex;flex-direction:column;gap:10px;text-align:left}
-.wa-card__badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:.76rem;font-weight:800;background:var(--sec-b);border:2px solid var(--ink);border-radius:999px;padding:3px 11px;color:var(--ink)}
-.wa-card__badge svg{width:14px;height:14px;fill:var(--ink)}
+.wa-card__badge{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:.76rem;font-weight:800;background:#d9fdd3;border:2px solid var(--ink);border-radius:999px;padding:3px 11px;color:var(--ink)}
+.wa-card__badge svg{width:14px;height:14px;fill:#1da851}
 .wa-card__text{font-size:.97rem;line-height:1.55;color:var(--ink)!important;margin:0}
 .wa-card__author{font-weight:800;color:var(--ink)!important;line-height:1.2}
 .wa-card__role{font-size:.82rem;color:var(--muted)!important;line-height:1.3;margin-top:-8px}
@@ -258,7 +258,7 @@ section:nth-of-type(even){background:var(--sec-b)}
 /* problem */
 .problem-grid{display:grid;gap:14px;max-width:820px;margin:0 auto}
 .problem-card{display:flex;gap:16px;align-items:flex-start;background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:16px 18px;font-size:.98rem;color:var(--muted);text-align:left}
-.problem-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);flex:none;font-size:1rem}
+.problem-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);flex:none;font-size:1.2rem}
 .problem-card__text strong{color:var(--ink)}
 .problem-close{font-size:1.2rem;font-weight:750;letter-spacing:-.02em;line-height:1.35;margin:26px auto 0;max-width:640px;text-align:center}
 
@@ -299,7 +299,7 @@ section:nth-of-type(even){background:var(--sec-b)}
 /* transformation */
 .transform-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;max-width:900px;margin:0 auto}
 .transform-card{border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st);padding:24px;background:var(--white);text-align:left}
-.transform-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);margin-bottom:14px;font-size:1rem}
+.transform-card__icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:2px solid var(--ink);background:var(--sec-b);margin-bottom:14px;font-size:1.2rem}
 .transform-card__title{font-size:1.25rem;font-weight:750;letter-spacing:-.02em;line-height:1.2;margin-bottom:8px;text-wrap:balance}
 .transform-card__text{margin:0;color:var(--muted);font-size:.97rem}
 
@@ -471,7 +471,6 @@ section:nth-of-type(even){background:var(--sec-b)}
  .sticky-nav .btn{padding:8px 16px;font-size:.8rem}
  .tierrow{flex-wrap:wrap}
 }
-.problem-card__icon,.transform-card__icon{filter:grayscale(1)}
 /* every screenshot keeps its own proportions; only empty space after the useful content is cropped */
 img[src*="client-result-20x"]{aspect-ratio:800/495}
 img[src*="client-result-6x"]{aspect-ratio:800/322}
