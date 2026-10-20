@@ -47,8 +47,8 @@ Courses, bootcamps, and resources for Nigerian marketers targeting remote USD ro
 
 ## Free Directories
 
-- [Marketing & AI Product Database](https://marketinginaction.xyz/resources/marketing-ai-tools/): 153 marketing and AI tools for go-to-market teams, grouped by the job they do (outbound and sales, email and lifecycle, SEO and content, ads, analytics, video, AI agents, no-code and more), each with what it does and its use cases.
-- [Marketing Thought Leaders Database](https://marketinginaction.xyz/resources/marketing-thought-leaders/): 68 operators, founders and writers in growth, product marketing, GTM engineering and AI, with their role and links to their newsletters, LinkedIn and X.
+- [Marketing & AI Product Database](https://marketinginaction.xyz/resources/marketing-ai-tools/): Marketing and AI tools for go-to-market teams, grouped by the job they do (outbound and sales, email and lifecycle, SEO and content, ads, analytics, video, AI agents, no-code and more), each with what it does and its use cases.
+- [Marketing Thought Leaders Database](https://marketinginaction.xyz/resources/marketing-thought-leaders/): Operators, founders and writers in growth, product marketing, GTM engineering and AI, with their role and links to their newsletters, LinkedIn and X.
 - [Tech Events Calendar](https://marketinginaction.xyz/resources/tech-events-calendar/): Tech, startup and marketing events across Africa plus major global marketing events, with every date checked on the event's official site and a calendar feed to subscribe to.
 
 ## Key Topics

@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 153,
+  "count": 223,
   "items": [
     {
       "notion_id": "284a6d41-709c-8125-a3c2-c30e83428e9a",
@@ -29,6 +29,29 @@
       ],
       "website": "https://1password.partnerlinks.io/james-mia",
       "slug": "1password"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "6sense",
+      "overview": "6sense is an account-based marketing platform that uses intent data to identify and prioritize buying accounts.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence",
+        "GTM Automation"
+      ],
+      "use_cases": [
+        "Identifying in-market accounts",
+        "Scoring account intent",
+        "Running account-based ads",
+        "Prioritizing sales outreach",
+        "Tracking buying stages",
+        "Aligning sales and marketing"
+      ],
+      "website": "https://6sense.com",
+      "slug": "6sense"
     },
     {
       "notion_id": "284a6d41-709c-8177-90e9-c3de95a7ea16",
@@ -81,6 +104,53 @@
       "slug": "adcreative-ai"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Adyntel",
+      "overview": "Adyntel is an ad intelligence API. It shows whether a domain is running Google, Meta or LinkedIn ads and returns the creatives.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Data",
+        "Sales Intelligence",
+        "Advertising"
+      ],
+      "use_cases": [
+        "Checking if a prospect runs paid ads",
+        "Pulling live ad creatives for research",
+        "Spotting gaps in a prospect's advertising",
+        "Qualifying outbound targets by ad activity",
+        "Competitor ad research",
+        "Personalizing outreach with ad evidence"
+      ],
+      "website": "https://www.adyntel.com",
+      "slug": "adyntel"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Ahrefs",
+      "overview": "Ahrefs is an SEO suite for rank tracking, backlinks and keyword research. It also supports competitor gap analysis.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "Marketing Data"
+      ],
+      "use_cases": [
+        "Tracking keyword rankings",
+        "Monitoring backlinks",
+        "Analyzing competitor gaps",
+        "Researching keywords",
+        "Setting up domain projects",
+        "Auditing site health"
+      ],
+      "website": "https://ahrefs.com",
+      "slug": "ahrefs"
+    },
+    {
       "notion_id": "24ca6d41-709c-803d-b71d-c2cfe9dbff3f",
       "created": "2025-08-11",
       "last_edited": "2025-09-27",
@@ -103,6 +173,28 @@
       ],
       "website": "https://www.airops.com",
       "slug": "airops"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Airtable",
+      "overview": "Airtable is a spreadsheet-database platform for building lightweight apps and workflows.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Databases"
+      ],
+      "use_cases": [
+        "Tracking leads",
+        "Managing content calendars",
+        "Building internal tools",
+        "Running campaign trackers",
+        "Storing enriched data",
+        "Automating workflows"
+      ],
+      "website": "https://airtable.com",
+      "slug": "airtable"
     },
     {
       "notion_id": "284a6d41-709c-8133-b4ee-e8abe428c89f",
@@ -207,6 +299,28 @@
       "slug": "apollo"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "AppsFlyer",
+      "overview": "AppsFlyer is a mobile attribution and marketing analytics platform.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Attributing app installs",
+        "Measuring campaign ROI",
+        "Tracking in-app events",
+        "Deep linking",
+        "Detecting ad fraud",
+        "Comparing channels"
+      ],
+      "website": "https://www.appsflyer.com",
+      "slug": "appsflyer"
+    },
+    {
       "notion_id": "24ca6d41-709c-8067-917b-f6330f64a1d3",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -228,6 +342,29 @@
       ],
       "website": "https://www.argil.ai",
       "slug": "argil"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Asana",
+      "overview": "Asana is a work management tool for planning projects, tasks and deadlines.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Project Management",
+        "Task Management"
+      ],
+      "use_cases": [
+        "Planning campaigns",
+        "Assigning tasks",
+        "Tracking deadlines",
+        "Managing content calendars",
+        "Running client projects",
+        "Reporting on progress"
+      ],
+      "website": "https://asana.com",
+      "slug": "asana"
     },
     {
       "notion_id": "27ba6d41-709c-8023-a9e9-f3f2929fd9c8",
@@ -255,6 +392,52 @@
       ],
       "website": "https://attio.com",
       "slug": "attio"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "BigQuery",
+      "overview": "BigQuery is Google Cloud's serverless data warehouse for storing and querying large datasets with SQL.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Databases",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Storing marketing data",
+        "Querying GA4 exports",
+        "Joining ad and CRM data",
+        "Building attribution models",
+        "Feeding dashboards",
+        "Analyzing event data"
+      ],
+      "website": "https://cloud.google.com/bigquery",
+      "slug": "bigquery"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Bing Webmaster Tools",
+      "overview": "Bing Webmaster Tools reports how a site performs in Bing search. It also supports IndexNow for fast URL submission.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Submitting new URLs for indexing",
+        "Using IndexNow after site updates",
+        "Checking Bing search performance",
+        "Verifying sitemaps",
+        "Finding crawl issues",
+        "Supporting AI search visibility"
+      ],
+      "website": "https://www.bing.com/webmasters",
+      "slug": "bing-webmaster-tools"
     },
     {
       "notion_id": "24fa6d41-709c-8013-bc1e-e70969815024",
@@ -427,6 +610,29 @@
       "slug": "breezyhr"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Brevo",
+      "overview": "Brevo is an email and SMS marketing platform with contact lists, automations and transactional email. It has an API for connecting other tools.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Sending newsletters and campaigns",
+        "Adding buyers to lists after a sale",
+        "Running automation workflows",
+        "Sending transactional email",
+        "Managing contact lists",
+        "Connecting to n8n through the API"
+      ],
+      "website": "https://www.brevo.com",
+      "slug": "brevo"
+    },
+    {
       "notion_id": "2dba6d41-709c-81e7-ad6b-c62c3d7e4380",
       "created": "2026-01-01",
       "last_edited": "2026-01-01",
@@ -449,6 +655,50 @@
       ],
       "website": "https://partners.callrail.com/james-mia",
       "slug": "callrail"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Canva",
+      "overview": "Canva is an online design tool with templates for social posts, presentations, ads and video.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Graphic Design"
+      ],
+      "use_cases": [
+        "Designing social graphics",
+        "Making ad creative",
+        "Building presentations",
+        "Creating brand kits",
+        "Editing short video",
+        "Producing carousels"
+      ],
+      "website": "https://www.canva.com",
+      "slug": "canva"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "CapCut",
+      "overview": "CapCut is a video editing app for short-form content. It offers templates, captions and effects.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Editing short-form video",
+        "Adding captions",
+        "Assembling ad creative",
+        "Cutting UGC-style clips",
+        "Applying templates and effects",
+        "Exporting for social platforms"
+      ],
+      "website": "https://www.capcut.com",
+      "slug": "capcut"
     },
     {
       "notion_id": "24ca6d41-709c-8038-91e2-f4ef4fdfb1f3",
@@ -521,6 +771,29 @@
       "slug": "chatgpt"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Cheap Inboxes",
+      "overview": "Cheap Inboxes provisions sending mailboxes and domains for cold email. It manages DNS and inbox setup for outbound teams.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Deliverability",
+        "Outbound GTM Outreach"
+      ],
+      "use_cases": [
+        "Setting up sending mailboxes",
+        "Managing DNS for lookalike sending domains",
+        "Scaling outbound sending capacity",
+        "Protecting the main domain from cold email risk",
+        "Connecting inboxes to a sending platform",
+        "Keeping inbox costs predictable"
+      ],
+      "website": "https://www.cheapinboxes.com",
+      "slug": "cheap-inboxes"
+    },
+    {
       "notion_id": "27aa6d41-709c-80e4-8755-efd1d7a9eae6",
       "created": "2025-09-26",
       "last_edited": "2025-09-26",
@@ -567,6 +840,30 @@
       ],
       "website": "https://claude.ai",
       "slug": "claude"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Claude Code",
+      "overview": "Claude Code is Anthropic's coding agent that runs in the terminal and VS Code. It reads project files, runs commands and calls connected tools to complete multi-step work.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Running marketing skills and workflows from plain-text rules",
+        "Building and maintaining websites from the terminal",
+        "Automating research and reporting",
+        "Connecting APIs, MCP servers and scheduled jobs",
+        "Editing and checking copy across many files",
+        "Working through a project memory in an Obsidian vault"
+      ],
+      "website": "https://www.anthropic.com/claude-code",
+      "slug": "claude-code"
     },
     {
       "notion_id": "24ca6d41-709c-8097-ad13-fd8e7f21f0d4",
@@ -642,6 +939,52 @@
       "slug": "crewai"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Crunchbase",
+      "overview": "Crunchbase is a database of company, funding and investor information.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence",
+        "Marketing Data"
+      ],
+      "use_cases": [
+        "Researching target companies",
+        "Tracking funding rounds",
+        "Building prospect lists",
+        "Finding growth signals",
+        "Profiling competitors",
+        "Enriching account data"
+      ],
+      "website": "https://www.crunchbase.com",
+      "slug": "crunchbase"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Cursor",
+      "overview": "Cursor is an AI code editor that writes and edits code from natural language prompts.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Building web apps with prompts",
+        "Editing code with AI",
+        "Prototyping internal tools",
+        "Automating scripts",
+        "Debugging code",
+        "Generating landing pages"
+      ],
+      "website": "https://cursor.com",
+      "slug": "cursor"
+    },
+    {
       "notion_id": "27ba6d41-709c-8038-a0ee-d5773a7b317b",
       "created": "2025-09-27",
       "last_edited": "2025-09-27",
@@ -667,6 +1010,29 @@
       ],
       "website": "https://customer.io",
       "slug": "customer-io"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "DataForSEO",
+      "overview": "DataForSEO sells search data through an API, priced per query. It covers rankings, keywords, backlinks and AI answer results.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "Marketing Data"
+      ],
+      "use_cases": [
+        "Pulling keyword and ranking data",
+        "Checking competitor search visibility",
+        "Testing AI answer results",
+        "Running scheduled SEO checks",
+        "Auditing sites at low cost",
+        "Replacing dashboard tools with an API"
+      ],
+      "website": "https://dataforseo.com",
+      "slug": "dataforseo"
     },
     {
       "notion_id": "284a6d41-709c-8122-8a6e-fdf190237f79",
@@ -788,6 +1154,28 @@
       "slug": "dia-browser"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Discord",
+      "overview": "Discord is a chat platform for communities, with text channels, voice and bots.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Collaboration"
+      ],
+      "use_cases": [
+        "Running online communities",
+        "Hosting live voice events",
+        "Moderating member chats",
+        "Onboarding new members",
+        "Gathering product feedback",
+        "Announcing launches"
+      ],
+      "website": "https://discord.com",
+      "slug": "discord"
+    },
+    {
       "notion_id": "27ba6d41-709c-80aa-96bc-e0b549415678",
       "created": "2025-09-27",
       "last_edited": "2025-10-02",
@@ -836,6 +1224,29 @@
       ],
       "website": "https://elevenlabs.io/",
       "slug": "elevenlabs"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "EmailBison",
+      "overview": "EmailBison is a cold email sequencer with dedicated IP pools and deliverability-focused tools for agencies and GTM teams.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Deliverability",
+        "Outbound GTM Outreach"
+      ],
+      "use_cases": [
+        "Sending cold email campaigns",
+        "Managing dedicated IPs",
+        "Running agency client campaigns",
+        "Monitoring deliverability",
+        "Managing replies",
+        "Scaling sending volume"
+      ],
+      "website": "https://emailbison.com",
+      "slug": "emailbison"
     },
     {
       "notion_id": "2dba6d41-709c-8115-9989-e624d44a1328",
@@ -931,6 +1342,29 @@
       ],
       "website": "https://usefathom.com/ref/LMKMLA",
       "slug": "fathom-analytics"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Figma",
+      "overview": "Figma is a collaborative design tool for interfaces and graphics. Teams share files and comment on designs.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Graphic Design",
+        "Collaboration"
+      ],
+      "use_cases": [
+        "Designing publication layouts",
+        "Reviewing mockups",
+        "Creating social graphics",
+        "Sharing design files with a team",
+        "Checking UI against a mock",
+        "Building visual assets"
+      ],
+      "website": "https://www.figma.com",
+      "slug": "figma"
     },
     {
       "notion_id": "24ca6d41-709c-809c-9610-f2912bb7b579",
@@ -1050,6 +1484,28 @@
       ],
       "website": "https://foragemail.com",
       "slug": "forage-mail"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Framer",
+      "overview": "Framer is a website builder with a visual design canvas and built-in hosting.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Website Builders"
+      ],
+      "use_cases": [
+        "Building marketing sites",
+        "Designing landing pages",
+        "Publishing without code",
+        "Adding animations",
+        "Running A/B tests on pages",
+        "Managing CMS content"
+      ],
+      "website": "https://www.framer.com",
+      "slug": "framer"
     },
     {
       "notion_id": "284a6d41-709c-81f1-b59d-c96464adba32",
@@ -1248,6 +1704,28 @@
       "slug": "getresponse"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "GitHub",
+      "overview": "GitHub hosts code in Git repositories with version history. It also serves static sites through GitHub Pages.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Version controlling websites and scripts",
+        "Backing up code",
+        "Hosting static sites with GitHub Pages",
+        "Publishing open-source marketing skills",
+        "Reviewing changes",
+        "Triggering deployments"
+      ],
+      "website": "https://github.com",
+      "slug": "github"
+    },
+    {
       "notion_id": "24ca6d41-709c-81c5-9067-f4a3cc6bc0e7",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -1269,6 +1747,50 @@
       ],
       "website": "https://github.com/features/copilot",
       "slug": "github-copilot"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Gong",
+      "overview": "Gong is a revenue intelligence platform that records and analyzes sales calls and deals.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence"
+      ],
+      "use_cases": [
+        "Analyzing sales calls",
+        "Spotting deal risks",
+        "Coaching reps",
+        "Finding customer objections",
+        "Tracking competitor mentions",
+        "Feeding messaging research"
+      ],
+      "website": "https://www.gong.io",
+      "slug": "gong"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Google Ads",
+      "overview": "Google Ads is Google's advertising platform for running search, display, YouTube and Performance Max campaigns.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Running search campaigns",
+        "Building Performance Max campaigns",
+        "Retargeting site visitors",
+        "Tracking conversions",
+        "Managing bids and budgets",
+        "Testing ad copy"
+      ],
+      "website": "https://ads.google.com",
+      "slug": "google-ads"
     },
     {
       "notion_id": "24ca6d41-709c-813d-8f54-d35e52347440",
@@ -1295,6 +1817,52 @@
       "slug": "google-ai-studio"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Google Analytics",
+      "overview": "Google Analytics 4 is Google's web and app analytics product. It reports traffic, events and conversions.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Measuring website traffic",
+        "Tracking conversion events",
+        "Reading reports through the API",
+        "Auditing tracking setups",
+        "Comparing channel performance",
+        "Reporting across several sites"
+      ],
+      "website": "https://marketingplatform.google.com/about/analytics/",
+      "slug": "google-analytics"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Google Flow",
+      "overview": "Google Flow is Google's AI filmmaking tool built on Veo. It generates video shots from prompts and reference images.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Text-to-Video Generation",
+        "Video Generation & Filmmaking"
+      ],
+      "use_cases": [
+        "Generating video shots from prompts",
+        "Producing launch films",
+        "Making vertical ad videos",
+        "Creating scenes from reference images",
+        "Building UGC-style clips",
+        "Iterating on shots with credits"
+      ],
+      "website": "https://labs.google/flow",
+      "slug": "google-flow"
+    },
+    {
       "notion_id": "24ca6d41-709c-81e6-8a3b-c1d10ca66ad3",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -1316,6 +1884,52 @@
       ],
       "website": "https://notebooklm.google",
       "slug": "google-notebooklm"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Google Search Console",
+      "overview": "Google Search Console shows how a site appears in Google Search. It reports queries, clicks, indexing and page issues.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Tracking search queries and clicks",
+        "Checking indexing status",
+        "Finding page issues",
+        "Submitting sitemaps",
+        "Reading data through the API",
+        "Guiding SEO refreshes"
+      ],
+      "website": "https://search.google.com/search-console",
+      "slug": "google-search-console"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Google Tag Manager",
+      "overview": "Google Tag Manager manages tracking tags on a website without code changes. It lets teams add and test tags from one container.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics",
+        "Marketing Technology"
+      ],
+      "use_cases": [
+        "Adding analytics and ad tags",
+        "Staging container changes for review",
+        "Managing consent-based tags",
+        "Testing tags before publishing",
+        "Keeping a tag inventory",
+        "Auditing tag behavior"
+      ],
+      "website": "https://tagmanager.google.com",
+      "slug": "google-tag-manager"
     },
     {
       "notion_id": "24ca6d41-709c-81af-8ada-d6ac6767fc95",
@@ -1340,6 +1954,28 @@
       ],
       "website": "https://deepmind.google/models/veo",
       "slug": "google-veo"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Google Workspace",
+      "overview": "Google Workspace is Google's suite of business email, documents, spreadsheets, calendar and meeting tools.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Collaboration"
+      ],
+      "use_cases": [
+        "Business email",
+        "Shared documents and sheets",
+        "Scheduling meetings",
+        "Running video calls",
+        "Sharing files with teams",
+        "Managing team accounts"
+      ],
+      "website": "https://workspace.google.com",
+      "slug": "google-workspace"
     },
     {
       "notion_id": "24ca6d41-709c-816d-8f8a-d9f30cc0abc1",
@@ -1463,6 +2099,29 @@
       ],
       "website": "https://www.hubspot.com",
       "slug": "hubspot"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Hunter",
+      "overview": "Hunter finds and verifies professional email addresses by domain or by name and company. It also offers an API for scripted lookups.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Contact Data Enrichment",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Finding email addresses for a company domain",
+        "Verifying an address before sending",
+        "Confirming a contact from a second source",
+        "Enriching prospect lists through the API",
+        "Checking email patterns at a company",
+        "Backing up other enrichment tools"
+      ],
+      "website": "https://hunter.io",
+      "slug": "hunter"
     },
     {
       "notion_id": "284a6d41-709c-814f-bbb8-efedbcd743f8",
@@ -1631,6 +2290,28 @@
       "slug": "instapage"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Jira",
+      "overview": "Jira is Atlassian's issue and project tracking tool, widely used by product and engineering teams.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Project Management"
+      ],
+      "use_cases": [
+        "Tracking tickets",
+        "Planning sprints",
+        "Requesting engineering work",
+        "Managing launch tasks",
+        "Reporting on delivery",
+        "Linking work to roadmaps"
+      ],
+      "website": "https://www.atlassian.com/software/jira",
+      "slug": "jira"
+    },
+    {
       "notion_id": "284a6d41-709c-81fd-9c18-c46e8833677a",
       "created": "2025-10-06",
       "last_edited": "2026-01-01",
@@ -1676,6 +2357,29 @@
       ],
       "website": "https://klap.app",
       "slug": "klap"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Klaviyo",
+      "overview": "Klaviyo is an email and SMS marketing platform built around customer data, mostly used by online stores.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Building email flows",
+        "Sending SMS campaigns",
+        "Segmenting customers",
+        "Abandoned cart recovery",
+        "Tracking revenue from email",
+        "Running newsletters"
+      ],
+      "website": "https://www.klaviyo.com",
+      "slug": "klaviyo"
     },
     {
       "notion_id": "24ca6d41-709c-81e9-a40c-ea23fafa034a",
@@ -1798,6 +2502,29 @@
       "slug": "latenode"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "LeanData",
+      "overview": "LeanData is a revenue operations platform for lead routing, matching and account-based workflows.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "CRM"
+      ],
+      "use_cases": [
+        "Routing leads to reps",
+        "Matching leads to accounts",
+        "Managing territories",
+        "Scheduling meetings",
+        "Automating handoffs",
+        "Cleaning CRM data"
+      ],
+      "website": "https://www.leandata.com",
+      "slug": "leandata"
+    },
+    {
       "notion_id": "284a6d41-709c-8189-a4c2-e07cb7972b80",
       "created": "2025-10-06",
       "last_edited": "2025-10-06",
@@ -1873,6 +2600,28 @@
       "slug": "lindy"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "LinkedIn Ads",
+      "overview": "LinkedIn Ads is LinkedIn's advertising platform for targeting professionals by job title, company and industry.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Targeting B2B decision makers",
+        "Running lead gen forms",
+        "Promoting content",
+        "Retargeting website visitors",
+        "Account-based advertising",
+        "Measuring cost per lead"
+      ],
+      "website": "https://business.linkedin.com/marketing-solutions/ads",
+      "slug": "linkedin-ads"
+    },
+    {
       "notion_id": "284a6d41-709c-81d8-9365-c30972a93c12",
       "created": "2025-10-06",
       "last_edited": "2026-01-01",
@@ -1919,6 +2668,51 @@
       ],
       "website": "https://looka.partnerlinks.io/james-mia",
       "slug": "looka"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Looker Studio",
+      "overview": "Looker Studio is Google's free dashboard and reporting tool that connects to many data sources.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Building marketing dashboards",
+        "Blending ad and analytics data",
+        "Automating client reports",
+        "Visualizing funnel metrics",
+        "Sharing live reports",
+        "Tracking SEO performance"
+      ],
+      "website": "https://lookerstudio.google.com",
+      "slug": "looker-studio"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Loom",
+      "overview": "Loom records screen and camera video to share by link. Teams use it for walkthroughs and async updates.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Recording",
+        "Collaboration"
+      ],
+      "use_cases": [
+        "Recording application walkthroughs",
+        "Sharing async explanations",
+        "Demonstrating work to prospects",
+        "Narrating a screen",
+        "Sending video pitches",
+        "Recording client updates"
+      ],
+      "website": "https://www.loom.com",
+      "slug": "loom"
     },
     {
       "notion_id": "24ca6d41-709c-80e9-85e7-dd47ecb9a032",
@@ -2139,6 +2933,28 @@
       "slug": "memberstack"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Meta Ads Manager",
+      "overview": "Meta Ads Manager is the tool for creating and managing ads on Facebook and Instagram. It handles campaigns, audiences, budgets and reporting.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Running Facebook and Instagram campaigns",
+        "Managing audiences and budgets",
+        "Testing creatives",
+        "Reading campaign and ad-level results",
+        "Reconciling spend against sales",
+        "Managing client ad account access"
+      ],
+      "website": "https://www.facebook.com/business/tools/ads-manager",
+      "slug": "meta-ads-manager"
+    },
+    {
       "notion_id": "24ca6d41-709c-81bb-8094-df3ed5c6363c",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -2163,6 +2979,28 @@
       "slug": "meta-ai"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Meta Business Suite",
+      "overview": "Meta Business Suite is a free tool for managing Facebook and Instagram pages, messages, posts and ads in one place.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Scheduling posts",
+        "Managing inbox messages",
+        "Viewing ad history",
+        "Sharing partner access",
+        "Tracking page insights",
+        "Managing ad accounts"
+      ],
+      "website": "https://business.facebook.com",
+      "slug": "meta-business-suite"
+    },
+    {
       "notion_id": "24ca6d41-709c-81b7-9c52-ca9df2b0c5ef",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -2183,6 +3021,50 @@
       ],
       "website": "https://m365copilot.com",
       "slug": "microsoft-365-copilot"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Microsoft Advertising",
+      "overview": "Microsoft Advertising is the ad platform for running search campaigns on Bing and partner networks.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Running Bing search ads",
+        "Importing Google Ads campaigns",
+        "Targeting by audience",
+        "Tracking conversions",
+        "Managing budgets",
+        "Testing ad copy"
+      ],
+      "website": "https://ads.microsoft.com",
+      "slug": "microsoft-advertising"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Microsoft Clarity",
+      "overview": "Microsoft Clarity is a free tool for session recordings and heatmaps on websites.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "User Behavior Analytics"
+      ],
+      "use_cases": [
+        "Watching session recordings",
+        "Viewing heatmaps",
+        "Finding checkout drop-offs",
+        "Spotting rage clicks",
+        "Testing page changes",
+        "Improving conversion"
+      ],
+      "website": "https://clarity.microsoft.com",
+      "slug": "microsoft-clarity"
     },
     {
       "notion_id": "24ca6d41-709c-81d6-8f70-cce4458ed9eb",
@@ -2208,6 +3090,28 @@
       "slug": "microsoft-copilot"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Microsoft Excel",
+      "overview": "Microsoft Excel is a spreadsheet application for data analysis, modeling and reporting.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Spreadsheets"
+      ],
+      "use_cases": [
+        "Analyzing campaign data",
+        "Building budget models",
+        "Cleaning lead lists",
+        "Creating pivot tables",
+        "Forecasting pipeline",
+        "Reporting results"
+      ],
+      "website": "https://www.microsoft.com/en-us/microsoft-365/excel",
+      "slug": "microsoft-excel"
+    },
+    {
       "notion_id": "24ca6d41-709c-80f4-8844-dd27cc50cce7",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -2228,6 +3132,29 @@
       ],
       "website": "https://www.midjourney.com",
       "slug": "midjourney"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "MillionVerifier",
+      "overview": "MillionVerifier is a bulk email verification service. It checks whether an address can receive mail before a campaign sends.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Deliverability",
+        "Data Enrichment"
+      ],
+      "use_cases": [
+        "Cleaning prospect lists before sending",
+        "Reducing bounce rates",
+        "Protecting sender reputation",
+        "Checking addresses through the API",
+        "Falling back to a second account when credits run out",
+        "Verifying scraped contacts"
+      ],
+      "website": "https://www.millionverifier.com",
+      "slug": "millionverifier"
     },
     {
       "notion_id": "24ca6d41-709c-81fd-a56a-f3a9fcc4ceea",
@@ -2400,6 +3327,50 @@
       "slug": "navattic"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Nestuge",
+      "overview": "Nestuge is a platform for creators to sell paid communities, courses, digital products and consultations.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Creator Commerce"
+      ],
+      "use_cases": [
+        "Selling courses",
+        "Running paid communities",
+        "Taking payments",
+        "Delivering resources",
+        "Onboarding members automatically",
+        "Booking consultations"
+      ],
+      "website": "https://nestuge.com",
+      "slug": "nestuge"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Netlify",
+      "overview": "Netlify hosts websites and deploys them from a code repository. It runs continuous deployment for static sites.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Hosting marketing websites",
+        "Deploying automatically from GitHub",
+        "Previewing changes before launch",
+        "Managing redirects",
+        "Serving static landing pages",
+        "Running site updates without a server"
+      ],
+      "website": "https://www.netlify.com",
+      "slug": "netlify"
+    },
+    {
       "notion_id": "27ba6d41-709c-80e7-bf55-c3ae49e2763a",
       "created": "2025-09-27",
       "last_edited": "2025-10-06",
@@ -2496,6 +3467,28 @@
       "slug": "nrev-ai"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Obsidian",
+      "overview": "Obsidian is a note-taking app that stores notes as local Markdown files linked together. It works well as a plain-file knowledge base that other tools can read.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Knowledge Management"
+      ],
+      "use_cases": [
+        "Keeping a searchable knowledge base of client and project notes",
+        "Linking meetings, projects and decisions",
+        "Building dashboards from note properties",
+        "Storing playbooks and reusable frameworks",
+        "Giving AI agents a readable memory",
+        "Tracking job applications and outreach"
+      ],
+      "website": "https://obsidian.md",
+      "slug": "obsidian"
+    },
+    {
       "notion_id": "24ca6d41-709c-80fe-b5b4-cd8d67a13f63",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -2544,6 +3537,30 @@
       "slug": "octave"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "OpenAI Codex",
+      "overview": "Codex is OpenAI's coding agent, available in ChatGPT, the command line and code editors. It writes, edits and reviews code and can run longer tasks on its own.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Drafting and reviewing copy and scripts",
+        "Acting as a fallback when another agent hits usage limits",
+        "Running scripted tasks from the command line",
+        "Generating AI images through a script",
+        "Giving a second opinion on drafts",
+        "Reading shared project rules from an adapter file"
+      ],
+      "website": "https://openai.com/codex/",
+      "slug": "openai-codex"
+    },
+    {
       "notion_id": "24ca6d41-709c-805e-a0fd-dd252f4c2f6b",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -2565,6 +3582,51 @@
       ],
       "website": "https://www.opus.pro/",
       "slug": "opus-clip"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Outreach",
+      "overview": "Outreach is a sales execution platform for running multichannel sequences and forecasting pipeline.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Engagement"
+      ],
+      "use_cases": [
+        "Running outbound sequences",
+        "Managing sales tasks",
+        "Tracking email engagement",
+        "Forecasting pipeline",
+        "Syncing with CRM",
+        "Reporting on rep activity"
+      ],
+      "website": "https://www.outreach.io",
+      "slug": "outreach"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Outscraper",
+      "overview": "Outscraper is a data extraction service that exports Google Maps and other web listings. It returns business details in spreadsheet form.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Web Data Scraping",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Pulling local business lists from Google Maps",
+        "Building niche prospect databases",
+        "Collecting reviews and ratings",
+        "Exporting listings to CSV",
+        "Feeding lists into enrichment tools",
+        "Researching local markets"
+      ],
+      "website": "https://outscraper.com",
+      "slug": "outscraper"
     },
     {
       "notion_id": "284a6d41-709c-8115-80d6-c63be717a2b5",
@@ -2590,6 +3652,50 @@
       ],
       "website": "https://get.papayaglobal.com/james-mia",
       "slug": "papaya-global"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "PartnerStack",
+      "overview": "PartnerStack is a partner and affiliate program platform for SaaS and technology companies.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Affiliate Marketing"
+      ],
+      "use_cases": [
+        "Running affiliate programs",
+        "Recruiting partners",
+        "Tracking referrals",
+        "Paying commissions",
+        "Managing reseller partners",
+        "Reporting partner revenue"
+      ],
+      "website": "https://partnerstack.com",
+      "slug": "partnerstack"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Paystack",
+      "overview": "Paystack is a payments platform for businesses in Africa. It accepts cards, bank transfers and mobile payments and has an API.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Payments"
+      ],
+      "use_cases": [
+        "Accepting online payments in Naira",
+        "Building checkout for digital products",
+        "Triggering delivery through webhooks",
+        "Reading transaction data by API",
+        "Reconciling payouts",
+        "Researching payment options for products"
+      ],
+      "website": "https://paystack.com",
+      "slug": "paystack"
     },
     {
       "notion_id": "24ca6d41-709c-8144-bd66-f752aaeec7b9",
@@ -2741,6 +3847,29 @@
       "slug": "play-ai"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "PostHog",
+      "overview": "PostHog is an open-source product analytics platform with session replay, feature flags and experiments.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Product Analytics",
+        "User Behavior Analytics"
+      ],
+      "use_cases": [
+        "Tracking product events",
+        "Watching session replays",
+        "Building funnels",
+        "Running experiments",
+        "Using feature flags",
+        "Analyzing retention"
+      ],
+      "website": "https://posthog.com",
+      "slug": "posthog"
+    },
+    {
       "notion_id": "284a6d41-709c-8152-a010-d2cdecc90b02",
       "created": "2025-10-06",
       "last_edited": "2025-10-06",
@@ -2839,6 +3968,29 @@
       "slug": "reform"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Remotion",
+      "overview": "Remotion creates videos with React code. It renders programmatic video in several aspect ratios from one project.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Building launch videos from code",
+        "Rendering 9:16, 4:5 and 16:9 versions",
+        "Producing product and proof videos",
+        "Adding captions and motion graphics",
+        "Reusing video templates",
+        "Creating site motion pieces"
+      ],
+      "website": "https://www.remotion.dev",
+      "slug": "remotion"
+    },
+    {
       "notion_id": "27ba6d41-709c-8048-b564-c4cd74e5e892",
       "created": "2025-09-27",
       "last_edited": "2025-10-02",
@@ -2935,6 +4087,29 @@
       ],
       "website": "https://get.reply.io/james-mia",
       "slug": "reply-io"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Resend",
+      "overview": "Resend is an email API for developers. It sends transactional and notification email from a domain you control.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Sending alert emails from automations",
+        "Delivering daily digest emails",
+        "Sending transactional messages by API",
+        "Connecting email to n8n workflows",
+        "Monitoring delivery from a dashboard",
+        "Sending from a verified domain"
+      ],
+      "website": "https://resend.com",
+      "slug": "resend"
     },
     {
       "notion_id": "24ca6d41-709c-8040-925c-c5107dd42f3e",
@@ -3058,6 +4233,51 @@
       "slug": "saleshandy"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Salesloft",
+      "overview": "Salesloft is a sales engagement platform for running email, call and task cadences.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Engagement"
+      ],
+      "use_cases": [
+        "Running outbound cadences",
+        "Logging calls",
+        "Tracking email replies",
+        "Managing pipeline tasks",
+        "Coaching sales reps",
+        "Syncing with CRM"
+      ],
+      "website": "https://www.salesloft.com",
+      "slug": "salesloft"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "SalesQL",
+      "overview": "SalesQL finds work emails and phone numbers from a LinkedIn profile or a name and company. It also returns company data by domain.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Contact Data Enrichment",
+        "Sales Intelligence"
+      ],
+      "use_cases": [
+        "Finding emails from a LinkedIn URL",
+        "Finding phone numbers for prospects",
+        "Looking up company details by domain",
+        "Enriching lists through the API",
+        "Adding a second source for contact data",
+        "Supporting outbound prospecting"
+      ],
+      "website": "https://salesql.com",
+      "slug": "salesql"
+    },
+    {
       "notion_id": "284a6d41-709c-81fb-be68-cb02185fb914",
       "created": "2025-10-06",
       "last_edited": "2025-10-06",
@@ -3081,6 +4301,28 @@
       ],
       "website": "https://www.scalenut.com",
       "slug": "scalenut"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Screaming Frog",
+      "overview": "Screaming Frog SEO Spider is a desktop crawler that audits websites for technical SEO issues.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO"
+      ],
+      "use_cases": [
+        "Crawling sites for errors",
+        "Finding broken links",
+        "Auditing meta tags",
+        "Checking redirects",
+        "Analyzing site structure",
+        "Exporting audit reports"
+      ],
+      "website": "https://www.screamingfrog.co.uk/seo-spider/",
+      "slug": "screaming-frog"
     },
     {
       "notion_id": "280a6d41-709c-800e-b59f-d85158d3bdd4",
@@ -3107,6 +4349,51 @@
       ],
       "website": "https://get.seamless.ai/james-mia",
       "slug": "seamless-ai"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Selar",
+      "overview": "Selar is an African digital commerce platform for selling courses, ebooks and other digital products. It handles checkout, delivery and affiliate payouts.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Creator Commerce"
+      ],
+      "use_cases": [
+        "Selling digital products and courses",
+        "Collecting payments from Nigerian buyers",
+        "Running an affiliate program",
+        "Exporting sales for reporting",
+        "Triggering buyer emails after purchase",
+        "Tracking product sales"
+      ],
+      "website": "https://selar.com",
+      "slug": "selar"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Semrush",
+      "overview": "Semrush is an online marketing suite covering SEO, advertising and competitor research.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "Marketing Data"
+      ],
+      "use_cases": [
+        "Keyword research",
+        "Competitor analysis",
+        "Site audits",
+        "Rank tracking",
+        "Ad research",
+        "Content planning"
+      ],
+      "website": "https://www.semrush.com",
+      "slug": "semrush"
     },
     {
       "notion_id": "24ca6d41-709c-8055-806c-f17c9b70653b",
@@ -3157,6 +4444,74 @@
       "slug": "shipbob"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Shopify",
+      "overview": "Shopify is an ecommerce platform for building and running online stores.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "E-commerce Platforms"
+      ],
+      "use_cases": [
+        "Launching an online store",
+        "Managing products and orders",
+        "Taking payments",
+        "Connecting ad pixels",
+        "Running discount campaigns",
+        "Installing store apps"
+      ],
+      "website": "https://www.shopify.com",
+      "slug": "shopify"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Slack",
+      "overview": "Slack is a team messaging platform with channels, direct messages and app integrations.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Collaboration"
+      ],
+      "use_cases": [
+        "Team communication",
+        "Client channels",
+        "Automated alerts from tools",
+        "Sharing files",
+        "Workflow notifications",
+        "Async updates"
+      ],
+      "website": "https://slack.com",
+      "slug": "slack"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Smartlead",
+      "overview": "Smartlead is a cold email platform for running outbound campaigns across many mailboxes. It handles sequencing, sending limits, warm-up and a shared reply inbox.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Engagement",
+        "Outbound GTM Outreach",
+        "Email Deliverability"
+      ],
+      "use_cases": [
+        "Sending cold email sequences at scale",
+        "Rotating sending mailboxes",
+        "Managing replies in one master inbox",
+        "Warming up new inboxes",
+        "Tracking campaign performance",
+        "Sending reply alerts to other tools through webhooks"
+      ],
+      "website": "https://www.smartlead.ai",
+      "slug": "smartlead"
+    },
+    {
       "notion_id": "284a6d41-709c-8175-90d8-f6496b898f76",
       "created": "2025-10-06",
       "last_edited": "2026-01-01",
@@ -3204,6 +4559,28 @@
       ],
       "website": "https://openai.com/sora",
       "slug": "sora-openai"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Substack",
+      "overview": "Substack is a newsletter and publishing platform with built-in subscriptions and recommendations. Writers publish posts and notes to a subscriber list.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing"
+      ],
+      "use_cases": [
+        "Publishing a newsletter",
+        "Growing subscribers through recommendations",
+        "Cross-posting long-form content",
+        "Posting short notes",
+        "Tracking post performance",
+        "Collecting subscribers"
+      ],
+      "website": "https://substack.com",
+      "slug": "substack"
     },
     {
       "notion_id": "24ca6d41-709c-8098-bd31-cd025dc1de6a",
@@ -3348,6 +4725,28 @@
       "slug": "synthflowai"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Tally",
+      "overview": "Tally is a form builder for creating forms and surveys with no code.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Forms & Surveys"
+      ],
+      "use_cases": [
+        "Building lead forms",
+        "Collecting survey answers",
+        "Running applications",
+        "Capturing waitlist signups",
+        "Sending responses to other tools",
+        "Embedding forms in pages"
+      ],
+      "website": "https://tally.so",
+      "slug": "tally"
+    },
+    {
       "notion_id": "27ba6d41-709c-8056-a6df-f32dfc3a1460",
       "created": "2025-09-27",
       "last_edited": "2025-10-02",
@@ -3371,6 +4770,28 @@
       ],
       "website": "https://taplio.com",
       "slug": "taplio"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Telegram",
+      "overview": "Telegram is a messaging app with bots and channels. It can carry notifications and commands to and from automations.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Collaboration"
+      ],
+      "use_cases": [
+        "Sending alerts from automations",
+        "Controlling a running agent from a phone",
+        "Setting reminders",
+        "Running a community assistant",
+        "Receiving digests",
+        "Linking n8n workflows to chat"
+      ],
+      "website": "https://telegram.org",
+      "slug": "telegram"
     },
     {
       "notion_id": "284a6d41-709c-81a2-a698-ecb81646d062",
@@ -3418,6 +4839,28 @@
       ],
       "website": "https://textcortex.com",
       "slug": "textcortex"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "TikTok Ads Manager",
+      "overview": "TikTok Ads Manager is the platform for buying and managing ads on TikTok. It covers campaigns, creatives and reporting.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Running TikTok campaigns",
+        "Testing video creatives",
+        "Reading campaign results",
+        "Managing audiences",
+        "Setting budgets and bids",
+        "Reviewing creative status"
+      ],
+      "website": "https://ads.tiktok.com",
+      "slug": "tiktok-ads-manager"
     },
     {
       "notion_id": "284a6d41-709c-8197-8399-ed37426ee83e",
@@ -3518,6 +4961,28 @@
       "slug": "tweet-hunter"
     },
     {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Typeform",
+      "overview": "Typeform is a form and survey builder with a one-question-at-a-time format.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Forms & Surveys"
+      ],
+      "use_cases": [
+        "Collecting leads",
+        "Running surveys",
+        "Building quizzes",
+        "Gathering customer feedback",
+        "Qualifying prospects",
+        "Routing responses to CRM"
+      ],
+      "website": "https://www.typeform.com",
+      "slug": "typeform"
+    },
+    {
       "notion_id": "24ca6d41-709c-80a9-a14d-c0d20d2bd313",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -3589,27 +5054,48 @@
       "slug": "wati"
     },
     {
-      "notion_id": "24ca6d41-709c-80fe-afae-faa10237635c",
-      "created": "2025-08-11",
-      "last_edited": "2025-08-11",
-      "name": "Wispr Flow",
-      "overview": "Wispr Flow is a voice dictation tool that boosts writing speed across apps.",
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "Webflow",
+      "overview": "Webflow is a visual website builder with a CMS. Teams design and publish sites without hand-coding.",
       "product_type": [
-        "AI Tool"
+        "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Speech-to-Text Generation"
+        "Website Builders"
       ],
       "use_cases": [
-        "Dictate emails, docs, and code hands-free",
-        "Auto-edit voice into clear formatted text",
-        "Use whisper mode in quiet environments",
-        "Write faster than typing across any app",
-        "Free up cognitive load during meetings or writing"
+        "Publishing blog posts to a CMS",
+        "Building marketing sites",
+        "Managing collection items by API",
+        "Verifying live pages after publishing",
+        "Updating landing pages",
+        "Running client blog operations"
       ],
-      "website": "https://wisprflow.ai/",
-      "slug": "wispr-flow"
+      "website": "https://webflow.com",
+      "slug": "webflow"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "WhatsApp Business",
+      "overview": "WhatsApp Business is a messaging app and API for businesses to talk with customers, with catalogs and automated replies.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Customer Experience"
+      ],
+      "use_cases": [
+        "Answering customer questions",
+        "Sharing product catalogs",
+        "Sending automated replies",
+        "Following up on leads",
+        "Running click-to-WhatsApp ads",
+        "Supporting orders"
+      ],
+      "website": "https://business.whatsapp.com",
+      "slug": "whatsapp-business"
     },
     {
       "notion_id": "24ca6d41-709c-8000-9894-e83615f7a519",
@@ -3634,6 +5120,73 @@
       ],
       "website": "https://windsurf.com",
       "slug": "windsurf"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80fe-afae-faa10237635c",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Wispr Flow",
+      "overview": "Wispr Flow is a voice dictation tool that boosts writing speed across apps.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Speech-to-Text Generation"
+      ],
+      "use_cases": [
+        "Dictate emails, docs, and code hands-free",
+        "Auto-edit voice into clear formatted text",
+        "Use whisper mode in quiet environments",
+        "Write faster than typing across any app",
+        "Free up cognitive load during meetings or writing"
+      ],
+      "website": "https://wisprflow.ai/",
+      "slug": "wispr-flow"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "WooCommerce",
+      "overview": "WooCommerce is an open-source ecommerce plugin that turns a WordPress site into an online store.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "E-commerce Platforms"
+      ],
+      "use_cases": [
+        "Running a WordPress store",
+        "Managing products",
+        "Taking checkout payments",
+        "Tracking purchase events",
+        "Applying coupons",
+        "Managing orders"
+      ],
+      "website": "https://woocommerce.com",
+      "slug": "woocommerce"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "WordPress",
+      "overview": "WordPress is an open-source content management system used to build websites and blogs.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Website Builders"
+      ],
+      "use_cases": [
+        "Publishing blog content",
+        "Building business websites",
+        "Installing tracking plugins",
+        "Running WooCommerce stores",
+        "Managing SEO plugins",
+        "Editing landing pages"
+      ],
+      "website": "https://wordpress.org",
+      "slug": "wordpress"
     },
     {
       "notion_id": "2dba6d41-709c-8126-abb2-da3e30c5fa8a",
@@ -3710,6 +5263,29 @@
       "website": "https://get.zonkafeedback.com/James-mia",
       "slug": "zonka-feedback",
       "group": "Email and lifecycle"
+    },
+    {
+      "created": "2026-10-20",
+      "last_edited": "2026-10-20",
+      "name": "ZoomInfo",
+      "overview": "ZoomInfo is a B2B contact and company database used for prospecting and sales intelligence.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence",
+        "Contact Data Enrichment"
+      ],
+      "use_cases": [
+        "Finding decision makers",
+        "Enriching CRM records",
+        "Building target account lists",
+        "Tracking buying intent",
+        "Verifying contact data",
+        "Segmenting accounts"
+      ],
+      "website": "https://www.zoominfo.com",
+      "slug": "zoominfo"
     }
   ]
 }

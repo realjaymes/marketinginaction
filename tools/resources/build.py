@@ -134,6 +134,9 @@ def when(i):
     return f"{s.day} {MONTHS[s.month - 1]} {s.year} to {e.day} {MONTHS[e.month - 1]} {e.year}"
 
 
+FORMAT_TOKENS = {"in-person": "in_person", "virtual": "online", "hybrid": "in_person online"}
+
+
 def card(i, kind):
     s = iso(i.get("start_date"))
     end = i.get("end_date") or i.get("start_date") or ""
@@ -156,7 +159,7 @@ def card(i, kind):
     tags = [i.get("event_type") or "Event", {"in-person": "In person", "virtual": "Online", "hybrid": "In person and online"}[i["format"]]]
     if i.get("mia_event"):
         tags.insert(0, "MIA event")
-    return f"""          <article class="ev-card{' ev-mia' if i.get('mia_event') else ''}" data-end="{E(end)}" data-region="{E(i.get('region', 'africa'))}" data-city="{E(tok(city))}" data-type="{E(tok(i.get('event_type') or ''))}" data-text="{E((i['name'] + ' ' + (i.get('organiser') or '') + ' ' + city + ' ' + (i.get('country') or '')).lower(), quote=True)}">
+    return f"""          <article class="ev-card{' ev-mia' if i.get('mia_event') else ''}" data-end="{E(end)}" data-region="{E(i.get('region', 'africa'))}" data-city="{E(tok(city))}" data-format="{FORMAT_TOKENS[i['format']]}" data-type="{E(tok(i.get('event_type') or ''))}" data-text="{E((i['name'] + ' ' + (i.get('organiser') or '') + ' ' + city + ' ' + (i.get('country') or '')).lower(), quote=True)}">
             {datebox}
             <div class="ev-body">
               <div class="ev-tags">{''.join(f'<span class="ev-tag">{E(t)}</span>' for t in tags)}</div>
@@ -222,6 +225,9 @@ def events_files():
     panel = filter_panel("Event, organiser or city", [
         ("Where", "region", len(upcoming), [(r, label, sum(i.get("region", "africa") == r for i in upcoming))
                                           for r, label in (("africa", "Africa"), ("global", "Outside Africa"))]),
+        # Hybrid events count under both, since people can attend either way.
+        ("Format", "format", len(upcoming), [(t, label, sum(t in FORMAT_TOKENS[i["format"]].split() for i in upcoming))
+                                             for t, label in (("in_person", "In person"), ("online", "Online"))]),
         ("Type", "type", len(upcoming), opts("event_type")),
         ("City", "city", len(upcoming), opts("city"))])
 
@@ -231,7 +237,7 @@ def events_files():
             <div class="pill"><span class="dot" aria-hidden="true"></span>MIA Tech Events Calendar</div>
             <h1 class="text-white">Tech and marketing events across <span class="text-yellow accent-italic">Africa</span>, plus the global ones worth the trip</h1>
             <p class="text-white consulting-hero-sub">Conferences, summits, expos and festivals for marketers, founders and tech teams, starting with Lagos. Every date is checked on the event's own website.</p>
-            <p class="ev-updated">Last updated {E(updated)}. {len(upcoming)} upcoming events.</p>
+            <p class="ev-updated">Last updated {E(updated)}.</p>
             <div class="button-row ev-hero-buttons">
               <a class="button button-primary" href="events.ics">Subscribe in your calendar</a>
               <a class="button button-secondary" href="#upcoming">See upcoming events</a>
@@ -299,6 +305,7 @@ def events_files():
         .ev-name {{ font-size: 20px; margin: 0 0 4px; }}
         .ev-meta {{ font-weight: 800; margin: 0 0 6px; color: var(--ink); }}
         .ev-desc, .ev-note, .ev-org {{ margin: 0 0 6px; color: var(--muted); line-height: 1.55; }}
+        .ev-org {{ font-style: italic; font-size: 14px; }}
         .ev-links {{ display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: auto; padding-top: 8px; }}
         .ev-link {{ font-weight: 800; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }}
         .ev-body {{ display: flex; flex-direction: column; flex: 1; }}
@@ -337,7 +344,7 @@ def events_files():
             for n, i in enumerate(upcoming)]}}, indent=2, ensure_ascii=False)
 
     page = shell("resources/tech-events-calendar/", "Tech Events Calendar for Africa | Marketing In Action",
-                 f"{len(upcoming)} upcoming tech, startup and marketing events across Africa and beyond, with dates checked on each event's official site. Updated every day.",
+                 "Upcoming tech, startup and marketing events across Africa and beyond, with dates checked on each event's official site. Updated every day.",
                  "MIA Tech Events Calendar", "events-page", main, jsonld, "Tech Events Calendar")
     files = {EVENTS_DIR / "index.html": page,
              EVENTS_DIR / "events.ics": ics(upcoming, stamp, "MIA Tech Events Calendar")}
@@ -659,7 +666,7 @@ def tools_files():
 
     main = hero("MIA Marketing & AI Product Database",
                 'Marketing and AI tools, sorted by <span class="text-yellow accent-italic">the job they do</span>',
-                f"{n} products for marketers, founders and go-to-market teams, in {len(order)} groups such as outbound, email, video, analytics and AI agents. Each listing says what the product does and what you can use it for.",
+                "Find the right tool for the job in front of you, whether that is booking meetings, sending email, making video or running AI agents. Every listing tells you what the product does and where it fits in your work.",
                 '              <a class="button button-primary" href="#tools">Browse the tools</a>\n'
                 '              <a class="button button-secondary" href="/resources/">See all resources</a>') + f"""
 
@@ -683,7 +690,7 @@ def tools_files():
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "CollectionPage", "dateModified": as_of.isoformat(),
         "name": "MIA Marketing & AI Product Database", "url": f"{BASE}/resources/marketing-ai-tools/",
-        "description": f"{n} marketing and AI tools for go-to-market teams, grouped by the job they do.",
+        "description": "Marketing and AI tools for go-to-market teams, grouped by the job they do.",
         "isPartOf": {"@type": "WebSite", "name": "Marketing In Action", "url": f"{BASE}/"},
         "mainEntity": {"@type": "ItemList", "numberOfItems": n, "itemListElement": [
             {"@type": "ListItem", "position": k + 1, "item": {
@@ -692,7 +699,7 @@ def tools_files():
                 **({} if PARTNER.search(i["website"]) else {"url": i["website"]})}}
             for k, i in enumerate(i for g in order for i in by[g])]}}, indent=2, ensure_ascii=False)
     page = shell("resources/marketing-ai-tools/", "Marketing & AI Tools Database | Marketing In Action",
-                 f"{n} marketing and AI tools for go-to-market teams, grouped by job: outbound, email, SEO, ads, analytics, video, AI agents and more. Search and filter free.",
+                 "Find marketing and AI tools by the job you need done: outbound, email, SEO, ads, analytics, video and AI agents. See what each one does. Free to search.",
                  "MIA Marketing & AI Product Database", "tools-page", main, jsonld, "Marketing & AI Product Database")
     return {TOOLS_DIR / "index.html": page}
 
@@ -790,7 +797,7 @@ def leaders_files():
 
     main = hero("MIA Marketing Thought Leaders Database",
                 'Marketing thought leaders worth following in <span class="text-yellow accent-italic">growth, product marketing and GTM</span>',
-                f"{n} operators, founders and writers across North America, Africa and Europe whose newsletters, posts and frameworks marketers learn from. Each card links to where they publish.",
+                "Learn from the operators, founders and writers who share what is working in growth, product marketing, GTM engineering and AI. Filter by topic, then follow them where they publish.",
                 '              <a class="button button-primary" href="#people">Browse the list</a>\n'
                 '              <a class="button button-secondary" href="/resources/">See all resources</a>') + f"""
 
@@ -824,13 +831,13 @@ def leaders_files():
     jsonld = json.dumps({
         "@context": "https://schema.org", "@type": "CollectionPage", "dateModified": as_of.isoformat(),
         "name": "MIA Marketing Thought Leaders Database", "url": f"{BASE}/resources/marketing-thought-leaders/",
-        "description": f"{n} marketing thought leaders in growth, product marketing and GTM, with links to their newsletters and profiles.",
+        "description": "Marketing thought leaders in growth, product marketing and GTM, with links to their newsletters and profiles.",
         "isPartOf": {"@type": "WebSite", "name": "Marketing In Action", "url": f"{BASE}/"},
         "mainEntity": {"@type": "ItemList", "numberOfItems": n, "itemListElement": [
             {"@type": "ListItem", "position": k + 1, "item": person(i)} for k, i in enumerate(people)]}},
         indent=2, ensure_ascii=False)
     page = shell("resources/marketing-thought-leaders/", "Marketing Thought Leaders to Follow | Marketing In Action",
-                 f"{n} marketing thought leaders covering growth, product marketing, GTM engineering and AI, with links to their newsletters, LinkedIn profiles and X accounts.",
+                 "Learn from operators, founders and writers sharing what works in growth, product marketing, GTM engineering and AI. Filter by topic and follow them.",
                  "MIA Marketing Thought Leaders Database", "leaders-page", main, jsonld, "Marketing Thought Leaders Database")
     return {LEADERS_DIR / "index.html": page}
 

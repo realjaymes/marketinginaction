@@ -5,12 +5,12 @@
     "AI agents and automation": ["AI Agents", "Workflow Automation", "AI Workflow Automation", "Sales Automation", "Creative Automation", "AI Email Management"],
     "Video, image and audio": ["Text-to-Video Generation", "Multimodal Video Generation", "Video Generation & Filmmaking", "Video & Image Generation", "Text-to-Image Generation", "Visual Generation", "Text-to-Audio Generation", "Music & Audio Generation", "Music Remixing & Voice Cloning", "Speech-to-Text Generation", "Audio & Video Editing", "Audio & Video Recording", "Graphic Design", "Branding", "Logo Design", "AI Content Generation"],
     "Outbound and sales": ["GTM Automation", "Lead Generation", "Data Enrichment", "Contact Data Enrichment", "Sales Intelligence", "Sales Engagement", "LinkedIn GTM Automation", "Outbound GTM Outreach", "Sales Enablement", "Product Demos", "GTM Messaging Library", "CRM", "Call Tracking", "Web Data Scraping", "Marketing Data"],
-    "Email and lifecycle": ["Email Marketing", "Email Deliverability", "Marketing Automation", "Customer Feedback Management", "Customer Experience"],
-    "SEO and content": ["AI SEO", "Marketing Technology"],
-    "Analytics": ["Marketing Analytics", "Product Analytics", "User Behavior Analytics", "Growth Analytics"],
+    "Email and lifecycle": ["Email Marketing", "Email Deliverability", "Marketing Automation", "Customer Feedback Management", "Customer Experience", "Forms & Surveys"],
+    "SEO and content": ["SEO", "AI SEO", "Marketing Technology"],
+    "Analytics": ["Marketing Analytics", "Product Analytics", "User Behavior Analytics", "Growth Analytics", "Spreadsheets"],
     "Ads, social and reputation": ["Advertising", "Affiliate Marketing", "Social Media Monitoring", "Reputation Management"],
-    "Build and no-code": ["Developer Tools", "Vibe Coding", "Databases", "Web Browsers"],
+    "Build and no-code": ["Developer Tools", "Vibe Coding", "Databases", "Web Browsers", "Website Builders", "E-commerce Platforms", "Creator Commerce", "Payments"],
     "Events and webinars": ["Webinar Platform", "Webinar Software", "Video Conferencing", "Online Events"],
-    "Team and operations": ["Project Management", "Collaboration", "Task Management", "Recruitment", "Applicant Tracking System", "Human Resources", "HR Management", "HR Technology", "Payroll", "Payroll Management", "Employee Benefits", "Workforce Management", "Security", "Password Management", "Identity Management", "Privacy Tools", "Logistics", "Transportation", "Delivery Services", "E-commerce Fulfillment", "Supply Chain Management", "Travel & Hospitality", "Marketplaces", "Website Flipping"]
+    "Team and operations": ["Project Management", "Collaboration", "Task Management", "Recruitment", "Applicant Tracking System", "Human Resources", "HR Management", "HR Technology", "Payroll", "Payroll Management", "Employee Benefits", "Workforce Management", "Security", "Password Management", "Identity Management", "Privacy Tools", "Logistics", "Transportation", "Delivery Services", "E-commerce Fulfillment", "Supply Chain Management", "Travel & Hospitality", "Marketplaces", "Website Flipping", "Knowledge Management"]
   }
 }
