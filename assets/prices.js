@@ -21,7 +21,7 @@
     metaaccountsolutions:        15000,
     targetbuyer:                 5000,
     onlinemarketingbundle:       45000,   // Online Marketing Mentorship
-    onlinemarketingconsulting:   250000,  // per month
+    onlinemarketingconsulting:   500000,  // per month
     digitalincomemadeeasy:       45000,   // DIME
 
     // Marketer family
