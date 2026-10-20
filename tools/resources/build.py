@@ -256,7 +256,7 @@ def events_files():
       <section id="past" class="section ev-section ev-past">
         <div class="container">
           <details>
-            <summary><h2>Past events this year</h2></summary>
+            <summary><h2>Past events this year</h2><span class="ev-past-count">{len(past)} events</span><span class="ev-past-toggle" aria-hidden="true"></span></summary>
             <div class="ev-list">
 {chr(10).join(card(i, 'past') for i in past)}
             </div>
@@ -296,7 +296,14 @@ def events_files():
         .ev-links {{ display: flex; flex-wrap: wrap; gap: var(--space-md); margin-top: auto; padding-top: 8px; }}
         .ev-link {{ font-weight: 800; color: var(--ink); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 4px; }}
         .ev-body {{ display: flex; flex-direction: column; flex: 1; }}
-        .ev-past summary {{ cursor: pointer; list-style: none; }} .ev-past summary h2 {{ display: inline; }}
+        .ev-past summary {{ cursor: pointer; list-style: none; display: flex; align-items: center; gap: var(--space-sm); flex-wrap: wrap; background: var(--white); border: 2px solid var(--ink); border-radius: 18px; padding: var(--space-md) var(--space-lg); box-shadow: var(--st); transition: transform .14s ease, box-shadow .14s ease; }}
+        .ev-past summary::-webkit-details-marker {{ display: none; }}
+        .ev-past summary:hover {{ transform: translate(2px, 2px); box-shadow: 2px 2px 0 var(--ink); }}
+        .ev-past summary h2 {{ display: inline; margin: 0; font-size: 22px; }}
+        .ev-past-count {{ font-size: 13px; font-weight: 800; padding: 3px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--sb); }}
+        .ev-past-toggle {{ margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; background: var(--gold); border: 2px solid var(--ink); border-radius: 999px; padding: 8px 16px; box-shadow: var(--st-sm); }}
+        .ev-past-toggle::before {{ content: "Show past events"; }} .ev-past-toggle::after {{ content: "▾"; }}
+        .ev-past details[open] .ev-past-toggle::before {{ content: "Hide past events"; }} .ev-past details[open] .ev-past-toggle::after {{ content: "▴"; }}
         .ev-past .ev-list {{ margin-top: var(--space-lg); }}
         @media (max-width: 760px) {{
           .ev-filters {{ grid-template-columns: 1fr 1fr; }}

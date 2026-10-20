@@ -1006,6 +1006,169 @@
         /* even out heading lines so no word is left alone */
         h1,h2,h3{text-wrap:balance}
     </style>
+  <style id="academy-style">
+/* Academy styling layer for the Paid Acquisition Playbook. Styling only: layout, sections, copy and scripts are the live page's. */
+:root,html:root{
+ --ink:#100a16;--white:#fff;--gold:#f1de71;--gold-t:#FBF3C6;--sa:#F7F4FA;--sb:#E6E0EE;--line:#E3DDEA;
+ --muted:rgba(16,10,22,.68);--light:rgba(16,10,22,.45);
+ --st:4px 4px 0 var(--ink);--st-sm:3px 3px 0 var(--ink);--st-lg:7px 7px 0 var(--ink);
+ --sys:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --pink:#f171c4;--blue:#71c4f1;--green:#71f19e;--purple:#7184f1;
+ /* the page script recolours the accent per channel; the Academy look keeps one accent, and channel colour stays on the dots */
+ --mia-accent:#f1de71!important;--mia-accent-text:#100a16!important;--mia-accent-light:#FBF3C6!important;--mia-accent-bg:#F7F4FA!important;
+ --bg:#F7F4FA;--card:#fff;--text:#100a16;--text-secondary:rgba(16,10,22,.68);--border:#100a16;
+ --mia-bg:#F7F4FA;--mia-ink:#100a16;--mia-ink-muted:rgba(16,10,22,.68);--mia-border:#100a16;
+ --good:#0d5c2a;--good-bg:#d9f9e5;--ok:#6b5400;--ok-bg:#FBF3C6;--bad:#8f1d1d;--bad-bg:#fde0e6;
+ color-scheme:light only;
+}
+html body{font-family:var(--sys);color:var(--ink);background:var(--sa);-webkit-font-smoothing:antialiased}
+button,input,select,textarea{font-family:inherit}
+html h1,html h2,html h3,html h4{font-family:var(--sys);font-weight:750!important;letter-spacing:-.02em;text-wrap:balance;color:var(--ink)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+
+/* sticky nav */
+html .mia-topbar{background:rgba(247,244,250,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+
+/* buttons: pill, ink border, hard shadow, press-in */
+html .mia-btn,html .mia-topbar-cta,html .mia-inline-cta-btn,html .action-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sys);font-weight:800;color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:13px 24px;box-shadow:var(--st);text-decoration:none;opacity:1;transition:transform .14s ease,box-shadow .14s ease}
+html .mia-topbar-cta,html .mia-inline-cta-btn{padding:9px 18px;font-size:13px}
+html .mia-btn:hover,html .mia-topbar-cta:hover,html .mia-inline-cta-btn:hover,html .action-btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);opacity:1}
+html .mia-btn:active,html .action-btn:active,html .mia-topbar-cta:active{transform:translate(3px,3px) scale(.98);box-shadow:1px 1px 0 var(--ink)}
+html .mia-btn-primary,html .mia-topbar-cta,html .mia-inline-cta-btn,html .action-btn{background:var(--gold);color:var(--ink)}
+html .mia-btn-secondary,html .action-btn.secondary,html .mia-footer-cta .mia-btn-secondary{background:var(--white);color:var(--ink);border:2px solid var(--ink)}
+html .mia-btn-secondary:hover,html .action-btn.secondary:hover,html .mia-footer-cta .mia-btn-secondary:hover{background:var(--white);color:var(--ink)}
+html .mia-footer-cta .mia-btn-primary{background:var(--gold);color:var(--ink);box-shadow:4px 4px 0 var(--white);border-color:var(--white)}
+html .mia-footer-cta .mia-btn-secondary{box-shadow:4px 4px 0 var(--gold)}
+html .mia-footer-cta .mia-btn-primary:hover{box-shadow:2px 2px 0 var(--white)}
+html .mia-footer-cta .mia-btn-secondary:hover{box-shadow:2px 2px 0 var(--gold)}
+
+/* hero: pale gold with the gold circle */
+html .mia-hero{background:var(--gold-t);border-bottom:2px solid var(--ink);position:relative;overflow:hidden}
+html .mia-hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--gold);opacity:.55;right:-180px;top:-220px;pointer-events:none}
+html .mia-hero-inner{position:relative}
+html .mia-eyebrow{background:var(--white);color:var(--ink);border:2px solid var(--ink);padding:4px 14px;font-weight:800;letter-spacing:.08em;font-size:.72rem}
+html .mia-hero h1{font-weight:750;font-size:clamp(1.65rem,3.4vw,2.8rem);line-height:1.14}
+html .mia-hero h1 span{color:inherit;background-image:linear-gradient(180deg,transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+html .mia-hero-sub{color:var(--muted)}
+html .mia-hero-meta,html .mia-hero-meta a{color:var(--muted)}
+@media(max-width:900px){html .mia-hero::before{width:260px;height:260px;right:-110px;top:-150px}html .mia-hero h1{font-size:clamp(1.65rem,6vw,2.4rem)}}
+
+/* playbook shell: the page is lilac, sections are the cards */
+html body>.container{background:transparent;border:0;box-shadow:none;border-radius:0;margin:0 auto;padding:40px 16px 24px}
+html .client-bar{background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st-sm);padding:12px 18px}
+html .client-bar label{color:var(--ink);font-weight:800}
+html .client-bar input,html .input-group input,html .input-group select,html .input-group textarea{border:2px solid var(--ink);border-radius:12px;background:var(--white);color:var(--ink)}
+html .client-bar input:focus,html .input-group input:focus,html .input-group select:focus,html .input-group textarea:focus{outline:3px solid var(--ink);outline-offset:2px;border-color:var(--ink);box-shadow:var(--st-sm)}
+html .client-bar .reset-btn{border:2px solid var(--ink);border-radius:999px;color:var(--ink);background:var(--white);font-weight:800;box-shadow:var(--st-sm);padding:8px 16px}
+html .client-bar .reset-btn:hover{border-color:var(--ink);color:var(--ink);background:var(--gold-t);transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+html .input-group label{color:var(--ink);font-weight:800}
+html input[type="checkbox"],html input[type="range"]{accent-color:var(--ink)}
+
+/* channel selector: pills with the channel dot kept */
+html .platform-btn{border:2px solid var(--ink);border-radius:999px;background:var(--white);color:var(--ink);font-weight:800;box-shadow:var(--st-sm);padding:9px 18px}
+html .platform-btn:hover{border-color:var(--ink);background:var(--gold-t);transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+html .platform-btn.active{background:var(--gold);border-color:var(--ink);color:var(--ink);box-shadow:var(--st)}
+html .platform-btn .dot{border:2px solid var(--ink);width:12px;height:12px}
+html .platform-btn.active .dot{background:revert!important}
+html .platform-btn[data-platform-btn="meta"] .dot{background:#1877f2!important}
+html .platform-btn[data-platform-btn="tiktok"] .dot{background:#fe2c55!important}
+html .platform-btn[data-platform-btn="google"] .dot{background:#4285f4!important}
+html .platform-btn[data-platform-btn="linkedin"] .dot{background:#0a66c2!important}
+html .platform-btn[data-platform-btn="snapchat"] .dot{background:#fffc00!important}
+html .platform-btn[data-platform-btn="x"] .dot{background:#000!important}
+html .platform-btn[data-platform-btn="chatgpt"] .dot{background:#10A37F!important}
+
+/* section tabs with progress counts */
+html .tab-btn{border:2px solid var(--ink);border-radius:999px;background:var(--white);color:var(--ink);font-weight:800;font-size:12.5px;padding:6px 14px;opacity:1}
+html .tab-btn:hover{border-color:var(--ink);color:var(--ink);background:var(--sb)}
+html .tab-btn.active{background:var(--ink);border-color:var(--ink);color:#fff;box-shadow:var(--st-sm)}
+html .tab-btn .badge{background:var(--sb);color:var(--ink);border:1.5px solid var(--ink);font-weight:800}
+html .tab-btn.active .badge{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+/* section panels */
+html .section{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st);padding:32px}
+html .section h2{font-size:clamp(1.4rem,2.4vw,1.85rem);color:var(--ink)}
+html .section .section-desc{color:var(--muted)}
+html .section h3{border-bottom:2px solid var(--ink);color:var(--ink);font-size:1.05rem;padding-bottom:8px}
+html .section a{color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+html .section strong{color:var(--ink)}
+
+/* checklists */
+html .checklist li{border-bottom:1px solid var(--line)}
+html .checklist input[type="checkbox"]{width:20px;height:20px}
+html .checklist label.checked{color:var(--light)}
+
+/* copyable blocks and copy buttons */
+html .copyable{background:var(--sa);border:2px solid var(--ink);border-radius:14px;color:var(--ink)}
+html .copy-btn{background:var(--gold);color:var(--ink);border:2px solid var(--ink);border-radius:999px;font-weight:800;padding:3px 12px;box-shadow:2px 2px 0 var(--ink);opacity:1}
+html .copy-btn:hover{opacity:1;transform:translate(1px,1px);box-shadow:1px 1px 0 var(--ink)}
+html .copy-btn.copied{background:var(--green);color:var(--ink)}
+
+/* collapsibles */
+html details{border:2px solid var(--ink);border-radius:16px;background:var(--white);box-shadow:var(--st-sm);margin:12px 0}
+html summary{background:var(--white);color:var(--ink);font-weight:800;padding:13px 18px}
+html summary:hover{background:var(--sb)}
+html details[open] summary{border-bottom:2px solid var(--ink);background:var(--gold-t)}
+
+/* tables */
+html .ref-table,html .decision-table,html .ramp-table{border:2px solid var(--ink);border-collapse:separate;border-spacing:0;border-radius:14px;overflow:hidden;background:var(--white)}
+html .ref-table th,html .decision-table th,html .ramp-table th{background:var(--sb);color:var(--ink);font-weight:800;border-bottom:2px solid var(--ink)}
+html .ref-table td,html .decision-table td,html .ramp-table td{border-bottom:1px solid var(--line);color:var(--ink)}
+html .ref-table tr:last-child td,html .decision-table tr:last-child td{border-bottom:0}
+html .ramp-table th,html .ramp-table td{border:0;border-bottom:1px solid var(--line)}
+html .ref-table .good{color:var(--good)}html .ref-table .ok{color:var(--ok)}html .ref-table .bad{color:var(--bad)}
+html .decision-table .action-kill{background:#fde0e6}
+html .decision-table .action-scale{background:#d9f9e5}
+html .decision-table .action-watch{background:#FBF3C6}
+
+/* callout boxes: white cards with a small colour tag edge */
+html .info-box,html .warning-box,html .danger-box,html .success-box{border:2px solid var(--ink);border-left-width:8px;border-radius:14px;color:var(--ink)}
+html .info-box{background:var(--sa);border-left-color:var(--blue)}
+html .warning-box{background:var(--gold-t);border-left-color:var(--gold)}
+html .danger-box{background:#fde0e6;border-left-color:var(--pink)}
+html .success-box{background:#d9f9e5;border-left-color:var(--green)}
+
+/* calculators, generators, outputs */
+html .naming-preview{background:var(--gold-t);border:2px solid var(--ink);border-radius:16px;color:var(--ink);box-shadow:var(--st-sm)}
+html .naming-label{color:var(--muted)}
+html .calc-result{background:var(--gold-t);border:2px solid var(--ink);border-radius:18px;box-shadow:var(--st-sm);color:var(--ink)}
+html .calc-result .big-number{color:var(--ink);font-weight:750}
+html .go-box,html .nogo-box{border:2px solid var(--ink);border-radius:18px;box-shadow:var(--st-sm)}
+html .go-box{background:var(--green);color:var(--ink)}
+html .nogo-box{background:var(--pink);color:var(--ink)}
+html .funnel-stage{border:2px solid var(--ink);border-radius:14px;box-shadow:var(--st-sm);color:var(--ink)}
+html .funnel-stage.tofu{background:var(--gold);color:var(--ink)}
+html .funnel-stage.mofu{background:var(--blue);color:var(--ink)}
+html .funnel-stage.bofu{background:var(--purple);color:var(--ink)}
+html input[style*="border:1px solid var(--border)"]{border:2px solid var(--ink)!important;border-radius:10px!important}
+
+/* inline CTA banner */
+html .mia-inline-cta{background:var(--ink);border-radius:22px;border:3px solid var(--ink);box-shadow:var(--st)}
+html .mia-inline-cta-btn{border-color:var(--white)}
+html .mia-inline-cta *{color:inherit}
+html .mia-inline-cta-btn{color:var(--ink)}
+
+/* footer CTA: black */
+html .mia-footer-cta{background:var(--ink);color:#fff;border-top:2px solid var(--ink)}
+html .mia-footer-cta h2{color:#fff}
+@media(max-width:640px){html .section{padding:18px 14px;border-radius:22px}html body>.container{padding:28px 10px 16px;margin:0 auto}html .mia-hero h1{font-size:min(1.4rem,5.8vw)}}
+@media(prefers-reduced-motion:reduce){html .mia-btn,html .action-btn,html .platform-btn,html .copy-btn{transition:none!important}html .mia-btn:hover,html .action-btn:hover{transform:none}}
+@media(max-width:768px){html .ref-table,html .decision-table,html .ramp-table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;max-width:100%}html .ref-table>tbody,html .decision-table>tbody,html .ramp-table>tbody{display:table;width:100%;min-width:560px}}
+html .mia-topbar{margin-bottom:0}
+@media print{html .section{box-shadow:none;border:0}}
+  /* buttons on the black CTA section: ink border and gold shadow, as on the outbound calculator */
+html .mia-footer-cta .mia-btn,html .mia-footer-cta .mia-btn-primary,html .mia-footer-cta .mia-btn-secondary{border:2px solid var(--ink)!important;box-shadow:4px 4px 0 var(--gold)!important}
+html .mia-footer-cta .mia-btn:hover,html .mia-footer-cta .mia-btn-primary:hover,html .mia-footer-cta .mia-btn-secondary:hover{box-shadow:2px 2px 0 var(--gold)!important}
+html .mia-footer-cta .mia-btn-primary{background:var(--gold)!important;color:var(--ink)!important}
+html .mia-footer-cta .mia-btn-secondary{background:#fff!important;color:var(--ink)!important}
+/* inline CTA box on ink: its button gets the ink border and gold shadow, like the black CTA section */
+html .mia-inline-cta-btn{border:2px solid var(--ink)!important;box-shadow:4px 4px 0 var(--gold)!important}
+html .mia-inline-cta-btn:hover{box-shadow:2px 2px 0 var(--gold)!important}
+html .mia-inline-cta,html .mia-inline-cta strong{color:#fff!important}
+html .mia-inline-cta span{color:rgba(255,255,255,.8)!important}
+html .mia-inline-cta-btn,html .mia-inline-cta-btn:hover{color:var(--ink)!important;text-decoration:none!important}
+</style>
+
     <!-- TikTok Pixel Code -->
     <script>
       !function(w,d,t){w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=r+"?sdkid="+e+"&lib="+t;var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(a,s)}}(window,document,"ttq");

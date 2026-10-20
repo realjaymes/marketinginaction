@@ -28,7 +28,7 @@
     <link rel="preconnect" href="https://api.fontshare.com">
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
 
     <!-- Google Tag Manager -->
     <script>
@@ -151,9 +151,131 @@
       ttq.load('D7831IRC77U97CC2V3KG');
       ttq.page();
     </script>
-  </head>
+  <style>
+:root{--ink:#100a16;--white:#fff;--gold:#f1de71;--gold-t:#FBF3C6;--sa:#F7F4FA;--sb:#E6E0EE;--line:#E3DDEA;--muted:rgba(16,10,22,.68);--light:rgba(16,10,22,.45);
+--st:4px 4px 0 var(--ink);--st-sm:3px 3px 0 var(--ink);--st-lg:7px 7px 0 var(--ink);--max:1120px;
+--sans:"Satoshi",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+body{font-family:var(--sans);font-size:17px;line-height:1.6;color:var(--ink);background:var(--sa);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3,h4{font-family:var(--sans);font-weight:750;line-height:1.12;letter-spacing:-.02em;color:var(--ink);text-wrap:balance;margin:0 0 .5em}
+p{margin:0 0 1rem}
+ul{margin:0;padding:0;list-style:none}
+footer{background:var(--ink)}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+.center{text-align:center}
+main section{padding:84px 0}
+main section:nth-of-type(odd){background:var(--sa)}
+main section:nth-of-type(even){background:var(--sb)}
+.band{background-image:linear-gradient(180deg,transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.eyebrow{display:inline-block;font-size:.86rem;font-weight:800;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:6px 16px;line-height:1.35}
+h2.t{font-size:clamp(1.7rem,3.6vw,2.6rem);max-width:26ch}
+.center h2.t{margin-left:auto;margin-right:auto}
+.sub{font-size:1.08rem;color:var(--muted);max-width:640px;margin:0 0 32px}
+.center .sub{margin-left:auto;margin-right:auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-family:var(--sans);font-weight:800;font-size:1.02rem;background:var(--gold);color:var(--ink);border:2px solid var(--ink);border-radius:999px;padding:14px 28px;box-shadow:var(--st);cursor:pointer;transition:transform .14s ease,box-shadow .14s ease;text-align:center;text-decoration:none}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink);text-decoration:none}
+.btn-ghost{background:var(--white)}
+.btn-lg{padding:16px 30px;font-size:1.05rem}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:800;background:var(--white);border:2px solid var(--ink);border-radius:999px;padding:4px 12px;line-height:1.3}
+.card{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg)}
+.nh{padding:56px 0 76px;background:var(--gold-t);border-bottom:2px solid var(--ink);position:relative;overflow:hidden}
+.nh::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--gold);opacity:.55;right:-180px;top:-220px}
+.nh .wrap{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.98fr);gap:56px;align-items:center}
+.nh h1{font-size:clamp(1.65rem,2.75vw,2.5rem);margin:14px 0 16px;line-height:1.14}
+.nh .band.nw{white-space:nowrap}
+.nh__sub{font-size:1.12rem;color:var(--muted);max-width:32em;margin-bottom:24px}
+.nh__ctas{display:flex;flex-wrap:wrap;gap:12px}
+.nh h1,.nh__sub,.nh__ctas{animation:rise .5s cubic-bezier(.23,1,.32,1) both}
+.nh__sub{animation-delay:.06s}.nh__ctas{animation-delay:.12s}
+.win{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg);position:relative;animation:rise .6s cubic-bezier(.23,1,.32,1) .1s both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.win__top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:2px solid var(--ink)}
+.win__title{font-weight:750;letter-spacing:-.02em;font-size:1.2rem}
+.tabs{display:flex;gap:6px;padding:12px 14px 0;overflow-x:auto}
+.tab{font-family:var(--sans);font-weight:800;font-size:.86rem;background:var(--sa);border:2px solid var(--ink);border-radius:999px;padding:6px 15px;cursor:pointer;color:var(--ink);white-space:nowrap}
+.tab[aria-selected="true"]{background:var(--ink);color:#fff}
+.tp{padding:16px 18px 22px}
+html.js .tp[hidden]{display:none}
+.sgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sgrid>div{border:2px solid var(--ink);border-radius:18px;padding:14px 14px 12px;background:var(--white)}
+.sgrid strong{display:block;font-weight:750;letter-spacing:-.02em;font-size:2rem;line-height:1.05;margin-bottom:6px}
+.sgrid span{display:block;font-size:.84rem;font-weight:700;line-height:1.35;color:var(--muted)}
+.sgrid a.src{display:block;margin-top:8px;font-size:.74rem;font-weight:800;color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.tp .more{display:block;text-align:center;margin-top:14px;font-weight:800;font-size:.9rem;color:var(--ink);text-decoration:underline;text-underline-offset:2px}
+.pbox{display:block;border:2px solid var(--ink);border-radius:20px;padding:14px 16px;background:var(--sa);margin-bottom:10px;color:var(--ink);text-decoration:none}
+a.pbox:hover{background:var(--sb);text-decoration:none}
+.pbox__k{display:block;font-size:.78rem;font-weight:800;color:var(--muted);margin-bottom:6px}
+.pbox__n{display:block;font-weight:800;font-size:1.05rem;line-height:1.25}
+.pbox__t{display:block;font-size:.84rem;color:var(--muted);margin:4px 0 0;line-height:1.4}
+.pbox__go{display:block;font-weight:800;font-size:.88rem;margin-top:6px}
+.tp .btn{width:100%;margin-top:4px}
+.truststrip{background:var(--sb);border-bottom:2px solid var(--ink)}
+.truststrip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;padding-top:14px;padding-bottom:14px;font-weight:800;font-size:.9rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.pc{display:flex;flex-direction:column;align-items:flex-start;background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:22px}
+.pc .tag{margin-bottom:12px}
+.pc h3{font-size:1.2rem;margin-bottom:8px}
+.pc p{color:var(--muted);font-size:.98rem;flex:1}
+.pc .go{font-weight:800;color:var(--ink);text-decoration:underline;text-underline-offset:3px;margin-top:4px}
+.opt-cta{text-align:center;margin-top:32px}
+.opt-cta a.lnk{font-weight:800;color:var(--ink);text-decoration:underline;text-underline-offset:3px}
+.about{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:44px;align-items:start}
+.about .photo{border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg);overflow:hidden;background:var(--white)}
+.about .photo img{display:block;width:100%;height:auto}
+.about p{color:var(--muted)}
+.about a{color:var(--ink);font-weight:800}
+.final{padding:96px 0}
+.final .card{padding:56px 28px;max-width:900px;margin:0 auto;text-align:center}
+.final h2{font-size:clamp(1.8rem,4.2vw,2.8rem);margin-bottom:14px}
+.final p{max-width:560px;margin:0 auto 24px;color:var(--muted)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+@media(max-width:900px){
+ main section{padding:56px 0}
+ .nh .wrap{grid-template-columns:minmax(0,1fr);gap:36px}
+ .nh h1{font-size:clamp(1.65rem,5.2vw,2.4rem)}
+ .cards,.cards.two,.about{grid-template-columns:1fr}
+ .about .photo{max-width:320px}
+ .nh .band.nw{white-space:normal}
+}
+@media(max-width:600px){
+ body{font-size:16px}
+ .wrap{padding:0 16px}
+ .nh{padding:36px 0 56px}
+ .nh__ctas .btn{width:100%}
+ .tp{padding:14px 14px 18px}
+ .sgrid strong{font-size:1.6rem}
+ .win__top{padding:12px 14px}
+ .final .card{padding:40px 18px}
+ .final .btn{width:100%}
+}
 
-  <body class="resources-page">
+.win,.nh .wrap>div{min-width:0}
+
+.rows{display:grid;grid-template-columns:minmax(0,1fr);gap:8px}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid var(--ink);border-radius:16px;padding:10px 14px;background:var(--sb);color:var(--ink);text-decoration:none}
+.row:hover{background:var(--white);text-decoration:none}
+.row b{font-weight:800;font-size:.93rem;line-height:1.3}
+.proof{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:44px;align-items:start}
+.proof ul{margin:0 0 28px}
+.proof li{position:relative;padding:9px 0 9px 30px;border-bottom:2px dashed rgba(16,10,22,.14)}
+.proof li:last-child{border-bottom:0}
+.proof li::before{content:"";position:absolute;left:6px;top:13px;width:6px;height:11px;border:solid var(--ink);border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.quotes{display:grid;gap:18px}
+.quote{background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:22px}
+.quote p{font-size:1.02rem;margin-bottom:14px}
+.who{display:flex;align-items:center;gap:12px}
+.av{flex:0 0 44px;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);background:var(--sb);color:var(--ink);font-size:1.1rem;font-weight:800;line-height:1;text-transform:uppercase;overflow:hidden}
+.who b{display:block;font-weight:800}
+.who>div>span{display:block;font-size:.88rem;color:var(--muted)}
+@media(max-width:900px){.proof{grid-template-columns:1fr}}
+/* Accent tags (MIA colours). Copy this block to reuse on any page. Pill label: 2px ink outline, accent fill, ink text.
+   Meaning: pink = business owners and market reports, blue = marketers, teams and tools, green = beginners, playbooks, guides, purple = AI (prompts, Claude skills, agents).
+   Optional card accent: add plus|blue|green|purple to a card for a coloured top edge. Gold stays on buttons only. */
+.tag{display:inline-flex;align-items:center;font-family:inherit;font-size:.78rem;font-weight:800;line-height:1.3;letter-spacing:0;background:#fff;color:#100a16;border:2px solid #100a16;border-radius:999px;padding:3px 11px;white-space:nowrap;font-style:normal}
+.tag--pink{background:#f171c4}.tag--blue{background:#71c4f1}.tag--green{background:#71f19e}.tag--purple{background:#7184f1}
+</style>
+  </head>
+<body>
     <!-- Google Tag Manager (noscript) -->
     <noscript>
       <iframe
@@ -166,10 +288,10 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- Header -->
-    <header>
+    <header class="sticky-nav">
       <div class="container nav">
         <a class="logo" href="/" aria-label="Marketing In Action Home">
-          <img src="../assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
+          <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="nav-logo-img" />
         </a>
 
         <button class="menu-button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
@@ -203,273 +325,80 @@
               <a href="/acquisition/" role="menuitem">Paid Acquisition</a>
             </div>
           </div>
-          <a href="./" aria-current="page">MIA Resources</a>
+          <a href="/resources/" aria-current="page">MIA Resources</a>
           <a href="https://newsletter.marketinginaction.xyz/" target="_blank" rel="noreferrer">MIA Newsletter</a>
         </nav>
       </div>
     </header>
 
     <main>
-      <!-- Hero -->
-      <section class="resources-hero">
-        <div class="container">
-          <div class="resources-hero-inner">
-            <div class="pill">
-              <span class="dot" aria-hidden="true"></span>
-              <span style="font-weight: 750">MIA Resources, Frameworks &amp; Templates</span>
+      <div class="nh">
+        <div class="wrap">
+          <div>
+            <span class="eyebrow">MIA Resources, Frameworks &amp; Templates</span>
+            <h1>Everything you need to put&nbsp;<span class="band nw">marketing into action</span></h1>
+            <p class="nh__sub">Actionable marketing resources, templates, frameworks, and systems built from real startup and GTM work in the trenches. Built from scratch, updated regularly, and ready to implement.</p>
+            <div class="nh__ctas">
+              <a class="btn btn-lg" href="/services/">Work With MIA</a>
+              <a class="btn btn-lg btn-ghost" href="#resources">See All Resources</a>
             </div>
+          </div>
 
-            <h1 class="text-white" style="margin-top: var(--space-lg)">
-              Everything you need to put <span class="text-yellow accent-italic">marketing into action</span>
-            </h1>
-
-            <p class="text-white" style="opacity: 0.92; font-size: 18px">
-              Actionable marketing resources, templates, frameworks, and systems built from real startup and GTM work in the trenches. Built from
-              scratch, updated regularly, and ready to implement.
-            </p>
-
-            <p class="text-white" style="opacity: 0.78; margin-top: 10px">
-              Trusted and used by 5,000+ product marketers, growth teams, and founders across the US, Africa, and Europe.
-            </p>
-
-            <div class="button-row" style="margin-top: var(--space-lg); justify-content: center">
-              <a class="button button-primary" href="/services/">
-                Work With MIA
-              </a>
-              <a class="button button-secondary resources-secondary" href="#resources">See All Resources</a>
+          <div class="win" data-tabs>
+            <div class="win__top"><span class="win__title">Find a resource</span></div>
+            <div class="tabs" role="tablist">
+              <button class="tab" role="tab" aria-selected="true" data-t="a">Playbooks &amp; tools</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="b">Claude &amp; AI</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="c">Libraries &amp; data</button>
             </div>
+            <div class="tp" data-p="a"><div class="rows"><a class="row" href="/resources/seo-geo-aeo-playbook/"><b>SEO, GEO &amp; AEO Playbook</b><i class="tag tag--green">Playbook</i></a><a class="row" href="/resources/outbound-cost-calculator/"><b>Outbound GTM Cost &amp; ROI Calculator</b><i class="tag tag--blue">Calculator</i></a><a class="row" href="/resources/paid-ads-playbook/"><b>The Paid Acquisition Playbook</b><i class="tag tag--green">Playbook</i></a></div></div>
+            <div class="tp" data-p="b"><div class="rows"><a class="row" href="/resources/claude-code-for-marketers/"><b>Claude Code for Marketers</b><i class="tag tag--green">Guide</i></a><a class="row" href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noreferrer"><b>Marketing Agent Skills for Claude Code</b><i class="tag tag--purple">Claude Skills</i></a><a class="row" href="/academy/ai-prompts/"><b>AI Prompt Frameworks &amp; Templates for Marketers</b><i class="tag tag--purple">Ai Prompts</i></a><a class="row" href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer"><b>Ask James Anything</b><i class="tag tag--purple">Ai Agent</i></a></div></div>
+            <div class="tp" data-p="c"><div class="rows"><a class="row" href="/academy/templates/"><b>Product Marketing Templates &amp; Resources Library</b><i class="tag tag--blue">Library</i></a><a class="row" href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"><b>The State of Marketing in African Tech</b><i class="tag tag--pink">Reports</i></a><a class="row" href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7" target="_blank" rel="noreferrer"><b>Marketing &amp; AI Product Database</b><i class="tag tag--blue">Database</i></a><a class="row" href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89" target="_blank" rel="noreferrer"><b>Marketing Thought Leaders Database</b><i class="tag tag--blue">Database</i></a><a class="row" href="/resources/tech-events-calendar/"><b>Tech Events Calendar</b><i class="tag tag--pink">Calendar</i></a><a class="row" href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing" target="_blank" rel="noreferrer"><b>MIA Resource Library</b><i class="tag tag--blue">Library</i></a></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="truststrip"><div class="wrap"><span>Trusted and used by 5,000+ product marketers, growth teams, and founders across the US, Africa, and Europe</span></div></div>
+
+      <section id="resources">
+        <div class="wrap">
+          <div class="center">
+            <h2 class="t">Explore MIA Resources</h2>
+            <p class="sub">Start with individual resources or get full access to everything through the Premium MIA Resource &amp; Template Library, available via annual subscription.</p>
+          </div>
+          <div class="cards" aria-label="MIA Resources list">
+            <article class="pc"><span class="tag tag--green">PLAYBOOK</span><h3>SEO, GEO &amp; AEO Playbook</h3><p>Score your website across 52<!--playbook:steps--> steps, from technical SEO foundations to whether ChatGPT, Claude, Perplexity and Gemini name you at all. Every step tells you where to find the data and how to fix it.</p><a class="btn" href="/resources/seo-geo-aeo-playbook/">Start the Playbook</a></article>
+<article class="pc"><span class="tag tag--blue">CALCULATOR</span><h3>Outbound GTM Cost &amp; ROI Calculator</h3><p>Find out what it costs to set up and run an outbound go-to-market system, from domains and inboxes to data and automation, and what it should return in meetings, pipeline and revenue.</p><a class="btn" href="/resources/outbound-cost-calculator/">Run the Numbers</a></article>
+<article class="pc"><span class="tag tag--green">PLAYBOOK</span><h3>The Paid Acquisition Playbook</h3><p>An end-to-end interactive playbook for paid acquisition across the major paid channels. Includes checklists, calculators, naming generators, and templates.</p><a class="btn" href="/resources/paid-ads-playbook/">Open the Playbook</a></article>
+<article class="pc"><span class="tag tag--green">GUIDE</span><h3>Claude Code for Marketers</h3><p>A beginner-friendly guide to setting up Claude Code, installing marketing skills, and using AI for positioning, GTM, landing pages, and more. No coding experience needed.</p><a class="btn" href="/resources/claude-code-for-marketers/">Read the Guide</a></article>
+<article class="pc"><span class="tag tag--purple">CLAUDE SKILLS</span><h3>Marketing Agent Skills for Claude Code</h3><p>AI agent skills for marketing tasks, built for Claude Code and similar AI coding assistants (Cursor, Windsurf, Cline, Roo Code).</p><a class="btn" href="https://github.com/realjaymes/marketingagentskills" target="_blank" rel="noreferrer">Open the Repo</a></article>
+<article class="pc"><span class="tag tag--blue">LIBRARY</span><h3>Product Marketing Templates &amp; Resources Library</h3><p>Get access to 50+ Product &amp; Growth Marketing templates, frameworks, and resources to execute marketing with clarity.</p><a class="btn" href="/academy/templates/">Get Access</a></article>
+<article class="pc"><span class="tag tag--purple">AI PROMPTS</span><h3>AI Prompt Frameworks &amp; Templates for Marketers</h3><p>Get the frameworks and templates that 200+ marketers and founders use to produce consistent, high quality outputs from AI.</p><a class="btn" href="/academy/ai-prompts/">Get Access</a></article>
+<article class="pc"><span class="tag tag--pink">REPORTS</span><h3>The State of Marketing in African Tech</h3><p>Industry reports on SaaS, FinTech, Web3, Healthtech, Edtech, HRtech, Agritech, Ecommerce, Energytech, Marketplace, Entertainment, Creators, and Agencies.</p><a class="btn" href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer">Get Access</a></article>
+<article class="pc"><span class="tag tag--blue">DATABASE</span><h3>Marketing &amp; AI Product Database</h3><p>A curated directory of the most useful marketing and AI products for modern GTM teams.</p><a class="btn" href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7" target="_blank" rel="noreferrer">Open the Database</a></article>
+<article class="pc"><span class="tag tag--blue">DATABASE</span><h3>Marketing Thought Leaders Database</h3><p>A curated directory of the most influential voices in modern marketing.</p><a class="btn" href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89" target="_blank" rel="noreferrer">Open the Database</a></article>
+<article class="pc"><span class="tag tag--pink">CALENDAR</span><h3>Tech Events Calendar</h3><p>Upcoming tech, startup and marketing events across Africa, plus the global ones worth the trip. Dates are checked on each event's own website.</p><a class="btn" href="/resources/tech-events-calendar/">Open the Calendar</a></article>
+<article class="pc"><span class="tag tag--blue">LIBRARY</span><h3>MIA Resource Library</h3><p>A growing collection of free templates, tools, and references (Google Docs, Sheets, Notion).</p><a class="btn" href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing" target="_blank" rel="noreferrer">Open the Library</a></article>
+<article class="pc"><span class="tag tag--purple">AI AGENT</span><h3>Ask James Anything</h3><p>Get answers to questions about positioning, messaging, GTM strategy, lifecycle setups, growth experiments, tools, templates, and career clarity.</p><a class="btn" href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer">Ask a Question</a></article>
           </div>
         </div>
       </section>
 
-      <!-- Resources -->
-      <section id="resources" class="section">
-        <div class="container">
-          <div class="programs-head">
-            <h2>Explore MIA Resources</h2>
-            <p>
-              Start with individual resources or get full access to everything through the Premium MIA Resource &amp; Template Library, available
-              via annual subscription.
-            </p>
-          </div>
-
-          <div class="program-grid" aria-label="MIA Resources list">
-            <article class="program-card">
-              <div class="program-rail" style="background: var(--color-pink)"></div>
-              <div class="program-inner">
-                <div class="program-tag">PLAYBOOK</div>
-                <h3 class="program-title">SEO, GEO &amp; AEO Playbook</h3>
-                <p class="program-desc">
-                  Score your website across 52<!--playbook:steps--> steps, from technical SEO foundations to whether
-                  ChatGPT, Claude, Perplexity and Gemini name you at all. Every step tells you where to find the
-                  data and how to fix it.
-                </p>
-                <a class="program-btn" href="./seo-geo-aeo-playbook/">Start the Playbook</a>
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: var(--color-blue)"></div>
-              <div class="program-inner">
-                <div class="program-tag">CALCULATOR</div>
-                <h3 class="program-title">Outbound GTM Cost &amp; ROI Calculator</h3>
-                <p class="program-desc">
-                  Find out what it costs to set up and run an outbound go-to-market system, from domains and
-                  inboxes to data and automation, and what it should return in meetings, pipeline and revenue.
-                </p>
-                <a class="program-btn" href="./outbound-cost-calculator/">Run the Numbers</a>
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: var(--color-green)"></div>
-              <div class="program-inner">
-                <div class="program-tag">PLAYBOOK</div>
-                <h3 class="program-title">The Paid Acquisition Playbook</h3>
-                <p class="program-desc">
-                  An end-to-end interactive playbook for paid acquisition across the major paid channels. Includes checklists, calculators, naming generators, and templates.
-                </p>
-                <a class="program-btn" href="./paid-ads-playbook/">Open the Playbook</a>
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(88, 166, 255, 0.75)"></div>
-              <div class="program-inner">
-                <div class="program-tag">GUIDE</div>
-                <h3 class="program-title">Claude Code for Marketers</h3>
-                <p class="program-desc">A beginner-friendly guide to setting up Claude Code, installing marketing skills, and using AI for positioning, GTM, landing pages, and more. No coding experience needed.</p>
-                <a class="program-btn" href="./claude-code-for-marketers/">Read the Guide</a>
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(113, 132, 241, 0.75)"></div>
-              <div class="program-inner">
-                <div class="program-tag">CLAUDE SKILLS</div>
-                <h3 class="program-title">Marketing Agent Skills for Claude Code</h3>
-                <p class="program-desc">AI agent skills for marketing tasks, built for Claude Code and similar AI coding assistants (Cursor, Windsurf, Cline, Roo Code).</p>
-                <a
-                  class="program-btn"
-                  href="https://github.com/realjaymes/marketingagentskills"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Open the Repo</a
-                >
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: var(--color-accent)"></div>
-              <div class="program-inner">
-                <div class="program-tag">LIBRARY</div>
-                <h3 class="program-title">Product Marketing Templates &amp; Resources Library</h3>
-                <p class="program-desc">
-                  Get access to 50+ Product &amp; Growth Marketing templates, frameworks, and resources to execute marketing with clarity.
-                </p>
-                <a class="program-btn" href="/academy/templates/">Get Access</a>
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: var(--color-blue)"></div>
-              <div class="program-inner">
-                <div class="program-tag">AI PROMPTS</div>
-                <h3 class="program-title">AI Prompt Frameworks &amp; Templates for Marketers</h3>
-                <p class="program-desc">
-                  Get the frameworks and templates that 200+ marketers and founders use to produce consistent, high quality outputs from AI.
-                </p>
-                <a class="program-btn" href="/academy/ai-prompts/">Get Access</a>
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: var(--color-pink)"></div>
-              <div class="program-inner">
-                <div class="program-tag">REPORTS</div>
-                <h3 class="program-title">The State of Marketing in African Tech</h3>
-                <p class="program-desc">
-                  Industry reports on SaaS, FinTech, Web3, Healthtech, Edtech, HRtech, Agritech, Ecommerce, Energytech, Marketplace,
-                  Entertainment, Creators, and Agencies.
-                </p>
-                <a class="program-btn" href="https://newsletter.marketinginaction.xyz/s/mia-marketing-reports" target="_blank" rel="noreferrer"
-                  >Get Access</a
-                >
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(28, 20, 34, 0.65)"></div>
-              <div class="program-inner">
-                <div class="program-tag">DATABASE</div>
-                <h3 class="program-title">Marketing &amp; AI Product Database</h3>
-                <p class="program-desc">A curated directory of the most useful marketing and AI products for modern GTM teams.</p>
-                <a
-                  class="program-btn"
-                  href="https://www.notion.so/realjaymes/Marketing-AI-Tool-Database-224a6d41709c8106ba43f1731bc9c3b7"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Open the Database</a
-                >
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(241, 222, 113, 0.75)"></div>
-              <div class="program-inner">
-                <div class="program-tag">DATABASE</div>
-                <h3 class="program-title">Marketing Thought Leaders Database</h3>
-                <p class="program-desc">A curated directory of the most influential voices in modern marketing.</p>
-                <a
-                  class="program-btn"
-                  href="https://www.notion.so/realjaymes/Marketing-Thought-Leaders-Database-207a6d41709c80e78e22e94c52270e89"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Open the Database</a
-                >
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(113, 132, 241, 0.75)"></div>
-              <div class="program-inner">
-                <div class="program-tag">CALENDAR</div>
-                <h3 class="program-title">Tech Events Calendar</h3>
-                <p class="program-desc">Upcoming tech, startup and marketing events across Africa, plus the global ones worth the trip. Dates are checked on each event's own website.</p>
-                <a
-                  class="program-btn"
-                  href="/resources/tech-events-calendar/"
-                  >Open the Calendar</a
-                >
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(28, 20, 34, 0.65)"></div>
-              <div class="program-inner">
-                <div class="program-tag">LIBRARY</div>
-                <h3 class="program-title">MIA Resource Library</h3>
-                <p class="program-desc">A growing collection of free templates, tools, and references (Google Docs, Sheets, Notion).</p>
-                <a
-                  class="program-btn"
-                  href="https://docs.google.com/document/d/1NNUADoydhvVvUTikvJdHO1z-vXRzYWH0CPZE6Mk6Qpw/edit?usp=sharing"
-                  target="_blank"
-                  rel="noreferrer"
-                  >Open the Library</a
-                >
-              </div>
-            </article>
-            <article class="program-card">
-              <div class="program-rail" style="background: rgba(241, 222, 113, 0.75)"></div>
-              <div class="program-inner">
-                <div class="program-tag">AI AGENT</div>
-                <h3 class="program-title">Ask James Anything</h3>
-                <p class="program-desc">
-                  Get answers to questions about positioning, messaging, GTM strategy, lifecycle setups, growth experiments, tools, templates,
-                  and career clarity.
-                </p>
-                <a class="program-btn" href="https://www.superme.ai/realjaymes" target="_blank" rel="noreferrer">Ask a Question</a>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- Social proof -->
-      <section class="section social-proof-wrap">
-        <div class="container">
-          <div class="social-proof-panel">
-            <div class="two-col" style="align-items: start">
-              <div>
-                <h2 class="text-white">Built from real work, trusted by real operators.</h2>
-
-                <ul class="resources-proof-list">
-                  <li>Created by marketers actively working across product, growth, and GTM roles</li>
-                  <li>Designed for execution in emerging and global markets</li>
-                  <li>Continuously refined through live work and community feedback</li>
-                </ul>
-
-                <div class="button-row" style="margin-top: var(--space-lg)">
-                  <a class="button button-primary" href="/academy/pro-bootcamp/">
-                    Join the AI Marketing Bootcamp
-                  </a>
-                </div>
-              </div>
-
-              <div class="testimonial-col" aria-label="Resource testimonials">
-                <div class="testimonial-card">
-                  <p class="testimonial-quote">
-                    “What stood out for me was how practical everything was. I didn’t have to guess how to apply it at work.”
-                  </p>
-                  <div class="testimonial-person">
-                    <div class="testimonial-avatar">T</div>
-                    <div>
-                      <div class="testimonial-name">Theodore Nnah</div>
-                      <div class="testimonial-role">Product Marketer</div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="testimonial-card">
-                  <p class="testimonial-quote">“The way things were broken down made it easier to act, not just understand.”</p>
-                  <div class="testimonial-person">
-                    <div class="testimonial-avatar">D</div>
-                    <div>
-                      <div class="testimonial-name">Despina Maris</div>
-                      <div class="testimonial-role">Product Marketer</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+      <section>
+        <div class="wrap">
+          <div class="proof">
+            <div>
+              <h2 class="t">Built from real work, trusted by real operators.</h2>
+              <ul>
+                <li>Created by marketers actively working across product, growth, and GTM roles</li>
+                <li>Designed for execution in emerging and global markets</li>
+                <li>Continuously refined through live work and community feedback</li>
+              </ul>
+              <a class="btn btn-lg" href="/academy/pro-bootcamp/">Join the AI Marketing Bootcamp</a>
+            </div>
+            <div class="quotes" aria-label="Resource testimonials">
+              <div class="quote"><p>&ldquo;What stood out for me was how practical everything was. I didn&rsquo;t have to guess how to apply it at work.&rdquo;</p><div class="who"><span class="av">T</span><div><b>Theodore Nnah</b><span>Product Marketer</span></div></div></div>
+              <div class="quote"><p>&ldquo;The way things were broken down made it easier to act, not just understand.&rdquo;</p><div class="who"><span class="av">D</span><div><b>Despina Maris</b><span>Product Marketer</span></div></div></div>
             </div>
           </div>
         </div>
@@ -668,5 +597,20 @@
       <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=9341153&fmt=gif" />
     </noscript>
     <!-- End LinkedIn Insight Tag -->
+
+    <script>
+    (function(){
+      document.documentElement.classList.add('js');
+      document.querySelectorAll('[data-tabs]').forEach(function(box){
+        var tabs=box.querySelectorAll('.tab'), panels=box.querySelectorAll('[data-p]');
+        function show(id){
+          tabs.forEach(function(x){x.setAttribute('aria-selected',x.dataset.t===id?'true':'false')});
+          panels.forEach(function(p){p.hidden=p.dataset.p!==id});
+        }
+        tabs.forEach(function(x){x.addEventListener('click',function(){show(x.dataset.t)})});
+        show(tabs[0].dataset.t);
+      });
+    })();
+    </script>
   </body>
 </html>

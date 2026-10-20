@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +28,179 @@
   <meta name="twitter:image:alt" content="Marketing In Action: put marketing into action, unlock revenue" />
 
 
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/resources/claude-code-for-marketers/style.css">
+<style id="academy-style">
+/* Academy styling layer for Claude Code for Marketers. Styling only: sections, copy and scripts are unchanged. Light is the only theme. */
+html[data-theme]{
+ --ink:#100a16;--gold:#f1de71;--gold-t:#FBF3C6;--sa:#F7F4FA;--sb:#E6E0EE;--line:#E3DDEA;
+ --pink:#f171c4;--blue:#71c4f1;--green-a:#71f19e;--purple:#7184f1;
+ --sys:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --font:var(--sys);--radius:18px;--radius-sm:12px;
+ --green:#71f19e;--yellow:#f1de71;--red:#f171c4;--orange:#f1a871;
+ --terminal-bg:#100a16;
+}
+html[data-theme="light"]{
+ color-scheme:light;
+ --a-ink:#100a16;--a-bd:#100a16;--a-page:#F7F4FA;--a-alt:#E6E0EE;--a-card:#fff;--a-hero:#FBF3C6;--a-circle:.55;
+ --a-sh:#100a16;--a-line:#E3DDEA;--a-btn2:#fff;--a-link:#100a16;--a-hdr:rgba(247,244,250,.94);
+ --bg:#F7F4FA;--bg-secondary:#E6E0EE;--bg-tertiary:#E6E0EE;--bg-card:#fff;--border:#E3DDEA;
+ --text:#100a16;--text-secondary:rgba(16,10,22,.68);--text-muted:rgba(16,10,22,.55);
+ --mia-accent:#100a16;--mia-accent-hover:#100a16;--mia-accent-bg:#FBF3C6;
+ --code-bg:#fff;--shadow:none;--shadow-lg:none;
+ --callout-info-bg:#E4F3FC;--callout-info-border:#71c4f1;--callout-tip-bg:#E2FBEA;--callout-tip-border:#71f19e;--callout-warning-bg:#FBF3C6;--callout-warning-border:#f1de71;
+}
+html[data-theme]{--st:4px 4px 0 var(--a-sh);--st-sm:3px 3px 0 var(--a-sh);--st-lg:7px 7px 0 var(--a-sh)}
+
+/* ---------- base ---------- */
+html[data-theme] body{font-family:var(--sys);background:var(--a-page);color:var(--text)}
+button,input,select,textarea{font-family:inherit}
+html[data-theme] h1,html[data-theme] h2,html[data-theme] h3,html[data-theme] h4{font-family:var(--sys);font-weight:750;letter-spacing:-.02em;text-wrap:balance}
+html[data-theme] a:focus-visible,html[data-theme] button:focus-visible{outline:3px solid var(--a-ink);outline-offset:2px}
+html[data-theme] .section-body a:not(.btn),html[data-theme] .hero-meta a,html[data-theme] .callout a,html[data-theme] .footer-cta a:not(.btn){color:var(--a-link);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+html[data-theme] code{background:var(--a-alt);border:1px solid var(--a-line);color:var(--a-ink);border-radius:6px}
+
+/* ---------- header ---------- */
+html[data-theme] .site-header{background:var(--a-hdr);border-bottom:2px solid var(--a-bd);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+html[data-theme] .header-inner{height:58px}
+html[data-theme] .logo{font-weight:800;color:var(--a-ink)}
+html[data-theme] .logo-icon{color:var(--a-ink)}
+html[data-theme] .nav-link{font-weight:800;color:var(--a-ink)}
+html[data-theme] .nav-link:hover{color:var(--a-ink);text-decoration:underline;text-underline-offset:4px}
+html[data-theme] .theme-toggle{background:var(--a-btn2);color:var(--a-ink);border:2px solid var(--a-bd);border-radius:999px;padding:5px 12px}
+html[data-theme] .theme-toggle:hover{background:var(--a-alt);border-color:var(--a-bd)}
+html[data-theme] .progress-bar{background:var(--gold);height:4px;border-bottom:1px solid var(--ink)}
+
+/* ---------- buttons ---------- */
+html[data-theme] .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:800;border:2px solid var(--a-bd);border-radius:999px;padding:13px 24px;box-shadow:var(--st);text-decoration:none;transition:transform .14s ease,box-shadow .14s ease}
+html[data-theme] .btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--a-sh)}
+html[data-theme] .btn:active{transform:translate(3px,3px) scale(.98);box-shadow:1px 1px 0 var(--a-sh)}
+html[data-theme] .btn-primary,html[data-theme] .btn-primary:hover{background:var(--gold);color:var(--ink);border-color:var(--a-bd)}
+html[data-theme] .btn-secondary,html[data-theme] .btn-secondary:hover{background:var(--a-btn2);color:var(--a-ink);border:2px solid var(--a-bd)}
+
+/* ---------- hero ---------- */
+html[data-theme] .hero{background:var(--a-hero)!important;border-bottom:2px solid var(--a-bd);position:relative;overflow:hidden}
+html[data-theme] .hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--gold);opacity:var(--a-circle);right:-180px;top:-220px;pointer-events:none}
+html[data-theme] .hero>.container{position:relative}
+html[data-theme] .hero h1{font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.14}
+html[data-theme] .hero-accent,html[data-theme="light"] .hero-accent{color:var(--ink)!important;background:linear-gradient(180deg,transparent 62%,var(--gold) 62%,var(--gold) 92%,transparent 92%);display:inline;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+html[data-theme] .hero-sub{color:var(--text-secondary)}
+html[data-theme] .hero-badge,html[data-theme="light"] .hero-badge,
+html[data-theme] .academy-badge,html[data-theme="light"] .academy-badge{background:var(--a-card);color:var(--a-ink);border:2px solid var(--a-bd);border-radius:999px;padding:5px 14px;font-weight:800;font-size:.76rem;letter-spacing:.08em}
+html[data-theme] .hero-meta{color:var(--text-secondary)}
+
+/* ---------- sections: alternating lilac ---------- */
+html[data-theme] main>section:nth-of-type(even){background:var(--a-page)}
+html[data-theme] main>section:nth-of-type(odd):not(:first-of-type){background:var(--a-alt)}
+html[data-theme] .content-section,html[data-theme] .footer-cta,html[data-theme] .mia-academy-cta{border-bottom:0}
+html[data-theme] .quick-ref{background:inherit}
+html[data-theme] .section-number{display:inline-block;color:var(--a-ink);background:var(--a-card);border:2px solid var(--a-bd);border-radius:999px;padding:3px 12px;font-size:.72rem;font-weight:800;letter-spacing:.08em;margin-bottom:12px}
+html[data-theme] .section-header h2,html[data-theme] .quick-ref h2,html[data-theme] .footer-cta h2,html[data-theme] .academy-card h2{font-weight:750;letter-spacing:-.02em;color:var(--a-ink)}
+html[data-theme] .section-body h3,html[data-theme] .section-body h4,html[data-theme] .ref-card h3,html[data-theme] .info-card h3{color:var(--a-ink)!important}
+
+/* ---------- section nav: pill tabs ---------- */
+html[data-theme] .section-nav{top:58px;background:var(--a-hdr);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid var(--a-bd)}
+html[data-theme] .section-nav-inner{gap:8px;padding:10px 0}
+html[data-theme] .section-nav-item{padding:6px 14px;border:2px solid transparent;border-radius:999px;font-size:.82rem;font-weight:800;color:var(--a-ink);opacity:.75;background:transparent}
+html[data-theme] .section-nav-item:hover{opacity:1;background:var(--a-alt);color:var(--a-ink)}
+html[data-theme] .section-nav-item.active{opacity:1;background:var(--gold);color:var(--ink);border-color:var(--a-bd);border-bottom-color:var(--a-bd)}
+html[data-theme] .nav-number{opacity:.55}
+
+/* ---------- cards ---------- */
+html[data-theme] .info-card,html[data-theme] .ref-card,html[data-theme] .concept-block,html[data-theme] .file-explorer,html[data-theme] .rendered-markdown{background:var(--a-card);border:3px solid var(--a-bd);border-radius:26px;box-shadow:var(--st)}
+html[data-theme] .info-card{padding:26px}
+html[data-theme] .info-card:hover{border-color:var(--a-bd);box-shadow:6px 6px 0 var(--a-sh);transform:translate(-2px,-2px)}
+html[data-theme] .ref-card{padding:22px}
+html[data-theme] .term,html[data-theme] .flow-step{background:var(--a-card);border:2px solid var(--a-bd);border-radius:18px;box-shadow:var(--st-sm)}
+html[data-theme] .rendered-markdown{background:var(--a-card);border-radius:22px;box-shadow:var(--st-sm)}
+html[data-theme] .rendered-markdown th{background:var(--a-alt)}
+html[data-theme] .concept-block{margin-bottom:16px;box-shadow:var(--st-sm)}
+html[data-theme] .concept-toggle{background:var(--a-card);color:var(--a-ink);font-weight:800;padding:18px 22px}
+html[data-theme] .concept-toggle:hover{background:var(--a-alt)}
+html[data-theme] .toggle-icon{color:var(--a-ink);display:inline-grid;place-items:center;width:26px;height:26px;border:2px solid var(--a-bd);border-radius:50%;font-size:.6rem}
+html[data-theme] .concept-content{border-top:2px solid var(--a-bd);background:var(--a-card)}
+html[data-theme] .file-explorer{box-shadow:var(--st-sm)}
+html[data-theme] .file-item{border-bottom:2px solid var(--a-line)}
+html[data-theme] .file-toggle{background:var(--a-card);color:var(--a-ink)}
+html[data-theme] .file-toggle:hover{background:var(--a-alt)}
+html[data-theme] .file-details{background:var(--a-alt);border-top:2px solid var(--a-line)}
+html[data-theme] .file-badge{border:2px solid var(--a-bd);border-radius:999px;padding:1px 10px;color:var(--ink)!important;font-weight:800}
+html[data-theme] .badge-important{background:var(--pink)}
+html[data-theme] .badge-skill{background:var(--purple)}
+html[data-theme] .badge-info{background:var(--green-a)}
+html[data-theme] .tree-view pre{background:var(--a-card);border:2px solid var(--a-bd);border-radius:18px;color:var(--text)}
+
+/* ---------- steps ---------- */
+html[data-theme] .step-number,html[data-theme="light"] .step-number{background:var(--a-card);color:var(--a-ink);border:2px solid var(--a-bd);border-radius:50%;font-weight:800}
+html[data-theme] .flow-number,html[data-theme="light"] .flow-number{background:var(--a-ink);color:var(--a-page)}
+html[data-theme] .flow-connector,html[data-theme] .anatomy-arrow{color:var(--a-ink)}
+
+/* ---------- anatomy diagram ---------- */
+html[data-theme] .anatomy-box{border:2px solid var(--a-bd);border-radius:18px;box-shadow:var(--st-sm);background:var(--a-card)}
+html[data-theme] .anatomy-root,html[data-theme="light"] .anatomy-root{background:var(--gold);border-color:var(--a-bd)}
+html[data-theme] .anatomy-required{background:var(--pink);border-color:var(--a-bd)}
+html[data-theme] .anatomy-optional{background:var(--a-card)}
+html[data-theme] .anatomy-root *,html[data-theme] .anatomy-required *,html[data-theme] .anatomy-root .anatomy-label,html[data-theme] .anatomy-required .anatomy-label{color:var(--ink)!important}
+html[data-theme] .anatomy-root code,html[data-theme] .anatomy-required code{background:rgba(255,255,255,.55);border-color:var(--ink)}
+html[data-theme] .anatomy-optional .anatomy-label,html[data-theme] .anatomy-box small{color:var(--text-muted)}
+
+/* ---------- callouts ---------- */
+html[data-theme] .callout{border:2px solid var(--a-bd);border-left-width:8px;border-radius:18px;box-shadow:var(--st-sm);padding:16px 20px}
+html[data-theme] .callout p,html[data-theme] .callout{color:var(--text)}
+html[data-theme] .callout-info{border-left-color:var(--blue)}
+html[data-theme] .callout-tip{border-left-color:var(--green-a)}
+html[data-theme] .callout-warning{border-left-color:var(--gold)}
+
+/* ---------- tabs ---------- */
+html[data-theme] .tabs{border-bottom:0;gap:8px;flex-wrap:wrap;margin-bottom:4px}
+html[data-theme] .tab-btn{padding:6px 16px;border:2px solid var(--a-bd);border-radius:999px;background:var(--a-card);color:var(--a-ink);font-weight:800;font-size:.85rem}
+html[data-theme] .tab-btn:hover{background:var(--a-alt);color:var(--a-ink)}
+html[data-theme] .tab-btn.active{background:var(--gold);color:var(--ink);border-color:var(--a-bd)}
+
+/* ---------- code and terminals: ink windows with Academy card framing ---------- */
+html[data-theme] .terminal{border:3px solid var(--a-bd);border-radius:18px;box-shadow:var(--st);background:#100a16}
+html[data-theme] .terminal-header{background:#2d2438}
+html[data-theme] .terminal-body,html[data-theme="light"] .terminal-body{background:#100a16}
+html[data-theme] .terminal-title{color:rgba(247,244,250,.6)}
+html[data-theme] .terminal-command{color:#f7f4fa}
+html[data-theme] .terminal-output{color:rgba(247,244,250,.62)}
+html[data-theme] .terminal-comment{color:rgba(247,244,250,.45)}
+html[data-theme] .code-block pre{background:var(--a-card);border:2px solid var(--a-bd);border-radius:16px;box-shadow:var(--st-sm)}
+html[data-theme] .code-block code{background:none;border:none;color:var(--text)}
+html[data-theme] .copy-btn{background:var(--a-card);color:var(--a-ink);border:2px solid var(--a-bd);border-radius:999px;font-weight:800}
+html[data-theme] .copy-btn:hover,html[data-theme="light"] .copy-btn:hover{background:var(--gold);color:var(--ink);border-color:var(--a-bd)}
+html[data-theme] .copy-btn.copied{background:var(--green-a);color:var(--ink);border-color:var(--a-bd)}
+html[data-theme] .rendered-markdown pre{background:var(--a-alt);border:2px solid var(--a-line)}
+
+/* ---------- tables ---------- */
+html[data-theme] .table-responsive{border:2px solid var(--a-bd);border-radius:18px;box-shadow:var(--st-sm);background:var(--a-card)}
+html[data-theme] .data-table th{background:var(--a-alt);color:var(--a-ink);font-weight:800;border:0;border-bottom:2px solid var(--a-bd)}
+html[data-theme] .data-table td{border:0;border-bottom:1px solid var(--a-line);color:var(--text-secondary)}
+html[data-theme] .data-table tr:last-child td{border-bottom:0}
+
+/* ---------- Academy CTA card, quick reference, footer CTA ---------- */
+html[data-theme] .academy-card{background:var(--a-hero);border:3px solid var(--a-bd);border-radius:26px;box-shadow:var(--st-lg);position:relative;overflow:hidden}
+html[data-theme] .academy-card::before{content:"";position:absolute;width:380px;height:380px;border-radius:50%;background:var(--gold);opacity:var(--a-circle);right:-150px;top:-190px;pointer-events:none}
+html[data-theme] .academy-card>*{position:relative}
+html[data-theme] .academy-features li::before,html[data-theme="light"] .academy-features li::before{color:var(--a-ink)}
+html[data-theme] .footer-cta>.container{background:var(--a-card);border:3px solid var(--a-bd);border-radius:26px;box-shadow:var(--st-lg);padding:48px 28px;max-width:860px}
+html[data-theme] .ref-item span{color:var(--text-secondary)}
+
+/* ---------- footer: ink ---------- */
+html[data-theme] .site-footer{background:var(--ink);color:#fff;border-top:2px solid var(--ink)}
+html[data-theme] .footer-left p,html[data-theme] .footer-right a{color:rgba(255,255,255,.72)}
+html[data-theme] .footer-left a{color:rgba(255,255,255,.72);text-decoration:underline;text-underline-offset:3px}
+html[data-theme] .footer-right a:hover,html[data-theme] .footer-left a:hover{color:#fff}
+html[data-theme] .site-footer{padding:28px 0}
+
+@media(max-width:768px){
+ html[data-theme] .hero::before{width:260px;height:260px;right:-110px;top:-150px}
+ html[data-theme] .academy-card::before{width:240px;height:240px;right:-110px;top:-130px}
+ html[data-theme] .footer-cta>.container{padding:36px 18px}
+ html[data-theme] .info-card{padding:20px}
+}
+@media(prefers-reduced-motion:reduce){html[data-theme] .btn,html[data-theme] .info-card{transition:none}html[data-theme] .btn:hover,html[data-theme] .info-card:hover{transform:none}}
+</style>
+
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -274,10 +446,6 @@
         <a href="#section-2" class="nav-link">Setup</a>
         <a href="#section-4" class="nav-link">Skills</a>
         <a href="#section-5" class="nav-link">Marketing Skills</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-          <span class="theme-icon-light">&#9788;</span>
-          <span class="theme-icon-dark">&#9790;</span>
-        </button>
       </nav>
     </div>
   </header>
@@ -1641,6 +1809,6 @@ Write a press release for our new feature launch</code></pre>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="/resources/claude-code-for-marketers/script.js"></script>
 </body>
 </html>
