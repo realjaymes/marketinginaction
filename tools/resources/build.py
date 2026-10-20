@@ -102,6 +102,8 @@ def shell(path, title, description, social_title, body_class, main_html, jsonld,
     t = sub1(r"<title>.*?</title>", f"<title>{E(title)}</title>", t, "title")
     t = sub1(r'<link rel="canonical" href="[^"]*" />', f'<link rel="canonical" href="{url}" />', t, "canonical")
     t = sub1(r'<meta\s+name="description"\s+content="[^"]*"\s*/>', f'<meta\n      name="description"\n      content="{d}"\n    />', t, "meta description")
+    # The services page carries its own ProfessionalService schema; it describes that page, not these.
+    t = sub1(r'    <script type="application/ld\+json">\s*\{\s*"@context": "https://schema.org",\s*"@type": "ProfessionalService".*?</script>\n', "", t, "services schema")
     t = sub1(r'(    <!-- BreadcrumbList schema -->)', '    <script type="application/ld+json">\n' + jsonld + '\n    </script>\n    <!-- BreadcrumbList schema -->', t, "breadcrumb comment")
     t = sub1(r'\{ "@type": "ListItem", "position": 2, "name": "Services", "item": "https://marketinginaction.xyz/services/" \}',
              '{ "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://marketinginaction.xyz/resources/" },\n'
@@ -544,6 +546,7 @@ DB_CSS = """      <style>
         .db-tag-alt { background: var(--purple); }
         .db-tag-plain { background: var(--white); }
         .db-name { font-size: 20px; margin: 0; }
+        .db-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         .db-desc { margin: 0; color: var(--muted); line-height: 1.55; }
         .db-uses { margin: 0; padding-left: 18px; color: var(--ink); line-height: 1.5; font-size: 15px; }
         .db-uses li + li { margin-top: 2px; }
@@ -837,7 +840,7 @@ def leaders_files():
     if regions:
         groups.append(("Based in", "region", n, [(tok(r), r, sum(i.get("region") == r for i in people)) for r in regions]))
     panel = filter_panel("Name, company or topic", groups)
-    sections = '              <div class="db-list">\n' + "\n".join(leader_card(i) for i in people) + "\n              </div>"
+    sections = '              <h2 class="db-sr">Marketing thought leaders</h2>\n              <div class="db-list">\n' + "\n".join(leader_card(i) for i in people) + "\n              </div>"
 
     main = hero("MIA Marketing Thought Leaders Database",
                 'Marketing thought leaders worth following in <span class="text-yellow accent-italic">growth, product marketing and GTM</span>',
