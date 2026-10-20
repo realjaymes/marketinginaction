@@ -14,7 +14,8 @@ Pages render against the data file's "updated" date, never today's date, so
 --check gives the same answer on every machine. The weekly upkeep job
 (tools/resources/upkeep.py) moves "updated" forward and rebuilds. A small
 script on the page also hides events that have passed since the last build.
-A tool with "hidden_since" (its site has been down) is left off the page.
+A tool with "hidden_since" (its site has been down) or "retired" (shut down, or
+merged into another listed product) is left off the page.
 
 Usage:
   python3 tools/resources/build.py --write   rewrite the pages from the data
@@ -655,7 +656,7 @@ def tools_files():
     errs = validate_tools(d, groups)
     if errs:
         fail(errs)
-    d["items"] = [i for i in d["items"] if not i.get("hidden_since")]
+    d["items"] = [i for i in d["items"] if not i.get("hidden_since") and not i.get("retired")]
     cat2g = {c: g for g, cs in groups.items() for c in cs}
     as_of = iso(d["updated"])
     by = {g: [] for g in GROUP_ORDER}

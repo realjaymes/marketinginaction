@@ -16,6 +16,8 @@ Tools (monthly, or with --tools):
     answer, 404, 410, a server error or a parked domain) is hidden from the page
     with "hidden_since"; it shows again once the site loads. Sites that block
     scripts (401, 403, 429 and similar) are not counted as failures.
+  - A tool with "retired" (shut down, or merged into another listed product) is
+    skipped: it stays off the page whatever its old site does.
   - The homepage title and description are saved on first sight. When they
     change sharply, or the site now redirects to another domain, the tool is
     flagged as a possible pivot or acquisition. --accept SLUG takes the current
@@ -205,10 +207,13 @@ def run_tools(today, state, review):
     d = load(DATA / "tools.json", None)
     st = state.setdefault("tools", {})
     with cf.ThreadPoolExecutor(12) as ex:
-        pages = dict(zip([i["slug"] for i in d["items"]], ex.map(lambda i: fetch(i["website"]), d["items"])))
+        live = [i for i in d["items"] if not i.get("retired")]
+        pages = dict(zip([i["slug"] for i in live], ex.map(lambda i: fetch(i["website"]), live)))
     flags, changes = [], []
     partner = re.compile(r"james|partnerlinks|partnerstack|via=|fpr=|affiliate|referral|partners\.|partnerwith", re.I)
     for i in d["items"]:
+        if i.get("retired"):
+            continue
         status, final, text = pages[i["slug"]]
         s = st.setdefault(i["slug"], {"fails": 0})
         if failed(status, text):
