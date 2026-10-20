@@ -4,7 +4,7 @@
       "kind": "event-site-down",
       "slug": "apiconf-lagos",
       "name": "APIConf Lagos",
-      "message": "Its site has failed 2 runs in a row (down). Mark it discontinued or give a new link."
+      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
     },
     {
       "kind": "event-date-unconfirmed",
@@ -16,19 +16,19 @@
       "kind": "event-site-down",
       "slug": "lagos-executive-cloud-tech-summit",
       "name": "Lagos Executive Cloud Tech Summit",
-      "message": "Its site has failed 2 runs in a row (down). Mark it discontinued or give a new link."
+      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
     },
     {
       "kind": "event-site-down",
       "slug": "nigeria-fintech-week",
       "name": "Nigeria Fintech Week",
-      "message": "Its site has failed 2 runs in a row (down). Mark it discontinued or give a new link."
+      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
     },
     {
       "kind": "event-site-down",
       "slug": "revup-africa",
       "name": "Revup Africa",
-      "message": "Its site has failed 2 runs in a row (down). Mark it discontinued or give a new link."
+      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
     }
   ],
   "tools": [],

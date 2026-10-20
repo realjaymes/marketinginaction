@@ -2,171 +2,171 @@
   "events": {
     "lagos-leadership-summit": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africa-startup-festival": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "no-code-tech-summit-ncts": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "martech-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "apiconf-lagos": {
-      "fails": 2
+      "fails": 3
     },
     "moonshot-by-techcabal": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "search-africon": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "web-summit": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "devfest-lagos": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "growth-africa-summit": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africa-tech-festival": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "entertainment-week-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africa-fintech-summit-kigali": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "slush": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "admarp-digital-product-growth-summit": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "laif-awards": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "aot-lagos-8": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africa-tech-summit-nairobi": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "lagos-tech-fest": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "tech-revolution-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "sxsw": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "tech-unite-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "iot-west-africa-data-center-cloud-expo-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "gitex-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "saastr-ai-annual": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "ai-everything-kenya-gitex-kenya": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "web-summit-vancouver": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "vivatech": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africa-technology-expo": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "cannes-lions": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "unbound": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "gitex-nigeria": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "digimarcon-africa": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africa-revenue-makers-awards-arma": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "african-product-marketing-pioneers-apmp": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "africarena-lagos-summit": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "lagos-executive-cloud-tech-summit": {
-      "fails": 2
+      "fails": 3
     },
     "lagos-startup-week": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "marketing-chill": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "nigeria-fintech-week": {
-      "fails": 2
+      "fails": 3
     },
     "product-dive-conference": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     },
     "revup-africa": {
-      "fails": 2
+      "fails": 3
     },
     "the-builders-summit-by-founders-connect": {
       "fails": 0,
-      "checked": "2026-10-27"
+      "checked": "2026-10-20"
     }
   },
   "tools": {
