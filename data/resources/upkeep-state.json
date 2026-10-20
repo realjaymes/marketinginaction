@@ -1,0 +1,1535 @@
+{
+  "events": {
+    "lagos-leadership-summit": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africa-startup-festival": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "no-code-tech-summit-ncts": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "martech-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "apiconf-lagos": {
+      "fails": 2
+    },
+    "moonshot-by-techcabal": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "search-africon": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "web-summit": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "devfest-lagos": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "growth-africa-summit": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africa-tech-festival": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "entertainment-week-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africa-fintech-summit-kigali": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "slush": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "admarp-digital-product-growth-summit": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "laif-awards": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "aot-lagos-8": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africa-tech-summit-nairobi": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "lagos-tech-fest": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "tech-revolution-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "sxsw": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "tech-unite-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "iot-west-africa-data-center-cloud-expo-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "gitex-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "saastr-ai-annual": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "ai-everything-kenya-gitex-kenya": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "web-summit-vancouver": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "vivatech": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africa-technology-expo": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "cannes-lions": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "unbound": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "gitex-nigeria": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "digimarcon-africa": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africa-revenue-makers-awards-arma": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "african-product-marketing-pioneers-apmp": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "africarena-lagos-summit": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "lagos-executive-cloud-tech-summit": {
+      "fails": 2
+    },
+    "lagos-startup-week": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "marketing-chill": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "nigeria-fintech-week": {
+      "fails": 2
+    },
+    "product-dive-conference": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    },
+    "revup-africa": {
+      "fails": 2
+    },
+    "the-builders-summit-by-founders-connect": {
+      "fails": 0,
+      "checked": "2026-10-27"
+    }
+  },
+  "tools": {
+    "1password": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "1Password — Password Manager for Teams, Businesses, and Families",
+      "description": "",
+      "host": "1password.com"
+    },
+    "6sense": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "6sense - The ABM Platform Powered by Revenue Intelligence",
+      "description": "Reinvent your pipeline with our ABM platform. Use powerful account based marketing tools and agency insights to reveal revenue and eliminate guesswork.",
+      "host": "6sense.com"
+    },
+    "800-com": {
+      "fails": 0
+    },
+    "adyntel": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Adyntel – Ad Intelligence API for LinkedIn, Meta & Google Ads",
+      "description": "Pull competitor and prospect ads by domain via API. LinkedIn, Meta, and Google ad data for lead enrichment, competitor research, and brand audits.",
+      "host": "adyntel.com"
+    },
+    "ahrefs": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Ahrefs—AI Marketing Platform Powered by Big Data",
+      "description": "We help marketers drive visibility across AI search, SEO, content, and social – with the largest AI and search databases online.",
+      "host": "ahrefs.com"
+    },
+    "airops": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AirOps | Run the strategy that wins AI discovery",
+      "description": "",
+      "host": "airops.com"
+    },
+    "aiseo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI SEO Platform for AI Search Visibility | AI SEO",
+      "description": "AI SEO platform built for AI search visibility, generative engine optimization, and inclusion in AI generated answers across modern search engines",
+      "host": "aiseo.ai"
+    },
+    "amplitude": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Amplitude | A new era for product teams",
+      "description": "From analytics to feedback to code, Amplitude brings AI into every step of building self-improving products. Start free with 2M events per month.",
+      "host": "amplitude.com"
+    },
+    "apify": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Apify: Marketplace of ready-to-run tools for AI",
+      "description": "Thousands of tools to automate your business. Get real-time web data, track competitors, generate leads, and integrate your apps and AI agents.",
+      "host": "apify.com"
+    },
+    "apollo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The AI GTM System for Go-to-Market Teams | Apollo",
+      "description": "Apollo is the AI sales platform rebuilt as one connected AI GTM system: data, intelligence, and execution for the entire go-to-market motion.",
+      "host": "apollo.io"
+    },
+    "appsflyer": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AppsFlyer | Modern Marketing Cloud",
+      "description": "Unify measurement, deep linking, data collaboration, and AI across mobile, web, CTV, console and beyond. Make smarter decisions, optimize every channel, and prove impact with the platform built for modern marketing.",
+      "host": "appsflyer.com"
+    },
+    "argil": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Argil - The video production studio for teams and agents",
+      "description": "The video production studio for teams and agents. Argil connects every AI model and keeps your brand on record, so every video comes out right.",
+      "host": "argil.ai"
+    },
+    "attio": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Attio: The CRM for agentic revenue",
+      "description": "The system for revenue teams to build pipeline, accelerate deals, and grow accounts around the clock.",
+      "host": "attio.com"
+    },
+    "bing-webmaster-tools": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Bing Webmaster Tools",
+      "description": "Sign in or signup for Bing Webmaster Tools and improve your site’s performance in search. Get access to free reports, tools and resources.",
+      "host": "bing.com"
+    },
+    "blink": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Blink - AI Website & App Builder | Build and Host in Minutes",
+      "description": "Build and host studio-quality business websites with AI — custom domain, hosting, and SEO included. The same prompt ships full-stack web and mobile apps.",
+      "host": "blink.new"
+    },
+    "bolt-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "BoltAI (Bolt AI): AI App for Mac",
+      "description": "BoltAI (Bolt AI) is a native AI app for Mac. Use ChatGPT, Claude, Gemini, and local LLMs in one fast desktop app.",
+      "host": "boltai.com"
+    },
+    "bolt-business": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Bolt for Business | Manage company travel and employee meals",
+      "description": "Ensure consistency in corporate travel and food spend from a single platform. Register your business today.",
+      "host": "bolt.eu"
+    },
+    "bookyourdata": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Buy Email List | Verified Business Email Marketing Database",
+      "description": "",
+      "host": "bookyourdata.com"
+    },
+    "bouncer": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Powerful, secure and Caring Email Verification - Usebouncer",
+      "description": "Improve the quality of your data and email marketing ROI with a Powerful, Secure, and Caring Email Verification Platform! 🌐",
+      "host": "usebouncer.com"
+    },
+    "brand24": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Brand24 - #1 AI Social Listening Tool",
+      "description": "Get instant access to mentions & insights across social media, news, blogs, videos, forums, podcasts, reviews, and more.",
+      "host": "brand24.com"
+    },
+    "breezyhr": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Modern Hiring Software & Applicant Tracking System | Breezy HR",
+      "description": "",
+      "host": "breezy.hr"
+    },
+    "brevo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Brevo: Email & SMS Marketing, CRM & Automation Platform",
+      "description": "Brevo is the most intuitive all-in-one customer engagement platform: email and SMS marketing, automation, CRM, live chat, and transactional email. Try it free.",
+      "host": "brevo.com"
+    },
+    "callrail": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "",
+      "description": "",
+      "host": "callrail.com"
+    },
+    "canva": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Canva: Visual Suite for Everyone",
+      "description": "Canva is a free-to-use online graphic design tool. Use it to create social media posts, presentations, posters, videos, logos and more.",
+      "host": "canva.com"
+    },
+    "capcut": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "CapCut AI Video Editor: Smart Online Video Editing with Advanced AI Tools",
+      "description": "Edit YouTube and Instagram videos with CapCut",
+      "host": "capcut.com"
+    },
+    "captions": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Captions: AI That Edits Like a Professional Editor",
+      "description": "Captions is an AI video generator and editor that makes it easy to go from idea to ready-to-share content. Get great videos every time, no matter your skillset.",
+      "host": "captions.ai"
+    },
+    "cargo-ai-getcargo-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Go-to-Market Infrastructure for Coding Agents | Cargo",
+      "description": "Cargo is go-to-market infrastructure for coding agents: Data models, Tools, Plays, and Context your team and your agents run on. Build in the app, via API, CLI, or Claude and Cursor.",
+      "host": "getcargo.ai"
+    },
+    "chatgpt": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "ChatGPT: Chat, Work, Create & Code with AI",
+      "description": "Use ChatGPT to answer questions, write, create images, complete work, and code—all in one place. Get started for free or download the app.",
+      "host": "chatgpt.com"
+    },
+    "cheap-inboxes": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Cheap Inboxes | Google & Microsoft Mailboxes for Cold Email",
+      "description": "Automated cold email infrastructure with cost-effective Google and Microsoft mailboxes, workspace isolation, DNS management, API access, and hands-on customer support.",
+      "host": "cheapinboxes.com"
+    },
+    "chili-piper": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Chili Piper | AI Website Conversion Platform",
+      "description": "Turn visitors into pipeline with AI agents that qualify, route, and schedule meetings before and after the form fill. Trusted by Gong, Meta & monday.com.",
+      "host": "chilipiper.com"
+    },
+    "claude": {
+      "fails": 0
+    },
+    "claude-code": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Claude Code by Anthropic | AI Coding Agent, Terminal, IDE",
+      "description": "Anthropic's agentic coding tool for developers. Claude Code understands your codebase, edits files, runs commands, and helps you ship faster.",
+      "host": "claude.com"
+    },
+    "clay": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Clay | Build systems to grow revenue",
+      "description": "",
+      "host": "clay.com"
+    },
+    "clickup": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "ClickUp Brain² | One AI to Replace them All",
+      "description": "",
+      "host": "clickup.com"
+    },
+    "crewai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "crewAI - Multi AI Agents systems.",
+      "description": "A framework for building multi AI Agents systems.",
+      "host": "crewai.dev"
+    },
+    "crunchbase": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Crunchbase | Private Company Data & Predictive Intelligence",
+      "description": "Discover private company data, funding insights, and AI-powered predictions with Crunchbase.",
+      "host": "crunchbase.com"
+    },
+    "cursor": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI Coding Agent for Building Ambitious Software | Cursor",
+      "description": "Built to make you extraordinarily productive, agents turn ideas into code. Accelerate development by handing off tasks to Cursor.",
+      "host": "cursor.com"
+    },
+    "customer-io": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Customer.io: Customer Engagement Platform For Better Outcomes",
+      "description": "Customer.io is a customer engagement platform for creating personalized journeys and better business outcomes across email, push, SMS, and in-app messaging.",
+      "host": "customer.io"
+    },
+    "dataforseo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Powerful API Stack For Data-Driven SEO Tools – DataForSEO",
+      "description": "We provide comprehensive data solutions for SEO and SEM analytics via API. DataForSEO is a trusted partner for 750+ SEO software companies and agencies.",
+      "host": "dataforseo.com"
+    },
+    "deel": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Deel x Proppel",
+      "description": "Global workforce management just got easier with Deel and Proppel. Scale your business with confidence. Hire, manage, and pay top talent in 150+ countries while staying fully compliant.",
+      "host": "deel.com"
+    },
+    "deepseek": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "DeepSeek | 深度求索",
+      "description": "深度求索（DeepSeek），探索未至之境。专注于研究世界领先的通用人工智能底层模型与技术，开源 DeepSeek-V4、DeepSeek-R1 等前沿大模型。和 DeepSeek AI 对话，轻松接入 API。",
+      "host": "deepseek.com"
+    },
+    "delphi-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Discover • Delphi",
+      "description": "Discover people on Delphi.",
+      "host": "delphi.co"
+    },
+    "descript": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Descript: AI Video & Audio Text-based Editor — Try Free",
+      "description": "Descript is the AI video and audio editor that makes editing as easy as editing text. Record, transcribe, edit, and publish in one tool. Try it free.",
+      "host": "descript.com"
+    },
+    "dia-browser": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Dia | The browser for better days at work.",
+      "description": "Dia is the browser for better days at work. Get answers without having to ask, produce beautiful ready-to-share outputs, and stay focused in the best browser for your work day.",
+      "host": "diabrowser.com"
+    },
+    "dripify": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "",
+      "description": "Dripify.com automates your LinkedIn outreach the smart way. Reach quality leads, follow up automatically, and turn conversations into sales faster than ever.",
+      "host": "dripify.com"
+    },
+    "elevenlabs": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Free AI Voice Generator & Voice Agents Platform | ElevenLabs",
+      "description": "Create lifelike speech with our AI voice generator and voice agents platform. Access 17,500+ voices in 90+ languages with secure APIs and SDKs.",
+      "host": "elevenlabs.io"
+    },
+    "emailbison": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "EmailBison - Private sequencer for the top 10%",
+      "description": "Email sequencing, private warmup, API, webhooks, and unlimited lead storage",
+      "host": "emailbison.com"
+    },
+    "emergent-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Emergent | Vibe Code Web & Mobile Apps in Minutes with AI",
+      "description": "",
+      "host": "emergent.sh"
+    },
+    "envoy": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Envoy | Workplace & visitor solutions platform",
+      "description": "",
+      "host": "envoy.com"
+    },
+    "exactbuyer": {
+      "fails": 2
+    },
+    "fathom-analytics": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Get a $10 credit for Fathom Analytics, the privacy-focused website analytics company - Fathom Analytics",
+      "description": "Someone has shared a link with you that gives you $10 credit upon sign-up.",
+      "host": "usefathom.com"
+    },
+    "figma": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Figma: The collaborative canvas for design, code, and AI",
+      "description": "Figma is the canvas where design, code, and AI come together. From first idea to shipped product — go from concept to production with your whole team, in one place.",
+      "host": "figma.com"
+    },
+    "firebase": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Firebase | Google's Mobile and Web App Development Platform",
+      "description": "Discover Firebase, Google’s mobile and web app development platform that helps developers build apps and games that users will love.",
+      "host": "google.com"
+    },
+    "flippa": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Why Flippa - Flippa",
+      "description": "",
+      "host": "flippa.com"
+    },
+    "flora": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "FLORA — Generative AI Canvas for Creative Teams",
+      "description": "FLORA is the AI-powered canvas for designers, brand teams, and agencies. Generate, edit, and produce visuals across 50+ models in one workspace.",
+      "host": "flora.ai"
+    },
+    "flowith": {
+      "fails": 0
+    },
+    "forage-mail": {
+      "fails": 2
+    },
+    "framer": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Framer: AI design agent",
+      "description": "Go from idea to launch with an agent that designs and builds on the canvas. Keep each change editable, with hosting, security, analytics, CMS, and SEO built in.",
+      "host": "framer.com"
+    },
+    "frase": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Frase — SEO & GEO Content Platform for AI Search",
+      "description": "The content operating system for AI search. Frase writes and optimizes content that ranks on Google and gets cited by AI — SEO, GEO, and AEO in one loop.",
+      "host": "frase.io"
+    },
+    "freckle": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Freckle – Run GTM workflows from your terminal",
+      "description": "Freckle is the CLI for building GTM workflows from your coding agent: 40+ data providers, CRM and Slack integrations, all driven by natural language.",
+      "host": "freckle.io"
+    },
+    "freshchat-by-freshworks": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Freshchat: Customer Messaging, Live Chat & Chatbots | Freshworks",
+      "description": "Freshchat is an AI-powered omnichannel messaging platform. Experience live chat and chatbot solutions for smarter conversational support. Free trial!",
+      "host": "freshworks.com"
+    },
+    "freshdesk-by-freshworks": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI-Powered Customer Service Software | Freshdesk | Freshworks",
+      "description": "Boost agent productivity and deliver seamless customer experiences with Freshdesk, an AI-powered customer service solution with omnichannel ticketing and automated workflows.",
+      "host": "freshworks.com"
+    },
+    "freshservice-by-freshworks": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI-Powered ITSM Platform | Simple, Scalable IT Service for Every Business",
+      "description": "Deliver enterprise IT service with Freshservice, an AI-powered ITSM platform that's quick to deploy, easy to use, and drives productivity and business impact.",
+      "host": "freshworks.com"
+    },
+    "fullenrich": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "FullEnrich — B2B Email & Phone Waterfall Enrichment",
+      "description": "#1 Waterfall Enrichment platform with 20+ providers. Find emails and phones of people you want to do business with.",
+      "host": "fullenrich.com"
+    },
+    "gemini": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "",
+      "description": "",
+      "host": "google.com"
+    },
+    "getresponse": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Automation, Landing Pages and Email Marketing Platform",
+      "description": "Unlock your revenue potential with GetResponse's marketing software. Automate sales, track revenue, and convert leads into loyal customers with ease.",
+      "host": "getresponse.com"
+    },
+    "github-copilot": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "GitHub Copilot · Your AI coding agent · GitHub · GitHub",
+      "description": "GitHub Copilot works every step of the way, from an open issue to reviewing and merging a pull request. Use it in your editor, the terminal, on your desktop, and on GitHub.",
+      "host": "github.com"
+    },
+    "gong": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Gong - Revenue AI OS",
+      "description": "Gong Revenue AI OS helps your entire GTM organization win. Drive growth with multimodal revenue signal processing, specialized AI agents, and purpose-built applications.",
+      "host": "gong.io"
+    },
+    "google-ads": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Reach Customers Across YouTube & Search - Google Ads",
+      "description": "Grow your business by running Google Ads. Start your first campaign, get quality leads, and reach new customers on Google and YouTube.",
+      "host": "google.com"
+    },
+    "google-ai-studio": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Google AI Studio",
+      "description": "The fastest path from prompt to production with Gemini",
+      "host": "google.com"
+    },
+    "google-analytics": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Analytics Tools & Solutions for Your Business - Google Analytics",
+      "description": "Google Analytics gives you the tools you need to better understand your customers. You can then use those business insights to take action, such as improving your website, creating tailored audience lists, and more.",
+      "host": "google.com"
+    },
+    "google-flow": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Google Flow - AI Creative Studio for Video, Images & Custom Tools",
+      "description": "Try Google Flow, the ultimate AI for creatives. Transform ideas into reality using Google’s advanced generative models for cinematic video, images, & tools.",
+      "host": "google.com"
+    },
+    "google-notebooklm": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Gemini Notebook | AI Research Tool & Thinking Partner",
+      "description": "Meet Gemini Notebook, the AI research tool and thinking partner that can analyze your sources, turn complexity into clarity and transform your content.",
+      "host": "notebook.google"
+    },
+    "google-search-console": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Google Search Console",
+      "description": "",
+      "host": "google.com"
+    },
+    "google-tag-manager": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "",
+      "description": "",
+      "host": "google.com"
+    },
+    "google-veo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Veo 3.1 — Google DeepMind",
+      "description": "",
+      "host": "deepmind.google"
+    },
+    "grok": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Grok",
+      "description": "Grok is an AI assistant built by SpaceXSI. Chat, create images, write code, and get real-time answers from the web and X.",
+      "host": "grok.com"
+    },
+    "gusto": {
+      "fails": 0
+    },
+    "heygen": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "HeyGen: Create AI Videos with Your Personal Avatar",
+      "description": "Be your best self, every time. Create clear, confident AI videos with your Personal Avatar—your face and voice, without filming every video. Try it free.",
+      "host": "heygen.com"
+    },
+    "heyreach": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "HeyReach | LinkedIn Automation Tool For Agencies, Sales & Growth teams",
+      "description": "",
+      "host": "heyreach.io"
+    },
+    "hubspot": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "HubSpot | Software & Tools for your Business - Homepage",
+      "description": "HubSpot",
+      "host": "hubspot.com"
+    },
+    "hunter": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Find email addresses and send cold emails • Hunter",
+      "description": "",
+      "host": "hunter.io"
+    },
+    "hypotenuse-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI-first PXM Platform for Ecommerce | Hypotenuse AI",
+      "description": "",
+      "host": "hypotenuse.ai"
+    },
+    "imgflip": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Imgflip - Create and Share Awesome Images",
+      "description": "Quickly turn your ideas into catchy shareables with Imgflip",
+      "host": "imgflip.com"
+    },
+    "inboxally": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Email Deliverability Software That Works | InboxAlly",
+      "description": "Email deliverability software guaranteed to boost email placement. InboxAlly’s real-time tracking and email warmup ensure your messages hit the inbox, not spam.",
+      "host": "inboxally.com"
+    },
+    "increff": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Supply Chain Management & Inventory Optimization | Increff",
+      "description": "",
+      "host": "increff.com"
+    },
+    "instantdb": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Instant",
+      "description": "We make you and your agent more productive by giving your frontend a real-time database.",
+      "host": "instantdb.com"
+    },
+    "instantly": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Sales Engagement and Lead Intelligence | Instantly",
+      "description": "",
+      "host": "instantly.ai"
+    },
+    "instapage": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Best Landing Page Builder & Software - Create High-Converting Landing Pages | Instapage",
+      "description": "Build high-converting landing pages with the best landing page creator and software. Drag-and-drop builder, 250+ templates, AI content, A/B testing, and personalization tools. Start your 14-day free trial.",
+      "host": "instapage.com"
+    },
+    "kaspr": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Kaspr - sign-up/partnerships",
+      "description": "Sign up for Kaspr.io through a partner referral link and unlock exclusive benefits! Enjoy seamless access to powerful tools for lead generation, special offers, and dedicated support.",
+      "host": "kaspr.io"
+    },
+    "klap": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Klap | Turn videos into viral TikToks, Reels & Shorts",
+      "description": "Klap turns long videos, podcasts and webinars into ready-to-post TikToks, Reels and YouTube Shorts in one click — with AI captions, smart reframing and viral-score insights.",
+      "host": "klap.app"
+    },
+    "klaviyo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Klaviyo: AI Marketing Platform & B2C CRM | Email, SMS, WhatsApp",
+      "description": "Klaviyo unifies AI-powered email marketing and SMS to drive growth, retention, and measurable results. Build personalised, omnichannel experiences across WhatsApp, ecommerce, and more with K:AI Agents.",
+      "host": "klaviyo.com"
+    },
+    "koalaai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Koala AI: AI SEO Platform for Google and AI Search",
+      "description": "Koala AI is AI SEO software with an SEO agent that plans from your Search Console data, a writer that drafts on-brand articles, and one-click publishing to your CMS. Free to start.",
+      "host": "koala.sh"
+    },
+    "krea": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Krea",
+      "description": "Krea is the world",
+      "host": "krea.ai"
+    },
+    "langchain": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "LangChain: the open agent platform to own your intelligence",
+      "description": "",
+      "host": "langchain.com"
+    },
+    "latenode": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Latenode — AI Workflow Automation with 335+ LLMs Built In",
+      "description": "AI workflow automation platform with LLMs built into every node. Build workflows, deploy AI agents, connect 5,500+ integrations. No API keys. Start free.",
+      "host": "latenode.com"
+    },
+    "leandata": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "LeanData AI GTM Orchestration for B2B Teams",
+      "description": "LeanData helps companies improve the buyer experience, accelerate time-to-revenue and increase operational alignment. Learn more.",
+      "host": "leandata.com"
+    },
+    "learnworlds": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "LearnWorlds Unboxed: Product Update Webinar",
+      "description": "Get an exclusive, fluff-free look at LearnWorlds' latest features, live demos, and roadmap sneak peeks with our product team.",
+      "host": "learnworlds.com"
+    },
+    "lemlist": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The only platform you need for outbound | lemlist",
+      "description": "Know who to target and why now, find verified contacts, and engage across every channel from lemlist, your CRM, or your AI assistant.",
+      "host": "lemlist.com"
+    },
+    "lindy": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Lindy – The AI Teammate That Lets You Do More",
+      "description": "Lindy is the AI employee that connects to all your tools, knows everything about your company, and does real work for the whole team.",
+      "host": "lindy.ai"
+    },
+    "linkedin-ads": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "LinkedIn Ads: Targeted Self-Serve Ads",
+      "description": "Use LinkedIn self-service ads to reach more than 1 billion users worldwide. Build effective ads that target your audience with helpful formats & budget management.",
+      "host": "linkedin.com"
+    },
+    "livestorm": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Webinar Software | Named G2 Leader in Webinar & Video conferencing",
+      "description": "",
+      "host": "livestorm.co"
+    },
+    "looka": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Logo Design & Brand Identity for Entrepreneurs | Looka",
+      "description": "Logojoy is now Looka! Design a Logo, make a website, and create a Brand Identity you’ll love with the power of Artificial Intelligence. 100% free to use.",
+      "host": "looka.com"
+    },
+    "looker-studio": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Data Studio Overview",
+      "description": "Unlock the power of your data with interactive dashboards and beautiful reports that inspire smarter business decisions.",
+      "host": "google.com"
+    },
+    "loom": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Free screen recorder for Mac and PC | Loom",
+      "description": "",
+      "host": "loom.com"
+    },
+    "lovable": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "App & Website Builder | Build Software in Minutes | Lovable",
+      "description": "Describe what you want in plain language and Lovable builds it: full-stack apps, websites and internal tools. Start free.",
+      "host": "lovable.dev"
+    },
+    "luma-labs-luma-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Luma | AI Agents for Creative Work",
+      "description": "Luma AI is the creative AI platform for video generation and image creation. Powered by the world's leading video generation models, Ray and Uni, and creative agents handling end-to-end workflows. Trusted by leading agencies and brands. Try it free.",
+      "host": "lumalabs.ai"
+    },
+    "lusha": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "",
+      "description": "Lusha provides high quality, unique premium data where you need it most: On social networks & the web, in Salesforce or directly to your product.",
+      "host": "lusha.com"
+    },
+    "make-com": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI Workflow Automation Software & Tools | Make",
+      "description": "",
+      "host": "make.com"
+    },
+    "manus-ai-agent": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Manus: Hands On AI",
+      "description": "Manus is the action engine that goes beyond answers to execute tasks, automate workflows, and extend your human reach.",
+      "host": "manus.im"
+    },
+    "manychat": {
+      "fails": 0
+    },
+    "marketerhire": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "MarketerHire: Hire the World's Best Expert Marketing Talent",
+      "description": "",
+      "host": "marketerhire.com"
+    },
+    "melio": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Accounts Payable Automation Software | Melio",
+      "description": "Automate your accounts payable end-to-end. Capture bills, approve, and pay vendors by card, ACH, or internationally. Syncs with QuickBooks. Xero, and NetSuite. Free to start.",
+      "host": "melio.com"
+    },
+    "memberstack": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Membership Platform for Webflow, WordPress & Any Site | Memberstack",
+      "description": "Add memberships, user logins, Stripe payments, and gated content to any website. Launch your membership site this weekend — free until you launch.",
+      "host": "memberstack.com"
+    },
+    "meta-ads-manager": {
+      "fails": 0
+    },
+    "meta-ai": {
+      "fails": 0
+    },
+    "meta-business-suite": {
+      "fails": 0
+    },
+    "microsoft-365-copilot": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Sign in to your account",
+      "description": "",
+      "host": "microsoftonline.com"
+    },
+    "microsoft-advertising": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Start using search ads, display ads, online video and more | Microsoft Advertising",
+      "description": "Advertise on Microsoft’s extensive network to reach audiences across search, display, and video. Use AI-driven tools to maximize ROI, engage users on Bing, MSN, and more. Connect with customers through effective pay-per-click campaigns.",
+      "host": "microsoft.com"
+    },
+    "microsoft-clarity": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Microsoft Clarity - Free Heatmaps & Session Recordings",
+      "description": "Clarity is a free user behavior analytics tool that helps you understand how users are interacting with your website through session replays and heatmaps.",
+      "host": "microsoft.com"
+    },
+    "microsoft-copilot": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Microsoft Copilot | Sign in",
+      "description": "Microsoft Copilot is AI built to help you get things done. Create, brainstorm, learn, and solve problems with AI chat that works across your day.",
+      "host": "copilot.com"
+    },
+    "midjourney": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Midjourney",
+      "description": "An independent research lab exploring new mediums of thought and expanding the imaginative powers of the human species.",
+      "host": "midjourney.com"
+    },
+    "millionverifier": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The #1 Email Verification Service - MillionVerifier",
+      "description": "The Most Comprehensive Email Verification Service from only $39: Email Checker, Email List Verify, Bulk Email Verifier, ESP Integrations, and Automatic Email Verification",
+      "host": "millionverifier.com"
+    },
+    "mistral": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Mistral | #1 in Sovereign AI: Frontier Open Models You Own",
+      "description": "Frontier open-weight models you own and control. Customize with Forge, deploy with Studio, run on-prem, your VPC, or our cloud.",
+      "host": "mistral.ai"
+    },
+    "motion": {
+      "fails": 0
+    },
+    "multiplier": {
+      "fails": 1
+    },
+    "murf-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Leading AI Voice & Conversational Agent Platform - Murf AI",
+      "description": "",
+      "host": "murf.ai"
+    },
+    "n8n": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI Workflow Automation Platform - n8n",
+      "description": "n8n is a workflow automation platform that uniquely combines AI capabilities with business process automation, giving technical teams the flexibility of code with the speed of no-code.",
+      "host": "n8n.io"
+    },
+    "napkin-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Napkin AI - Turn Text into AI Diagrams and Visuals",
+      "description": "",
+      "host": "napkin.ai"
+    },
+    "navattic": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Navattic: Interactive Product Demo Software",
+      "description": "Speed up your buyer journey with no-code demo automation. Sales demo software to create interactive demos for B2B SaaS teams. Try Navattic free.",
+      "host": "navattic.com"
+    },
+    "nestuge": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Nestuge - Monetize your expertise with ease",
+      "description": "Seamless onboarding for your communities, courses and events, collect payments and automate your workflow; all using your everyday apps.",
+      "host": "nestuge.com"
+    },
+    "neverbounce": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Email Verifier & Email List Cleaner | NeverBounce",
+      "description": "Join 96,000+ customers who trust NeverBounce as their #1 email verifier and list cleaner. Bulk verify 10k emails in 3 min. Start for free today!",
+      "host": "neverbounce.com"
+    },
+    "notion": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The AI workspace that works for you. | Notion",
+      "description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+      "host": "notion.com"
+    },
+    "notion-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The AI workspace that works for you. | Notion",
+      "description": "Build Custom Agents, search across all your apps, and automate busywork. The AI workspace where teams get more done, faster.",
+      "host": "notion.com"
+    },
+    "nrev-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI Infrastructure for Revenue Teams | nRev GTM Automations",
+      "description": "",
+      "host": "nrev.ai"
+    },
+    "ocean-io": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Ocean.io: contextual intelligence for go-to-market | Ocean.io",
+      "description": "Ocean.io learns your ICP from the deals you already won, then ranks every company in your market against it.",
+      "host": "ocean.io"
+    },
+    "octave": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Octave | Your Agentic GTM Brain",
+      "description": "",
+      "host": "octavehq.com"
+    },
+    "openai-codex": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Codex | AI Coding Partner from OpenAI | OpenAI",
+      "description": "The best way to build with agents. Codex accelerates real engineering work, from planning and building features to refactors, reviews, and releases.",
+      "host": "openai.com"
+    },
+    "opus-clip": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "OpusClip: #1 AI video clipping and editing tool",
+      "description": "",
+      "host": "opus.pro"
+    },
+    "outreach": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Agentic AI Platform for Revenue Teams | Outreach",
+      "description": "",
+      "host": "outreach.ai"
+    },
+    "outscraper": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Outscraper - get any public data from the internet",
+      "description": "Scrape Google Maps Places, Business Reviews, Photos, Play Market Reviews, and more. Get any public data from the internet by applying cutting-edge technologies.",
+      "host": "outscraper.com"
+    },
+    "papaya-global": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Schedule A Demo - Global Payroll Solution | Papaya Global",
+      "description": "Schedule a demo to let us show you how Papaya Global can simplify your international payroll.",
+      "host": "papayaglobal.com"
+    },
+    "partnerstack": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Partner Ecosystem Platform | Rated #1 | PartnerStack",
+      "description": "",
+      "host": "partnerstack.com"
+    },
+    "perplexity": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Perplexity",
+      "description": "Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question.",
+      "host": "perplexity.ai"
+    },
+    "perplexity-comet": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Perplexity",
+      "description": "Perplexity is a free AI-powered answer engine that provides accurate, trusted, and real-time answers to any question.",
+      "host": "perplexity.ai"
+    },
+    "phantom-buster": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "PhantomBuster",
+      "description": "",
+      "host": "phantombuster.com"
+    },
+    "pictory": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Pictory - Text to Video AI",
+      "description": "Create professional videos in minutes with Pictory’s AI video generator. Turn text, prompts, URLs, PPTs, images, and recordings into branded videos with captions, AI voices, and avatars.",
+      "host": "pictory.ai"
+    },
+    "pika-labs": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Pika",
+      "description": "AI creative tools. Built for Creatives.",
+      "host": "pika.art"
+    },
+    "play-ai": {
+      "fails": 2
+    },
+    "posthog": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "",
+      "description": "PostHog automatically diagnoses problems, fixes bugs, and generates pull requests – all without you having to prompt it.",
+      "host": "posthog.com"
+    },
+    "printify": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Printify: Build your eCommerce business in minutes.",
+      "description": "Put designs on 2000+ products with Printify. Sell on Etsy, TikTok, Amazon & more. On-demand orders mean no upfront cost. Start selling globally today!",
+      "host": "printify.com"
+    },
+    "prospeo": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Prospeo - Find Verified Emails & Phone Numbers for Outreach",
+      "description": "Prospeo helps sales teams find verified business emails and mobile numbers. Export leads and connect with decision-makers.",
+      "host": "prospeo.io"
+    },
+    "rb2b": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "RB2B: Website Visitor Identification Software | Free Plan",
+      "description": "Identify 70-80% of your website visitors with RB2B. Get names, LinkedIn profiles and business emails of anonymous visitors in Slack or your CRM. Start free.",
+      "host": "rb2b.com"
+    },
+    "reform": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Reform.app | No-Code Form Builder for High-Converting Lead Generation",
+      "description": "",
+      "host": "reform.app"
+    },
+    "remotion": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Remotion | Make videos programmatically",
+      "description": "",
+      "host": "remotion.dev"
+    },
+    "reoon": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Reoon - Boost Your Business With Us",
+      "description": "We provide different software solutions and professional tools to support your business.",
+      "host": "reoon.com"
+    },
+    "replicate": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Replicate - Run AI with an API",
+      "description": "Run open-source machine learning models with a cloud API",
+      "host": "replicate.com"
+    },
+    "replit": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI App and Website Builder | Replit",
+      "description": "Describe what you want. Replit builds it. Get a working app or website in minutes. No coding required.",
+      "host": "replit.com"
+    },
+    "reply-io": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI SDR Agent | Best AI Assistant | Jason AI",
+      "description": "Jason AI SDR Agent makes sales easy: personalized outreach, meetings booked, and more time for you to close. All powered by 1B+ real-time prospects data. Try it now!",
+      "host": "reply.io"
+    },
+    "riverside-fm": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Riverside: HD Podcast & Video Software | Free Recording & Editing",
+      "description": "",
+      "host": "riverside.com"
+    },
+    "runway-gen-4": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Runway | Building Real-World Intelligence",
+      "description": "Runway is building foundational Real-World Intelligence that can understand, simulate and act in the world. We offer products and services built on-top of this intelligence to empower individuals and organizations to do more in the world.",
+      "host": "runway.com"
+    },
+    "rytr": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Rytr: AI Relationship Manager & Follow-Up Assistant",
+      "description": "Rytr is an AI relationship manager for professionals. It brings client context from Gmail, Slack, calendars, and meeting notes into one brief, prepares meetings, and drafts follow-ups in your voice.",
+      "host": "rytr.me"
+    },
+    "salesforce": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Salesforce: The #1 AI CRM",
+      "description": "Salesforce is the #1 AI CRM, helping companies connect with customers in a whole new way — uniting the data, apps, and agents that run the business.",
+      "host": "salesforce.com"
+    },
+    "saleshandy": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "All-in-one Cold Outreach Platform | Saleshandy",
+      "description": "The best cold email outreach software to generate more leads. Automate your outreach with unlimited email accounts, high deliverability, and better open and reply rates.",
+      "host": "saleshandy.com"
+    },
+    "salesloft": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The Leading Predictive Revenue System | Salesloft",
+      "description": "Turn buyer signals into action with Salesloft's AI Predictive Revenue System. Learn how top revenue teams close deals faster and explore the platform.",
+      "host": "salesloft.com"
+    },
+    "salesql": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "SalesQL · LinkedIn Email Finder & AI Prospecting Tool",
+      "description": "Find verified emails and phone numbers from LinkedIn and beyond. Discover prospects, enrich contact data, and power your sales and recruiting outreach with accurate B2B information.",
+      "host": "salesql.com"
+    },
+    "scalenut": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Scalenut – AI-SEO & Expert-Led Services for Growth",
+      "description": "",
+      "host": "scalenut.com"
+    },
+    "screaming-frog": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Screaming Frog SEO Spider Website Crawler",
+      "description": "The industry leading website crawler for Windows, macOS and Ubuntu, trusted by thousands of SEOs and agencies worldwide for technical SEO site audits.",
+      "host": "screamingfrog.co.uk"
+    },
+    "seamless-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Seamless.AI - Best AI Sales Software & Business Leads Platform",
+      "description": "",
+      "host": "seamless.ai"
+    },
+    "selar": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "The best way to sell digital products online - Selar",
+      "description": "Home",
+      "host": "selar.com"
+    },
+    "semrush": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Semrush: Your Unfair Advantage for Growing Brand Visibility",
+      "description": "Semrush is the leading platform to grow and measure brand visibility across AI search, SEO, PPC, social, and more.",
+      "host": "semrush.com"
+    },
+    "sesame-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Sesame",
+      "description": "Intelligence with a point of view. Sesame voice agents are everyday collaborators who help you do more, talk things through, and follow your curiosity. Available on iOS and Android, coming soon to eyewear.",
+      "host": "sesame.com"
+    },
+    "smartlead": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Smartlead | Cold Email Software for Sales Teams That Run Outbound at Scale",
+      "description": "",
+      "host": "smartlead.ai"
+    },
+    "smartsuite": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "SmartSuite | Connected GRC Platform for the Enterprise",
+      "description": "",
+      "host": "smartsuite.com"
+    },
+    "sora-openai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "What to know about the Sora discontinuation | OpenAI Help Center",
+      "description": "Understand the Sora discontinuation, including content exports, data deletion, refunds, credits, and the upcoming API shutdown.",
+      "host": "openai.com"
+    },
+    "substack": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Substack",
+      "description": "The app for independent voices",
+      "host": "substack.com"
+    },
+    "suno-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Suno | AI Music Generator",
+      "description": "Create stunning original music for free in seconds using our AI generator. Make your own masterpieces, share with friends, and discover music from artists worldwide.",
+      "host": "suno.com"
+    },
+    "supabase": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Supabase | The Postgres Development Platform",
+      "description": "Build production-grade applications with a Postgres database, Authentication, instant APIs, Realtime, Functions, Storage and Vector embeddings. Start for free.",
+      "host": "supabase.com"
+    },
+    "superme-ai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "SuperMe | Think it through with people who’ve been there",
+      "description": "SuperMe brings the experience of people who've done it into your work. Think it through with them, and let your own work speak for itself.",
+      "host": "superme.ai"
+    },
+    "surfe": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Surfe: B2B Prospecting, Enrichment & CRM Sync",
+      "description": "",
+      "host": "surfe.com"
+    },
+    "synthesia": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Synthesia: #1 AI Video Platform for Business",
+      "description": "",
+      "host": "synthesia.io"
+    },
+    "synthflowai": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "AI Voice Agent Platform to Automate Your Phone Calls | Synthflow",
+      "description": "",
+      "host": "synthflow.ai"
+    },
+    "tally": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Tally - Create Beautiful Forms for Free | Unlimited Forms & Submissions",
+      "description": "The simplest way to create beautiful, professional forms in seconds. Unlimited forms, unlimited submissions, forever free. Just start typing - no coding needed.",
+      "host": "tally.so"
+    },
+    "taplio": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Taplio | AI tool to grow on LinkedIn in 10 min/day",
+      "description": "",
+      "host": "taplio.com"
+    },
+    "testimonial-to": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Testimonial — Capture, measure & showcase customer love",
+      "description": "The all-in-one platform to capture, measure, and showcase customer love — testimonials, case studies, NPS, and brand monitoring in one place.",
+      "host": "testimonial.to"
+    },
+    "textcortex": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "TextCortex: Enterprise AI Infrastructure That Delivers ROI",
+      "description": "",
+      "host": "textcortex.com"
+    },
+    "tiktok-ads-manager": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "TikTok for Business | Marketing & Advertising on TikTok",
+      "description": "Advertise on TikTok. Make ads that entertain and campaigns that connect. Where large and small businesses, agencies & creators can achieve big results.",
+      "host": "tiktok.com"
+    },
+    "trainual": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Trainual: Training, Operations & Performance Software",
+      "description": "",
+      "host": "trainual.com"
+    },
+    "travel-code": {
+      "fails": 1
+    },
+    "try-replay": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Replay — AI Audio Production by Weights",
+      "description": "Download Replay, the free offline AI audio tool for generating songs and voice covers on Mac, Windows, and Linux.",
+      "host": "weights.com"
+    },
+    "tweet-hunter": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Tweet Hunter | Get More X Followers | Tweets, Threads, Scheduler, Analytics",
+      "description": "",
+      "host": "tweethunter.io"
+    },
+    "typeform": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Form Builder with AI Automation | Typeform",
+      "description": "",
+      "host": "typeform.com"
+    },
+    "v0-by-vercel": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "v0 by Vercel - Build Full-Stack Web Apps with AI",
+      "description": "Your collaborative AI assistant to design, iterate, and scale full-stack applications for the web.",
+      "host": "v0.app"
+    },
+    "vercel": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Agentic Infrastructure - Vercel",
+      "description": "The autonomous stack for every app and agent.",
+      "host": "vercel.com"
+    },
+    "wati": {
+      "fails": 1
+    },
+    "webflow": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Webflow: The agentic web platform for modern businesses",
+      "description": "",
+      "host": "webflow.com"
+    },
+    "whatsapp-business": {
+      "fails": 0
+    },
+    "windsurf": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Devin Desktop | Devin",
+      "description": "Manage fleets of local and cloud agents from one surface. Plan, delegate, review, and ship without leaving your editor.",
+      "host": "devin.ai"
+    },
+    "wispr-flow": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Wispr Flow | Voice to Text Dictation & AI Notetaker",
+      "description": "",
+      "host": "wisprflow.ai"
+    },
+    "wordpress": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Blog Tool, Publishing Platform, and CMS – WordPress.org",
+      "description": "Open source software which you can use to easily create a beautiful website, blog, or app.",
+      "host": "wordpress.org"
+    },
+    "writesonic": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Writesonic | The AI Search Growth Engine. Win Customers.",
+      "description": "The AI Search Growth Engine. GEO, AEO, and AI visibility in one platform. Track 8 AI platforms, run the work, prove the lift. Trusted by Amazon, Unilever, Acer & NP Digital.",
+      "host": "writesonic.com?fpr=james-praise"
+    },
+    "zapier": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Zapier: Automate AI Workflows, Agents, and Apps",
+      "description": "Build and scale AI workflows and agents across 9,000+ apps with Zapier—the most connected AI orchestration platform. Trusted by 3 million+ businesses.",
+      "host": "zapier.com"
+    },
+    "zonka-feedback": {
+      "fails": 0,
+      "checked": "2026-10-20",
+      "title": "Zonka Feedback - AI Customer Feedback & Intelligence Platform",
+      "description": "Zonka Feedback’s AI Customer Feedback & Intelligence platforms help listen, analyze, act, and improve customer experiences to turn insight into action.",
+      "host": "zonkafeedback.com"
+    },
+    "zoominfo": {
+      "fails": 0
+    }
+  },
+  "tools_checked": "2026-10-20"
+}

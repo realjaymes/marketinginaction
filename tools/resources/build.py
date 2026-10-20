@@ -11,9 +11,10 @@ The page shell (head tags, tracking, header, footer and the Academy styling
 block) is copied from services/index.html, so a change there reaches these
 pages on the next build.
 Pages render against the data file's "updated" date, never today's date, so
---check gives the same answer on every machine. The daily upkeep job moves
-"updated" forward and rebuilds. A small script on the page also hides events
-that have passed since the last build.
+--check gives the same answer on every machine. The weekly upkeep job
+(tools/resources/upkeep.py) moves "updated" forward and rebuilds. A small
+script on the page also hides events that have passed since the last build.
+A tool with "hidden_since" (its site has been down) is left off the page.
 
 Usage:
   python3 tools/resources/build.py --write   rewrite the pages from the data
@@ -582,6 +583,11 @@ GROUP_ORDER = ["Outbound and sales", "Email and lifecycle", "SEO and content", "
 PARTNER = re.compile(r"james|partnerlinks|partnerstack|via=|fpr=|affiliate|referral|partners\.|partnerwith", re.I)
 
 
+def is_partner(i):
+    """A partner link earns MIA a commission. Most carry a tell in the URL; set "partner": true on a tool whose link does not."""
+    return bool(i.get("partner") or PARTNER.search(i["website"]))
+
+
 def gid(g):
     return re.sub(r"[^a-z0-9]+", "-", g.lower()).strip("-")
 
@@ -636,7 +642,7 @@ def tool_card(i, grp):
             <p class="db-label">Use cases</p>
             <ul class="db-uses">{uses}</ul>
             <p class="db-meta">{E(cats)}</p>
-            <div class="db-links">{link(i['website'], 'Visit ' + i['name'], bool(PARTNER.search(i['website'])))}</div>
+            <div class="db-links">{link(i['website'], 'Visit ' + i['name'], is_partner(i))}</div>
           </article>"""
 
 
@@ -649,6 +655,7 @@ def tools_files():
     errs = validate_tools(d, groups)
     if errs:
         fail(errs)
+    d["items"] = [i for i in d["items"] if not i.get("hidden_since")]
     cat2g = {c: g for g, cs in groups.items() for c in cs}
     as_of = iso(d["updated"])
     by = {g: [] for g in GROUP_ORDER}
@@ -696,7 +703,7 @@ def tools_files():
             {"@type": "ListItem", "position": k + 1, "item": {
                 "@type": "SoftwareApplication", "name": i["name"], "description": i["overview"],
                 "applicationCategory": tool_group(i, cat2g), "operatingSystem": "Web",
-                **({} if PARTNER.search(i["website"]) else {"url": i["website"]})}}
+                **({} if is_partner(i) else {"url": i["website"]})}}
             for k, i in enumerate(i for g in order for i in by[g])]}}, indent=2, ensure_ascii=False)
     page = shell("resources/marketing-ai-tools/", "Marketing & AI Tools Database | Marketing In Action",
                  "Find marketing and AI tools by the job you need done: outbound, email, SEO, ads, analytics, video and AI agents. See what each one does. Free to search.",
