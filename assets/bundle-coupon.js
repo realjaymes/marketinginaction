@@ -4,15 +4,17 @@
  * A ₦15,000-workshop buyer gets their ₦15,000 credited toward the ₦45,000
  * Mentorship, so they finish at the same ₦45,000 total a direct bundle buyer pays.
  *
- * ── To rotate / end the coupon ────────────────────────────────────────────
- *   Edit BUNDLE_COUPON below (code, discount, endDate) AND create the matching
- *   fixed-amount coupon in Selar on product `onlinemarketingbundle`. Rotate the
- *   code + endDate each month, aligned to the ₦5,000 price bump.
+ * ── To change or end the coupon ───────────────────────────────────────────
+ *   The code must match a fixed-amount coupon in Selar on product
+ *   `onlinemarketingbundle`. UPGRADE15 has no end date in Selar, so endDate is
+ *   empty and the offer stays on. To end it, set endDate (and the same date in
+ *   Selar) or blank the code. To rotate it, change code + discount here and
+ *   create the matching Selar coupon first.
  *
  * ── The "no expired banner" rule ──────────────────────────────────────────
  *   This is progressive enhancement. The pages' DEFAULT HTML is the normal
  *   full-price Mentorship offer. This script UPGRADES it to the coupon offer
- *   ONLY while the coupon window is open. Past endDate — or if the code is
+ *   ONLY while the coupon is on. Past a set endDate, or if the code is
  *   blanked, or if JS fails — the pages silently show the full-price offer.
  *   No "expired" message, no countdown-to-zero flip. Ever.
  *
@@ -38,7 +40,7 @@
   var BUNDLE_COUPON = {
     code: 'UPGRADE15',
     discount: 15000,                        // fixed ₦ off — drives net = base − discount
-    endDate: '2026-08-01T00:00:00+01:00'    // WAT; monthly, aligned to the price bump
+    endDate: ''                             // empty = no end (matches Selar); else e.g. '2027-01-01T00:00:00+01:00' (WAT)
   };
   var BASE_FALLBACK = 45000;                // keep in sync with /assets/prices.js onlinemarketingbundle
   var VALUE_ANCHOR = 255000;                // bundle page "total value if purchased separately" — drives the savings %
@@ -47,6 +49,7 @@
 
   function isActive() {
     if (!BUNDLE_COUPON || !BUNDLE_COUPON.code) return false;
+    if (!BUNDLE_COUPON.endDate) return true;
     var end = Date.parse(BUNDLE_COUPON.endDate);
     if (isNaN(end)) return false;
     return Date.now() < end;
