@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:UNBOUND (formerly INBOUND)
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:unbound-2027-09-08@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270908
+DTEND;VALUE=DATE:20270911
+SUMMARY:UNBOUND (formerly INBOUND)
+LOCATION:Boston\, United States
+DESCRIPTION:HubSpot's annual go-to-market conference\, rebranded from INBOUND to UNBOUND. https://unbound.hubspot.com/
+URL:https://unbound.hubspot.com/
+END:VEVENT
+END:VCALENDAR

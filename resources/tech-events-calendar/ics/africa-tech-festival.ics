@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Tech Festival
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-tech-festival-2026-11-17@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261120
+SUMMARY:Africa Tech Festival
+LOCATION:Cape Town International Convention Centre\, Cape Town\, South Africa
+DESCRIPTION:Telecoms\, AI\, cybersecurity\, startups and digital transformation show in Cape Town. https://africatechfestival.com/
+URL:https://africatechfestival.com/
+END:VEVENT
+END:VCALENDAR

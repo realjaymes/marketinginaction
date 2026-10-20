@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:AI Everything Kenya x GITEX Kenya
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:ai-everything-kenya-gitex-kenya-2027-05-12@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270515
+SUMMARY:AI Everything Kenya x GITEX Kenya
+LOCATION:Nairobi\, Kenya
+DESCRIPTION:AI summit and tech expo in Nairobi. https://www.aieverythingkenya.com/
+URL:https://www.aieverythingkenya.com/
+END:VEVENT
+END:VCALENDAR

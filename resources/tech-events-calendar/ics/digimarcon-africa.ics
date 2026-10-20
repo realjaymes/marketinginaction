@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:DigiMarCon Africa
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:digimarcon-africa-2027-10-06@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20271006
+DTEND;VALUE=DATE:20271008
+SUMMARY:DigiMarCon Africa
+LOCATION:V&A Waterfront\, Africa Avenue conference venue\, Cape Town\, South Africa
+DESCRIPTION:Two-day digital marketing\, media and advertising conference and exhibition in Cape Town. https://digimarconafrica.com/
+URL:https://digimarconafrica.com/
+END:VEVENT
+END:VCALENDAR

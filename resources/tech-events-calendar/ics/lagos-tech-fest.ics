@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Lagos Tech Fest
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:lagos-tech-fest-2027-02-22@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270224
+SUMMARY:Lagos Tech Fest
+LOCATION:Landmark Event Centre\, Victoria Island (main day)\; Civic Centre and other venues for side events\, Lagos\, Nigeria
+DESCRIPTION:An annual technology conference that brings together startup founders\, tech leaders\, investors\, government representatives\, and innovators across Africa to discuss digital transformation\, fintech\, AI\, Web3\, and enterprise technology while fostering collaboration and policy dialogue for ecosystem growth. https://tech.eventhive.ng/
+URL:https://tech.eventhive.ng/
+END:VEVENT
+END:VCALENDAR

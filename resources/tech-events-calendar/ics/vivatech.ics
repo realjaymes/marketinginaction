@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:VivaTech
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:vivatech-2027-06-16@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270616
+DTEND;VALUE=DATE:20270620
+SUMMARY:VivaTech
+LOCATION:Paris Expo Porte de Versailles\, Paris\, France
+DESCRIPTION:Large European startup and tech event in Paris. https://vivatech.com/
+URL:https://vivatech.com/
+END:VEVENT
+END:VCALENDAR

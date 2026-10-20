@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SaaStr AI Annual
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:saastr-ai-annual-2027-05-11@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270511
+DTEND;VALUE=DATE:20270513
+SUMMARY:SaaStr AI Annual
+LOCATION:San Mateo County Event Center\, San Mateo\, United States
+DESCRIPTION:B2B SaaS and AI conference with CMO\, CRO and CCO summits. https://saastrannual.com/
+URL:https://saastrannual.com/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Web Summit Vancouver
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:web-summit-vancouver-2027-05-25@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270525
+DTEND;VALUE=DATE:20270529
+SUMMARY:Web Summit Vancouver
+LOCATION:Vancouver\, Canada
+DESCRIPTION:North American Web Summit edition (formerly Collision). https://vancouver.websummit.com/
+URL:https://vancouver.websummit.com/
+END:VEVENT
+END:VCALENDAR

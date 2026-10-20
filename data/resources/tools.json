@@ -1,0 +1,3695 @@
+{
+  "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
+  "exported": "2026-10-20",
+  "count": 153,
+  "items": [
+    {
+      "notion_id": "284a6d41-709c-8125-a3c2-c30e83428e9a",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "1Password",
+      "overview": "1Password is a password manager that securely stores and manages user credentials and sensitive information.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Security",
+        "Password Management",
+        "Identity Management"
+      ],
+      "use_cases": [
+        "Securely store and autofill passwords",
+        "Manage team and enterprise access controls",
+        "Generate strong, unique passwords",
+        "Share credentials safely with team members",
+        "Monitor password health and vulnerabilities",
+        "Secure storage of sensitive documents",
+        "Streamline login across devices and platforms"
+      ],
+      "website": "https://1password.partnerlinks.io/james-mia",
+      "slug": "1password"
+    },
+    {
+      "notion_id": "284a6d41-709c-8177-90e9-c3de95a7ea16",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "800.com",
+      "overview": "800.com is an AI-powered business phone service that provides toll-free and local numbers with advanced call tracking and intelligence features.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Get professional toll-free and vanity business numbers easily.",
+        "Track and analyze calls with AI-powered intelligence features.",
+        "Generate automatic call summaries and scoring for teams.",
+        "Forward calls seamlessly to any device or location.",
+        "Automate follow-up actions and next steps after calls.",
+        "Ask AI questions about customer conversations and insights."
+      ],
+      "website": "https://try.800.com/james-mia",
+      "slug": "800-com"
+    },
+    {
+      "notion_id": "2dba6d41-709c-81f2-acfd-c24007799d8d",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Adcreative.ai",
+      "overview": "Adcreative.ai is an AI-powered platform that generates high-converting ad creatives automatically.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Advertising",
+        "Creative Automation",
+        "Marketing Technology"
+      ],
+      "use_cases": [
+        "Generating ad creatives quickly",
+        "Improving ad conversion rates",
+        "A/B testing ad variations",
+        "Personalizing advertisements",
+        "Scaling ad campaigns efficiently",
+        "Reducing design time for ads"
+      ],
+      "website": "https://free-trial.adcreative.ai/james-mia",
+      "slug": "adcreative-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-803d-b71d-c2cfe9dbff3f",
+      "created": "2025-08-11",
+      "last_edited": "2025-09-27",
+      "name": "Airops",
+      "overview": "Airops is a platform for Answer Engine Optimization that turns AI search insights into on‑site and off‑site content actions.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI SEO",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Audit AI search visibility and content gaps.",
+        "Plan keywords, briefs, and content from insights.",
+        "Optimize pages for answer engines and agents.",
+        "Track performance and refresh underperforming articles.",
+        "Orchestrate content workflows in Grid and Workflows."
+      ],
+      "website": "https://www.airops.com",
+      "slug": "airops"
+    },
+    {
+      "notion_id": "284a6d41-709c-8133-b4ee-e8abe428c89f",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "AISEO",
+      "overview": "AISEO is an AI-powered content creation platform that humanizes AI-generated text and creates SEO-optimized articles that bypass AI detection.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Humanize AI-generated content to bypass detection tools",
+        "Generate SEO-optimized articles and blog posts automatically",
+        "Paraphrase and rewrite content with high uniqueness",
+        "Improve readability and grammar of existing content",
+        "Create keyword-rich content for better search rankings",
+        "Transform robotic AI text into natural human writing"
+      ],
+      "website": "https://aiseo.ai",
+      "slug": "aiseo"
+    },
+    {
+      "notion_id": "2dba6d41-709c-81bd-a06e-c4aaadead134",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Amplitude",
+      "overview": "Amplitude is a product analytics platform that helps businesses understand user behavior to optimize digital experiences.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Product Analytics",
+        "User Behavior Analytics",
+        "Growth Analytics"
+      ],
+      "use_cases": [
+        "Tracking user engagement and retention",
+        "Analyzing customer conversion funnels",
+        "Optimizing feature adoption rates",
+        "Measuring impact of marketing campaigns",
+        "Identifying user segments for targeting",
+        "Improving product user experience"
+      ],
+      "website": "https://use.amplitude.com/james-mia",
+      "slug": "amplitude"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80ca-8e73-ef1135113891",
+      "created": "2025-08-11",
+      "last_edited": "2025-12-31",
+      "name": "Apify",
+      "overview": "Apify provides a platform of Actors for web scraping, automation, and AI agent deployment.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI Agents",
+        "Web Data Scraping"
+      ],
+      "use_cases": [
+        "Scrape web data at scale to feed AI models.",
+        "Deploy AI agents (Actors) for web workflows and processing.",
+        "Monetize agents through marketplace or integrations.",
+        "Combine scraping and AI with LangChain or Make.com.",
+        "Execute goal-driven tasks with stateful, serverless agents."
+      ],
+      "website": "https://apify.com",
+      "slug": "apify"
+    },
+    {
+      "notion_id": "27ba6d41-709c-80e1-b649-c8c02d83f687",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-06",
+      "name": "Apollo",
+      "overview": "Apollo is an AI-powered B2B sales platform that automates lead generation, data enrichment, and personalized outreach campaigns.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "Data Enrichment",
+        "Sales Intelligence",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Find and research B2B leads from 265M+ contacts",
+        "Automate personalized email and phone outreach campaigns",
+        "Enrich CRM data with 30+ data points",
+        "Generate AI-powered sales copy and messaging",
+        "Schedule meetings and record calls with AI insights",
+        "Manage entire sales pipeline in one platform"
+      ],
+      "website": "https://www.apollo.io",
+      "slug": "apollo"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8067-917b-f6330f64a1d3",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Argil",
+      "overview": "Argil is a no-code AI tool that converts text or PDFs into short, engaging videos.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Turn written content into short videos in minutes.",
+        "Summarize documents and match visuals automatically.",
+        "Customize tone, pacing, and visual style.",
+        "Generate videos formatted for TikTok, Reels, and Shorts.",
+        "Produce social-first content without editing software."
+      ],
+      "website": "https://www.argil.ai",
+      "slug": "argil"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8023-a9e9-f3f2929fd9c8",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Attio",
+      "overview": "Attio is an AI-native CRM platform designed for GTM builders with powerful workflows, data integration, and intelligent automation.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "Data Enrichment",
+        "AI Models",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Automate lead qualification and prospect routing workflows.",
+        "Enrich customer data from multiple integrated sources.",
+        "Build custom GTM workflows with AI-powered automation.",
+        "Generate intelligent summaries and relationship insights automatically.",
+        "Monitor customer health and identify expansion opportunities.",
+        "Integrate product usage data for PLG motions."
+      ],
+      "website": "https://attio.com",
+      "slug": "attio"
+    },
+    {
+      "notion_id": "24fa6d41-709c-8013-bc1e-e70969815024",
+      "created": "2025-08-14",
+      "last_edited": "2025-08-14",
+      "name": "Blink",
+      "overview": "Blink is an AI coding agent that builds and deploys websites, web apps, and mobile applications from plain English instructions.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Create fully functional websites, SaaS apps, and mobile apps without coding.",
+        "Describe your idea in natural language to auto-generate code, databases, and deployment.",
+        "Launch instantly with free hosting, SSL, and global CDN.",
+        "Connect custom domains for professional branding.",
+        "Build both web and mobile versions from a single project."
+      ],
+      "website": "https://blink.new",
+      "slug": "blink"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8000-b55c-ee9062e0116b",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Bolt AI",
+      "overview": "Bolt AI is a macOS-native ChatGPT client for instant, offline-accessible AI assistance.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Chat with AI directly from macOS menu bar.",
+        "Store conversations locally for offline privacy.",
+        "Use GPT models without browser distractions.",
+        "Access AI tools in any app via shortcuts.",
+        "Organize prompts and past chats for reuse."
+      ],
+      "website": "https://boltai.com",
+      "slug": "bolt-ai"
+    },
+    {
+      "notion_id": "284a6d41-709c-8116-a76e-d39d57cf7037",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Bolt Business",
+      "overview": "Bolt Business is a platform offering transportation and delivery solutions tailored for business needs.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Logistics",
+        "Transportation",
+        "Delivery Services"
+      ],
+      "use_cases": [
+        "Arrange business transportation for employees",
+        "Manage corporate delivery and logistics",
+        "Optimize travel expenses for companies",
+        "Track transport usage and reports",
+        "Schedule rides and deliveries efficiently",
+        "Support employee commuting with rides"
+      ],
+      "website": "https://bolt.eu/en/business/",
+      "slug": "bolt-business"
+    },
+    {
+      "notion_id": "284a6d41-709c-812a-b59b-e0123733d061",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Bookyourdata",
+      "overview": "Bookyourdata is a B2B lead generation platform providing access to contact and company data for sales and marketing outreach.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "Sales Intelligence",
+        "Marketing Data"
+      ],
+      "use_cases": [
+        "Find targeted B2B leads by criteria",
+        "Download verified business contact details",
+        "Build segmented prospect lists quickly",
+        "Enhance marketing and sales outreach",
+        "Integrate contact data into CRM systems",
+        "Improve lead qualification and conversion"
+      ],
+      "website": "https://join.bookyourdata.com/james-mia",
+      "slug": "bookyourdata"
+    },
+    {
+      "notion_id": "284a6d41-709c-8184-af75-d897cbc0ae6d",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Bouncer",
+      "overview": "Bouncer is a powerful email verification platform that validates email addresses to improve data quality and email marketing ROI.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment"
+      ],
+      "use_cases": [
+        "Clean email lists to improve deliverability rates",
+        "Verify email addresses in real-time via API",
+        "Protect signup forms from invalid email entries",
+        "Reduce bounce rates and improve sender reputation",
+        "Integrate with marketing platforms for automated verification",
+        "Enrich company data with publicly available information"
+      ],
+      "website": "https://withlove.usebouncer.com/ts20f6889948",
+      "slug": "bouncer"
+    },
+    {
+      "notion_id": "2dba6d41-709c-8158-9b3f-ecef66ec06dd",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Brand24",
+      "overview": "Brand24 is a social media monitoring tool that tracks online mentions and brand reputation in real time.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Social Media Monitoring",
+        "Reputation Management",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Tracking brand mentions online",
+        "Monitoring social media conversations",
+        "Analyzing customer sentiment",
+        "Identifying influencers and advocates",
+        "Measuring campaign performance",
+        "Managing online reputation"
+      ],
+      "website": "https://try.brand24.com/james-mia",
+      "slug": "brand24"
+    },
+    {
+      "notion_id": "284a6d41-709c-812c-ad05-d163429dc2f2",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "BreezyHR",
+      "overview": "BreezyHR is a recruiting software that streamlines hiring and applicant tracking processes.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Recruitment",
+        "Applicant Tracking System",
+        "Human Resources"
+      ],
+      "use_cases": [
+        "Automating job posting and candidate sourcing",
+        "Tracking applicant progress through hiring stages",
+        "Collaborating with hiring teams on candidate evaluation",
+        "Scheduling interviews and sending reminders",
+        "Managing candidate communication and feedback",
+        "Generating hiring reports and analytics"
+      ],
+      "website": "https://breezyhr.partnerlinks.io/james-mia",
+      "slug": "breezyhr"
+    },
+    {
+      "notion_id": "2dba6d41-709c-81e7-ad6b-c62c3d7e4380",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "CallRail",
+      "overview": "CallRail is a call tracking and analytics platform designed to help businesses measure marketing effectiveness through phone calls.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Call Tracking",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Tracking call sources by marketing channel",
+        "Analyzing call data for customer insights",
+        "Measuring campaign ROI via phone calls",
+        "Recording and reviewing sales calls",
+        "Routing calls to appropriate teams",
+        "Generating reports on call trends"
+      ],
+      "website": "https://partners.callrail.com/james-mia",
+      "slug": "callrail"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8038-91e2-f4ef4fdfb1f3",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Captions",
+      "overview": "Captions is an AI video creation and editing app for mobile and desktop.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Automatically caption videos in multiple languages.",
+        "Edit with AI-powered jump cuts and reframing.",
+        "Create scripts and record directly in the app.",
+        "Generate voiceovers and translations instantly.",
+        "Optimize videos for TikTok, YouTube, and Reels."
+      ],
+      "website": "https://www.captions.ai",
+      "slug": "captions"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80a9-a14b-e3cb56ed7738",
+      "created": "2025-08-11",
+      "last_edited": "2025-10-01",
+      "name": "Cargo.ai (GetCargo.ai)",
+      "overview": "GetCargo.ai orchestrates AI agents that manage outreach and account qualification for GTM teams.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Automate lead qualification with AI agent teams.",
+        "Engage prospects at scale without additional headcount.",
+        "Enrich stakeholder data and generate outreach.",
+        "Run GTM workflows autonomously in real time."
+      ],
+      "website": "https://www.getcargo.ai",
+      "slug": "cargo-ai-getcargo-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8187-9420-e8012e43eeca",
+      "created": "2025-08-11",
+      "last_edited": "2025-10-02",
+      "name": "ChatGPT",
+      "overview": "ChatGPT is a conversational AI by OpenAI that answers questions, generates content, and assists with tasks through natural language interaction.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI",
+        "Multimodal AI"
+      ],
+      "use_cases": [
+        "Writing and editing articles, emails, and marketing copy.",
+        "Answering questions and explaining concepts.",
+        "Brainstorming ideas for projects, campaigns, or creative work.",
+        "Generating and reviewing code.",
+        "Creating summaries and structured research notes."
+      ],
+      "website": "https://chatgpt.com/",
+      "slug": "chatgpt"
+    },
+    {
+      "notion_id": "27aa6d41-709c-80e4-8755-efd1d7a9eae6",
+      "created": "2025-09-26",
+      "last_edited": "2025-09-26",
+      "name": "Chili Piper",
+      "overview": "Chili Piper is a demand conversion platform that automatically qualifies, routes, and schedules leads into meetings instantly.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Qualifying and routing leads from web forms instantly",
+        "Automating meeting scheduling for sales teams",
+        "Converting inbound leads into qualified meetings",
+        "Streamlining SDR-to-AE handoff processes",
+        "Managing lead distribution with complex routing rules",
+        "Engaging website visitors through automated chat workflows"
+      ],
+      "website": "https://www.chilipiper.com",
+      "slug": "chili-piper"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8110-8818-f340fccf0cef",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Claude",
+      "overview": "Claude is Anthropic’s safe, reliable, multimodal AI assistant.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI",
+        "Multimodal AI"
+      ],
+      "use_cases": [
+        "Help write, research, and reason through content.",
+        "Assist with coding and advanced problem solving.",
+        "Analyze long documents and summarize efficiently.",
+        "Support marketing, SEO, and content creation.",
+        "Deliver thoughtful, human-like conversational experiences."
+      ],
+      "website": "https://claude.ai",
+      "slug": "claude"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8097-ad13-fd8e7f21f0d4",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-18",
+      "name": "Clay",
+      "overview": "Clay is an AI-powered GTM platform that centralizes data enrichment and workflow automation.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "GTM Automation"
+      ],
+      "use_cases": [
+        "Enrich lead and company data from 100+ sources seamlessly.",
+        "Automate personalized prospecting and outreach workflows.",
+        "Integrate enriched data directly into CRMs like Salesforce.",
+        "Use AI agents (Claygent) for research and profile building.",
+        "Build no-code boards to test GTM experiments quickly."
+      ],
+      "website": "https://clay.com/?via=james-praise",
+      "slug": "clay"
+    },
+    {
+      "notion_id": "284a6d41-709c-8127-9b5d-fb8433261ca9",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "ClickUp",
+      "overview": "ClickUp is a cloud-based productivity platform that combines project management, task tracking, and collaboration tools in one workspace.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Project Management",
+        "Collaboration",
+        "Task Management"
+      ],
+      "use_cases": [
+        "Tracking project progress and deadlines",
+        "Collaborating with team members",
+        "Organizing tasks and priorities",
+        "Managing workflows and processes",
+        "Creating and assigning tasks",
+        "Reporting and analytics for projects"
+      ],
+      "website": "https://try.web.clickup.com/james-mia",
+      "slug": "clickup"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80e8-aed8-c1e189ab4e9a",
+      "created": "2025-08-11",
+      "last_edited": "2025-12-31",
+      "name": "CrewAI",
+      "overview": "CrewAI is a framework for orchestrating multi-agent AI systems for complex tasks.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Coordinate specialized AI agents for team tasks.",
+        "Build pipelines that combine reasoning and execution.",
+        "Manage long-running processes with stateful agents.",
+        "Integrate external APIs and tools for each agent.",
+        "Develop collaborative AI workflows across domains."
+      ],
+      "website": "https://www.crewai.dev",
+      "slug": "crewai"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8038-a0ee-d5773a7b317b",
+      "created": "2025-09-27",
+      "last_edited": "2025-09-27",
+      "name": "Customer.io",
+      "overview": "Customer.io is an AI-powered customer engagement platform that creates personalized journeys across email, SMS, push, and in-app messaging using first-party data.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation",
+        "Sales Engagement",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Automate personalized email, SMS, and push notification campaigns",
+        "Create behavioral-triggered customer journey workflows across channels",
+        "Segment audiences using AI-powered insights and recommendations",
+        "Analyze campaign performance with AI-driven content optimization",
+        "Integrate first-party data from multiple sources seamlessly",
+        "Build omnichannel customer experiences with visual workflow builder"
+      ],
+      "website": "https://customer.io",
+      "slug": "customer-io"
+    },
+    {
+      "notion_id": "284a6d41-709c-8122-8a6e-fdf190237f79",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Deel",
+      "overview": "Deel is a global people platform that simplifies payroll, HR, compliance, and hiring for teams across 150+ countries.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [],
+      "use_cases": [
+        "Hire and pay global employees and contractors compliantly",
+        "Automate payroll processing across 150+ countries seamlessly",
+        "Get instant HR and legal answers through AI",
+        "Manage compliance and tax requirements automatically",
+        "Streamline onboarding and offboarding processes globally",
+        "Generate workforce insights and reports with AI"
+      ],
+      "website": "https://get.deel.com/james-mia",
+      "slug": "deel"
+    },
+    {
+      "notion_id": "24ca6d41-709c-819c-b686-eb438f05b7dc",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "DeepSeek",
+      "overview": "DeepSeek is a Chinese AI startup offering high-performance, cost-efficient open-weight large language models.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Foundational Models",
+        "Open-Source AI"
+      ],
+      "use_cases": [
+        "Chat, code, and solve logic tasks efficiently.",
+        "Deploy open models via web, app, or API.",
+        "Customize AI for domain-specific reasoning and coding.",
+        "Power enterprise apps with affordable model access.",
+        "Enable research and multitask applications with long context windows."
+      ],
+      "website": "https://www.deepseek.com",
+      "slug": "deepseek"
+    },
+    {
+      "notion_id": "27fa6d41-709c-8061-b43a-c255cd1cbdf9",
+      "created": "2025-10-01",
+      "last_edited": "2025-10-02",
+      "name": "Delphi AI",
+      "overview": "Delphi AI is a digital cloning platform that creates interactive AI versions of experts to scale their knowledge and availability infinitely.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Create digital clones that answer questions 24/7",
+        "Scale expertise without repeating yourself constantly",
+        "Monetize knowledge through personalized AI interactions",
+        "Deploy across websites, SMS, WhatsApp, and Slack",
+        "Build interactive profiles for lead generation",
+        "Provide always-on customer support and consultation"
+      ],
+      "website": "https://www.delphi.ai",
+      "slug": "delphi-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-806c-8e6f-c91ec337fc51",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-14",
+      "name": "Descript",
+      "overview": "Descript is an all-in-one audio/video editor with AI-powered transcription and editing.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing",
+        "Text-to-Audio Generation"
+      ],
+      "use_cases": [
+        "Edit media by editing text transcripts.",
+        "Remove filler words and background noise automatically.",
+        "Overdub voices to fix or add narration.",
+        "Create screen recordings and video tutorials.",
+        "Collaborate on projects with cloud syncing."
+      ],
+      "website": "https://www.descript.com",
+      "slug": "descript"
+    },
+    {
+      "notion_id": "2dba6d41-709c-81d9-abdb-dac7572224fd",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Dia Browser",
+      "overview": "Dia Browser is a private and secure web browser designed to protect user data and privacy while browsing.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Privacy Tools",
+        "Web Browsers"
+      ],
+      "use_cases": [
+        "Browsing the web securely and privately",
+        "Blocking trackers and ads automatically",
+        "Protecting personal data from surveillance",
+        "Improving online privacy while surfing",
+        "Managing cookies and site data easily"
+      ],
+      "website": "https://diabrowser.com",
+      "slug": "dia-browser"
+    },
+    {
+      "notion_id": "27ba6d41-709c-80aa-96bc-e0b549415678",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Dripify",
+      "overview": "Dripify is a LinkedIn automation and sales outreach platform that automates prospecting campaigns and lead generation.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "LinkedIn GTM Automation"
+      ],
+      "use_cases": [
+        "Automate LinkedIn connection requests and follow-up messages",
+        "Run personalized email outreach campaigns at scale",
+        "Enrich leads with verified business email addresses",
+        "Manage conversations in dedicated unified inbox",
+        "Analyze campaign performance with advanced analytics",
+        "Integrate with CRM systems like Salesforce"
+      ],
+      "website": "https://dripify.com/",
+      "slug": "dripify"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8067-9da9-c2d5ca7d2edb",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "ElevenLabs",
+      "overview": "ElevenLabs specializes in highly realistic and expressive AI voice synthesis.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Music & Audio Generation",
+        "Text-to-Audio Generation",
+        "Speech-to-Text Generation"
+      ],
+      "use_cases": [
+        "Generate natural-sounding narration or dialogue",
+        "Clone voices for dubbing or voiceovers",
+        "Produce multi-lingual expressive speech",
+        "Enable emotional tone customization in TTS",
+        "Support accessibility with lifelike voices"
+      ],
+      "website": "https://elevenlabs.io/",
+      "slug": "elevenlabs"
+    },
+    {
+      "notion_id": "2dba6d41-709c-8115-9989-e624d44a1328",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Emergent AI",
+      "overview": "Emergent AI is a platform that generates synthetic data to train and improve AI models efficiently.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Synthetic Data Generation",
+        "AI Model Training"
+      ],
+      "use_cases": [
+        "Generating synthetic data for machine learning",
+        "Improving AI model accuracy",
+        "Testing AI models with diverse data",
+        "Creating training data without privacy concerns",
+        "Augmenting datasets for rare events",
+        "Validating machine learning algorithms"
+      ],
+      "website": "https://emergent.sh/",
+      "slug": "emergent-ai"
+    },
+    {
+      "notion_id": "284a6d41-709c-8128-baeb-f017e4bd4563",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Envoy",
+      "overview": "Envoy is a workplace management platform that centralizes visitor check-ins, space booking, and workplace operations with security and compliance features.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Streamline visitor check-ins with digital registration and badges.",
+        "Book and manage meeting rooms and workspace reservations.",
+        "Track real-time occupancy and space utilization analytics.",
+        "Automate emergency notifications and safety confirmations.",
+        "Ensure compliance with ITAR, EAR, and trade regulations.",
+        "Integrate with existing access control and security systems."
+      ],
+      "website": "https://envoy.com",
+      "slug": "envoy"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80c3-b972-f283dc459079",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "ExactBuyer",
+      "overview": "ExactBuyer is an AI-powered cold email outreach platofm that that enriches CRM data and builds AI-driven, context-rich prospect profiles and campaigns.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Outbound GTM Outreach",
+        "Sales Engagement",
+        "Data Enrichment"
+      ],
+      "use_cases": [
+        "Enrich contacts and accounts with 115+ data attributes.",
+        "Build real-time audiences with AI-driven APIs.",
+        "Identify next-best actions for each prospect segment.",
+        "Craft AI-assisted emails to prospects on verified lists.",
+        "Create lookalike audiences for targeted campaigns."
+      ],
+      "website": "https://www.exactbuyer.com/",
+      "slug": "exactbuyer"
+    },
+    {
+      "notion_id": "284a6d41-709c-8113-9dc1-da42e327b435",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Fathom Analytics",
+      "overview": "Fathom Analytics is a privacy-first Google Analytics alternative that provides simple, cookieless website analytics with GDPR compliance.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Track website visitors without cookies or personal data",
+        "Monitor real-time traffic and user behavior patterns",
+        "Generate automated weekly or monthly email reports",
+        "Set up custom event tracking for conversions",
+        "Import historical data from Google Analytics seamlessly",
+        "Comply with GDPR, CCPA and privacy regulations"
+      ],
+      "website": "https://usefathom.com/ref/LMKMLA",
+      "slug": "fathom-analytics"
+    },
+    {
+      "notion_id": "24ca6d41-709c-809c-9610-f2912bb7b579",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Firebase",
+      "overview": "Firebase is Google’s development platform offering backend services—commonly used to power AI apps.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Databases",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Store AI-generated data in real-time databases.",
+        "Authenticate users and manage access roles.",
+        "Trigger functions after AI processing events.",
+        "Stream AI outputs to web/mobile clients.",
+        "Monitor usage and analytics across AI endpoints."
+      ],
+      "website": "https://firebase.google.com",
+      "slug": "firebase"
+    },
+    {
+      "notion_id": "284a6d41-709c-81be-97bb-e0b2b10692f6",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Flippa",
+      "overview": "Flippa is an online marketplace to buy and sell websites, domains, and digital businesses.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketplaces",
+        "Website Flipping"
+      ],
+      "use_cases": [
+        "Buying established websites and domains",
+        "Selling digital properties securely online",
+        "Valuating website and domain assets",
+        "Discovering investment opportunities",
+        "Managing transactions for web businesses",
+        "Connecting buyers with sellers worldwide"
+      ],
+      "website": "https://referral.flippa.com/james-mia",
+      "slug": "flippa"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8015-aa05-e9ac10e54924",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Flora",
+      "overview": "Flora is a node-based creative canvas integrating text, image, and video AI.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Multimodal Video Generation",
+        "Text-to-Image Generation",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Connect generative models visually on a canvas.",
+        "Iterate ideas with real-time, collaborative workflows.",
+        "Generate visuals and video from one workspace.",
+        "Share projects and workflows across teams.",
+        "Develop storyboards, campaigns, and concept reels."
+      ],
+      "website": "https://www.florafauna.ai",
+      "slug": "flora"
+    },
+    {
+      "notion_id": "284a6d41-709c-81dc-9f4d-ec11e4111fdc",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Flowith",
+      "overview": "Flowith is an AI-powered creation workspace with infinite canvas interface and autonomous agents for collaborative content creation.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Create interactive websites and web applications instantly",
+        "Generate presentations, slides, and visual content",
+        "Collaborate in real-time on infinite canvas workspace",
+        "Research and analyze data with autonomous agents",
+        "Build games, prototypes, and creative projects",
+        "Organize knowledge with AI-powered knowledge garden"
+      ],
+      "website": "https://aff.flowith.io/james-mia",
+      "slug": "flowith"
+    },
+    {
+      "notion_id": "284a6d41-709c-8132-842f-fadd87884f5b",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Forage Mail",
+      "overview": "Forage Mail is an AI-powered email management tool that filters low-priority emails and provides daily summaries to reduce inbox clutter by 90%.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Email Management"
+      ],
+      "use_cases": [
+        "Filter low-priority emails automatically from Gmail inbox",
+        "Generate daily summaries of filtered newsletters and promotions",
+        "Auto-label emails using AI without manual filter management",
+        "Bulk unsubscribe from unwanted senders with Deep Clean",
+        "Create bullet-point summaries of favorite newsletters",
+        "Maintain existing email workflow while reducing clutter"
+      ],
+      "website": "https://foragemail.com",
+      "slug": "forage-mail"
+    },
+    {
+      "notion_id": "284a6d41-709c-81f1-b59d-c96464adba32",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Frase",
+      "overview": "Frase is an AI-powered content optimization tool that helps create SEO and GEO-optimized content through research, writing, and optimization features.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Analyze competitor content and extract SERP insights automatically",
+        "Generate data-driven content briefs in under 6 seconds",
+        "Create optimized blog posts and articles with AI",
+        "Build content outlines using top-performing page data",
+        "Optimize existing content for search engines and AI",
+        "Research keywords and topics for content strategy"
+      ],
+      "website": "https://frase.io",
+      "slug": "frase"
+    },
+    {
+      "notion_id": "280a6d41-709c-808b-b928-ea45ad2b13c9",
+      "created": "2025-10-02",
+      "last_edited": "2025-10-06",
+      "name": "Freckle",
+      "overview": "Freckle is an AI-powered CRM enrichment platform that auto-enriches records using natural language queries and 40+ data providers.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "GTM Automation",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Auto-enrich CRM records from any data source seamlessly.",
+        "Ask for any data point using natural language.",
+        "Automate account research at scale with AI agents.",
+        "Maximize enrichment coverage with waterfall data providers.",
+        "Enable custom ICP and lead scoring with AI.",
+        "Keep CRM as single source of truth with HubSpot integration."
+      ],
+      "website": "https://www.freckle.io/",
+      "slug": "freckle"
+    },
+    {
+      "notion_id": "284a6d41-709c-81b5-8377-d6a610f32bfc",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "FreshChat by Freshworks",
+      "overview": "FreshChat is an AI-powered omnichannel messaging platform that enables businesses to engage customers across multiple channels with live chat, chatbots, and automated support workflows.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Provide real-time customer support across multiple channels",
+        "Deploy AI chatbots for automated FAQ responses",
+        "Route conversations intelligently between bots and human agents",
+        "Engage customers proactively on websites and mobile apps",
+        "Integrate customer messaging with CRM and support systems",
+        "Manage team collaboration for customer service workflows"
+      ],
+      "website": "https://www.freshworks.com/live-chat-software/",
+      "slug": "freshchat-by-freshworks"
+    },
+    {
+      "notion_id": "284a6d41-709c-8160-bbe3-ebfac142fa83",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "FreshDesk by Freshworks",
+      "overview": "Freshdesk is an AI-powered customer service platform that combines ticketing, automation, and omnichannel support to help teams resolve issues faster.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Manage customer tickets across email, chat, and voice channels",
+        "Automate ticket routing and assignment with AI workflows",
+        "Create self-service knowledge bases and community forums",
+        "Generate analytics reports and performance dashboards",
+        "Provide multilingual customer support and translations",
+        "Implement SLA policies and escalation workflows"
+      ],
+      "website": "https://www.freshworks.com/freshdesk/",
+      "slug": "freshdesk-by-freshworks"
+    },
+    {
+      "notion_id": "284a6d41-709c-81bb-8bad-d216fd5ac972",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Freshservice by Freshworks",
+      "overview": "Freshservice is an AI-powered IT service management platform that simplifies employee experiences with unified service desk, asset management, and workflow automation.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Automate incident management and ticket routing workflows",
+        "Manage IT assets and software licenses centrally",
+        "Enable employee self-service through AI chatbots",
+        "Streamline onboarding and offboarding processes across departments",
+        "Track service health and prevent outages proactively",
+        "Generate automated reports and performance analytics"
+      ],
+      "website": "https://www.freshworks.com/freshservice/",
+      "slug": "freshservice-by-freshworks"
+    },
+    {
+      "notion_id": "280a6d41-709c-802e-a2a7-c003a71c11b0",
+      "created": "2025-10-02",
+      "last_edited": "2025-10-02",
+      "name": "Fullenrich",
+      "overview": "FullEnrich is a B2B waterfall enrichment platform that aggregates 20+ data vendors to find emails and phone numbers with 80%+ accuracy.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment"
+      ],
+      "use_cases": [
+        "Find verified emails and mobile phone numbers.",
+        "Access 20+ premium data vendors from single platform.",
+        "Enrich contact data with waterfall methodology.",
+        "Integrate with 1000+ apps via API and webhooks.",
+        "Validate emails with multiple verification systems.",
+        "Expand internationally with location-optimized data sources."
+      ],
+      "website": "https://fullenrich.com/",
+      "slug": "fullenrich"
+    },
+    {
+      "notion_id": "24ca6d41-709c-811a-b0ef-ee327769ed0e",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Gemini",
+      "overview": "Gemini is Google’s next-generation multimodal AI assistant—built on powerful large language models capable of understanding and generating text, image, audio, and video.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI",
+        "Multimodal AI"
+      ],
+      "use_cases": [
+        "Write, edit, and summarize content.",
+        "Generate and edit images and videos.",
+        "Research topics with AI-powered browsing.",
+        "Create illustrated storybooks with narration.",
+        "Assist with voice commands on wearable devices."
+      ],
+      "website": "https://gemini.google.com/",
+      "slug": "gemini"
+    },
+    {
+      "notion_id": "284a6d41-709c-81fb-b3d0-c6f396efc52f",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Getresponse",
+      "overview": "GetResponse is an all-in-one online marketing platform for email marketing, automation, and webinar hosting.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "Marketing Automation",
+        "Webinar Platform"
+      ],
+      "use_cases": [
+        "Creating and sending marketing emails",
+        "Automating customer communication workflows",
+        "Hosting live and automated webinars",
+        "Building landing pages and forms",
+        "Tracking campaign performance metrics",
+        "Managing subscriber lists and segmentation"
+      ],
+      "website": "https://try.getresponsetoday.com/james-mia",
+      "slug": "getresponse"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81c5-9067-f4a3cc6bc0e7",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "GitHub Copilot",
+      "overview": "GitHub Copilot is an AI pair programmer that suggests and writes code in real time.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Platform-Integrated AI",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Autocomplete code and suggest functions inline.Generate boilerplate and repetitive code quickly.",
+        "Provide coding examples for unfamiliar frameworks.",
+        "Suggest fixes for syntax and logic errors.",
+        "Convert comments into working code automatically."
+      ],
+      "website": "https://github.com/features/copilot",
+      "slug": "github-copilot"
+    },
+    {
+      "notion_id": "24ca6d41-709c-813d-8f54-d35e52347440",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Google AI Studio",
+      "overview": "Google AI Studio is a web-based IDE for prototyping with Gemini AI models.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Prompt Engineering",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Experiment with text, image, and video prompts.",
+        "Fine-tune model parameters like temperature and safety.",
+        "Export prompt logic as code for apps.",
+        "Deploy prototypes to Vertex AI seamlessly.",
+        "Share templates and collaborate on prompt designs."
+      ],
+      "website": "https://aistudio.google.com",
+      "slug": "google-ai-studio"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81e6-8a3b-c1d10ca66ad3",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Google NotebookLM",
+      "overview": "NotebookLM is Google’s AI-powered research companion grounded in your documents.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI Research Assistant"
+      ],
+      "use_cases": [
+        "Summarize and analyze uploaded documents and PDFs.",
+        "Generate audio overviews and mind map visualizations.",
+        "Chat with AI grounded in your own sources.",
+        "Share notebooks and individual AI-generated artifacts.",
+        "Explore curated expert notebooks and interactive collections."
+      ],
+      "website": "https://notebooklm.google",
+      "slug": "google-notebooklm"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81af-8ada-d6ac6767fc95",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Google Veo",
+      "overview": "Google Veo (Veo 3) is a DeepMind text-to-video AI with native audio.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Multimodal Video Generation",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Generate videos with synched dialogue, ambient audio, and effects.",
+        "Create cinematic 1080p video from text or image prompts.",
+        "Available in Gemini app and via Vertex AI API.",
+        "Opt for Veo 3 Fast for rapid iteration and production.",
+        "Include watermarking for safer, ethical generation."
+      ],
+      "website": "https://deepmind.google/models/veo",
+      "slug": "google-veo"
+    },
+    {
+      "notion_id": "24ca6d41-709c-816d-8f8a-d9f30cc0abc1",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Grok",
+      "overview": "Grok is Elon Musk’s witty, real‑time AI chatbot by xAI.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Chat naturally with real‑time web-updated responses.",
+        "Write and debug code across multiple languages.",
+        "Create images and 15‑second videos via prompts.",
+        "Conduct deep research with live internet access.",
+        "Manage documents, projects, and task automation."
+      ],
+      "website": "https://grok.com/",
+      "slug": "grok"
+    },
+    {
+      "notion_id": "284a6d41-709c-815e-94fc-ee7bfa974409",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Gusto",
+      "overview": "Gusto is a platform that provides payroll, benefits, and HR management for small businesses.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "HR Management",
+        "Payroll",
+        "Employee Benefits"
+      ],
+      "use_cases": [
+        "Automate payroll processing and tax filings",
+        "Manage employee benefits and insurance",
+        "Streamline onboarding and HR tasks",
+        "Track employee time and attendance",
+        "Generate compliance reports",
+        "Manage contractor payments"
+      ],
+      "website": "https://get.gusto.com/u9dw3vgm528r",
+      "slug": "gusto"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8011-8105-cfc5585e0b7d",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "HeyGen",
+      "overview": "HeyGen is a powerful platform that transforms text into studio-quality avatar videos.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Turn scripts into engaging avatar videos instantly.",
+        "Select from 300+ avatars and diverse voice options.",
+        "Create localized videos in 170+ languages.",
+        "Use for marketing, training, and e-learning content.",
+        "Scale production with templates and brand customization."
+      ],
+      "website": "https://www.heygen.com",
+      "slug": "heygen"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8045-86f4-e9d7b3093d4a",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "HeyReach",
+      "overview": "HeyReach is a LinkedIn automation platform for agencies, sales teams, and GTM operators to scale personalized outreach safely.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "LinkedIn GTM Automation"
+      ],
+      "use_cases": [
+        "Automate LinkedIn connection requests, messages, and profile views.",
+        "Rotate unlimited sender accounts for higher volume safely.",
+        "Import leads from tools like Sales Navigator and Clay.",
+        "Manage all replies in a unified inbox.",
+        "Track campaign performance, A/B tests, and lead behavior."
+      ],
+      "website": "https://www.heyreach.io/",
+      "slug": "heyreach"
+    },
+    {
+      "notion_id": "27ba6d41-709c-80a8-bea8-c0ad251d2604",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Hubspot",
+      "overview": "HubSpot is an AI-powered customer platform that unites marketing, sales, and service teams with CRM, automation, and Breeze AI tools to grow businesses.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation",
+        "AI Agents",
+        "Platform-Integrated AI",
+        "Sales Engagement",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Automate marketing campaigns and lead nurturing workflows",
+        "Manage sales pipelines and customer relationships effectively",
+        "Create AI-powered content and personalized customer experiences",
+        "Provide automated customer service with AI agents",
+        "Generate comprehensive business analytics and reporting",
+        "Build and manage websites with AI assistance"
+      ],
+      "website": "https://www.hubspot.com",
+      "slug": "hubspot"
+    },
+    {
+      "notion_id": "284a6d41-709c-814f-bbb8-efedbcd743f8",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Hypotenuse AI",
+      "overview": "Hypotenuse AI is an AI platform for ecommerce brands that generates product descriptions, enriches data, and creates marketing content in brand voice.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment"
+      ],
+      "use_cases": [
+        "Generate bulk SEO-optimized product descriptions quickly",
+        "Enrich missing product data from multiple sources",
+        "Create marketing content like ads and social posts",
+        "Enhance and standardize product images with AI",
+        "Automate content workflows for ecommerce platforms",
+        "Localize content for different markets and languages"
+      ],
+      "website": "https://hypotenuse.ai",
+      "slug": "hypotenuse-ai"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8001-b00f-fb31e636c857",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Imgflip",
+      "overview": "Imgflip is a free online platform for creating memes, GIFs, and charts with AI-powered tools and over 1 million templates.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Models"
+      ],
+      "use_cases": [
+        "Create viral memes from text prompts using AI",
+        "Generate animated GIFs from videos and images",
+        "Build custom pie charts and bar graphs",
+        "Access over 1 million meme and GIF templates",
+        "Share content directly to social media platforms",
+        "Remove watermarks with premium subscription options"
+      ],
+      "website": "https://imgflip.com",
+      "slug": "imgflip"
+    },
+    {
+      "notion_id": "284a6d41-709c-8196-9c68-c72060c94b9e",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "InboxAlly",
+      "overview": "InboxAlly is an email deliverability tool that teaches inbox providers to prioritize your emails, dramatically improving open rates and sender reputation.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Deliverability"
+      ],
+      "use_cases": [
+        "Improve email deliverability and avoid spam folders",
+        "Double email open rates within 1-2 weeks",
+        "Train Gmail, Yahoo, Outlook to trust your emails",
+        "Track email placement across different providers",
+        "Warm up new domains and IP addresses",
+        "Repair damaged sender reputation automatically"
+      ],
+      "website": "https://www.inboxally.com",
+      "slug": "inboxally"
+    },
+    {
+      "notion_id": "284a6d41-709c-81c1-b280-c892b7672c7b",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Increff",
+      "overview": "Increff is an AI-powered retail SaaS platform that simplifies inventory management and streamlines omnichannel supply chain operations.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Optimize inventory levels with AI-driven demand forecasting",
+        "Automate merchandise planning and buying decisions",
+        "Streamline allocation and replenishment across stores",
+        "Reduce unsold inventory through markdown optimization",
+        "Enhance omnichannel fulfillment and warehouse operations",
+        "Generate business intelligence insights for retail decisions"
+      ],
+      "website": "https://partners.increff.com/james-mia",
+      "slug": "increff"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8036-b9f2-f5fb75975165",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "InstantDB",
+      "overview": "InstantDB is a real-time reactive database for building AI-powered applications.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Developer Tools",
+        "Databases"
+      ],
+      "use_cases": [
+        "Build apps with instant data sync and reactivity.",
+        "Store and query AI-generated content in real time.",
+        "Combine database and app logic in one platform.",
+        "Integrate with AI agents for dynamic UIs.",
+        "Create collaborative apps without backend setup."
+      ],
+      "website": "https://www.instantdb.com",
+      "slug": "instantdb"
+    },
+    {
+      "notion_id": "24ca6d41-709c-804a-b3f4-d545df185e60",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Instantly",
+      "overview": "Instantly is an AI-powered cold email outreach platform for scalable, automated campaigns.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Outbound GTM Outreach",
+        "Sales Engagement"
+      ],
+      "use_cases": [
+        "Send cold emails at scale from unlimited accounts.",
+        "Automate domain setup, warming, and deliverability tracking.",
+        "Use AI to personalize sequences with Spintax, prompts, and A/B testing.",
+        "Monitor metrics like conversions and revenue and optimize campaigns."
+      ],
+      "website": "https://instantly.ai/",
+      "slug": "instantly"
+    },
+    {
+      "notion_id": "284a6d41-709c-817b-85d5-f87b41482618",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Instapage",
+      "overview": "Instapage is a no-code landing page builder with AI content generation and conversion optimization tools for marketers.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Create high-converting landing pages with drag-and-drop builder",
+        "Generate AI-powered headlines, CTAs, and page content",
+        "Run A/B tests and AI experiments automatically",
+        "Personalize landing pages for different audiences",
+        "Integrate with 120+ marketing tools and CRMs",
+        "Scale landing page creation with templates and blocks"
+      ],
+      "website": "https://instapage.com",
+      "slug": "instapage"
+    },
+    {
+      "notion_id": "284a6d41-709c-81fd-9c18-c46e8833677a",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Kaspr",
+      "overview": "Kaspr is a tool that helps find and verify professional contact information for lead generation.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "Sales Intelligence",
+        "Contact Data Enrichment"
+      ],
+      "use_cases": [
+        "Finding professional emails and phone numbers",
+        "Verifying accuracy of contact information",
+        "Enriching lead lists with data",
+        "Improving sales prospecting efficiency",
+        "Building targeted outreach campaigns"
+      ],
+      "website": "https://kaspr.partnerlinks.io/3qxtpqd94zwe",
+      "slug": "kaspr"
+    },
+    {
+      "notion_id": "284a6d41-709c-81d0-8c1e-f11d00da5b4a",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Klap",
+      "overview": "Klap is an AI-powered video editing tool that automatically converts long-form videos into viral short clips for TikTok, Instagram Reels, and YouTube Shorts.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Convert long YouTube videos into multiple short clips automatically",
+        "Generate engaging captions and subtitles for social media posts",
+        "Automatically reframe videos to focus on important subjects",
+        "Create TikToks, Reels, and Shorts from podcasts and interviews",
+        "Schedule and publish video clips across multiple platforms",
+        "Repurpose educational content for different social media channels"
+      ],
+      "website": "https://klap.app",
+      "slug": "klap"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81e9-a40c-ea23fafa034a",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Kling AI",
+      "overview": "Kling AI is Kuaishou’s cinematic text-to-video and image creator.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Video & Image Generation",
+        "Text-to-Image Generation",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Generate realistic videos and images from prompts.",
+        "Simulate physics-driven scene motion and lip-sync.",
+        "Edit using AI tools like green screen and motion tracking.",
+        "Upscale footage, denoise, sharpen, and color-grade.",
+        "Extend videos and include multi-element customization."
+      ],
+      "website": "https://kling-ai.video",
+      "slug": "kling-ai"
+    },
+    {
+      "notion_id": "284a6d41-709c-81dc-9439-e7f8c968dc22",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "KoalaAI",
+      "overview": "KoalaAI is an AI-powered content creation platform that generates SEO-optimized articles and provides chatbot capabilities for content creators and marketers.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Generate SEO-optimized blog posts and articles automatically",
+        "Create Amazon affiliate product reviews and roundups",
+        "Automate internal linking and schema markup generation",
+        "Produce bulk content for websites and blogs",
+        "Generate AI images for content enhancement",
+        "Integrate with WordPress, Shopify, and other CMS platforms"
+      ],
+      "website": "https://koala.sh/?via=james-praise",
+      "slug": "koalaai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8011-b555-fb47e079fed2",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Krea",
+      "overview": "Krea AI is an intuitive generative suite for images and videos.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Image Generation",
+        "Text-to-Video Generation",
+        "Multimodal Video Generation"
+      ],
+      "use_cases": [
+        "Generate, edit, and animate visuals in real-time.",
+        "Upscale and enhance images and video content.",
+        "Train custom models for consistent style outputs.",
+        "Edit and reframe visuals with canvas tools.",
+        "Collaborate via shared workflows and instant feedback."
+      ],
+      "website": "https://www.krea.ai",
+      "slug": "krea"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80a0-8d51-f01a48d6c51d",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "LangChain",
+      "overview": "LangChain is an open-source framework for constructing LLM applications with tools and agents.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Build app logic with chains and tool calling.",
+        "Integrate APIs, databases, browsers as callable tools.",
+        "Create agents that select and invoke tools dynamically.",
+        "Compose toolkits for search, code interpretation, or productivity.",
+        "Parse and structure LLM outputs for downstream tasks."
+      ],
+      "website": "https://langchain.com",
+      "slug": "langchain"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80df-8519-d3ccea3b82fc",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Latenode",
+      "overview": "Latenode is a low-code AI automation platform for building workflows and agents across services.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Link AI agents into seamless cross‑app workflows.",
+        "Automate business logic via no‑code interfaces.",
+        "Scale operations efficiently—charged per execution time.",
+        "Integrate APIs, headless browser, and custom code."
+      ],
+      "website": "https://latenode.com",
+      "slug": "latenode"
+    },
+    {
+      "notion_id": "284a6d41-709c-8189-a4c2-e07cb7972b80",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "LearnWorlds",
+      "overview": "LearnWorlds is an AI-powered learning management system (LMS) that enables course creators to build, market, and sell online courses with interactive features.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Create and sell online courses with AI assistance",
+        "Build interactive video learning experiences with quizzes",
+        "Generate course content using AI course planner",
+        "Design branded academy websites with templates",
+        "Automate marketing funnels and student engagement",
+        "Develop mobile apps for course delivery"
+      ],
+      "website": "https://get.learnworlds.com/james-mia",
+      "slug": "learnworlds"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80c5-8863-d8888ffc6747",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-20",
+      "name": "Lemlist",
+      "overview": "Lemlist is a multichannel outreach platform that finds, enriches, and reaches prospects via email, LinkedIn, WhatsApp, and calls.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Outbound GTM Outreach",
+        "Sales Engagement",
+        "Lead Generation",
+        "Data Enrichment",
+        "LinkedIn GTM Automation"
+      ],
+      "use_cases": [
+        "Build lead lists from a 450M+ contact database.",
+        "Enrich contacts with verified emails and phone numbers.",
+        "Personalize outreach at scale with AI.",
+        "Automate email, LinkedIn, WhatsApp, and call sequences.",
+        "Boost deliverability with Lemwarm’s automated warm-up."
+      ],
+      "website": "https://www.lemlist.com/",
+      "slug": "lemlist"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80d4-9a15-f70b4acd5ca6",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Lindy",
+      "overview": "Lindy is a no-code AI agent platform that automates workflows across tools.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI Agents",
+        "Workflow Automation",
+        "AI Workflow Automation"
+      ],
+      "use_cases": [
+        "Build agents to qualify leads and send personalized outreach.",
+        "Auto-schedule meetings and manage email follow-ups.",
+        "Summarize meetings and prepare agendas contextually.",
+        "Automate customer support using organizational knowledge.",
+        "Use drag-and-drop workflow editor—no coding required."
+      ],
+      "website": "https://www.lindy.ai",
+      "slug": "lindy"
+    },
+    {
+      "notion_id": "284a6d41-709c-81d8-9365-c30972a93c12",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Livestorm",
+      "overview": "Livestorm is a browser-based webinar and video meeting platform designed for interactive online events.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Webinar Software",
+        "Video Conferencing",
+        "Online Events"
+      ],
+      "use_cases": [
+        "Hosting live and automated webinars",
+        "Conducting interactive online meetings",
+        "Engaging audiences with polls and Q&A",
+        "Recording and sharing event replays",
+        "Integrating with marketing automation tools"
+      ],
+      "website": "https://get.livestorm.co/8ddqi47kdm7b",
+      "slug": "livestorm"
+    },
+    {
+      "notion_id": "284a6d41-709c-815d-b556-db69634845fe",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Looka",
+      "overview": "Looka is an AI-powered logo maker and brand design platform that helps users create custom logos and brand assets.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Branding",
+        "Logo Design",
+        "Graphic Design"
+      ],
+      "use_cases": [
+        "Design custom logos quickly",
+        "Create brand identity assets",
+        "Generate professional marketing materials",
+        "Customize logos with AI suggestions",
+        "Download high-quality logo files"
+      ],
+      "website": "https://looka.partnerlinks.io/james-mia",
+      "slug": "looka"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80e9-85e7-dd47ecb9a032",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Lovable",
+      "overview": "Lovable is a no-code platform that turns ideas into functional apps with AI.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Build web apps from simple text descriptions.",
+        "Auto-generate database schema and backend logic.",
+        "Customize UI with drag-and-drop editing.",
+        "Deploy apps instantly to production.",
+        "Iterate on features with conversational AI updates."
+      ],
+      "website": "https://lovable.dev",
+      "slug": "lovable"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81c1-8e79-dfed35a48523",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Luma Labs (Luma AI)",
+      "overview": "Luma AI enables realistic video, 3D model, and image generation.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Multimodal Video Generation"
+      ],
+      "use_cases": [
+        "Generate videos and images from text, image, or video.",
+        "Use Ray2 and Dream Machine for motion and world-building.",
+        "Reframe and Modify Video to restyle visuals creatively.",
+        "Employ APIs for enterprise-grade media creation.",
+        "Build 3D objects using generative model “Genie.”"
+      ],
+      "website": "https://lumalabs.ai",
+      "slug": "luma-labs-luma-ai"
+    },
+    {
+      "notion_id": "284a6d41-709c-8196-bf71-f917946a79d2",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Lusha",
+      "overview": "Lusha is an AI-powered sales intelligence platform that provides verified B2B contact data and automated prospecting workflows.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence",
+        "Data Enrichment",
+        "GTM Automation"
+      ],
+      "use_cases": [
+        "Find verified contact details for decision-makers globally.",
+        "Enrich CRM records with accurate B2B data.",
+        "Build targeted prospect lists with advanced filtering.",
+        "Automate personalized email outreach sequences.",
+        "Integrate enriched data into existing sales tools.",
+        "Track buying signals and intent data."
+      ],
+      "website": "https://partnerstack.lusha.com/x4k7cvam054o",
+      "slug": "lusha"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8062-b097-c1cd1974d7a2",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Make.com",
+      "overview": "Make is a visual no-code automation platform with powerful AI integration.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Build AI workflows with drag-and-drop scenario builder.",
+        "Connect AI tools like OpenAI, Anthropic, and Perplexity.",
+        "Deploy adaptive AI agents that adjust in real time.",
+        "Automate content, customer support, and data tasks.",
+        "Manage workflows at enterprise scale with security and compliance."
+      ],
+      "website": "https://make.com",
+      "slug": "make-com"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80b6-b455-c3b711addb9f",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Manus AI Agent",
+      "overview": "Manus is a fully autonomous AI agent that executes complex tasks from minimal prompts.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Sort résumés, analyze trends, build web apps.",
+        "Run parallel agent swarms (100+) for broad research.",
+        "Integrate image generation seamlessly within task workflows.",
+        "Replay task execution to audit decisions post-completion.",
+        "Automate complex multi-step workflows in the cloud."
+      ],
+      "website": "https://manus.im/",
+      "slug": "manus-ai-agent"
+    },
+    {
+      "notion_id": "284a6d41-709c-81c0-85f6-cc2d13200e08",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "ManyChat",
+      "overview": "ManyChat is a chat marketing automation platform that automates conversations across Instagram, WhatsApp, TikTok, Messenger, and SMS to grow brands and drive sales.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Automation",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Automate Instagram DM and comment replies instantly",
+        "Convert social media comments into sales conversations",
+        "Handle customer FAQs across multiple messaging platforms",
+        "Collect emails and phone numbers through automated flows",
+        "Run automated giveaways and lead generation campaigns",
+        "Send personalized follow-up messages and nurture sequences"
+      ],
+      "website": "https://manychat.partnerlinks.io/james-mia",
+      "slug": "manychat"
+    },
+    {
+      "notion_id": "284a6d41-709c-81fe-bcaa-e87d36cec90c",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "MarketerHire",
+      "overview": "MarketerHire is an AI-powered talent platform that connects businesses with pre-vetted marketing experts in under a week.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation"
+      ],
+      "use_cases": [
+        "Hire pre-vetted marketing experts within 48 hours",
+        "Access fractional CMOs and specialized marketing talent",
+        "Scale marketing teams without full-time hiring costs",
+        "Get AI-powered matching for specific marketing needs",
+        "Build complete marketing teams with proven experts",
+        "Reduce marketing payroll while maintaining efficiency"
+      ],
+      "website": "https://try.marketerhire.com/james-mia",
+      "slug": "marketerhire"
+    },
+    {
+      "notion_id": "284a6d41-709c-815b-9674-fefe7d4f0b17",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Melio",
+      "overview": "Melio is an AI-powered B2B payment platform that streamlines accounts payable and receivable processes for businesses.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "AI Models",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Automate bill capture and invoice processing with AI",
+        "Pay vendors via ACH, card, or check seamlessly",
+        "Sync payment data with QuickBooks and Xero automatically",
+        "Schedule batch payments and manage approval workflows",
+        "Create custom payment links for faster collections",
+        "Process international payments with competitive exchange rates"
+      ],
+      "website": "https://affiliates.meliopayments.com/james-mia",
+      "slug": "melio"
+    },
+    {
+      "notion_id": "284a6d41-709c-81e4-ac99-ea955b5592ea",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Memberstack",
+      "overview": "Memberstack is a no-code membership platform that adds user authentication, payments, and content gating to Webflow sites without requiring backend development.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [],
+      "use_cases": [
+        "Build membership sites with user authentication and payments",
+        "Gate content behind subscription paywalls and access levels",
+        "Create SaaS applications with Webflow and custom domains",
+        "Manage recurring subscriptions and one-time payment processing",
+        "Integrate social login options like Google, Facebook, LinkedIn",
+        "Set up multi-step onboarding flows for new members"
+      ],
+      "website": "https://memberstack.io/?via=james",
+      "slug": "memberstack"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81bb-8094-df3ed5c6363c",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Meta AI",
+      "overview": "Meta AI is Meta’s integrated assistant across its apps, built on Llama models.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Chat, generate visuals, and search within Meta apps.",
+        "Create personalized feed recommendations and automations.",
+        "Support voice and image prompts on Ray-Ban & VR.",
+        "Help businesses automate customer interactions + ad flow.",
+        "Offer creative tools like image, GIF, and video generation."
+      ],
+      "website": "https://meta.ai",
+      "slug": "meta-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81b7-9c52-ca9df2b0c5ef",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Microsoft 365 Copilot",
+      "overview": "Microsoft 365 Copilot is an AI assistant embedded in Word, Excel, Outlook, and other Office apps.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Draft, summarize, and edit content in Office apps.",
+        "Analyze spreadsheets and generate insights in Excel.",
+        "Manage emails and meeting notes in Outlook.",
+        "Create presentations with AI-assisted design suggestions.Automate workflows via Copilot Studio."
+      ],
+      "website": "https://m365copilot.com",
+      "slug": "microsoft-365-copilot"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81d6-8f70-cce4458ed9eb",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Microsoft Copilot",
+      "overview": "Microsoft Copilot is a free, web-based AI chatbot integrating GPT-4o, search, and image generation.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Chat naturally with GPT-4o and live search.",
+        "Generate images with integrated DALL·E 3.",
+        "Summarize articles, documents, and web pages.",
+        "Assist with coding and technical problem solving.",
+        "Translate and adapt text for multiple languages."
+      ],
+      "website": "https://copilot.microsoft.com",
+      "slug": "microsoft-copilot"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80f4-8844-dd27cc50cce7",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Midjourney",
+      "overview": "Midjourney is an independent AI tool that generates images from natural language prompts.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Image Generation"
+      ],
+      "use_cases": [
+        "Create artwork from text prompts.Design mood boards and visual drafts.",
+        "Brainstorm concepts quickly via Discord or web.",
+        "Explore styles from photorealistic to abstract.",
+        "Prototype artistic ideas before client presentations."
+      ],
+      "website": "https://www.midjourney.com",
+      "slug": "midjourney"
+    },
+    {
+      "notion_id": "24ca6d41-709c-81fd-a56a-f3a9fcc4ceea",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Mistral",
+      "overview": "Mistral is a French AI startup building open-weight large language models.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Foundational Models",
+        "Multimodal AI",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Deploy open-source language models for customization.",
+        "Enable enterprise-grade, privacy-focused AI deployments.",
+        "Power AI agents and autonomous workflows.",
+        "Provide specialized models for code, reasoning, vision.",
+        "Run multilingual AI via cloud APIs or on-prem."
+      ],
+      "website": "https://mistral.ai",
+      "slug": "mistral"
+    },
+    {
+      "notion_id": "284a6d41-709c-8137-9000-e6a5e3401511",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Motion",
+      "overview": "Motion is an AI-powered productivity platform that combines task management, calendar scheduling, project management, and AI employees to automate workflows and optimize team productivity.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Automatically schedule and prioritize daily tasks with AI",
+        "Manage projects with AI-powered resource allocation and planning",
+        "Deploy AI employees for sales, support, and marketing",
+        "Integrate calendar, tasks, and meetings in one platform",
+        "Automate email management and meeting note-taking",
+        "Create custom AI workflows for business processes"
+      ],
+      "website": "https://get.usemotion.com/8pxjz91tiah2",
+      "slug": "motion"
+    },
+    {
+      "notion_id": "284a6d41-709c-8113-a27d-d09753ccce72",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Multiplier",
+      "overview": "Multiplier is a global human platform that enables companies to hire, manage, and pay employees and contractors in 150+ countries without setting up legal entities.",
+      "product_type": [],
+      "notion_categories": [],
+      "use_cases": [
+        "Hire employees globally without legal entity setup.",
+        "Run payroll across multiple countries and currencies.",
+        "Manage global workforce with centralized HRIS platform.",
+        "Ensure compliance with local employment laws worldwide.",
+        "Support international employee moves and immigration.",
+        "Onboard and manage contractors alongside employees."
+      ],
+      "website": "https://affiliate.usemultiplier.com/james-mia",
+      "slug": "multiplier"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8037-9526-ca6bf994e295",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Murf AI",
+      "overview": "Murf AI is an AI-powered text-to-speech platform that generates ultra-realistic voiceovers with 200+ voices in 20+ languages.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Audio Generation",
+        "Music & Audio Generation"
+      ],
+      "use_cases": [
+        "Generate professional voiceovers for videos and presentations.",
+        "Create multilingual content with 200+ realistic AI voices.",
+        "Build voice agents and conversational AI applications.",
+        "Produce audiobooks, podcasts, and e-learning content.",
+        "Clone voices and customize pitch, speed, tone.",
+        "Translate and dub audio/video content globally."
+      ],
+      "website": "https://murf.ai",
+      "slug": "murf-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8022-a414-e29003da078d",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "n8n",
+      "overview": "n8n is an open-source workflow automation tool for both novice and technical users.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Visually build multi-step automations with drag-and-drop.",
+        "Integrate with LLMs and over 400 services.",
+        "Deploy on-prem or in the cloud for privacy.",
+        "Automate data, emails, alerts, and business processes.",
+        "Create AI-powered agents via modular workflow design."
+      ],
+      "website": "https://n8n.io",
+      "slug": "n8n"
+    },
+    {
+      "notion_id": "24ca6d41-709c-804c-8b1d-dababa58195a",
+      "created": "2025-08-11",
+      "last_edited": "2025-10-01",
+      "name": "Napkin AI",
+      "overview": "Napkin AI transforms text into customizable diagrams, infographics, and flowcharts tailored for business communication.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Visual Generation"
+      ],
+      "use_cases": [
+        "Paste or generate text to auto-create visualizations.",
+        "Customize generated visuals using icons, connectors, and styles.",
+        "Export visuals as PNG, SVG, PDF, or PPT.",
+        "Collaborate via real-time editing, workspaces, and feedback.",
+        "Utilize API for programmatic visual generation."
+      ],
+      "website": "https://www.napkin.ai",
+      "slug": "napkin-ai"
+    },
+    {
+      "notion_id": "2dba6d41-709c-8153-8506-d99c221780ff",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Navattic",
+      "overview": "Navattic is an interactive product demo platform that helps teams create and share guided product experiences without coding.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Product Demos",
+        "Sales Enablement",
+        "Customer Experience"
+      ],
+      "use_cases": [
+        "Creating interactive product demos",
+        "Guiding customers through features",
+        "Enabling sales with product walkthroughs",
+        "Collecting user feedback on demos",
+        "Training internal teams on products"
+      ],
+      "website": "https://navattic.com",
+      "slug": "navattic"
+    },
+    {
+      "notion_id": "27ba6d41-709c-80e7-bf55-c3ae49e2763a",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-06",
+      "name": "NeverBounce",
+      "overview": "NeverBounce is an email verification platform that cleans email lists to reduce bounce rates and improve deliverability.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Deliverability"
+      ],
+      "use_cases": [
+        "Verify email addresses in real-time during signup",
+        "Clean bulk email lists to reduce bounce rates",
+        "Integrate with CRMs and marketing platforms seamlessly",
+        "Protect sender reputation and improve inbox placement",
+        "Remove invalid, risky, and disposable email addresses",
+        "Automate email list cleaning with API integration"
+      ],
+      "website": "https://www.neverbounce.com",
+      "slug": "neverbounce"
+    },
+    {
+      "notion_id": "27aa6d41-709c-8070-b5fc-d0418ad31953",
+      "created": "2025-09-26",
+      "last_edited": "2025-10-02",
+      "name": "Notion",
+      "overview": "AI-powered all-in-one workspace for notes, docs, databases, and project management.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Platform-Integrated AI",
+        "Databases"
+      ],
+      "use_cases": [
+        "Team knowledge base management",
+        "AI-powered document creation and editing",
+        "Project and task management",
+        "Meeting notes and transcription",
+        "Database automation and insights",
+        "Cross-platform workspace collaboration"
+      ],
+      "website": "https://www.notion.com/",
+      "slug": "notion"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8026-bd5d-fab9a741e256",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Notion AI",
+      "overview": "Notion AI is an integrated assistant inside Notion for writing, summarizing, and drafting.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Summarize notes and extract action items.",
+        "Draft emails, blog posts, and documents",
+        "Brainstorm ideas or set up agendas quickly",
+        "Search across Slack, Drive, and Notion content",
+        "Rewrite tone, translate, and generate templates within Notion"
+      ],
+      "website": "https://notion.com",
+      "slug": "notion-ai"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8095-aa5d-f1482c5743ad",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "nRev AI",
+      "overview": "nRev AI is an autonomous GTM AI engineer that builds powerful automation workflows for RevOps teams and GTM leaders.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "AI Models"
+      ],
+      "use_cases": [
+        "Automate LinkedIn outreach and engagement workflows",
+        "Build zero-leak inbound lead capture funnels",
+        "Track competitor intelligence and pricing signals",
+        "Enrich and score leads automatically",
+        "Clean and optimize CRM data hygiene",
+        "Activate PLG users with automated workflows"
+      ],
+      "website": "https://www.nrev.ai/",
+      "slug": "nrev-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80fe-b5b4-cd8d67a13f63",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Ocean.io",
+      "overview": "Ocean.io is a B2B AI-powered prospecting platform for company and contact targeting.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Find ideal accounts via lookalike search.",
+        "Discover contacts with AI-guided targeting.",
+        "Use Chrome extension for on-the-fly data.",
+        "Access clean company data via API."
+      ],
+      "website": "https://www.ocean.io",
+      "slug": "ocean-io"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8088-850a-ffe273a4bc16",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Octave",
+      "overview": "Octave is a GTM messaging platform that centralizes your messaging, creates tailored playbooks for your ICP & key segments, and enriches them with real-time insights for hyper-personalized outreach at scale.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "AI Agents",
+        "GTM Messaging Library"
+      ],
+      "use_cases": [
+        "Align messaging across marketing, sales, and product.",
+        "Generate competitive playbooks on the fly.",
+        "Discover and engage high-value buyers automatically.",
+        "Prioritize accounts using dynamic scoring and signals.",
+        "Launch real-time ABM campaigns at scale."
+      ],
+      "website": "https://www.octavehq.com",
+      "slug": "octave"
+    },
+    {
+      "notion_id": "24ca6d41-709c-805e-a0fd-dd252f4c2f6b",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Opus Clip",
+      "overview": "Opus Clip is an AI tool that auto-generates viral-ready short clips from long videos.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Turn webinars or podcasts into TikToks and Reels.",
+        "Auto-caption clips in 20+ languages.",
+        "Reframe footage for vertical and square video formats.",
+        "Add B-roll and voiceovers automatically.",
+        "Manage workflows: schedule posts, create thumbnails, collaborate."
+      ],
+      "website": "https://www.opus.pro/",
+      "slug": "opus-clip"
+    },
+    {
+      "notion_id": "284a6d41-709c-8115-80d6-c63be717a2b5",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Papaya Global",
+      "overview": "Papaya Global is a global payroll, onboarding, and workforce management platform for distributed teams.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Payroll Management",
+        "Workforce Management",
+        "HR Technology"
+      ],
+      "use_cases": [
+        "Managing global payroll compliantly",
+        "Automating employee onboarding processes",
+        "Tracking workforce data and analytics",
+        "Managing contractor payments worldwide",
+        "Ensuring compliance with labor laws",
+        "Streamlining HR operations globally"
+      ],
+      "website": "https://get.papayaglobal.com/james-mia",
+      "slug": "papaya-global"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8144-bd66-f752aaeec7b9",
+      "created": "2025-08-11",
+      "last_edited": "2025-12-31",
+      "name": "Perplexity",
+      "overview": "Perplexity is an AI-powered search engine delivering real-time, citation-backed responses.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational Search Engine",
+        "Conversational AI",
+        "Multimodal AI"
+      ],
+      "use_cases": [
+        "Retrieve concise, source‑cited answers fast.",
+        "Summarize and synthesize web information.",
+        "Build reports, dashboards, or simple apps via Labs.",
+        "Generate videos and images in Pro/Max plans.",
+        "Book restaurant reservations using built-in integration.",
+        "Organize research with Pages, Spaces, and Library."
+      ],
+      "website": "https://www.perplexity.ai/",
+      "slug": "perplexity"
+    },
+    {
+      "notion_id": "2dba6d41-709c-81ff-87fb-fb184c4055f8",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Perplexity Comet",
+      "overview": "Perplexity Comet is an AI-powered search and answer engine that provides instant, concise responses to user queries.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Conversational AI",
+        "AI Search Engines"
+      ],
+      "use_cases": [
+        "Getting quick answers to complex questions",
+        "Researching topics with summarized information",
+        "Exploring AI-generated insights",
+        "Improving decision-making with instant data",
+        "Enhancing productivity with fast search"
+      ],
+      "website": "https://perplexity.ai",
+      "slug": "perplexity-comet"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8053-a1bf-fa4c0ee12959",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Phantom Buster",
+      "overview": "PhantomBuster is a cloud-based automation platform that scrapes data from 15+ platforms and automates outreach workflows for sales prospecting.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "GTM Automation",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Scrape profiles and extract contact data from LinkedIn",
+        "Automate personalized LinkedIn connection requests and messaging",
+        "Monitor real-time activity and job changes for leads",
+        "Enrich lead lists with 1000+ live data points",
+        "Integrate scraped data directly into CRMs like HubSpot",
+        "Track intent signals across 15+ social platforms"
+      ],
+      "website": "https://phantombuster.com",
+      "slug": "phantom-buster"
+    },
+    {
+      "notion_id": "284a6d41-709c-81d0-a522-da6fda58fb65",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Pictory",
+      "overview": "Pictory is an AI-powered video generator that transforms text, URLs, and presentations into professional videos with automated visuals, voiceovers, and music.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Video Generation & Filmmaking",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Convert text scripts into professional videos automatically",
+        "Transform blog posts and URLs into engaging video content",
+        "Create social media clips from long-form recordings",
+        "Generate branded videos with custom logos and colors",
+        "Add AI voiceovers in 29+ languages to videos",
+        "Produce marketing and training videos without editing skills"
+      ],
+      "website": "https://pictory.ai",
+      "slug": "pictory"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8172-916d-c3c739415210",
+      "created": "2025-08-11",
+      "last_edited": "2025-10-06",
+      "name": "Pika Labs",
+      "overview": "Pika Labs lets creators make short, social-first AI videos with ease.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Video Generation & Filmmaking",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Turn text or images into animated video clips.",
+        "Apply real-time rendering with smart motion controls.",
+        "Use “Ingredients” to combine multiple prompts and images.",
+        "Access free browser-based video generation tool.",
+        "Enable fast social content creation without technical skills."
+      ],
+      "website": "https://pika.art",
+      "slug": "pika-labs"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8060-8677-e52cb6983a6a",
+      "created": "2025-08-11",
+      "last_edited": "2025-10-06",
+      "name": "Play.ai",
+      "overview": "Play.ai enables creation of real-time, human-like voice agents via API.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Audio Generation",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Build voice assistants for web, phone, or app",
+        "Automate tasks like booking, ordering, or info retrieval",
+        "Create multilingual customer-service agents",
+        "Connect voice agents to business tools",
+        "Deploy agents on-premises for privacy"
+      ],
+      "website": "https://play.ai",
+      "slug": "play-ai"
+    },
+    {
+      "notion_id": "284a6d41-709c-8152-a010-d2cdecc90b02",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Printify",
+      "overview": "Printify is a print-on-demand platform that connects merchants to global print providers for creating and selling custom products without inventory.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [],
+      "use_cases": [
+        "Create custom products from 1000+ items available",
+        "Integrate with Shopify, Etsy, Amazon, and marketplaces",
+        "Generate designs using built-in AI Image Generator",
+        "Automate order fulfillment and global shipping processes",
+        "Scale ecommerce business with zero upfront investment",
+        "Access print providers across 209 countries worldwide"
+      ],
+      "website": "https://printify.com",
+      "slug": "printify"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8022-bf80-c039d460481d",
+      "created": "2025-09-27",
+      "last_edited": "2025-09-27",
+      "name": "Prospeo",
+      "overview": "Prospeo is an email finder and verification tool that helps businesses find verified email addresses and mobile numbers for outreach and lead generation.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Find verified email addresses from names and companies",
+        "Discover mobile numbers for cold calling campaigns",
+        "Verify email deliverability with high accuracy rates",
+        "Search company domains for employee email addresses",
+        "Bulk process prospect lists from spreadsheets",
+        "Integrate email finding into browser workflows"
+      ],
+      "website": "https://prospeo.io",
+      "slug": "prospeo"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8098-8f07-eb193b975973",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "RB2B",
+      "overview": "RB2B is a website visitor identification tool that reveals the actual people and companies visiting your website in real-time.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "Data Enrichment",
+        "Sales Intelligence"
+      ],
+      "use_cases": [
+        "Identify anonymous website visitors with LinkedIn profiles",
+        "Route high-intent prospects to sales teams instantly",
+        "Filter leads by company size and revenue",
+        "Integrate visitor data with CRM systems",
+        "Automate personalized outreach to website visitors",
+        "Track repeat visitors for account-based marketing"
+      ],
+      "website": "https://www.rb2b.com",
+      "slug": "rb2b"
+    },
+    {
+      "notion_id": "27ba6d41-709c-80d0-954a-da634e54861a",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Reform",
+      "overview": "Reform is a conversion-focused form builder designed to maximize lead quality and quantity with advanced optimization features.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Build multi-step forms for better conversion rates",
+        "Qualify leads with conditional routing and logic",
+        "Enrich lead data automatically from web sources",
+        "Prevent spam with advanced filtering systems",
+        "Integrate seamlessly with CRM and marketing tools",
+        "Create branded forms with no-code customization"
+      ],
+      "website": "https://www.reform.app",
+      "slug": "reform"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8048-b564-c4cd74e5e892",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Reoon",
+      "overview": "Reoon is a comprehensive business software platform specializing in email verification, lead generation, and data scraping tools.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Bulk email verification with 99% accuracy rates",
+        "AI-powered email scoring and list cleaning",
+        "Lead generation through YellowPages and business scraping",
+        "Real-time email validation during website registration",
+        "Temporary and disposable email address detection",
+        "Amazon and eBay product data scraping"
+      ],
+      "website": "https://www.reoon.com",
+      "slug": "reoon"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80b1-a168-eea87cbc22b0",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Replicate",
+      "overview": "Replicate hosts and version-controls machine learning models for easy developer access.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Developer Tools",
+        "AI Model Hosting & Deployment",
+        "AI Model Repositories"
+      ],
+      "use_cases": [
+        "Share AI models via API with versioning.",
+        "Browse and test community-hosted models.",
+        "Deploy ML models without infrastructure setup.",
+        "Collaborate with examples and model inputs.",
+        "Integrate with LangChain or automation tools."
+      ],
+      "website": "https://replicate.com",
+      "slug": "replicate"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80b2-a2b9-dc8ec542feea",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Replit",
+      "overview": "Replit is a cloud-based IDE with built-in AI tools for development and deployment.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Developer Tools",
+        "AI Model Hosting & Deployment"
+      ],
+      "use_cases": [
+        "Build and run projects with Ghostwriter assistant.",
+        "Collaborate on code live with teammates.",
+        "Deploy web apps instantly from code.",
+        "Learn programming interactively with hints.",
+        "Integrate AI completions into your workflow."
+      ],
+      "website": "https://replit.com",
+      "slug": "replit"
+    },
+    {
+      "notion_id": "284a6d41-709c-81b0-a878-f68ad838298c",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Reply.io",
+      "overview": "Reply.io is a sales automation platform that streamlines outreach through multi-channel communication and follow-ups.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Automation",
+        "Email Marketing",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Automate cold email sequences",
+        "Manage multi-channel outreach campaigns",
+        "Track and analyze prospect engagement",
+        "Integrate with CRM systems",
+        "Personalize customer communication at scale",
+        "Automate follow-ups to increase replies"
+      ],
+      "website": "https://get.reply.io/james-mia",
+      "slug": "reply-io"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8040-925c-c5107dd42f3e",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Riverside.fm",
+      "overview": "Riverside.fm is a high-quality remote recording platform for podcasts and video.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Recording"
+      ],
+      "use_cases": [
+        "Record 4K video and uncompressed audio remotely.",
+        "Generate AI-powered transcripts and show notes.",
+        "Create social clips automatically from recordings.",
+        "Stream live while capturing high-quality files locally.",
+        "Collaborate with guests and producers in real time."
+      ],
+      "website": "https://riverside.fm/?utm_campaign=campaign_5&utm_medium=affiliate&utm_source=rewardful&via=james-praise",
+      "slug": "riverside-fm"
+    },
+    {
+      "notion_id": "24ca6d41-709c-819a-9a22-f0bf191d394d",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Runway Gen-4",
+      "overview": "Runway Gen-4 generates consistent, cinematic videos across multiple shots.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Video Generation & Filmmaking"
+      ],
+      "use_cases": [
+        "Create narrative videos with character consistency.",
+        "Maintain visual continuity across multiple scenes.",
+        "Simulate realistic motion and physics.",
+        "Use Gen-4 Turbo for faster, cost-efficient generation.",
+        "Enable cinematic workflows with prompt-based video direction."
+      ],
+      "website": "https://runwayml.com",
+      "slug": "runway-gen-4"
+    },
+    {
+      "notion_id": "284a6d41-709c-8175-bfb1-c9e0b6ced511",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Rytr",
+      "overview": "Rytr is an AI writing assistant that generates high-quality content for 40+ use cases with tone matching and plagiarism checking.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models"
+      ],
+      "use_cases": [
+        "Generate blog posts, emails, and marketing copy quickly.",
+        "Create social media ads and captions automatically.",
+        "Write product descriptions and landing page content.",
+        "Craft professional emails and business communications.",
+        "Generate SEO meta descriptions and titles.",
+        "Create creative content like poems and stories."
+      ],
+      "website": "https://rytr.me",
+      "slug": "rytr"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8000-bcec-d300db51356e",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Salesforce",
+      "overview": "Salesforce is the world's #1 AI-powered CRM platform that unifies sales, service, marketing, and commerce operations with Einstein AI capabilities.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Platform-Integrated AI",
+        "CRM",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Automate sales processes with AI-powered lead scoring and forecasting",
+        "Generate personalized marketing campaigns and customer journey mapping",
+        "Provide AI-enhanced customer service with automated case resolution",
+        "Centralize customer data and analytics across all touchpoints",
+        "Create custom business applications on the Salesforce platform",
+        "Deploy autonomous AI agents for 24/7 customer support"
+      ],
+      "website": "https://www.salesforce.com",
+      "slug": "salesforce"
+    },
+    {
+      "notion_id": "27aa6d41-709c-8060-8872-d158637edead",
+      "created": "2025-09-26",
+      "last_edited": "2025-09-26",
+      "name": "Saleshandy",
+      "overview": "Saleshandy is a cold email automation platform that helps businesses generate leads through personalized outreach campaigns, email deliverability optimization, and unified inbox management.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Engagement",
+        "Outbound GTM Outreach",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Automate cold email outreach campaigns",
+        "Find verified leads from 700M+ contacts",
+        "Personalize emails at scale for prospects",
+        "Optimize email deliverability and inbox placement",
+        "Manage replies and conversations centrally",
+        "Integrate with CRMs and sales tools"
+      ],
+      "website": "https://www.saleshandy.com/",
+      "slug": "saleshandy"
+    },
+    {
+      "notion_id": "284a6d41-709c-81fb-be68-cb02185fb914",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Scalenut",
+      "overview": "Scalenut is an AI-powered SEO and content marketing platform that helps businesses create, optimize, and scale content for search engines and AI visibility.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Create SEO-optimized blog content in under 5 minutes",
+        "Research and plan content strategy with keyword clustering",
+        "Optimize existing content for better search rankings",
+        "Generate AI-powered content with brand tone customization",
+        "Track AI visibility and brand mentions across platforms",
+        "Build high-quality backlinks without manual outreach"
+      ],
+      "website": "https://www.scalenut.com",
+      "slug": "scalenut"
+    },
+    {
+      "notion_id": "280a6d41-709c-800e-b59f-d85158d3bdd4",
+      "created": "2025-10-02",
+      "last_edited": "2025-10-06",
+      "name": "Seamless AI",
+      "overview": "Seamless AI is an AI-powered B2B sales prospecting platform that finds verified contact information and builds targeted lead lists in real-time.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "Sales Intelligence",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Find verified email addresses and phone numbers instantly.",
+        "Build targeted prospect lists from 1.3 billion contacts.",
+        "Discover companies and websites for outreach campaigns.",
+        "Track buyer intent signals for ready-to-buy prospects.",
+        "Enrich existing CRM data automatically.",
+        "Monitor job changes for relationship management."
+      ],
+      "website": "https://get.seamless.ai/james-mia",
+      "slug": "seamless-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8055-806c-f17c9b70653b",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Sesame AI",
+      "overview": "Sesame AI builds emotionally intelligent voice companions with natural speech patterns.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Chat naturally with empathetic voice agents",
+        "Support multilingual, context-aware voice interaction",
+        "Emulate consistent personalities like “Maya” or “Miles”",
+        "Integrate emotionally expressive voice in apps",
+        "Build voice-first experiences with lifelike timing"
+      ],
+      "website": "https://www.sesame.com/",
+      "slug": "sesame-ai"
+    },
+    {
+      "notion_id": "284a6d41-709c-8104-8e6d-fbc0bd559bb2",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "ShipBob",
+      "overview": "ShipBob is a technology-driven fulfillment service that helps e-commerce brands store, pack, and ship products worldwide.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "E-commerce Fulfillment",
+        "Logistics",
+        "Supply Chain Management"
+      ],
+      "use_cases": [
+        "Storing inventory in multiple warehouses",
+        "Automating order fulfillment processes",
+        "Tracking packages and delivery status",
+        "Providing faster shipping options",
+        "Integrating with e-commerce platforms",
+        "Managing returns and exchanges efficiently"
+      ],
+      "website": "https://partnerwith.shipbob.com/james-mi",
+      "slug": "shipbob"
+    },
+    {
+      "notion_id": "284a6d41-709c-8175-90d8-f6496b898f76",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "SmartSuite",
+      "overview": "SmartSuite is a flexible work management platform that combines project management, CRM, and workflow automation tools.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Project Management",
+        "CRM",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Managing projects and tasks collaboratively",
+        "Tracking customer relationships and interactions",
+        "Automating repetitive business workflows",
+        "Centralizing team communications and data",
+        "Customizing workflows for business needs",
+        "Tracking sales pipelines and opportunities"
+      ],
+      "website": "https://partners.smartsuite.com/james-mia",
+      "slug": "smartsuite"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8144-b49c-ea2fa939e599",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Sora (OpenAI)",
+      "overview": "Sora is OpenAI’s model for creating realistic videos from text or visuals.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Multimodal Video Generation",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Animate scenes from text, still images, or video input.",
+        "Extend or remix existing footage with detail fidelity.",
+        "Blend elements via diffusion-based creative workflows.",
+        "Support storytelling with world simulation capabilities.",
+        "Power video tools inside ChatGPT Plus/Pro environments."
+      ],
+      "website": "https://openai.com/sora",
+      "slug": "sora-openai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8098-bd31-cd025dc1de6a",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Suno AI",
+      "overview": "Suno AI generates realistic music—including vocals and instrumentation—from text prompts.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Music & Audio Generation"
+      ],
+      "use_cases": [
+        "Create full songs using prompt descriptions",
+        "Generate lyric-based jingles or soundtracks",
+        "Upload your own voice for personalized tracks",
+        "Prototype music without needing instruments",
+        "Produce shareable audio content via Discord or web"
+      ],
+      "website": "https://suno.com",
+      "slug": "suno-ai"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8092-81da-fcc0c14bc927",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Supabase",
+      "overview": "Supabase is an open-source Firebase alternative offering APIs and function-hosting.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Databases",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Serve AI data via REST or GraphQL APIs.",
+        "Trigger server-side AI workflows using functions.",
+        "Store logs and AI metadata securely.",
+        "Integrate AI pipelines via webhooks or realtime subscriptions.",
+        "Host AI dashboards and control panels."
+      ],
+      "website": "https://supabase.com",
+      "slug": "supabase"
+    },
+    {
+      "notion_id": "27fa6d41-709c-80b0-a2d1-f5cd846ab7df",
+      "created": "2025-10-01",
+      "last_edited": "2025-10-02",
+      "name": "SuperMe AI",
+      "overview": "SuperMe AI is a professional network platform that creates AI-powered profiles of experts, allowing users to get personalized advice and insights from industry professionals through conversational AI.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Get expert advice from AI profiles of professionals",
+        "Ask questions and brainstorm with industry experts",
+        "Access knowledge from newsletters, presentations, and content",
+        "Voice and text-based professional consultations",
+        "Build personal AI profiles to share expertise",
+        "Network with professionals through AI-powered interactions"
+      ],
+      "website": "https://www.superme.ai/",
+      "slug": "superme-ai"
+    },
+    {
+      "notion_id": "280a6d41-709c-8021-aedb-c38a6235689f",
+      "created": "2025-10-02",
+      "last_edited": "2025-10-02",
+      "name": "Surfe",
+      "overview": "Surfe is a CRM integration platform that connects LinkedIn with CRMs for seamless prospecting and contact enrichment.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "CRM",
+        "Data Enrichment",
+        "LinkedIn GTM Automation"
+      ],
+      "use_cases": [
+        "Add LinkedIn contacts to CRM in one click.",
+        "Export lead lists from Sales Navigator to CRM.",
+        "Sync LinkedIn messages and send personalized templates.",
+        "Get job change alerts for relationship opportunities.",
+        "Find and enrich contact data with waterfall enrichment.",
+        "Build targeted prospect lists with advanced filters."
+      ],
+      "website": "https://www.surfe.com/",
+      "slug": "surfe"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8036-8a99-f919e9440c91",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Synthesia",
+      "overview": "Synthesia turns text into professional AI-generated videos with lifelike avatars.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Create videos in 120+ languages without filming.",
+        "Choose from 150+ customizable avatars.",
+        "Generate e-learning, training, or marketing videos.",
+        "Add captions, backgrounds, and animations easily.",
+        "Scale content creation for global teams."
+      ],
+      "website": "https://www.synthesia.io/?via=james-praise",
+      "slug": "synthesia"
+    },
+    {
+      "notion_id": "284a6d41-709c-810d-9142-df1d6f926ac4",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "SynthflowAI",
+      "overview": "SynthflowAI is a no-code platform that creates enterprise-ready AI voice agents for automated phone calls and customer interactions.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Automate inbound and outbound customer service calls",
+        "Handle appointment scheduling and calendar management",
+        "Qualify sales leads and book demos automatically",
+        "Provide 24/7 multilingual customer support assistance",
+        "Manage healthcare patient intake and follow-ups",
+        "Process restaurant reservations and customer inquiries"
+      ],
+      "website": "https://synthflowai.partnerlinks.io/yis7xbq8mvj2",
+      "slug": "synthflowai"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8056-a6df-f32dfc3a1460",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Taplio",
+      "overview": "Taplio is an AI-powered LinkedIn growth platform that helps professionals create content, schedule posts, and analyze performance to build their personal brand.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Generate AI-powered LinkedIn posts and content ideas",
+        "Schedule posts and manage content calendar efficiently",
+        "Track post performance and audience engagement analytics",
+        "Find viral content inspiration in your niche",
+        "Build and manage professional networking relationships",
+        "Create LinkedIn carousels and visual content formats"
+      ],
+      "website": "https://taplio.com",
+      "slug": "taplio"
+    },
+    {
+      "notion_id": "284a6d41-709c-81a2-a698-ecb81646d062",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Testimonial.to",
+      "overview": "Testimonial.to is a platform that helps businesses collect and display text and video testimonials from customers with no coding required.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Customer Feedback Management"
+      ],
+      "use_cases": [
+        "Collect text and video testimonials from customers easily",
+        "Create dedicated landing pages for testimonial collection",
+        "Embed testimonial walls on websites without coding",
+        "Manage all testimonials in centralized dashboard",
+        "Generate AI-powered case studies from customer feedback",
+        "Discover testimonials automatically from social media platforms"
+      ],
+      "website": "https://testimonial.to",
+      "slug": "testimonial-to"
+    },
+    {
+      "notion_id": "284a6d41-709c-81db-b1ce-e6e5f5b2e573",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "TextCortex",
+      "overview": "TextCortex is an enterprise AI platform that turns organizational knowledge into actionable insights through AI agents and workflow automation.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Build AI agents for specific organizational tasks",
+        "Search and extract insights from company knowledge bases",
+        "Automate content creation and writing workflows",
+        "Transform unstructured data into structured insights",
+        "Generate multilingual content with brand consistency",
+        "Integrate AI assistance across 30,000+ apps and sites"
+      ],
+      "website": "https://textcortex.com",
+      "slug": "textcortex"
+    },
+    {
+      "notion_id": "284a6d41-709c-8197-8399-ed37426ee83e",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Trainual",
+      "overview": "Trainual is an all-in-one employee training platform that documents processes, automates onboarding, and centralizes knowledge to keep teams aligned.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [],
+      "use_cases": [
+        "Document standard operating procedures and business processes",
+        "Automate employee onboarding and training workflows",
+        "Create AI-generated content outlines and training materials",
+        "Centralize company knowledge and policies in one platform",
+        "Track training completion and ensure workplace compliance",
+        "Build organizational charts and define roles and responsibilities"
+      ],
+      "website": "https://start.trainual.com/James-mia",
+      "slug": "trainual"
+    },
+    {
+      "notion_id": "284a6d41-709c-817f-84da-d529eafb46f0",
+      "created": "2025-10-06",
+      "last_edited": "2026-01-01",
+      "name": "Travel Code",
+      "overview": "Travel Code is a platform offering curated travel deals and experiences.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Travel & Hospitality",
+        "Affiliate Marketing"
+      ],
+      "use_cases": [
+        "Finding curated travel deals and promotions",
+        "Booking travel experiences and accommodations",
+        "Accessing exclusive travel offers",
+        "Promoting travel services through affiliate links",
+        "Planning trips with personalized recommendations",
+        "Increasing travel-related sales and referrals"
+      ],
+      "website": "https://join.travel-code.com/james-mia",
+      "slug": "travel-code"
+    },
+    {
+      "notion_id": "24ca6d41-709c-801b-89d9-f70df6951602",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Try Replay",
+      "overview": "Try Replay enables AI-powered voice cloning and song remixing using RVC models.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Text-to-Audio Generation",
+        "Music Remixing & Voice Cloning"
+      ],
+      "use_cases": [
+        "Replace vocals with cloned voices in songs",
+        "Create AI-generated cover versions",
+        "Blend multiple voice styles seamlessly",
+        "Use locally on desktop for privacy",
+        "Remix music with minimal setup"
+      ],
+      "website": "https://tryreplay.io",
+      "slug": "try-replay"
+    },
+    {
+      "notion_id": "27ba6d41-709c-8023-81cc-f52c2359cc3e",
+      "created": "2025-09-27",
+      "last_edited": "2025-10-02",
+      "name": "Tweet Hunter",
+      "overview": "Tweet Hunter is an AI-powered X (formerly Twitter) growth tool that helps users create content, schedule posts, automate engagement, and monetize their audience.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Automation",
+        "AI Models"
+      ],
+      "use_cases": [
+        "Generate AI-powered tweets and threads automatically",
+        "Schedule content and automate posting workflows",
+        "Build audience through viral tweet discovery",
+        "Convert engagement into leads with auto-DMs",
+        "Track performance with detailed Twitter analytics",
+        "Manage relationships using built-in Twitter CRM"
+      ],
+      "website": "https://tweethunter.io/",
+      "slug": "tweet-hunter"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80a9-a14d-c0d20d2bd313",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "v0 by Vercel",
+      "overview": "v0 is Vercel’s AI-powered UI generation tool for React and Tailwind apps.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Generate responsive UIs from text prompts.",
+        "Edit and refine layouts in a live preview.",
+        "Export production-ready React/Tailwind code.",
+        "Rapidly prototype landing pages and components.",
+        "Maintain brand consistency with design system integration."
+      ],
+      "website": "https://v0.app",
+      "slug": "v0-by-vercel"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80c3-adaf-d1ce4ced6aad",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Vercel",
+      "overview": "Vercel is a platform for deploying front-end applications—commonly used to host AI-powered web apps.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Developer Tools",
+        "AI Model Hosting & Deployment"
+      ],
+      "use_cases": [
+        "Host AI model demos with seamless scaling.",
+        "Automatically deploy PR updates for testing.",
+        "Support edge functions for low-latency inference.",
+        "Integrate with serverless APIs and environments.",
+        "Use collaboration and preview URLs for team workflows."
+      ],
+      "website": "https://vercel.com",
+      "slug": "vercel"
+    },
+    {
+      "notion_id": "284a6d41-709c-817c-8d28-d98241cf55ac",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Wati",
+      "overview": "Wati is an AI-powered WhatsApp Business API platform that enables businesses to automate customer conversations, marketing campaigns, and support operations at scale.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Automate WhatsApp marketing campaigns and lead generation",
+        "Build AI chatbots for customer support queries",
+        "Manage sales conversations and pipeline acceleration",
+        "Send bulk personalized messages and broadcasts",
+        "Integrate with CRM and marketing tools",
+        "Provide 24/7 automated customer service responses"
+      ],
+      "website": "https://affiliates.wati.io/james-mia",
+      "slug": "wati"
+    },
+    {
+      "notion_id": "24ca6d41-709c-80fe-afae-faa10237635c",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Whispr Flow",
+      "overview": "Wispr Flow is a voice dictation tool that boosts writing speed across apps.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Speech-to-Text Generation"
+      ],
+      "use_cases": [
+        "Dictate emails, docs, and code hands-free",
+        "Auto-edit voice into clear formatted text",
+        "Use whisper mode in quiet environments",
+        "Write faster than typing across any app",
+        "Free up cognitive load during meetings or writing"
+      ],
+      "website": "https://wisprflow.ai/",
+      "slug": "whispr-flow"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8000-9894-e83615f7a519",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Windsurf",
+      "overview": "Windsurf is an AI-powered code editor designed for deep context and reasoning.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Write and debug code with AI in-editor.",
+        "Maintain long-context awareness across large projects.",
+        "Refactor codebases with semantic understanding.",
+        "Chat with AI about entire codebase logic.",
+        "Integrate AI workflows with developer productivity tools."
+      ],
+      "website": "https://windsurf.com",
+      "slug": "windsurf"
+    },
+    {
+      "notion_id": "2dba6d41-709c-8126-abb2-da3e30c5fa8a",
+      "created": "2026-01-01",
+      "last_edited": "2026-01-01",
+      "name": "Writesonic",
+      "overview": "Writesonic is an AI-powered writing assistant that helps generate marketing content, blog posts, and creative copy quickly.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Content Generation",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Generating marketing copy and ads",
+        "Creating blog posts and articles",
+        "Drafting social media content",
+        "Writing product descriptions",
+        "Brainstorming content ideas",
+        "Improving and editing existing text"
+      ],
+      "website": "https://writesonic.com?fpr=james-praise",
+      "slug": "writesonic"
+    },
+    {
+      "notion_id": "24ca6d41-709c-8015-b37d-c0e9884c7e5d",
+      "created": "2025-08-11",
+      "last_edited": "2025-08-11",
+      "name": "Zapier",
+      "overview": "Zapier is a no-code automation platform that connects over 6,000 apps to help users create automated workflows without writing code.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Workflow Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Automate repetitive tasks between different apps without coding.",
+        "Create multi-step workflows that trigger from app events.",
+        "Integrate CRM, email, project management, and social media tools.",
+        "Move data automatically between cloud services.",
+        "Schedule actions and run automation in the background."
+      ],
+      "website": "https://zapier.com",
+      "slug": "zapier"
+    },
+    {
+      "notion_id": "284a6d41-709c-81f5-a96e-e88438bb1a7d",
+      "created": "2025-10-06",
+      "last_edited": "2025-10-06",
+      "name": "Zonka Feedback",
+      "overview": "Zonka Feedback is an AI-powered customer experience platform that transforms unstructured feedback into actionable insights.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Models",
+        "Data Enrichment",
+        "GTM Automation",
+        "Customer Feedback Management"
+      ],
+      "use_cases": [
+        "Unify feedback from surveys, chats, tickets, and reviews",
+        "Automate sentiment analysis and thematic feedback categorization",
+        "Create role-based dashboards for different team insights",
+        "Trigger automated workflows based on feedback patterns",
+        "Close feedback loops with case management systems",
+        "Monitor online reputation across review platforms"
+      ],
+      "website": "https://get.zonkafeedback.com/James-mia",
+      "slug": "zonka-feedback"
+    }
+  ]
+}

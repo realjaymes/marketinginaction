@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Tech Unite Africa
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:tech-unite-africa-2027-03-24@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270326
+SUMMARY:Tech Unite Africa
+LOCATION:Oriental Hotel\, Lagos\, Nigeria
+DESCRIPTION:A one-day summit focusing on innovation and collaboration among tech professionals\, entrepreneurs\, and creatives. https://techuniteafrica.com/
+URL:https://techuniteafrica.com/
+END:VEVENT
+END:VCALENDAR

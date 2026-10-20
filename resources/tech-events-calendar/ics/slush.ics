@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Slush
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:slush-2026-11-18@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261120
+SUMMARY:Slush
+LOCATION:Helsinki\, Finland
+DESCRIPTION:Founder-focused startup event in Helsinki. https://slush.org/
+URL:https://slush.org/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Fintech Summit Kigali
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-fintech-summit-kigali-2026-11-18@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261118
+DTEND;VALUE=DATE:20261120
+SUMMARY:Africa Fintech Summit Kigali
+LOCATION:Kigali\, Rwanda
+DESCRIPTION:16th edition of the pan-African fintech summit for regulators\, founders and investors\, with a pitch competition. https://africafintechsummit.com/
+URL:https://africafintechsummit.com/
+END:VEVENT
+END:VCALENDAR

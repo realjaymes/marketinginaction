@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:IoT West Africa + Data Center & Cloud Expo Africa
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:iot-west-africa-data-center-cloud-expo-africa-2027-04-01@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270403
+SUMMARY:IoT West Africa + Data Center & Cloud Expo Africa
+LOCATION:Landmark Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A major exhibition focusing on IoT innovations\, data centers\, and cloud technologies in West Africa. https://iotwestafrica.com/
+URL:https://iotwestafrica.com/
+END:VEVENT
+END:VCALENDAR

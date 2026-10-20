@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Growth Africa Summit
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:growth-africa-summit-2026-11-14@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261114
+DTEND;VALUE=DATE:20261115
+SUMMARY:Growth Africa Summit
+LOCATION:Lagos\, Nigeria
+DESCRIPTION:An annual summit that brings together founders\, growth professionals\, investors\, and ecosystem actors across Africa to explore scaling strategies\, growth frameworks\, networking\, and applied sessions (growth labs\, revenue design\, building growth systems). https://www.growthafricasummit.com/
+URL:https://www.growthafricasummit.com/
+END:VEVENT
+END:VCALENDAR

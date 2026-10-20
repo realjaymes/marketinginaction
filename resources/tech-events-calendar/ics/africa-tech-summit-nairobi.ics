@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Tech Summit Nairobi
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-tech-summit-nairobi-2027-02-10@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270210
+DTEND;VALUE=DATE:20270212
+SUMMARY:Africa Tech Summit Nairobi
+LOCATION:Nairobi\, Kenya
+DESCRIPTION:Tech corporates\, investors\, startups\, fintech and climate leaders meet in Nairobi. https://www.africatechsummit.com/nairobi/
+URL:https://www.africatechsummit.com/nairobi/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:GITEX Nigeria
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:gitex-nigeria-2027-10-05@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20271005
+DTEND;VALUE=DATE:20271008
+SUMMARY:GITEX Nigeria
+LOCATION:Landmark Centre (Lagos expo)\; Abuja hosts a government and AI summit day\, Lagos\, Nigeria
+DESCRIPTION:A major tech event exploring Nigeria's vast tech ecosystem\, featuring global tech communities. https://www.gitexnigeria.ng/
+URL:https://www.gitexnigeria.ng/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SXSW
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:sxsw-2027-03-15@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270315
+DTEND;VALUE=DATE:20270322
+SUMMARY:SXSW
+LOCATION:Austin\, United States
+DESCRIPTION:Tech\, film and music festival and conference in Austin. https://sxsw.com/
+URL:https://sxsw.com/
+END:VEVENT
+END:VCALENDAR

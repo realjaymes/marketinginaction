@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Entertainment Week Africa
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:entertainment-week-africa-2026-11-17@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261117
+DTEND;VALUE=DATE:20261123
+SUMMARY:Entertainment Week Africa
+LOCATION:Lagos\, Nigeria
+DESCRIPTION:Six days of summits\, markets and showcases across music\, film\, fashion\, tech and creative business in Lagos. https://ewafrica.com/
+URL:https://ewafrica.com/
+END:VEVENT
+END:VCALENDAR

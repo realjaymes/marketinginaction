@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:ADMARP Digital Product Growth Summit
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:admarp-digital-product-growth-summit-2026-11-27@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+SUMMARY:ADMARP Digital Product Growth Summit
+LOCATION:157 Gardens Event Centre\, Ilupeju\, Lagos\, Nigeria
+DESCRIPTION:One-day free summit for marketing\, product and growth teams with the first Digital Product Growth Awards. https://admarp.com/digital-product-growth-summit-2026/
+URL:https://admarp.com/digital-product-growth-summit-2026/
+END:VEVENT
+END:VCALENDAR

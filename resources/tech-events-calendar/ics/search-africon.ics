@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Search Africon
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:search-africon-2026-11-07@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:Search Africon
+LOCATION:Kenya
+DESCRIPTION:A conference advancing SEO and digital marketing in Africa\, featuring expert talks\, workshops\, and networking. https://searchafricon.com/
+URL:https://searchafricon.com/
+END:VEVENT
+END:VCALENDAR

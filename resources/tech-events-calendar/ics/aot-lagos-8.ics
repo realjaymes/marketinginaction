@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Art of Technology Lagos (AOT Lagos)
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:aot-lagos-8-2026-12-03@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261204
+SUMMARY:Art of Technology Lagos (AOT Lagos)
+LOCATION:Landmark Event Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:One-day Lagos conference on tech adoption\, ethics and governance for startups\, investors and policymakers. https://aotlagos.com/
+URL:https://aotlagos.com/
+END:VEVENT
+END:VCALENDAR

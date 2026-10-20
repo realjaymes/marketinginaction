@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Web Summit
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:web-summit-2026-11-09@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261109
+DTEND;VALUE=DATE:20261113
+SUMMARY:Web Summit
+LOCATION:Lisbon\, Portugal
+DESCRIPTION:Large global tech conference with founders\, investors and marketers in Lisbon. https://websummit.com/
+URL:https://websummit.com/
+END:VEVENT
+END:VCALENDAR

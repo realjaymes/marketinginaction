@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:GITEX Africa
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:gitex-africa-2027-04-26@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270429
+SUMMARY:GITEX Africa
+LOCATION:Marrakech\, Morocco
+DESCRIPTION:Large Africa tech and startup show in Marrakech covering AI\, cloud\, cybersecurity\, fintech and agritech. https://gitexafrica.com/
+URL:https://gitexafrica.com/
+END:VEVENT
+END:VCALENDAR

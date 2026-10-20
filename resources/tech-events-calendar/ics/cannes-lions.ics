@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Cannes Lions
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:cannes-lions-2027-06-21@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20270621
+DTEND;VALUE=DATE:20270626
+SUMMARY:Cannes Lions
+LOCATION:Cannes\, France
+DESCRIPTION:The main international festival of creativity for brands\, agencies and marketers. https://www.canneslions.com/
+URL:https://www.canneslions.com/
+END:VEVENT
+END:VCALENDAR

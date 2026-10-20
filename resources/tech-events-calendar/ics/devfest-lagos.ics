@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:DevFest Lagos
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:devfest-lagos-2026-11-13@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261113
+DTEND;VALUE=DATE:20261115
+SUMMARY:DevFest Lagos
+LOCATION:Lagos\, Nigeria
+DESCRIPTION:A developer festival organized by GDG Lagos\, featuring tech talks and networking. https://devfestlagos.com/
+URL:https://devfestlagos.com/
+END:VEVENT
+END:VCALENDAR

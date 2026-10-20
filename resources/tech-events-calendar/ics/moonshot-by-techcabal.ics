@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:MoonShot by TechCabal
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:moonshot-by-techcabal-2026-10-28@marketinginaction.xyz
+DTSTAMP:20261020T000000Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261030
+SUMMARY:MoonShot by TechCabal
+LOCATION:National Theatre (Wole Soyinka Centre for Culture and Creative Arts)\, Lagos\, Nigeria
+DESCRIPTION:A two-day event featuring startup pitches\, fireside chats\, masterclasses\, and networking opportunities. https://moonshot.techcabal.com/
+URL:https://moonshot.techcabal.com/
+END:VEVENT
+END:VCALENDAR
