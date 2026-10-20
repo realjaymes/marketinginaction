@@ -65,6 +65,6 @@ if ! git diff --cached --quiet; then
   git -c user.name="James" -c user.email="realjaymes@gmail.com" commit -q -m "Resources intake $(date +%F)
 
 Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>"
-  git push -q origin HEAD:main 2>"$OUT/push.log" || echo "<p>⚠️ MIA resources intake: the push failed. $(tail -1 "$OUT/push.log")</p>"
+  git push -q origin HEAD:main >"$OUT/push.log" 2>&1 || echo "<p>⚠️ MIA resources intake: the push failed. $(tail -1 "$OUT/push.log")</p>"
 fi
 cat "$OUT/summary.html"
