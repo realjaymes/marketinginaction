@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 424,
+  "count": 486,
   "items": [
     {
       "created": "2026-10-20",
@@ -100,7 +100,8 @@
         "Ask AI questions about customer conversations and insights."
       ],
       "website": "https://try.800.com/james-mia",
-      "slug": "800-com"
+      "slug": "800-com",
+      "group": "Outbound and sales"
     },
     {
       "created": "2026-10-20",
@@ -500,6 +501,28 @@
       "slug": "answerthepublic"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Anything",
+      "overview": "AI app builder that creates web and mobile apps from a prompt, including payments and databases.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "Website Builders"
+      ],
+      "use_cases": [
+        "Launching a simple product from a prompt",
+        "Building a lead capture app",
+        "Making a customer portal",
+        "Prototyping a startup idea",
+        "Adding payments to a small app"
+      ],
+      "website": "https://www.anything.com",
+      "slug": "anything"
+    },
+    {
       "notion_id": "24ca6d41-709c-80ca-8e73-ef1135113891",
       "created": "2025-08-11",
       "last_edited": "2025-12-31",
@@ -522,7 +545,7 @@
       ],
       "website": "https://apify.com",
       "slug": "apify",
-      "group": "Outbound and sales"
+      "group": "GTM engineering"
     },
     {
       "notion_id": "27ba6d41-709c-80e1-b649-c8c02d83f687",
@@ -549,7 +572,8 @@
         "Manage entire sales pipeline in one platform"
       ],
       "website": "https://www.apollo.io",
-      "slug": "apollo"
+      "slug": "apollo",
+      "group": "Outbound and sales"
     },
     {
       "created": "2026-10-20",
@@ -785,7 +809,31 @@
         "Integrate product usage data for PLG motions."
       ],
       "website": "https://attio.com",
-      "slug": "attio"
+      "slug": "attio",
+      "group": "Outbound and sales"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Avoma",
+      "overview": "Meeting assistant that records and transcribes calls, with scheduling and sales coaching.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Meeting Notes",
+        "Sales Intelligence"
+      ],
+      "use_cases": [
+        "Scoring sales calls",
+        "Tracking objections",
+        "Summarising discovery calls",
+        "Syncing notes to a CRM",
+        "Coaching new reps"
+      ],
+      "website": "https://www.avoma.com",
+      "slug": "avoma"
     },
     {
       "created": "2026-10-20",
@@ -880,6 +928,30 @@
       "slug": "bing-webmaster-tools"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Bitscale",
+      "overview": "GTM data and workflow tool for building enriched lead lists and running outbound plays, often used as a Clay alternative.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Engineering",
+        "Data Enrichment",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Building enriched prospect tables",
+        "Running waterfall enrichment",
+        "Scoring leads with AI",
+        "Personalising outreach at scale",
+        "Syncing data into a CRM"
+      ],
+      "website": "https://bitscale.ai",
+      "slug": "bitscale"
+    },
+    {
       "notion_id": "24fa6d41-709c-8013-bc1e-e70969815024",
       "created": "2025-08-14",
       "last_edited": "2025-08-14",
@@ -902,6 +974,29 @@
       ],
       "website": "https://blink.new",
       "slug": "blink"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Bluefish",
+      "overview": "Agentic marketing platform for enterprise brands that monitors and improves how they appear in AI search.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO",
+        "Marketing Technology"
+      ],
+      "use_cases": [
+        "Monitoring brand representation in AI answers",
+        "Finding gaps in AI search coverage",
+        "Guiding content updates for AI visibility",
+        "Tracking competitor presence",
+        "Reporting to brand teams"
+      ],
+      "website": "https://www.bluefishai.com",
+      "slug": "bluefish"
     },
     {
       "notion_id": "24ca6d41-709c-8000-b55c-ee9062e0116b",
@@ -1164,6 +1259,29 @@
       "slug": "bright-data"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "BrightEdge",
+      "overview": "Enterprise SEO platform that covers both traditional search and AI search visibility.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Tracking performance in AI Overviews",
+        "Finding content opportunities",
+        "Monitoring rankings at scale",
+        "Measuring organic share of voice",
+        "Reporting to executives"
+      ],
+      "website": "https://www.brightedge.com",
+      "slug": "brightedge"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "BrightLocal",
@@ -1254,7 +1372,8 @@
         "Exporting lead data"
       ],
       "website": "https://builtwith.com",
-      "slug": "builtwith"
+      "slug": "builtwith",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -1507,7 +1626,30 @@
         "Engaging website visitors through automated chat workflows"
       ],
       "website": "https://www.chilipiper.com",
-      "slug": "chili-piper"
+      "slug": "chili-piper",
+      "group": "Outbound and sales"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Circleback",
+      "overview": "AI notetaker that records meetings, writes notes and action items and runs automations after each call.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Meeting Notes"
+      ],
+      "use_cases": [
+        "Capturing client call notes",
+        "Sending action items to task tools",
+        "Updating a CRM after calls",
+        "Searching past meetings",
+        "Emailing recaps automatically"
+      ],
+      "website": "https://circleback.ai",
+      "slug": "circleback"
     },
     {
       "created": "2026-10-20",
@@ -1531,6 +1673,29 @@
       ],
       "website": "https://www.cision.com",
       "slug": "cision"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Clarify",
+      "overview": "AI native CRM that captures contacts, meetings and email automatically and gives agents access to the data.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "CRM",
+        "Sales Automation"
+      ],
+      "use_cases": [
+        "Logging contacts and calls automatically",
+        "Tracking deals without manual entry",
+        "Drafting follow ups",
+        "Searching customer history",
+        "Preparing for meetings"
+      ],
+      "website": "https://www.clarify.ai",
+      "slug": "clarify"
     },
     {
       "notion_id": "24ca6d41-709c-8110-8818-f340fccf0cef",
@@ -1676,6 +1841,28 @@
       "slug": "clickup"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Cline",
+      "overview": "Open source coding agent for editors and the terminal that plans, edits files and runs commands with user approval at each step. It works with the model of your choice.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Vibe Coding"
+      ],
+      "use_cases": [
+        "Building a small marketing tool from a prompt",
+        "Editing site templates safely with approvals",
+        "Running scripts to clean campaign data",
+        "Using your own model keys for cost control",
+        "Automating repetitive code changes"
+      ],
+      "website": "https://cline.bot",
+      "slug": "cline"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Close",
@@ -1742,7 +1929,31 @@
         "Triggering outreach"
       ],
       "website": "https://www.commonroom.io",
-      "slug": "common-room"
+      "slug": "common-room",
+      "group": "GTM engineering"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Conductor",
+      "overview": "Enterprise SEO and content platform that includes AI search visibility tracking and optimisation.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Tracking brand visibility in AI search",
+        "Managing enterprise SEO content",
+        "Spotting content gaps",
+        "Monitoring site health",
+        "Reporting organic performance"
+      ],
+      "website": "https://www.conductor.com",
+      "slug": "conductor"
     },
     {
       "created": "2026-10-20",
@@ -1766,6 +1977,28 @@
       ],
       "website": "https://www.connectively.us",
       "slug": "connectively"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Consensus",
+      "overview": "AI search engine that answers questions using findings from scientific papers, with citations.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Research Assistant",
+        "AI Search Engines"
+      ],
+      "use_cases": [
+        "Checking if a claim has research support",
+        "Finding sources for content",
+        "Summarising evidence on a topic",
+        "Citing studies in articles",
+        "Fact checking before publishing"
+      ],
+      "website": "https://consensus.app",
+      "slug": "consensus"
     },
     {
       "created": "2026-10-20",
@@ -1955,6 +2188,29 @@
       ],
       "website": "https://customer.io",
       "slug": "customer-io"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "D-ID",
+      "overview": "Generates talking avatar videos from a photo and a script, with an API for interactive agents.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Video Generation & Filmmaking",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Making talking head product intros",
+        "Localising videos with translated voice",
+        "Creating training and onboarding clips",
+        "Building a video greeter for a site",
+        "Producing sales outreach videos"
+      ],
+      "website": "https://www.d-id.com",
+      "slug": "d-id"
     },
     {
       "created": "2026-10-20",
@@ -2235,6 +2491,28 @@
       "slug": "descript"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Devin",
+      "overview": "Autonomous software engineering agent from Cognition that plans, writes and tests code and opens pull requests, often in parallel cloud sessions.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Fixing small website bugs from a ticket",
+        "Building landing page variants",
+        "Migrating tracking scripts across pages",
+        "Writing internal data scripts",
+        "Clearing a backlog of small engineering tasks"
+      ],
+      "website": "https://devin.ai",
+      "slug": "devin"
+    },
+    {
       "notion_id": "2dba6d41-709c-81d9-abdb-dac7572224fd",
       "created": "2026-01-01",
       "last_edited": "2026-01-01",
@@ -2258,6 +2536,28 @@
       "slug": "dia-browser"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Dify",
+      "overview": "Open source platform for building AI apps and agentic workflows with a visual builder, knowledge bases and model routing.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Building a support or sales chatbot on your docs",
+        "Chaining model calls into a content workflow",
+        "Connecting a knowledge base to an agent",
+        "Prototyping internal AI tools",
+        "Exposing a workflow as an API"
+      ],
+      "website": "https://dify.ai",
+      "slug": "dify"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "DiscoLike",
@@ -2278,7 +2578,8 @@
         "Feeding outbound"
       ],
       "website": "https://discolike.com",
-      "slug": "discolike"
+      "slug": "discolike",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -2303,6 +2604,29 @@
       "slug": "dmarcian"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Docket",
+      "overview": "AI demand agent for B2B marketing that answers buyer questions on a website and qualifies interest.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Enablement",
+        "Customer Experience"
+      ],
+      "use_cases": [
+        "Answering buyer questions on the site",
+        "Qualifying inbound visitors",
+        "Supporting sales calls with product knowledge",
+        "Capturing intent data",
+        "Routing hot leads to sales"
+      ],
+      "website": "https://www.docket.io",
+      "slug": "docket"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Dreamdata",
@@ -2323,6 +2647,29 @@
       ],
       "website": "https://dreamdata.io",
       "slug": "dreamdata"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Dreamina",
+      "overview": "ByteDance's creative studio for generating images and video, built on the Seedream and Seedance models.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Video & Image Generation",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Generating ad images and short videos",
+        "Animating still product shots",
+        "Making social video hooks",
+        "Testing creative concepts fast",
+        "Editing videos inside the CapCut ecosystem"
+      ],
+      "website": "https://dreamina.capcut.com",
+      "slug": "dreamina"
     },
     {
       "notion_id": "27ba6d41-709c-80aa-96bc-e0b549415678",
@@ -2442,6 +2789,27 @@
       "slug": "elevenlabs"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Elicit",
+      "overview": "AI research assistant that searches academic papers, extracts data and summarises findings.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Research Assistant"
+      ],
+      "use_cases": [
+        "Finding studies to back up claims",
+        "Extracting data from papers",
+        "Summarising a research area quickly",
+        "Checking evidence for an article",
+        "Building literature tables"
+      ],
+      "website": "https://elicit.com",
+      "slug": "elicit"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Emailable",
@@ -2532,6 +2900,29 @@
       ],
       "website": "https://envoy.com",
       "slug": "envoy"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Evertune",
+      "overview": "Measures how large language models describe brands, using large scale prompt sampling, and guides changes to improve it.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Measuring brand perception in AI models",
+        "Benchmarking against competitors",
+        "Finding sources that shape AI answers",
+        "Prioritising content fixes",
+        "Tracking change over time"
+      ],
+      "website": "https://www.evertune.ai",
+      "slug": "evertune"
     },
     {
       "created": "2026-10-20",
@@ -2721,6 +3112,29 @@
       "slug": "fellow"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Fibr AI",
+      "overview": "Agentic website personalisation and testing platform that adapts pages to visitors and runs experiments.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "CRO and A/B Testing",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Personalising landing pages by audience",
+        "Running A/B tests with AI",
+        "Matching ad to page copy",
+        "Finding conversion drop offs",
+        "Updating pages faster"
+      ],
+      "website": "https://fibr.ai",
+      "slug": "fibr-ai"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Figma",
@@ -2764,6 +3178,28 @@
       ],
       "website": "https://www.fillout.com",
       "slug": "fillout"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Fin",
+      "overview": "AI customer service agent from Intercom that resolves support questions across chat, email and phone.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Customer Experience"
+      ],
+      "use_cases": [
+        "Answering customer questions automatically",
+        "Reducing support tickets",
+        "Handing complex cases to humans",
+        "Learning from help center content",
+        "Reporting on resolution rates"
+      ],
+      "website": "https://fin.ai",
+      "slug": "fin"
     },
     {
       "created": "2026-10-20",
@@ -3096,6 +3532,29 @@
       "slug": "freckle"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Freepik",
+      "overview": "Design platform with stock assets and an AI suite for images, video and editing, drawing on several third party models.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Video & Image Generation",
+        "Graphic Design"
+      ],
+      "use_cases": [
+        "Generating blog and social images",
+        "Creating short product videos",
+        "Editing and upscaling existing images",
+        "Finding licensed stock alongside AI assets",
+        "Producing ad creative variations"
+      ],
+      "website": "https://www.freepik.com",
+      "slug": "freepik"
+    },
+    {
       "notion_id": "284a6d41-709c-81b5-8377-d6a610f32bfc",
       "created": "2025-10-06",
       "last_edited": "2025-10-06",
@@ -3142,7 +3601,8 @@
         "Implement SLA policies and escalation workflows"
       ],
       "website": "https://www.freshworks.com/freshdesk/",
-      "slug": "freshdesk-by-freshworks"
+      "slug": "freshdesk-by-freshworks",
+      "group": "Email and lifecycle"
     },
     {
       "notion_id": "284a6d41-709c-81bb-8bad-d216fd5ac972",
@@ -3190,6 +3650,28 @@
       ],
       "website": "https://fullenrich.com/",
       "slug": "fullenrich"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Fyxer AI",
+      "overview": "AI assistant that sorts email, drafts replies in your tone and writes meeting notes.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Email Management",
+        "AI Meeting Notes"
+      ],
+      "use_cases": [
+        "Sorting an inbox automatically",
+        "Drafting replies in your voice",
+        "Scheduling meetings",
+        "Taking meeting notes",
+        "Following up on unanswered emails"
+      ],
+      "website": "https://www.fyxer.com",
+      "slug": "fyxer-ai"
     },
     {
       "created": "2026-10-20",
@@ -3466,6 +3948,28 @@
       "slug": "google-analytics"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Google Antigravity",
+      "overview": "Google's agent first development environment where several agents work across the editor, terminal and browser at once.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Building web apps with parallel agents",
+        "Testing a page in a browser agent",
+        "Prototyping landing pages from a brief",
+        "Automating site QA checks",
+        "Reviewing agent work before it ships"
+      ],
+      "website": "https://antigravity.google",
+      "slug": "google-antigravity"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Google Business Profile",
@@ -3626,6 +4130,28 @@
       "slug": "google-search-console"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Google Stitch",
+      "overview": "Google Labs tool that generates app and web interface designs from prompts and images, with code export.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "Graphic Design"
+      ],
+      "use_cases": [
+        "Designing landing page concepts",
+        "Turning a wireframe into UI",
+        "Exploring layout options",
+        "Exporting front end code",
+        "Prototyping product screens"
+      ],
+      "website": "https://stitch.withgoogle.com",
+      "slug": "google-stitch"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Google Tag Manager",
@@ -3671,6 +4197,29 @@
       ],
       "website": "https://deepmind.google/models/veo",
       "slug": "google-veo"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Grammarly",
+      "overview": "Writing assistant that checks grammar and tone and uses AI agents to draft, rewrite and give feedback across apps.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Content Generation",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Editing email and landing page copy",
+        "Matching brand tone",
+        "Rewriting long drafts to be shorter",
+        "Checking client documents before sending",
+        "Getting feedback on a pitch"
+      ],
+      "website": "https://www.grammarly.com",
+      "slug": "grammarly"
     },
     {
       "created": "2026-10-20",
@@ -3951,6 +4500,29 @@
       "slug": "higgsfield"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Hightouch",
+      "overview": "Customer data platform for marketers that syncs warehouse data to tools and includes AI agents for campaigns.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Technology",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Syncing audiences to ad platforms",
+        "Building segments from warehouse data",
+        "Personalising campaigns with AI",
+        "Running lifecycle messaging",
+        "Measuring campaign results"
+      ],
+      "website": "https://hightouch.com",
+      "slug": "hightouch"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Hootsuite",
@@ -4024,6 +4596,28 @@
       ],
       "website": "https://www.hubspot.com",
       "slug": "hubspot"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Hugging Face",
+      "overview": "Hub for sharing and running open models, datasets and demo apps. Teams use it to find and host open source AI models.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Model Repositories",
+        "Open-Source AI"
+      ],
+      "use_cases": [
+        "Finding open models for classification or summarising",
+        "Testing image and audio models in hosted demos",
+        "Hosting a private model endpoint",
+        "Browsing datasets for fine tuning",
+        "Tracking which open models are gaining adoption"
+      ],
+      "website": "https://huggingface.co",
+      "slug": "hugging-face"
     },
     {
       "created": "2026-10-20",
@@ -4160,7 +4754,31 @@
         "Localize content for different markets and languages"
       ],
       "website": "https://hypotenuse.ai",
-      "slug": "hypotenuse-ai"
+      "slug": "hypotenuse-ai",
+      "group": "SEO and content"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Icon",
+      "overview": "AI ad creative platform that produces and tests ad concepts, including video, for ecommerce and direct to consumer brands.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising",
+        "Creative Automation"
+      ],
+      "use_cases": [
+        "Producing ad concepts at volume",
+        "Testing creative angles",
+        "Making video ads from product pages",
+        "Iterating on winning ads",
+        "Briefing creative faster"
+      ],
+      "website": "https://icon.com",
+      "slug": "icon"
     },
     {
       "created": "2026-10-20",
@@ -4350,6 +4968,29 @@
       "slug": "instapage"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "invideo AI",
+      "overview": "Creates videos from a text prompt, including script, stock footage, voiceover and editing.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Text-to-Video Generation",
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Turning a blog post into a video",
+        "Making short ads from a brief",
+        "Creating YouTube explainers",
+        "Producing product demo videos",
+        "Generating social clips with voiceover"
+      ],
+      "website": "https://invideo.io",
+      "slug": "invideo-ai"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Jasper",
@@ -4392,6 +5033,28 @@
       ],
       "website": "https://json2video.com",
       "slug": "json2video"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Jules",
+      "overview": "Google's asynchronous coding agent that works on tasks in a connected GitHub repository and proposes changes for review.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Handing bug fixes to an agent",
+        "Updating site code and dependencies",
+        "Writing tests for marketing tools",
+        "Making content changes across many pages",
+        "Reviewing agent made pull requests"
+      ],
+      "website": "https://jules.google",
+      "slug": "jules"
     },
     {
       "created": "2026-10-20",
@@ -4461,7 +5124,8 @@
         "Refreshing target accounts"
       ],
       "website": "https://keyplay.io",
-      "slug": "keyplay"
+      "slug": "keyplay",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -4509,6 +5173,28 @@
       ],
       "website": "https://www.kimi.com",
       "slug": "kimi"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Kiro",
+      "overview": "AWS agentic coding environment that turns prompts into specs, tasks and code. It is built around spec driven development.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Turning a feature idea into a written spec",
+        "Building a prototype app from requirements",
+        "Generating tasks for a small build",
+        "Keeping code and documentation in sync",
+        "Shipping internal tools faster"
+      ],
+      "website": "https://kiro.dev",
+      "slug": "kiro"
     },
     {
       "created": "2026-10-20",
@@ -4676,6 +5362,30 @@
       "slug": "la-growth-machine"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Landbase",
+      "overview": "GTM platform with an agentic AI model for building target lists and running outbound campaigns from natural language.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Engineering",
+        "Lead Generation",
+        "Outbound GTM Outreach"
+      ],
+      "use_cases": [
+        "Building lists from a plain language brief",
+        "Running outbound campaigns",
+        "Finding accounts that match signals",
+        "Personalising messages",
+        "Booking meetings"
+      ],
+      "website": "https://www.landbase.com",
+      "slug": "landbase"
+    },
+    {
       "notion_id": "24ca6d41-709c-80a0-8d51-f01a48d6c51d",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -4698,6 +5408,28 @@
       ],
       "website": "https://langchain.com",
       "slug": "langchain"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Langflow",
+      "overview": "Low code visual builder for agent and retrieval applications, with components for models, tools and data sources.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Prototyping an agent on a canvas",
+        "Building a document question tool",
+        "Connecting data sources to a model",
+        "Testing prompt chains",
+        "Handing a working flow to developers"
+      ],
+      "website": "https://www.langflow.org",
+      "slug": "langflow"
     },
     {
       "notion_id": "24ca6d41-709c-80df-8519-d3ccea3b82fc",
@@ -4885,7 +5617,8 @@
         "Monitoring social activity"
       ],
       "website": "https://letterdrop.com",
-      "slug": "letterdrop"
+      "slug": "letterdrop",
+      "group": "SEO and content"
     },
     {
       "notion_id": "24ca6d41-709c-80d4-9a15-f70b4acd5ca6",
@@ -5003,6 +5736,28 @@
       ],
       "website": "https://www.llama.com",
       "slug": "llama"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "LM Studio",
+      "overview": "Desktop app for downloading and running open language models locally. It also exposes a local API that other tools can call.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Open-Source AI",
+        "AI Model Hosting & Deployment"
+      ],
+      "use_cases": [
+        "Drafting sensitive copy without sending data to a cloud model",
+        "Testing open models before choosing one",
+        "Running a local model behind an automation workflow",
+        "Summarising private customer documents offline",
+        "Comparing output quality across several open models"
+      ],
+      "website": "https://lmstudio.ai",
+      "slug": "lm-studio"
     },
     {
       "notion_id": "284a6d41-709c-815d-b556-db69634845fe",
@@ -5144,6 +5899,28 @@
       "slug": "lovart"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "LTX Studio",
+      "overview": "AI video production studio from Lightricks that plans scenes, shots and characters from a script.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Video Generation & Filmmaking",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Storyboarding a launch video",
+        "Generating scenes from a script",
+        "Keeping characters consistent between shots",
+        "Making concept films for pitches",
+        "Producing short brand stories"
+      ],
+      "website": "https://ltx.io/studio",
+      "slug": "ltx-studio"
+    },
+    {
       "notion_id": "24ca6d41-709c-81c1-8e79-dfed35a48523",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -5262,6 +6039,28 @@
       "slug": "madgicx"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Magic Patterns",
+      "overview": "AI design tool for product teams that turns prompts and screenshots into editable UI designs and prototypes.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding",
+        "Graphic Design"
+      ],
+      "use_cases": [
+        "Prototyping landing page layouts",
+        "Turning a sketch into a UI",
+        "Testing page ideas before development",
+        "Sharing clickable concepts with stakeholders",
+        "Exporting design to code"
+      ],
+      "website": "https://www.magicpatterns.com",
+      "slug": "magic-patterns"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "MagicPost",
@@ -5282,6 +6081,29 @@
       ],
       "website": "https://magicpost.io",
       "slug": "magicpost"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Magnific",
+      "overview": "AI upscaler and image enhancer that adds detail when it enlarges pictures, now part of the Freepik family.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Visual Generation",
+        "Graphic Design"
+      ],
+      "use_cases": [
+        "Upscaling low resolution product photos",
+        "Sharpening AI generated images for print",
+        "Restyling images for campaigns",
+        "Improving old brand assets",
+        "Preparing hero images"
+      ],
+      "website": "https://www.magnific.com",
+      "slug": "magnific"
     },
     {
       "created": "2026-10-20",
@@ -5468,7 +6290,8 @@
         "Reduce marketing payroll while maintaining efficiency"
       ],
       "website": "https://try.marketerhire.com/james-mia",
-      "slug": "marketerhire"
+      "slug": "marketerhire",
+      "group": "Team and operations"
     },
     {
       "created": "2026-10-20",
@@ -5518,7 +6341,8 @@
         "Process international payments with competitive exchange rates"
       ],
       "website": "https://affiliates.meliopayments.com/james-mia",
-      "slug": "melio"
+      "slug": "melio",
+      "group": "Team and operations"
     },
     {
       "notion_id": "284a6d41-709c-81e4-ac99-ea955b5592ea",
@@ -6026,6 +6850,28 @@
       "slug": "murf-ai"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Muse",
+      "overview": "Meta's personal AI agent that completes tasks on a user's behalf, such as sending email, booking travel and shopping. It runs in the cloud on the Muse Spark model and is reached through an app and WhatsApp.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Delegating email replies and inbox triage",
+        "Researching and booking business travel",
+        "Running recurring admin tasks in the background",
+        "Comparing vendors and placing small purchases",
+        "Preparing meeting briefs from calendar and email"
+      ],
+      "website": "https://muse.ai",
+      "slug": "muse"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Mutiny",
@@ -6470,6 +7316,28 @@
       "slug": "oncrawl"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Opal",
+      "overview": "Google Labs experiment for building small AI mini apps and workflows by describing them in plain language.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Workflow Automation",
+        "Vibe Coding"
+      ],
+      "use_cases": [
+        "Building a simple content workflow",
+        "Creating a research helper app",
+        "Chaining prompts without code",
+        "Sharing small tools with a team",
+        "Prototyping AI features"
+      ],
+      "website": "https://opal.google",
+      "slug": "opal"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "OpenAI Codex",
@@ -6515,6 +7383,51 @@
       ],
       "website": "https://openai.com/index/whisper/",
       "slug": "openai-whisper"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "OpenArt",
+      "overview": "Creative platform that brings image, video and audio models together, with character consistency and story tools.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Video & Image Generation",
+        "Text-to-Image Generation"
+      ],
+      "use_cases": [
+        "Generating ad images in several models",
+        "Making consistent brand characters",
+        "Turning images into short videos",
+        "Creating story based video concepts",
+        "Testing visual styles before a shoot"
+      ],
+      "website": "https://openart.ai",
+      "slug": "openart"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "OpenClaw",
+      "overview": "Open source personal AI assistant that runs on your own machine and takes actions through chat apps such as WhatsApp and Telegram. It connects to email, calendars and other tools.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Open-Source AI"
+      ],
+      "use_cases": [
+        "Running a personal assistant from a chat app",
+        "Automating inbox triage and follow ups",
+        "Scheduling posts and reminders",
+        "Pulling daily competitor and news briefs",
+        "Connecting everyday tools with plain language commands"
+      ],
+      "website": "https://openclaw.ai",
+      "slug": "openclaw"
     },
     {
       "created": "2026-10-20",
@@ -6563,6 +7476,28 @@
       "slug": "openrouter"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Opera Neon",
+      "overview": "AI browser from Opera built to take actions for the user, including research, form filling and building small pages.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Web Browsers",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Researching a market across many tabs",
+        "Automating repetitive web tasks",
+        "Building quick landing page drafts",
+        "Comparing products across sites",
+        "Collecting leads data from public pages"
+      ],
+      "website": "https://www.operaneon.com",
+      "slug": "opera-neon"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Optimizely",
@@ -6607,6 +7542,29 @@
       ],
       "website": "https://www.opus.pro/",
       "slug": "opus-clip"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Origami Agents",
+      "overview": "AI sales agents that research companies, find prospects and surface leads that fit a defined ideal customer.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "Sales Automation"
+      ],
+      "use_cases": [
+        "Finding target accounts automatically",
+        "Researching prospects before outreach",
+        "Monitoring signals for new leads",
+        "Building lists from plain language",
+        "Passing leads to sales"
+      ],
+      "website": "https://origami.chat",
+      "slug": "origami-agents"
     },
     {
       "created": "2026-10-20",
@@ -6913,6 +7871,30 @@
       "slug": "perplexity-comet"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Persana AI",
+      "overview": "AI sales prospecting platform that finds leads, enriches data and writes outreach using signals and research agents.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "Data Enrichment",
+        "Sales Automation"
+      ],
+      "use_cases": [
+        "Building lead lists with enrichment",
+        "Writing personalised outreach",
+        "Tracking buying signals",
+        "Researching accounts with AI",
+        "Syncing leads to a CRM"
+      ],
+      "website": "https://persana.ai",
+      "slug": "persana-ai"
+    },
+    {
       "notion_id": "27ba6d41-709c-8053-a1bf-fa4c0ee12959",
       "created": "2025-09-27",
       "last_edited": "2025-10-02",
@@ -7082,6 +8064,29 @@
       "slug": "polsia"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Pomelli",
+      "overview": "Google Labs tool that learns a brand from its website and creates on brand marketing content and campaigns.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Creative Automation",
+        "AI Content Generation"
+      ],
+      "use_cases": [
+        "Generating on brand social posts",
+        "Creating campaign ideas from your site",
+        "Making product visuals",
+        "Keeping content consistent with brand tone",
+        "Producing ads for small businesses"
+      ],
+      "website": "https://labs.google.com/pomelli/about",
+      "slug": "pomelli"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "PostHog",
@@ -7149,6 +8154,29 @@
       ],
       "website": "https://postscript.io",
       "slug": "postscript"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Predis AI",
+      "overview": "Generates social media posts, ads and short videos from a text prompt and schedules them to channels.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Social Media Management",
+        "Creative Automation"
+      ],
+      "use_cases": [
+        "Creating social posts from a product page",
+        "Generating ad creative variations",
+        "Making short videos",
+        "Scheduling content to channels",
+        "Keeping a consistent brand look"
+      ],
+      "website": "https://predis.ai",
+      "slug": "predis-ai"
     },
     {
       "notion_id": "284a6d41-709c-8152-a010-d2cdecc90b02",
@@ -7244,6 +8272,29 @@
       "slug": "prospeo"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Qualified",
+      "overview": "Pipeline generation platform with an AI agent (Piper) that talks to website visitors and books meetings.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Automation",
+        "Website Visitor Identification"
+      ],
+      "use_cases": [
+        "Engaging high intent website visitors",
+        "Booking meetings from the website",
+        "Qualifying inbound leads",
+        "Routing visitors to sales",
+        "Following up on target accounts"
+      ],
+      "website": "https://www.qualified.com",
+      "slug": "qualified"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Qwen",
@@ -7312,6 +8363,28 @@
       "slug": "rank-math"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Rankscale",
+      "overview": "AI visibility platform that tracks how brands appear in ChatGPT, Perplexity and Google AI Overviews.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Tracking brand mentions in AI answers",
+        "Comparing share of voice with competitors",
+        "Finding prompts where you are missing",
+        "Spotting sources that AI cites",
+        "Reporting AI visibility to clients"
+      ],
+      "website": "https://rankscale.ai",
+      "slug": "rankscale"
+    },
+    {
       "notion_id": "27ba6d41-709c-8098-8f07-eb193b975973",
       "created": "2025-09-27",
       "last_edited": "2025-10-02",
@@ -7335,7 +8408,30 @@
         "Track repeat visitors for account-based marketing"
       ],
       "website": "https://www.rb2b.com",
-      "slug": "rb2b"
+      "slug": "rb2b",
+      "group": "GTM engineering"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Read AI",
+      "overview": "Meeting notetaker and assistant that summarises calls, emails and messages and searches across them.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Meeting Notes"
+      ],
+      "use_cases": [
+        "Summarising customer calls",
+        "Tracking action items",
+        "Searching past conversations",
+        "Coaching on meeting performance",
+        "Sharing recaps with a team"
+      ],
+      "website": "https://www.read.ai",
+      "slug": "read-ai"
     },
     {
       "created": "2026-10-20",
@@ -7644,6 +8740,29 @@
       "slug": "respond-io"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Retell AI",
+      "overview": "Platform for building AI voice agents that handle phone calls, such as inbound support and outbound lead follow up.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Sales Automation"
+      ],
+      "use_cases": [
+        "Calling new leads within minutes",
+        "Qualifying inbound callers",
+        "Booking appointments by phone",
+        "Handling support calls",
+        "Running follow up call campaigns"
+      ],
+      "website": "https://www.retellai.com",
+      "slug": "retell-ai"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "RevenueHero",
@@ -7732,6 +8851,50 @@
       ],
       "website": "https://www.rollworks.com",
       "slug": "rollworks"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Rork",
+      "overview": "AI builder that creates mobile and web apps from a text prompt.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Vibe Coding"
+      ],
+      "use_cases": [
+        "Prototyping a mobile app idea",
+        "Building a companion app for a product",
+        "Testing a concept with users",
+        "Creating an internal mobile tool",
+        "Shipping a demo for investors"
+      ],
+      "website": "https://rork.com",
+      "slug": "rork"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Rox",
+      "overview": "Revenue agents platform that unifies account data and has AI agents research, prioritise and prepare sales work.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Intelligence",
+        "Sales Automation"
+      ],
+      "use_cases": [
+        "Preparing account briefs",
+        "Prioritising accounts",
+        "Drafting follow ups",
+        "Updating CRM records",
+        "Surfacing expansion signals"
+      ],
+      "website": "https://www.rox.com",
+      "slug": "rox"
     },
     {
       "created": "2026-10-20",
@@ -8063,6 +9226,29 @@
       "slug": "seamless-ai"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Search Atlas",
+      "overview": "SEO automation platform with AI agents for keyword research, content, site audits, link building and AI visibility tracking.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "SEO",
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Running automated site audits",
+        "Writing and optimising SEO content",
+        "Tracking rankings and AI visibility",
+        "Planning link building",
+        "Reporting for clients"
+      ],
+      "website": "https://searchatlas.com",
+      "slug": "search-atlas"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Seedance",
@@ -8268,6 +9454,27 @@
       "slug": "similarweb"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Simular",
+      "overview": "Maker of Sai, an agent that operates a computer to complete tasks across apps and websites.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Automating repetitive desktop work",
+        "Moving data between tools without an API",
+        "Running research across websites",
+        "Filling in forms at scale",
+        "Testing user flows on live sites"
+      ],
+      "website": "https://www.simular.ai",
+      "slug": "simular"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Singular",
@@ -8288,6 +9495,29 @@
       ],
       "website": "https://www.singular.net",
       "slug": "singular"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Sintra",
+      "overview": "Platform of role based AI helpers for small businesses, with assistants for marketing, sales, support and content.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "AI Content Generation"
+      ],
+      "use_cases": [
+        "Drafting social posts with a marketing helper",
+        "Answering customer questions",
+        "Writing email campaigns",
+        "Researching competitors",
+        "Planning content calendars"
+      ],
+      "website": "https://sintra.ai",
+      "slug": "sintra"
     },
     {
       "created": "2026-10-20",
@@ -8450,7 +9680,30 @@
         "Power video tools inside ChatGPT Plus/Pro environments."
       ],
       "website": "https://openai.com/sora",
-      "slug": "sora-openai"
+      "slug": "sora-openai",
+      "retired": "2026-10-21: OpenAI discontinued the Sora app and API"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Speechify",
+      "overview": "Text to speech and voice typing app, with AI voice generation for narration and a voice assistant.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Text-to-Audio Generation",
+        "Speech-to-Text Generation"
+      ],
+      "use_cases": [
+        "Narrating blog posts as audio",
+        "Voicing explainer videos",
+        "Dictating drafts",
+        "Proofreading copy by listening",
+        "Making audio versions of newsletters"
+      ],
+      "website": "https://speechify.com",
+      "slug": "speechify"
     },
     {
       "created": "2026-10-20",
@@ -8586,6 +9839,28 @@
       ],
       "website": "https://streamyard.com",
       "slug": "streamyard"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Submagic",
+      "overview": "Edits short videos with AI by adding captions, b roll, zooms and sound effects.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Adding captions to short videos",
+        "Repurposing long videos into clips",
+        "Adding b roll automatically",
+        "Editing founder videos faster",
+        "Styling videos for each channel"
+      ],
+      "website": "https://www.submagic.co",
+      "slug": "submagic"
     },
     {
       "created": "2026-10-20",
@@ -8866,7 +10141,8 @@
         "Create LinkedIn carousels and visual content formats"
       ],
       "website": "https://taplio.com",
-      "slug": "taplio"
+      "slug": "taplio",
+      "group": "Ads, social and reputation"
     },
     {
       "created": "2026-10-20",
@@ -8982,6 +10258,28 @@
       ],
       "website": "https://ads.tiktok.com",
       "slug": "tiktok-ads-manager"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "tl;dv",
+      "overview": "AI notetaker for Zoom, Google Meet and Teams that records, transcribes and summarises calls and pushes notes to a CRM.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Meeting Notes"
+      ],
+      "use_cases": [
+        "Recording customer interviews",
+        "Summarising sales calls",
+        "Sending call notes to a CRM",
+        "Finding quotes for case studies",
+        "Sharing clips of key moments"
+      ],
+      "website": "https://tldv.io",
+      "slug": "tl-dv"
     },
     {
       "notion_id": "284a6d41-709c-8197-8399-ed37426ee83e",
@@ -9125,7 +10423,8 @@
         "Manage relationships using built-in Twitter CRM"
       ],
       "website": "https://tweethunter.io/",
-      "slug": "tweet-hunter"
+      "slug": "tweet-hunter",
+      "group": "Ads, social and reputation"
     },
     {
       "created": "2026-10-20",
@@ -9148,6 +10447,29 @@
       ],
       "website": "https://segment.com",
       "slug": "twilio-segment"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Typeface",
+      "overview": "Enterprise marketing AI platform that creates on brand content and runs agentic marketing workflows.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Content Generation",
+        "Creative Automation"
+      ],
+      "use_cases": [
+        "Producing on brand copy and images at scale",
+        "Creating campaign variants by audience",
+        "Reusing one asset across channels",
+        "Applying brand guidelines automatically",
+        "Automating content approvals"
+      ],
+      "website": "https://www.typeface.ai",
+      "slug": "typeface"
     },
     {
       "created": "2026-10-20",
@@ -9261,7 +10583,8 @@
         "Automating sequences"
       ],
       "website": "https://www.unifygtm.com",
-      "slug": "unify"
+      "slug": "unify",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -9311,6 +10634,29 @@
       "slug": "v0-by-vercel"
     },
     {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "VEED",
+      "overview": "Online video editor with AI features such as captions, avatars, translation and video generation.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing",
+        "Text-to-Video Generation"
+      ],
+      "use_cases": [
+        "Adding captions to social videos",
+        "Translating videos into other languages",
+        "Cleaning audio on recorded demos",
+        "Making avatar presenter videos",
+        "Resizing videos for each channel"
+      ],
+      "website": "https://www.veed.io",
+      "slug": "veed"
+    },
+    {
       "notion_id": "24ca6d41-709c-80c3-adaf-d1ce4ced6aad",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -9332,6 +10678,50 @@
       ],
       "website": "https://vercel.com",
       "slug": "vercel"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Vidu",
+      "overview": "AI video generator that turns text, images or reference clips into short videos.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Text-to-Video Generation",
+        "Video & Image Generation"
+      ],
+      "use_cases": [
+        "Animating product images",
+        "Making short social video ads",
+        "Keeping a character consistent across clips",
+        "Testing video concepts quickly",
+        "Creating b roll for explainers"
+      ],
+      "website": "https://www.vidu.com",
+      "slug": "vidu"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Vizard",
+      "overview": "AI video tool that cuts long videos into short clips with captions and reframing for social channels.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Audio & Video Editing"
+      ],
+      "use_cases": [
+        "Clipping webinars and podcasts",
+        "Making social shorts",
+        "Adding captions",
+        "Reframing for vertical video",
+        "Repurposing interviews"
+      ],
+      "website": "https://vizard.ai",
+      "slug": "vizard"
     },
     {
       "created": "2026-10-20",
@@ -9401,7 +10791,8 @@
         "Auditing tag setups"
       ],
       "website": "https://www.wappalyzer.com",
-      "slug": "wappalyzer"
+      "slug": "wappalyzer",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -9608,7 +10999,8 @@
         "Integrate AI workflows with developer productivity tools."
       ],
       "website": "https://windsurf.com",
-      "slug": "windsurf"
+      "slug": "windsurf",
+      "retired": "2026-10-21: became Devin Desktop, listed as Devin"
     },
     {
       "notion_id": "24ca6d41-709c-80fe-afae-faa10237635c",
@@ -9700,6 +11092,28 @@
       ],
       "website": "https://yoast.com",
       "slug": "yoast-seo"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Z.ai",
+      "overview": "Chat and agent platform from Zhipu AI built on its GLM model family. GLM models are also available as open weights and through an API.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Conversational AI",
+        "Open-Source AI"
+      ],
+      "use_cases": [
+        "Drafting and rewriting marketing copy",
+        "Summarising long research documents",
+        "Generating code for small internal tools",
+        "Testing a low cost API model for content pipelines",
+        "Building simple slide decks and web pages from a prompt"
+      ],
+      "website": "https://chat.z.ai",
+      "slug": "z-ai"
     },
     {
       "notion_id": "24ca6d41-709c-8015-b37d-c0e9884c7e5d",
