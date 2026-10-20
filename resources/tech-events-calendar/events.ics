@@ -105,10 +105,10 @@ DESCRIPTION:One-day free summit for marketing\, product and growth teams with th
 URL:https://admarp.com/digital-product-growth-summit-2026/
 END:VEVENT
 BEGIN:VEVENT
-UID:laif-awards-2026-11-29@marketinginaction.xyz
+UID:laif-awards-2026-11-27@marketinginaction.xyz
 DTSTAMP:20261020T000000Z
-DTSTART;VALUE=DATE:20261129
-DTEND;VALUE=DATE:20261130
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261129
 SUMMARY:LAIF Awards (Lagos Advertising and Ideas Festival)
 LOCATION:Lagos\, Nigeria
 DESCRIPTION:Nigeria's main advertising and creative awards festival\, 21st edition\, themed 'Glitch to Great'. https://www.laif.com.ng/

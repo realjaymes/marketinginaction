@@ -1,36 +1,5 @@
 {
-  "events": [
-    {
-      "kind": "event-site-down",
-      "slug": "apiconf-lagos",
-      "name": "APIConf Lagos",
-      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
-    },
-    {
-      "kind": "event-date-unconfirmed",
-      "slug": "laif-awards",
-      "name": "LAIF Awards (Lagos Advertising and Ideas Festival)",
-      "message": "Its page no longer shows 2026-11-29. Check whether the date moved: https://www.laif.com.ng/"
-    },
-    {
-      "kind": "event-site-down",
-      "slug": "lagos-executive-cloud-tech-summit",
-      "name": "Lagos Executive Cloud Tech Summit",
-      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
-    },
-    {
-      "kind": "event-site-down",
-      "slug": "nigeria-fintech-week",
-      "name": "Nigeria Fintech Week",
-      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
-    },
-    {
-      "kind": "event-site-down",
-      "slug": "revup-africa",
-      "name": "Revup Africa",
-      "message": "Its site has failed 3 runs in a row (down). Mark it discontinued or give a new link."
-    }
-  ],
+  "events": [],
   "tools": [],
-  "as_of": "2026-10-20"
+  "as_of": "2026-10-21"
 }

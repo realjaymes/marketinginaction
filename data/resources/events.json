@@ -101,17 +101,17 @@
       "venue": "The Zone, Gbagada Expressway",
       "format": "in-person",
       "event_type": "Conference",
-      "website": "https://apiconf.net/",
+      "website": "https://luma.com/588n962h",
       "tickets": "https://luma.com/588n962h",
       "organiser": "API Conference Lagos community (Apidays Lagos)",
       "description": "A conference promoting API literacy among developers, featuring networking and workshops.",
       "status": "past-awaiting-next",
       "date_source": "https://sessionize.com/api-conf-lagos-2026/",
-      "verified": "2026-10-20",
+      "verified": "2026-10-21",
       "mia_event": false,
       "region": "africa",
       "origin": "notion",
-      "notes": "Dates from Sessionize call-for-speakers page; venue and 'Past Event' flag from the Luma page. apiconf.net has an SSL certificate mismatch (does not load cleanly in curl). Next edition not announced."
+      "notes": "The 2026 edition ran 24 to 25 July at The Zone, Gbagada (Sessionize, Luma). apiconf.net stopped answering in October 2026, so the link is the organisers' Luma page. The next edition's call for speakers usually opens on Sessionize in January."
     },
     {
       "slug": "moonshot-by-techcabal",
@@ -336,8 +336,8 @@
     {
       "slug": "laif-awards",
       "name": "LAIF Awards (Lagos Advertising and Ideas Festival)",
-      "start_date": "2026-11-29",
-      "end_date": "2026-11-29",
+      "start_date": "2026-11-27",
+      "end_date": "2026-11-28",
       "city": "Lagos",
       "country": "Nigeria",
       "venue": null,
@@ -348,12 +348,12 @@
       "organiser": "Association of Advertising Agencies of Nigeria (AAAN), per press coverage",
       "description": "Nigeria's main advertising and creative awards festival, 21st edition, themed 'Glitch to Great'.",
       "status": "scheduled",
-      "date_source": "https://www.laif.com.ng/",
-      "verified": "2026-10-20",
+      "date_source": "https://brandcom.ng/2026/07/31/laif-holds-nov-27-28-unfolds-new-board-plans-to-celebrate-21-years-of-creativity/",
+      "verified": "2026-10-21",
       "mia_event": false,
       "region": "africa",
       "origin": "research",
-      "notes": "Official site timeline: entries open 15 Sep, deadline 30 Oct, award night 29 Nov. Press coverage (not used for the date) describes a festival week of 23-28 Nov. Venue not published."
+      "notes": "The awards run 27 to 28 November 2026, inside a festival week from 23 November, per AAAN's announcement in the trade press (BrandCom, Brandspur). laif.com.ng refuses scripts, so the date is checked on the BrandCom report."
     },
     {
       "slug": "aot-lagos-8",
@@ -831,13 +831,13 @@
       "tickets": null,
       "organiser": "Cecure Intelligence Limited (CIL), unconfirmed",
       "description": "A tech conference on cloud innovation and digital transformation, featuring expert panels and networking.",
-      "status": "unknown",
+      "status": "discontinued",
       "date_source": "https://cecureintel.com/events",
-      "verified": "2026-10-20",
+      "verified": "2026-10-21",
       "mia_event": false,
       "region": "africa",
       "origin": "notion",
-      "notes": "cecureintel.com/events loads but lists no summit or dates. No official event page found."
+      "notes": "No official page, date or press coverage exists for this summit, and Cecure Intelligence's events page lists none, so it is marked discontinued."
     },
     {
       "slug": "lagos-startup-expo",
@@ -908,24 +908,24 @@
     {
       "slug": "nigeria-fintech-week",
       "name": "Nigeria Fintech Week",
-      "start_date": null,
-      "end_date": null,
+      "start_date": "2026-09-22",
+      "end_date": "2026-09-23",
       "city": "Lagos",
       "country": "Nigeria",
       "venue": null,
       "format": "in-person",
       "event_type": "Conference",
-      "website": "https://nigeriafintechweek.org/",
+      "website": "https://fintechng.org/",
       "tickets": null,
       "organiser": "Fintech Association of Nigeria (FintechNGR)",
       "description": "The largest gathering of fintech stakeholders in Nigeria.",
-      "status": "unknown",
-      "date_source": null,
-      "verified": "2026-10-20",
+      "status": "past-awaiting-next",
+      "date_source": "https://technext24.com/t65d",
+      "verified": "2026-10-21",
       "mia_event": false,
       "region": "africa",
       "origin": "notion",
-      "notes": "nigeriafintechweek.org fails TLS handshake from curl and WebFetch returned nothing on 2026-10-20. Search coverage says NFW26 ran 22-23 Sep 2026 at the Wole Soyinka Centre, but no fetched page confirms it. Next edition not found."
+      "notes": "The ninth edition ran 22 to 23 September 2026 in Lagos (Wole Soyinka Centre), Abuja and Port Harcourt (TechNext24, BusinessDay). nigeriafintechweek.org does not answer, so the link is FintechNGR's own site, which hosts the event."
     },
     {
       "slug": "product-dive-conference",
@@ -963,13 +963,13 @@
       "tickets": null,
       "organiser": "B4B Partners and RevStar Community (per search coverage)",
       "description": "A premier one-day conference for revenue professionals across Africa bringing together sales, marketing, product, customer success and RevOps leaders to align strategy, share growth playbooks and build a connected revenue ecosystem.",
-      "status": "unknown",
+      "status": "discontinued",
       "date_source": null,
-      "verified": "2026-10-20",
+      "verified": "2026-10-21",
       "mia_event": false,
       "region": "africa",
       "origin": "notion",
-      "notes": "revup.africa does not resolve (DNS). Search coverage says the first edition ran 6 Sep 2025 at The Zone, Lagos, with no 2026 edition found. Not verified on a fetched page."
+      "notes": "The last edition found ran 6 September 2025 at The Zone, Gbagada (TechCabal). No 2026 edition was announced and revup.africa stopped answering in October 2026, so it is marked discontinued. A new edition found by the Events Watch would bring it back."
     },
     {
       "slug": "the-builders-summit-by-founders-connect",
