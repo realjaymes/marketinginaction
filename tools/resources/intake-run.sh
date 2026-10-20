@@ -14,7 +14,7 @@ set -u
 REPO="$HOME/Documents/mia-website-directory"
 WT="$HOME/.cache/mia-resources-intake"
 VAULT="$HOME/Documents/James Obsidian Vault"
-OUT="$WT/.intake-run"
+OUT="$HOME/.cache/mia-resources-intake-run"   # outside the worktree, so the pre-push checks never see it
 FEED="https://n8n.marketinginaction.xyz/webhook/mia-tools-feed-8329306c0b924fd18c40"
 CLAUDE_BIN="${CLAUDE_BIN:-$HOME/.local/bin/claude}"
 PY=/opt/homebrew/bin/python3   # build.py needs Python 3.12 or later; the system /usr/bin/python3 is 3.9
@@ -32,7 +32,7 @@ if [[ ! -d "$WT" ]]; then
   git -C "$REPO" worktree add --detach "$WT" origin/main >/dev/null 2>&1 || { echo "<p>⚠️ MIA resources intake: could not create its worktree.</p>"; exit 1; }
 fi
 cd "$WT" || exit 1
-git fetch -q origin main && git checkout -q --detach origin/main && git reset -q --hard origin/main && git clean -qfd -e .intake-run
+git fetch -q origin main && git checkout -q --detach origin/main && git reset -q --hard origin/main && git clean -qfd
 rm -rf "$OUT" && mkdir -p "$OUT"
 
 args=(collect --out "$OUT" --briefs "$VAULT/Areas/Work/Content/Briefs" --feed "$FEED")
