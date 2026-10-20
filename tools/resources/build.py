@@ -576,7 +576,7 @@ TOOL_TYPES = {"AI Tool": "AI tool", "Marketing Tool": "Marketing tool"}
 # comes from its first category outside this set, or from its "group" field.
 GENERIC = {"AI Models", "Platform-Integrated AI", "Marketing Technology", "Conversational AI", "Multimodal AI", "AI Content Generation"}
 # Group order on the page: marketing jobs first, then AI building blocks, then operations.
-GROUP_ORDER = ["Outbound and sales", "Email and lifecycle", "SEO and content", "Ads, social and reputation", "Analytics",
+GROUP_ORDER = ["Outbound and sales", "GTM engineering", "Email and lifecycle", "SEO and content", "Ads, social and reputation", "Analytics",
                "Video, image and audio", "AI models and assistants", "AI agents and automation", "Build and no-code",
                "Events and webinars", "Team and operations"]
 # Partner links earn MIA a commission, so they carry rel="sponsored".

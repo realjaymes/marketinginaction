@@ -100,7 +100,8 @@
         "Ask AI questions about customer conversations and insights."
       ],
       "website": "https://try.800.com/james-mia",
-      "slug": "800-com"
+      "slug": "800-com",
+      "group": "Outbound and sales"
     },
     {
       "created": "2026-10-20",
@@ -522,7 +523,7 @@
       ],
       "website": "https://apify.com",
       "slug": "apify",
-      "group": "Outbound and sales"
+      "group": "GTM engineering"
     },
     {
       "notion_id": "27ba6d41-709c-80e1-b649-c8c02d83f687",
@@ -549,7 +550,8 @@
         "Manage entire sales pipeline in one platform"
       ],
       "website": "https://www.apollo.io",
-      "slug": "apollo"
+      "slug": "apollo",
+      "group": "Outbound and sales"
     },
     {
       "created": "2026-10-20",
@@ -785,7 +787,8 @@
         "Integrate product usage data for PLG motions."
       ],
       "website": "https://attio.com",
-      "slug": "attio"
+      "slug": "attio",
+      "group": "Outbound and sales"
     },
     {
       "created": "2026-10-20",
@@ -1254,7 +1257,8 @@
         "Exporting lead data"
       ],
       "website": "https://builtwith.com",
-      "slug": "builtwith"
+      "slug": "builtwith",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -1507,7 +1511,8 @@
         "Engaging website visitors through automated chat workflows"
       ],
       "website": "https://www.chilipiper.com",
-      "slug": "chili-piper"
+      "slug": "chili-piper",
+      "group": "Outbound and sales"
     },
     {
       "created": "2026-10-20",
@@ -1742,7 +1747,8 @@
         "Triggering outreach"
       ],
       "website": "https://www.commonroom.io",
-      "slug": "common-room"
+      "slug": "common-room",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -2278,7 +2284,8 @@
         "Feeding outbound"
       ],
       "website": "https://discolike.com",
-      "slug": "discolike"
+      "slug": "discolike",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -3142,7 +3149,8 @@
         "Implement SLA policies and escalation workflows"
       ],
       "website": "https://www.freshworks.com/freshdesk/",
-      "slug": "freshdesk-by-freshworks"
+      "slug": "freshdesk-by-freshworks",
+      "group": "Email and lifecycle"
     },
     {
       "notion_id": "284a6d41-709c-81bb-8bad-d216fd5ac972",
@@ -4160,7 +4168,8 @@
         "Localize content for different markets and languages"
       ],
       "website": "https://hypotenuse.ai",
-      "slug": "hypotenuse-ai"
+      "slug": "hypotenuse-ai",
+      "group": "SEO and content"
     },
     {
       "created": "2026-10-20",
@@ -4461,7 +4470,8 @@
         "Refreshing target accounts"
       ],
       "website": "https://keyplay.io",
-      "slug": "keyplay"
+      "slug": "keyplay",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -4885,7 +4895,8 @@
         "Monitoring social activity"
       ],
       "website": "https://letterdrop.com",
-      "slug": "letterdrop"
+      "slug": "letterdrop",
+      "group": "SEO and content"
     },
     {
       "notion_id": "24ca6d41-709c-80d4-9a15-f70b4acd5ca6",
@@ -5468,7 +5479,8 @@
         "Reduce marketing payroll while maintaining efficiency"
       ],
       "website": "https://try.marketerhire.com/james-mia",
-      "slug": "marketerhire"
+      "slug": "marketerhire",
+      "group": "Team and operations"
     },
     {
       "created": "2026-10-20",
@@ -5518,7 +5530,8 @@
         "Process international payments with competitive exchange rates"
       ],
       "website": "https://affiliates.meliopayments.com/james-mia",
-      "slug": "melio"
+      "slug": "melio",
+      "group": "Team and operations"
     },
     {
       "notion_id": "284a6d41-709c-81e4-ac99-ea955b5592ea",
@@ -7335,7 +7348,8 @@
         "Track repeat visitors for account-based marketing"
       ],
       "website": "https://www.rb2b.com",
-      "slug": "rb2b"
+      "slug": "rb2b",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -8866,7 +8880,8 @@
         "Create LinkedIn carousels and visual content formats"
       ],
       "website": "https://taplio.com",
-      "slug": "taplio"
+      "slug": "taplio",
+      "group": "Ads, social and reputation"
     },
     {
       "created": "2026-10-20",
@@ -9125,7 +9140,8 @@
         "Manage relationships using built-in Twitter CRM"
       ],
       "website": "https://tweethunter.io/",
-      "slug": "tweet-hunter"
+      "slug": "tweet-hunter",
+      "group": "Ads, social and reputation"
     },
     {
       "created": "2026-10-20",
@@ -9261,7 +9277,8 @@
         "Automating sequences"
       ],
       "website": "https://www.unifygtm.com",
-      "slug": "unify"
+      "slug": "unify",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
@@ -9401,7 +9418,8 @@
         "Auditing tag setups"
       ],
       "website": "https://www.wappalyzer.com",
-      "slug": "wappalyzer"
+      "slug": "wappalyzer",
+      "group": "GTM engineering"
     },
     {
       "created": "2026-10-20",
