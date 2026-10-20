@@ -13,7 +13,8 @@ Sources:
     runner researches into full rows; "add" then checks and adds those.
 
 Every row is checked: the site must load, it must not already be listed (by
-name or domain), and tool categories must be ones tool-groups.json knows.
+name or domain), and tool labels must be ones tool-groups.json knows (old Notion
+names are translated through its "aliases").
 Rejected rows are listed with the reason. The run state (briefs read,
 candidates already tried) lives in data/resources/upkeep-state.json.
 
@@ -160,11 +161,19 @@ def known(name, site, names, hosts):
     return norm(name) in names or (site and h in hosts and h not in GENERIC_HOSTS)
 
 
+def labels():
+    """Every label the site knows, plus the old Notion names in "aliases", each mapped to its current label."""
+    g = json.loads((DATA / "tool-groups.json").read_text(encoding="utf-8"))
+    out = {c: c for cs in g["groups"].values() for c in cs}
+    out.update({old: new for old, new in g.get("aliases", {}).items() if new in out})
+    return out
+
+
 def add_tool(row, d, names, hosts, log, cats):
     name, site = row.get("name", "").strip(), row.get("website", "").strip()
     if known(name, site, names, hosts):
         return
-    c = [x for x in row.get("notion_categories") or row.get("categories") or [] if x in cats]
+    c = list(dict.fromkeys(cats[x] for x in row.get("notion_categories") or row.get("categories") or [] if x in cats))
     types = [t for t in row.get("product_type") or [] if t in ("AI Tool", "Marketing Tool")]
     uses = [u.strip().rstrip(".") for u in row.get("use_cases") or [] if u.strip()][:6]
     why = None
@@ -199,7 +208,7 @@ def add_tool(row, d, names, hosts, log, cats):
 
 def collect_tools(args, state, log, out):
     d, names, hosts, ids = tools_index()
-    cats = {c for cs in json.loads((DATA / "tool-groups.json").read_text(encoding="utf-8"))["groups"].values() for c in cs}
+    cats = labels()
     st = state.setdefault("intake", {})
     tried = st.setdefault("candidates_tried", {})
     cutoff = (TODAY - timedelta(days=90)).isoformat()
@@ -251,7 +260,7 @@ def collect_tools(args, state, log, out):
 
 def add_enriched(path, log):
     d, names, hosts, _ = tools_index()
-    cats = {c for cs in json.loads((DATA / "tool-groups.json").read_text(encoding="utf-8"))["groups"].values() for c in cs}
+    cats = labels()
     rows = json.loads(pathlib.Path(path).read_text(encoding="utf-8")) if pathlib.Path(path).exists() else []
     for r in rows:
         if r.get("skip"):

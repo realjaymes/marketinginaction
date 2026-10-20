@@ -15,7 +15,7 @@
       ],
       "notion_categories": [
         "Sales Automation",
-        "Outbound GTM Outreach"
+        "Sales Engagement"
       ],
       "use_cases": [
         "Automating outbound",
@@ -38,9 +38,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Security",
-        "Password Management",
-        "Identity Management"
+        "Security & Privacy"
       ],
       "use_cases": [
         "Securely store and autofill passwords",
@@ -88,8 +86,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "GTM Automation",
-        "Platform-Integrated AI"
+        "GTM Automation"
       ],
       "use_cases": [
         "Get professional toll-free and vanity business numbers easily.",
@@ -159,8 +156,7 @@
       ],
       "notion_categories": [
         "Advertising",
-        "Creative Automation",
-        "Marketing Technology"
+        "Creative Automation"
       ],
       "use_cases": [
         "Generating ad creatives quickly",
@@ -182,8 +178,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Image Generation",
-        "Platform-Integrated AI"
+        "AI Image Generation"
       ],
       "use_cases": [
         "Generating images in Photoshop",
@@ -205,7 +200,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Editing ad cuts",
@@ -275,7 +270,7 @@
       ],
       "notion_categories": [
         "Lead Generation",
-        "Contact Data Enrichment"
+        "Data Enrichment"
       ],
       "use_cases": [
         "Finding contacts",
@@ -323,7 +318,7 @@
       ],
       "notion_categories": [
         "Sales Automation",
-        "Outbound GTM Outreach"
+        "Sales Engagement"
       ],
       "use_cases": [
         "Running automated outreach",
@@ -347,7 +342,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "AI SEO"
       ],
       "use_cases": [
@@ -442,8 +436,7 @@
       ],
       "notion_categories": [
         "Product Analytics",
-        "User Behavior Analytics",
-        "Growth Analytics"
+        "Marketing Analytics"
       ],
       "use_cases": [
         "Tracking user engagement and retention",
@@ -532,7 +525,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "AI Agents",
         "Web Data Scraping"
       ],
@@ -560,8 +552,7 @@
       "notion_categories": [
         "GTM Automation",
         "Data Enrichment",
-        "Sales Intelligence",
-        "Platform-Integrated AI"
+        "Sales Intelligence"
       ],
       "use_cases": [
         "Find and research B2B leads from 265M+ contacts",
@@ -607,8 +598,9 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "AI Content Generation"
+        "AI Video Generation",
+        "AI Image Generation",
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Making AI UGC ads",
@@ -631,8 +623,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Turn written content into short videos in minutes.",
@@ -653,7 +644,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
+        "AI Video Generation",
+        "AI Image Generation",
         "Creative Automation"
       ],
       "use_cases": [
@@ -678,7 +670,7 @@
       ],
       "notion_categories": [
         "Sales Automation",
-        "Outbound GTM Outreach"
+        "Sales Engagement"
       ],
       "use_cases": [
         "Running AI outbound",
@@ -723,8 +715,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI SEO",
-        "Marketing Technology"
+        "AI SEO"
       ],
       "use_cases": [
         "Tracking AI search visibility",
@@ -797,7 +788,6 @@
       "notion_categories": [
         "GTM Automation",
         "Data Enrichment",
-        "AI Models",
         "Workflow Automation"
       ],
       "use_cases": [
@@ -890,7 +880,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Contact Data Enrichment",
         "Data Enrichment"
       ],
       "use_cases": [
@@ -961,7 +950,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Vibe Coding",
         "Developer Tools"
       ],
@@ -985,8 +973,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI SEO",
-        "Marketing Technology"
+        "AI SEO"
       ],
       "use_cases": [
         "Monitoring brand representation in AI answers",
@@ -1031,9 +1018,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Logistics",
-        "Transportation",
-        "Delivery Services"
+        "Logistics & Fulfillment"
       ],
       "use_cases": [
         "Arrange business transportation for employees",
@@ -1173,7 +1158,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Monitoring",
+        "Social Media",
         "Reputation Management",
         "Marketing Analytics"
       ],
@@ -1198,9 +1183,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Recruitment",
-        "Applicant Tracking System",
-        "Human Resources"
+        "HR & Payroll"
       ],
       "use_cases": [
         "Automating job posting and candidate sourcing",
@@ -1336,7 +1319,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Management",
+        "Social Media",
         "Advertising",
         "Marketing Automation"
       ],
@@ -1385,7 +1368,7 @@
       ],
       "notion_categories": [
         "AI SEO",
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Generating SEO articles",
@@ -1431,7 +1414,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Graphic Design"
+        "Design & Branding"
       ],
       "use_cases": [
         "Designing social graphics",
@@ -1453,7 +1436,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Editing short-form video",
@@ -1476,8 +1459,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Automatically caption videos in multiple languages.",
@@ -1543,8 +1525,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Audio Generation",
-        "AI Models"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Generating voiceovers",
@@ -1568,8 +1549,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Conversational AI",
-        "Multimodal AI"
+        "Conversational AI"
       ],
       "use_cases": [
         "Writing and editing articles, emails, and marketing copy.",
@@ -1591,7 +1571,7 @@
       ],
       "notion_categories": [
         "Email Deliverability",
-        "Outbound GTM Outreach"
+        "Sales Engagement"
       ],
       "use_cases": [
         "Setting up sending mailboxes",
@@ -1660,8 +1640,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Digital PR",
-        "Marketing Technology"
+        "Digital PR"
       ],
       "use_cases": [
         "Finding journalists",
@@ -1708,8 +1687,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Conversational AI",
-        "Multimodal AI"
+        "Conversational AI"
       ],
       "use_cases": [
         "Help write, research, and reason through content.",
@@ -1825,9 +1803,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Project Management",
-        "Collaboration",
-        "Task Management"
+        "Project Management"
       ],
       "use_cases": [
         "Tracking project progress and deadlines",
@@ -1895,7 +1871,7 @@
       ],
       "notion_categories": [
         "Sales Intelligence",
-        "Contact Data Enrichment"
+        "Data Enrichment"
       ],
       "use_cases": [
         "Finding verified phone numbers",
@@ -1964,8 +1940,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Digital PR",
-        "Marketing Technology"
+        "Digital PR"
       ],
       "use_cases": [
         "Responding to journalist queries",
@@ -2009,7 +1984,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Content Generation",
+        "AI Writing & Content",
         "Workflow Automation"
       ],
       "use_cases": [
@@ -2033,8 +2008,9 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "AI Content Generation"
+        "AI Video Generation",
+        "AI Image Generation",
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Generating video ads from a URL",
@@ -2102,7 +2078,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "AI Agents",
         "Developer Tools"
       ],
@@ -2173,7 +2148,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation",
         "Sales Engagement",
         "Marketing Automation"
@@ -2199,8 +2173,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video Generation & Filmmaking",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Making talking head product intros",
@@ -2244,7 +2217,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Editing video ads",
@@ -2335,8 +2308,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Human Resources",
-        "Payroll"
+        "HR & Payroll"
       ],
       "use_cases": [
         "Hire and pay global employees and contractors compliantly",
@@ -2360,7 +2332,6 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Foundational Models",
         "Open-Source AI"
       ],
       "use_cases": [
@@ -2452,8 +2423,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Webinar Platform",
-        "Online Events"
+        "Webinars & Events"
       ],
       "use_cases": [
         "Hosting live webinars",
@@ -2477,8 +2447,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing",
-        "Text-to-Audio Generation"
+        "Video & Audio Editing",
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Edit media by editing text transcripts.",
@@ -2522,7 +2492,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Privacy Tools",
+        "Security & Privacy",
         "Web Browsers"
       ],
       "use_cases": [
@@ -2544,7 +2514,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
+        "Workflow Automation",
         "AI Agents"
       ],
       "use_cases": [
@@ -2614,7 +2584,7 @@
       ],
       "notion_categories": [
         "Sales Enablement",
-        "Customer Experience"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Answering buyer questions on the site",
@@ -2658,8 +2628,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "Text-to-Video Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Generating ad images and short videos",
@@ -2683,7 +2653,7 @@
       ],
       "notion_categories": [
         "Lead Generation",
-        "LinkedIn GTM Automation"
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Automate LinkedIn connection requests and follow-up messages",
@@ -2705,7 +2675,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Contact Data Enrichment",
         "Data Enrichment"
       ],
       "use_cases": [
@@ -2750,7 +2719,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Writing LinkedIn posts",
@@ -2773,10 +2742,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Music & Audio Generation",
-        "Text-to-Audio Generation",
-        "Speech-to-Text Generation"
+        "AI Voice & Audio",
+        "Transcription"
       ],
       "use_cases": [
         "Generate natural-sounding narration or dialogue",
@@ -2841,7 +2808,7 @@
       ],
       "notion_categories": [
         "Email Deliverability",
-        "Outbound GTM Outreach"
+        "Sales Engagement"
       ],
       "use_cases": [
         "Sending cold email campaigns",
@@ -2864,8 +2831,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Synthetic Data Generation",
-        "AI Model Training"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Generating synthetic data for machine learning",
@@ -2958,7 +2924,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Outbound GTM Outreach",
         "Sales Engagement",
         "Data Enrichment"
       ],
@@ -2982,7 +2947,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "LinkedIn GTM Automation"
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Automating connection requests",
@@ -3028,7 +2993,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Recording",
+        "Video & Audio Editing",
         "Sales Enablement"
       ],
       "use_cases": [
@@ -3074,8 +3039,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Digital PR",
-        "Marketing Technology"
+        "Digital PR"
       ],
       "use_cases": [
         "Pitching journalists",
@@ -3097,8 +3061,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Audio & Video Recording",
-        "Collaboration"
+        "Video & Audio Editing",
+        "Project Management"
       ],
       "use_cases": [
         "Taking AI notes",
@@ -3143,8 +3107,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Graphic Design",
-        "Collaboration"
+        "Design & Branding",
+        "Project Management"
       ],
       "use_cases": [
         "Designing publication layouts",
@@ -3189,7 +3153,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Customer Experience"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Answering customer questions automatically",
@@ -3210,7 +3174,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Contact Data Enrichment",
+        "Data Enrichment",
         "Lead Generation"
       ],
       "use_cases": [
@@ -3301,8 +3265,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Audio Generation",
-        "Music Remixing & Voice Cloning"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Cloning a voice",
@@ -3349,10 +3312,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Multimodal Video Generation",
-        "Text-to-Image Generation",
-        "Text-to-Video Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Connect generative models visually on a canvas.",
@@ -3397,8 +3358,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Image Generation",
-        "AI Models"
+        "AI Image Generation"
       ],
       "use_cases": [
         "Generating ad images",
@@ -3517,8 +3477,7 @@
       ],
       "notion_categories": [
         "Data Enrichment",
-        "GTM Automation",
-        "Platform-Integrated AI"
+        "GTM Automation"
       ],
       "use_cases": [
         "Auto-enrich CRM records from any data source seamlessly.",
@@ -3541,8 +3500,9 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "Graphic Design"
+        "AI Video Generation",
+        "AI Image Generation",
+        "Design & Branding"
       ],
       "use_cases": [
         "Generating blog and social images",
@@ -3589,8 +3549,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "GTM Automation",
-        "Platform-Integrated AI"
+        "GTM Automation"
       ],
       "use_cases": [
         "Manage customer tickets across email, chat, and voice channels",
@@ -3682,7 +3641,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Drafting decks",
@@ -3706,8 +3665,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Conversational AI",
-        "Multimodal AI"
+        "Conversational AI"
       ],
       "use_cases": [
         "Write, edit, and summarize content.",
@@ -3754,7 +3712,7 @@
       "notion_categories": [
         "Email Marketing",
         "Marketing Automation",
-        "Webinar Platform"
+        "Webinars & Events"
       ],
       "use_cases": [
         "Creating and sending marketing emails",
@@ -3777,8 +3735,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Platform-Integrated AI",
         "Developer Tools"
       ],
       "use_cases": [
@@ -3844,7 +3800,7 @@
       ],
       "notion_categories": [
         "AI SEO",
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Tracking AI visibility",
@@ -3890,7 +3846,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Prompt Engineering",
+        "AI Model Platforms",
         "Developer Tools"
       ],
       "use_cases": [
@@ -3912,7 +3868,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Monitoring"
+        "Social Media"
       ],
       "use_cases": [
         "Monitoring brand mentions",
@@ -4002,8 +3958,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Text-to-Video Generation",
-        "Video Generation & Filmmaking"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Generating video shots from prompts",
@@ -4139,7 +4094,7 @@
       ],
       "notion_categories": [
         "Vibe Coding",
-        "Graphic Design"
+        "Design & Branding"
       ],
       "use_cases": [
         "Designing landing page concepts",
@@ -4160,8 +4115,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Marketing Analytics",
-        "Marketing Technology"
+        "Marketing Analytics"
       ],
       "use_cases": [
         "Adding analytics and ad tags",
@@ -4184,9 +4138,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Multimodal Video Generation",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Generate videos with synched dialogue, ambient audio, and effects.",
@@ -4208,8 +4160,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Content Generation",
-        "Platform-Integrated AI"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Editing email and landing page copy",
@@ -4254,8 +4205,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Conversational AI",
-        "Platform-Integrated AI"
+        "Conversational AI"
       ],
       "use_cases": [
         "Chat naturally with real‑time web-updated responses.",
@@ -4299,7 +4249,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
+        "Workflow Automation",
         "AI Agents"
       ],
       "use_cases": [
@@ -4323,9 +4273,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "HR Management",
-        "Payroll",
-        "Employee Benefits"
+        "HR & Payroll"
       ],
       "use_cases": [
         "Automate payroll processing and tax filings",
@@ -4371,8 +4319,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Product Analytics",
-        "User Behavior Analytics"
+        "Product Analytics"
       ],
       "use_cases": [
         "Capturing events automatically",
@@ -4394,8 +4341,9 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "AI Content Generation"
+        "AI Video Generation",
+        "AI Image Generation",
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Making talking head videos",
@@ -4441,8 +4389,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Turn scripts into engaging avatar videos instantly.",
@@ -4464,7 +4411,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "LinkedIn GTM Automation"
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Automate LinkedIn connection requests, messages, and profile views.",
@@ -4485,8 +4432,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "Text-to-Video Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Making short ad videos",
@@ -4509,7 +4456,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Marketing Technology",
         "Marketing Automation"
       ],
       "use_cases": [
@@ -4531,8 +4477,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Monitoring",
-        "Marketing Technology"
+        "Social Media"
       ],
       "use_cases": [
         "Scheduling posts",
@@ -4554,8 +4499,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "User Behavior Analytics",
-        "Customer Feedback Management"
+        "Product Analytics",
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Viewing heatmaps",
@@ -4579,10 +4524,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation",
         "AI Agents",
-        "Platform-Integrated AI",
         "Sales Engagement",
         "Lead Generation"
       ],
@@ -4606,7 +4549,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Model Repositories",
+        "AI Model Platforms",
         "Open-Source AI"
       ],
       "use_cases": [
@@ -4650,8 +4593,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Audio Generation",
-        "AI Models"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Generating expressive voiceovers",
@@ -4673,7 +4615,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Contact Data Enrichment",
+        "Data Enrichment",
         "Lead Generation"
       ],
       "use_cases": [
@@ -4718,7 +4660,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Video Generation & Filmmaking",
+        "AI Video Generation",
         "Creative Automation"
       ],
       "use_cases": [
@@ -4789,7 +4731,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Image Generation"
+        "AI Image Generation"
       ],
       "use_cases": [
         "Designing thumbnails with text",
@@ -4884,7 +4826,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation"
       ],
       "use_cases": [
@@ -4931,7 +4872,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Outbound GTM Outreach",
         "Sales Engagement"
       ],
       "use_cases": [
@@ -4977,8 +4917,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Text-to-Video Generation",
-        "Audio & Video Editing"
+        "AI Video Generation",
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Turning a blog post into a video",
@@ -4999,7 +4939,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Drafting marketing copy",
@@ -5066,7 +5006,7 @@
       ],
       "notion_categories": [
         "Sales Intelligence",
-        "LinkedIn GTM Automation"
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Finding engaged prospects",
@@ -5091,7 +5031,7 @@
       "notion_categories": [
         "Lead Generation",
         "Sales Intelligence",
-        "Contact Data Enrichment"
+        "Data Enrichment"
       ],
       "use_cases": [
         "Finding professional emails and phone numbers",
@@ -5229,7 +5169,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Convert long YouTube videos into multiple short clips automatically",
@@ -5275,10 +5215,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Video & Image Generation",
-        "Text-to-Image Generation",
-        "Text-to-Video Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Generate realistic videos and images from prompts.",
@@ -5323,10 +5261,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Image Generation",
-        "Text-to-Video Generation",
-        "Multimodal Video Generation"
+        "AI Image Generation",
+        "AI Video Generation"
       ],
       "use_cases": [
         "Generate, edit, and animate visuals in real-time.",
@@ -5347,8 +5283,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Outbound GTM Outreach",
-        "LinkedIn GTM Automation"
+        "Sales Engagement",
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Running multichannel sequences",
@@ -5373,7 +5309,7 @@
       "notion_categories": [
         "GTM Engineering",
         "Lead Generation",
-        "Outbound GTM Outreach"
+        "Sales Engagement"
       ],
       "use_cases": [
         "Building lists from a plain language brief",
@@ -5395,7 +5331,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "AI Agents",
         "Developer Tools"
       ],
@@ -5418,7 +5353,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
+        "Workflow Automation",
         "AI Agents"
       ],
       "use_cases": [
@@ -5441,7 +5376,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation",
         "AI Agents"
       ],
@@ -5463,8 +5397,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Data Enrichment",
-        "Contact Data Enrichment"
+        "Data Enrichment"
       ],
       "use_cases": [
         "Finding verified work emails",
@@ -5557,11 +5490,10 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Outbound GTM Outreach",
         "Sales Engagement",
         "Lead Generation",
         "Data Enrichment",
-        "LinkedIn GTM Automation"
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Build lead lists from a 450M+ contact database.",
@@ -5582,8 +5514,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Image Generation",
-        "Graphic Design"
+        "AI Image Generation",
+        "Design & Branding"
       ],
       "use_cases": [
         "Generating character images",
@@ -5630,10 +5562,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "AI Agents",
-        "Workflow Automation",
-        "AI Workflow Automation"
+        "Workflow Automation"
       ],
       "use_cases": [
         "Build agents to qualify leads and send personalized outreach.",
@@ -5700,9 +5630,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Webinar Software",
-        "Video Conferencing",
-        "Online Events"
+        "Webinars & Events"
       ],
       "use_cases": [
         "Hosting live and automated webinars",
@@ -5724,7 +5652,7 @@
       ],
       "notion_categories": [
         "Open-Source AI",
-        "Foundational Models"
+        "AI Models"
       ],
       "use_cases": [
         "Running local models",
@@ -5747,7 +5675,7 @@
       ],
       "notion_categories": [
         "Open-Source AI",
-        "AI Model Hosting & Deployment"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Drafting sensitive copy without sending data to a cloud model",
@@ -5769,9 +5697,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Branding",
-        "Logo Design",
-        "Graphic Design"
+        "Design & Branding"
       ],
       "use_cases": [
         "Design custom logos quickly",
@@ -5814,8 +5740,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Recording",
-        "Collaboration"
+        "Video & Audio Editing",
+        "Project Management"
       ],
       "use_cases": [
         "Recording application walkthroughs",
@@ -5861,7 +5787,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Vibe Coding",
         "Developer Tools"
       ],
@@ -5884,7 +5809,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Graphic Design",
+        "Design & Branding",
         "Creative Automation"
       ],
       "use_cases": [
@@ -5907,8 +5832,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Video Generation & Filmmaking",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Storyboarding a launch video",
@@ -5930,8 +5854,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Multimodal Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Generate videos and images from text, image, or video.",
@@ -6001,7 +5924,7 @@
       ],
       "notion_categories": [
         "AI SEO",
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Generating programmatic articles",
@@ -6048,7 +5971,7 @@
       ],
       "notion_categories": [
         "Vibe Coding",
-        "Graphic Design"
+        "Design & Branding"
       ],
       "use_cases": [
         "Prototyping landing page layouts",
@@ -6069,7 +5992,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Writing LinkedIn posts",
@@ -6092,8 +6015,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Visual Generation",
-        "Graphic Design"
+        "AI Image Generation",
+        "Design & Branding"
       ],
       "use_cases": [
         "Upscaling low resolution product photos",
@@ -6182,7 +6105,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation",
         "AI Agents"
       ],
@@ -6206,8 +6128,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Content Generation",
-        "Video Generation & Filmmaking"
+        "AI Writing & Content",
+        "AI Video Generation"
       ],
       "use_cases": [
         "Creating UGC ads at volume",
@@ -6230,7 +6152,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "AI Agents"
       ],
       "use_cases": [
@@ -6329,7 +6250,6 @@
       ],
       "notion_categories": [
         "GTM Automation",
-        "AI Models",
         "Workflow Automation"
       ],
       "use_cases": [
@@ -6376,7 +6296,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Monitoring",
+        "Social Media",
         "Reputation Management"
       ],
       "use_cases": [
@@ -6445,8 +6365,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Conversational AI",
-        "Platform-Integrated AI"
+        "Conversational AI"
       ],
       "use_cases": [
         "Chat, generate visuals, and search within Meta apps.",
@@ -6489,8 +6408,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Management",
-        "Social Media Monitoring"
+        "Social Media"
       ],
       "use_cases": [
         "Scheduling posts",
@@ -6513,8 +6431,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Platform-Integrated AI"
+        "AI Models"
       ],
       "use_cases": [
         "Draft, summarize, and edit content in Office apps.",
@@ -6556,7 +6473,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "User Behavior Analytics"
+        "Product Analytics"
       ],
       "use_cases": [
         "Watching session recordings",
@@ -6602,8 +6519,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Image Generation"
+        "AI Image Generation"
       ],
       "use_cases": [
         "Create artwork from text prompts.Design mood boards and visual drafts.",
@@ -6646,8 +6562,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Video Generation",
-        "Text-to-Audio Generation"
+        "AI Video Generation",
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Generating video clips",
@@ -6671,8 +6587,6 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Foundational Models",
-        "Multimodal AI",
         "AI Agents"
       ],
       "use_cases": [
@@ -6683,7 +6597,8 @@
         "Run multilingual AI via cloud APIs or on-prem."
       ],
       "website": "https://mistral.ai",
-      "slug": "mistral"
+      "slug": "mistral",
+      "group": "AI models and assistants"
     },
     {
       "created": "2026-10-20",
@@ -6741,7 +6656,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Workflow Automation"
       ],
       "use_cases": [
@@ -6786,8 +6700,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Digital PR",
-        "Marketing Technology"
+        "Digital PR"
       ],
       "use_cases": [
         "Finding journalists",
@@ -6810,8 +6723,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Payroll",
-        "HR Management"
+        "HR & Payroll"
       ],
       "use_cases": [
         "Hire employees globally without legal entity setup.",
@@ -6834,9 +6746,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Audio Generation",
-        "Music & Audio Generation"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Generate professional voiceovers for videos and presentations.",
@@ -6881,8 +6791,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Sales Enablement",
-        "Marketing Technology"
+        "Sales Enablement"
       ],
       "use_cases": [
         "Personalizing website content",
@@ -6927,7 +6836,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation",
         "AI Agents"
       ],
@@ -6950,8 +6858,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Image Generation",
-        "Multimodal AI"
+        "AI Image Generation"
       ],
       "use_cases": [
         "Generating ad images",
@@ -6974,8 +6881,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Visual Generation"
+        "AI Image Generation"
       ],
       "use_cases": [
         "Paste or generate text to auto-create visualizations.",
@@ -6997,9 +6903,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Product Demos",
         "Sales Enablement",
-        "Customer Experience"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Creating interactive product demos",
@@ -7137,7 +7042,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Platform-Integrated AI",
         "Databases"
       ],
       "use_cases": [
@@ -7161,8 +7065,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Platform-Integrated AI"
+        "AI Models"
       ],
       "use_cases": [
         "Summarize notes and extract action items.",
@@ -7185,8 +7088,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "GTM Automation",
-        "AI Models"
+        "GTM Automation"
       ],
       "use_cases": [
         "Automate LinkedIn outreach and engagement workflows",
@@ -7232,7 +7134,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Writing social copy",
@@ -7258,7 +7160,7 @@
       "notion_categories": [
         "GTM Automation",
         "AI Agents",
-        "GTM Messaging Library"
+        "Sales Enablement"
       ],
       "use_cases": [
         "Align messaging across marketing, sales, and product.",
@@ -7280,7 +7182,7 @@
       ],
       "notion_categories": [
         "Open-Source AI",
-        "AI Model Hosting & Deployment"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Running open models locally",
@@ -7324,7 +7226,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
+        "Workflow Automation",
         "Vibe Coding"
       ],
       "use_cases": [
@@ -7370,8 +7272,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Speech-to-Text Generation",
-        "AI Models"
+        "Transcription"
       ],
       "use_cases": [
         "Transcribing recordings",
@@ -7394,8 +7295,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video & Image Generation",
-        "Text-to-Image Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Generating ad images in several models",
@@ -7438,7 +7339,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Graphic Design",
+        "Design & Branding",
         "Creative Automation"
       ],
       "use_cases": [
@@ -7462,7 +7363,7 @@
       ],
       "notion_categories": [
         "AI Models",
-        "AI Model Hosting & Deployment"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Switching models without new accounts",
@@ -7530,8 +7431,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Turn webinars or podcasts into TikToks and Reels.",
@@ -7600,7 +7500,7 @@
       ],
       "notion_categories": [
         "AI Meeting Notes",
-        "Speech-to-Text Generation",
+        "Transcription",
         "AI Research Assistant"
       ],
       "use_cases": [
@@ -7737,9 +7637,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Payroll Management",
-        "Workforce Management",
-        "HR Technology"
+        "HR & Payroll"
       ],
       "use_cases": [
         "Managing global payroll compliantly",
@@ -7832,9 +7730,8 @@
       ],
       "notion_categories": [
         "AI Models",
-        "Conversational Search Engine",
-        "Conversational AI",
-        "Multimodal AI"
+        "AI Search Engines",
+        "Conversational AI"
       ],
       "use_cases": [
         "Retrieve concise, source‑cited answers fast.",
@@ -7930,7 +7827,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Video Generation & Filmmaking",
+        "AI Video Generation",
         "Marketing Automation"
       ],
       "use_cases": [
@@ -7955,9 +7852,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Video Generation & Filmmaking",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Turn text or images into animated video clips.",
@@ -8000,8 +7895,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Video Generation",
-        "Video & Image Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Creating social clips",
@@ -8025,8 +7920,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Audio Generation",
+        "AI Voice & Audio",
         "Conversational AI"
       ],
       "use_cases": [
@@ -8074,7 +7968,7 @@
       ],
       "notion_categories": [
         "Creative Automation",
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Generating on brand social posts",
@@ -8095,8 +7989,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Product Analytics",
-        "User Behavior Analytics"
+        "Product Analytics"
       ],
       "use_cases": [
         "Tracking product events",
@@ -8118,8 +8011,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Management",
-        "Social Media Monitoring"
+        "Social Media"
       ],
       "use_cases": [
         "Scheduling posts",
@@ -8165,7 +8057,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Management",
+        "Social Media",
         "Creative Automation"
       ],
       "use_cases": [
@@ -8188,7 +8080,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "E-commerce Fulfillment"
+        "Logistics & Fulfillment"
       ],
       "use_cases": [
         "Create custom products from 1000+ items available",
@@ -8326,8 +8218,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Digital PR",
-        "Marketing Technology"
+        "Digital PR"
       ],
       "use_cases": [
         "Responding to journalist queries",
@@ -8464,8 +8355,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Image Generation",
-        "Logo Design"
+        "AI Image Generation",
+        "Design & Branding"
       ],
       "use_cases": [
         "Designing logos",
@@ -8487,7 +8378,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Customer Feedback Management",
+        "Customer Feedback & Support",
         "Forms & Surveys"
       ],
       "use_cases": [
@@ -8558,7 +8449,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation"
       ],
       "use_cases": [
@@ -8582,7 +8472,7 @@
       ],
       "notion_categories": [
         "AI Agents",
-        "AI Workflow Automation"
+        "Workflow Automation"
       ],
       "use_cases": [
         "Building an AI SDR agent",
@@ -8604,7 +8494,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing",
+        "Video & Audio Editing",
         "Developer Tools"
       ],
       "use_cases": [
@@ -8653,10 +8543,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Developer Tools",
-        "AI Model Hosting & Deployment",
-        "AI Model Repositories"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Share AI models via API with versioning.",
@@ -8679,7 +8567,7 @@
       ],
       "notion_categories": [
         "Developer Tools",
-        "AI Model Hosting & Deployment"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Build and run projects with Ghostwriter assistant.",
@@ -8726,7 +8614,7 @@
       ],
       "notion_categories": [
         "Marketing Automation",
-        "Customer Experience"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Managing WhatsApp chats",
@@ -8796,7 +8684,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Audio & Video Recording"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Record 4K video and uncompressed audio remotely.",
@@ -8928,8 +8816,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Video Generation & Filmmaking"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Create narrative videos with character consistency.",
@@ -8976,7 +8863,6 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Platform-Integrated AI",
         "CRM",
         "Marketing Automation"
       ],
@@ -9001,7 +8887,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Outbound GTM Outreach",
         "Sales Engagement"
       ],
       "use_cases": [
@@ -9026,7 +8911,6 @@
       ],
       "notion_categories": [
         "Sales Engagement",
-        "Outbound GTM Outreach",
         "Lead Generation"
       ],
       "use_cases": [
@@ -9071,7 +8955,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Contact Data Enrichment",
+        "Data Enrichment",
         "Sales Intelligence"
       ],
       "use_cases": [
@@ -9257,7 +9141,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Generating background clips",
@@ -9415,9 +9299,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "E-commerce Fulfillment",
-        "Logistics",
-        "Supply Chain Management"
+        "Logistics & Fulfillment"
       ],
       "use_cases": [
         "Storing inventory in multiple warehouses",
@@ -9507,7 +9389,7 @@
       ],
       "notion_categories": [
         "AI Agents",
-        "AI Content Generation"
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Drafting social posts with a marketing helper",
@@ -9596,7 +9478,6 @@
       ],
       "notion_categories": [
         "Sales Engagement",
-        "Outbound GTM Outreach",
         "Email Deliverability"
       ],
       "use_cases": [
@@ -9668,9 +9549,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Multimodal Video Generation",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Animate scenes from text, still images, or video input.",
@@ -9692,8 +9571,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Audio Generation",
-        "Speech-to-Text Generation"
+        "AI Voice & Audio",
+        "Transcription"
       ],
       "use_cases": [
         "Narrating blog posts as audio",
@@ -9736,7 +9615,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Social Media Monitoring",
+        "Social Media",
         "Reputation Management"
       ],
       "use_cases": [
@@ -9759,7 +9638,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Music & Audio Generation",
+        "AI Voice & Audio",
         "Open-Source AI"
       ],
       "use_cases": [
@@ -9826,8 +9705,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Webinar Software",
-        "Audio & Video Recording"
+        "Webinars & Events",
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Streaming live to many platforms",
@@ -9850,7 +9729,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Adding captions to short videos",
@@ -9894,8 +9773,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Music & Audio Generation"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Create full songs using prompt descriptions",
@@ -9989,7 +9867,7 @@
       "notion_categories": [
         "CRM",
         "Data Enrichment",
-        "LinkedIn GTM Automation"
+        "LinkedIn Automation"
       ],
       "use_cases": [
         "Add LinkedIn contacts to CRM in one click.",
@@ -10036,7 +9914,7 @@
       ],
       "notion_categories": [
         "Forms & Surveys",
-        "Customer Feedback Management"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Running customer surveys",
@@ -10059,8 +9937,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Create videos in 120+ languages without filming.",
@@ -10177,7 +10054,7 @@
       ],
       "notion_categories": [
         "Marketing Automation",
-        "Customer Experience"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Sending bulk SMS in Nigeria",
@@ -10200,7 +10077,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Customer Feedback Management"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Collect text and video testimonials from customers easily",
@@ -10292,8 +10169,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Workforce Management",
-        "HR Technology"
+        "HR & Payroll"
       ],
       "use_cases": [
         "Document standard operating procedures and business processes",
@@ -10362,8 +10238,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Marketing Analytics",
-        "Growth Analytics"
+        "Marketing Analytics"
       ],
       "use_cases": [
         "Tracking first party attribution",
@@ -10386,9 +10261,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Text-to-Audio Generation",
-        "Music Remixing & Voice Cloning"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Replace vocals with cloned voices in songs",
@@ -10411,8 +10284,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "GTM Automation",
-        "AI Models"
+        "GTM Automation"
       ],
       "use_cases": [
         "Generate AI-powered tweets and threads automatically",
@@ -10458,7 +10330,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Content Generation",
+        "AI Writing & Content",
         "Creative Automation"
       ],
       "use_cases": [
@@ -10524,8 +10396,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Music & Audio Generation",
-        "Text-to-Audio Generation"
+        "AI Voice & Audio"
       ],
       "use_cases": [
         "Creating background music",
@@ -10547,8 +10418,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Website Builders",
-        "Marketing Technology"
+        "Website Builders"
       ],
       "use_cases": [
         "Building landing pages",
@@ -10571,7 +10441,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Outbound GTM Outreach",
+        "Sales Engagement",
         "Sales Automation"
       ],
       "use_cases": [
@@ -10595,7 +10465,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Customer Experience",
+        "Customer Feedback & Support",
         "Marketing Automation"
       ],
       "use_cases": [
@@ -10619,7 +10489,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Vibe Coding",
         "Developer Tools"
       ],
@@ -10643,8 +10512,8 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing",
-        "Text-to-Video Generation"
+        "Video & Audio Editing",
+        "AI Video Generation"
       ],
       "use_cases": [
         "Adding captions to social videos",
@@ -10667,7 +10536,7 @@
       ],
       "notion_categories": [
         "Developer Tools",
-        "AI Model Hosting & Deployment"
+        "AI Model Platforms"
       ],
       "use_cases": [
         "Host AI model demos with seamless scaling.",
@@ -10688,8 +10557,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Video Generation",
-        "Video & Image Generation"
+        "AI Video Generation",
+        "AI Image Generation"
       ],
       "use_cases": [
         "Animating product images",
@@ -10711,7 +10580,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Audio & Video Editing"
+        "Video & Audio Editing"
       ],
       "use_cases": [
         "Clipping webinars and podcasts",
@@ -10734,7 +10603,7 @@
       "notion_categories": [
         "CRO and A/B Testing",
         "Marketing Analytics",
-        "User Behavior Analytics"
+        "Product Analytics"
       ],
       "use_cases": [
         "Running A/B tests",
@@ -10757,7 +10626,7 @@
       ],
       "notion_categories": [
         "Open-Source AI",
-        "Text-to-Video Generation"
+        "AI Video Generation"
       ],
       "use_cases": [
         "Self-hosting video generation",
@@ -10874,8 +10743,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Webinar Platform",
-        "Online Events"
+        "Webinars & Events"
       ],
       "use_cases": [
         "Hosting sales webinars",
@@ -10897,8 +10765,8 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "Text-to-Audio Generation",
-        "AI Content Generation"
+        "AI Voice & Audio",
+        "AI Writing & Content"
       ],
       "use_cases": [
         "Narrating training videos",
@@ -10920,7 +10788,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Customer Experience"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Answering customer questions",
@@ -10987,7 +10855,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Vibe Coding",
         "Developer Tools"
       ],
@@ -11012,8 +10879,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Models",
-        "Speech-to-Text Generation"
+        "Transcription"
       ],
       "use_cases": [
         "Dictate emails, docs, and code hands-free",
@@ -11057,7 +10923,7 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Content Generation",
+        "AI Writing & Content",
         "Marketing Automation"
       ],
       "use_cases": [
@@ -11125,7 +10991,6 @@
         "AI Tool"
       ],
       "notion_categories": [
-        "AI Workflow Automation",
         "Workflow Automation",
         "AI Agents"
       ],
@@ -11239,10 +11104,9 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "AI Models",
         "Data Enrichment",
         "GTM Automation",
-        "Customer Feedback Management"
+        "Customer Feedback & Support"
       ],
       "use_cases": [
         "Unify feedback from surveys, chats, tickets, and reviews",
@@ -11265,8 +11129,7 @@
         "Marketing Tool"
       ],
       "notion_categories": [
-        "Webinar Software",
-        "Video Conferencing"
+        "Webinars & Events"
       ],
       "use_cases": [
         "Hosting large webinars",
@@ -11289,7 +11152,7 @@
       ],
       "notion_categories": [
         "Sales Intelligence",
-        "Contact Data Enrichment"
+        "Data Enrichment"
       ],
       "use_cases": [
         "Finding decision makers",

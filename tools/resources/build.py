@@ -496,6 +496,26 @@ FILTER_JS = """      <script>
             b.addEventListener("click", function () { q.value = ""; Object.keys(sel).forEach(function (k) { pick(k, ""); }); apply(); });
           });
           q.addEventListener("input", apply);
+          // Card labels filter the page to every card that carries the same label.
+          var chips = root.querySelectorAll("[data-tagchip]"), tagrow = root.querySelector(".db-tagrow");
+          function showTag() {
+            var v = sel.tag || "";
+            chips.forEach(function (c) { c.classList.toggle("is-on", !!v && c.dataset.tagchip === v); });
+            if (!tagrow) return;
+            tagrow.hidden = !v;
+            var src = v && root.querySelector('[data-tagchip="' + v + '"]');
+            if (src) tagrow.querySelector(".db-tagname").textContent = src.textContent;
+          }
+          chips.forEach(function (c) {
+            c.addEventListener("click", function () {
+              pick("tag", sel.tag === c.dataset.tagchip ? "" : c.dataset.tagchip);
+              apply(); showTag();
+              main.scrollIntoView({ behavior: "smooth", block: "start" });
+            });
+          });
+          if (tagrow) tagrow.querySelector(".db-tagpill").addEventListener("click", function () { pick("tag", ""); apply(); showTag(); });
+          btns.forEach(function (b) { b.addEventListener("click", showTag); });
+          clears.forEach(function (b) { b.addEventListener("click", showTag); });
           var wide = window.matchMedia("(min-width: 901px)");
           function fit() { if (wide.matches) det.open = true; }
           fit();
@@ -541,6 +561,18 @@ DB_CSS = """      <style>
       </style>"""
 
 
+# Tool card labels are buttons: a click filters the page to that label.
+LABEL_CSS = """      <style>
+        .db-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+        .db-chip { font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; padding: 2px 9px; border: 1.5px solid var(--muted); border-radius: 999px; background: none; color: var(--ink); }
+        .db-chip:hover, .db-chip:focus-visible { border-color: var(--ink); background: var(--gold-t); }
+        .db-chip.is-on { border-color: var(--ink); background: var(--blue); }
+        .db-tagrow { margin: 0 0 var(--space-md); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+        .db-tagpill { font: inherit; font-weight: 800; cursor: pointer; padding: 4px 12px; border: 2px solid var(--ink); border-radius: 999px; background: var(--blue); color: var(--ink); }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      </style>"""
+
+
 def hero(pill, h1, sub, buttons):
     return f"""      <section class="consulting-hero db-hero">
         <div class="container">
@@ -575,7 +607,7 @@ TOOLS_DIR = ROOT / "resources/marketing-ai-tools"
 TOOL_TYPES = {"AI Tool": "AI tool", "Marketing Tool": "Marketing tool"}
 # Generic categories that say little about the job a tool does. A tool's group
 # comes from its first category outside this set, or from its "group" field.
-GENERIC = {"AI Models", "Platform-Integrated AI", "Marketing Technology", "Conversational AI", "Multimodal AI", "AI Content Generation"}
+GENERIC = {"AI Models", "Platform-Integrated AI", "Marketing Technology", "Conversational AI", "AI Writing & Content"}
 # Group order on the page: marketing jobs first, then AI building blocks, then operations.
 GROUP_ORDER = ["Outbound and sales", "GTM engineering", "Email and lifecycle", "SEO and content", "Ads, social and reputation", "Analytics",
                "Video, image and audio", "AI models and assistants", "AI agents and automation", "Build and no-code",
@@ -635,14 +667,16 @@ def tool_card(i, grp):
     tags = "".join(f'<span class="db-tag{" db-tag-alt" if t == "Marketing tool" else ""}">{E(t)}</span>' for t in types)
     uses = "".join(f"<li>{E(u.rstrip('.'))}</li>" for u in i["use_cases"][:3])
     cats = ", ".join(i["notion_categories"])
+    chips = "".join(
+        f'<button type="button" class="db-chip" data-tagchip="{tok(c)}">{E(c)}</button>' for c in i["notion_categories"])
     text = " ".join([i["name"], i["overview"], cats, grp] + i["use_cases"]).lower()
-    return f"""          <article class="db-card" id="{E(i['slug'])}" data-group="{gid(grp)}" data-type="{E(' '.join(tok(t) for t in types))}" data-text="{E(text, quote=True)}">
+    return f"""          <article class="db-card" id="{E(i['slug'])}" data-group="{gid(grp)}" data-type="{E(' '.join(tok(t) for t in types))}" data-tag="{E(' '.join(tok(c) for c in i['notion_categories']))}" data-text="{E(text, quote=True)}">
             <div class="db-tags">{tags}</div>
             <h3 class="db-name">{E(i['name'])}</h3>
             <p class="db-desc">{E(i['overview'])}</p>
             <p class="db-label">Use cases</p>
             <ul class="db-uses">{uses}</ul>
-            <p class="db-meta">{E(cats)}</p>
+            <div class="db-chips">{chips}</div>
             <div class="db-links">{link(i['website'], 'Visit ' + i['name'], is_partner(i))}</div>
           </article>"""
 
@@ -684,6 +718,7 @@ def tools_files():
 {panel}
             <div class="db-main">
 {count_row(n, "tools")}
+              <p class="db-tagrow" hidden>Showing tools labelled <button type="button" class="db-tagpill"><span class="db-tagname"></span> <span aria-hidden="true">&times;</span><span class="sr-only">Remove label filter</span></button></p>
               <p class="db-note">Some links are partner links. MIA may earn a commission if you sign up through one, at no cost to you. Partner status never decides which tools MIA lists.</p>
               <p class="db-empty" hidden>No tools match your search. Try another word or clear the filters.</p>
 {sections}
@@ -692,6 +727,7 @@ def tools_files():
         </div>
       </section>
 {DB_CSS}
+{LABEL_CSS}
 {FILTER_CSS}
 {FILTER_JS}"""
 
