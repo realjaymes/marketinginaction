@@ -1531,5 +1531,12 @@
       "fails": 0
     }
   },
-  "tools_checked": "2026-10-20"
+  "tools_checked": "2026-10-20",
+  "intake": {
+    "candidates_tried": {},
+    "briefs_done": [
+      "2026-10-20 Evening Brief.md",
+      "2026-10-20 Morning Brief.md"
+    ]
+  }
 }
