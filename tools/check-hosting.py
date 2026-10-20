@@ -36,10 +36,20 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 OPENER = urllib.request.build_opener(NoRedirect)
 
 
-def fetch(url):
+def fetch(url, tries=3):
+    """Status, Location and the start of the body. A timeout is retried, so a slow
+    answer is never recorded as a different result."""
+    for _ in range(tries):
+        status, loc, body = fetch_once(url)
+        if status:
+            return status, loc, body
+    return status, loc, body
+
+
+def fetch_once(url):
     req = urllib.request.Request(url, headers={"User-Agent": "mia-hosting-check/1.0"}, method="GET")
     try:
-        with OPENER.open(req, timeout=30) as r:
+        with OPENER.open(req, timeout=15) as r:
             body = r.read(4000).decode("utf-8", "ignore")
             return r.status, "", body
     except urllib.error.HTTPError as e:
@@ -113,9 +123,17 @@ def norm(loc, base):
     return loc
 
 
+PERMANENT = {301, 308}
+# Netlify serves the page file itself; Cloudflare Pages drops ".html" and redirects.
+# No page links to it, and a missing page still returns the real 404 on both hosts.
+KNOWN = {"/404.html"}
+
+
 def compare(a_file, b_file):
+    """A 301 and a 308 to the same target count as the same answer (both permanent,
+    and search engines treat them alike), listed as notes rather than differences."""
     a, b = json.loads(pathlib.Path(a_file).read_text()), json.loads(pathlib.Path(b_file).read_text())
-    diffs = []
+    diffs, notes = [], []
     for p, ra in a["results"].items():
         if p.startswith("@") and p not in b["results"]:
             continue
@@ -124,13 +142,22 @@ def compare(a_file, b_file):
             diffs.append(f"{p}: missing from {b_file}")
             continue
         la, lb = norm(ra["location"], a["base"]), norm(rb["location"], b["base"])
-        if ra["status"] != rb["status"] or la != lb:
-            diffs.append(f"{p}: {ra['status']} {la}  vs  {rb['status']} {lb}")
+        line = f"{p}: {ra['status']} {la}  vs  {rb['status']} {lb}"
+        if ra["status"] != rb["status"] and la == lb and {ra["status"], rb["status"]} <= PERMANENT:
+            notes.append(line)
+        elif p in KNOWN:
+            notes.append(line)
+        elif ra["status"] != rb["status"] or la != lb:
+            diffs.append(line)
         elif ra["title"] != rb["title"]:
             diffs.append(f"{p}: page title differs: {ra['title']!r} vs {rb['title']!r}")
-    print(f"compared {len(a['results'])} requests: {len(diffs)} differences")
+    print(f"compared {len(a['results'])} requests: {len(diffs)} differences, {len(notes)} notes")
     for d in diffs:
         print("  " + d)
+    if notes:
+        print(f"notes (same destination, 301 vs 308, or a known host difference):")
+        for n in notes:
+            print("  " + n)
     return 1 if diffs else 0
 
 
