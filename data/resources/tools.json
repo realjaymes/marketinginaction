@@ -1,6 +1,7 @@
 {
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
+  "updated": "2026-10-20",
   "count": 153,
   "items": [
     {
@@ -175,7 +176,8 @@
         "Execute goal-driven tasks with stateful, serverless agents."
       ],
       "website": "https://apify.com",
-      "slug": "apify"
+      "slug": "apify",
+      "group": "Outbound and sales"
     },
     {
       "notion_id": "27ba6d41-709c-80e1-b649-c8c02d83f687",
@@ -675,7 +677,10 @@
       "product_type": [
         "Marketing Tool"
       ],
-      "notion_categories": [],
+      "notion_categories": [
+        "Human Resources",
+        "Payroll"
+      ],
       "use_cases": [
         "Hire and pay global employees and contractors compliantly",
         "Automate payroll processing across 150+ countries seamlessly",
@@ -1505,7 +1510,8 @@
         "Remove watermarks with premium subscription options"
       ],
       "website": "https://imgflip.com",
-      "slug": "imgflip"
+      "slug": "imgflip",
+      "group": "Video, image and audio"
     },
     {
       "notion_id": "284a6d41-709c-8196-9c68-c72060c94b9e",
@@ -2118,7 +2124,9 @@
       "product_type": [
         "Marketing Tool"
       ],
-      "notion_categories": [],
+      "notion_categories": [
+        "Developer Tools"
+      ],
       "use_cases": [
         "Build membership sites with user authentication and payments",
         "Gate content behind subscription paywalls and access levels",
@@ -2277,8 +2285,13 @@
       "last_edited": "2025-10-06",
       "name": "Multiplier",
       "overview": "Multiplier is a global human platform that enables companies to hire, manage, and pay employees and contractors in 150+ countries without setting up legal entities.",
-      "product_type": [],
-      "notion_categories": [],
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Payroll",
+        "HR Management"
+      ],
       "use_cases": [
         "Hire employees globally without legal entity setup.",
         "Run payroll across multiple countries and currencies.",
@@ -2736,7 +2749,9 @@
       "product_type": [
         "Marketing Tool"
       ],
-      "notion_categories": [],
+      "notion_categories": [
+        "E-commerce Fulfillment"
+      ],
       "use_cases": [
         "Create custom products from 1000+ items available",
         "Integrate with Shopify, Etsy, Amazon, and marketplaces",
@@ -2988,7 +3003,8 @@
         "Create creative content like poems and stories."
       ],
       "website": "https://rytr.me",
-      "slug": "rytr"
+      "slug": "rytr",
+      "group": "SEO and content"
     },
     {
       "notion_id": "27ba6d41-709c-8000-bcec-d300db51356e",
@@ -3413,7 +3429,10 @@
         "AI Tool",
         "Marketing Tool"
       ],
-      "notion_categories": [],
+      "notion_categories": [
+        "Workforce Management",
+        "HR Technology"
+      ],
       "use_cases": [
         "Document standard operating procedures and business processes",
         "Automate employee onboarding and training workflows",
@@ -3573,7 +3592,7 @@
       "notion_id": "24ca6d41-709c-80fe-afae-faa10237635c",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
-      "name": "Whispr Flow",
+      "name": "Wispr Flow",
       "overview": "Wispr Flow is a voice dictation tool that boosts writing speed across apps.",
       "product_type": [
         "AI Tool"
@@ -3590,7 +3609,7 @@
         "Free up cognitive load during meetings or writing"
       ],
       "website": "https://wisprflow.ai/",
-      "slug": "whispr-flow"
+      "slug": "wispr-flow"
     },
     {
       "notion_id": "24ca6d41-709c-8000-9894-e83615f7a519",
@@ -3689,7 +3708,8 @@
         "Monitor online reputation across review platforms"
       ],
       "website": "https://get.zonkafeedback.com/James-mia",
-      "slug": "zonka-feedback"
+      "slug": "zonka-feedback",
+      "group": "Email and lifecycle"
     }
   ]
 }

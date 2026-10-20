@@ -1,7 +1,8 @@
 {
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
-  "count": 69,
+  "updated": "2026-10-20",
+  "count": 68,
   "items": [
     {
       "notion_id": "207a6d41-709c-803d-ad36-db4277a36030",
@@ -19,7 +20,12 @@
       "newsletter": "https://www.fishmanafnewsletter.com/",
       "website": "https://www.adamfishman.com/",
       "notion_headshot": "",
-      "slug": "adam-fishman"
+      "slug": "adam-fishman",
+      "role": "Advisor",
+      "one_liner": "Writes the FishmanAF newsletter on growth and product; advises companies.",
+      "profile_source": "https://www.reforge.com/profiles/adam-fishman",
+      "headshot": "img/adam-fishman.jpg",
+      "headshot_source": "x:@fishmanaf"
     },
     {
       "notion_id": "207a6d41-709c-80e5-9419-ddd4e4dce86b",
@@ -34,7 +40,13 @@
       "newsletter": "https://adia.substack.com/",
       "website": "https://adia.substack.com/",
       "notion_headshot": "",
-      "slug": "adia-sowho"
+      "slug": "adia-sowho",
+      "role": "Newsletter writer",
+      "company": "Leap of Scale",
+      "one_liner": "Writes about scaling companies in emerging markets, growth, process and culture.",
+      "profile_source": "https://adia.substack.com/about",
+      "headshot": "img/adia-sowho.jpg",
+      "headshot_source": "x:@adiaspeaks"
     },
     {
       "notion_id": "207a6d41-709c-80bc-9793-ec5df2dc5142",
@@ -50,7 +62,13 @@
       "newsletter": "https://www.mrrunlocked.com/",
       "website": "https://www.mrrunlocked.com/",
       "notion_headshot": "",
-      "slug": "alexander-estner"
+      "slug": "alexander-estner",
+      "role": "Newsletter writer",
+      "company": "MRR Unlocked",
+      "one_liner": "Writes about go-to-market for B2B SaaS and AI companies growing from zero to 1M euros ARR.",
+      "profile_source": "https://www.mrrunlocked.com/",
+      "headshot": "img/alexander-estner.jpg",
+      "headshot_source": "x:@alexanderestner"
     },
     {
       "notion_id": "207a6d41-709c-80fd-8075-d08ee849ad34",
@@ -65,7 +83,13 @@
       "newsletter": "https://fullfunnel.substack.com/",
       "website": "https://fullfunnel.io/",
       "notion_headshot": "",
-      "slug": "andrei-zinkevich"
+      "slug": "andrei-zinkevich",
+      "role": "Founder",
+      "company": "Fullfunnel",
+      "one_liner": "Teaches full-funnel B2B marketing and account-based marketing.",
+      "profile_source": "https://getlatka.com/companies/fullfunnel/interviews/fullfunnel-andrei-zinkevich-2022",
+      "headshot": "img/andrei-zinkevich.jpg",
+      "headshot_source": "x:@azinkevich"
     },
     {
       "notion_id": "207a6d41-709c-80af-96cb-e3b635e0ff6d",
@@ -81,7 +105,15 @@
       "newsletter": "https://andrewchen.substack.com/",
       "website": "https://andrewchen.com/",
       "notion_headshot": "",
-      "slug": "andrew-chen"
+      "slug": "andrew-chen",
+      "role": "General Partner",
+      "company": "Andreessen Horowitz",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Writes about startup growth, network effects and consumer products.",
+      "profile_source": "https://andrewchen.com/",
+      "headshot": "img/andrew-chen.jpg",
+      "headshot_source": "x:@andrewchen"
     },
     {
       "notion_id": "207a6d41-709c-8050-9156-f3c76db650c0",
@@ -96,7 +128,14 @@
       "newsletter": "",
       "website": "https://www.fletchpmm.com/",
       "notion_headshot": "",
-      "slug": "anthony-pierri"
+      "slug": "anthony-pierri",
+      "role": "Co-founder",
+      "company": "Fletch PMM",
+      "region": "North America",
+      "one_liner": "Teaches B2B SaaS positioning, messaging and homepage copy.",
+      "profile_source": "https://www.fletchpmm.com/",
+      "headshot": "img/anthony-pierri.jpg",
+      "headshot_source": "x:@apierripmm"
     },
     {
       "notion_id": "207a6d41-709c-8014-8e3c-c773cd01c274",
@@ -111,7 +150,14 @@
       "newsletter": "https://www.aprildunford.com/newsletter",
       "website": "https://www.aprildunford.com/",
       "notion_headshot": "",
-      "slug": "april-dunford"
+      "slug": "april-dunford",
+      "role": "Positioning consultant and author",
+      "region": "North America",
+      "country": "Canada",
+      "one_liner": "Writes and teaches B2B product positioning; author of Obviously Awesome and Sales Pitch.",
+      "profile_source": "https://www.aprildunford.com/about",
+      "headshot": "img/april-dunford.jpg",
+      "headshot_source": "x:@aprildunford"
     },
     {
       "notion_id": "207a6d41-709c-80af-b23b-fb5b02051404",
@@ -128,7 +174,13 @@
       "newsletter": "https://www.funnelenvy.com/",
       "website": "https://www.funnelenvy.com/",
       "notion_headshot": "",
-      "slug": "arun-sivashankaran"
+      "slug": "arun-sivashankaran",
+      "role": "Founder and CEO",
+      "company": "FunnelEnvy",
+      "one_liner": "Runs a conversion and revenue optimization agency for B2B companies.",
+      "profile_source": "https://www.funnelenvy.com/about-us",
+      "headshot": "img/arun-sivashankaran.jpg",
+      "headshot_source": "x:@asivash"
     },
     {
       "notion_id": "207a6d41-709c-80c6-b3b8-ec6087fe69fe",
@@ -143,7 +195,12 @@
       "newsletter": "https://blessingabeng.substack.com/",
       "website": "https://blessingabeng.com/",
       "notion_headshot": "",
-      "slug": "blessing-abeng"
+      "slug": "blessing-abeng",
+      "one_liner": "Helps founders and professionals build a clear brand identity and communicate it.",
+      "profile_source": "https://blessingabeng.com/",
+      "headshot": "img/blessing-abeng.jpg",
+      "headshot_source": "x:@blessingabeng_",
+      "role": "Brand strategist"
     },
     {
       "notion_id": "282a6d41-709c-8027-bf4a-d40218500207",
@@ -161,7 +218,12 @@
       "newsletter": "https://medium.com/@bolajianifowose",
       "website": "https://mainstack.me/bolajianifowose",
       "notion_headshot": "",
-      "slug": "bolaji-anifowose"
+      "slug": "bolaji-anifowose",
+      "one_liner": "Product marketing and go-to-market engineering for African startups.",
+      "profile_source": "https://mainstack.me/bolajianifowose",
+      "headshot": "img/bolaji-anifowose.jpg",
+      "headshot_source": "x:@itsmoveek",
+      "role": "Product and growth marketing manager"
     },
     {
       "notion_id": "207a6d41-709c-8011-ac8c-ef174544a852",
@@ -179,7 +241,13 @@
       "newsletter": "https://blog.brianbalfour.com/",
       "website": "https://brianbalfour.com/",
       "notion_headshot": "",
-      "slug": "brian-balfour"
+      "slug": "brian-balfour",
+      "role": "Founder and CEO",
+      "company": "Reforge",
+      "one_liner": "Writes about product, growth and AI strategy; co-hosts Unsolicited Feedback.",
+      "profile_source": "https://brianbalfour.com/",
+      "headshot": "img/brian-balfour.jpg",
+      "headshot_source": "x:@bbalfour"
     },
     {
       "notion_id": "207a6d41-709c-80e2-bcc0-fa626d068d6d",
@@ -197,7 +265,15 @@
       "newsletter": "https://caseyaccidental.substack.com/",
       "website": "https://caseyaccidental.com/",
       "notion_headshot": "",
-      "slug": "casey-winters"
+      "slug": "casey-winters",
+      "role": "Co-founder and CEO",
+      "company": "SuperMe",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Writes about scaling companies, growth and product.",
+      "profile_source": "https://podcastrex.com/shows/supra-insider/94-how-ai-is-enabling-top-operators-to-open-source-their-expertise-casey-winters-co-founder-ceo-at-superme-ex-eventbrite-pinterest",
+      "headshot": "img/casey-winters.jpg",
+      "headshot_source": "x:@onecaseman"
     },
     {
       "notion_id": "27da6d41-709c-8049-aa4b-d8b2b6dcb37c",
@@ -215,7 +291,13 @@
       "newsletter": "https://measureu.com/newsletter/",
       "website": "https://measureu.com/",
       "notion_headshot": "https://measureu.com/wp-content/uploads/Chris-Mercer.jpg",
-      "slug": "chris-mercer"
+      "slug": "chris-mercer",
+      "role": "Co-founder and CEO",
+      "company": "MeasureU",
+      "one_liner": "Teaches marketing measurement and connecting marketing activity to business results.",
+      "profile_source": "https://measureu.com/about/",
+      "headshot": "img/chris-mercer.jpg",
+      "headshot_source": "x:@mercertweets"
     },
     {
       "notion_id": "247a6d41-709c-8059-b00d-eeebfd6172c4",
@@ -228,9 +310,14 @@
       "x": "https://x.com/corbin_braun",
       "linkedin": "",
       "newsletter": "",
-      "website": "https://linktr.ee/_cafe_",
+      "website": "https://linktr.ee/corbin_brown",
       "notion_headshot": "",
-      "slug": "corbin-brown"
+      "slug": "corbin-brown",
+      "headshot": "img/corbin-brown.jpg",
+      "headshot_source": "x:@corbin_braun",
+      "role": "Founder and YouTube creator",
+      "one_liner": "Builds software products and shares the process on YouTube.",
+      "profile_source": "https://x.com/corbin_braun"
     },
     {
       "notion_id": "207a6d41-709c-8075-8c33-ef8523baf36f",
@@ -246,7 +333,15 @@
       "newsletter": "https://www.corey.co/blog",
       "website": "https://www.corey.co/",
       "notion_headshot": "",
-      "slug": "corey-haines"
+      "slug": "corey-haines",
+      "role": "Founder",
+      "company": "Conversion Factory",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Writes about B2B SaaS marketing, conversion copywriting and AI marketing.",
+      "profile_source": "https://www.corey.co/",
+      "headshot": "img/corey-haines.jpg",
+      "headshot_source": "x:@coreyhainesco"
     },
     {
       "notion_id": "207a6d41-709c-80c2-9f66-cc93ab8f765d",
@@ -265,7 +360,13 @@
       "newsletter": "https://www.craigsnewsletter.com/",
       "website": "https://www.craigzingerline.com/",
       "notion_headshot": "",
-      "slug": "craig-zingerline"
+      "slug": "craig-zingerline",
+      "role": "Newsletter writer",
+      "company": "GrowthLed",
+      "one_liner": "Writes about startup growth, product-led growth, retention and financial modeling.",
+      "profile_source": "https://www.craigsnewsletter.com/about",
+      "headshot": "img/craig-zingerline.jpg",
+      "headshot_source": "x:@craigzingerline"
     },
     {
       "notion_id": "207a6d41-709c-80d4-82ea-dc7b2f2fc4e5",
@@ -283,7 +384,13 @@
       "newsletter": "https://www.danhock.co/",
       "website": "https://www.danhock.co/",
       "notion_headshot": "",
-      "slug": "dan-hockenmaier"
+      "slug": "dan-hockenmaier",
+      "role": "Chief Strategy Officer",
+      "company": "Faire",
+      "one_liner": "Writes essays on growth, marketplaces and strategy.",
+      "profile_source": "https://news.faire.com/?p=966",
+      "headshot": "img/dan-hockenmaier.jpg",
+      "headshot_source": "x:@danhockenmaier"
     },
     {
       "notion_id": "207a6d41-709c-80f0-ab75-c93570020ea3",
@@ -299,7 +406,15 @@
       "newsletter": "https://themarketingmillennials.com/",
       "website": "https://themarketingmillennials.com/",
       "notion_headshot": "",
-      "slug": "daniel-murray"
+      "slug": "daniel-murray",
+      "role": "Founder",
+      "company": "The Marketing Millennials",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Builds B2B marketing media on LinkedIn; hosts The Marketing Millennials podcast and newsletter.",
+      "profile_source": "https://inbound.com/speakers/daniel-murray",
+      "headshot": "img/daniel-murray.jpg",
+      "headshot_source": "x:@dmurr68"
     },
     {
       "notion_id": "207a6d41-709c-80d8-9357-efb3148c5dd8",
@@ -315,7 +430,11 @@
       "newsletter": "https://domenicoloperfido.substack.com/",
       "website": "",
       "notion_headshot": "",
-      "slug": "domenico-loperfido"
+      "slug": "domenico-loperfido",
+      "role": "Newsletter writer",
+      "company": "In case you missed it",
+      "one_liner": "Curates a weekly list of advertising and marketing picks.",
+      "profile_source": "https://domenicoloperfido.substack.com/about"
     },
     {
       "notion_id": "207a6d41-709c-80ba-8f2b-ed56562bbede",
@@ -330,7 +449,14 @@
       "newsletter": "https://doepicsht.substack.com/",
       "website": "https://doepicsht.substack.com/",
       "notion_headshot": "",
-      "slug": "elena-madrigal"
+      "slug": "elena-madrigal",
+      "one_liner": "Writes 0-to-1 strategy frameworks from 20 years at Nokia, Microsoft, Canva and GoDaddy.",
+      "profile_source": "https://doepicsht.substack.com/about",
+      "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/d510bff7-59d8-48ad-bd5b-b7242be0bf54_396x396.png",
+      "headshot": "img/elena-madrigal.jpg",
+      "headshot_source": "headshot_url",
+      "role": "Writer",
+      "company": "Do Epic Sht"
     },
     {
       "notion_id": "207a6d41-709c-80ae-810f-c18c480f20c0",
@@ -346,7 +472,15 @@
       "newsletter": "https://www.elenaverna.com/",
       "website": "https://www.elenaverna.com/",
       "notion_headshot": "",
-      "slug": "elena-verna"
+      "slug": "elena-verna",
+      "role": "Head of Growth",
+      "company": "Lovable",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Writes about growth, product-led growth and AI products.",
+      "profile_source": "https://crunchbase.com/person/elena-verna",
+      "headshot": "img/elena-verna.jpg",
+      "headshot_source": "x:@elenaverna"
     },
     {
       "notion_id": "207a6d41-709c-8062-a3e2-e6e6fb93caf1",
@@ -362,7 +496,13 @@
       "newsletter": "https://newsletter.mkt1.co/",
       "website": "https://www.mkt1.co/",
       "notion_headshot": "",
-      "slug": "emily-kramer"
+      "slug": "emily-kramer",
+      "role": "Co-founder",
+      "company": "MKT1",
+      "one_liner": "Writes about B2B startup marketing and how to build marketing teams.",
+      "profile_source": "https://newsletter.mkt1.co/about",
+      "headshot": "img/emily-kramer.jpg",
+      "headshot_source": "x:@emilykramer"
     },
     {
       "notion_id": "27ba6d41-709c-8018-9b68-d34d4c0cdecf",
@@ -380,7 +520,13 @@
       "newsletter": "https://www.youtube.com/channel/UC6ef5yDFz7gm8rARwX3HaDw",
       "website": "https://www.growthenginex.com/",
       "notion_headshot": "",
-      "slug": "eric-nowoslawski"
+      "slug": "eric-nowoslawski",
+      "role": "Founder",
+      "company": "Growth Engine X",
+      "one_liner": "Teaches cold email and outbound lead generation systems.",
+      "profile_source": "http://coldoutbound.com/",
+      "headshot": "img/eric-nowoslawski.jpg",
+      "headshot_source": "x:@enowoslawski"
     },
     {
       "notion_id": "27ba6d41-709c-80cb-a8aa-e337eafbcc53",
@@ -398,7 +544,14 @@
       "newsletter": "https://newsletter.levelingup.com",
       "website": "https://www.levelingup.com",
       "notion_headshot": "",
-      "slug": "eric-siu"
+      "slug": "eric-siu",
+      "role": "Chairman",
+      "company": "Single Grain",
+      "one_liner": "Hosts Leveling Up and Marketing School; writes about growth and entrepreneurship.",
+      "profile_source": "https://www.levelingup.com/",
+      "x_verified": true,
+      "headshot": "img/eric-siu.jpg",
+      "headshot_source": "x:@ericosiu"
     },
     {
       "notion_id": "27ba6d41-709c-802e-9688-eeed4976e80d",
@@ -416,7 +569,15 @@
       "newsletter": "",
       "website": "https://essamsleiman.com/",
       "notion_headshot": "",
-      "slug": "essam-sleiman"
+      "slug": "essam-sleiman",
+      "role": "Founder and CEO",
+      "company": "Canvas",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Builds AI agents for go-to-market engineering; writes about GTM automation.",
+      "profile_source": "https://www.ycombinator.com/companies/canvas",
+      "headshot": "img/essam-sleiman.jpg",
+      "headshot_source": "x:@essamsleiman"
     },
     {
       "notion_id": "296a6d41-709c-807f-baee-e82e7e7fdf22",
@@ -430,10 +591,11 @@
       ],
       "x": "http://x.com/A_Feranmi",
       "linkedin": "http://linkedin.com/in/ajetomobiferanmi",
-      "newsletter": "http://marketingforgeeks.com",
+      "newsletter": "",
       "website": "",
       "notion_headshot": "",
-      "slug": "feranmi-ajetomobi"
+      "slug": "feranmi-ajetomobi",
+      "profile_source": "https://ng.linkedin.com/in/ajetomobiferanmi"
     },
     {
       "notion_id": "207a6d41-709c-8082-9083-cf9e3b27691b",
@@ -448,7 +610,13 @@
       "newsletter": "https://contentfolks.substack.com/",
       "website": "https://contentfolks.com/",
       "notion_headshot": "",
-      "slug": "fio-dossetto"
+      "slug": "fio-dossetto",
+      "role": "Brand and Marketing Lead",
+      "company": "Float",
+      "one_liner": "Writes about content strategy and product-led content; runs the contentfolks newsletter.",
+      "profile_source": "https://contentfolks.com/",
+      "headshot": "img/fio-dossetto.jpg",
+      "headshot_source": "x:@content101"
     },
     {
       "notion_id": "207a6d41-709c-80a2-8d45-ffe105448e0e",
@@ -464,7 +632,13 @@
       "newsletter": "https://www.linkedin.com/newsletters/advertising-humans-7296099375460544512",
       "website": "https://www.franklinozekhome.com/",
       "notion_headshot": "",
-      "slug": "franklin-ozekhome"
+      "slug": "franklin-ozekhome",
+      "role": "Executive Vice President, Strategy and Innovation",
+      "company": "Chain Reactions Africa",
+      "region": "Africa",
+      "country": "Nigeria",
+      "one_liner": "Works on advertising strategy, African pop culture and consumer trends.",
+      "profile_source": "https://brandspurng.com/2025/09/03/chain-reactions-africa-names-franklin-ozekhome-as-executive-vice-president-strategy-innovation-launches-africas-first-intelligent-robot-to-service-clients/"
     },
     {
       "notion_id": "207a6d41-709c-80d6-9a48-fc9c6cfd2479",
@@ -483,7 +657,13 @@
       "newsletter": "https://latecheckout.substack.com/",
       "website": "https://www.gregisenberg.com/",
       "notion_headshot": "",
-      "slug": "greg-isenberg"
+      "slug": "greg-isenberg",
+      "role": "CEO",
+      "company": "Late Checkout",
+      "one_liner": "Writes and hosts a podcast on startup ideas and community-led internet businesses.",
+      "profile_source": "https://www.gregisenberg.com/",
+      "headshot": "img/greg-isenberg.jpg",
+      "headshot_source": "x:@gregisenberg"
     },
     {
       "notion_id": "207a6d41-709c-8085-9f7a-d4598bc5855b",
@@ -502,7 +682,13 @@
       "newsletter": "https://playbooks.hypergrowthpartners.com/",
       "website": "https://www.hypergrowthpartners.com/",
       "notion_headshot": "",
-      "slug": "guillaume-cabane"
+      "slug": "guillaume-cabane",
+      "role": "General Partner",
+      "company": "Hypergrowth Partners",
+      "one_liner": "Writes about B2B growth playbooks; former growth lead at Segment and Drift.",
+      "profile_source": "https://www.hypergrowthpartners.com/",
+      "headshot": "img/guillaume-cabane.jpg",
+      "headshot_source": "x:@guillaumecabane"
     },
     {
       "notion_id": "207a6d41-709c-807e-acfb-de8c834671b4",
@@ -518,7 +704,13 @@
       "newsletter": "https://www.productmarketfit.tech/",
       "website": "https://www.productmarketfit.tech/",
       "notion_headshot": "",
-      "slug": "guillermo-flor"
+      "slug": "guillermo-flor",
+      "one_liner": "Writes about startup product-market fit, growth and fundraising.",
+      "profile_source": "https://x.com/guilleflorvs",
+      "headshot": "img/guillermo-flor.jpg",
+      "headshot_source": "x:@guilleflorvs",
+      "role": "Investor and writer",
+      "company": "Product Market Fit"
     },
     {
       "notion_id": "207a6d41-709c-8052-a9ef-cd1da1158d1e",
@@ -533,7 +725,14 @@
       "newsletter": "https://www.buildingmomentum.io/",
       "website": "https://www.buildingmomentum.io/",
       "notion_headshot": "",
-      "slug": "james-doman-pipe"
+      "slug": "james-doman-pipe",
+      "role": "Product marketing consultant",
+      "company": "Inflection Studio",
+      "one_liner": "Writes about B2B SaaS positioning, messaging and product launches.",
+      "profile_source": "https://www.buildingmomentum.io/",
+      "x_verified": true,
+      "headshot": "img/james-doman-pipe.jpg",
+      "headshot_source": "x:@JDomanPipe"
     },
     {
       "notion_id": "207a6d41-709c-8064-8876-ed53263183b8",
@@ -551,7 +750,14 @@
       "newsletter": "http://www.marketinginaction.xyz",
       "website": "http://www.jamespraise.xyz",
       "notion_headshot": "https://realjaymes.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F48c8833e-16b5-47e3-98ab-783f7dd654ac%2FJames_Passport_White.png?id=07326e2f-a711-435f-a78a-14d3da03a4b3&table=block&spaceId=e4c317ab-a16f-4092-beb4-5b31315646c0&width=250&userId=&cache=v2",
-      "slug": "james-praise"
+      "slug": "james-praise",
+      "role": "Founder",
+      "company": "Marketing In Action",
+      "one_liner": "Writes the MIA newsletter on product marketing, go-to-market and growth systems.",
+      "profile_source": "https://jamespraise.xyz/",
+      "x_verified": true,
+      "headshot": "img/james-praise.jpg",
+      "headshot_source": "x:@realjaymes"
     },
     {
       "notion_id": "207a6d41-709c-80e3-9677-d0d2efaea2f8",
@@ -569,7 +775,10 @@
       "newsletter": "https://go9x.com/blog",
       "website": "https://go9x.com/",
       "notion_headshot": "",
-      "slug": "jan-meinecke"
+      "slug": "jan-meinecke",
+      "one_liner": "Trains business teams to use AI at work, from prompts to agents.",
+      "profile_source": "https://go9x.com/",
+      "company": "9x"
     },
     {
       "notion_id": "27aa6d41-709c-80f1-8404-ff4977ca32e0",
@@ -587,7 +796,13 @@
       "newsletter": "http://gtmengineerschool.substack.com",
       "website": "http://go.jaredwaxman.com",
       "notion_headshot": "",
-      "slug": "jared-waxman"
+      "slug": "jared-waxman",
+      "role": "Founder",
+      "company": "GTM Engineer School",
+      "one_liner": "Teaches go-to-market engineering; writes the GTM Engineer Pulse newsletter.",
+      "profile_source": "https://maven.com/gtme-school",
+      "headshot": "img/jared-waxman.jpg",
+      "headshot_source": "x:@jaredwaxman"
     },
     {
       "notion_id": "207a6d41-709c-8037-8d2f-cd9551f4b617",
@@ -602,7 +817,13 @@
       "newsletter": "https://demandjen.kit.com/f3ce4f0065",
       "website": "https://demandjen.com/",
       "notion_headshot": "",
-      "slug": "jen-allen-knuth"
+      "slug": "jen-allen-knuth",
+      "role": "Founder",
+      "company": "DemandJen",
+      "one_liner": "Teaches enterprise sales: C-suite prospecting, discovery and buying group consensus.",
+      "profile_source": "https://demandjen.com/",
+      "headshot": "img/jen-allen-knuth.jpg",
+      "headshot_source": "x:@ItsJenAllen"
     },
     {
       "notion_id": "207a6d41-709c-809c-8f04-ebdafa4bb4e9",
@@ -618,10 +839,14 @@
       ],
       "x": "https://x.com/johnrushx",
       "linkedin": "https://www.linkedin.com/in/johnrushx/",
-      "newsletter": "https://playbooks.hypergrowthpartners.com/",
+      "newsletter": "",
       "website": "https://johnrush.me/",
       "notion_headshot": "",
-      "slug": "john-rush"
+      "slug": "john-rush",
+      "role": "Founder",
+      "company": "MarsX",
+      "one_liner": "Builds and sells small AI software products; shares indie startup lessons.",
+      "profile_source": "https://getlatka.com/interviews/marsxdev-john-rush-2025"
     },
     {
       "notion_id": "207a6d41-709c-8052-ab50-c327bae13a3c",
@@ -639,7 +864,14 @@
       "newsletter": "https://www.gtmaipodcast.com/",
       "website": "https://www.gtmaiacademy.com/",
       "notion_headshot": "",
-      "slug": "jonathan-m-k"
+      "slug": "jonathan-m-k",
+      "role": "Founder",
+      "company": "GTM AI Academy",
+      "one_liner": "Teaches go-to-market teams to use AI; co-hosts the GTM AI Podcast.",
+      "profile_source": "https://resources.seismic.com/podcast/enablement/ai-and-enablement-unleashed-with-jonathan-kvarfordt-founder-of-gtm-ai-academy/",
+      "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/98b87123-004f-4484-9122-6a0c775c2e21_1022x1026.png",
+      "headshot": "img/jonathan-m-k.jpg",
+      "headshot_source": "headshot_url"
     },
     {
       "notion_id": "207a6d41-709c-80b2-85d3-e6c625ee4b08",
@@ -655,7 +887,12 @@
       "newsletter": "https://jwby.substack.com/",
       "website": "https://www.jwby.co/",
       "notion_headshot": "",
-      "slug": "jonathan-yagel"
+      "slug": "jonathan-yagel",
+      "role": "Writer, builder and advisor",
+      "one_liner": "Writes a one-minute newsletter on storytelling, prioritization and good questions.",
+      "profile_source": "https://www.jwby.co/",
+      "headshot": "img/jonathan-yagel.jpg",
+      "headshot_source": "x:@jwby"
     },
     {
       "notion_id": "207a6d41-709c-804d-99f9-ca0f6fe226ff",
@@ -671,7 +908,13 @@
       "newsletter": "https://www.julian.com/guide/startup/intro",
       "website": "https://www.julian.com/",
       "notion_headshot": "",
-      "slug": "julian-shapiro"
+      "slug": "julian-shapiro",
+      "role": "Founder",
+      "company": "Julian Capital",
+      "one_liner": "Writes guides on growth marketing and starting a startup; invests in deeptech.",
+      "profile_source": "https://www.julian.com/",
+      "headshot": "img/julian-shapiro.jpg",
+      "headshot_source": "x:@Julian"
     },
     {
       "notion_id": "207a6d41-709c-8054-95bf-d016f1d3eaef",
@@ -687,7 +930,13 @@
       "newsletter": "https://newsletter.aroundthebonfire.com/",
       "website": "https://newsletter.aroundthebonfire.com/",
       "notion_headshot": "",
-      "slug": "kevan-lee"
+      "slug": "kevan-lee",
+      "role": "Co-founder",
+      "company": "Bonfire",
+      "one_liner": "Writes about creative marketing and brand storytelling for startups.",
+      "profile_source": "https://newsletter.aroundthebonfire.com/about",
+      "headshot": "img/kevan-lee.jpg",
+      "headshot_source": "x:@kevanlee"
     },
     {
       "notion_id": "29ba6d41-709c-80ed-8a83-c0042719f42b",
@@ -704,7 +953,13 @@
       "newsletter": "http://demandcurve.com/newsletters",
       "website": "http://depopas.com",
       "notion_headshot": "https://www.depopas.com/wp-content/uploads/2023/10/New-Headshot-Cutoff-2.png",
-      "slug": "kevin-depopas"
+      "slug": "kevin-depopas",
+      "profile_source": "http://depopas.com",
+      "headshot": "img/kevin-depopas.jpg",
+      "headshot_source": "x:@kdepop",
+      "role": "Founder",
+      "company": "DEPOPAS",
+      "one_liner": "Runs a branding studio that builds brands for startups and small businesses in ten days."
     },
     {
       "notion_id": "207a6d41-709c-8011-aa88-db4622aadc04",
@@ -720,7 +975,12 @@
       "newsletter": "https://www.toption.org/blog",
       "website": "https://www.toption.org/",
       "notion_headshot": "",
-      "slug": "khushi-lunkad"
+      "slug": "khushi-lunkad",
+      "one_liner": "Growth marketer; first growth hire at a startup and first PLG hire at an AI company.",
+      "profile_source": "https://x.com/KhushiLunkad",
+      "headshot": "img/khushi-lunkad.jpg",
+      "headshot_source": "x:@KhushiLunkad",
+      "role": "Growth and product marketing operator"
     },
     {
       "notion_id": "207a6d41-709c-80e5-8397-da35c697f0b9",
@@ -739,7 +999,12 @@
       "newsletter": "https://www.kieranflanagan.io/",
       "website": "https://www.kieranflanagan.io/",
       "notion_headshot": "",
-      "slug": "kieran-flanagan"
+      "slug": "kieran-flanagan",
+      "company": "HubSpot",
+      "one_liner": "Writes about AI go-to-market and marketing; co-hosts Marketing Against the Grain.",
+      "profile_source": "https://saastock.com/blog/inside-hubspots-ai-gtm-strategy-with-kieran-flanagan",
+      "headshot": "img/kieran-flanagan.jpg",
+      "headshot_source": "x:@searchbrat"
     },
     {
       "notion_id": "207a6d41-709c-8062-b02d-d8590cb7059e",
@@ -755,7 +1020,15 @@
       "newsletter": "https://www.growthunhinged.com/",
       "website": "https://www.growthunhinged.com/",
       "notion_headshot": "",
-      "slug": "kyle-poyar"
+      "slug": "kyle-poyar",
+      "role": "Newsletter writer",
+      "company": "Growth Unhinged",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Writes about pricing, packaging, product-led growth and go-to-market for SaaS.",
+      "profile_source": "https://www.growthunhinged.com/about",
+      "headshot": "img/kyle-poyar.jpg",
+      "headshot_source": "x:@poyark"
     },
     {
       "notion_id": "207a6d41-709c-80b2-af9a-c4ad8e862070",
@@ -771,7 +1044,13 @@
       "newsletter": "https://www.marketingforgeeks.com/",
       "website": "https://www.marketingforgeeks.com/",
       "notion_headshot": "",
-      "slug": "lade-falobi"
+      "slug": "lade-falobi",
+      "role": "Marketing lead",
+      "company": "SocialKit",
+      "one_liner": "Writes Marketing for Geeks on marketing fundamentals for African tech marketers.",
+      "profile_source": "https://www.marketingforgeeks.com/about",
+      "headshot": "img/lade-falobi.jpg",
+      "headshot_source": "x:@ladefalobi"
     },
     {
       "notion_id": "207a6d41-709c-8011-a97c-c3418fe76056",
@@ -787,7 +1066,13 @@
       "newsletter": "https://www.leahtharin.com/",
       "website": "https://www.leahtharin.com/",
       "notion_headshot": "",
-      "slug": "leah-tharin"
+      "slug": "leah-tharin",
+      "role": "Growth executive and board member",
+      "company": "Leah's ProducTea",
+      "one_liner": "Writes about product-led growth, go-to-market and connecting product to revenue.",
+      "profile_source": "https://www.leahtharin.com/about",
+      "headshot": "img/leah-tharin.jpg",
+      "headshot_source": "x:@leahthar"
     },
     {
       "notion_id": "207a6d41-709c-80b7-838d-c14e1c5d2ae3",
@@ -802,7 +1087,13 @@
       "newsletter": "https://www.lennyrachitsky.com/",
       "website": "https://www.lennyrachitsky.com/",
       "notion_headshot": "",
-      "slug": "lenny-rachitsky"
+      "slug": "lenny-rachitsky",
+      "role": "Author and podcast host",
+      "company": "Lenny's Newsletter",
+      "one_liner": "Writes about product, growth and careers; hosts Lenny's Podcast.",
+      "profile_source": "https://www.lennyrachitsky.com/",
+      "headshot": "img/lenny-rachitsky.jpg",
+      "headshot_source": "x:@lennysan"
     },
     {
       "notion_id": "207a6d41-709c-806a-85d9-c21d0927c70b",
@@ -818,7 +1109,13 @@
       "newsletter": "https://knowledge.gtmstrategist.com/",
       "website": "https://gtmstrategist.com/",
       "notion_headshot": "",
-      "slug": "maja-voje"
+      "slug": "maja-voje",
+      "role": "Advisor, mentor and author",
+      "company": "GTM Strategist",
+      "one_liner": "Teaches go-to-market strategy; has advised 850+ teams.",
+      "profile_source": "https://gtmstrategist.com/",
+      "headshot": "img/maja-voje.jpg",
+      "headshot_source": "x:@majavoje"
     },
     {
       "notion_id": "207a6d41-709c-801a-9a3e-d4786550a730",
@@ -837,7 +1134,15 @@
       "newsletter": "https://newsletter.genesysgrowth.com/",
       "website": "https://genesysgrowth.com/about",
       "notion_headshot": "",
-      "slug": "matteo-tittarelli"
+      "slug": "matteo-tittarelli",
+      "role": "Founding marketer and consultant",
+      "company": "Genesys Growth",
+      "region": "Europe",
+      "country": "United Kingdom",
+      "one_liner": "Writes about product marketing, content and go-to-market engineering for B2B SaaS.",
+      "profile_source": "https://genesysgrowth.com/about",
+      "headshot": "img/matteo-tittarelli.jpg",
+      "headshot_source": "x:@matteo_titta"
     },
     {
       "notion_id": "296a6d41-709c-80ab-9c4c-f01eee3038f5",
@@ -854,7 +1159,13 @@
       "newsletter": "http://claygtmengineering.substack.com",
       "website": "http://michaelsaruggia.com",
       "notion_headshot": "https://assets.cdn.filesafe.space/EO1cjeXFECkx9ObfbboI/media/6851fbadf26c527e17b5d494.png",
-      "slug": "michael-saruggia"
+      "slug": "michael-saruggia",
+      "role": "GTM Engineer",
+      "company": "Michael GTM Consulting",
+      "one_liner": "Writes about Clay and go-to-market engineering; fractional consulting on AI operations.",
+      "profile_source": "http://michaelsaruggia.com",
+      "headshot": "img/michael-saruggia.jpg",
+      "headshot_source": "x:@michaelsaruggia"
     },
     {
       "notion_id": "207a6d41-709c-800a-b1ac-c3a89bb30dd0",
@@ -870,7 +1181,13 @@
       "newsletter": "",
       "website": "https://youtube.com/@nateherk",
       "notion_headshot": "",
-      "slug": "nate-herk"
+      "slug": "nate-herk",
+      "role": "Founder",
+      "company": "AI Automation Society",
+      "one_liner": "Teaches AI agents and n8n automation workflows through YouTube tutorials.",
+      "profile_source": "https://yespress.io/nate-herk",
+      "headshot": "img/nate-herk.jpg",
+      "headshot_source": "x:@nateherk"
     },
     {
       "notion_id": "207a6d41-709c-8010-8994-dc3e0ff4b378",
@@ -885,7 +1202,13 @@
       "newsletter": "https://neilpatel.com/blog/",
       "website": "https://neilpatel.com/",
       "notion_headshot": "",
-      "slug": "neil-patel"
+      "slug": "neil-patel",
+      "role": "Co-founder",
+      "company": "NP Digital",
+      "one_liner": "Writes about SEO and digital marketing; founder of Ubersuggest.",
+      "profile_source": "https://neilpatel.com/blog/neil-patel-agency/",
+      "headshot": "img/neil-patel.jpg",
+      "headshot_source": "x:@neilpatel"
     },
     {
       "notion_id": "207a6d41-709c-8014-892f-f0a002c97512",
@@ -901,7 +1224,13 @@
       "newsletter": "https://nicksaraev.com/",
       "website": "https://nicksaraev.com/",
       "notion_headshot": "",
-      "slug": "nick-saraev"
+      "slug": "nick-saraev",
+      "role": "AI automation writer and entrepreneur",
+      "one_liner": "Teaches AI automation with Make and n8n and how to scale an automation agency.",
+      "profile_source": "https://nicksaraev.com/",
+      "x_verified": true,
+      "headshot": "img/nick-saraev.jpg",
+      "headshot_source": "x:@nicksaraev"
     },
     {
       "notion_id": "207a6d41-709c-8090-9426-e114ac3aecb9",
@@ -917,7 +1246,11 @@
       "newsletter": "https://growthcasestudies.com/",
       "website": "https://growthcasestudies.com/",
       "notion_headshot": "",
-      "slug": "olabinjo-adeniran"
+      "slug": "olabinjo-adeniran",
+      "role": "Newsletter writer",
+      "company": "Growth Case Studies",
+      "one_liner": "Writes growth case studies on tech companies, product-led growth and retention.",
+      "profile_source": "https://growthcasestudies.com/"
     },
     {
       "notion_id": "207a6d41-709c-80c1-8229-c5ae7eb7a8b9",
@@ -932,7 +1265,15 @@
       "newsletter": "https://peaceitimi.substack.com/",
       "website": "https://www.peaceitimi.com/",
       "notion_headshot": "",
-      "slug": "peace-itimi"
+      "slug": "peace-itimi",
+      "role": "Founder",
+      "company": "Episode",
+      "region": "Europe",
+      "country": "United Kingdom",
+      "one_liner": "Writes about growth, go-to-market and the African startup ecosystem.",
+      "profile_source": "https://www.peaceitimi.com/",
+      "headshot": "img/peace-itimi.jpg",
+      "headshot_source": "x:@peaceitimi"
     },
     {
       "notion_id": "207a6d41-709c-8087-8da6-d42d688a60dd",
@@ -948,7 +1289,13 @@
       "newsletter": "http://creatoreconomy.so/",
       "website": "http://creatoreconomy.so/",
       "notion_headshot": "",
-      "slug": "peter-yang"
+      "slug": "peter-yang",
+      "role": "Newsletter writer",
+      "company": "Behind the Craft",
+      "one_liner": "Writes practical AI tutorials and interviews with product builders.",
+      "profile_source": "http://creatoreconomy.so/",
+      "headshot": "img/peter-yang.jpg",
+      "headshot_source": "x:@petergyang"
     },
     {
       "notion_id": "207a6d41-709c-8050-a9a1-ee6c090274d7",
@@ -964,7 +1311,13 @@
       "newsletter": "https://moxiegtm.substack.com/",
       "website": "https://moxiegtm.substack.com/",
       "notion_headshot": "",
-      "slug": "richard-purcell"
+      "slug": "richard-purcell",
+      "role": "Newsletter writer",
+      "company": "MoxieGTM",
+      "one_liner": "Writes about unconventional go-to-market experiments with step-by-step implementation.",
+      "profile_source": "https://moxiegtm.substack.com/about",
+      "headshot": "img/richard-purcell.jpg",
+      "headshot_source": "x:@moxiegtm"
     },
     {
       "notion_id": "207a6d41-709c-800d-abe6-e523de849a48",
@@ -980,7 +1333,11 @@
       "newsletter": "",
       "website": "https://youtube.com/@rileybrownai",
       "notion_headshot": "",
-      "slug": "riley-brown"
+      "slug": "riley-brown",
+      "role": "Co-founder",
+      "company": "Vibecode",
+      "one_liner": "Teaches AI and vibe coding through videos; hosts the A New Vibe podcast.",
+      "profile_source": "https://getlatka.com/companies/vibecode"
     },
     {
       "notion_id": "207a6d41-709c-80b9-86c1-e66509d99d4a",
@@ -995,7 +1352,11 @@
       "newsletter": "",
       "website": "https://www.fletchpmm.com/",
       "notion_headshot": "",
-      "slug": "robert-kaminski"
+      "slug": "robert-kaminski",
+      "role": "Co-founder",
+      "company": "Fletch PMM",
+      "one_liner": "Teaches B2B SaaS positioning and go-to-market for early-stage startups.",
+      "profile_source": "https://metacast.app/podcast/the-marchitect/BgB01XUP/s3-episode-6-stop-leading-with-benefits-fletch-pmm-s-robert-and-anthony-explain-why/yQ4vcVv2"
     },
     {
       "notion_id": "233a6d41-709c-8082-a1cf-d499516e789e",
@@ -1010,7 +1371,16 @@
       "newsletter": "https://ruben.substack.com/",
       "website": "https://ruben.substack.com/",
       "notion_headshot": "",
-      "slug": "ruben-hassid"
+      "slug": "ruben-hassid",
+      "role": "Newsletter writer",
+      "company": "How to AI",
+      "region": "Middle East",
+      "country": "Israel",
+      "one_liner": "Writes step-by-step guides on using AI tools without technical skills.",
+      "profile_source": "https://ruben.substack.com/about",
+      "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/4df84eb2-227f-435e-913c-4210fe339229_1203x1203.png",
+      "headshot": "img/ruben-hassid.jpg",
+      "headshot_source": "headshot_url"
     },
     {
       "notion_id": "296a6d41-709c-80a5-9c80-c124b9a0c1dd",
@@ -1027,7 +1397,9 @@
       "newsletter": "",
       "website": "",
       "notion_headshot": "",
-      "slug": "ryan-deforest"
+      "slug": "ryan-deforest",
+      "headshot": "img/ryan-deforest.jpg",
+      "headshot_source": "x:@ryan_d08"
     },
     {
       "notion_id": "207a6d41-709c-80db-bf99-e01946a640ce",
@@ -1046,7 +1418,15 @@
       "newsletter": "https://seths.blog/",
       "website": "https://www.sethgodin.com/",
       "notion_headshot": "",
-      "slug": "seth-godin"
+      "slug": "seth-godin",
+      "role": "Author and blogger",
+      "company": "Seth's Blog",
+      "region": "North America",
+      "country": "United States",
+      "one_liner": "Writes a daily blog and books on marketing, work and ideas.",
+      "profile_source": "https://seths.blog/",
+      "headshot": "img/seth-godin.jpg",
+      "headshot_source": "x:@thisissethsblog"
     },
     {
       "notion_id": "27da6d41-709c-8098-9553-d6a0423b3bab",
@@ -1063,7 +1443,15 @@
       "newsletter": "https://www.simoahava.com/newsletter/",
       "website": "https://www.simoahava.com",
       "notion_headshot": "https://www.simoahava.com/images/2014/02/simo.jpg",
-      "slug": "simo-ahava"
+      "slug": "simo-ahava",
+      "role": "Partner and co-founder",
+      "company": "8-bit-sheep",
+      "region": "Europe",
+      "country": "Finland",
+      "one_liner": "Writes about Google Tag Manager, Google Analytics and web analytics development.",
+      "profile_source": "https://www.simoahava.com/about-simo-ahava/",
+      "headshot": "img/simo-ahava.jpg",
+      "headshot_source": "x:@simoahava"
     },
     {
       "notion_id": "27ca6d41-709c-80bd-a794-e47aa8f183c6",
@@ -1081,23 +1469,13 @@
       "newsletter": "https://www.marketingideas.com",
       "website": "https://www.marketingideas.com",
       "notion_headshot": "https://substackcdn.com/image/fetch/w_112,h_112,c_fill,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fa0bfeccd-1ba4-4639-b5f8-0307eef18cb5_3280x3280.png",
-      "slug": "tom-orbach"
-    },
-    {
-      "notion_id": "207a6d41-709c-80e9-b850-f09c203972b9",
-      "created": "2025-06-03",
-      "last_edited": "2025-08-11",
-      "name": "Tom Orbach",
-      "domains": [
-        "Growth Marketing",
-        "Product Marketing"
-      ],
-      "x": "https://x.com/tomorbach",
-      "linkedin": "https://www.linkedin.com/in/tomorbach/",
-      "newsletter": "https://www.marketingideas.com/",
-      "website": "https://www.marketingideas.com/",
-      "notion_headshot": "",
-      "slug": "tom-orbach"
+      "slug": "tom-orbach",
+      "role": "Newsletter writer",
+      "company": "Marketing Ideas",
+      "one_liner": "Writes a newsletter of marketing ideas and examples.",
+      "profile_source": "https://www.marketingideas.com",
+      "headshot": "img/tom-orbach.jpg",
+      "headshot_source": "x:@tomorbach"
     },
     {
       "notion_id": "280a6d41-709c-80a3-8c66-c9e34680dd17",
@@ -1114,7 +1492,15 @@
       "newsletter": "http://productledstorytelling.substack.com",
       "website": "http://vec.studio",
       "notion_headshot": "",
-      "slug": "victor-eduoh"
+      "slug": "victor-eduoh",
+      "role": "Founder",
+      "company": "VEC",
+      "region": "Africa",
+      "country": "Nigeria",
+      "one_liner": "Teaches product-led storytelling for B2B SaaS content.",
+      "profile_source": "http://vec.studio",
+      "headshot": "img/victor-eduoh.jpg",
+      "headshot_source": "x:@v_eduoh"
     },
     {
       "notion_id": "207a6d41-709c-804c-8509-c35154b7eb71",
@@ -1129,7 +1515,13 @@
       "newsletter": "https://productled.com/newsletter",
       "website": "https://productled.com/wes-bush",
       "notion_headshot": "",
-      "slug": "wes-bush"
+      "slug": "wes-bush",
+      "role": "Founder",
+      "company": "ProductLed",
+      "one_liner": "Author of Product-Led Growth; teaches product-led growth to software companies.",
+      "profile_source": "https://productled.com/wes-bush",
+      "headshot": "img/wes-bush.jpg",
+      "headshot_source": "x:@wes_bush"
     },
     {
       "notion_id": "262a6d41-709c-80aa-b614-c5a579bc6351",
@@ -1146,7 +1538,13 @@
       "newsletter": "https://substack.com/@yashtek",
       "website": "https://knowyourgrowth.substack.com/",
       "notion_headshot": "",
-      "slug": "yash-tekriwal"
+      "slug": "yash-tekriwal",
+      "role": "Head of education",
+      "company": "Clay",
+      "one_liner": "Writes about go-to-market operations, technology and AI; co-writes Know Your Growth.",
+      "profile_source": "https://knowyourgrowth.substack.com/about",
+      "headshot": "img/yash-tekriwal.jpg",
+      "headshot_source": "x:@yash_tek"
     }
   ]
 }

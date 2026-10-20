@@ -1227,14 +1227,52 @@ html.lb-open,html.lb-open body{overflow:hidden}
 
       <section id="upcoming" class="section ev-section">
         <div class="container">
-          <form class="ev-filters" role="search" onsubmit="return false">
-            <label class="ev-field ev-search"><span>Search</span><input type="search" id="ev-q" placeholder="Event, organiser or city" autocomplete="off"></label>
-            <label class="ev-field"><span>Where</span><select id="ev-region"><option value="">Everywhere</option><option value="africa">Africa</option><option value="global">Outside Africa</option></select></label>
-            <label class="ev-field"><span>City</span><select id="ev-city"><option value="">All cities</option><option>Abuja</option><option>Austin</option><option>Boston</option><option>Cannes</option><option>Cape Town</option><option>Helsinki</option><option>Kigali</option><option>Lagos</option><option>Lisbon</option><option>Marrakech</option><option>Nairobi</option><option>Paris</option><option>San Mateo</option><option>Vancouver</option></select></label>
-            <label class="ev-field"><span>Type</span><select id="ev-type"><option value="">All types</option><option>Awards</option><option>Conference</option><option>Expo</option><option>Festival</option><option>Meetup</option><option>Summit</option></select></label>
-          </form>
-          <p class="ev-empty" hidden>No upcoming events match. Clear a filter to see more.</p>
-        <section class="ev-month" data-month="October 2026">
+          <div class="db-layout">
+          <aside class="db-side" aria-label="Search and filters">
+            <div class="db-side-head"><label class="db-flabel" for="db-q">Search</label><button type="button" class="db-clear" hidden>Clear all</button></div>
+            <input type="search" id="db-q" class="db-q" placeholder="Event, organiser or city" autocomplete="off">
+            <details class="db-fdetails">
+              <summary><span class="db-fsum">Filters</span><span class="db-factive" hidden></span><span class="db-ftoggle" aria-hidden="true"></span></summary>
+              <div class="db-fgroups">
+              <div class="db-fgroup" role="group" aria-label="Where">
+                <p class="db-flabel">Where</p>
+                <button type="button" class="db-fbtn is-active" data-dim="region" data-value="" aria-pressed="true">All <span class="db-fcount">(28)</span></button>
+                <button type="button" class="db-fbtn" data-dim="region" data-value="africa" aria-pressed="false">Africa <span class="db-fcount">(20)</span></button>
+                <button type="button" class="db-fbtn" data-dim="region" data-value="global" aria-pressed="false">Outside Africa <span class="db-fcount">(8)</span></button>
+              </div>
+              <div class="db-fgroup" role="group" aria-label="Type">
+                <p class="db-flabel">Type</p>
+                <button type="button" class="db-fbtn is-active" data-dim="type" data-value="" aria-pressed="true">All <span class="db-fcount">(28)</span></button>
+                <button type="button" class="db-fbtn" data-dim="type" data-value="Conference" aria-pressed="false">Conference <span class="db-fcount">(14)</span></button>
+                <button type="button" class="db-fbtn" data-dim="type" data-value="Summit" aria-pressed="false">Summit <span class="db-fcount">(5)</span></button>
+                <button type="button" class="db-fbtn" data-dim="type" data-value="Expo" aria-pressed="false">Expo <span class="db-fcount">(4)</span></button>
+                <button type="button" class="db-fbtn" data-dim="type" data-value="Festival" aria-pressed="false">Festival <span class="db-fcount">(4)</span></button>
+                <button type="button" class="db-fbtn" data-dim="type" data-value="Awards" aria-pressed="false">Awards <span class="db-fcount">(1)</span></button>
+              </div>
+              <div class="db-fgroup" role="group" aria-label="City">
+                <p class="db-flabel">City</p>
+                <button type="button" class="db-fbtn is-active" data-dim="city" data-value="" aria-pressed="true">All <span class="db-fcount">(28)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Lagos" aria-pressed="false">Lagos <span class="db-fcount">(13)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Cape_Town" aria-pressed="false">Cape Town <span class="db-fcount">(2)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Nairobi" aria-pressed="false">Nairobi <span class="db-fcount">(2)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Austin" aria-pressed="false">Austin <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Boston" aria-pressed="false">Boston <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Cannes" aria-pressed="false">Cannes <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Helsinki" aria-pressed="false">Helsinki <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Kigali" aria-pressed="false">Kigali <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Lisbon" aria-pressed="false">Lisbon <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Marrakech" aria-pressed="false">Marrakech <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Paris" aria-pressed="false">Paris <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="San_Mateo" aria-pressed="false">San Mateo <span class="db-fcount">(1)</span></button>
+                <button type="button" class="db-fbtn" data-dim="city" data-value="Vancouver" aria-pressed="false">Vancouver <span class="db-fcount">(1)</span></button>
+              </div>
+              </div>
+            </details>
+          </aside>
+            <div class="db-main">
+              <div class="db-countrow"><p class="db-count" data-noun="upcoming events" aria-live="polite">28 upcoming events</p><button type="button" class="db-clear db-clear-main" hidden>Clear filters</button></div>
+              <p class="db-empty" hidden>No upcoming events match your search. Try another word or clear the filters.</p>
+        <section class="ev-month" data-month="October 2026" data-fsec>
           <h2 class="ev-month-title">October 2026</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2026-10-29" data-region="africa" data-city="Lagos" data-type="Conference" data-text="moonshot by techcabal techcabal lagos nigeria">
@@ -1251,7 +1289,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="November 2026">
+        <section class="ev-month" data-month="November 2026" data-fsec>
           <h2 class="ev-month-title">November 2026</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2026-11-07" data-region="africa" data-city="" data-type="Conference" data-text="search africon search africon  kenya">
@@ -1302,7 +1340,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
               <div class="ev-links"><a class="ev-link" href="https://www.growthafricasummit.com/" target="_blank" rel="noopener">Official site</a><a class="ev-link" href="ics/growth-africa-summit.ics" download>Add to calendar</a></div>
             </div>
           </article>
-          <article class="ev-card" data-end="2026-11-19" data-region="africa" data-city="Cape Town" data-type="Conference" data-text="africa tech festival  cape town south africa">
+          <article class="ev-card" data-end="2026-11-19" data-region="africa" data-city="Cape_Town" data-type="Conference" data-text="africa tech festival  cape town south africa">
             <div class="ev-date"><span class="ev-day">17</span><span class="ev-mon">Nov</span></div>
             <div class="ev-body">
               <div class="ev-tags"><span class="ev-tag">Conference</span><span class="ev-tag">In person</span></div>
@@ -1376,7 +1414,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="December 2026">
+        <section class="ev-month" data-month="December 2026" data-fsec>
           <h2 class="ev-month-title">December 2026</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2026-12-03" data-region="africa" data-city="Lagos" data-type="Conference" data-text="art of technology lagos (aot lagos) eko innovation centre lagos nigeria">
@@ -1393,7 +1431,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="February 2027">
+        <section class="ev-month" data-month="February 2027" data-fsec>
           <h2 class="ev-month-title">February 2027</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2027-02-11" data-region="africa" data-city="Nairobi" data-type="Summit" data-text="africa tech summit nairobi africa tech summit nairobi kenya">
@@ -1434,7 +1472,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="March 2027">
+        <section class="ev-month" data-month="March 2027" data-fsec>
           <h2 class="ev-month-title">March 2027</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2027-03-21" data-region="global" data-city="Austin" data-type="Festival" data-text="sxsw sxsw austin united states">
@@ -1463,7 +1501,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="April 2027">
+        <section class="ev-month" data-month="April 2027" data-fsec>
           <h2 class="ev-month-title">April 2027</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2027-04-02" data-region="africa" data-city="Lagos" data-type="Expo" data-text="iot west africa + data center &amp; cloud expo africa  lagos nigeria">
@@ -1492,10 +1530,10 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="May 2027">
+        <section class="ev-month" data-month="May 2027" data-fsec>
           <h2 class="ev-month-title">May 2027</h2>
           <div class="ev-list">
-          <article class="ev-card" data-end="2027-05-12" data-region="global" data-city="San Mateo" data-type="Conference" data-text="saastr ai annual saastr san mateo united states">
+          <article class="ev-card" data-end="2027-05-12" data-region="global" data-city="San_Mateo" data-type="Conference" data-text="saastr ai annual saastr san mateo united states">
             <div class="ev-date"><span class="ev-day">11</span><span class="ev-mon">May</span></div>
             <div class="ev-body">
               <div class="ev-tags"><span class="ev-tag">Conference</span><span class="ev-tag">In person</span></div>
@@ -1533,7 +1571,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="June 2027">
+        <section class="ev-month" data-month="June 2027" data-fsec>
           <h2 class="ev-month-title">June 2027</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2027-06-19" data-region="global" data-city="Paris" data-type="Conference" data-text="vivatech vivatech paris france">
@@ -1574,7 +1612,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="September 2027">
+        <section class="ev-month" data-month="September 2027" data-fsec>
           <h2 class="ev-month-title">September 2027</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2027-09-10" data-region="global" data-city="Boston" data-type="Conference" data-text="unbound (formerly inbound) hubspot boston united states">
@@ -1591,7 +1629,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
-        <section class="ev-month" data-month="October 2027">
+        <section class="ev-month" data-month="October 2027" data-fsec>
           <h2 class="ev-month-title">October 2027</h2>
           <div class="ev-list">
           <article class="ev-card" data-end="2027-10-07" data-region="africa" data-city="Lagos" data-type="Expo" data-text="gitex nigeria gitex nigeria lagos nigeria">
@@ -1606,7 +1644,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
               <div class="ev-links"><a class="ev-link" href="https://www.gitexnigeria.ng/" target="_blank" rel="noopener">Official site</a><a class="ev-link" href="ics/gitex-nigeria.ics" download>Add to calendar</a></div>
             </div>
           </article>
-          <article class="ev-card" data-end="2027-10-07" data-region="africa" data-city="Cape Town" data-type="Conference" data-text="digimarcon africa digimarcon cape town south africa">
+          <article class="ev-card" data-end="2027-10-07" data-region="africa" data-city="Cape_Town" data-type="Conference" data-text="digimarcon africa digimarcon cape town south africa">
             <div class="ev-date"><span class="ev-day">6</span><span class="ev-mon">Oct</span></div>
             <div class="ev-body">
               <div class="ev-tags"><span class="ev-tag">Conference</span><span class="ev-tag">In person</span></div>
@@ -1620,6 +1658,8 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </article>
           </div>
         </section>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1854,12 +1894,9 @@ html.lb-open,html.lb-open body{overflow:hidden}
         .ev-section .container { max-width: var(--max-width); }
         .ev-head { max-width: 720px; margin: 0 0 var(--space-lg); }
         .ev-head p { color: var(--muted); }
-        .ev-filters { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: var(--space-sm); margin-bottom: var(--space-xl); }
-        .ev-field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 800; color: var(--ink); }
-        .ev-field input, .ev-field select { font: inherit; font-size: 15px; font-weight: 600; color: var(--ink); padding: 11px 14px; border: 2px solid var(--ink); border-radius: 14px; background: var(--white); box-shadow: var(--st-sm); }
         .ev-month { margin-bottom: var(--space-xl); }
         .ev-month-title { font-size: 24px; margin-bottom: var(--space-md); }
-        .ev-list { display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+        .ev-list { display: grid; gap: var(--space-lg); grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); }
         .ev-card { display: flex; flex-direction: column; gap: var(--space-sm); background: var(--white); border: 2px solid var(--ink); border-radius: 18px; padding: var(--space-md); box-shadow: var(--st); }
         .ev-mia { background: var(--gold-t); }
         .ev-date { display: inline-flex; align-self: flex-start; align-items: baseline; gap: 8px; background: var(--ink); color: var(--white); border-radius: 999px; padding: 6px 14px; }
@@ -1887,32 +1924,116 @@ html.lb-open,html.lb-open body{overflow:hidden}
         .ev-past details[open] .ev-past-toggle::before { content: "Hide past events"; } .ev-past details[open] .ev-past-toggle::after { content: "▴"; }
         .ev-past .ev-list { margin-top: var(--space-lg); }
         @media (max-width: 760px) {
-          .ev-filters { grid-template-columns: 1fr 1fr; }
-          .ev-search { grid-column: 1 / -1; }
           .ev-list { grid-template-columns: 1fr; }
+        }
+      </style>
+      <style>
+        .db-layout { display: grid; grid-template-columns: 270px minmax(0, 1fr); gap: var(--space-xl); align-items: start; }
+        .db-side { position: sticky; top: 96px; max-height: calc(100vh - 116px); overflow-y: auto; background: var(--white); border: 3px solid var(--ink); border-radius: 22px; box-shadow: var(--st); padding: 22px 14px 20px; }
+        .db-layout [hidden] { display: none !important; }
+        .db-side-head { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; margin: 0 0 10px; }
+        .db-side-head .db-flabel { margin: 0; padding: 0; }
+        .db-clear { font: inherit; font-size: 13px; font-weight: 800; color: var(--ink); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
+        .db-clear-main { font-size: 14px; }
+        .db-countrow { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin: 0 0 6px; }
+        .db-countrow .db-count { margin: 0; }
+        .db-q { margin: 0 0 22px; }
+        .db-q, .db-side-search input { font: inherit; font-size: 15px; font-weight: 600; color: var(--ink); width: 100%; min-width: 0; padding: 10px 12px; border: 2px solid var(--ink); border-radius: 12px; background: var(--white); box-sizing: border-box; }
+        .db-flabel { display: block; font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0 0 10px; padding: 0 12px; }
+        .db-side-search .db-flabel { padding: 0; }
+        .db-fgroup + .db-fgroup { margin-top: 28px; }
+        .db-fbtn { display: block; width: 100%; text-align: left; font: inherit; font-size: 15px; font-weight: 600; line-height: 1.35; color: var(--ink); background: none; border: 0; border-radius: 10px; padding: 7px 12px; margin: 0 0 2px; cursor: pointer; opacity: .85; }
+        .db-fbtn:hover { opacity: 1; background: var(--sb); }
+        .db-fbtn.is-active { opacity: 1; color: #fff; background: var(--ink); font-weight: 800; }
+        .db-fbtn:disabled { opacity: .35; cursor: default; background: none; }
+        .db-fcount { font-weight: 700; opacity: .7; }
+        .db-fdetails > summary { display: none; }
+        .db-main { min-width: 0; }
+        .db-count { font-weight: 800; margin: 0 0 6px; color: var(--ink); }
+        .db-empty { font-weight: 700; margin: 0 0 var(--space-lg); }
+        @media (max-width: 900px) {
+          .db-layout { grid-template-columns: 1fr; gap: var(--space-lg); }
+          .db-side { position: static; max-height: none; overflow: visible; padding: 18px; border-width: 2px; }
+          .db-q { margin-bottom: 14px; }
+          .db-fdetails > summary { display: flex; align-items: center; gap: 10px; cursor: pointer; list-style: none; }
+          .db-fdetails > summary::-webkit-details-marker { display: none; }
+          .db-fsum { font-weight: 800; color: var(--ink); }
+          .db-factive { font-size: 13px; font-weight: 800; padding: 2px 10px; border: 2px solid var(--ink); border-radius: 999px; background: var(--sb); }
+          .db-ftoggle { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-weight: 800; background: var(--gold); border: 2px solid var(--ink); border-radius: 999px; padding: 8px 16px; box-shadow: var(--st-sm); }
+          .db-ftoggle::before { content: "Show filters"; } .db-ftoggle::after { content: "▾"; }
+          .db-fdetails[open] .db-ftoggle::before { content: "Hide filters"; } .db-fdetails[open] .db-ftoggle::after { content: "▴"; }
+          .db-fdetails[open] .db-fgroups { margin-top: 18px; }
+          .db-flabel { padding: 0; }
+          .db-fbtn { margin-left: -12px; width: calc(100% + 24px); }
         }
       </style>
       <script>
         (function () {
+          // Filters in different lists combine (a card must match every list); one choice per list.
+          // Each count shows how many cards that choice would leave given the other choices and the
+          // search, and a choice that would leave none is disabled.
+          var root = document.querySelector(".db-layout");
+          if (!root) return;
+          var main = root.querySelector(".db-main"), q = root.querySelector(".db-q"),
+              cards = Array.prototype.slice.call(main.querySelectorAll("[data-text]")),
+              btns = Array.prototype.slice.call(root.querySelectorAll(".db-fbtn")),
+              count = main.querySelector(".db-count"), empty = main.querySelector(".db-empty"),
+              clears = root.querySelectorAll(".db-clear"), det = root.querySelector(".db-fdetails"),
+              active = root.querySelector(".db-factive"), sel = {};
           var today = new Date().toISOString().slice(0, 10);
-          var cards = document.querySelectorAll("#upcoming .ev-card");
-          cards.forEach(function (c) { if (c.dataset.end && c.dataset.end < today) c.dataset.past = "1"; });
-          var q = document.getElementById("ev-q"), r = document.getElementById("ev-region"),
-              ci = document.getElementById("ev-city"), ty = document.getElementById("ev-type");
+          cards = cards.filter(function (c) {
+            if (c.dataset.end && c.dataset.end < today) { c.hidden = true; return false; }
+            return true;
+          });
+          btns.forEach(function (b) { sel[b.dataset.dim] = ""; });
+          function has(c, dim, v) { return !v || (" " + (c.dataset[dim] || "") + " ").indexOf(" " + v + " ") > -1; }
+          function fits(c, text, skip) {
+            if (text && c.dataset.text.indexOf(text) < 0) return false;
+            for (var k in sel) if (k !== skip && !has(c, k, sel[k])) return false;
+            return true;
+          }
           function apply() {
             var text = q.value.trim().toLowerCase(), shown = 0;
-            cards.forEach(function (c) {
-              var ok = !c.dataset.past && (!text || c.dataset.text.indexOf(text) > -1) &&
-                (!r.value || c.dataset.region === r.value) && (!ci.value || c.dataset.city === ci.value) &&
-                (!ty.value || c.dataset.type === ty.value);
-              c.hidden = !ok; if (ok) shown++;
+            cards.forEach(function (c) { var ok = fits(c, text); c.hidden = !ok; if (ok) shown++; });
+            btns.forEach(function (b) {
+              var dim = b.dataset.dim, v = b.dataset.value, n = 0;
+              cards.forEach(function (c) { if (fits(c, text, dim) && has(c, dim, v)) n++; });
+              b.querySelector(".db-fcount").textContent = "(" + n + ")";
+              b.disabled = n === 0 && !b.classList.contains("is-active");
             });
-            document.querySelectorAll("#upcoming .ev-month").forEach(function (m) {
-              m.hidden = !m.querySelector(".ev-card:not([hidden])");
+            main.querySelectorAll("[data-fsec]").forEach(function (s) {
+              var n = s.querySelectorAll("[data-text]:not([hidden])").length, pill = s.querySelector(".db-sec-count");
+              s.hidden = !n; if (pill) pill.textContent = n;
             });
-            document.querySelector(".ev-empty").hidden = shown > 0;
+            var on = Object.keys(sel).filter(function (k) { return sel[k]; }).length;
+            if (count) count.textContent = shown === cards.length ? cards.length + " " + count.dataset.noun : "Showing " + shown + " of " + cards.length + " " + count.dataset.noun;
+            if (empty) empty.hidden = shown > 0;
+            if (active) { active.hidden = !on; active.textContent = on + " on"; }
+            clears.forEach(function (b) { b.hidden = !on && !text; });
           }
-          [q, r, ci, ty].forEach(function (el) { el.addEventListener("input", apply); });
+          function pick(dim, v) {
+            sel[dim] = v;
+            btns.forEach(function (x) {
+              if (x.dataset.dim !== dim) return;
+              var me = x.dataset.value === v;
+              x.classList.toggle("is-active", me); x.setAttribute("aria-pressed", me ? "true" : "false");
+            });
+          }
+          btns.forEach(function (b) {
+            b.addEventListener("click", function () {
+              pick(b.dataset.dim, b.dataset.value);
+              apply();
+              if (!wide.matches) det.open = false;
+            });
+          });
+          clears.forEach(function (b) {
+            b.addEventListener("click", function () { q.value = ""; Object.keys(sel).forEach(function (k) { pick(k, ""); }); apply(); });
+          });
+          q.addEventListener("input", apply);
+          var wide = window.matchMedia("(min-width: 901px)");
+          function fit() { if (wide.matches) det.open = true; }
+          fit();
+          if (wide.addEventListener) wide.addEventListener("change", fit); else wide.addListener(fit);
           apply();
         })();
       </script>

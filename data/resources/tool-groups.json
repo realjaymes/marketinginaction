@@ -1,5 +1,5 @@
 {
-  "note": "Maps the 98 Notion categories to the 11 groups the tools page filters by. A tool's first category sets its main group. Every category stays on the tool as a tag. A new category must be added here, or the resources check fails.",
+  "note": "Maps the Notion categories to the 11 groups the tools page filters by. A tool's main group comes from its first category that names a job (build.py skips generic ones such as AI Models), or from its own \"group\" field when that reads better. Every category stays on the tool as a tag. A new category must be added here, or the resources check fails.",
   "groups": {
     "AI models and assistants": ["AI Models", "Conversational AI", "Multimodal AI", "Foundational Models", "Open-Source AI", "AI Search Engines", "Conversational Search Engine", "AI Research Assistant", "Prompt Engineering", "AI Model Repositories", "AI Model Hosting & Deployment", "AI Model Training", "Synthetic Data Generation", "Platform-Integrated AI"],
     "AI agents and automation": ["AI Agents", "Workflow Automation", "AI Workflow Automation", "Sales Automation", "Creative Automation", "AI Email Management"],
