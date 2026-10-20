@@ -17,6 +17,7 @@ VAULT="$HOME/Documents/James Obsidian Vault"
 OUT="$WT/.intake-run"
 FEED="https://n8n.marketinginaction.xyz/webhook/mia-tools-feed-8329306c0b924fd18c40"
 CLAUDE_BIN="${CLAUDE_BIN:-$HOME/.local/bin/claude}"
+PY=/opt/homebrew/bin/python3   # build.py needs Python 3.12 or later; the system /usr/bin/python3 is 3.9
 EVENTS="" TOOLS=""
 while (( $# )); do
   case "$1" in
@@ -37,9 +38,9 @@ rm -rf "$OUT" && mkdir -p "$OUT"
 args=(collect --out "$OUT" --briefs "$VAULT/Areas/Work/Content/Briefs" --feed "$FEED")
 ev=("${(@f)$(paths "$EVENTS")}"); [[ -n "${ev[1]:-}" ]] && args+=(--events "${ev[@]}")
 tl=("${(@f)$(paths "$TOOLS")}"); [[ -n "${tl[1]:-}" ]] && args+=(--tools "${tl[@]}")
-/usr/bin/python3 tools/resources/intake.py "${args[@]}" > "$OUT/collect.log" 2>&1 || { echo "<p>⚠️ MIA resources intake failed at collect: $(tail -1 "$OUT/collect.log")</p>"; exit 1; }
+"$PY" tools/resources/intake.py "${args[@]}" > "$OUT/collect.log" 2>&1 || { echo "<p>⚠️ MIA resources intake failed at collect: $(tail -1 "$OUT/collect.log")</p>"; exit 1; }
 
-if [[ "$(/usr/bin/python3 -c "import json;print(len(json.load(open('$OUT/candidates.json'))))")" != "0" ]]; then
+if [[ "$("$PY" -c "import json;print(len(json.load(open('$OUT/candidates.json'))))")" != "0" ]]; then
   "$CLAUDE_BIN" -p "You research new tools for the public MIA Marketing & AI Tools directory. Nobody is in this conversation.
 Read $OUT/candidates.json (name, website, what_it_does, source) and $WT/data/resources/tool-groups.json (the allowed categories).
 For each candidate, open its official website with WebFetch (use WebSearch to find it if the link is missing or wrong) and write one row.
@@ -51,11 +52,11 @@ existing product, or has no official site, write {\"name\": ..., \"skip\": \"<on
     --model sonnet --effort low --allowedTools "Read Write WebFetch WebSearch" \
     --settings '{"enabledPlugins":{"telegram@claude-plugins-official":false,"imessage@claude-plugins-official":false}}' \
     < /dev/null > "$OUT/enrich.log" 2>&1
-  /usr/bin/python3 tools/resources/intake.py add "$OUT/enriched.json" --out "$OUT" >> "$OUT/collect.log" 2>&1
+  "$PY" tools/resources/intake.py add "$OUT/enriched.json" --out "$OUT" >> "$OUT/collect.log" 2>&1
 fi
 
-/usr/bin/python3 tools/resources/build.py --write >/dev/null 2>&1
-if ! /usr/bin/python3 tools/resources/build.py --check > "$OUT/check.log" 2>&1; then
+"$PY" tools/resources/build.py --write >/dev/null 2>&1
+if ! "$PY" tools/resources/build.py --check > "$OUT/check.log" 2>&1; then
   echo "<p>⚠️ MIA resources intake: the rebuilt pages failed the check, so nothing was pushed. $(tail -2 "$OUT/check.log")</p>"
   exit 1
 fi
