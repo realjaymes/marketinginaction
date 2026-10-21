@@ -1,7 +1,7 @@
 {
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
-  "updated": "2026-10-20",
+  "updated": "2026-10-21",
   "count": 68,
   "items": [
     {
@@ -25,7 +25,13 @@
       "one_liner": "Writes the FishmanAF newsletter on growth and product; advises companies.",
       "profile_source": "https://www.reforge.com/profiles/adam-fishman",
       "headshot": "img/adam-fishman.jpg",
-      "headshot_source": "x:@fishmanaf"
+      "headshot_source": "x:@fishmanaf",
+      "feed_url": "https://www.fishmanafnewsletter.com/feed",
+      "latest_post": {
+        "title": "AI Transformation Is More Than You Think",
+        "url": "https://www.fishmanafnewsletter.com/p/ai-transformation-is-more-than-you-think-building-cultural-momentum-and-culture-change",
+        "date": "2026-09-23"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80e5-9419-ddd4e4dce86b",
@@ -46,7 +52,13 @@
       "one_liner": "Writes about scaling companies in emerging markets, growth, process and culture.",
       "profile_source": "https://adia.substack.com/about",
       "headshot": "img/adia-sowho.jpg",
-      "headshot_source": "x:@adiaspeaks"
+      "headshot_source": "x:@adiaspeaks",
+      "feed_url": "https://adia.substack.com/feed",
+      "latest_post": {
+        "title": "The Reminder Is the Standard",
+        "url": "https://adia.substack.com/p/the-reminder-is-the-standard",
+        "date": "2026-09-10"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80bc-9793-ec5df2dc5142",
@@ -68,7 +80,13 @@
       "one_liner": "Writes about go-to-market for B2B SaaS and AI companies growing from zero to 1M euros ARR.",
       "profile_source": "https://www.mrrunlocked.com/",
       "headshot": "img/alexander-estner.jpg",
-      "headshot_source": "x:@alexanderestner"
+      "headshot_source": "x:@alexanderestner",
+      "feed_url": "https://www.mrrunlocked.com/feed",
+      "latest_post": {
+        "title": "The 2 GTM AI Agents for Founder-Led Teams",
+        "url": "https://www.mrrunlocked.com/p/2-gtm-ai-agents-for-founder-led-sales",
+        "date": "2026-10-18"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80fd-8075-d08ee849ad34",
@@ -89,7 +107,13 @@
       "one_liner": "Teaches full-funnel B2B marketing and account-based marketing.",
       "profile_source": "https://getlatka.com/companies/fullfunnel/interviews/fullfunnel-andrei-zinkevich-2022",
       "headshot": "img/andrei-zinkevich.jpg",
-      "headshot_source": "x:@azinkevich"
+      "headshot_source": "x:@azinkevich",
+      "feed_url": "https://fullfunnel.substack.com/feed",
+      "latest_post": {
+        "title": "🕵🏻‍♂️ How to plan an ABM program from your account journeys",
+        "url": "https://fullfunnel.substack.com/p/how-to-plan-an-abm-program-from-your",
+        "date": "2026-10-16"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80af-96cb-e3b635e0ff6d",
@@ -113,7 +137,13 @@
       "one_liner": "Writes about startup growth, network effects and consumer products.",
       "profile_source": "https://andrewchen.com/",
       "headshot": "img/andrew-chen.jpg",
-      "headshot_source": "x:@andrewchen"
+      "headshot_source": "x:@andrewchen",
+      "feed_url": "https://andrewchen.substack.com/feed",
+      "latest_post": {
+        "title": "Will agents have network effects?",
+        "url": "https://andrewchen.substack.com/p/will-agents-have-network-effects",
+        "date": "2026-10-06"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8050-9156-f3c76db650c0",
@@ -200,7 +230,13 @@
       "profile_source": "https://blessingabeng.com/",
       "headshot": "img/blessing-abeng.jpg",
       "headshot_source": "x:@blessingabeng_",
-      "role": "Brand strategist"
+      "role": "Brand strategist",
+      "feed_url": "https://blessingabeng.substack.com/feed",
+      "latest_post": {
+        "title": "my imperfect sabbatical",
+        "url": "https://blessingabeng.substack.com/p/my-imperfect-sabbatical",
+        "date": "2025-04-10"
+      }
     },
     {
       "notion_id": "282a6d41-709c-8027-bf4a-d40218500207",
@@ -223,7 +259,13 @@
       "profile_source": "https://mainstack.me/bolajianifowose",
       "headshot": "img/bolaji-anifowose.jpg",
       "headshot_source": "x:@itsmoveek",
-      "role": "Product and growth marketing manager"
+      "role": "Product and growth marketing manager",
+      "feed_url": "https://medium.com/feed/@bolajianifowose",
+      "latest_post": {
+        "title": "A guide to a successful product launch.",
+        "url": "https://medium.com/@bolajianifowose/a-guide-to-a-successful-product-launch-2916e61f6a82?source=rss-ec914f72a048------2",
+        "date": "2022-12-08"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8011-ac8c-ef174544a852",
@@ -247,7 +289,13 @@
       "one_liner": "Writes about product, growth and AI strategy; co-hosts Unsolicited Feedback.",
       "profile_source": "https://brianbalfour.com/",
       "headshot": "img/brian-balfour.jpg",
-      "headshot_source": "x:@bbalfour"
+      "headshot_source": "x:@bbalfour",
+      "feed_url": "https://blog.brianbalfour.com/feed",
+      "latest_post": {
+        "title": "AI Growth 📈",
+        "url": "https://blog.brianbalfour.com/p/ai-growth-course",
+        "date": "2025-10-02"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80e2-bcc0-fa626d068d6d",
@@ -273,7 +321,13 @@
       "one_liner": "Writes about scaling companies, growth and product.",
       "profile_source": "https://podcastrex.com/shows/supra-insider/94-how-ai-is-enabling-top-operators-to-open-source-their-expertise-casey-winters-co-founder-ceo-at-superme-ex-eventbrite-pinterest",
       "headshot": "img/casey-winters.jpg",
-      "headshot_source": "x:@onecaseman"
+      "headshot_source": "x:@onecaseman",
+      "feed_url": "https://www.caseyaccidental.com/feed",
+      "latest_post": {
+        "title": "How PM Work Is Changing in the AI Era",
+        "url": "https://www.caseyaccidental.com/p/how-pm-work-is-changing-in-the-ai",
+        "date": "2026-10-15"
+      }
     },
     {
       "notion_id": "27da6d41-709c-8049-aa4b-d8b2b6dcb37c",
@@ -297,7 +351,13 @@
       "one_liner": "Teaches marketing measurement and connecting marketing activity to business results.",
       "profile_source": "https://measureu.com/about/",
       "headshot": "img/chris-mercer.jpg",
-      "headshot_source": "x:@mercertweets"
+      "headshot_source": "x:@mercertweets",
+      "feed_url": "https://measureu.com/rss.xml",
+      "latest_post": {
+        "title": "6 Data Analytics Hiring Mistakes That Keep Your Agency Margins Low",
+        "url": "https://measureu.com/analytics-hiring-mistakes/",
+        "date": "2026-10-08"
+      }
     },
     {
       "notion_id": "247a6d41-709c-8059-b00d-eeebfd6172c4",
@@ -341,7 +401,13 @@
       "one_liner": "Writes about B2B SaaS marketing, conversion copywriting and AI marketing.",
       "profile_source": "https://www.corey.co/",
       "headshot": "img/corey-haines.jpg",
-      "headshot_source": "x:@coreyhainesco"
+      "headshot_source": "x:@coreyhainesco",
+      "feed_url": "https://www.corey.co/feed.xml",
+      "latest_post": {
+        "title": "Couples Therapy for Coworkers",
+        "url": "https://corey.co/blog/couples-therapy-for-coworkers",
+        "date": "2026-08-07"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80c2-9f66-cc93ab8f765d",
@@ -366,7 +432,13 @@
       "one_liner": "Writes about startup growth, product-led growth, retention and financial modeling.",
       "profile_source": "https://www.craigsnewsletter.com/about",
       "headshot": "img/craig-zingerline.jpg",
-      "headshot_source": "x:@craigzingerline"
+      "headshot_source": "x:@craigzingerline",
+      "feed_url": "https://www.craigsnewsletter.com/feed",
+      "latest_post": {
+        "title": "5 key flows you need for amazing lifecycle marketing",
+        "url": "https://www.craigsnewsletter.com/p/5-key-flows-you-need-for-amazing",
+        "date": "2025-10-30"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80d4-82ea-dc7b2f2fc4e5",
@@ -390,7 +462,13 @@
       "one_liner": "Writes essays on growth, marketplaces and strategy.",
       "profile_source": "https://news.faire.com/?p=966",
       "headshot": "img/dan-hockenmaier.jpg",
-      "headshot_source": "x:@danhockenmaier"
+      "headshot_source": "x:@danhockenmaier",
+      "feed_url": "https://www.danhock.co/feed",
+      "latest_post": {
+        "title": "How scared should Amazon be of agents?",
+        "url": "https://www.danhock.co/p/how-scared-should-amazon-be-of-agents",
+        "date": "2026-10-20"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80f0-ab75-c93570020ea3",
@@ -414,7 +492,13 @@
       "one_liner": "Builds B2B marketing media on LinkedIn; hosts The Marketing Millennials podcast and newsletter.",
       "profile_source": "https://inbound.com/speakers/daniel-murray",
       "headshot": "img/daniel-murray.jpg",
-      "headshot_source": "x:@dmurr68"
+      "headshot_source": "x:@dmurr68",
+      "feed_url": "https://themarketingmillennials.com/feed/",
+      "latest_post": {
+        "title": "Are you running this Marketing channel?",
+        "url": "https://themarketingmillennials.com/articles/2026-10-14/are-you-running-this-marketing-channel/",
+        "date": "2026-10-14"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80d8-9357-efb3148c5dd8",
@@ -434,7 +518,13 @@
       "role": "Newsletter writer",
       "company": "In case you missed it",
       "one_liner": "Curates a weekly list of advertising and marketing picks.",
-      "profile_source": "https://domenicoloperfido.substack.com/about"
+      "profile_source": "https://domenicoloperfido.substack.com/about",
+      "feed_url": "https://domenicoloperfido.substack.com/feed",
+      "latest_post": {
+        "title": "Should I Stay or Should I Go?",
+        "url": "https://domenicoloperfido.substack.com/p/should-i-stay-or-should-i-go",
+        "date": "2026-10-18"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80ba-8f2b-ed56562bbede",
@@ -456,7 +546,13 @@
       "headshot": "img/elena-madrigal.jpg",
       "headshot_source": "headshot_url",
       "role": "Writer",
-      "company": "Do Epic Sht"
+      "company": "Do Epic Sht",
+      "feed_url": "https://doepicsht.substack.com/feed",
+      "latest_post": {
+        "title": "Sales Doesn't Want Your Messaging Framework Either",
+        "url": "https://doepicsht.substack.com/p/sales-doesnt-want-your-messaging",
+        "date": "2026-10-18"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80ae-810f-c18c480f20c0",
@@ -480,7 +576,13 @@
       "one_liner": "Writes about growth, product-led growth and AI products.",
       "profile_source": "https://crunchbase.com/person/elena-verna",
       "headshot": "img/elena-verna.jpg",
-      "headshot_source": "x:@elenaverna"
+      "headshot_source": "x:@elenaverna",
+      "feed_url": "https://www.elenaverna.com/feed",
+      "latest_post": {
+        "title": "What on earth is going on with AI pricing and packaging?",
+        "url": "https://www.elenaverna.com/p/what-on-earth-is-going-on-with-ai",
+        "date": "2026-10-16"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8062-a3e2-e6e6fb93caf1",
@@ -502,7 +604,13 @@
       "one_liner": "Writes about B2B startup marketing and how to build marketing teams.",
       "profile_source": "https://newsletter.mkt1.co/about",
       "headshot": "img/emily-kramer.jpg",
-      "headshot_source": "x:@emilykramer"
+      "headshot_source": "x:@emilykramer",
+      "feed_url": "https://newsletter.mkt1.co/feed",
+      "latest_post": {
+        "title": "I analyzed 1,100+ marketing job posts. They’re stuck in 2023.",
+        "url": "https://newsletter.mkt1.co/p/marketing-job-posts",
+        "date": "2026-10-19"
+      }
     },
     {
       "notion_id": "27ba6d41-709c-8018-9b68-d34d4c0cdecf",
@@ -616,7 +724,13 @@
       "one_liner": "Writes about content strategy and product-led content; runs the contentfolks newsletter.",
       "profile_source": "https://contentfolks.com/",
       "headshot": "img/fio-dossetto.jpg",
-      "headshot_source": "x:@content101"
+      "headshot_source": "x:@content101",
+      "feed_url": "https://contentfolks.substack.com/feed",
+      "latest_post": {
+        "title": "cf #108: the underrated power of product comparisons",
+        "url": "https://contentfolks.substack.com/p/b2b-product-comparisons",
+        "date": "2026-09-30"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80a2-8d45-ffe105448e0e",
@@ -663,7 +777,13 @@
       "one_liner": "Writes and hosts a podcast on startup ideas and community-led internet businesses.",
       "profile_source": "https://www.gregisenberg.com/",
       "headshot": "img/greg-isenberg.jpg",
-      "headshot_source": "x:@gregisenberg"
+      "headshot_source": "x:@gregisenberg",
+      "feed_url": "https://latecheckout.substack.com/feed",
+      "latest_post": {
+        "title": "The Guide to Faceless Brands",
+        "url": "https://latecheckout.substack.com/p/the-guide-to-faceless-brands",
+        "date": "2023-10-22"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8085-9f7a-d4598bc5855b",
@@ -688,7 +808,13 @@
       "one_liner": "Writes about B2B growth playbooks; former growth lead at Segment and Drift.",
       "profile_source": "https://www.hypergrowthpartners.com/",
       "headshot": "img/guillaume-cabane.jpg",
-      "headshot_source": "x:@guillaumecabane"
+      "headshot_source": "x:@guillaumecabane",
+      "feed_url": "https://playbooks.hypergrowthpartners.com/feed",
+      "latest_post": {
+        "title": "Your Website Needs an Agent-First Surface",
+        "url": "https://playbooks.hypergrowthpartners.com/p/your-website-needs-an-agent-first",
+        "date": "2026-05-12"
+      }
     },
     {
       "notion_id": "207a6d41-709c-807e-acfb-de8c834671b4",
@@ -710,7 +836,13 @@
       "headshot": "img/guillermo-flor.jpg",
       "headshot_source": "x:@guilleflorvs",
       "role": "Investor and writer",
-      "company": "Product Market Fit"
+      "company": "Product Market Fit",
+      "feed_url": "https://www.productmarketfit.tech/feed",
+      "latest_post": {
+        "title": "We’re launching GR Angel: we invest in founders and put them in front of millions",
+        "url": "https://www.productmarketfit.tech/p/were-launching-gr-angel-we-invest",
+        "date": "2026-10-20"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8052-a9ef-cd1da1158d1e",
@@ -732,7 +864,13 @@
       "profile_source": "https://www.buildingmomentum.io/",
       "x_verified": true,
       "headshot": "img/james-doman-pipe.jpg",
-      "headshot_source": "x:@JDomanPipe"
+      "headshot_source": "x:@JDomanPipe",
+      "feed_url": "https://buildingmomentum.io/feed/",
+      "latest_post": {
+        "title": "The stale story problem",
+        "url": "https://buildingmomentum.io/the-stale-story-problem/",
+        "date": "2026-04-23"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8064-8876-ed53263183b8",
@@ -757,7 +895,13 @@
       "profile_source": "https://jamespraise.xyz/",
       "x_verified": true,
       "headshot": "img/james-praise.jpg",
-      "headshot_source": "x:@realjaymes"
+      "headshot_source": "x:@realjaymes",
+      "feed_url": "https://newsletter.marketinginaction.xyz/feed",
+      "latest_post": {
+        "title": "#26: Anne Alao—From Urban Planning to Product Marketing",
+        "url": "https://newsletter.marketinginaction.xyz/p/anne-alao-t-shaped-marketer",
+        "date": "2026-10-14"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80e3-9677-d0d2efaea2f8",
@@ -802,7 +946,13 @@
       "one_liner": "Teaches go-to-market engineering; writes the GTM Engineer Pulse newsletter.",
       "profile_source": "https://maven.com/gtme-school",
       "headshot": "img/jared-waxman.jpg",
-      "headshot_source": "x:@jaredwaxman"
+      "headshot_source": "x:@jaredwaxman",
+      "feed_url": "https://gtmengineerschool.substack.com/feed",
+      "latest_post": {
+        "title": "The GTM Engineer Pulse | #45",
+        "url": "https://gtmengineerschool.substack.com/p/the-gtm-engineer-pulse-45",
+        "date": "2026-10-14"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8037-8d2f-cd9551f4b617",
@@ -823,7 +973,8 @@
       "one_liner": "Teaches enterprise sales: C-suite prospecting, discovery and buying group consensus.",
       "profile_source": "https://demandjen.com/",
       "headshot": "img/jen-allen-knuth.jpg",
-      "headshot_source": "x:@ItsJenAllen"
+      "headshot_source": "x:@ItsJenAllen",
+      "feed_url": "https://demandjen.com/?feed=rss2"
     },
     {
       "notion_id": "207a6d41-709c-809c-8f04-ebdafa4bb4e9",
@@ -871,7 +1022,13 @@
       "profile_source": "https://resources.seismic.com/podcast/enablement/ai-and-enablement-unleashed-with-jonathan-kvarfordt-founder-of-gtm-ai-academy/",
       "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/98b87123-004f-4484-9122-6a0c775c2e21_1022x1026.png",
       "headshot": "img/jonathan-m-k.jpg",
-      "headshot_source": "headshot_url"
+      "headshot_source": "headshot_url",
+      "feed_url": "https://www.gtmaipodcast.com/feed",
+      "latest_post": {
+        "title": "Favor? Vote for Podcast Host for iHeartradio",
+        "url": "https://www.gtmaipodcast.com/p/favor-vote-for-podcast-host-for-iheartradio",
+        "date": "2026-10-08"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80b2-85d3-e6c625ee4b08",
@@ -892,7 +1049,13 @@
       "one_liner": "Writes a one-minute newsletter on storytelling, prioritization and good questions.",
       "profile_source": "https://www.jwby.co/",
       "headshot": "img/jonathan-yagel.jpg",
-      "headshot_source": "x:@jwby"
+      "headshot_source": "x:@jwby",
+      "feed_url": "https://jwby.substack.com/feed",
+      "latest_post": {
+        "title": "1, #205 - You are what you... read?",
+        "url": "https://jwby.substack.com/p/1-205-you-are-what-you-read",
+        "date": "2026-10-15"
+      }
     },
     {
       "notion_id": "207a6d41-709c-804d-99f9-ca0f6fe226ff",
@@ -936,7 +1099,13 @@
       "one_liner": "Writes about creative marketing and brand storytelling for startups.",
       "profile_source": "https://newsletter.aroundthebonfire.com/about",
       "headshot": "img/kevan-lee.jpg",
-      "headshot_source": "x:@kevanlee"
+      "headshot_source": "x:@kevanlee",
+      "feed_url": "https://newsletter.aroundthebonfire.com/feed",
+      "latest_post": {
+        "title": "What do we owe our dreams?",
+        "url": "https://newsletter.aroundthebonfire.com/p/what-do-we-owe-our-dreams",
+        "date": "2026-10-19"
+      }
     },
     {
       "notion_id": "29ba6d41-709c-80ed-8a83-c0042719f42b",
@@ -980,7 +1149,13 @@
       "profile_source": "https://x.com/KhushiLunkad",
       "headshot": "img/khushi-lunkad.jpg",
       "headshot_source": "x:@KhushiLunkad",
-      "role": "Growth and product marketing operator"
+      "role": "Growth and product marketing operator",
+      "feed_url": "https://www.toption.org/blog-feed.xml",
+      "latest_post": {
+        "title": "Figuring out my relationship with AI",
+        "url": "https://www.toption.org/post/figuring-out-my-relationship-with-ai",
+        "date": "2026-06-26"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80e5-8397-da35c697f0b9",
@@ -1004,7 +1179,13 @@
       "one_liner": "Writes about AI go-to-market and marketing; co-hosts Marketing Against the Grain.",
       "profile_source": "https://saastock.com/blog/inside-hubspots-ai-gtm-strategy-with-kieran-flanagan",
       "headshot": "img/kieran-flanagan.jpg",
-      "headshot_source": "x:@searchbrat"
+      "headshot_source": "x:@searchbrat",
+      "feed_url": "https://www.kieranflanagan.io/feed",
+      "latest_post": {
+        "title": "Your next marketing hire should probably surprise you",
+        "url": "https://www.kieranflanagan.io/p/your-next-marketing-hire-should-probably",
+        "date": "2026-10-16"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8062-b02d-d8590cb7059e",
@@ -1050,7 +1231,13 @@
       "one_liner": "Writes Marketing for Geeks on marketing fundamentals for African tech marketers.",
       "profile_source": "https://www.marketingforgeeks.com/about",
       "headshot": "img/lade-falobi.jpg",
-      "headshot_source": "x:@ladefalobi"
+      "headshot_source": "x:@ladefalobi",
+      "feed_url": "https://www.marketingforgeeks.com/feed",
+      "latest_post": {
+        "title": "Every Citizen Go Collect: Lessons on Virality From Chicken Republic",
+        "url": "https://www.marketingforgeeks.com/p/every-citizen-go-collect-lessons",
+        "date": "2025-10-10"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8011-a97c-c3418fe76056",
@@ -1072,7 +1259,13 @@
       "one_liner": "Writes about product-led growth, go-to-market and connecting product to revenue.",
       "profile_source": "https://www.leahtharin.com/about",
       "headshot": "img/leah-tharin.jpg",
-      "headshot_source": "x:@leahthar"
+      "headshot_source": "x:@leahthar",
+      "feed_url": "https://www.leahtharin.com/feed",
+      "latest_post": {
+        "title": "You're doing \"Activation\" wrong",
+        "url": "https://www.leahtharin.com/p/youre-doing-activation-wrong",
+        "date": "2026-07-19"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80b7-838d-c14e1c5d2ae3",
@@ -1115,7 +1308,13 @@
       "one_liner": "Teaches go-to-market strategy; has advised 850+ teams.",
       "profile_source": "https://gtmstrategist.com/",
       "headshot": "img/maja-voje.jpg",
-      "headshot_source": "x:@majavoje"
+      "headshot_source": "x:@majavoje",
+      "feed_url": "https://knowledge.gtmstrategist.com/feed",
+      "latest_post": {
+        "title": "Hands On: DIY Guide to Animated LinkedIn Infographics",
+        "url": "https://knowledge.gtmstrategist.com/p/diy-guide-animated-linkedin-infographics-claude-code",
+        "date": "2026-10-16"
+      }
     },
     {
       "notion_id": "207a6d41-709c-801a-9a3e-d4786550a730",
@@ -1142,7 +1341,13 @@
       "one_liner": "Writes about product marketing, content and go-to-market engineering for B2B SaaS.",
       "profile_source": "https://genesysgrowth.com/about",
       "headshot": "img/matteo-tittarelli.jpg",
-      "headshot_source": "x:@matteo_titta"
+      "headshot_source": "x:@matteo_titta",
+      "feed_url": "https://newsletter.genesysgrowth.com/feed",
+      "latest_post": {
+        "title": "The Context System Nobody Tells You to Build",
+        "url": "https://newsletter.genesysgrowth.com/p/the-context-system-nobody-tells-you",
+        "date": "2026-08-19"
+      }
     },
     {
       "notion_id": "296a6d41-709c-80ab-9c4c-f01eee3038f5",
@@ -1165,7 +1370,13 @@
       "one_liner": "Writes about Clay and go-to-market engineering; fractional consulting on AI operations.",
       "profile_source": "http://michaelsaruggia.com",
       "headshot": "img/michael-saruggia.jpg",
-      "headshot_source": "x:@michaelsaruggia"
+      "headshot_source": "x:@michaelsaruggia",
+      "feed_url": "https://claygtmengineering.substack.com/feed",
+      "latest_post": {
+        "title": "How to use Clay & AI for Segmentation",
+        "url": "https://claygtmengineering.substack.com/p/how-to-use-clay-and-ai-for-segmentation",
+        "date": "2024-10-16"
+      }
     },
     {
       "notion_id": "207a6d41-709c-800a-b1ac-c3a89bb30dd0",
@@ -1208,7 +1419,13 @@
       "one_liner": "Writes about SEO and digital marketing; founder of Ubersuggest.",
       "profile_source": "https://neilpatel.com/blog/neil-patel-agency/",
       "headshot": "img/neil-patel.jpg",
-      "headshot_source": "x:@neilpatel"
+      "headshot_source": "x:@neilpatel",
+      "feed_url": "https://neilpatel.com/feed/",
+      "latest_post": {
+        "title": "SEO Templates, Guides and Checklists to Streamline Your Strategy",
+        "url": "https://neilpatel.com/blog/seo-templates/",
+        "date": "2026-10-19"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8014-892f-f0a002c97512",
@@ -1230,7 +1447,13 @@
       "profile_source": "https://nicksaraev.com/",
       "x_verified": true,
       "headshot": "img/nick-saraev.jpg",
-      "headshot_source": "x:@nicksaraev"
+      "headshot_source": "x:@nicksaraev",
+      "feed_url": "https://nicksaraev.com/rss/",
+      "latest_post": {
+        "title": "The next leg",
+        "url": "https://nicksaraev.com/the-next-leg/",
+        "date": "2026-03-29"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8090-9426-e114ac3aecb9",
@@ -1273,7 +1496,13 @@
       "one_liner": "Writes about growth, go-to-market and the African startup ecosystem.",
       "profile_source": "https://www.peaceitimi.com/",
       "headshot": "img/peace-itimi.jpg",
-      "headshot_source": "x:@peaceitimi"
+      "headshot_source": "x:@peaceitimi",
+      "feed_url": "https://peaceitimi.substack.com/feed",
+      "latest_post": {
+        "title": "Starting",
+        "url": "https://peaceitimi.substack.com/p/starting",
+        "date": "2026-01-27"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8087-8da6-d42d688a60dd",
@@ -1295,7 +1524,13 @@
       "one_liner": "Writes practical AI tutorials and interviews with product builders.",
       "profile_source": "http://creatoreconomy.so/",
       "headshot": "img/peter-yang.jpg",
-      "headshot_source": "x:@petergyang"
+      "headshot_source": "x:@petergyang",
+      "feed_url": "https://creatoreconomy.so/feed",
+      "latest_post": {
+        "title": "We Built an AI CFO to Help You Grow Your Net Worth | Anthony Pompliano",
+        "url": "https://creatoreconomy.so/p/we-built-an-ai-cfo-to-help-you-grow-net-worth-anthony-pompliano",
+        "date": "2026-10-18"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8050-a9a1-ee6c090274d7",
@@ -1317,7 +1552,13 @@
       "one_liner": "Writes about unconventional go-to-market experiments with step-by-step implementation.",
       "profile_source": "https://moxiegtm.substack.com/about",
       "headshot": "img/richard-purcell.jpg",
-      "headshot_source": "x:@moxiegtm"
+      "headshot_source": "x:@moxiegtm",
+      "feed_url": "https://moxiegtm.substack.com/feed",
+      "latest_post": {
+        "title": "How to scale referrals",
+        "url": "https://moxiegtm.substack.com/p/how-to-scale-referrals",
+        "date": "2026-10-19"
+      }
     },
     {
       "notion_id": "207a6d41-709c-800d-abe6-e523de849a48",
@@ -1380,7 +1621,13 @@
       "profile_source": "https://ruben.substack.com/about",
       "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/4df84eb2-227f-435e-913c-4210fe339229_1203x1203.png",
       "headshot": "img/ruben-hassid.jpg",
-      "headshot_source": "headshot_url"
+      "headshot_source": "headshot_url",
+      "feed_url": "https://ruben.substack.com/feed",
+      "latest_post": {
+        "title": "Claude for Legal.",
+        "url": "https://ruben.substack.com/p/claude-for-legal",
+        "date": "2026-10-20"
+      }
     },
     {
       "notion_id": "296a6d41-709c-80a5-9c80-c124b9a0c1dd",
@@ -1426,7 +1673,13 @@
       "one_liner": "Writes a daily blog and books on marketing, work and ideas.",
       "profile_source": "https://seths.blog/",
       "headshot": "img/seth-godin.jpg",
-      "headshot_source": "x:@thisissethsblog"
+      "headshot_source": "x:@thisissethsblog",
+      "feed_url": "https://seths.blog/feed/",
+      "latest_post": {
+        "title": "Thieves’ cant slang",
+        "url": "https://seths.blog/2026/10/thieves-cant-slang/",
+        "date": "2026-10-20"
+      }
     },
     {
       "notion_id": "27da6d41-709c-8098-9553-d6a0423b3bab",
@@ -1451,7 +1704,13 @@
       "one_liner": "Writes about Google Tag Manager, Google Analytics and web analytics development.",
       "profile_source": "https://www.simoahava.com/about-simo-ahava/",
       "headshot": "img/simo-ahava.jpg",
-      "headshot_source": "x:@simoahava"
+      "headshot_source": "x:@simoahava",
+      "feed_url": "https://www.simoahava.com/index.xml",
+      "latest_post": {
+        "title": "Optimized Tagging Experience For Google Tag Manager",
+        "url": "https://www.simoahava.com/analytics/optimized-tagging-experience-google-tag-manager/",
+        "date": "2026-10-13"
+      }
     },
     {
       "notion_id": "27ca6d41-709c-80bd-a794-e47aa8f183c6",
@@ -1475,7 +1734,13 @@
       "one_liner": "Writes a newsletter of marketing ideas and examples.",
       "profile_source": "https://www.marketingideas.com",
       "headshot": "img/tom-orbach.jpg",
-      "headshot_source": "x:@tomorbach"
+      "headshot_source": "x:@tomorbach",
+      "feed_url": "https://www.marketingideas.com/feed",
+      "latest_post": {
+        "title": "AX is how you go viral in 2027 💡",
+        "url": "https://www.marketingideas.com/p/ax-is-how-you-go-viral-in-2027",
+        "date": "2026-10-19"
+      }
     },
     {
       "notion_id": "280a6d41-709c-80a3-8c66-c9e34680dd17",
@@ -1500,7 +1765,13 @@
       "one_liner": "Teaches product-led storytelling for B2B SaaS content.",
       "profile_source": "http://vec.studio",
       "headshot": "img/victor-eduoh.jpg",
-      "headshot_source": "x:@v_eduoh"
+      "headshot_source": "x:@v_eduoh",
+      "feed_url": "https://productledstorytelling.substack.com/feed",
+      "latest_post": {
+        "title": "Nailing Your Overarching Company Narrative (The “Big S” Story)",
+        "url": "https://productledstorytelling.substack.com/p/nailing-your-company-narrative",
+        "date": "2026-06-04"
+      }
     },
     {
       "notion_id": "207a6d41-709c-804c-8509-c35154b7eb71",
@@ -1521,7 +1792,13 @@
       "one_liner": "Author of Product-Led Growth; teaches product-led growth to software companies.",
       "profile_source": "https://productled.com/wes-bush",
       "headshot": "img/wes-bush.jpg",
-      "headshot_source": "x:@wes_bush"
+      "headshot_source": "x:@wes_bush",
+      "feed_url": "https://productled.com/blog/rss.xml",
+      "latest_post": {
+        "title": "What Are the 3 Types of Product-Led Growth? | ProductLed",
+        "url": "https://productled.com/blog/product-led-growth-spectrum",
+        "date": "2026-10-20"
+      }
     },
     {
       "notion_id": "262a6d41-709c-80aa-b614-c5a579bc6351",
@@ -1544,7 +1821,13 @@
       "one_liner": "Writes about go-to-market operations, technology and AI; co-writes Know Your Growth.",
       "profile_source": "https://knowyourgrowth.substack.com/about",
       "headshot": "img/yash-tekriwal.jpg",
-      "headshot_source": "x:@yash_tek"
+      "headshot_source": "x:@yash_tek",
+      "feed_url": "https://knowyourgrowth.substack.com/feed",
+      "latest_post": {
+        "title": "Steering a Rocket Ship: Inside Profound’s Meteoric Growth",
+        "url": "https://knowyourgrowth.substack.com/p/steering-a-rocket-ship-inside-profounds",
+        "date": "2026-09-16"
+      }
     }
   ]
 }
