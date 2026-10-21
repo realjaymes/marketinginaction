@@ -629,6 +629,14 @@ html.lb-open,html.lb-open body{overflow:hidden}
 .hero__proof span{display:block;font-size:.88rem;color:var(--muted);line-height:1.45;margin-top:2px}
 .herosmall{font-size:.84rem;line-height:1.45;color:var(--muted);max-width:34em;margin:0}
 .hero h1 .band{white-space:nowrap}
+/* hero Testimonials tab: one person at a time, paged like Results */
+.tq{margin:0;display:flex;flex-direction:column;gap:10px;background:var(--white);border:2px solid var(--ink);border-radius:18px;padding:14px}
+.tq .fc__name{display:block}
+.tq__ctx{margin:0;color:var(--muted);font-size:.86rem;line-height:1.45}
+.tq .bub,.tq .fc__q{font-size:.9rem}
+.win__note a{color:var(--ink);font-weight:800;text-decoration:underline;text-underline-offset:2px}
+.win{min-width:0}
+@media(max-width:600px){.win .tabs{gap:4px;padding:10px 10px 0}.win .tab{padding:4px 10px;font-size:.8rem}}
 /* hero Results: one whole contract at a time, image beside its caption on a laptop */
 .is-paged .res{grid-template-columns:1fr}
 .win .res figure{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;background:var(--cream)}
@@ -820,6 +828,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
                 </div>
                 <div class="tabs" role="tablist">
                     <button class="tab" role="tab" aria-selected="true" data-t="res">Results</button>
+                    <button class="tab" role="tab" aria-selected="false" data-t="tst">Testimonials</button>
                     <button class="tab" role="tab" aria-selected="false" data-t="road">Roadmap</button>
                     <button class="tab" role="tab" aria-selected="false" data-t="plan">Plan</button>
                 </div>
@@ -829,6 +838,15 @@ html.lb-open,html.lb-open body{overflow:hidden}
                         <figure><img src="/assets/credibility/contract-1250-usd.jpg" alt="Contract screen showing a $1,250 semi-monthly rate and a $30,000 estimated annual payment" loading="eager"><figcaption><strong>$2,500 a month</strong>Paid as $1,250 twice a month. This contract paid $30,000 a year, and I also earned it from Nigeria.</figcaption></figure>
                     </div>
                     <p class="win__note">These are my own contracts and my own sales, not student results.</p>
+                </div>
+                <div class="panel" data-p="tst">
+                    <div class="tqs">
+                        <figure class="tq" data-label="Ayeni"><figcaption class="fc__who"><span class="av cp-av2">A</span><div><strong class="fc__name">Ayeni</strong><div class="fc__role">MIA Academy Alumni</div></div></figcaption><p class="tq__ctx">He used my job positioning guide, then sent me this after his second offer.</p><div class="bubs"><p class="bub">This is the second offer since I got that list to a fair enough place, I have another final interview tomorrow at 2.</p><p class="bub">potentially three offers in less than a month.</p></div></figure>
+                        <figure class="tq" data-label="Emeka"><figcaption class="fc__who"><span class="av cp-av3">E</span><div><strong class="fc__name">Emeka C.</strong><div class="fc__role">MIA Academy Alumni</div></div></figcaption><p class="tq__ctx">I sent him companies beyond the usual job boards and read through his offer letter with him.</p><div class="bubs"><p class="bub">Them don send offer letter</p><p class="bub">But boss, I really want to thank you for everything.</p></div></figure>
+                        <figure class="tq" data-label="Zainab"><figcaption class="fc__who"><span class="av cp-av4">Z</span><div><strong class="fc__name">Zainab Oladoja</strong><div class="fc__role">Product Marketing Manager, Abuja. Bootcamp graduate</div></div></figcaption><p class="fc__q">"The materials really helped. While I was working, anytime I hit a roadblock I had a material to go to, to check what I could do and make my work more efficient. I'm even still using them now for the job applications I'm doing."</p></figure>
+                        <figure class="tq" data-label="Emmanuella"><figcaption class="fc__who"><span class="av cp-av1">E</span><div><strong class="fc__name">Emmanuella David</strong><div class="fc__role">Product Marketer (Nigeria &rarr; Canada). Bootcamp graduate</div></div></figcaption><p class="fc__q">"I'm really exhausted with trainings that just give definitions, the benefits and the disadvantages. This was hands-on. Let's deal with it as though you've started a job as a product marketing person. This is a real life situation, this is how you should deal with it."</p></figure>
+                    </div>
+                    <p class="win__note">None of these people have taken the Blueprint, and their results are not a promise of yours. <a href="#results">See their messages</a></p>
                 </div>
                 <div class="panel" data-p="road">
                     <div class="mods mods--9">
@@ -1014,9 +1032,9 @@ html.lb-open,html.lb-open body{overflow:hidden}
         </div>
         <div class="wrap">
             <div class="grid3">
-                <div class="pc"><div class="pc__k">Every two weeks</div><h3>Live group sessions.</h3><p>Every two weeks I run a live session for everyone in the course. I take pitches and plans from the group apart line by line, so the whole room sees what a buyer sees. Each session runs for at least an hour. <span class="ph">[MONTHS: James to confirm how many months the sessions continue]</span></p></div>
+                <div class="pc"><div class="pc__k">Every two weeks</div><h3>Live group sessions.</h3><p>Every two weeks I run a live session for everyone in the course. I take pitches and plans from the group apart line by line, so the whole room sees what a buyer sees. Each session runs for at least an hour. The sessions run for 3 months after the course opens.</p></div>
                 <div class="pc"><div class="pc__k">What to bring</div><h3>Your pitch, then your plan.</h3><p>After Module 6, bring your pitch. After Module 9, bring your 30-day plan, and I show you where it is likely to stall. I review as many as each session allows, and every pitch reviewed on the call teaches you something about your own.</p></div>
-                <div class="pc"><div class="pc__k">Community</div><h3>The community.</h3><p>A private <span class="ph">[COMMUNITY: WhatsApp or Telegram, James to pick one]</span> group with everyone in the course. Ask questions, share your pitches and see what other members in your skill are sending.</p></div>
+                <div class="pc"><div class="pc__k">Community</div><h3>The community.</h3><p>A private group with everyone in the course. Ask questions, share your pitches and see what other members in your skill are sending.</p></div>
             </div>
         </div>
     </section>
@@ -1235,7 +1253,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
     </section>
 
     <!-- PARTNER LINE -->
-    <div class="partner"><div class="wrap"><p>Know someone who should see this? Join our partner program and earn 40% of every sale you refer, &#8358;8,000 on each &#8358;20,000 sale. <span class="ph">[AFFILIATE LINK]</span></p></div></div>
+    <div class="partner"><div class="wrap"><p>Know someone who should see this? Join our partner program and earn 40% of every sale you refer, &#8358;8,000 on each &#8358;20,000 sale. <a href="/affiliate/">Learn more</a></p></div></div>
 
     <!-- STICKY BOTTOM BAR (phone) -->
     <div class="sticky-bar" id="stickyBar">
@@ -1401,13 +1419,14 @@ html.lb-open,html.lb-open body{overflow:hidden}
 </script>
 <script id="hero-fit-js">
 (function(){
-  document.querySelectorAll('.win [data-p="res"]').forEach(function(panel){
-    var units=[].slice.call(panel.querySelectorAll('.res > figure, .rqs > figure, .rq > blockquote'));
+  document.querySelectorAll('.win [data-p="res"], .win [data-p="tst"]').forEach(function(panel){
+    var units=[].slice.call(panel.querySelectorAll('.res > figure, .rqs > figure, .rq > blockquote, .tqs > figure'));
     if(units.length<2)return;
     panel.classList.add('is-paged');
-    var bar=document.createElement('div');bar.className='respager';bar.setAttribute('role','group');bar.setAttribute('aria-label','Choose a result');
+    var bar=document.createElement('div');bar.className='respager';bar.setAttribute('role','group');bar.setAttribute('aria-label',panel.dataset.p==='tst'?'Choose a testimonial':'Choose a result');
     var n=document.createElement('span');n.className='respager__n';bar.appendChild(n);
     function label(u,i){
+      if(u.dataset.label)return u.dataset.label;
       var s=u.querySelector('figcaption strong');
       if(s)return s.textContent.replace(/\.$/,'');
       var c=u.querySelector('cite,b');
