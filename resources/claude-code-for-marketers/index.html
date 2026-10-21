@@ -104,6 +104,20 @@ html[data-theme] .section-nav-item{padding:6px 14px;border:2px solid transparent
 html[data-theme] .section-nav-item:hover{opacity:1;background:var(--a-alt);color:var(--a-ink)}
 html[data-theme] .section-nav-item.active{opacity:1;background:var(--gold);color:var(--ink);border-color:var(--a-bd);border-bottom-color:var(--a-bd)}
 html[data-theme] .nav-number{opacity:.55}
+/* phone: one sticky row showing the current step, with every step one tap away */
+.section-nav-toggle{display:none}
+@media(max-width:768px){
+html[data-theme] .section-nav{overflow:visible}
+html[data-theme] .section-nav-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;padding:10px 0;border:0;background:none;font:inherit;font-size:.9rem;font-weight:800;color:var(--a-ink);cursor:pointer;text-align:left}
+html[data-theme] .section-nav-current{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html[data-theme] .section-nav-all{flex:none;padding:5px 12px;border:2px solid var(--a-bd);border-radius:999px;background:var(--gold);color:var(--ink);font-size:.78rem}
+html[data-theme] .section-nav-all::after{content:" \25be"}
+html[data-theme] .section-nav.is-open .section-nav-all::after{content:" \25b4"}
+html[data-theme] .section-nav-inner{display:none;min-width:0}
+html[data-theme] .section-nav.is-open .section-nav-inner{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:0 0 12px}
+html[data-theme] .section-nav.is-open .section-nav-item{white-space:normal;padding:8px 12px;border-color:var(--a-bd);background:var(--a-card);font-size:.8rem;line-height:1.3}
+html[data-theme] .section-nav.is-open .section-nav-item.active{background:var(--gold)}
+}
 
 /* ---------- cards ---------- */
 html[data-theme] .info-card,html[data-theme] .ref-card,html[data-theme] .concept-block,html[data-theme] .file-explorer,html[data-theme] .rendered-markdown{background:var(--a-card);border:3px solid var(--a-bd);border-radius:26px;box-shadow:var(--st)}
@@ -470,7 +484,11 @@ html[data-theme] .site-footer{padding:28px 0}
     <!-- Section Nav -->
     <nav class="section-nav" id="sectionNav">
       <div class="container">
-        <div class="section-nav-inner">
+        <button type="button" class="section-nav-toggle" aria-expanded="false" aria-controls="sectionNavList">
+          <span class="section-nav-current"><span class="nav-number">01</span> Why Claude Code?</span>
+          <span class="section-nav-all">All steps</span>
+        </button>
+        <div class="section-nav-inner" id="sectionNavList">
           <a href="#section-0" class="section-nav-item active" data-section="0">
             <span class="nav-number">01</span> Why Claude Code?
           </a>
@@ -1809,6 +1827,6 @@ Write a press release for our new feature launch</code></pre>
     </div>
   </footer>
 
-  <script src="/resources/claude-code-for-marketers/script.js"></script>
+  <script src="/resources/claude-code-for-marketers/script.js?v=2"></script>
 </body>
 </html>

@@ -44,6 +44,25 @@ function updateActiveNav() {
   });
 }
 
+// On phones the nav is one row showing the current step; the toggle opens every step.
+const sectionNav = document.getElementById('sectionNav');
+const navToggle = sectionNav && sectionNav.querySelector('.section-nav-toggle');
+const navCurrent = navToggle && navToggle.querySelector('.section-nav-current');
+
+function setNavOpen(open) {
+  sectionNav.classList.toggle('is-open', open);
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+if (navToggle) {
+  navToggle.addEventListener('click', () => setNavOpen(!sectionNav.classList.contains('is-open')));
+  navItems.forEach((item) => item.addEventListener('click', () => setNavOpen(false)));
+  new MutationObserver(() => {
+    const active = sectionNav.querySelector('.section-nav-item.active');
+    if (active) navCurrent.innerHTML = active.innerHTML;
+  }).observe(sectionNav.querySelector('.section-nav-inner'), { subtree: true, attributes: true, attributeFilter: ['class'] });
+}
+
 window.addEventListener('scroll', updateActiveNav, { passive: true });
 
 // ===========================

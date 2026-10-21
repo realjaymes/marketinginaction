@@ -1991,24 +1991,28 @@ html.lb-open,html.lb-open body{overflow:hidden}
             b.addEventListener("click", function () { q.value = ""; Object.keys(sel).forEach(function (k) { pick(k, ""); }); apply(); });
           });
           q.addEventListener("input", apply);
-          // Card labels filter the page to every card that carries the same label.
-          var chips = root.querySelectorAll("[data-tagchip]"), tagrow = root.querySelector(".db-tagrow");
+          // Card labels filter the page to every card that carries the same label. A chip with
+          // data-chipdim sets that sidebar list (the thought leaders' topics); otherwise the "tag" list.
+          var chips = root.querySelectorAll("[data-tagchip]"), tagrow = root.querySelector(".db-tagrow"),
+              tagdim = (tagrow && tagrow.dataset.dim) || "tag";
+          function cdim(c) { return c.dataset.chipdim || "tag"; }
           function showTag() {
-            var v = sel.tag || "";
-            chips.forEach(function (c) { c.classList.toggle("is-on", !!v && c.dataset.tagchip === v); });
+            var v = sel[tagdim] || "";
+            chips.forEach(function (c) { var w = sel[cdim(c)]; c.classList.toggle("is-on", !!w && c.dataset.tagchip === w); });
             if (!tagrow) return;
             tagrow.hidden = !v;
-            var src = v && root.querySelector('[data-tagchip="' + v + '"]');
+            var src = v && root.querySelector('[data-chipdim="' + tagdim + '"][data-tagchip="' + v + '"], [data-tagchip="' + v + '"]');
             if (src) tagrow.querySelector(".db-tagname").textContent = src.textContent;
           }
           chips.forEach(function (c) {
             c.addEventListener("click", function () {
-              pick("tag", sel.tag === c.dataset.tagchip ? "" : c.dataset.tagchip);
+              var d = cdim(c);
+              pick(d, sel[d] === c.dataset.tagchip ? "" : c.dataset.tagchip);
               apply(); showTag();
               main.scrollIntoView({ behavior: "smooth", block: "start" });
             });
           });
-          if (tagrow) tagrow.querySelector(".db-tagpill").addEventListener("click", function () { pick("tag", ""); apply(); showTag(); });
+          if (tagrow) tagrow.querySelector(".db-tagpill").addEventListener("click", function () { pick(tagdim, ""); apply(); showTag(); });
           btns.forEach(function (b) { b.addEventListener("click", showTag); });
           clears.forEach(function (b) { b.addEventListener("click", showTag); });
           var wide = window.matchMedia("(min-width: 901px)");

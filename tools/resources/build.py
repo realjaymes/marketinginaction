@@ -501,24 +501,28 @@ FILTER_JS = """      <script>
             b.addEventListener("click", function () { q.value = ""; Object.keys(sel).forEach(function (k) { pick(k, ""); }); apply(); });
           });
           q.addEventListener("input", apply);
-          // Card labels filter the page to every card that carries the same label.
-          var chips = root.querySelectorAll("[data-tagchip]"), tagrow = root.querySelector(".db-tagrow");
+          // Card labels filter the page to every card that carries the same label. A chip with
+          // data-chipdim sets that sidebar list (the thought leaders' topics); otherwise the "tag" list.
+          var chips = root.querySelectorAll("[data-tagchip]"), tagrow = root.querySelector(".db-tagrow"),
+              tagdim = (tagrow && tagrow.dataset.dim) || "tag";
+          function cdim(c) { return c.dataset.chipdim || "tag"; }
           function showTag() {
-            var v = sel.tag || "";
-            chips.forEach(function (c) { c.classList.toggle("is-on", !!v && c.dataset.tagchip === v); });
+            var v = sel[tagdim] || "";
+            chips.forEach(function (c) { var w = sel[cdim(c)]; c.classList.toggle("is-on", !!w && c.dataset.tagchip === w); });
             if (!tagrow) return;
             tagrow.hidden = !v;
-            var src = v && root.querySelector('[data-tagchip="' + v + '"]');
+            var src = v && root.querySelector('[data-chipdim="' + tagdim + '"][data-tagchip="' + v + '"], [data-tagchip="' + v + '"]');
             if (src) tagrow.querySelector(".db-tagname").textContent = src.textContent;
           }
           chips.forEach(function (c) {
             c.addEventListener("click", function () {
-              pick("tag", sel.tag === c.dataset.tagchip ? "" : c.dataset.tagchip);
+              var d = cdim(c);
+              pick(d, sel[d] === c.dataset.tagchip ? "" : c.dataset.tagchip);
               apply(); showTag();
               main.scrollIntoView({ behavior: "smooth", block: "start" });
             });
           });
-          if (tagrow) tagrow.querySelector(".db-tagpill").addEventListener("click", function () { pick("tag", ""); apply(); showTag(); });
+          if (tagrow) tagrow.querySelector(".db-tagpill").addEventListener("click", function () { pick(tagdim, ""); apply(); showTag(); });
           btns.forEach(function (b) { b.addEventListener("click", showTag); });
           clears.forEach(function (b) { b.addEventListener("click", showTag); });
           var wide = window.matchMedia("(min-width: 901px)");
@@ -567,12 +571,13 @@ DB_CSS = """      <style>
       </style>"""
 
 
-# Tool card labels are buttons: a click filters the page to that label.
+# Card labels are buttons: a click filters the page to that label (tool labels, thought leader topics).
 LABEL_CSS = """      <style>
         .db-chips { display: flex; flex-wrap: wrap; gap: 6px; }
         .db-chip { font: inherit; font-size: 12px; font-weight: 700; cursor: pointer; padding: 2px 9px; border: 1.5px solid var(--muted); border-radius: 999px; background: none; color: var(--ink); }
         .db-chip:hover, .db-chip:focus-visible { border-color: var(--ink); background: var(--gold-t); }
         .db-chip.is-on { border-color: var(--ink); background: var(--blue); }
+        .db-main { scroll-margin-top: 96px; }
         .db-tagrow { margin: 0 0 var(--space-md); font-size: 14px; font-weight: 700; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
         .db-tagpill { font: inherit; font-weight: 800; cursor: pointer; padding: 4px 12px; border: 2px solid var(--ink); border-radius: 999px; background: var(--blue); color: var(--ink); }
         .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
@@ -829,7 +834,7 @@ LEADER_CSS = """      <style>
 
 def leader_card(i):
     doms = sorted(i["domains"], key=DOMAINS.index)  # every topic shows, so a topic filter never matches a card without its tag
-    tags = "".join(f'<span class="db-tag">{E(t)}</span>' for t in doms)
+    tags = "".join(f'<button type="button" class="db-chip" data-chipdim="domain" data-tagchip="{tok(t)}">{E(t)}</button>' for t in doms)
     role = " at ".join(x for x in (i.get("role"), i.get("company")) if x)
     links = []
     if i.get("newsletter"):
@@ -847,7 +852,7 @@ def leader_card(i):
               <div><h3 class="db-name">{E(i['name'])}</h3>{f'<p class="db-role">{E(role)}</p>' if role else ''}</div>
             </div>
             <p class="db-desc">{E(i.get("one_liner") or fallback_line(i))}</p>
-{latest_line(i)}            <div class="db-tags">{tags}</div>
+{latest_line(i)}            <div class="db-chips">{tags}</div>
             <div class="db-links">{''.join(links)}</div>
           </article>"""
 
@@ -889,6 +894,7 @@ def leaders_files():
 {panel}
             <div class="db-main">
 {count_row(n, "people")}
+              <p class="db-tagrow" data-dim="domain" hidden>Showing people who write about <button type="button" class="db-tagpill"><span class="db-tagname"></span> <span aria-hidden="true">&times;</span><span class="sr-only">Remove topic filter</span></button></p>
               <p class="db-empty" hidden>No one matches your search. Try another word or clear the filters.</p>
 {sections}
             </div>
@@ -896,6 +902,7 @@ def leaders_files():
         </div>
       </section>
 {DB_CSS}
+{LABEL_CSS}
 {LEADER_CSS}
 {FILTER_CSS}
 {FILTER_JS}"""
