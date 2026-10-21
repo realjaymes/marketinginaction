@@ -1533,10 +1533,13 @@
   },
   "tools_checked": "2026-10-20",
   "intake": {
-    "candidates_tried": {},
+    "candidates_tried": {
+      "avastudio": "2026-10-21"
+    },
     "briefs_done": [
       "2026-10-20 Evening Brief.md",
-      "2026-10-20 Morning Brief.md"
+      "2026-10-20 Morning Brief.md",
+      "2026-10-21 Morning Brief.md"
     ]
   },
   "leaders": {

@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 486,
+  "count": 487,
   "items": [
     {
       "created": "2026-10-20",
@@ -801,6 +801,31 @@
       "website": "https://attio.com",
       "slug": "attio",
       "group": "Outbound and sales"
+    },
+    {
+      "created": "2026-10-21",
+      "last_edited": "2026-10-21",
+      "name": "Ava Studio",
+      "overview": "Ava Studio is an AI creative tool for video ads. It researches a product, develops hooks and angles, and generates 50+ editable short-form ad variants for TikTok, Reels and Meta.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI Video Generation",
+        "AI Agents",
+        "Advertising"
+      ],
+      "use_cases": [
+        "Turn a product URL into short video ads",
+        "Generate many ad variants for creative testing",
+        "Write hooks and scripts from trend and competitor research",
+        "Produce TikTok and Reels content without a video team",
+        "Create AI actor and product shot videos",
+        "Edit and refine generated ads before publishing"
+      ],
+      "website": "https://www.avastudio.com",
+      "slug": "ava-studio"
     },
     {
       "created": "2026-10-21",
