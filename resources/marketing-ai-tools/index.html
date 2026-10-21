@@ -5840,6 +5840,46 @@
   }
 }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I choose the right marketing tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Start with the job you need done, like sending email or finding leads, and open that group. Read what each tool does and when you would use it, then try one or two before you pay."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the tools in this directory free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Some are free, some have a free plan and some are paid. Check each tool's own website for current pricing, because plans change often."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does MIA get paid to list a tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Some links are partner links, and MIA may earn a commission if you sign up through one. Partner status never decides which tools appear here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I suggest a marketing tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email the tool's name and website to james@marketinginaction.xyz. We check the site before we add anything."
+      }
+    }
+  ]
+}
+    </script>
     <!-- BreadcrumbList schema -->
     <script type="application/ld+json">
     {
@@ -10620,6 +10660,39 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </div>
         </div>
       </section>
+
+      <section id="faq" class="section db-faq">
+        <div class="container">
+          <h2>Questions people ask</h2>
+          <div class="faq-list">
+            <div class="faq-item active"><button type="button" class="faq-item__q" aria-expanded="true"><span>How do I choose the right marketing tool?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Start with the job you need done, like sending email or finding leads, and open that group. Read what each tool does and when you would use it, then try one or two before you pay.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>Are the tools in this directory free?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Some are free, some have a free plan and some are paid. Check each tool&#x27;s own website for current pricing, because plans change often.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>Does MIA get paid to list a tool?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No. Some links are partner links, and MIA may earn a commission if you sign up through one. Partner status never decides which tools appear here.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>How can I suggest a marketing tool?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Email the tool&#x27;s name and website to <a href="mailto:james@marketinginaction.xyz">james@marketinginaction.xyz</a>. We check the site before we add anything.</div></div></div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .db-faq { scroll-margin-top: 80px; }
+        .db-faq h2 { text-align: center; margin-bottom: var(--space-lg); }
+        .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 14px; }
+        .faq-item { background: var(--white); border: 3px solid var(--ink); border-radius: 22px; box-shadow: var(--st-sm); overflow: hidden; }
+        .faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 14px; text-align: left; background: none; border: 0; cursor: pointer; padding: 18px 22px; font-family: inherit; font-weight: 800; font-size: 1.02rem; color: var(--ink); }
+        .faq-item__icon { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid var(--ink); border-radius: 50%; background: var(--white); flex: none; transition: transform .2s; }
+        .faq-item.active .faq-item__icon { transform: rotate(45deg); }
+        .faq-item__a { display: none; }
+        .faq-item.active .faq-item__a { display: block; }
+        .faq-item__a-inner { padding: 0 22px 20px; color: var(--muted); line-height: 1.6; }
+        .faq-item__a-inner a { text-decoration: underline; font-weight: 800; color: var(--ink); }
+      </style>
+      <script>
+        document.querySelectorAll(".faq-item__q").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.closest(".faq-item").classList.toggle("active");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        });
+      </script>
       <style>
         .db-hero-inner { max-width: 820px; margin: 0 auto; text-align: center; }
         .db-hero-inner .pill { margin: 0 auto var(--space-lg); }

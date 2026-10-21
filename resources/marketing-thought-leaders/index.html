@@ -1710,6 +1710,46 @@
   }
 }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does MIA choose the people on this list?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "MIA picks people who write in public about growth, product marketing, GTM engineering or AI, and whose work you can put to use in your own job. Each card links to where they publish."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are these people still posting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each card shows the person's latest post when their newsletter or blog has a feed. Anyone who has not posted in over a year sits in the Quieter lately section at the bottom."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I find the right marketing thought leaders to follow?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Filter by the topic closest to your work right now and follow two or three people in it. Read them for a few weeks before you add more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I suggest a thought leader?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Email the person's name and a link to their work to james@marketinginaction.xyz."
+      }
+    }
+  ]
+}
+    </script>
     <!-- BreadcrumbList schema -->
     <script type="application/ld+json">
     {
@@ -2760,6 +2800,39 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </div>
         </div>
       </section>
+
+      <section id="faq" class="section db-faq">
+        <div class="container">
+          <h2>Questions people ask</h2>
+          <div class="faq-list">
+            <div class="faq-item active"><button type="button" class="faq-item__q" aria-expanded="true"><span>How does MIA choose the people on this list?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">MIA picks people who write in public about growth, product marketing, GTM engineering or AI, and whose work you can put to use in your own job. Each card links to where they publish.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>Are these people still posting?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Each card shows the person&#x27;s latest post when their newsletter or blog has a feed. Anyone who has not posted in over a year sits in the Quieter lately section at the bottom.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>How do I find the right marketing thought leaders to follow?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Filter by the topic closest to your work right now and follow two or three people in it. Read them for a few weeks before you add more.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>How can I suggest a thought leader?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Email the person&#x27;s name and a link to their work to <a href="mailto:james@marketinginaction.xyz">james@marketinginaction.xyz</a>.</div></div></div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .db-faq { scroll-margin-top: 80px; }
+        .db-faq h2 { text-align: center; margin-bottom: var(--space-lg); }
+        .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 14px; }
+        .faq-item { background: var(--white); border: 3px solid var(--ink); border-radius: 22px; box-shadow: var(--st-sm); overflow: hidden; }
+        .faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 14px; text-align: left; background: none; border: 0; cursor: pointer; padding: 18px 22px; font-family: inherit; font-weight: 800; font-size: 1.02rem; color: var(--ink); }
+        .faq-item__icon { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid var(--ink); border-radius: 50%; background: var(--white); flex: none; transition: transform .2s; }
+        .faq-item.active .faq-item__icon { transform: rotate(45deg); }
+        .faq-item__a { display: none; }
+        .faq-item.active .faq-item__a { display: block; }
+        .faq-item__a-inner { padding: 0 22px 20px; color: var(--muted); line-height: 1.6; }
+        .faq-item__a-inner a { text-decoration: underline; font-weight: 800; color: var(--ink); }
+      </style>
+      <script>
+        document.querySelectorAll(".faq-item__q").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.closest(".faq-item").classList.toggle("active");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        });
+      </script>
       <style>
         .db-hero-inner { max-width: 820px; margin: 0 auto; text-align: center; }
         .db-hero-inner .pill { margin: 0 auto var(--space-lg); }

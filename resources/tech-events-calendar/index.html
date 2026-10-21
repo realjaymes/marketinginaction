@@ -854,6 +854,38 @@
   }
 }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How does MIA check event dates?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We check every date on the event's own website and update the calendar every week. Events can still move, so confirm with the organiser before you book travel."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I add a marketing event to my calendar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use the Add to calendar button on any event. You can also subscribe to the whole calendar, and new events will appear in your calendar on their own."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why is my event missing from the calendar?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We list conferences, summits, expos and festivals for marketers, founders and tech teams, starting with Lagos. If yours fits, email the name and website to james@marketinginaction.xyz."
+      }
+    }
+  ]
+}
+    </script>
     <!-- BreadcrumbList schema -->
     <script type="application/ld+json">
     {
@@ -1844,6 +1876,38 @@ html.lb-open,html.lb-open body{overflow:hidden}
           </details>
         </div>
       </section>
+
+      <section id="faq" class="section db-faq">
+        <div class="container">
+          <h2>Questions people ask</h2>
+          <div class="faq-list">
+            <div class="faq-item active"><button type="button" class="faq-item__q" aria-expanded="true"><span>How does MIA check event dates?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">We check every date on the event&#x27;s own website and update the calendar every week. Events can still move, so confirm with the organiser before you book travel.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>How can I add a marketing event to my calendar?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Use the Add to calendar button on any event. You can also subscribe to the whole calendar, and new events will appear in your calendar on their own.</div></div></div>
+            <div class="faq-item"><button type="button" class="faq-item__q" aria-expanded="false"><span>Why is my event missing from the calendar?</span><span class="faq-item__icon" aria-hidden="true">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">We list conferences, summits, expos and festivals for marketers, founders and tech teams, starting with Lagos. If yours fits, email the name and website to <a href="mailto:james@marketinginaction.xyz">james@marketinginaction.xyz</a>.</div></div></div>
+          </div>
+        </div>
+      </section>
+      <style>
+        .db-faq { scroll-margin-top: 80px; }
+        .db-faq h2 { text-align: center; margin-bottom: var(--space-lg); }
+        .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 14px; }
+        .faq-item { background: var(--white); border: 3px solid var(--ink); border-radius: 22px; box-shadow: var(--st-sm); overflow: hidden; }
+        .faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 14px; text-align: left; background: none; border: 0; cursor: pointer; padding: 18px 22px; font-family: inherit; font-weight: 800; font-size: 1.02rem; color: var(--ink); }
+        .faq-item__icon { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid var(--ink); border-radius: 50%; background: var(--white); flex: none; transition: transform .2s; }
+        .faq-item.active .faq-item__icon { transform: rotate(45deg); }
+        .faq-item__a { display: none; }
+        .faq-item.active .faq-item__a { display: block; }
+        .faq-item__a-inner { padding: 0 22px 20px; color: var(--muted); line-height: 1.6; }
+        .faq-item__a-inner a { text-decoration: underline; font-weight: 800; color: var(--ink); }
+      </style>
+      <script>
+        document.querySelectorAll(".faq-item__q").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.closest(".faq-item").classList.toggle("active");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        });
+      </script>
 
       <style>
         .ev-hero-inner { max-width: 820px; margin: 0 auto; text-align: center; }

@@ -285,6 +285,7 @@ def events_files():
           </details>
         </div>
       </section>""" if past else ''}
+{faq_section(EVENTS_FAQ)}
 
       <style>
         .ev-hero-inner {{ max-width: 820px; margin: 0 auto; text-align: center; }}
@@ -350,6 +351,7 @@ def events_files():
                 **({"organizer": {"@type": "Organization", "name": i["organiser"]}} if i.get("organiser") else {})}}
             for n, i in enumerate(upcoming)]}}, indent=2, ensure_ascii=False)
 
+    jsonld = with_faq(jsonld, EVENTS_FAQ)
     page = shell("resources/tech-events-calendar/", "Tech Events Calendar for Africa | Marketing In Action",
                  "Upcoming tech, startup and marketing events across Africa and beyond, with dates checked on each event's official site. Updated every day.",
                  "MIA Tech Events Calendar", "events-page", main, jsonld, "Tech Events Calendar")
@@ -584,6 +586,90 @@ LABEL_CSS = """      <style>
       </style>"""
 
 
+# ---------- short FAQs at the foot of each directory page ----------
+# Each page ends with a few plain questions and answers, also given to search engines as FAQPage data.
+
+MAIL = "james@marketinginaction.xyz"
+
+TOOLS_FAQ = [
+    ("How do I choose the right marketing tool?",
+     "Start with the job you need done, like sending email or finding leads, and open that group. Read what each tool does and when you would use it, then try one or two before you pay."),
+    ("Are the tools in this directory free?",
+     "Some are free, some have a free plan and some are paid. Check each tool's own website for current pricing, because plans change often."),
+    ("Does MIA get paid to list a tool?",
+     "No. Some links are partner links, and MIA may earn a commission if you sign up through one. Partner status never decides which tools appear here."),
+    ("How can I suggest a marketing tool?",
+     f"Email the tool's name and website to {MAIL}. We check the site before we add anything."),
+]
+LEADERS_FAQ = [
+    ("How does MIA choose the people on this list?",
+     "MIA picks people who write in public about growth, product marketing, GTM engineering or AI, and whose work you can put to use in your own job. Each card links to where they publish."),
+    ("Are these people still posting?",
+     "Each card shows the person's latest post when their newsletter or blog has a feed. Anyone who has not posted in over a year sits in the Quieter lately section at the bottom."),
+    ("How do I find the right marketing thought leaders to follow?",
+     "Filter by the topic closest to your work right now and follow two or three people in it. Read them for a few weeks before you add more."),
+    ("How can I suggest a thought leader?",
+     f"Email the person's name and a link to their work to {MAIL}."),
+]
+EVENTS_FAQ = [
+    ("How does MIA check event dates?",
+     "We check every date on the event's own website and update the calendar every week. Events can still move, so confirm with the organiser before you book travel."),
+    ("How can I add a marketing event to my calendar?",
+     "Use the Add to calendar button on any event. You can also subscribe to the whole calendar, and new events will appear in your calendar on their own."),
+    ("Why is my event missing from the calendar?",
+     f"We list conferences, summits, expos and festivals for marketers, founders and tech teams, starting with Lagos. If yours fits, email the name and website to {MAIL}."),
+]
+
+# The click-to-open FAQ from the Academy landing pages (academy/dime/): the first answer starts open.
+FAQ_CSS = """      <style>
+        .db-faq { scroll-margin-top: 80px; }
+        .db-faq h2 { text-align: center; margin-bottom: var(--space-lg); }
+        .faq-list { max-width: 800px; margin: 0 auto; display: grid; gap: 14px; }
+        .faq-item { background: var(--white); border: 3px solid var(--ink); border-radius: 22px; box-shadow: var(--st-sm); overflow: hidden; }
+        .faq-item__q { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 14px; text-align: left; background: none; border: 0; cursor: pointer; padding: 18px 22px; font-family: inherit; font-weight: 800; font-size: 1.02rem; color: var(--ink); }
+        .faq-item__icon { display: grid; place-items: center; width: 28px; height: 28px; border: 2px solid var(--ink); border-radius: 50%; background: var(--white); flex: none; transition: transform .2s; }
+        .faq-item.active .faq-item__icon { transform: rotate(45deg); }
+        .faq-item__a { display: none; }
+        .faq-item.active .faq-item__a { display: block; }
+        .faq-item__a-inner { padding: 0 22px 20px; color: var(--muted); line-height: 1.6; }
+        .faq-item__a-inner a { text-decoration: underline; font-weight: 800; color: var(--ink); }
+      </style>
+      <script>
+        document.querySelectorAll(".faq-item__q").forEach(function (btn) {
+          btn.addEventListener("click", function () {
+            var open = btn.closest(".faq-item").classList.toggle("active");
+            btn.setAttribute("aria-expanded", open ? "true" : "false");
+          });
+        });
+      </script>"""
+
+
+def faq_section(items):
+    mail = f'<a href="mailto:{MAIL}">{MAIL}</a>'
+    qa = "\n".join(
+        f'            <div class="faq-item{" active" if k == 0 else ""}"><button type="button" class="faq-item__q" aria-expanded="{"true" if k == 0 else "false"}">'
+        f'<span>{E(q)}</span><span class="faq-item__icon" aria-hidden="true">+</span></button>'
+        f'<div class="faq-item__a"><div class="faq-item__a-inner">{E(a).replace(MAIL, mail)}</div></div></div>'
+        for k, (q, a) in enumerate(items))
+    return f"""
+      <section id="faq" class="section db-faq">
+        <div class="container">
+          <h2>Questions people ask</h2>
+          <div class="faq-list">
+{qa}
+          </div>
+        </div>
+      </section>
+{FAQ_CSS}"""
+
+
+def with_faq(jsonld, items):
+    """The page's CollectionPage data plus a second script with its FAQPage data."""
+    faq = json.dumps({"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in items]}, indent=2, ensure_ascii=False)
+    return jsonld + '\n    </script>\n    <script type="application/ld+json">\n' + faq
+
+
 def hero(pill, h1, sub, buttons):
     return f"""      <section class="consulting-hero db-hero">
         <div class="container">
@@ -737,6 +823,7 @@ def tools_files():
           </div>
         </div>
       </section>
+{faq_section(TOOLS_FAQ)}
 {DB_CSS}
 {LABEL_CSS}
 {FILTER_CSS}
@@ -753,6 +840,7 @@ def tools_files():
                 "applicationCategory": tool_group(i, cat2g), "operatingSystem": "Web",
                 **({} if is_partner(i) else {"url": i["website"]})}}
             for k, i in enumerate(i for g in order for i in by[g])]}}, indent=2, ensure_ascii=False)
+    jsonld = with_faq(jsonld, TOOLS_FAQ)
     page = shell("resources/marketing-ai-tools/", "Marketing & AI Tools Database | Marketing In Action",
                  "Find marketing and AI tools by the job you need done: outbound, email, SEO, ads, analytics, video and AI agents. See what each one does. Free to search.",
                  "MIA Marketing & AI Product Database", "tools-page", main, jsonld, "Marketing & AI Product Database")
@@ -901,6 +989,7 @@ def leaders_files():
           </div>
         </div>
       </section>
+{faq_section(LEADERS_FAQ)}
 {DB_CSS}
 {LABEL_CSS}
 {LEADER_CSS}
@@ -926,6 +1015,7 @@ def leaders_files():
         "mainEntity": {"@type": "ItemList", "numberOfItems": n, "itemListElement": [
             {"@type": "ListItem", "position": k + 1, "item": person(i)} for k, i in enumerate(people)]}},
         indent=2, ensure_ascii=False)
+    jsonld = with_faq(jsonld, LEADERS_FAQ)
     page = shell("resources/marketing-thought-leaders/", "Marketing Thought Leaders to Follow | Marketing In Action",
                  "Learn from operators, founders and writers sharing what works in growth, product marketing, GTM engineering and AI. Filter by topic and follow them.",
                  "MIA Marketing Thought Leaders Database", "leaders-page", main, jsonld, "Marketing Thought Leaders Database")
