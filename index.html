@@ -216,6 +216,9 @@ a.pbox:hover{background:var(--sb);text-decoration:none}
 .truststrip .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 28px;padding-top:14px;padding-bottom:14px;font-weight:800;font-size:.9rem}
 .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .cards.two{grid-template-columns:repeat(2,1fr)}
+.cards.four{grid-template-columns:repeat(4,1fr)}
+.cards.four .go{font-size:.92rem;white-space:nowrap}
+@media(max-width:1100px){.cards.four{grid-template-columns:repeat(2,1fr)}}
 .pc{display:flex;flex-direction:column;align-items:flex-start;background:var(--white);border:3px solid var(--ink);border-radius:22px;box-shadow:var(--st);padding:22px}
 .pc .tag{margin-bottom:12px}
 .pc h3{font-size:1.2rem;margin-bottom:8px}
@@ -237,7 +240,7 @@ a.pbox:hover{background:var(--sb);text-decoration:none}
  main section{padding:56px 0}
  .nh .wrap{grid-template-columns:minmax(0,1fr);gap:36px}
  .nh h1{font-size:clamp(1.65rem,5.2vw,2.4rem)}
- .cards,.cards.two,.about{grid-template-columns:1fr}
+ .cards,.cards.two,.cards.four,.about{grid-template-columns:1fr}
  .about .photo{max-width:320px}
  .nh .band.nw{white-space:normal}
 }
@@ -378,9 +381,10 @@ a.pbox:hover{background:var(--sb);text-decoration:none}
             <h2 class="t">Featured Academy Programs</h2>
             <p class="sub">Structured, hands-on programs for marketers, business owners, and anyone building digital income.</p>
           </div>
-          <div class="cards">
+          <div class="cards four">
             <div class="pc"><span class="tag tag--green">For Beginners</span><h3>DIME &ndash; Digital Income Made Easy (with AI)</h3><p>Build one digital product with AI, sell it forever, and make $2,000 a month. DIME hands you the digital marketing to package it, make your first sale fast, and get paid, even starting from scratch.</p><a href="/academy/dime/" class="go">Explore DIME &rarr;</a></div>
             <div class="pc"><span class="tag tag--blue">For Marketers</span><h3>Product &amp; Growth Marketing with AI Bootcamp</h3><p>3-month, execution-first bootcamp. Build a real portfolio, learn 40+ AI tools, and position yourself for USD-paying remote marketing roles. Live sessions, coaching, certification, and internship access.</p><a href="/academy/pro-bootcamp/" class="go">Explore the Bootcamp &rarr;</a></div>
+            <div class="pc"><span class="tag tag--purple">For Skilled Professionals</span><h3>The Dollar Offer Blueprint</h3><p>You already have a digital skill. Learn where foreign companies hire that most applicants never check, how to reach the person who decides, and how to send a pitch built so yes is the easy answer. Live group sessions every two weeks.</p><a href="/academy/dollar-blueprint/" class="go">Explore the Blueprint &rarr;</a></div>
             <div class="pc"><span class="tag tag--pink">For Business Owners</span><h3>Online Marketing Mentorship for Business Owners</h3><p>3-month mentorship covering 5 marketing systems: Meta Ads, TikTok Ads, page optimization, social automation, and account recovery. 25 video walkthroughs, handbooks, implementation support, and WhatsApp community.</p><a href="/academy/sme/bundle/" class="go">Explore the Mentorship &rarr;</a></div>
           </div>
           <div class="opt-cta"><a class="lnk" href="/academy/">See all Academy programs &rarr;</a></div>
@@ -515,6 +519,7 @@ a.pbox:hover{background:var(--sb);text-decoration:none}
             <ul class="footer-list">
               <li><a href="/academy/dime/">Digital Income Made Easy (DIME)</a></li>
               <li><a href="/academy/pro-bootcamp/">Product & Growth Marketing with AI Bootcamp</a></li>
+              <li><a href="/academy/dollar-blueprint/">The Dollar Offer Blueprint</a></li>
               <li><a href="/academy/sme/bundle/">Online Marketing Mentorship for Business Owners</a></li>
               <li><a href="/academy/ai-prompts/">AI Prompt Frameworks & Templates</a></li>
               <li><a href="/academy/templates/">Product Marketing Templates & Resources</a></li>
