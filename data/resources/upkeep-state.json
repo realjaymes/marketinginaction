@@ -1538,5 +1538,319 @@
       "2026-10-20 Evening Brief.md",
       "2026-10-20 Morning Brief.md"
     ]
+  },
+  "leaders": {
+    "adam-fishman": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "adia-sowho": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "alexander-estner": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "andrei-zinkevich": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "andrew-chen": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "anthony-pierri": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "april-dunford": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "arun-sivashankaran": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "blessing-abeng": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "bolaji-anifowose": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "brian-balfour": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "casey-winters": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "chris-mercer": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "corbin-brown": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "corey-haines": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "craig-zingerline": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "dan-hockenmaier": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "daniel-murray": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "domenico-loperfido": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "elena-madrigal": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "elena-verna": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "emily-kramer": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "eric-nowoslawski": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "eric-siu": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "essam-sleiman": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "fio-dossetto": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "franklin-ozekhome": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "greg-isenberg": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "guillaume-cabane": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "guillermo-flor": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "james-doman-pipe": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "james-praise": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "jan-meinecke": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "jared-waxman": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "jen-allen-knuth": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "john-rush": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "jonathan-m-k": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "jonathan-yagel": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "julian-shapiro": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "kevan-lee": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "kevin-depopas": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "khushi-lunkad": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "kieran-flanagan": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "kyle-poyar": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "lade-falobi": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "leah-tharin": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "lenny-rachitsky": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "maja-voje": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "matteo-tittarelli": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "michael-saruggia": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "nate-herk": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "neil-patel": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "nick-saraev": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "olabinjo-adeniran": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "peace-itimi": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "peter-yang": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "richard-purcell": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "riley-brown": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "robert-kaminski": {
+      "fails": 2,
+      "site_fails": 0
+    },
+    "ruben-hassid": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "seth-godin": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "simo-ahava": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "tom-orbach": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "victor-eduoh": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "wes-bush": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    },
+    "yash-tekriwal": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-10-21"
+    }
   }
 }

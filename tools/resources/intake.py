@@ -285,7 +285,7 @@ def summary(log, out):
     rej = log["events_rejected"] + log["tools_rejected"]
     if rej:
         parts.append("<p>Not added:</p>" + li(rej))
-    flags = [f"{f['name']}: {f['message']}" for f in review.get("events", []) + review.get("tools", [])]
+    flags = [f"{f['name']}: {f['message']}" for f in review.get("events", []) + review.get("tools", []) + review.get("leaders", [])]
     if flags:
         parts.append(f"<p>Waiting for your yes or no (from the {review.get('as_of', '')} upkeep run):</p>" + li(flags))
     parts += [f"<p>{n}</p>" for n in log["notes"]]

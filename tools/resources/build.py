@@ -14,6 +14,9 @@ Pages render against the data file's "updated" date, never today's date, so
 --check gives the same answer on every machine. The weekly upkeep job
 (tools/resources/upkeep.py) moves "updated" forward and rebuilds. A small
 script on the page also hides events that have passed since the last build.
+On the thought leaders page each card shows the person's latest post (saved by
+upkeep.py as "latest_post"), and anyone whose latest post is over 12 months old
+sits in a "Quieter lately" section below the main list.
 A tool with "hidden_since" (its site has been down) or "retired" (shut down, or
 merged into another listed product) is left off the page.
 
@@ -24,7 +27,7 @@ Usage:
 Vault: AI Workflows/MIA Resources from Notion — Build Plan.
 """
 import argparse, html, json, pathlib, re, sys
-from datetime import date
+from datetime import date, timedelta
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 DATA = ROOT / "data/resources"
@@ -779,6 +782,9 @@ def validate_leaders(d):
                 errs.append(f"{s}: {k} is not a link: {i[k]}")
         if not any(i.get(k) for k in ("x", "linkedin", "newsletter", "website")):
             errs.append(f"{s}: needs at least one link")
+        lp = i.get("latest_post")
+        if lp and (not lp.get("title") or not lp.get("url") or bad_link(lp["url"]) or not iso(lp.get("date"))):
+            errs.append(f"{s}: latest_post needs a title, a link and a date (YYYY-MM-DD)")
         if i.get("headshot") and not (LEADERS_DIR / i["headshot"]).is_file():
             errs.append(f"{s}: headshot file {i['headshot']} is missing, run tools/resources/headshots.py")
     return errs
@@ -797,6 +803,28 @@ def fallback_line(i):
     # Used until a researched one-liner exists, so no card is left without a description.
     topics = [t if t in ("AI", "GTM Engineering") else t.lower() for t in domain_order(i)]
     return "Shares ideas on " + (" and ".join(topics) if len(topics) < 3 else ", ".join(topics[:-1]) + " and " + topics[-1]) + "."
+
+
+def latest_line(i):
+    lp = i.get("latest_post")
+    if not lp:
+        return ""
+    d = iso(lp["date"])
+    return (f'            <p class="db-latest">Latest: <a class="db-link" href="{E(lp["url"], quote=True)}" target="_blank" rel="noopener">{E(lp["title"])}</a>'
+            f'<span class="db-meta">{MONTHS[d.month - 1]} {d.year}</span></p>\n')
+
+
+def is_quiet(i, as_of):
+    lp = i.get("latest_post")
+    return bool(lp) and iso(lp["date"]) < as_of - timedelta(days=365)
+
+
+# Latest post line, and the gap above the Quieter lately section.
+LEADER_CSS = """      <style>
+        .db-latest { margin: 0; font-size: 15px; line-height: 1.45; overflow-wrap: anywhere; }
+        .db-latest .db-meta { display: block; margin-top: 2px; }
+        .db-quiet { margin: var(--space-xl) 0 0; }
+      </style>"""
 
 
 def leader_card(i):
@@ -819,7 +847,7 @@ def leader_card(i):
               <div><h3 class="db-name">{E(i['name'])}</h3>{f'<p class="db-role">{E(role)}</p>' if role else ''}</div>
             </div>
             <p class="db-desc">{E(i.get("one_liner") or fallback_line(i))}</p>
-            <div class="db-tags">{tags}</div>
+{latest_line(i)}            <div class="db-tags">{tags}</div>
             <div class="db-links">{''.join(links)}</div>
           </article>"""
 
@@ -840,7 +868,14 @@ def leaders_files():
     if regions:
         groups.append(("Based in", "region", n, [(tok(r), r, sum(i.get("region") == r for i in people)) for r in regions]))
     panel = filter_panel("Name, company or topic", groups)
-    sections = '              <h2 class="db-sr">Marketing thought leaders</h2>\n              <div class="db-list">\n' + "\n".join(leader_card(i) for i in people) + "\n              </div>"
+    cards = lambda group: '              <div class="db-list">\n' + "\n".join(leader_card(i) for i in group) + "\n              </div>"
+    quiet = [i for i in people if is_quiet(i, as_of)]
+    sections = '              <h2 class="db-sr">Marketing thought leaders</h2>\n' + cards([i for i in people if i not in quiet])
+    if quiet:
+        sections += ('\n              <section class="db-group db-quiet" id="quieter-lately" data-fsec>\n'
+                     f'                <h2 class="db-group-title">Quieter lately<span class="db-sec-count">{len(quiet)}</span></h2>\n'
+                     '                <p class="db-note">These people have not posted anything new in over a year, going by their feeds.</p>\n'
+                     + cards(quiet) + "\n              </section>")
 
     main = hero("MIA Marketing Thought Leaders Database",
                 'Marketing thought leaders worth following in <span class="text-yellow accent-italic">growth, product marketing and GTM</span>',
@@ -861,6 +896,7 @@ def leaders_files():
         </div>
       </section>
 {DB_CSS}
+{LEADER_CSS}
 {FILTER_CSS}
 {FILTER_JS}"""
 

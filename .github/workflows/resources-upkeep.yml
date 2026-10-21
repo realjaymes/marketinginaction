@@ -3,6 +3,8 @@
 # tools/resources/upkeep.py moves ended events out, reads each official site
 # for next-edition dates and moved dates, and on the first run of each month
 # checks every tool's website (dead sites are hidden, pivots are flagged).
+# Every run also reads each thought leader's newsletter or blog feed and saves
+# their latest post, so the page can show it and move quiet writers down.
 # Anything that needs James's yes or no goes to data/resources/review.json,
 # which the 17:00 intake run reports in the daily digest. The pages are then
 # rebuilt and committed, and Netlify deploys the push.
@@ -41,7 +43,7 @@ jobs:
         run: |
           git config user.name "MIA resources upkeep"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/resources resources/tech-events-calendar resources/marketing-ai-tools
+          git add data/resources resources/tech-events-calendar resources/marketing-ai-tools resources/marketing-thought-leaders
           if git diff --cached --quiet; then echo "nothing changed"; exit 0; fi
           git commit -m "Resources upkeep $(date -u +%F)"
           git pull --rebase

@@ -11,6 +11,18 @@ Events (every run, weekly):
   - An event whose last edition is over two years old, or whose site has failed
     two runs in a row, is flagged for review, never removed automatically.
 
+Thought leaders (every run, weekly):
+  - For each person, a feed is found from their newsletter or website: Substack,
+    Medium and beehiiv by their known patterns, otherwise the feed the page
+    advertises, otherwise a common path (/feed, /rss, /feed.xml, /rss.xml,
+    /atom.xml). X and LinkedIn are skipped. The latest post (title, link, date)
+    is saved on the person as "latest_post", and the feed as "feed_url", which
+    later runs fetch directly.
+  - A feed that fails does not flap: "latest_post" is dropped only on the third
+    failure in a row. A person whose website and newsletter both fail two runs in
+    a row is flagged for review, never removed. build.py moves anyone with no
+    post in 12 months into "Quieter lately".
+
 Tools (monthly, or with --tools):
   - Each tool's website is loaded. A site that fails two runs in a row (no
     answer, 404, 410, a server error or a parked domain) is hidden from the page
@@ -30,14 +42,17 @@ intake run reports in the daily digest. The weekly GitHub Action
 commits.
 
 Usage:
-  python3 tools/resources/upkeep.py                 events, plus tools on the first run of a month
+  python3 tools/resources/upkeep.py                 events and thought leaders, plus tools on the first run of a month
+  python3 tools/resources/upkeep.py --leaders       the thought leaders step only
   python3 tools/resources/upkeep.py --tools         force the tools check
   python3 tools/resources/upkeep.py --no-fetch      date moves only, no network
   python3 tools/resources/upkeep.py --accept SLUG   accept a tool's current homepage after review
 
 Vault: AI Workflows/MIA Resources from Notion — Build Plan.
 """
-import argparse, concurrent.futures as cf, html, json, pathlib, re, sys, urllib.error, urllib.request
+import argparse, concurrent.futures as cf, html, json, pathlib, re, sys, urllib.error, urllib.parse, urllib.request
+import xml.etree.ElementTree as ET
+from email.utils import parsedate_to_datetime
 from datetime import date, timedelta
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
@@ -65,13 +80,15 @@ def save(p, d):
     p.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
-def fetch(url):
-    """Return (status, final_url, text). status is an int, "down" when nothing answered, or "not-html"."""
+def fetch(url, feed=False):
+    """Return (status, final_url, text). status is an int, "down" when nothing answered, or "not-html".
+    feed=True asks for XML and accepts any text type."""
+    headers = {**UA, "Accept": "application/rss+xml,application/atom+xml,application/xml,text/xml,*/*;q=0.5"} if feed else UA
     try:
-        with urllib.request.urlopen(urllib.request.Request(url, headers=UA), timeout=20) as r:
-            if "html" not in (r.headers.get("Content-Type") or "html"):
+        with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=20) as r:
+            if not feed and "html" not in (r.headers.get("Content-Type") or "html"):
                 return "not-html", r.geturl(), ""  # a PDF or file: nothing to read, and not a failure
-            return r.status, r.geturl(), r.read(600_000).decode("utf-8", "replace")
+            return r.status, r.geturl(), r.read(3_000_000 if feed else 600_000).decode("utf-8", "replace")
     except urllib.error.HTTPError as e:
         return e.code, url, ""
     except Exception:
@@ -201,6 +218,142 @@ def run_events(today, state, review, net):
     return changes, flags
 
 
+# ---------- thought leaders ----------
+
+FEED_PATHS = ["/feed", "/rss", "/feed.xml", "/rss.xml", "/atom.xml"]
+ALT_LINK = re.compile(r"<link\b[^>]*>", re.I)
+
+
+def tag(el):
+    return el.tag.rsplit("}", 1)[-1].lower() if isinstance(el.tag, str) else ""
+
+
+def clean(s):
+    return re.sub(r"\s+", " ", html.unescape(s or "")).strip()
+
+
+def post_date(s):
+    """An RSS (email style) or Atom (ISO) date as a date, or None."""
+    s = (s or "").strip()
+    try:
+        return date.fromisoformat(s[:10]) if re.match(r"\d{4}-\d\d-\d\d", s) else parsedate_to_datetime(s).date()
+    except (TypeError, ValueError):
+        return None
+
+
+def latest_post(text, today):
+    """Parse RSS or Atom text. Return the newest post as {title, url, date}, {} for a feed with no usable post, None if it is not a feed.
+    A post dated more than a day ahead is a scheduled one, so it is passed over."""
+    try:
+        root = ET.fromstring(text.lstrip("﻿ \n\t").encode("utf-8"))
+    except ET.ParseError:
+        return None
+    if tag(root) not in ("rss", "feed", "rdf"):
+        return None
+    best = None
+    for e in root.iter():
+        if tag(e) not in ("item", "entry"):
+            continue
+        d = next((x for x in (post_date(c.text) for c in e if tag(c) in ("pubdate", "published", "date", "updated")) if x), None)
+        t = next((c for c in e if tag(c) == "title"), None)
+        url = ""
+        for c in e:
+            if tag(c) == "link" and (c.get("rel") or "alternate") == "alternate":
+                url = (c.get("href") or c.text or "").strip()
+                break
+        if not (d and t is not None and url.startswith(("http://", "https://"))) or d > today + timedelta(days=1):
+            continue
+        if not best or d > best["d"]:
+            best = {"d": d, "title": clean("".join(t.itertext())), "url": url}
+    return {"title": best["title"], "url": best["url"], "date": best["d"].isoformat()} if best and best["title"] else {}
+
+
+def known_feed(url):
+    """The feed address for platforms whose pattern is fixed, or ""."""
+    u = re.sub(r"[?#].*$", "", url).rstrip("/")
+    h = u.split("/")[2].lower() if "//" in u else ""
+    if h.endswith("substack.com") or h.endswith("beehiiv.com"):
+        return "/".join(u.split("/")[:3]) + "/feed"
+    if h in ("medium.com", "www.medium.com"):
+        m = re.match(r"https?://[^/]+/(@[^/]+)", u)
+        return f"https://medium.com/feed/{m.group(1)}" if m else ""
+    return f"https://{h}/feed" if h.endswith(".medium.com") else ""
+
+
+def advertised_feeds(page, final):
+    out = []
+    for m in ALT_LINK.findall(page):
+        if re.search(r'type=["\']?application/(rss|atom)\+xml', m, re.I) and re.search(r'rel=["\']?alternate', m, re.I):
+            h = re.search(r'href=["\']?([^"\'\s>]+)', m, re.I)
+            if h:
+                out.append(urllib.parse.urljoin(final, html.unescape(h.group(1))))
+    return out
+
+
+def read_feed(url, today):
+    status, final, text = fetch(url, feed=True)
+    return (final, latest_post(text, today)) if status == 200 else (url, None)
+
+
+def find_leader_feed(i, today):
+    """Return (feed_url, latest, site_ok). feed_url is "" when no feed turned up; site_ok is False only when every page failed."""
+    if i.get("feed_url"):
+        url, post = read_feed(i["feed_url"], today)
+        if post is not None:
+            return url, post, True
+    bases = list(dict.fromkeys(u for u in (i.get("newsletter"), i.get("website")) if u))
+    pages_ok = False
+    for base in bases:
+        guess = known_feed(base)
+        if guess:
+            url, post = read_feed(guess, today)
+            if post is not None:
+                return url, post, True
+        status, final, text = fetch(base)
+        if failed(status, text):
+            continue
+        pages_ok = True
+        root = "/".join(final.split("/")[:3])
+        for cand in dict.fromkeys(advertised_feeds(text, final) + [root + p for p in FEED_PATHS]):
+            if cand == guess:
+                continue
+            url, post = read_feed(cand, today)
+            if post is not None:
+                return url, post, True
+    return "", None, pages_ok or not bases
+
+
+def run_leaders(today, state, review):
+    d = load(DATA / "thought-leaders.json", None)
+    st = state.setdefault("leaders", {})
+    people = [i for i in d["items"] if i.get("newsletter") or i.get("website")]  # X and LinkedIn block scripts, so they are not read
+    with cf.ThreadPoolExecutor(12) as ex:
+        found = dict(zip([i["slug"] for i in people], ex.map(lambda i: find_leader_feed(i, today), people)))
+    flags, changes = [], []
+    for i in people:
+        feed, post, site_ok = found[i["slug"]]
+        s = st.setdefault(i["slug"], {"fails": 0, "site_fails": 0})
+        s["site_fails"] = 0 if site_ok else s.get("site_fails", 0) + 1
+        if post is not None:
+            s["fails"], s["checked"] = 0, today.isoformat()
+            i["feed_url"] = feed
+            if post and post != i.get("latest_post"):
+                if post["url"] != (i.get("latest_post") or {}).get("url"):
+                    changes.append(f"{i['name']} has a new post: {post['title']}")
+                i["latest_post"] = post
+            continue
+        s["fails"] += 1
+        if s["fails"] >= 3 and i.pop("latest_post", None):
+            changes.append(f"{i['name']} lost its latest post: no feed answered for {s['fails']} runs in a row")
+        if s["site_fails"] >= 2:
+            flags.append({"kind": "leader-links-down", "slug": i["slug"], "name": i["name"],
+                          "message": f"Its website and newsletter have failed {s['site_fails']} runs in a row. Give a new link or take the person off the list."})
+    d["updated"] = today.isoformat()
+    save(DATA / "thought-leaders.json", d)
+    review["leaders"] = flags
+    return changes, flags
+
+
 # ---------- tools ----------
 
 def run_tools(today, state, review):
@@ -262,6 +415,7 @@ def accept(slug, state):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tools", action="store_true")
+    ap.add_argument("--leaders", action="store_true", help="run only the thought leaders step")
     ap.add_argument("--no-fetch", action="store_true")
     ap.add_argument("--accept")
     ap.add_argument("--today")
@@ -272,10 +426,16 @@ def main():
         save(STATE, state)
         return
     today = date.fromisoformat(args.today) if args.today else date.today()
-    changes, flags = run_events(today, state, review, not args.no_fetch)
+    changes, flags = [], []
+    if not args.leaders:
+        changes, flags = run_events(today, state, review, not args.no_fetch)
     last = state.get("tools_checked", "")
-    if not args.no_fetch and (args.tools or last[:7] != today.isoformat()[:7]):
+    if not args.no_fetch and not args.leaders and (args.tools or last[:7] != today.isoformat()[:7]):
         c, f = run_tools(today, state, review)
+        changes += c
+        flags += f
+    if not args.no_fetch:
+        c, f = run_leaders(today, state, review)
         changes += c
         flags += f
     review["as_of"] = today.isoformat()
@@ -283,7 +443,7 @@ def main():
     save(REVIEW, review)
     for c in changes:
         print("changed:", c)
-    for f in review.get("events", []) + review.get("tools", []):
+    for f in review.get("events", []) + review.get("tools", []) + review.get("leaders", []):
         print("review:", f["name"], "-", f["message"])
 
 
