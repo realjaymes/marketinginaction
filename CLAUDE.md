@@ -4,6 +4,10 @@ The project notes, status log and lessons live in James's Obsidian vault: `Areas
 
 Netlify serves the live site. `netlify.toml` runs the checks in `tools/` on every build, and the pre-push hook in `.githooks/` runs the same checks (enable it with `git config core.hooksPath .githooks`). Preview locally with `python3 -m http.server 8000`.
 
+## Ad bridges (/go/)
+
+A page needs a bridge at `go/[slug]/` only if it runs or will run paid ads. Acquisition niche pages (`/acquisition/[niche]/`) and resource pages never get one. `data/advertised-pages.json` is the explicit list of advertised pages and the bridge each one uses. `tools/check-bridges.py` fails the Netlify build, the GitHub Pages workflow and the pre-push hook when a listed page has no bridge, or when the bridge lacks a `noindex` robots tag, does not link to its page, auto-redirects, or appears in the sitemap. Add a page to the list before its first ad goes live, then build its bridge from the `mia-landing-page` skill's `references/bridge-page-template.html`. Bridges are kept out of search by the `noindex` tag only. `robots.txt` carries no Disallow rule, because a Disallow would stop the crawl and the tag would never be read.
+
 ## DIME proof figures
 
 James's Selar figures (sales count, naira total, currencies, milestones, best month, top product, ROAS) and the screenshots behind them live in one file, `data/dime-proof.json`. Seven DIME pages read from it: the sales page, Masterclass, Done-For-You, both replay pages and both class pages. Never type one of these figures straight into a page. Wrap text figures in `<span data-proof="key">`, give proof images `data-proof-img` plus a `data-proof-alt="... {key} ..."` template, and keep every proof screenshot in `academy/dime/assets/` (the Masterclass and Done-For-You pages use that folder too).

@@ -14,6 +14,10 @@ Usage
 -----
   python3 tools/preview-parity.py academy/pmm-course
   python3 tools/preview-parity.py academy/sme/consulting academy/tech-sales
+  python3 tools/preview-parity.py --option b services consulting
+
+--option NAME compares `options/NAME/index.html` instead of `options/new/`,
+for pages built as several design options at once.
 
 For each page folder it compares `index.html` (live) with
 `options/new/index.html` (preview):
@@ -71,9 +75,9 @@ TRACK_COUNTS = {
 }
 
 
-def compare(folder):
+def compare(folder, option="new"):
     live_p = ROOT / folder / "index.html"
-    prev_p = ROOT / folder / "options/new/index.html"
+    prev_p = ROOT / folder / "options" / option / "index.html"
     live, prev = live_p.read_text(), prev_p.read_text()
     problems = []
 
@@ -97,7 +101,7 @@ def compare(folder):
             problems.append(f"{label}: live {a}, preview {b}")
 
     noindex = 'name="robots"' in prev and "noindex" in prev
-    print(f"\n{folder}")
+    print(f"\n{folder}" + ("" if option == "new" else f" (option {option})"))
     for p in problems:
         print(f"  MISSING  {p}")
     if not problems:
@@ -110,5 +114,8 @@ if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(__doc__)
         sys.exit(2)
-    ok = all([compare(f.rstrip("/")) for f in sys.argv[1:]])
+    args, option = sys.argv[1:], "new"
+    if args[0] == "--option":
+        option, args = args[1], args[2:]
+    ok = all([compare(f.rstrip("/"), option) for f in args])
     sys.exit(0 if ok else 1)

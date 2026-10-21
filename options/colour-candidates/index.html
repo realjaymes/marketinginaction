@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Colour Candidates" />
+    <meta property="og:description" content="Internal review of colour candidates for MIA sales pages." />
+    <meta property="og:url" content="https://marketinginaction.xyz/options/colour-candidates/" />
+    <meta property="og:image" content="https://marketinginaction.xyz/assets/og-homepage.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Marketing In Action: put marketing into action, unlock revenue" />
+    <meta property="og:site_name" content="Marketing In Action" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@marketinginact" />
+    <meta name="twitter:title" content="Colour Candidates" />
+    <meta name="twitter:description" content="Internal review of colour candidates for MIA sales pages." />
+    <meta name="twitter:image" content="https://marketinginaction.xyz/assets/og-homepage.png" />
+    <meta name="twitter:image:alt" content="Marketing In Action: put marketing into action, unlock revenue" />
+<title>Colour Candidates</title>
+<style>
+:root{--ink:#100a16;--cream:#F7F4FA;--white:#fff;--line:#E3DDEA;--muted:rgba(16,10,22,.66);
+ --gold:#f1de71;--pink:#f171c4;--blue:#71c4f1;--green:#71f19e;--purple:#7184f1;--red:#C62828;--wa:#d9fdd3;--wa-icon:#1da851;
+ --pink-t:#F9E1EE;--blue-t:#DBEDF8;--green-t:#DCF4E4;--purple-t:#E6E4F7;--lilac:#E6E0EE}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:32px 16px 80px}
+h1{font-size:clamp(1.6rem,3vw,2.2rem);letter-spacing:-.02em;margin:0 0 8px}
+h2{font-size:1.25rem;margin:0}
+p{margin:0 0 10px}
+.lead{color:var(--muted);max-width:760px}
+.legend{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 28px}
+.legend span{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:6px 10px}
+.legend i{width:16px;height:16px;border-radius:50%;border:2px solid var(--ink);display:inline-block}
+.cand{background:#fff;border:3px solid var(--ink);border-radius:22px;box-shadow:4px 4px 0 var(--ink);padding:20px;margin:0 0 22px}
+.cand__h{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.id{font-weight:800;font-size:.85rem;background:var(--ink);color:#fff;border-radius:8px;padding:2px 8px}
+.verdict{font-size:.75rem;font-weight:800;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;margin-left:auto}
+.v-yes{background:var(--green-t)}.v-maybe{background:var(--blue-t)}
+.why{color:var(--muted);font-size:.95rem}
+.where{font-size:.82rem;color:var(--muted);margin:6px 0 14px}
+.where a{color:var(--ink)}
+.cmpx{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.pane{border:2px dashed var(--line);border-radius:16px;padding:16px;min-width:0}
+.pane b.lbl{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:10px}
+.pane.now{background:var(--cream)}
+.approve{display:flex;align-items:center;gap:8px;margin-top:14px;font-weight:700;cursor:pointer;user-select:none}
+.approve input{width:20px;height:20px;accent-color:var(--ink)}
+@media(max-width:700px){.cmpx{grid-template-columns:1fr}}
+
+/* component replicas, matching the live pages */
+.tag{display:inline-block;font-size:.74rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:5px 14px}
+.pill{display:inline-block;font-size:.85rem;font-weight:700;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:5px 14px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:800;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:4px 12px;line-height:1.3}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.seal{display:inline-block;transform:rotate(-6deg);background:var(--lilac);border:3px solid var(--ink);border-radius:18px;padding:8px 14px;font-weight:800;font-size:.85rem;box-shadow:3px 3px 0 var(--ink)}
+.circ{display:inline-grid;place-items:center;width:56px;height:56px;border:3px solid var(--ink);border-radius:50%;background:#fff;font-weight:750;font-size:1.6rem}
+.vi{display:flex;justify-content:space-between;align-items:center;gap:10px;border:2px solid var(--ink);border-radius:14px;padding:10px 12px;font-size:.88rem;font-weight:700}
+.struck{color:var(--red);text-decoration:line-through;font-weight:700;margin-right:6px}
+.free{display:inline-block;font-weight:800;font-size:.78rem;border:2px solid var(--ink);border-radius:999px;padding:2px 10px;background:var(--lilac)}
+.save{display:inline-block;font-weight:800;font-size:.85rem;border:2px solid var(--ink);border-radius:999px;padding:4px 12px;background:#fff}
+.cmpc{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.cmpcard{border:3px solid var(--ink);border-radius:18px;padding:10px;text-align:center;font-size:.8rem;background:#fff}
+.cmpcard strong{display:block;font-size:1.15rem}
+.av{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:50%;border:2px solid var(--ink);font-weight:800;background:#fff}
+.mod{display:inline-grid;place-items:center;width:38px;height:38px;border:2px solid var(--ink);border-radius:10px;font-weight:800;background:#fff}
+.badge{display:inline-block;font-size:.78rem;font-weight:800;border:2px solid var(--ink);border-radius:999px;padding:3px 10px;background:#fff}
+.wa svg{width:14px;height:14px;fill:var(--wa-icon)}
+
+/* proposed fills */
+.g{background:var(--green)!important}.gt{background:var(--green-t)!important}
+.pk{background:var(--pink)!important}.bl{background:var(--blue)!important}.pu{background:var(--purple)!important}
+.pkt{background:var(--pink-t)!important}.blt{background:var(--blue-t)!important}.put{background:var(--purple-t)!important}
+.wa-on{background:var(--wa)!important}
+.gold{background:var(--gold)!important}
+.picks{position:sticky;bottom:12px;background:var(--ink);color:#fff;border-radius:16px;padding:14px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-top:28px}
+.picks code{background:rgba(255,255,255,.12);border-radius:8px;padding:4px 8px;font-size:.9rem;white-space:normal}
+.picks button{font:inherit;font-weight:800;background:var(--gold);color:var(--ink);border:2px solid #fff;border-radius:999px;padding:6px 14px;cursor:pointer}
+.skip li{margin-bottom:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<h1>Colour candidates for the sales pages</h1>
+<p class="lead">Nothing here is live or applied. Each card shows how the element looks now and how it would look with colour, the pages it touches, and my call. Tick the ones you approve, then copy your picks from the bar at the bottom.</p>
+<p class="lead">The rule I followed: gold stays on buttons only, colour goes on small labels and seals, never on card edges or big blocks, and each colour keeps one meaning on every page. Most of these slots already had a colour in the design that the mono setting turned to lilac or white.</p>
+<div class="legend">
+ <span><i style="background:var(--green)"></i>Green: safety and value (guarantees, included, savings)</span>
+ <span><i style="background:var(--pink)"></i>Pink: bonuses and business owner pages</span>
+ <span><i style="background:var(--blue)"></i>Blue: marketer pages</span>
+ <span><i style="background:var(--purple)"></i>Purple: AI and credentials</span>
+ <span><i style="background:var(--gold)"></i>Gold: buttons only</span>
+</div>
+
+<!-- C1 -->
+<section class="cand" data-id="C1">
+ <div class="cand__h"><span class="id">C1</span><h2>Guarantee section label</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">The label above "If It Doesn't Work, You Get Your Money Back" is plain white. Green tells the reader it's the safe part of the page before they read it.</p>
+ <p class="where">7 pages: <a href="/academy/sme/meta-ads/">Meta Ads</a>, <a href="/academy/sme/tiktok-ads/">TikTok Ads</a>, <a href="/academy/sme/target-buyer/">Target Buyer</a>, <a href="/academy/pmm-course/">PMM</a>, <a href="/academy/tech-sales/">Tech Sales</a>, <a href="/academy/pro-bootcamp/">Bootcamp</a>, <a href="/academy/templates/">Templates</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><span class="tag">Guarantee</span></div><div class="pane"><b class="lbl">Proposed</b><span class="tag g">Guarantee</span></div></div>
+ <label class="approve"><input type="checkbox">Approve C1</label>
+</section>
+
+<!-- C2 -->
+<section class="cand" data-id="C2">
+ <div class="cand__h"><span class="id">C2</span><h2>Guarantee seal on the hero card</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">The tilted sticker on the hero card. The design already asks for green here, but the mono setting overrides it to lilac. A soft green tint keeps it calm and readable.</p>
+ <p class="where">8 pages: <a href="/academy/sme/bundle/">Mentorship</a>, <a href="/academy/sme/targeting-setup/">Targeting Setup</a>, <a href="/academy/pmm-course/">PMM</a>, <a href="/academy/tech-sales/">Tech Sales</a>, <a href="/academy/pro-bootcamp/">Bootcamp</a>, <a href="/academy/templates/">Templates</a>, <a href="/academy/dime/">DIME</a>, <a href="/academy/dime-masterclass/">DIME Masterclass</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><span class="seal">30-day money-back guarantee</span></div><div class="pane"><b class="lbl">Proposed</b><span class="seal gt">30-day money-back guarantee</span></div></div>
+ <label class="approve"><input type="checkbox">Approve C2</label>
+</section>
+
+<!-- C3 -->
+<section class="cand" data-id="C3">
+ <div class="cand__h"><span class="id">C3</span><h2>Guarantee circle above the guarantee heading</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">Two versions exist. The tick circle (a text tick, not an emoji) can take green. The shield on DIME pages is an emoji, so it follows your earlier rule for icon circles: white, so the emoji shows properly. It's lilac now.</p>
+ <p class="where">Tick: <a href="/academy/ai-prompts/">AI Prompts</a>, <a href="/academy/growth-handbook/">Growth Handbook</a>, <a href="/academy/digital-marketing/">Digital Marketing</a>. Shield: <a href="/academy/dime/">DIME</a>, <a href="/academy/dime-masterclass/">DIME Masterclass</a>, <a href="/academy/dime-dfy/">DIME Done-For-You</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="circ">&#10003;</span><span class="circ" style="background:var(--lilac)">&#128737;&#65039;</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="circ g">&#10003;</span><span class="circ">&#128737;&#65039;</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C3</label>
+</section>
+
+<!-- C4 -->
+<section class="cand" data-id="C4">
+ <div class="cand__h"><span class="id">C4</span><h2>"Included" and "Free" badges in the value stack</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">This is the highest-impact candidate. Each struck-out price sits next to a badge that's currently lilac or white. Green next to red strikethrough makes the value read at a glance, the way a receipt would.</p>
+ <p class="where">20 pages: every sales page with a value stack, across business owner, marketer and DIME pages</p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="vi"><span>7 video walkthroughs</span><span><span class="struck">&#8358;25,000</span><span class="free">Included</span></span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="vi"><span>7 video walkthroughs</span><span><span class="struck">&#8358;25,000</span><span class="free g">Included</span></span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C4</label>
+</section>
+
+<!-- C5 -->
+<section class="cand" data-id="C5">
+ <div class="cand__h"><span class="id">C5</span><h2>"Bonus" chips</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">Bonuses are extras, so pink sets them apart from the core items, which carry green "Included" badges after C4. The design already marks these chips pink; the mono setting flattened them.</p>
+ <p class="where">7 pages: <a href="/academy/sme/meta-ads/">Meta Ads</a>, <a href="/academy/sme/tiktok-ads/">TikTok Ads</a>, <a href="/academy/sme/target-buyer/">Target Buyer</a>, <a href="/academy/pro-bootcamp/">Bootcamp</a>, <a href="/academy/dime/">DIME</a>, <a href="/academy/dime-masterclass/">DIME Masterclass</a>, <a href="/academy/dime-dfy/">DIME Done-For-You</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="chip">Bonus</span><span class="chip">Free</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="chip pk">Bonus</span><span class="chip g">Free</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C5</label>
+</section>
+
+<!-- C6 -->
+<section class="cand" data-id="C6">
+ <div class="cand__h"><span class="id">C6</span><h2>Savings line and "Early bird" chip in pricing</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">"Save ₦210,000 (82% off)" and "Early bird" are money the buyer keeps. A green chip puts them in the same family as C4, so the pricing block reads as value plus one gold button.</p>
+ <p class="where">15 pages with a savings line or early-bird chip in the pricing card</p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="save">Save &#8358;210,000 (82% off)</span><span class="chip">Early bird</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="save g">Save &#8358;210,000 (82% off)</span><span class="chip g">Early bird</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C6</label>
+</section>
+
+<!-- C7 -->
+<section class="cand" data-id="C7">
+ <div class="cand__h"><span class="id">C7</span><h2>Hero audience pill matches the homepage colour meanings</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">The short pill above each headline ("For business owners who boost posts"). Using the same colour meanings as the homepage and hub labels ties each page to its audience.</p>
+ <p class="where">21 sales pages: pink on business owner pages, blue on marketer pages, green on DIME (beginners), purple on AI Prompts</p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="pill">For business owners who boost posts</span><span class="pill">For future product marketers</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="pill pk">For business owners who boost posts</span><span class="pill bl">For future product marketers</span><span class="pill g">For beginners earning online with AI</span><span class="pill pu">For marketers doing more with AI</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C7</label>
+</section>
+
+<!-- C8 -->
+<section class="cand" data-id="C8">
+ <div class="cand__h"><span class="id">C8</span><h2>WhatsApp chip in the Mentorship hero</h2><span class="verdict v-yes">Recommend</span></div>
+ <p class="why">"Private WhatsApp group" gets the same WhatsApp green and icon as the testimonial labels you approved. The other hero chips stay white.</p>
+ <p class="where">1 page: <a href="/academy/sme/bundle/">Mentorship</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="chip">3 months</span><span class="chip">Private WhatsApp group</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="chip">3 months</span><span class="chip wa wa-on"><svg viewBox="0 0 24 24"><path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.07c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.76-.72 2-1.41.25-.7.25-1.29.18-1.41-.08-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.89-9.88 2.64 0 5.12 1.03 6.99 2.9a9.83 9.83 0 0 1 2.89 6.99c0 5.45-4.44 9.88-9.88 9.88M20.46 3.49A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.34.16 11.89c0 2.1.55 4.14 1.59 5.95L.06 24l6.3-1.65a11.88 11.88 0 0 0 5.68 1.45h.01c6.55 0 11.89-5.34 11.89-11.89 0-3.18-1.24-6.17-3.48-8.42z"/></svg>Private WhatsApp group</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C8</label>
+</section>
+
+<!-- C9 -->
+<section class="cand" data-id="C9">
+ <div class="cand__h"><span class="id">C9</span><h2>The highlighted "this course" price card is gold but isn't a button</h2><span class="verdict v-maybe">Your call</span></div>
+ <p class="why">In the "Two Paths" price comparison, our option is filled gold. That breaks the gold-for-buttons rule and competes with the real buy button. A green tint keeps it marked as the good choice.</p>
+ <p class="where">7 pages: <a href="/academy/sme/meta-ads/">Meta Ads</a>, <a href="/academy/sme/tiktok-ads/">TikTok Ads</a>, <a href="/academy/sme/target-buyer/">Target Buyer</a>, <a href="/academy/pmm-course/">PMM</a>, <a href="/academy/tech-sales/">Tech Sales</a>, <a href="/academy/pro-bootcamp/">Bootcamp</a>, <a href="/academy/templates/">Templates</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="cmpc"><div class="cmpcard"><strong>&#8358;200,000/mo</strong>Agency reports you can't read</div><div class="cmpcard gold" style="box-shadow:4px 4px 0 var(--ink)"><strong>&#8358;15,000</strong>This workshop</div></div></div><div class="pane"><b class="lbl">Proposed</b><div class="cmpc"><div class="cmpcard"><strong>&#8358;200,000/mo</strong>Agency reports you can't read</div><div class="cmpcard gt" style="box-shadow:4px 4px 0 var(--ink)"><strong>&#8358;15,000</strong>This workshop</div></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C9</label>
+</section>
+
+<!-- C10 -->
+<section class="cand" data-id="C10">
+ <div class="cand__h"><span class="id">C10</span><h2>Testimonial letter avatars</h2><span class="verdict v-maybe">Your call</span></div>
+ <p class="why">The letter circles on testimonial cards are all white. Light tints rotating pink, blue, green and purple make a wall of quotes feel like different people. The tints carry no meaning here, which is why this is your call rather than a recommendation.</p>
+ <p class="where">10 pages: marketer pages plus Meta Ads, TikTok Ads and Target Buyer</p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="av">G</span><span class="av">O</span><span class="av">V</span><span class="av">A</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="av pkt">G</span><span class="av blt">O</span><span class="av gt">V</span><span class="av put">A</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C10</label>
+</section>
+
+<!-- C11 -->
+<section class="cand" data-id="C11">
+ <div class="cand__h"><span class="id">C11</span><h2>Award badges in the instructor section</h2><span class="verdict v-maybe">Your call</span></div>
+ <p class="why">The instructor block mixes plain stats with real awards in identical white badges. Purple on the two awards (ARMA Growth Catalyst, APMP Top 20) lifts them; the stats stay white.</p>
+ <p class="where">20 sales pages: every page with an instructor section</p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="badge">8+ Years Experience</span><span class="badge">20x+ ROAS</span><span class="badge">ARMA Growth Catalyst</span><span class="badge">APMP Top 20</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="badge">8+ Years Experience</span><span class="badge">20x+ ROAS</span><span class="badge put">ARMA Growth Catalyst</span><span class="badge put">APMP Top 20</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C11</label>
+</section>
+
+<!-- C12 -->
+<section class="cand" data-id="C12">
+ <div class="cand__h"><span class="id">C12</span><h2>Module and step numbers</h2><span class="verdict v-maybe">Your call</span></div>
+ <p class="why">The numbered boxes in "What you get" and roadmap lists. A purple tint gives the curriculum some rhythm. It's lower impact than C1 to C8, and it puts colour in many places on each page.</p>
+ <p class="where">19 pages with numbered module or step lists</p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><div class="row"><span class="mod">1</span><span class="mod">2</span><span class="mod">3</span><span class="mod">4</span></div></div><div class="pane"><b class="lbl">Proposed</b><div class="row"><span class="mod put">1</span><span class="mod put">2</span><span class="mod put">3</span><span class="mod put">4</span></div></div></div>
+ <label class="approve"><input type="checkbox">Approve C12</label>
+</section>
+
+<!-- C13 -->
+<section class="cand" data-id="C13">
+ <div class="cand__h"><span class="id">C13</span><h2>"Recommended" plan badge</h2><span class="verdict v-maybe">Your call</span></div>
+ <p class="why">The badge on the suggested plan. Green matches the value colour and points to the plan without using gold, which belongs to the button underneath it.</p>
+ <p class="where">2 pages: <a href="/academy/pro-bootcamp/">Bootcamp</a>, <a href="/academy/sme/consulting/">Consulting</a></p>
+ <div class="cmpx"><div class="pane now"><b class="lbl">Now</b><span class="chip">Recommended</span></div><div class="pane"><b class="lbl">Proposed</b><span class="chip g">Recommended</span></div></div>
+ <label class="approve"><input type="checkbox">Approve C13</label>
+</section>
+
+<section class="cand">
+ <h2>Left as they are</h2>
+ <ul class="skip">
+  <li>Section labels such as "Proof", "Results" and "The Shift" stay white. There are 5 to 8 per page, and colouring them would drown out the labels above.</li>
+  <li>No coloured card edges or stripes, including the stripe on "The Real Cost" problem cards. You ruled those out on the homepage cards.</li>
+  <li>Emoji icon circles stay white, as you asked.</li>
+  <li>Buttons stay gold, and gold stays off everything else.</li>
+  <li>Section backgrounds and large blocks stay as they are, so colour stays a signal.</li>
+ </ul>
+</section>
+
+<div class="picks"><strong>Your picks:</strong> <code id="out">none yet</code><button type="button" id="copy">Copy</button></div>
+</div>
+<script>
+(function(){
+  var out=document.getElementById('out');
+  function upd(){
+    var ids=[].slice.call(document.querySelectorAll('.cand[data-id]')).filter(function(c){return c.querySelector('input').checked}).map(function(c){return c.dataset.id});
+    out.textContent=ids.length?('Approve '+ids.join(', ')):'none yet';
+  }
+  document.addEventListener('change',upd);
+  document.getElementById('copy').addEventListener('click',function(){
+    try{navigator.clipboard.writeText(out.textContent)}catch(e){}
+    this.textContent='Copied';var b=this;setTimeout(function(){b.textContent='Copy'},1200);
+  });
+})();
+</script>
+</body>
+</html>

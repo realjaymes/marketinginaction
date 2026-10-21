@@ -1,0 +1,15 @@
+{
+  "description": "Pages that run or will run paid ads. Each needs an ad bridge page at go/[slug]/ (checked by tools/check-bridges.py). Acquisition niche pages and resource pages are exempt and stay off this list. Add a page here before its first ad goes live, then build its bridge.",
+  "pages": [
+    {"page": "academy/dime/class/", "bridge": "go/dime-class/"},
+    {"page": "academy/dime-masterclass/", "bridge": "go/dime-masterclass/"},
+    {"page": "academy/pro-bootcamp/", "bridge": "go/pro-bootcamp/"},
+    {"page": "academy/sme/bundle/", "bridge": "go/bundle/"},
+    {"page": "academy/sme/consulting/", "bridge": "go/consulting/"},
+    {"page": "academy/sme/meta-ads/", "bridge": "go/meta-ads/"},
+    {"page": "academy/sme/safety-net/", "bridge": "go/safety-net/"},
+    {"page": "academy/sme/target-buyer/", "bridge": "go/target-buyer/"},
+    {"page": "academy/sme/targeting-setup/", "bridge": "go/targeting-setup/"},
+    {"page": "academy/sme/tiktok-ads/", "bridge": "go/tiktok-ads/"}
+  ]
+}

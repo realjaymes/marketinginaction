@@ -1,10 +1,10 @@
 #!/bin/sh
-# Runs the same four checks as the Netlify build (netlify.toml), so a push that
+# Runs the same five checks as the Netlify build (netlify.toml), so a push that
 # would fail the live deploy is stopped here instead. Enable once per clone with:
 #   git config core.hooksPath .githooks
 # The sitemap is not checked here, because the build regenerates it.
 root=$(git rev-parse --show-toplevel)
-for check in verify-calculators check-wording check-og dime-proof; do
+for check in verify-calculators check-wording check-og check-bridges dime-proof; do
   if ! python3 "$root/tools/$check.py"; then
     echo "pre-push: $check failed, push stopped. Fix the pages, or the script's" >&2
     echo "rules in tools/$check.py, so they agree." >&2

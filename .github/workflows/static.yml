@@ -61,6 +61,12 @@ jobs:
         # tags, so this fails the deploy; tools/og-tags.py writes the fix.
         run: python3 tools/check-og.py
 
+      - name: Check ad bridges
+        # Every page listed in data/advertised-pages.json runs paid ads and needs
+        # a clean noindex, click-gated bridge at go/[slug]/. Acquisition and
+        # resource pages stay off that list.
+        run: python3 tools/check-bridges.py
+
       - name: Check DIME proof figures
         # data/dime-proof.json holds James's Selar figures and screenshots. Every
         # DIME page must show them through data-proof markers and current
