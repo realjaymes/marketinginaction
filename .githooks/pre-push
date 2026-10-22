@@ -1,5 +1,5 @@
 #!/bin/sh
-# Runs the same five checks as the Netlify build (netlify.toml), so a push that
+# Runs the same five checks as the Cloudflare Pages build (tools/cf-build.sh), so a push that
 # would fail the live deploy is stopped here instead. Enable once per clone with:
 #   git config core.hooksPath .githooks
 # The sitemap is not checked here, because the build regenerates it.

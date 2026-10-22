@@ -1,7 +1,7 @@
-# Netlify serves marketinginaction.xyz, so the site checks run here, inside the
-# Netlify build. A failed check fails the build, and Netlify keeps the last good
-# deploy live. The GitHub Actions workflow runs the same checks for its GitHub
-# Pages copy; keep the two lists in step.
+# Netlify was the previous host. Cloudflare Pages now serves marketinginaction.xyz
+# (tools/cf-build.sh), and Netlify builds are stopped. This file stays only so
+# Netlify can serve as a fallback until that decision is made; it runs the same
+# checks as the Cloudflare build and the GitHub Pages workflow.
 [build]
   publish = "."
   # set -e stops the build at the first failing step.

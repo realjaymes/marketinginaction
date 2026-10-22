@@ -7,7 +7,7 @@
 #      n8n feed, MIA Tools Watch reports and the X briefs' Tool launches tables
 #   3. if any tools arrived as a name and link only, one Claude step researches
 #      them into full rows, and intake.py add checks and adds them
-#   4. rebuild, check, commit and push (Netlify deploys the push)
+#   4. rebuild, check, commit and push (Cloudflare Pages deploys the push)
 # It prints the digest HTML for the runner. Usage:
 #   intake-run.sh [--events "a.md;b.md"] [--tools "c.md"]   (vault-relative report paths)
 set -u

@@ -7,7 +7,7 @@
 # their latest post, so the page can show it and move quiet writers down.
 # Anything that needs James's yes or no goes to data/resources/review.json,
 # which the 17:00 intake run reports in the daily digest. The pages are then
-# rebuilt and committed, and Netlify deploys the push.
+# rebuilt and committed, and Cloudflare Pages deploys the push.
 name: Resources upkeep
 
 on:

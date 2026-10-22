@@ -1,6 +1,6 @@
 # Deploys a GitHub Pages copy of the site. The live site, marketinginaction.xyz,
-# is served by Netlify, and netlify.toml runs the same checks in the Netlify
-# build. Keep the check steps here and there in step.
+# is served by Cloudflare Pages, and tools/cf-build.sh runs the same checks in
+# the Cloudflare build. Keep the check steps here and there in step.
 name: Deploy static content to Pages
 
 on:
