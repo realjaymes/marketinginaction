@@ -16,8 +16,8 @@ to the Apps Script web app in ``ENDPOINT``, which appends them to the "Demo
 submissions" tab of the View Leads sheet. The script source and how it is
 deployed are in ``tools/example-pages-apps-script.gs``.
 
-Every page is ``noindex`` (so the sitemap skips it), says on its ribbon and its
-fine print that the business is made up, and never shows fake reviews.
+Every page is ``noindex`` (so the sitemap skips it), says in its fine print that
+the business is made up, and never shows fake reviews.
 
 Run it after editing the data file::
 
@@ -191,8 +191,7 @@ def page(p):
     tint_reviews = has_checks
     tint_faq = not tint_reviews
     mark = p["business"][0]
-    ribbon_link = p["offer_page"]
-    ribbon_text = "See the offer →" if ribbon_link.endswith("/niches/") else "See the offer for businesses like this →"
+    offer_link = p["offer_page"]
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -246,9 +245,6 @@ def page(p):
   .btn.ghost:hover{{background:color-mix(in srgb,var(--deep) 12%,#fff)}}
   .eyebrow{{color:var(--accent-dk);font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;margin-bottom:.5rem}}
 
-  .ribbon{{background:var(--mia-ink);color:#f7f4fa;font-size:.84rem;padding:9px 16px;text-align:center;line-height:1.45}}
-  .ribbon b{{color:var(--mia-gold)}}
-  .ribbon a{{color:var(--mia-gold);text-decoration:underline;white-space:nowrap}}
 
   header{{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}}
   .nav{{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;max-width:1140px;margin:0 auto}}
@@ -341,7 +337,6 @@ def page(p):
 </head>
 <body>
 
-<div class="ribbon"><b>Example page by Marketing In Action.</b> {esc(p["business"])} is made up. This is the page your customers would see. <a href="{ribbon_link}">{ribbon_text}</a></div>
 
 <header>
   <div class="nav">
@@ -404,7 +399,7 @@ def page(p):
       <div><b>{esc(p["business"])}</b>{esc(p["footer"])} This business is made up for an example page.</div>
       <div><b>Book</b><a href="#book">{esc(p["cta_long"])}</a></div>
     </div>
-    <div class="legal">Example page built by <a href="{ribbon_link}">Marketing In Action</a> to show local businesses what their customer page could look like.</div>
+    <div class="legal">Example page built by <a href="{offer_link}">Marketing In Action</a> to show local businesses what their customer page could look like.</div>
   </div>
 </footer>
 
