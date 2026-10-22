@@ -1,0 +1,4108 @@
+[
+  {
+    "slug": "adu-builders",
+    "niche": "ADU builders",
+    "offer_page": "/acquisition/niches/",
+    "business": "Backyard Suite Builders",
+    "tagline": "Accessory dwelling unit design and construction",
+    "palette": {
+      "deep": "#243b35",
+      "deep_dk": "#182a25",
+      "accent": "#a34716",
+      "accent_dk": "#843711",
+      "sky": "#f5efe8"
+    },
+    "title": "Free ADU Consultation",
+    "cta_long": "Plan my ADU consultation",
+    "cta_short": "Plan my ADU",
+    "eyebrow": "Free project consultation",
+    "h1": "See what kind of ADU could fit your property.",
+    "lead": "Tell us what you want to build and when. We'll call to discuss the site, your goals and the next step.",
+    "trust": [
+      "Site specific guidance",
+      "Clear project steps",
+      "Written project estimate"
+    ],
+    "form_title": "Request your ADU consultation",
+    "form_sub": "Start with the basics. Three quick steps.",
+    "questions": [
+      {
+        "label": "What to build",
+        "ask": "What kind of ADU are you considering?",
+        "options": [
+          "Detached ADU",
+          "Attached ADU",
+          "Garage conversion",
+          "Junior ADU"
+        ]
+      },
+      {
+        "label": "Timeline",
+        "ask": "When would you like to get started?",
+        "options": [
+          "Ready now",
+          "In 3 months",
+          "In 6 months",
+          "Just researching"
+        ]
+      },
+      {
+        "label": "Budget",
+        "ask": "What budget range are you considering?",
+        "options": [
+          "Under $150K",
+          "$150K to $250K",
+          "$250K to $400K",
+          "Not sure yet"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the property?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Plan my consultation",
+    "thanks": "We'll call to discuss your property, project goals and a good time for your consultation.",
+    "cards": {
+      "eyebrow": "Reasons to build",
+      "h2": "An ADU can give one property more room to work with.",
+      "p": "The right plan depends on your lot, local rules and how you want to use the space.",
+      "items": [
+        {
+          "h": "Room for a family member",
+          "p": "Create a separate place for a parent, adult child or visiting relative."
+        },
+        {
+          "h": "A garage that could do more",
+          "p": "An existing garage may have potential for a conversion, subject to local rules."
+        },
+        {
+          "h": "Space for long visits",
+          "p": "Give guests privacy without changing the main home's layout."
+        },
+        {
+          "h": "A smaller future home",
+          "p": "Some owners build an ADU as part of a longer term housing plan."
+        },
+        {
+          "h": "A possible rental unit",
+          "p": "Local rules may allow an ADU to be rented after permits and construction are complete."
+        },
+        {
+          "h": "A lot with unused space",
+          "p": "A site review can help show whether a detached or attached layout may fit."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Move from an idea to a site plan.",
+      "items": [
+        {
+          "h": "Describe your project",
+          "p": "Share the type of ADU, your timing and your starting budget."
+        },
+        {
+          "h": "We call to review it",
+          "p": "We ask about the property and book a project consultation."
+        },
+        {
+          "h": "We assess the next step",
+          "p": "We discuss likely constraints, the design process and what an estimate would require."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What does ADU mean?",
+        "a": "An accessory dwelling unit is a smaller independent home built on the same property as a main home."
+      },
+      {
+        "q": "Can any property have an ADU?",
+        "a": "No. Lot size, access, utilities and local zoning rules can all affect what is possible."
+      },
+      {
+        "q": "Do you handle permits?",
+        "a": "Permit support can be discussed during the consultation because requirements differ by city and project."
+      },
+      {
+        "q": "Can you convert my garage?",
+        "a": "Possibly. We need to review the garage, utilities and local requirements before advising you."
+      },
+      {
+        "q": "How long does an ADU take to build?",
+        "a": "Timing depends on design, permits, site work and the type of build. We can outline the likely stages after reviewing your property."
+      }
+    ],
+    "book": {
+      "h2": "Plan your ADU consultation",
+      "p": "Tell us what you have in mind and we'll call to discuss the property."
+    },
+    "footer": "Accessory dwelling unit planning and construction for homeowners in {city}."
+  },
+  {
+    "slug": "basement-waterproofing",
+    "niche": "Basement waterproofing",
+    "offer_page": "/acquisition/basement-waterproofing/",
+    "business": "DryLine Basement Systems",
+    "tagline": "Basement moisture and water control",
+    "palette": {
+      "deep": "#18324a",
+      "deep_dk": "#102334",
+      "accent": "#267b66",
+      "accent_dk": "#1d624f",
+      "sky": "#eaf4f1"
+    },
+    "title": "Free Basement Inspection",
+    "cta_long": "Book a free inspection",
+    "cta_short": "Free inspection",
+    "eyebrow": "Free basement inspection",
+    "h1": "Find where the water is getting into your basement.",
+    "lead": "Show us what you have noticed. We'll inspect the basement, explain the likely source and provide a written estimate if work is needed.",
+    "trust": [
+      "Clear written estimate",
+      "Inside and outside review",
+      "No pressure to decide"
+    ],
+    "form_title": "Request your basement inspection",
+    "form_sub": "Tell us what is happening. Three quick steps.",
+    "questions": [
+      {
+        "label": "Problem",
+        "ask": "What are you seeing in the basement?",
+        "options": [
+          "Standing water",
+          "Water after rain",
+          "Cracks in walls",
+          "Damp or musty smell",
+          "Mold"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "How soon do you need help?",
+        "options": [
+          "Emergency",
+          "This month",
+          "Within 3 months",
+          "Just planning ahead"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes",
+          "No, renting"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Book my inspection",
+    "thanks": "We'll call shortly to ask a few details and book your basement inspection.",
+    "cards": {
+      "eyebrow": "Signs to check",
+      "h2": "Basement water rarely stays in one corner.",
+      "p": "An inspection can trace visible signs back to drainage, cracks or moisture around the foundation.",
+      "items": [
+        {
+          "h": "Water after heavy rain",
+          "p": "Puddles or wet edges appear when the ground outside is saturated."
+        },
+        {
+          "h": "A damp, musty smell",
+          "p": "The basement smells damp even when you cannot see standing water."
+        },
+        {
+          "h": "White marks on walls",
+          "p": "Chalky deposits can remain after moisture moves through masonry."
+        },
+        {
+          "h": "Cracks that stay wet",
+          "p": "Wall or floor cracks darken or seep during wet weather."
+        },
+        {
+          "h": "Peeling paint or finishes",
+          "p": "Paint, flooring or wall coverings lift where moisture keeps returning."
+        },
+        {
+          "h": "A sump pump that struggles",
+          "p": "The pump runs often, makes odd sounds or cannot keep up with incoming water."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we inspect",
+      "h2": "Six places that can point to the source.",
+      "p": "We look at the basement and the drainage conditions around it.",
+      "items": [
+        {
+          "h": "Foundation walls",
+          "small": "cracks and moisture marks"
+        },
+        {
+          "h": "Basement floor",
+          "small": "seepage and low spots"
+        },
+        {
+          "h": "Window wells",
+          "small": "drainage and entry points"
+        },
+        {
+          "h": "Sump system",
+          "small": "pump and discharge route"
+        },
+        {
+          "h": "Outside grading",
+          "small": "water flow near the home"
+        },
+        {
+          "h": "Downspouts",
+          "small": "where roof water goes"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Get a clear view of the problem.",
+      "items": [
+        {
+          "h": "Describe what you see",
+          "p": "Tell us about the water, smell, cracks and timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We confirm the details and choose an inspection time."
+        },
+        {
+          "h": "We inspect and explain",
+          "p": "You see the likely source and receive a written estimate for recommended work."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the inspection free?",
+        "a": "Yes. There is no charge for the inspection and no obligation to approve work."
+      },
+      {
+        "q": "Can you inspect during dry weather?",
+        "a": "Yes. Water marks, cracks and drainage conditions can still provide useful clues."
+      },
+      {
+        "q": "Does a musty smell mean I need waterproofing?",
+        "a": "Not always. An inspection can help separate seepage, humidity and other possible sources."
+      },
+      {
+        "q": "Do I need to own the home?",
+        "a": "Permanent waterproofing work needs the property owner's approval. Renters should ask the landlord to book."
+      },
+      {
+        "q": "Will I get an estimate at the visit?",
+        "a": "If the cause and scope are clear, we provide a written estimate and explain the recommended work."
+      }
+    ],
+    "book": {
+      "h2": "Book your free basement inspection",
+      "p": "Share what you have noticed and we'll call to arrange the visit."
+    },
+    "footer": "Basement waterproofing and drainage solutions for homes in {city}."
+  },
+  {
+    "slug": "electrical",
+    "niche": "Electrical",
+    "offer_page": "/acquisition/electrical/",
+    "business": "Brightwire Electric",
+    "tagline": "Residential and small business electrical work",
+    "palette": {
+      "deep": "#322f46",
+      "deep_dk": "#242133",
+      "accent": "#9b5700",
+      "accent_dk": "#7a4400",
+      "sky": "#fff4dc"
+    },
+    "title": "Free Electrical Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free electrical estimate",
+    "h1": "Plan your electrical project with a clear written estimate.",
+    "lead": "Tell us what you need and where. We'll call to review the job and arrange an estimate.",
+    "trust": [
+      "Home and small business",
+      "Clear scope of work",
+      "Written estimate"
+    ],
+    "form_title": "Request your electrical estimate",
+    "form_sub": "Tell us about the job. Three quick steps.",
+    "questions": [
+      {
+        "label": "Job type",
+        "ask": "What electrical work do you need?",
+        "options": [
+          "New outlets or wiring",
+          "Lighting install",
+          "EV charger install",
+          "Generator hookup",
+          "Panel upgrade"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need the work?",
+        "options": [
+          "Today",
+          "This week",
+          "This month",
+          "Just getting quotes"
+        ]
+      },
+      {
+        "label": "Property",
+        "ask": "What kind of property is it?",
+        "options": [
+          "House",
+          "Townhouse",
+          "Small business"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to confirm the job details and arrange a time for your electrical estimate.",
+    "cards": {
+      "eyebrow": "Jobs we can discuss",
+      "h2": "Start with the work you need done.",
+      "p": "A short call helps us understand the property, access and parts involved.",
+      "items": [
+        {
+          "h": "An older electrical panel",
+          "p": "You need more capacity or want an electrician to review an upgrade."
+        },
+        {
+          "h": "An electric vehicle charger",
+          "p": "You want a charger installed near the place where you park."
+        },
+        {
+          "h": "New lights or fixtures",
+          "p": "You have fixtures to add, replace or move inside or outside."
+        },
+        {
+          "h": "Too few outlets",
+          "p": "Extension cords are doing work that new outlets or circuits should handle."
+        },
+        {
+          "h": "A generator connection",
+          "p": "You want a safe connection point for backup power equipment."
+        },
+        {
+          "h": "Wiring for a renovation",
+          "p": "A remodel or new room needs circuits, switches, lighting and outlets."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Get the job reviewed and scheduled.",
+      "items": [
+        {
+          "h": "Tell us about the work",
+          "p": "Choose the job type, timing and property."
+        },
+        {
+          "h": "We call to review it",
+          "p": "We ask a few practical questions and arrange an estimate."
+        },
+        {
+          "h": "We assess the job",
+          "p": "You receive the scope, next steps and a written estimate for the work."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Do you handle small electrical jobs?",
+        "a": "Yes. Tell us what you need, and we can confirm whether it fits the service area and schedule."
+      },
+      {
+        "q": "Can you install a charger I already bought?",
+        "a": "That depends on the charger, panel capacity and installation location. We review those details first."
+      },
+      {
+        "q": "Do I need an estimate for urgent work?",
+        "a": "For a dangerous condition, keep away from the area and contact emergency services or the utility when appropriate. We will explain our earliest service option by phone."
+      },
+      {
+        "q": "Will power need to be turned off?",
+        "a": "Some jobs require a temporary shutoff. We explain that before work starts."
+      }
+    ],
+    "book": {
+      "h2": "Request your electrical estimate",
+      "p": "Tell us about the job and we'll call to arrange the next step."
+    },
+    "footer": "Electrical installation and repair for homes and small businesses in {city}."
+  },
+  {
+    "slug": "excavation-septic",
+    "niche": "Excavation and septic",
+    "offer_page": "/acquisition/excavation-septic/",
+    "business": "Ironridge Excavation & Septic",
+    "tagline": "Excavation, grading and septic services",
+    "palette": {
+      "deep": "#3d3328",
+      "deep_dk": "#2a231c",
+      "accent": "#9b4f20",
+      "accent_dk": "#7e3f18",
+      "sky": "#f4eee7"
+    },
+    "title": "Free Project Estimate",
+    "cta_long": "Request a project estimate",
+    "cta_short": "Project estimate",
+    "eyebrow": "Free site estimate",
+    "h1": "Get the right equipment and plan for your property work.",
+    "lead": "Tell us about the site and the work you need. We'll call to review access, timing and the next step for an estimate.",
+    "trust": [
+      "Homes, lots and acreage",
+      "Site access reviewed",
+      "Written estimate"
+    ],
+    "form_title": "Request your site estimate",
+    "form_sub": "Share the project basics. Three quick steps.",
+    "questions": [
+      {
+        "label": "Service",
+        "ask": "What work do you need?",
+        "options": [
+          "Septic pumping",
+          "Septic repair",
+          "New septic system",
+          "Drainage or grading",
+          "Land clearing"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need the work?",
+        "options": [
+          "Emergency",
+          "Within 2 weeks",
+          "This season",
+          "Just planning ahead"
+        ]
+      },
+      {
+        "label": "Property",
+        "ask": "What kind of property is it?",
+        "options": [
+          "Home",
+          "New build lot",
+          "Farm or acreage"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to learn about the site and arrange the right next step for an estimate.",
+    "cards": {
+      "eyebrow": "Projects we handle",
+      "h2": "Heavy work starts with the ground, access and drainage.",
+      "p": "A site review helps define the equipment, crew and preparation the job may need.",
+      "items": [
+        {
+          "h": "A septic tank needs pumping",
+          "p": "Routine service is due, or the system is showing signs that need prompt attention."
+        },
+        {
+          "h": "Drainage crosses the yard",
+          "p": "Water collects, washes out soil or runs toward a building."
+        },
+        {
+          "h": "A new lot needs preparation",
+          "p": "The site needs clearing, grading or excavation before construction."
+        },
+        {
+          "h": "A septic system needs repair",
+          "p": "A known problem needs inspection and a clear repair plan."
+        },
+        {
+          "h": "A new system is planned",
+          "p": "The property needs excavation coordinated with the approved septic design."
+        },
+        {
+          "h": "Brush blocks usable land",
+          "p": "Trees, brush or debris need clearing before the next stage of work."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Start with the site and the job.",
+      "items": [
+        {
+          "h": "Describe the work",
+          "p": "Tell us the service, property type and timing."
+        },
+        {
+          "h": "We call to review access",
+          "p": "We ask about the site, equipment access and any existing plans."
+        },
+        {
+          "h": "We visit or schedule service",
+          "p": "We arrange the appropriate site review, pumping visit or project estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Do you provide emergency septic service?",
+        "a": "Availability varies by day and location. Submit the request and call if sewage is backing up or the area is unsafe."
+      },
+      {
+        "q": "Can you work from an existing septic plan?",
+        "a": "Yes. Share the approved documents during the site review so the scope can follow them."
+      },
+      {
+        "q": "Do I need to mark utilities first?",
+        "a": "Utility marking is an important part of excavation planning. We explain who arranges it before digging begins."
+      },
+      {
+        "q": "Can you estimate land clearing without seeing the lot?",
+        "a": "We can discuss it by phone, but access, slope, vegetation and disposal needs usually require a site visit."
+      }
+    ],
+    "book": {
+      "h2": "Request your site estimate",
+      "p": "Tell us what the property needs and we'll call to review it."
+    },
+    "footer": "Excavation, grading and septic services for properties in {city}."
+  },
+  {
+    "slug": "fencing",
+    "niche": "Fencing",
+    "offer_page": "/acquisition/fencing/",
+    "business": "Stonegate Fence Co",
+    "tagline": "Residential fence installation",
+    "palette": {
+      "deep": "#29413e",
+      "deep_dk": "#1d2f2c",
+      "accent": "#a3472c",
+      "accent_dk": "#843823",
+      "sky": "#f3eee8"
+    },
+    "title": "Free Fence Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free fence estimate",
+    "h1": "Plan a fence that fits your yard and how you use it.",
+    "lead": "Tell us the fence type, rough length and timing. We'll call to arrange a site estimate.",
+    "trust": [
+      "Material choices explained",
+      "Property lines reviewed",
+      "Written estimate"
+    ],
+    "form_title": "Request your fence estimate",
+    "form_sub": "Tell us about the yard. Three quick steps.",
+    "questions": [
+      {
+        "label": "Fence type",
+        "ask": "What kind of fence are you considering?",
+        "options": [
+          "Wood privacy",
+          "Vinyl",
+          "Aluminum",
+          "Chain link",
+          "Not sure"
+        ]
+      },
+      {
+        "label": "Length",
+        "ask": "About how much fence do you need?",
+        "options": [
+          "Under 100 ft",
+          "100 to 200 ft",
+          "200 to 400 ft",
+          "Over 400 ft"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like the fence installed?",
+        "options": [
+          "Within 2 weeks",
+          "Within a month",
+          "This season",
+          "Just getting quotes"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the property?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to confirm the fence details and arrange a time to measure the property.",
+    "cards": {
+      "eyebrow": "Reasons for a new fence",
+      "h2": "The best fence starts with what you need it to do.",
+      "p": "Material, height, gates and layout all follow from how you use the yard.",
+      "items": [
+        {
+          "h": "The yard needs privacy",
+          "p": "Create a clearer boundary between your outdoor space and nearby properties."
+        },
+        {
+          "h": "A dog needs a safe boundary",
+          "p": "Choose a height and layout suited to the yard and the dog's size."
+        },
+        {
+          "h": "An old fence is failing",
+          "p": "Leaning posts, loose panels and rot may make replacement more practical than repairs."
+        },
+        {
+          "h": "A pool area needs a barrier",
+          "p": "Plan a fence and gates around local safety requirements."
+        },
+        {
+          "h": "The front boundary looks unclear",
+          "p": "A lower decorative fence can define the property without closing it in."
+        },
+        {
+          "h": "A side gate is missing",
+          "p": "Add practical access for bins, lawn equipment or backyard work."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "From rough length to written estimate.",
+      "items": [
+        {
+          "h": "Describe your fence",
+          "p": "Choose a material, estimated length and preferred timing."
+        },
+        {
+          "h": "We call to book a measure",
+          "p": "We ask about gates, access and the property boundary."
+        },
+        {
+          "h": "We measure and quote",
+          "p": "We review the layout and provide a written estimate for the selected fence."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Do I need a property survey?",
+        "a": "A clear boundary is important. We can discuss what records or markings are needed for your property."
+      },
+      {
+        "q": "Which fence material lasts longest?",
+        "a": "Each material has different maintenance, appearance and cost. We explain the tradeoffs during the estimate."
+      },
+      {
+        "q": "Can you remove the old fence?",
+        "a": "Old fence removal can be included after we review the material, length and access."
+      },
+      {
+        "q": "Do I need my neighbor's permission?",
+        "a": "That depends on where the fence sits and local rules. It is wise to confirm the boundary and discuss shared lines before work starts."
+      }
+    ],
+    "book": {
+      "h2": "Request your free fence estimate",
+      "p": "Share the rough plan and we'll call to arrange a site measure."
+    },
+    "footer": "Fence installation and replacement for homes in {city}."
+  },
+  {
+    "slug": "garage-door",
+    "niche": "Garage doors",
+    "offer_page": "/acquisition/garage-door/",
+    "business": "Liftline Garage Doors",
+    "tagline": "Garage door repair and installation",
+    "palette": {
+      "deep": "#25354f",
+      "deep_dk": "#19263a",
+      "accent": "#b04336",
+      "accent_dk": "#8d352b",
+      "sky": "#f6ece9"
+    },
+    "title": "Free Garage Door Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free garage door estimate",
+    "h1": "Get a stuck, noisy or damaged garage door checked.",
+    "lead": "Tell us what the door is doing. We'll call to confirm the details and arrange repair service or an estimate.",
+    "trust": [
+      "Repair and replacement",
+      "Door and opener service",
+      "Clear work estimate"
+    ],
+    "form_title": "Request garage door service",
+    "form_sub": "Tell us what is wrong. Three quick steps.",
+    "questions": [
+      {
+        "label": "Need",
+        "ask": "What does your garage door need?",
+        "options": [
+          "Door off track",
+          "Broken spring",
+          "Opener repair",
+          "Tune-up",
+          "New door install"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need help?",
+        "options": [
+          "Today",
+          "This week",
+          "Within a month"
+        ]
+      },
+      {
+        "label": "Door count",
+        "ask": "How many doors need attention?",
+        "options": [
+          "1 door",
+          "2 doors",
+          "3 or more"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request service",
+    "thanks": "We'll call shortly to ask about the door and arrange the right service visit.",
+    "cards": {
+      "eyebrow": "Signs to call",
+      "h2": "A garage door often gives warning before it stops moving.",
+      "p": "Describe what you see and hear, and avoid forcing a door that feels unsafe.",
+      "items": [
+        {
+          "h": "The door will not open",
+          "p": "The opener runs, clicks or stays silent while the door remains closed."
+        },
+        {
+          "h": "A spring looks broken",
+          "p": "A visible gap in a spring or a sudden loud bang may point to a broken spring."
+        },
+        {
+          "h": "The door is off track",
+          "p": "Rollers have left the track or the door is sitting at an angle."
+        },
+        {
+          "h": "The opener reverses",
+          "p": "The door starts down and then returns before reaching the floor."
+        },
+        {
+          "h": "Movement is loud or uneven",
+          "p": "Grinding, shaking or jerky travel can signal worn or loose parts."
+        },
+        {
+          "h": "The panels are damaged",
+          "p": "Dents, cracks or weather damage may call for panel work or replacement."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we review",
+      "h2": "Six parts work together every time the door moves.",
+      "p": "The visit covers the door, hardware, opener and safety controls.",
+      "items": [
+        {
+          "h": "Springs",
+          "small": "balance and visible wear"
+        },
+        {
+          "h": "Cables",
+          "small": "tension and condition"
+        },
+        {
+          "h": "Tracks",
+          "small": "alignment and fasteners"
+        },
+        {
+          "h": "Rollers",
+          "small": "movement and wear"
+        },
+        {
+          "h": "Opener",
+          "small": "drive and controls"
+        },
+        {
+          "h": "Safety sensors",
+          "small": "alignment and response"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Get the door checked and moving safely.",
+      "items": [
+        {
+          "h": "Tell us what is happening",
+          "p": "Choose the problem, timing and number of doors."
+        },
+        {
+          "h": "We call to confirm",
+          "p": "We ask about the door and arrange the right visit."
+        },
+        {
+          "h": "We inspect and explain",
+          "p": "You receive the recommended work and an estimate before the job moves ahead."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Can I open a door with a broken spring?",
+        "a": "Do not force it. The door can be much heavier than expected, so wait for a technician to assess it."
+      },
+      {
+        "q": "Do you repair garage door openers?",
+        "a": "Yes. We can check the opener, controls and safety sensors to identify the likely problem."
+      },
+      {
+        "q": "Can one damaged panel be replaced?",
+        "a": "Sometimes. It depends on the door model, panel availability and whether the rest of the door is in good condition."
+      },
+      {
+        "q": "Will you tell me the cost before repair?",
+        "a": "Yes. After the inspection, you receive an estimate for the recommended work before it begins."
+      }
+    ],
+    "book": {
+      "h2": "Request garage door service",
+      "p": "Tell us what the door is doing and we'll call to schedule the visit."
+    },
+    "footer": "Garage door repair, maintenance and installation for homes in {city}."
+  },
+  {
+    "slug": "garage-floor-epoxy",
+    "niche": "Garage floor coatings",
+    "offer_page": "/acquisition/garage-floor-epoxy/",
+    "business": "Glossfloor Coatings",
+    "tagline": "Garage, basement and shop floor coatings",
+    "palette": {
+      "deep": "#3f2e43",
+      "deep_dk": "#2d2030",
+      "accent": "#9a3e65",
+      "accent_dk": "#7d3151",
+      "sky": "#f7edf2"
+    },
+    "title": "Free Floor Coating Estimate",
+    "cta_long": "Request a coating estimate",
+    "cta_short": "Coating estimate",
+    "eyebrow": "Free floor coating estimate",
+    "h1": "Turn a worn concrete floor into a clean, finished surface.",
+    "lead": "Tell us the space, finish and timing. We'll call to arrange a floor review and written estimate.",
+    "trust": [
+      "Concrete condition checked",
+      "Finish samples available",
+      "Written estimate"
+    ],
+    "form_title": "Request your coating estimate",
+    "form_sub": "Tell us about the floor. Three quick steps.",
+    "questions": [
+      {
+        "label": "Garage size",
+        "ask": "What space would you like coated?",
+        "options": [
+          "1-car",
+          "2-car",
+          "3-car",
+          "Basement or shop"
+        ]
+      },
+      {
+        "label": "Finish",
+        "ask": "Which finish are you considering?",
+        "options": [
+          "Flake epoxy",
+          "Metallic epoxy",
+          "Polyaspartic",
+          "Not sure"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like the floor done?",
+        "options": [
+          "Within 2 weeks",
+          "Within a month",
+          "Next season",
+          "Just getting quotes"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to discuss the floor and arrange a time to review the concrete and finish options.",
+    "cards": {
+      "eyebrow": "Signs it is time",
+      "h2": "A coating project begins with the concrete underneath.",
+      "p": "Surface condition and preparation help decide which coating system makes sense.",
+      "items": [
+        {
+          "h": "The floor stays dusty",
+          "p": "Bare concrete leaves fine dust on storage, tools and anything set on the floor."
+        },
+        {
+          "h": "Oil stains stand out",
+          "p": "Old marks make the garage feel unfinished and can affect coating preparation."
+        },
+        {
+          "h": "Paint keeps peeling",
+          "p": "A previous floor paint lifts under tires, moisture or everyday use."
+        },
+        {
+          "h": "Small cracks need attention",
+          "p": "Visible cracks and chips should be reviewed before a coating is applied."
+        },
+        {
+          "h": "Cleaning takes too long",
+          "p": "Rough concrete traps dirt and makes sweeping or wiping harder."
+        },
+        {
+          "h": "The space feels unfinished",
+          "p": "A consistent floor finish can make a garage, basement or shop easier to use."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Choose the finish after we see the floor.",
+      "items": [
+        {
+          "h": "Describe the space",
+          "p": "Share the size, finish you like and preferred timing."
+        },
+        {
+          "h": "We call to book a review",
+          "p": "We ask about the concrete, access and current coating."
+        },
+        {
+          "h": "We inspect and estimate",
+          "p": "We check preparation needs, show finish options and provide a written estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What is the difference between epoxy and polyaspartic?",
+        "a": "They differ in application, curing and finish options. We explain which systems fit the concrete and how you use the space."
+      },
+      {
+        "q": "Can you coat over cracked concrete?",
+        "a": "Some cracks can be prepared and repaired first. Wider or moving cracks need closer review."
+      },
+      {
+        "q": "Do I need to empty the garage?",
+        "a": "Yes. The floor needs to be clear before preparation and coating begin."
+      },
+      {
+        "q": "When can I use the floor again?",
+        "a": "Cure time depends on the coating system and conditions. You receive clear walk-on and drive-on timing for your project."
+      }
+    ],
+    "book": {
+      "h2": "Request your floor coating estimate",
+      "p": "Tell us about the space and we'll call to arrange a floor review."
+    },
+    "footer": "Garage, basement and shop floor coatings for properties in {city}."
+  },
+  {
+    "slug": "general-contracting",
+    "niche": "General contracting",
+    "offer_page": "/acquisition/general-contracting/",
+    "business": "Keystone Build Group",
+    "tagline": "Home remodeling and additions",
+    "palette": {
+      "deep": "#314052",
+      "deep_dk": "#222d3a",
+      "accent": "#a14d27",
+      "accent_dk": "#823d1e",
+      "sky": "#f5eee9"
+    },
+    "title": "Free Remodeling Consultation",
+    "cta_long": "Plan my consultation",
+    "cta_short": "Plan my project",
+    "eyebrow": "Free remodeling consultation",
+    "h1": "Turn your renovation idea into a workable project plan.",
+    "lead": "Tell us what you want to change, your budget range and timing. We'll call to discuss the home and arrange a consultation.",
+    "trust": [
+      "Scope discussed first",
+      "Budget range reviewed",
+      "Written project estimate"
+    ],
+    "form_title": "Request your project consultation",
+    "form_sub": "Start with the big picture. Three quick steps.",
+    "questions": [
+      {
+        "label": "Project",
+        "ask": "What would you like to remodel?",
+        "options": [
+          "Bathroom remodel",
+          "Kitchen remodel",
+          "Deck or porch",
+          "Home addition",
+          "Whole-home renovation"
+        ]
+      },
+      {
+        "label": "Budget",
+        "ask": "What budget range are you planning around?",
+        "options": [
+          "Under $25K",
+          "$25K to $75K",
+          "$75K to $150K",
+          "Over $150K"
+        ]
+      },
+      {
+        "label": "Timeline",
+        "ask": "When would you like to get started?",
+        "options": [
+          "Ready now",
+          "In 3 months",
+          "In 6 months",
+          "Just researching"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Plan my consultation",
+    "thanks": "We'll call to learn about your goals and arrange a project consultation.",
+    "cards": {
+      "eyebrow": "Projects worth planning",
+      "h2": "A good remodel solves how the home works day to day.",
+      "p": "Start with the room, the problem and the change you want to make.",
+      "items": [
+        {
+          "h": "The kitchen feels cramped",
+          "p": "Storage, prep space and movement do not fit the way the household cooks."
+        },
+        {
+          "h": "A bathroom needs updating",
+          "p": "The layout, fixtures or finishes no longer suit the people using it."
+        },
+        {
+          "h": "The family needs more room",
+          "p": "An addition may create space without requiring a move."
+        },
+        {
+          "h": "Several rooms need work",
+          "p": "A coordinated renovation can connect the layout, finishes and schedule."
+        },
+        {
+          "h": "The deck is worn or too small",
+          "p": "Outdoor space needs repair, replacement or a more useful footprint."
+        },
+        {
+          "h": "The layout no longer fits",
+          "p": "Walls, doors and room uses may need to change as the household changes."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Build the plan before the construction starts.",
+      "items": [
+        {
+          "h": "Describe your project",
+          "p": "Share the room, budget range and preferred timing."
+        },
+        {
+          "h": "We call to discuss it",
+          "p": "We learn about the home and arrange a consultation."
+        },
+        {
+          "h": "We review scope and next steps",
+          "p": "We discuss feasibility, planning needs and what is required for a written estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Can you help before I have finished plans?",
+        "a": "Yes. An early consultation can help clarify scope, priorities and which plans may be needed."
+      },
+      {
+        "q": "How firm does my budget need to be?",
+        "a": "A starting range is enough for the first call. It helps keep the project discussion grounded."
+      },
+      {
+        "q": "Do I need to move out during the remodel?",
+        "a": "That depends on the rooms involved, utilities and project length. We discuss living arrangements during planning."
+      },
+      {
+        "q": "Who handles permits?",
+        "a": "Permit needs differ by project and city. We explain responsibilities once the scope is clear."
+      },
+      {
+        "q": "Will I receive a written estimate?",
+        "a": "Yes, after the scope and site conditions are understood well enough to price the work."
+      }
+    ],
+    "book": {
+      "h2": "Plan your remodeling consultation",
+      "p": "Share your project idea and we'll call to discuss the next step."
+    },
+    "footer": "Home remodeling, additions and outdoor projects for homeowners in {city}."
+  },
+  {
+    "slug": "handyman",
+    "niche": "Handyman services",
+    "offer_page": "/acquisition/handyman/",
+    "business": "Fixwell Handyman Services",
+    "tagline": "Small home repairs and installation",
+    "palette": {
+      "deep": "#3f3a2c",
+      "deep_dk": "#2d291f",
+      "accent": "#8b5d16",
+      "accent_dk": "#704a11",
+      "sky": "#f7f1e3"
+    },
+    "title": "Free Handyman Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free handyman estimate",
+    "h1": "Clear the repair list that keeps growing around your home.",
+    "lead": "Tell us about the jobs and how long you think they may take. We'll call to confirm the list and scheduling.",
+    "trust": [
+      "Small jobs welcome",
+      "One clear work list",
+      "Estimate before work"
+    ],
+    "form_title": "Request your handyman estimate",
+    "form_sub": "Share the main job. Three quick steps.",
+    "questions": [
+      {
+        "label": "Job",
+        "ask": "What is the main job you need done?",
+        "options": [
+          "Small repairs list",
+          "Drywall repair",
+          "Door or window fix",
+          "TV mounting",
+          "Furniture assembly"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like the work done?",
+        "options": [
+          "This week",
+          "Within 2 weeks",
+          "This month"
+        ]
+      },
+      {
+        "label": "Job size",
+        "ask": "How much work is on your list?",
+        "options": [
+          "Under 2 hours",
+          "Half a day",
+          "Full day or more"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to review your job list and arrange a suitable service time.",
+    "cards": {
+      "eyebrow": "Jobs around the house",
+      "h2": "Small repairs are easier when they are on one list.",
+      "p": "Send the main task first and mention the others during the call.",
+      "items": [
+        {
+          "h": "Drywall has holes or dents",
+          "p": "Wall damage needs patching and preparation before the finish is restored."
+        },
+        {
+          "h": "A door sticks or will not latch",
+          "p": "The door, hinge or strike may need adjustment or replacement."
+        },
+        {
+          "h": "Shelves or a TV need mounting",
+          "p": "Heavy items need secure placement at the right height."
+        },
+        {
+          "h": "Furniture is still boxed",
+          "p": "Beds, desks, cabinets or shelves need careful assembly."
+        },
+        {
+          "h": "Trim or hardware is loose",
+          "p": "Handles, rails, molding and fixtures need fastening or replacement."
+        },
+        {
+          "h": "Several small jobs have piled up",
+          "p": "A combined list can make better use of one scheduled visit."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Turn the list into one scheduled visit.",
+      "items": [
+        {
+          "h": "Share the main job",
+          "p": "Choose the task, timing and rough job size."
+        },
+        {
+          "h": "We call to review the list",
+          "p": "We confirm materials, access and any extra tasks."
+        },
+        {
+          "h": "We arrive and complete the work",
+          "p": "We review the list with you and explain any changes before doing them."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Can I combine several small jobs?",
+        "a": "Yes. Make a list and mention each task during the call so enough time can be scheduled."
+      },
+      {
+        "q": "Should I buy the materials first?",
+        "a": "Wait until we confirm what is needed unless you already have a specific fixture or item to install."
+      },
+      {
+        "q": "Do you handle larger remodeling projects?",
+        "a": "This service focuses on repairs and small installations. We can tell you if a project needs a specialist or contractor."
+      },
+      {
+        "q": "Can you estimate from photos?",
+        "a": "Photos can help, but some jobs need an in-person look before the final scope is clear."
+      }
+    ],
+    "book": {
+      "h2": "Request your handyman estimate",
+      "p": "Start with the main task and we'll call to review the full list."
+    },
+    "footer": "Handyman repairs, mounting and assembly for homes in {city}."
+  },
+  {
+    "slug": "hearing-aid",
+    "niche": "Hearing aids",
+    "offer_page": "/acquisition/hearing-aid/",
+    "business": "ClearSound Hearing Center",
+    "tagline": "Hearing tests and hearing aid services",
+    "palette": {
+      "deep": "#263b55",
+      "deep_dk": "#1a2a3d",
+      "accent": "#7b528f",
+      "accent_dk": "#623f73",
+      "sky": "#f2edf6"
+    },
+    "title": "Free Hearing Test",
+    "cta_long": "Book a free hearing test",
+    "cta_short": "Hearing test",
+    "eyebrow": "Free hearing test",
+    "h1": "Start with a clear hearing check and a calm conversation.",
+    "lead": "Tell us who the visit is for and what help you are looking for. We'll call to arrange a free hearing test.",
+    "trust": [
+      "No pressure to choose",
+      "Current devices welcome",
+      "Questions encouraged"
+    ],
+    "form_title": "Request your free hearing test",
+    "form_sub": "Tell us what you need. Three quick steps.",
+    "questions": [
+      {
+        "label": "Who is it for",
+        "ask": "Who is the appointment for?",
+        "options": [
+          "Myself",
+          "My spouse",
+          "My parent"
+        ]
+      },
+      {
+        "label": "Current hearing aids",
+        "ask": "Do they use hearing aids now?",
+        "options": [
+          "None yet",
+          "Yes, under 5 years old",
+          "Yes, over 5 years old"
+        ]
+      },
+      {
+        "label": "Interested in",
+        "ask": "What would you like help with?",
+        "options": [
+          "Free hearing test",
+          "Repair or refit",
+          "New hearing aids",
+          "Not sure yet"
+        ]
+      }
+    ],
+    "zip_label": "Your ZIP code",
+    "submit": "Book my hearing test",
+    "thanks": "We'll call to answer any first questions and arrange your free hearing test.",
+    "cards": {
+      "eyebrow": "Reasons to book",
+      "h2": "A hearing check can answer practical questions.",
+      "p": "The appointment begins with what you have noticed and what you want to understand.",
+      "items": [
+        {
+          "h": "Conversations feel unclear",
+          "p": "Some words are easy to miss, especially in groups or busy places."
+        },
+        {
+          "h": "The television is turned up",
+          "p": "The preferred volume is becoming a point of discussion at home."
+        },
+        {
+          "h": "Phone calls take more effort",
+          "p": "Voices can be hard to follow without visual cues."
+        },
+        {
+          "h": "Current devices feel uncomfortable",
+          "p": "A hearing aid may need cleaning, adjustment or a fit review."
+        },
+        {
+          "h": "Older devices need a check",
+          "p": "You want to understand the condition of hearing aids you already use."
+        },
+        {
+          "h": "You want a baseline",
+          "p": "A test can record how you hear different tones and speech today."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What the visit includes",
+      "h2": "Six simple parts of a hearing appointment.",
+      "p": "We explain each step and give you time to ask questions.",
+      "items": [
+        {
+          "h": "Conversation",
+          "small": "what you have noticed"
+        },
+        {
+          "h": "Ear check",
+          "small": "a visual look before testing"
+        },
+        {
+          "h": "Tone test",
+          "small": "responses to different sounds"
+        },
+        {
+          "h": "Speech test",
+          "small": "how words are heard"
+        },
+        {
+          "h": "Results review",
+          "small": "plain explanation of findings"
+        },
+        {
+          "h": "Next steps",
+          "small": "options if you want them"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Start with the test, then consider the options.",
+      "items": [
+        {
+          "h": "Request an appointment",
+          "p": "Tell us who the visit is for and what help they want."
+        },
+        {
+          "h": "We call to book it",
+          "p": "We answer initial questions and choose a suitable time."
+        },
+        {
+          "h": "We complete the hearing test",
+          "p": "We explain the results and discuss possible next steps without pressure."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the hearing test free?",
+        "a": "Yes. There is no charge for the hearing test described on this page."
+      },
+      {
+        "q": "Does the test hurt?",
+        "a": "The hearing test uses sounds and spoken words. You can ask the provider to explain every step before it begins."
+      },
+      {
+        "q": "Can I bring someone with me?",
+        "a": "Yes. A family member or trusted person can join the appointment if you want."
+      },
+      {
+        "q": "Do I have to buy hearing aids after the test?",
+        "a": "No. The test and results discussion do not require you to buy a device."
+      },
+      {
+        "q": "Can you check hearing aids from another practice?",
+        "a": "Bring them with you. We can first confirm whether the model and service needed can be handled here."
+      }
+    ],
+    "book": {
+      "h2": "Book your free hearing test",
+      "p": "Share a few details and we'll call to arrange the appointment."
+    },
+    "footer": "Hearing tests, hearing aids and device support for people in {city}."
+  },
+  {
+    "slug": "home-care",
+    "niche": "Home care",
+    "offer_page": "/acquisition/home-care/",
+    "business": "Pure Haven Home Care",
+    "tagline": "Non-medical help at home",
+    "palette": {
+      "deep": "#49305f",
+      "deep_dk": "#342044",
+      "accent": "#8a4f9e",
+      "accent_dk": "#703d82",
+      "sky": "#f5edf7"
+    },
+    "title": "Free Care Consultation",
+    "cta_long": "Request a care call",
+    "cta_short": "Care consult",
+    "eyebrow": "Free care consultation",
+    "h1": "Find dependable help for someone you care about.",
+    "lead": "Tell us what kind of help your family needs. We'll call to listen, answer questions and arrange a free consultation.",
+    "trust": [
+      "No pressure",
+      "Plans built around you",
+      "Non-medical home help"
+    ],
+    "form_title": "Request a care consultation",
+    "form_sub": "Tell us what you need. Three quick steps.",
+    "questions": [
+      {
+        "label": "Who needs care",
+        "ask": "Who needs help at home?",
+        "options": [
+          "Myself",
+          "My spouse",
+          "My mother",
+          "My father",
+          "A parent",
+          "A grandparent"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like care to start?",
+        "options": [
+          "Right away",
+          "Within 2 weeks",
+          "Within a month",
+          "Just planning ahead"
+        ]
+      },
+      {
+        "label": "How paid",
+        "ask": "How do you expect to pay for care?",
+        "options": [
+          "Private pay",
+          "Long-term care insurance",
+          "VA benefits",
+          "Medicaid",
+          "Not sure yet"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request a care call",
+    "thanks": "We'll call shortly to learn about your needs and discuss a time for a free consultation.",
+    "cards": {
+      "eyebrow": "Help at home",
+      "h2": "Everyday support can make home life easier.",
+      "p": "A care consultation starts with the tasks, schedule and preferences that matter to your family.",
+      "items": [
+        {
+          "h": "Meals are being skipped",
+          "p": "Shopping, simple meal preparation and reminders can become hard to manage alone."
+        },
+        {
+          "h": "The house needs attention",
+          "p": "Light housekeeping and laundry may be taking more energy than before."
+        },
+        {
+          "h": "Family lives far away",
+          "p": "Regular visits can add practical support between family check-ins."
+        },
+        {
+          "h": "Daily routines feel harder",
+          "p": "Dressing, grooming and moving around the home may take more time."
+        },
+        {
+          "h": "Someone needs company",
+          "p": "Conversation, walks and shared activities can make the day feel less isolated."
+        },
+        {
+          "h": "Family caregivers need a break",
+          "p": "Scheduled visits can give a regular caregiver time for work, errands or rest."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Start with one short conversation.",
+      "items": [
+        {
+          "h": "Tell us what is needed",
+          "p": "Answer a few questions about the person, timing and payment plan."
+        },
+        {
+          "h": "We call to learn more",
+          "p": "We listen to your priorities and arrange a consultation."
+        },
+        {
+          "h": "We plan the support",
+          "p": "Together, we discuss a schedule and the non-medical help that may fit."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What kind of help do caregivers provide?",
+        "a": "Services can include companionship, meal preparation, light housekeeping and help with daily routines."
+      },
+      {
+        "q": "Is this medical care?",
+        "a": "No. This page is for non-medical help at home."
+      },
+      {
+        "q": "Can care start with only a few visits?",
+        "a": "That depends on your needs and local availability. We discuss scheduling during the consultation."
+      },
+      {
+        "q": "Can I call for a parent who lives alone?",
+        "a": "Yes. Family members often make the first request, and we include the person receiving care in the conversation."
+      },
+      {
+        "q": "Does insurance pay for home care?",
+        "a": "Coverage varies. We can discuss common payment options, but you should confirm benefits with the plan provider."
+      }
+    ],
+    "book": {
+      "h2": "Request a care consultation",
+      "p": "Share a few details and we'll call to learn what would help."
+    },
+    "footer": "Non-medical home care and companionship for families in {city}."
+  },
+  {
+    "slug": "home-cleaning",
+    "niche": "Home cleaning",
+    "offer_page": "/acquisition/home-cleaning/",
+    "business": "Sparkhaus Cleaning",
+    "tagline": "One-time and recurring home cleaning",
+    "palette": {
+      "deep": "#24424a",
+      "deep_dk": "#183038",
+      "accent": "#7b477d",
+      "accent_dk": "#633765",
+      "sky": "#f4edf5"
+    },
+    "title": "Free Home Cleaning Quote",
+    "cta_long": "Request a cleaning quote",
+    "cta_short": "Cleaning quote",
+    "eyebrow": "Free home cleaning quote",
+    "h1": "Get a cleaning plan that fits your home and schedule.",
+    "lead": "Tell us the service, home size and frequency. We'll call to confirm the details and provide a quote.",
+    "trust": [
+      "One-time or recurring",
+      "Your priorities reviewed",
+      "Clear cleaning quote"
+    ],
+    "form_title": "Request your cleaning quote",
+    "form_sub": "Tell us about the home. Three quick steps.",
+    "questions": [
+      {
+        "label": "Service",
+        "ask": "What kind of cleaning do you need?",
+        "options": [
+          "One-time clean",
+          "Deep clean",
+          "Move-in or move-out",
+          "Recurring cleaning"
+        ]
+      },
+      {
+        "label": "Home size",
+        "ask": "How many bedrooms are in the home?",
+        "options": [
+          "1-2 bedrooms",
+          "3 bedrooms",
+          "4 bedrooms",
+          "5 or more"
+        ]
+      },
+      {
+        "label": "How often",
+        "ask": "How often would you like cleaning?",
+        "options": [
+          "Weekly",
+          "Every 2 weeks",
+          "Monthly",
+          "Just once"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to confirm the home, cleaning priorities and preferred schedule.",
+    "cards": {
+      "eyebrow": "Cleaning needs",
+      "h2": "Different homes need different first visits.",
+      "p": "Choose the service that is closest to what you need, and we will confirm the details by phone.",
+      "items": [
+        {
+          "h": "Regular cleaning keeps slipping",
+          "p": "A recurring visit can cover the main rooms on a steady schedule."
+        },
+        {
+          "h": "The home needs a deeper reset",
+          "p": "Built-up dust and overlooked areas need more time than a routine clean."
+        },
+        {
+          "h": "A move date is approaching",
+          "p": "An empty or nearly empty home needs cleaning before keys change hands."
+        },
+        {
+          "h": "Guests are coming",
+          "p": "The kitchen, bathrooms and shared rooms need focused attention before the visit."
+        },
+        {
+          "h": "Certain rooms need priority",
+          "p": "You want the visit planned around the spaces used most often."
+        },
+        {
+          "h": "The routine needs to change",
+          "p": "Home size, pets or household schedules have changed since the last cleaning plan."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Set the priorities before the first clean.",
+      "items": [
+        {
+          "h": "Describe the home",
+          "p": "Choose the service, bedroom count and frequency."
+        },
+        {
+          "h": "We call to confirm",
+          "p": "We ask about bathrooms, pets, access and priority areas."
+        },
+        {
+          "h": "We complete the cleaning",
+          "p": "The team follows the agreed scope and schedule for the visit."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What is included in a standard clean?",
+        "a": "The exact checklist is confirmed before booking. It commonly covers kitchens, bathrooms, floors, dusting and main living areas."
+      },
+      {
+        "q": "What is different about a deep clean?",
+        "a": "A deep clean allows more time for built-up dirt and detailed areas that are outside a routine visit."
+      },
+      {
+        "q": "Do I need to be home?",
+        "a": "No, if safe access is arranged in advance. We confirm entry instructions before the visit."
+      },
+      {
+        "q": "Do I provide cleaning supplies?",
+        "a": "We discuss supplies and any product preferences during the booking call."
+      },
+      {
+        "q": "Can I request only certain rooms?",
+        "a": "Yes. Tell us which rooms matter most, and we can define the scope for the quote."
+      }
+    ],
+    "book": {
+      "h2": "Request your home cleaning quote",
+      "p": "Tell us about the home and we'll call to confirm the plan."
+    },
+    "footer": "One-time, deep and recurring home cleaning in {city}."
+  },
+  {
+    "slug": "hvac",
+    "niche": "HVAC installation",
+    "offer_page": "/acquisition/hvac/",
+    "business": "Coolpoint Heating & Air",
+    "tagline": "Heating and cooling system installation",
+    "palette": {
+      "deep": "#123d4a",
+      "deep_dk": "#0c2b34",
+      "accent": "#b24a32",
+      "accent_dk": "#913a28",
+      "sky": "#eaf5f6"
+    },
+    "title": "Free HVAC Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free system estimate",
+    "h1": "Compare the right heating and cooling options for your home.",
+    "lead": "Tell us what you need and what is there now. We'll call to arrange a home assessment and written estimate.",
+    "trust": [
+      "Home system assessment",
+      "Options explained clearly",
+      "Written estimate"
+    ],
+    "form_title": "Request your system estimate",
+    "form_sub": "Tell us about your home. Three quick steps.",
+    "questions": [
+      {
+        "label": "Need",
+        "ask": "What system are you considering?",
+        "options": [
+          "New furnace",
+          "New AC system",
+          "Heat pump",
+          "Ductless mini split",
+          "Full system replacement"
+        ]
+      },
+      {
+        "label": "System age",
+        "ask": "How old is your current system?",
+        "options": [
+          "Under 10 years",
+          "10 to 15 years",
+          "Over 15 years",
+          "Not sure"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need the new system?",
+        "options": [
+          "It's broken now",
+          "This month",
+          "Before summer",
+          "Just getting quotes"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to review your current system and arrange a home assessment.",
+    "cards": {
+      "eyebrow": "Time to assess the system",
+      "h2": "A replacement decision starts with the home and the equipment.",
+      "p": "We look at comfort concerns, system age and how each area of the home is served.",
+      "items": [
+        {
+          "h": "The system has stopped",
+          "p": "The home has no reliable heating or cooling and repair may not be practical."
+        },
+        {
+          "h": "Some rooms stay uncomfortable",
+          "p": "Temperatures vary from room to room even when the system is running."
+        },
+        {
+          "h": "The equipment runs often",
+          "p": "Long cycles or frequent starts may call for a closer system review."
+        },
+        {
+          "h": "Repairs keep adding up",
+          "p": "Repeated service visits make it worth comparing repair and replacement."
+        },
+        {
+          "h": "A new space needs conditioning",
+          "p": "An addition, garage or finished room may need a ductless or separate solution."
+        },
+        {
+          "h": "You want to compare heat pumps",
+          "p": "A home assessment can show which equipment types and sizes may fit."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we assess",
+      "h2": "Six details guide a system recommendation.",
+      "p": "The assessment looks beyond the equipment label to how the home uses heating and cooling.",
+      "items": [
+        {
+          "h": "Current equipment",
+          "small": "type, age and condition"
+        },
+        {
+          "h": "Home size",
+          "small": "areas the system must serve"
+        },
+        {
+          "h": "Ductwork",
+          "small": "layout and visible condition"
+        },
+        {
+          "h": "Electrical service",
+          "small": "available system capacity"
+        },
+        {
+          "h": "Comfort concerns",
+          "small": "hot and cold areas"
+        },
+        {
+          "h": "Installation space",
+          "small": "access and equipment location"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Get a system option based on your home.",
+      "items": [
+        {
+          "h": "Tell us what you need",
+          "p": "Share the system type, age and timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We ask about the home and arrange an assessment."
+        },
+        {
+          "h": "We assess and estimate",
+          "p": "We review suitable options and provide a written installation estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "How do I know what size system I need?",
+        "a": "System size should reflect the home, layout and other conditions. The assessment helps define an appropriate option."
+      },
+      {
+        "q": "Can I replace only the furnace or air conditioner?",
+        "a": "Sometimes. Compatibility, age and condition of the remaining equipment need to be reviewed first."
+      },
+      {
+        "q": "Is a heat pump right for every home?",
+        "a": "No single system fits every property. Climate, electrical service and the home's layout all matter."
+      },
+      {
+        "q": "Do you offer ductless systems?",
+        "a": "Yes. Ductless mini splits can be considered for homes or rooms where conventional ductwork is not the best fit."
+      }
+    ],
+    "book": {
+      "h2": "Request your free HVAC estimate",
+      "p": "Tell us about the system and we'll call to arrange the assessment."
+    },
+    "footer": "Heating and cooling system installation for homes in {city}."
+  },
+  {
+    "slug": "junk-removal",
+    "niche": "Junk removal",
+    "offer_page": "/acquisition/junk-removal/",
+    "business": "HaulRight Junk Removal",
+    "tagline": "Household and construction debris removal",
+    "palette": {
+      "deep": "#2d4135",
+      "deep_dk": "#1f2f26",
+      "accent": "#9a4f1e",
+      "accent_dk": "#7b3f17",
+      "sky": "#f4eee7"
+    },
+    "title": "Free Junk Removal Quote",
+    "cta_long": "Request a removal quote",
+    "cta_short": "Removal quote",
+    "eyebrow": "Free junk removal quote",
+    "h1": "Clear out the items that are taking over your space.",
+    "lead": "Tell us what needs to go and roughly how much there is. We'll call to confirm access and provide the next step for a quote.",
+    "trust": [
+      "Home and job site loads",
+      "Loading handled for you",
+      "Quote before removal"
+    ],
+    "form_title": "Request your removal quote",
+    "form_sub": "Tell us about the load. Three quick steps.",
+    "questions": [
+      {
+        "label": "What to remove",
+        "ask": "What do you need removed?",
+        "options": [
+          "Furniture",
+          "Appliances",
+          "Garage cleanout",
+          "Estate cleanout",
+          "Construction debris"
+        ]
+      },
+      {
+        "label": "Load size",
+        "ask": "About how much space will it take?",
+        "options": [
+          "A few items",
+          "Half a truck",
+          "Full truck",
+          "More than one truck"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like it removed?",
+        "options": [
+          "Today or tomorrow",
+          "This week",
+          "Within 2 weeks"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to review the items, access and a suitable removal time.",
+    "cards": {
+      "eyebrow": "Loads we remove",
+      "h2": "Start with what is leaving and where it is now.",
+      "p": "Item type, volume, stairs and access help us plan the pickup.",
+      "items": [
+        {
+          "h": "Old furniture is in the way",
+          "p": "Couches, tables, mattresses or cabinets need lifting and removal."
+        },
+        {
+          "h": "Appliances need to go",
+          "p": "Large household equipment is ready to be moved out."
+        },
+        {
+          "h": "The garage is full",
+          "p": "Boxes, broken items and old equipment have crowded out usable space."
+        },
+        {
+          "h": "A property needs clearing",
+          "p": "An estate, rental or sale preparation involves many different household items."
+        },
+        {
+          "h": "A project left debris",
+          "p": "Renovation or construction material needs collection after the work."
+        },
+        {
+          "h": "The load is hard to judge",
+          "p": "Photos and a short call can help estimate how much truck space it may use."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Show us the load, then choose a pickup time.",
+      "items": [
+        {
+          "h": "Describe the items",
+          "p": "Choose the load type, rough size and timing."
+        },
+        {
+          "h": "We call to review access",
+          "p": "We ask about stairs, parking and any items that need special handling."
+        },
+        {
+          "h": "We quote and remove",
+          "p": "You receive the price before loading begins, then the agreed items are hauled away."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "How is junk removal priced?",
+        "a": "The quote depends on the load, item type, access and local disposal requirements."
+      },
+      {
+        "q": "Do I need to move items outside?",
+        "a": "No. Tell us where the items are, including any stairs, so the pickup can be planned."
+      },
+      {
+        "q": "Can you remove construction debris?",
+        "a": "Yes, for accepted materials. Describe the debris so weight, volume and disposal needs can be reviewed."
+      },
+      {
+        "q": "Are there items you cannot take?",
+        "a": "Yes. Some hazardous or regulated materials need separate disposal. We confirm accepted items before booking."
+      }
+    ],
+    "book": {
+      "h2": "Request your junk removal quote",
+      "p": "Tell us what needs to go and we'll call to plan the pickup."
+    },
+    "footer": "Junk, furniture and debris removal for properties in {city}."
+  },
+  {
+    "slug": "landscaping",
+    "niche": "Landscaping",
+    "offer_page": "/acquisition/landscaping/",
+    "business": "Greenhollow Landscapes",
+    "tagline": "Landscape design and installation",
+    "palette": {
+      "deep": "#24402c",
+      "deep_dk": "#182d1e",
+      "accent": "#8b5520",
+      "accent_dk": "#704418",
+      "sky": "#eef5e9"
+    },
+    "title": "Free Landscape Consultation",
+    "cta_long": "Plan my consultation",
+    "cta_short": "Plan my yard",
+    "eyebrow": "Free landscape consultation",
+    "h1": "Plan an outdoor space that fits your home and routine.",
+    "lead": "Tell us the project, budget range and timing. We'll call to discuss the yard and arrange a consultation.",
+    "trust": [
+      "Site conditions reviewed",
+      "Design goals discussed",
+      "Written project estimate"
+    ],
+    "form_title": "Request your landscape consultation",
+    "form_sub": "Start with your main goal. Three quick steps.",
+    "questions": [
+      {
+        "label": "Project",
+        "ask": "What would you like to add or change?",
+        "options": [
+          "Planting beds",
+          "Sod or lawn install",
+          "Outdoor lighting",
+          "Patio or hardscape",
+          "Full yard design"
+        ]
+      },
+      {
+        "label": "Budget",
+        "ask": "What budget range are you planning around?",
+        "options": [
+          "Under $10K",
+          "$10K to $25K",
+          "$25K to $50K",
+          "Over $50K"
+        ]
+      },
+      {
+        "label": "Timeline",
+        "ask": "When would you like the project done?",
+        "options": [
+          "This season",
+          "Next spring",
+          "Just planning ahead"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the property?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Plan my consultation",
+    "thanks": "We'll call to learn about the yard and arrange your landscape consultation.",
+    "cards": {
+      "eyebrow": "Reasons to redesign",
+      "h2": "A yard should work for the way you use it.",
+      "p": "A site consultation connects your goals with sunlight, drainage, access and maintenance.",
+      "items": [
+        {
+          "h": "The yard feels unfinished",
+          "p": "Open areas need a clearer plan for lawn, beds, paths and gathering space."
+        },
+        {
+          "h": "Grass will not grow well",
+          "p": "Shade, soil, drainage or use may call for a different lawn or planting approach."
+        },
+        {
+          "h": "Outdoor seating is limited",
+          "p": "A patio or hardscape area can create a defined place to sit and gather."
+        },
+        {
+          "h": "Planting beds need structure",
+          "p": "Plant choice and spacing should match the site and desired upkeep."
+        },
+        {
+          "h": "Paths are hard to use at night",
+          "p": "Outdoor lighting can improve visibility along entries and walkways."
+        },
+        {
+          "h": "Several changes need one plan",
+          "p": "A full design can coordinate planting, hardscape, lighting and phases."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Start with the site before choosing materials.",
+      "items": [
+        {
+          "h": "Describe the project",
+          "p": "Share the main goal, budget range and timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We ask about the property and arrange a site consultation."
+        },
+        {
+          "h": "We walk the yard",
+          "p": "We discuss options, practical constraints and the next step toward an estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Do I need a complete design before calling?",
+        "a": "No. Your goals and budget range are enough to start the consultation."
+      },
+      {
+        "q": "Can the project be completed in phases?",
+        "a": "Often, yes. A plan can identify which work should happen first and what can follow later."
+      },
+      {
+        "q": "Will you recommend plants for my yard?",
+        "a": "Plant recommendations depend on light, soil, space and upkeep preferences, all of which can be reviewed on site."
+      },
+      {
+        "q": "Do you handle drainage?",
+        "a": "Drainage conditions are considered during site planning. We can explain whether the needed work fits the project scope."
+      }
+    ],
+    "book": {
+      "h2": "Plan your landscape consultation",
+      "p": "Tell us what you want from the yard and we'll call to arrange a visit."
+    },
+    "footer": "Landscape design, planting and hardscape installation for homes in {city}."
+  },
+  {
+    "slug": "medspa",
+    "niche": "Medspa",
+    "offer_page": "/acquisition/medspa/",
+    "business": "Lumiere Aesthetics Studio",
+    "tagline": "Aesthetic treatment consultations",
+    "palette": {
+      "deep": "#4b3040",
+      "deep_dk": "#35212d",
+      "accent": "#a34567",
+      "accent_dk": "#843651",
+      "sky": "#faeef2"
+    },
+    "title": "Free Treatment Consultation",
+    "cta_long": "Book my consultation",
+    "cta_short": "Consultation",
+    "eyebrow": "Free treatment consultation",
+    "h1": "Ask your questions before choosing an aesthetic treatment.",
+    "lead": "Tell us what you are considering and whether it is your first visit. We'll call to arrange a consultation with a provider.",
+    "trust": [
+      "Questions come first",
+      "Options reviewed with you",
+      "No pressure to book"
+    ],
+    "form_title": "Request your consultation",
+    "form_sub": "Tell us what interests you. Three quick steps.",
+    "questions": [
+      {
+        "label": "Treatment",
+        "ask": "What would you like to discuss?",
+        "options": [
+          "Botox",
+          "Dermal fillers",
+          "Facial or peel",
+          "Laser hair removal",
+          "Weight loss program"
+        ]
+      },
+      {
+        "label": "First visit",
+        "ask": "Is this your first visit for this service?",
+        "options": [
+          "Yes, first time",
+          "Had it before elsewhere"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like a consultation?",
+        "options": [
+          "This week",
+          "Within 2 weeks",
+          "This month",
+          "Just looking"
+        ]
+      }
+    ],
+    "zip_label": "Your ZIP code",
+    "submit": "Book my consultation",
+    "thanks": "We'll call to answer initial questions and arrange a consultation with a provider.",
+    "cards": {
+      "eyebrow": "Reasons to consult",
+      "h2": "A consultation gives you time to understand the service.",
+      "p": "The provider reviews your questions, preferences and relevant history before discussing options.",
+      "items": [
+        {
+          "h": "It is your first treatment",
+          "p": "You want to know what the appointment involves before deciding."
+        },
+        {
+          "h": "You are comparing options",
+          "p": "Several services seem relevant and you want a provider to explain the differences."
+        },
+        {
+          "h": "You have timing questions",
+          "p": "You want to understand preparation, appointment time and normal aftercare guidance."
+        },
+        {
+          "h": "You visited another practice",
+          "p": "You want to discuss previous treatment and what you are considering now."
+        },
+        {
+          "h": "You have sensitive skin concerns",
+          "p": "You want to ask what information the provider needs before a facial or peel."
+        },
+        {
+          "h": "You want a private plan",
+          "p": "A consultation can focus on your preferences without committing to treatment."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Talk with a provider before you decide.",
+      "items": [
+        {
+          "h": "Choose what interests you",
+          "p": "Tell us the service, visit history and preferred timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We answer basic questions and arrange the consultation."
+        },
+        {
+          "h": "Meet with the provider",
+          "p": "Discuss your preferences, relevant history, options and any next steps."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the consultation free?",
+        "a": "Yes. The consultation described on this page has no charge and does not require treatment."
+      },
+      {
+        "q": "Will I receive treatment at the consultation?",
+        "a": "The first purpose is to review your questions and suitability. Scheduling depends on the service and provider availability."
+      },
+      {
+        "q": "What should I bring?",
+        "a": "Bring a list of relevant products, medications and past treatments so the provider has useful context."
+      },
+      {
+        "q": "Can you tell me which treatment to choose online?",
+        "a": "No. The provider needs a consultation before making a recommendation."
+      },
+      {
+        "q": "Do treatments have downtime?",
+        "a": "It varies by service and person. The provider will explain expected preparation and aftercare before you decide."
+      }
+    ],
+    "book": {
+      "h2": "Book your treatment consultation",
+      "p": "Share what you are considering and we'll call to arrange the visit."
+    },
+    "footer": "Aesthetic treatment consultations and medspa services in {city}."
+  },
+  {
+    "slug": "moving",
+    "niche": "Moving services",
+    "offer_page": "/acquisition/moving/",
+    "business": "Northbound Movers",
+    "tagline": "Local, long distance and office moving",
+    "palette": {
+      "deep": "#223751",
+      "deep_dk": "#17283b",
+      "accent": "#a84921",
+      "accent_dk": "#873a1a",
+      "sky": "#f3eee9"
+    },
+    "title": "Free Moving Quote",
+    "cta_long": "Request a moving quote",
+    "cta_short": "Moving quote",
+    "eyebrow": "Free moving quote",
+    "h1": "Plan your move around the space, distance and date.",
+    "lead": "Tell us the move type, home size and timing. We'll call to confirm the details and prepare a quote.",
+    "trust": [
+      "Home and office moves",
+      "Packing options available",
+      "Clear moving quote"
+    ],
+    "form_title": "Request your moving quote",
+    "form_sub": "Share the move basics. Three quick steps.",
+    "questions": [
+      {
+        "label": "Move type",
+        "ask": "What kind of move are you planning?",
+        "options": [
+          "Local",
+          "Long distance",
+          "Office move",
+          "Packing only"
+        ]
+      },
+      {
+        "label": "Home size",
+        "ask": "How large is the home you are moving from?",
+        "options": [
+          "Studio or 1 bedroom",
+          "2 bedrooms",
+          "3 bedrooms",
+          "4 or more bedrooms"
+        ]
+      },
+      {
+        "label": "Move date",
+        "ask": "When do you expect to move?",
+        "options": [
+          "Within 2 weeks",
+          "Within a month",
+          "In 1 to 3 months",
+          "Not set yet"
+        ]
+      }
+    ],
+    "zip_label": "Your ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to confirm the locations, inventory and timing needed for your moving quote.",
+    "cards": {
+      "eyebrow": "What affects the move",
+      "h2": "A useful quote starts with more than the number of boxes.",
+      "p": "Locations, access, furniture and packing needs help define the crew and schedule.",
+      "items": [
+        {
+          "h": "Stairs or elevators are involved",
+          "p": "Access at either location can affect loading time and planning."
+        },
+        {
+          "h": "Large furniture needs moving",
+          "p": "Beds, tables and other pieces may need protection or disassembly."
+        },
+        {
+          "h": "The move crosses a long distance",
+          "p": "Travel, timing and delivery arrangements need to be planned in advance."
+        },
+        {
+          "h": "Packing is not finished",
+          "p": "Full or partial packing support can be added to the moving plan."
+        },
+        {
+          "h": "An office needs to relocate",
+          "p": "Equipment, work areas and business timing need a coordinated schedule."
+        },
+        {
+          "h": "The date is still flexible",
+          "p": "A planning call can help you understand what information is needed before booking."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Build the quote from the actual move.",
+      "items": [
+        {
+          "h": "Share the move basics",
+          "p": "Choose the type, home size and expected date."
+        },
+        {
+          "h": "We call for details",
+          "p": "We confirm addresses, access, furniture and packing needs."
+        },
+        {
+          "h": "We schedule the move",
+          "p": "You receive the agreed scope and quote before choosing a moving date."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "How is the moving quote prepared?",
+        "a": "The quote reflects the move size, distance, access, services and scheduling details you provide."
+      },
+      {
+        "q": "Can you pack only part of the home?",
+        "a": "Yes. Tell us which rooms or items need packing so that work can be included in the quote."
+      },
+      {
+        "q": "Do movers take furniture apart?",
+        "a": "Some furniture can be disassembled and reassembled. We confirm specific pieces before the move."
+      },
+      {
+        "q": "What items cannot go on the truck?",
+        "a": "Some hazardous, perishable or restricted items cannot be transported. You receive guidance before moving day."
+      },
+      {
+        "q": "Can I request a quote before my date is set?",
+        "a": "Yes. A tentative time frame is enough to begin planning, though availability is confirmed once the date is chosen."
+      }
+    ],
+    "book": {
+      "h2": "Request your free moving quote",
+      "p": "Share the move basics and we'll call to fill in the details."
+    },
+    "footer": "Local, long distance and office moving services in {city}."
+  },
+  {
+    "slug": "painting",
+    "niche": "Painting",
+    "offer_page": "/acquisition/painting/",
+    "business": "Truecoat Painting Co",
+    "tagline": "Interior and exterior painting",
+    "palette": {
+      "deep": "#34334e",
+      "deep_dk": "#25243a",
+      "accent": "#a54052",
+      "accent_dk": "#853342",
+      "sky": "#f8ecee"
+    },
+    "title": "Free Painting Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free painting estimate",
+    "h1": "Get a clear plan for the rooms or exterior you want painted.",
+    "lead": "Tell us the project, size and timing. We'll call to arrange a walkthrough and written estimate.",
+    "trust": [
+      "Prep work reviewed",
+      "Color questions welcome",
+      "Written estimate"
+    ],
+    "form_title": "Request your painting estimate",
+    "form_sub": "Tell us about the project. Three quick steps.",
+    "questions": [
+      {
+        "label": "Project",
+        "ask": "What would you like painted?",
+        "options": [
+          "Interior rooms",
+          "Cabinets",
+          "Full exterior",
+          "Deck or fence stain"
+        ]
+      },
+      {
+        "label": "Size",
+        "ask": "How large is the project?",
+        "options": [
+          "1-2 rooms",
+          "3-5 rooms",
+          "Whole house",
+          "Not sure"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like the work done?",
+        "options": [
+          "Within 2 weeks",
+          "This month",
+          "Next season",
+          "Just getting quotes"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to discuss the surfaces and arrange a walkthrough for your painting estimate.",
+    "cards": {
+      "eyebrow": "Projects to refresh",
+      "h2": "Good paint work begins with the surface underneath.",
+      "p": "A walkthrough helps define repairs, preparation, finish and the full project scope.",
+      "items": [
+        {
+          "h": "Walls are marked or faded",
+          "p": "Busy rooms need patching, preparation and a fresh, even finish."
+        },
+        {
+          "h": "Colors no longer fit the home",
+          "p": "A new palette can connect rooms and make the space feel more consistent."
+        },
+        {
+          "h": "Cabinets look worn",
+          "p": "Doors, frames and hardware need a detailed plan before refinishing."
+        },
+        {
+          "h": "Exterior paint is peeling",
+          "p": "Loose coating and exposed areas need review before new paint is applied."
+        },
+        {
+          "h": "A deck has weathered",
+          "p": "Wood condition and previous coatings affect the staining plan."
+        },
+        {
+          "h": "A move is approaching",
+          "p": "Painting can prepare a home before move-in, listing or handover."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "See the surfaces before setting the scope.",
+      "items": [
+        {
+          "h": "Describe the project",
+          "p": "Choose the area, size and preferred timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We ask about surfaces, colors and access, then arrange a walkthrough."
+        },
+        {
+          "h": "We inspect and estimate",
+          "p": "You receive the preparation plan, project scope and written estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Do I need to choose colors before the estimate?",
+        "a": "No. The estimate can begin with the rooms and surfaces, and color decisions can follow."
+      },
+      {
+        "q": "Is wall repair included?",
+        "a": "We note visible preparation and repair needs during the walkthrough and include the agreed work in the scope."
+      },
+      {
+        "q": "Do I need to move furniture?",
+        "a": "We explain what should be moved or cleared before the project based on the rooms involved."
+      },
+      {
+        "q": "Can you paint occupied homes?",
+        "a": "Yes. Access, room sequence and daily cleanup can be planned around the household."
+      },
+      {
+        "q": "Do you provide the paint?",
+        "a": "Material responsibilities and product choices are listed in the written estimate."
+      }
+    ],
+    "book": {
+      "h2": "Request your free painting estimate",
+      "p": "Tell us what needs painting and we'll call to arrange the walkthrough."
+    },
+    "footer": "Interior, exterior and cabinet painting for homes in {city}."
+  },
+  {
+    "slug": "pest-control",
+    "niche": "Pest control",
+    "offer_page": "/acquisition/pest-control/",
+    "business": "Shieldline Pest Control",
+    "tagline": "Home pest inspection and treatment",
+    "palette": {
+      "deep": "#233d36",
+      "deep_dk": "#182c26",
+      "accent": "#9b4b24",
+      "accent_dk": "#7d3b1b",
+      "sky": "#f3eee7"
+    },
+    "title": "Free Pest Inspection",
+    "cta_long": "Book a free inspection",
+    "cta_short": "Free inspection",
+    "eyebrow": "Free pest inspection",
+    "h1": "Find where pests are getting in and what to do next.",
+    "lead": "Tell us what you have seen and how soon you need help. We'll call to arrange an inspection or service visit.",
+    "trust": [
+      "Home entry points checked",
+      "Treatment options explained",
+      "Plan before treatment"
+    ],
+    "form_title": "Request your pest inspection",
+    "form_sub": "Tell us what you have seen. Three quick steps.",
+    "questions": [
+      {
+        "label": "Pest",
+        "ask": "Which pest are you dealing with?",
+        "options": [
+          "Ants",
+          "Roaches",
+          "Rodents",
+          "Wasps or bees",
+          "Bed bugs",
+          "Termites"
+        ]
+      },
+      {
+        "label": "Service",
+        "ask": "What kind of help would you prefer?",
+        "options": [
+          "Inspection first",
+          "One-time treatment",
+          "Quarterly plan"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need help?",
+        "options": [
+          "Today",
+          "This week",
+          "Within 2 weeks"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Book my inspection",
+    "thanks": "We'll call to ask about the pest activity and arrange the right visit.",
+    "cards": {
+      "eyebrow": "Signs to inspect",
+      "h2": "Pest activity often leaves clues before you see the source.",
+      "p": "Tell us where and when the signs appear so the inspection can begin in the right places.",
+      "items": [
+        {
+          "h": "Droppings appear indoors",
+          "p": "Small droppings in cabinets, garages or storage areas can show active travel routes."
+        },
+        {
+          "h": "Scratching comes from walls",
+          "p": "Sounds at night may point to movement in wall or ceiling spaces."
+        },
+        {
+          "h": "Ant trails keep returning",
+          "p": "Cleaning the trail does not stop activity when the nest or entry point remains."
+        },
+        {
+          "h": "Wood shows damage",
+          "p": "Hollow areas, tubes or discarded wings should be inspected for termite activity."
+        },
+        {
+          "h": "Bites or spots appear near beds",
+          "p": "Mattress seams, frames and nearby furniture may need a careful bed bug inspection."
+        },
+        {
+          "h": "A nest is near an entry",
+          "p": "Wasps or bees around doors, eaves or play areas need cautious handling."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we inspect",
+      "h2": "Six areas can reveal how pests are moving.",
+      "p": "The exact inspection changes with the pest and property.",
+      "items": [
+        {
+          "h": "Entry points",
+          "small": "gaps and openings"
+        },
+        {
+          "h": "Kitchen areas",
+          "small": "food and water sources"
+        },
+        {
+          "h": "Storage spaces",
+          "small": "clutter and nesting signs"
+        },
+        {
+          "h": "Exterior edges",
+          "small": "activity near the home"
+        },
+        {
+          "h": "Moisture areas",
+          "small": "leaks and damp places"
+        },
+        {
+          "h": "Visible damage",
+          "small": "marks, nests and droppings"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Identify the pest before choosing treatment.",
+      "items": [
+        {
+          "h": "Describe the activity",
+          "p": "Choose the pest, service and timing."
+        },
+        {
+          "h": "We call to prepare",
+          "p": "We ask where signs appear and arrange the proper visit."
+        },
+        {
+          "h": "We inspect and explain",
+          "p": "You receive the findings and treatment options before deciding what happens next."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the pest inspection free?",
+        "a": "Yes. The inspection described on this page has no charge and no obligation."
+      },
+      {
+        "q": "Should I leave the home before treatment?",
+        "a": "That depends on the pest and product. You receive preparation and safety instructions before any treatment."
+      },
+      {
+        "q": "Can you treat a home with pets?",
+        "a": "Tell us about every pet. The technician will explain any access or safety steps for the recommended service."
+      },
+      {
+        "q": "Do I need a one-time or quarterly plan?",
+        "a": "It depends on the pest, property and activity. The inspection helps identify a suitable service option."
+      },
+      {
+        "q": "What should I do with a wasp or bee nest?",
+        "a": "Keep people and pets away from it. Do not disturb the nest while waiting for the service call."
+      }
+    ],
+    "book": {
+      "h2": "Book your free pest inspection",
+      "p": "Tell us what you have seen and we'll call to arrange the visit."
+    },
+    "footer": "Pest inspections and treatment services for homes in {city}."
+  },
+  {
+    "slug": "pet-waste-removal",
+    "niche": "Pet waste removal",
+    "offer_page": "/acquisition/pet-waste-removal/",
+    "business": "Scoop Patrol",
+    "tagline": "Scheduled dog waste cleanup",
+    "palette": {
+      "deep": "#30452f",
+      "deep_dk": "#223221",
+      "accent": "#8b541c",
+      "accent_dk": "#704316",
+      "sky": "#f2f5e9"
+    },
+    "title": "Free Yard Cleanup Quote",
+    "cta_long": "Request a cleanup quote",
+    "cta_short": "Cleanup quote",
+    "eyebrow": "Free yard cleanup quote",
+    "h1": "Keep the yard ready for people and dogs to enjoy.",
+    "lead": "Tell us how many dogs use the yard, how often you want service and the yard size. We'll call with the next step for a quote.",
+    "trust": [
+      "One-time or scheduled",
+      "Gates checked after visits",
+      "Service plan confirmed"
+    ],
+    "form_title": "Request your cleanup quote",
+    "form_sub": "Tell us about the yard. Three quick steps.",
+    "questions": [
+      {
+        "label": "Number of dogs",
+        "ask": "How many dogs use the yard?",
+        "options": [
+          "1 dog",
+          "2 dogs",
+          "3 dogs",
+          "4 or more"
+        ]
+      },
+      {
+        "label": "How often",
+        "ask": "How often would you like cleanup?",
+        "options": [
+          "Twice a week",
+          "Weekly",
+          "Every 2 weeks",
+          "One-time cleanup"
+        ]
+      },
+      {
+        "label": "Yard size",
+        "ask": "How large is the cleanup area?",
+        "options": [
+          "Small",
+          "Medium",
+          "Large",
+          "Over an acre"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to confirm the yard, dog count, access and service schedule.",
+    "cards": {
+      "eyebrow": "Reasons to schedule",
+      "h2": "A regular cleanup keeps the job from piling up.",
+      "p": "Service frequency can reflect the dog count, yard size and how the space is used.",
+      "items": [
+        {
+          "h": "The weekly chore gets missed",
+          "p": "A scheduled visit removes one recurring task from the household list."
+        },
+        {
+          "h": "Several dogs use the yard",
+          "p": "More dogs can make a consistent cleanup schedule more useful."
+        },
+        {
+          "h": "Children share the space",
+          "p": "The yard needs regular attention before play and outdoor time."
+        },
+        {
+          "h": "A gathering is coming",
+          "p": "A one-time cleanup can prepare the yard before guests arrive."
+        },
+        {
+          "h": "The yard is large",
+          "p": "A bigger cleanup area can take more time to walk and cover."
+        },
+        {
+          "h": "Seasonal buildup needs clearing",
+          "p": "A one-time visit can handle waste revealed after snow or missed service."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Set the schedule once, then keep it going.",
+      "items": [
+        {
+          "h": "Describe the yard",
+          "p": "Share the dog count, yard size and preferred frequency."
+        },
+        {
+          "h": "We call to confirm access",
+          "p": "We ask about gates, dogs and where collected waste should go."
+        },
+        {
+          "h": "We clean on schedule",
+          "p": "The service covers the agreed area and the gate is secured when the visit is complete."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Do I need to be home?",
+        "a": "No, if the yard is safely accessible and entry instructions are confirmed."
+      },
+      {
+        "q": "Can my dog stay in the yard?",
+        "a": "That depends on the dog's behavior and the service policy. We confirm a safe plan before the first visit."
+      },
+      {
+        "q": "What happens to the collected waste?",
+        "a": "Disposal arrangements are confirmed when you book because local service options can differ."
+      },
+      {
+        "q": "Can I book only one cleanup?",
+        "a": "Yes. One-time cleanup is available for seasonal buildup, events or catching up."
+      }
+    ],
+    "book": {
+      "h2": "Request your yard cleanup quote",
+      "p": "Tell us about the dogs and yard, and we'll call to confirm service."
+    },
+    "footer": "One-time and scheduled pet waste removal for yards in {city}."
+  },
+  {
+    "slug": "plumbing",
+    "niche": "Plumbing",
+    "offer_page": "/acquisition/plumbing/",
+    "business": "Clearflow Plumbing",
+    "tagline": "Home plumbing repair and installation",
+    "palette": {
+      "deep": "#153b54",
+      "deep_dk": "#0e2a3c",
+      "accent": "#a64525",
+      "accent_dk": "#85371d",
+      "sky": "#eaf4f8"
+    },
+    "title": "Free Plumbing Estimate",
+    "cta_long": "Request plumbing service",
+    "cta_short": "Plumbing quote",
+    "eyebrow": "Free plumbing estimate",
+    "h1": "Get the leak, clog or fixture problem looked at properly.",
+    "lead": "Tell us what is happening and how urgent it is. We'll call to arrange the right service visit or estimate.",
+    "trust": [
+      "Repairs and installations",
+      "Urgency reviewed first",
+      "Estimate before work"
+    ],
+    "form_title": "Request plumbing service",
+    "form_sub": "Tell us what is wrong. Three quick steps.",
+    "questions": [
+      {
+        "label": "Problem",
+        "ask": "What plumbing help do you need?",
+        "options": [
+          "Leak",
+          "Clogged drain",
+          "Toilet repair",
+          "Water heater",
+          "Repipe or remodel"
+        ]
+      },
+      {
+        "label": "How urgent",
+        "ask": "How soon do you need help?",
+        "options": [
+          "Emergency",
+          "Today",
+          "This week",
+          "Just getting quotes"
+        ]
+      },
+      {
+        "label": "Property",
+        "ask": "What kind of property is it?",
+        "options": [
+          "House",
+          "Condo",
+          "Rental I own"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request service",
+    "thanks": "We'll call shortly to review the problem and arrange the right plumbing visit.",
+    "cards": {
+      "eyebrow": "Problems to address",
+      "h2": "Small plumbing signs can point to a larger source.",
+      "p": "Share where the problem appears and what changed before it started.",
+      "items": [
+        {
+          "h": "A leak will not stop",
+          "p": "Water is dripping, pooling or staining a wall, cabinet or ceiling."
+        },
+        {
+          "h": "A drain keeps slowing down",
+          "p": "Water backs up again after basic cleaning or affects more than one fixture."
+        },
+        {
+          "h": "The toilet keeps running",
+          "p": "The tank cycles, leaks or does not flush as expected."
+        },
+        {
+          "h": "Hot water is unreliable",
+          "p": "The water heater is not producing enough hot water or is showing visible trouble."
+        },
+        {
+          "h": "Pipes need updating",
+          "p": "Older plumbing or a remodel calls for a planned repipe or new fixture lines."
+        },
+        {
+          "h": "Water pressure has changed",
+          "p": "A sudden drop or uneven pressure needs the source checked."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Start with the symptoms and urgency.",
+      "items": [
+        {
+          "h": "Describe the problem",
+          "p": "Choose the plumbing issue, urgency and property type."
+        },
+        {
+          "h": "We call to assess timing",
+          "p": "We ask a few safety and access questions, then arrange the visit."
+        },
+        {
+          "h": "We inspect and explain",
+          "p": "You receive the recommended work and estimate before repairs proceed."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What should I do during an active leak?",
+        "a": "If it is safe, shut off the nearest fixture valve or the main water supply, then keep away from electrical hazards."
+      },
+      {
+        "q": "Can you clear any clogged drain?",
+        "a": "We first confirm the fixture and symptoms. Some shared or municipal line problems may need a different service."
+      },
+      {
+        "q": "Do you repair water heaters?",
+        "a": "Yes. We can review the type, age and symptoms before arranging the right visit."
+      },
+      {
+        "q": "Will I know the cost before work begins?",
+        "a": "Yes. After the problem is assessed, you receive an estimate for the recommended work."
+      },
+      {
+        "q": "Can a tenant book service?",
+        "a": "The property owner or manager usually needs to approve chargeable work. Renters should contact them first unless there is an immediate safety issue."
+      }
+    ],
+    "book": {
+      "h2": "Request plumbing service",
+      "p": "Tell us what is happening and we'll call to arrange the visit."
+    },
+    "footer": "Plumbing repair, water heater and installation services in {city}."
+  },
+  {
+    "slug": "pool-service",
+    "niche": "Pool service",
+    "offer_page": "/acquisition/pool-service/",
+    "business": "Bluewater Pool Care",
+    "tagline": "Pool cleaning, opening and equipment service",
+    "palette": {
+      "deep": "#0d4050",
+      "deep_dk": "#092d38",
+      "accent": "#24758c",
+      "accent_dk": "#1b5e71",
+      "sky": "#e7f5f7"
+    },
+    "title": "Free Pool Service Quote",
+    "cta_long": "Request a pool quote",
+    "cta_short": "Pool quote",
+    "eyebrow": "Free pool service quote",
+    "h1": "Get your pool clean, open and ready to use.",
+    "lead": "Tell us the service, pool type and timing. We'll call to confirm the pool details and provide a quote.",
+    "trust": [
+      "Cleaning and equipment",
+      "Pool details reviewed",
+      "Clear service quote"
+    ],
+    "form_title": "Request your pool service quote",
+    "form_sub": "Tell us about the pool. Three quick steps.",
+    "questions": [
+      {
+        "label": "Service",
+        "ask": "What does your pool need?",
+        "options": [
+          "Green pool cleanup",
+          "Equipment repair",
+          "Opening or closing",
+          "Weekly cleaning"
+        ]
+      },
+      {
+        "label": "Pool type",
+        "ask": "What kind of pool do you have?",
+        "options": [
+          "Above-ground",
+          "In-ground",
+          "Pool and spa"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need service?",
+        "options": [
+          "This week",
+          "Within 2 weeks",
+          "This month"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to review the pool, access and service needed before scheduling.",
+    "cards": {
+      "eyebrow": "Reasons to call",
+      "h2": "Pool care depends on water, equipment and routine.",
+      "p": "A service visit starts with the condition of the pool and what has changed.",
+      "items": [
+        {
+          "h": "The water has turned green",
+          "p": "Algae or poor circulation has changed the water and needs a planned cleanup."
+        },
+        {
+          "h": "The pump is not running well",
+          "p": "Noise, leaks or weak circulation can point to an equipment problem."
+        },
+        {
+          "h": "Cleaning keeps falling behind",
+          "p": "A weekly visit can cover routine cleaning and basic water care."
+        },
+        {
+          "h": "The season is starting",
+          "p": "The cover, equipment and water need attention before normal use."
+        },
+        {
+          "h": "Cold weather is coming",
+          "p": "Closing tasks help prepare the pool and equipment for the off-season."
+        },
+        {
+          "h": "The spa needs service too",
+          "p": "A combined pool and spa setup needs both areas included in the service plan."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we review",
+      "h2": "Six parts can affect pool condition.",
+      "p": "The service assessment connects the water condition with the equipment moving it.",
+      "items": [
+        {
+          "h": "Water appearance",
+          "small": "clarity and visible growth"
+        },
+        {
+          "h": "Pump",
+          "small": "operation and leaks"
+        },
+        {
+          "h": "Filter",
+          "small": "condition and pressure"
+        },
+        {
+          "h": "Skimmer and baskets",
+          "small": "flow and debris"
+        },
+        {
+          "h": "Visible surfaces",
+          "small": "walls, steps and floor"
+        },
+        {
+          "h": "Pool access",
+          "small": "gate and equipment area"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Match the visit to the pool's condition.",
+      "items": [
+        {
+          "h": "Describe the pool",
+          "p": "Choose the service, pool type and timing."
+        },
+        {
+          "h": "We call to confirm",
+          "p": "We ask about water condition, equipment and access."
+        },
+        {
+          "h": "We service or inspect",
+          "p": "We complete the agreed work or provide an estimate for needed repairs."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Can a green pool be cleaned in one visit?",
+        "a": "That depends on the water condition, equipment and cause. We explain the likely steps after assessment."
+      },
+      {
+        "q": "Do I need to be home for weekly service?",
+        "a": "No, if safe pool and equipment access is arranged in advance."
+      },
+      {
+        "q": "Can you repair pool equipment?",
+        "a": "Yes. Describe the equipment and symptoms so the correct service visit can be arranged."
+      },
+      {
+        "q": "What is included in weekly service?",
+        "a": "The service checklist is confirmed before booking and reflects the pool type and agreed care plan."
+      }
+    ],
+    "book": {
+      "h2": "Request your pool service quote",
+      "p": "Tell us what the pool needs and we'll call to plan the visit."
+    },
+    "footer": "Pool cleaning, seasonal service and equipment repair in {city}."
+  },
+  {
+    "slug": "pressure-washing",
+    "niche": "Pressure washing",
+    "offer_page": "/acquisition/pressure-washing/",
+    "business": "Freshface Exterior Cleaning",
+    "tagline": "Exterior washing for homes and businesses",
+    "palette": {
+      "deep": "#214052",
+      "deep_dk": "#172e3b",
+      "accent": "#287767",
+      "accent_dk": "#205f52",
+      "sky": "#e9f5f2"
+    },
+    "title": "Free Exterior Cleaning Quote",
+    "cta_long": "Request a cleaning quote",
+    "cta_short": "Cleaning quote",
+    "eyebrow": "Free exterior cleaning quote",
+    "h1": "Wash away the buildup hiding your home's exterior.",
+    "lead": "Tell us the surface, property type and timing. We'll call to review access and prepare a quote.",
+    "trust": [
+      "Method matched to surface",
+      "Home and business service",
+      "Written quote"
+    ],
+    "form_title": "Request your exterior cleaning quote",
+    "form_sub": "Tell us what needs washing. Three quick steps.",
+    "questions": [
+      {
+        "label": "Surface",
+        "ask": "What would you like cleaned?",
+        "options": [
+          "House siding",
+          "Driveway",
+          "Deck or patio",
+          "Fence",
+          "Roof soft wash"
+        ]
+      },
+      {
+        "label": "Property",
+        "ask": "What kind of property is it?",
+        "options": [
+          "Single-family home",
+          "Townhouse",
+          "Commercial"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When would you like it cleaned?",
+        "options": [
+          "This week",
+          "Within 2 weeks",
+          "This month"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to confirm the surfaces, access and preferred cleaning time.",
+    "cards": {
+      "eyebrow": "Surfaces to refresh",
+      "h2": "Different exterior surfaces need different cleaning pressure.",
+      "p": "The quote considers the material, buildup, area and safe access.",
+      "items": [
+        {
+          "h": "Siding looks dull or streaked",
+          "p": "Dirt and organic buildup have changed the look of the exterior."
+        },
+        {
+          "h": "The driveway has dark marks",
+          "p": "Traffic, weather and surface growth have left visible patches."
+        },
+        {
+          "h": "A deck feels weathered",
+          "p": "Boards need cleaning suited to the wood or composite surface."
+        },
+        {
+          "h": "The patio is slippery",
+          "p": "Buildup on outdoor surfaces can make wet areas harder to use."
+        },
+        {
+          "h": "The fence has changed color",
+          "p": "Dirt and growth are covering the original finish."
+        },
+        {
+          "h": "The roof has dark streaks",
+          "p": "A roof should be assessed for a low-pressure soft wash approach."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Choose the cleaning method after we see the surface.",
+      "items": [
+        {
+          "h": "Describe the project",
+          "p": "Choose the surface, property and preferred timing."
+        },
+        {
+          "h": "We call to review it",
+          "p": "We ask about materials, water access and the size of the area."
+        },
+        {
+          "h": "We quote and clean",
+          "p": "You receive the scope and quote before the exterior cleaning is scheduled."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is pressure washing safe for siding?",
+        "a": "The cleaning method and pressure should match the surface. We review the material before work begins."
+      },
+      {
+        "q": "What is a roof soft wash?",
+        "a": "It uses a lower-pressure method intended for roof cleaning. The roof condition and access are checked first."
+      },
+      {
+        "q": "Do I need to be home?",
+        "a": "Not always. We need confirmed access, closed windows and any property instructions before the visit."
+      },
+      {
+        "q": "Can you clean a commercial property?",
+        "a": "Yes. Tell us about the building, surfaces and access so the work can be planned."
+      }
+    ],
+    "book": {
+      "h2": "Request your exterior cleaning quote",
+      "p": "Tell us what needs washing and we'll call to review the project."
+    },
+    "footer": "Exterior washing for homes and commercial properties in {city}."
+  },
+  {
+    "slug": "restaurants",
+    "niche": "Restaurant events",
+    "offer_page": "/acquisition/niches/",
+    "business": "Ember & Vine Kitchen",
+    "tagline": "Group dining, catering and private events",
+    "palette": {
+      "deep": "#4a2925",
+      "deep_dk": "#351c19",
+      "accent": "#9c4b2d",
+      "accent_dk": "#7e3b23",
+      "sky": "#f8eee8"
+    },
+    "title": "Plan Your Group Booking",
+    "cta_long": "Request a group booking",
+    "cta_short": "Group booking",
+    "eyebrow": "Group dining request",
+    "h1": "Bring your group together around a table worth sharing.",
+    "lead": "Tell us what you are planning, your party size and preferred date. Our team will call to discuss availability and options.",
+    "trust": [
+      "Groups and private events",
+      "Catering requests welcome",
+      "Details confirmed by phone"
+    ],
+    "form_title": "Send your dining request",
+    "form_sub": "Share the event basics. Three quick steps.",
+    "questions": [
+      {
+        "label": "Reason",
+        "ask": "What are you planning?",
+        "options": [
+          "Group reservation",
+          "Private event",
+          "Catering order",
+          "Gift cards"
+        ]
+      },
+      {
+        "label": "Party size",
+        "ask": "How many people are you planning for?",
+        "options": [
+          "2-6",
+          "7-15",
+          "16-40",
+          "Over 40"
+        ]
+      },
+      {
+        "label": "Date",
+        "ask": "When do you need the booking or order?",
+        "options": [
+          "This week",
+          "This month",
+          "Next month",
+          "Not set yet"
+        ]
+      }
+    ],
+    "zip_label": "Your ZIP code",
+    "submit": "Send my request",
+    "thanks": "Our team will call to discuss your date, group size and the options available.",
+    "cards": {
+      "eyebrow": "Ways to gather",
+      "h2": "Start with the occasion and the number of guests.",
+      "p": "The team can then discuss seating, menu options, timing and service details.",
+      "items": [
+        {
+          "h": "A family meal is coming up",
+          "p": "Reserve space for a birthday, anniversary or time together."
+        },
+        {
+          "h": "A team needs a table",
+          "p": "Plan a work dinner, lunch or group celebration."
+        },
+        {
+          "h": "The event needs privacy",
+          "p": "Ask about spaces and formats available for private gatherings."
+        },
+        {
+          "h": "Food is needed off-site",
+          "p": "Request catering for an office, home or event location."
+        },
+        {
+          "h": "The guest count is still changing",
+          "p": "Start with a reasonable estimate and update the team as plans settle."
+        },
+        {
+          "h": "You want to give a meal",
+          "p": "Ask about gift cards for someone to use on their own schedule."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Share the event, then confirm the details.",
+      "items": [
+        {
+          "h": "Send the basics",
+          "p": "Choose the request type, party size and time frame."
+        },
+        {
+          "h": "We call to discuss it",
+          "p": "We review the date, menu needs, space and availability."
+        },
+        {
+          "h": "You confirm the booking",
+          "p": "The team explains the final details required to hold the reservation, event or order."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Does this form confirm my reservation?",
+        "a": "No. It sends a request. The team will confirm availability and explain what is needed to complete the booking."
+      },
+      {
+        "q": "Can you handle dietary requests?",
+        "a": "Share the requests during the call. The team will explain which menu options may be suitable."
+      },
+      {
+        "q": "Can I book a private room?",
+        "a": "Private space depends on the date, group size and restaurant layout. The team will discuss available options."
+      },
+      {
+        "q": "How far ahead should I request catering?",
+        "a": "More notice usually gives the team more room to plan, but you can submit your date to check availability."
+      },
+      {
+        "q": "Can I change the guest count later?",
+        "a": "Often, yes. The team will give you a deadline for final numbers based on the booking type."
+      }
+    ],
+    "book": {
+      "h2": "Plan your group meal or event",
+      "p": "Share the date and guest count, and our team will call to discuss it."
+    },
+    "footer": "Group dining, catering and private event requests at our restaurant in {city}."
+  },
+  {
+    "slug": "roofing",
+    "niche": "Roofing",
+    "offer_page": "/acquisition/roofing/",
+    "business": "Summit Peak Roofing",
+    "tagline": "Roof inspection, repair and replacement",
+    "palette": {
+      "deep": "#30394a",
+      "deep_dk": "#222936",
+      "accent": "#a13f2c",
+      "accent_dk": "#813225",
+      "sky": "#f5ece9"
+    },
+    "title": "Free Roof Inspection",
+    "cta_long": "Book a free inspection",
+    "cta_short": "Free inspection",
+    "eyebrow": "Free roof inspection",
+    "h1": "Find out what your roof needs before the next storm.",
+    "lead": "Tell us what you have noticed and how you plan to handle the work. We'll call to arrange a free roof inspection.",
+    "trust": [
+      "Roof condition explained",
+      "Photos of visible issues",
+      "Written work estimate"
+    ],
+    "form_title": "Request your roof inspection",
+    "form_sub": "Tell us about the roof. Three quick steps.",
+    "questions": [
+      {
+        "label": "Need",
+        "ask": "What does your roof need?",
+        "options": [
+          "Storm damage",
+          "Leak repair",
+          "Free inspection",
+          "Full replacement"
+        ]
+      },
+      {
+        "label": "Roof age",
+        "ask": "About how old is the roof?",
+        "options": [
+          "Under 10 years",
+          "10 to 20 years",
+          "Over 20 years",
+          "Not sure"
+        ]
+      },
+      {
+        "label": "How paid",
+        "ask": "How do you expect to pay for the work?",
+        "options": [
+          "Out of pocket",
+          "Insurance claim",
+          "Financing",
+          "Not sure yet"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Book my inspection",
+    "thanks": "We'll call to confirm the roof details and arrange your free inspection.",
+    "cards": {
+      "eyebrow": "Signs worth checking",
+      "h2": "Roof trouble often shows up before water reaches the floor.",
+      "p": "An inspection can connect visible signs inside and outside the home.",
+      "items": [
+        {
+          "h": "Shingles are missing",
+          "p": "Wind or age has left exposed spots or uneven areas on the roof."
+        },
+        {
+          "h": "A ceiling stain appeared",
+          "p": "Discoloration indoors may point to water entering somewhere above."
+        },
+        {
+          "h": "Granules fill the gutters",
+          "p": "Loose roofing granules can collect in gutters and downspouts."
+        },
+        {
+          "h": "Flashing looks loose",
+          "p": "Metal around vents, walls or chimneys has shifted or lifted."
+        },
+        {
+          "h": "The roofline looks uneven",
+          "p": "A visible dip or wave should be checked from a safe position."
+        },
+        {
+          "h": "A storm passed through",
+          "p": "Wind, hail or falling debris may have caused damage that is hard to see from the ground."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we inspect",
+      "h2": "Six areas help show the roof's condition.",
+      "p": "We document visible concerns and explain which ones need attention.",
+      "items": [
+        {
+          "h": "Roof covering",
+          "small": "missing and damaged areas"
+        },
+        {
+          "h": "Flashing",
+          "small": "edges, walls and penetrations"
+        },
+        {
+          "h": "Vents",
+          "small": "visible seals and condition"
+        },
+        {
+          "h": "Gutters",
+          "small": "drainage and collected debris"
+        },
+        {
+          "h": "Roofline",
+          "small": "visible dips and movement"
+        },
+        {
+          "h": "Interior signs",
+          "small": "accessible stains and moisture"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "See the roof condition before deciding on work.",
+      "items": [
+        {
+          "h": "Describe the concern",
+          "p": "Tell us the need, roof age and payment plan."
+        },
+        {
+          "h": "We call to book",
+          "p": "We confirm access and arrange the inspection."
+        },
+        {
+          "h": "We inspect and explain",
+          "p": "You receive the findings, visible photos and a written estimate if work is recommended."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the roof inspection free?",
+        "a": "Yes. There is no charge for the inspection described on this page."
+      },
+      {
+        "q": "Do I need to climb onto the roof?",
+        "a": "No. Stay safely on the ground and let the inspector handle roof access."
+      },
+      {
+        "q": "Does a leak mean I need a new roof?",
+        "a": "Not always. The source, extent and overall roof condition determine whether repair or replacement is appropriate."
+      },
+      {
+        "q": "Can you inspect storm damage for an insurance claim?",
+        "a": "We can document visible roof conditions and provide an estimate. Coverage decisions belong to your insurer."
+      },
+      {
+        "q": "Do I need to own the home?",
+        "a": "The property owner needs to approve roof work. Renters should contact the landlord or property manager."
+      }
+    ],
+    "book": {
+      "h2": "Book your free roof inspection",
+      "p": "Tell us what you have noticed and we'll call to arrange the visit."
+    },
+    "footer": "Roof inspections, repairs and replacements for homes in {city}."
+  },
+  {
+    "slug": "spray-foam",
+    "niche": "Spray foam insulation",
+    "offer_page": "/acquisition/spray-foam/",
+    "business": "Thermaseal Insulation",
+    "tagline": "Spray foam insulation for homes and buildings",
+    "palette": {
+      "deep": "#34402e",
+      "deep_dk": "#252e21",
+      "accent": "#8f571c",
+      "accent_dk": "#734616",
+      "sky": "#f4f3e6"
+    },
+    "title": "Free Insulation Estimate",
+    "cta_long": "Request a free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free insulation estimate",
+    "h1": "Find the right insulation plan for the space you are building.",
+    "lead": "Tell us the area, main goal and timing. We'll call to review the project and arrange an estimate.",
+    "trust": [
+      "New and existing spaces",
+      "Site conditions reviewed",
+      "Written estimate"
+    ],
+    "form_title": "Request your insulation estimate",
+    "form_sub": "Tell us about the space. Three quick steps.",
+    "questions": [
+      {
+        "label": "Area",
+        "ask": "Where do you need insulation?",
+        "options": [
+          "Attic",
+          "Crawl space",
+          "Walls",
+          "Pole barn or shop",
+          "New construction"
+        ]
+      },
+      {
+        "label": "Main goal",
+        "ask": "What is the main reason for the project?",
+        "options": [
+          "Comfort",
+          "Lower energy bills",
+          "Moisture control",
+          "New build requirement"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need the work?",
+        "options": [
+          "Within 2 weeks",
+          "Within a month",
+          "This season",
+          "Just getting quotes"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Request my estimate",
+    "thanks": "We'll call to discuss the space, access and timing before arranging your estimate.",
+    "cards": {
+      "eyebrow": "Spaces to assess",
+      "h2": "Insulation choices depend on where the material will go.",
+      "p": "Access, assembly, moisture and project stage all affect the recommended scope.",
+      "items": [
+        {
+          "h": "The attic needs attention",
+          "p": "Existing insulation, roof assembly and access need review before adding material."
+        },
+        {
+          "h": "A crawl space feels damp",
+          "p": "Moisture conditions and exposed surfaces should be assessed as part of the plan."
+        },
+        {
+          "h": "Walls are open for construction",
+          "p": "A new build or renovation creates an opportunity to insulate before finishes go on."
+        },
+        {
+          "h": "A shop is hard to condition",
+          "p": "Large wall and roof areas may need a plan suited to the building's use."
+        },
+        {
+          "h": "Rooms feel uneven",
+          "p": "Comfort differences can prompt a closer look at insulation and air movement."
+        },
+        {
+          "h": "The project has a deadline",
+          "p": "Construction sequence matters when insulation must happen before drywall or other work."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we assess",
+      "h2": "Six details define the insulation scope.",
+      "p": "The site review connects the product choice with the building assembly.",
+      "items": [
+        {
+          "h": "Installation area",
+          "small": "attic, walls or crawl space"
+        },
+        {
+          "h": "Access",
+          "small": "room to reach each surface"
+        },
+        {
+          "h": "Existing insulation",
+          "small": "type and visible condition"
+        },
+        {
+          "h": "Moisture signs",
+          "small": "damp areas and ventilation"
+        },
+        {
+          "h": "Building stage",
+          "small": "open or finished surfaces"
+        },
+        {
+          "h": "Project use",
+          "small": "home, shop or new build"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Review the building before setting the scope.",
+      "items": [
+        {
+          "h": "Describe the project",
+          "p": "Choose the area, goal and preferred timing."
+        },
+        {
+          "h": "We call to review it",
+          "p": "We ask about access, construction stage and existing material."
+        },
+        {
+          "h": "We assess and estimate",
+          "p": "You receive the proposed scope and a written estimate for the work."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Can spray foam be added to an existing home?",
+        "a": "Sometimes. Access, existing materials and the building assembly need to be reviewed first."
+      },
+      {
+        "q": "Do I need to remove old insulation?",
+        "a": "That depends on its condition, type and the planned application. The estimate will state any removal work."
+      },
+      {
+        "q": "Can the home be occupied during installation?",
+        "a": "Project access and reentry instructions depend on the scope and products used. We explain them before scheduling."
+      },
+      {
+        "q": "Can you insulate a pole barn or shop?",
+        "a": "Yes. Tell us how the building is used and whether walls or roof surfaces are open."
+      }
+    ],
+    "book": {
+      "h2": "Request your insulation estimate",
+      "p": "Tell us about the space and we'll call to arrange the site review."
+    },
+    "footer": "Spray foam insulation for homes, shops and new construction in {city}."
+  },
+  {
+    "slug": "waste-management",
+    "niche": "Waste management",
+    "offer_page": "/acquisition/waste-management/",
+    "business": "Greenbin Waste Services",
+    "tagline": "Waste pickup, recycling and roll-off dumpsters",
+    "palette": {
+      "deep": "#244038",
+      "deep_dk": "#192e28",
+      "accent": "#8a5117",
+      "accent_dk": "#6f4112",
+      "sky": "#eef4e8"
+    },
+    "title": "Free Waste Service Quote",
+    "cta_long": "Request a service quote",
+    "cta_short": "Service quote",
+    "eyebrow": "Free waste service quote",
+    "h1": "Set up the right pickup or container for your waste.",
+    "lead": "Tell us the service, customer type and timing. We'll call to confirm volume, access and the right quote.",
+    "trust": [
+      "Home and business service",
+      "Contractor containers",
+      "Clear pickup schedule"
+    ],
+    "form_title": "Request your waste service quote",
+    "form_sub": "Tell us what you need. Three quick steps.",
+    "questions": [
+      {
+        "label": "Service",
+        "ask": "Which waste service do you need?",
+        "options": [
+          "Roll-off dumpster",
+          "Construction waste",
+          "Weekly business pickup",
+          "Recycling"
+        ]
+      },
+      {
+        "label": "Customer type",
+        "ask": "Who is the service for?",
+        "options": [
+          "Homeowner",
+          "Contractor",
+          "Business"
+        ]
+      },
+      {
+        "label": "How soon",
+        "ask": "When do you need service?",
+        "options": [
+          "This week",
+          "Within 2 weeks",
+          "Ongoing service"
+        ]
+      }
+    ],
+    "zip_label": "Business or home ZIP code",
+    "submit": "Request my quote",
+    "thanks": "We'll call to confirm the waste type, volume, access and service schedule.",
+    "cards": {
+      "eyebrow": "Service needs",
+      "h2": "The right waste setup starts with volume, material and access.",
+      "p": "A short review helps match the pickup schedule or container to the job.",
+      "items": [
+        {
+          "h": "A renovation needs a container",
+          "p": "Construction debris needs a roll-off size and placement plan suited to the site."
+        },
+        {
+          "h": "Business bins fill too quickly",
+          "p": "Container size or pickup frequency no longer matches weekly volume."
+        },
+        {
+          "h": "A property cleanup is planned",
+          "p": "A home or site project will produce more waste than regular pickup can handle."
+        },
+        {
+          "h": "Recycling needs a routine",
+          "p": "A business wants a regular collection plan for accepted recyclable materials."
+        },
+        {
+          "h": "A job site has limited space",
+          "p": "Container placement must account for workers, equipment and pickup access."
+        },
+        {
+          "h": "Service needs have changed",
+          "p": "Seasonal volume, a new location or business growth calls for a revised plan."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Match the service to the waste and site.",
+      "items": [
+        {
+          "h": "Describe the need",
+          "p": "Choose the service, customer type and timing."
+        },
+        {
+          "h": "We call to review details",
+          "p": "We ask about materials, volume, placement and access."
+        },
+        {
+          "h": "We arrange service",
+          "p": "You receive the container or pickup plan and quote before scheduling."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "What size roll-off dumpster do I need?",
+        "a": "The right size depends on material, volume and site space. We can help narrow it down during the call."
+      },
+      {
+        "q": "Can homeowners rent a dumpster?",
+        "a": "Yes. Homeowners can request a container for cleanouts, renovations and other accepted waste."
+      },
+      {
+        "q": "What materials are not accepted?",
+        "a": "Restricted materials vary by service and local rules. Describe the waste so we can explain what is accepted."
+      },
+      {
+        "q": "Can you set up recurring business pickup?",
+        "a": "Yes. We review expected volume, container space and a suitable pickup schedule."
+      },
+      {
+        "q": "Where can a container be placed?",
+        "a": "Placement depends on surface, clearance, access and local requirements. The location is confirmed before delivery."
+      }
+    ],
+    "book": {
+      "h2": "Request your waste service quote",
+      "p": "Tell us about the waste and site, and we'll call to plan the service."
+    },
+    "footer": "Waste pickup, recycling and roll-off dumpster service in {city}."
+  },
+  {
+    "slug": "water-treatment",
+    "niche": "Water treatment",
+    "offer_page": "/acquisition/water-treatment/",
+    "business": "PureSpring Water Systems",
+    "tagline": "Water softeners and filtration",
+    "palette": {
+      "deep": "#0b3a5b",
+      "deep_dk": "#082c45",
+      "accent": "#1aa3b8",
+      "accent_dk": "#138a9c",
+      "sky": "#e6f5f8"
+    },
+    "title": "Free In-Home Water Test",
+    "cta_long": "Book a free water test",
+    "cta_short": "Free water test",
+    "eyebrow": "Free in-home water test",
+    "h1": "Is your water hard? Find out at your own kitchen sink.",
+    "lead": "Answer a few quick questions and we'll call to book a free test at a time that works for you.",
+    "trust": [
+      "Free, no obligation",
+      "About 30 minutes",
+      "City or well water"
+    ],
+    "form_title": "Request your free water test",
+    "form_sub": "Free and no pressure. Three quick steps.",
+    "questions": [
+      {
+        "label": "Water source",
+        "ask": "Where does your home's water come from?",
+        "options": [
+          "City water",
+          "Well water",
+          "Not sure"
+        ]
+      },
+      {
+        "label": "Main concern",
+        "ask": "What bothers you most about your water?",
+        "options": [
+          "Hard water",
+          "Taste or smell",
+          "Iron or staining",
+          "Drinking water safety"
+        ]
+      },
+      {
+        "label": "Interested in",
+        "ask": "What are you most interested in?",
+        "options": [
+          "Free water test",
+          "Softener",
+          "Whole-home filter",
+          "Reverse osmosis"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Book my free test",
+    "thanks": "We'll call you shortly to book your free water test at a time that works for you.",
+    "cards": {
+      "eyebrow": "Signs worth a test",
+      "h2": "Most water problems show up around the house first.",
+      "p": "If any of these sound familiar, a test can show you the likely cause.",
+      "items": [
+        {
+          "h": "Spots on dishes and glasses",
+          "p": "Cloudy film that comes back after every wash."
+        },
+        {
+          "h": "White crust on faucets",
+          "p": "Scale on shower heads, faucets and the coffee maker."
+        },
+        {
+          "h": "Dry skin and dull hair",
+          "p": "Soap that's hard to rinse off, and skin that feels dry after a shower."
+        },
+        {
+          "h": "A water heater working harder",
+          "p": "Scale inside the tank makes it less efficient and wears it down over time."
+        },
+        {
+          "h": "Odd taste or smell",
+          "p": "Chlorine from city water, or a rotten-egg smell from a well."
+        },
+        {
+          "h": "Orange or brown stains",
+          "p": "Iron in well water stains sinks, tubs and laundry."
+        }
+      ]
+    },
+    "checks": {
+      "eyebrow": "What we test for",
+      "h2": "Six readings, explained at your sink.",
+      "p": "You watch the test and see every number. If your water is fine, we'll tell you that too.",
+      "items": [
+        {
+          "h": "Hardness",
+          "small": "calcium and magnesium"
+        },
+        {
+          "h": "Iron",
+          "small": "the cause of rust stains"
+        },
+        {
+          "h": "Chlorine",
+          "small": "taste and smell"
+        },
+        {
+          "h": "pH",
+          "small": "acid or alkaline"
+        },
+        {
+          "h": "Dissolved solids",
+          "small": "minerals and other dissolved material"
+        },
+        {
+          "h": "Sulfur",
+          "small": "well water smell"
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Three steps, and the first takes a minute.",
+      "items": [
+        {
+          "h": "Request your test",
+          "p": "Answer a few quick questions about your home and your water."
+        },
+        {
+          "h": "We call to book it",
+          "p": "We'll call you to pick a time that works for you."
+        },
+        {
+          "h": "We test, you decide",
+          "p": "See your results on the spot. If treatment would help, you get a written quote to think over."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the water test really free?",
+        "a": "Yes. There's no charge for the test and no obligation to buy anything."
+      },
+      {
+        "q": "How long does it take?",
+        "a": "About 30 minutes. Someone over 18 needs to be home."
+      },
+      {
+        "q": "Do you test well water?",
+        "a": "Yes. We check the common well water problems too, like iron and sulfur."
+      },
+      {
+        "q": "What happens after the test?",
+        "a": "You get your results there and then. If treatment would help, we explain the options and leave a written quote. If your water is fine, we'll tell you that."
+      },
+      {
+        "q": "Do I need to own the home?",
+        "a": "Treatment equipment is installed in the home, so we test for homeowners. If you rent, your landlord can book the test."
+      }
+    ],
+    "book": {
+      "h2": "Book your free water test",
+      "p": "Takes under a minute. We'll call you to pick a time."
+    },
+    "footer": "Water softeners, filtration and drinking water systems for homes in {city}."
+  }
+]

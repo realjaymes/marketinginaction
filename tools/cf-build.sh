@@ -11,4 +11,5 @@ python3 tools/check-og.py
 # The ad-bridge check joins the build the day its script is committed.
 if [ -f tools/check-bridges.py ]; then python3 tools/check-bridges.py; fi
 python3 tools/dime-proof.py
+python3 tools/build-example-pages.py --check
 python3 tools/generate-sitemap.py --base-url https://marketinginaction.xyz/ --output sitemap-main.xml

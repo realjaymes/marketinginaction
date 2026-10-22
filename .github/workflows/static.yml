@@ -73,6 +73,13 @@ jobs:
         # screenshot cache-busters; tools/dime-proof.py --write fixes drift.
         run: python3 tools/dime-proof.py
 
+      - name: Check example pages
+        # The example customer pages at /acquisition/[niche]/example/ are built
+        # from data/example-pages.json. Edit the data file and rerun
+        # tools/build-example-pages.py; this fails when a page was hand-edited
+        # or not rebuilt.
+        run: python3 tools/build-example-pages.py --check
+
       - name: Generate sitemap
         # sitemap-main.xml is a derived artifact, rebuilt from the pages actually
         # on disk so it can never drift from the site. Regenerating here (rather

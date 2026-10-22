@@ -1,5 +1,5 @@
 #!/bin/sh
-# Runs the same five checks as the Cloudflare Pages build (tools/cf-build.sh), so a push that
+# Runs the same six checks as the Cloudflare Pages build (tools/cf-build.sh), so a push that
 # would fail the live deploy is stopped here instead. Enable once per clone with:
 #   git config core.hooksPath .githooks
 # The sitemap is not checked here, because the build regenerates it.
@@ -11,3 +11,8 @@ for check in verify-calculators check-wording check-og check-bridges dime-proof;
     exit 1
   fi
 done
+if ! python3 "$root/tools/build-example-pages.py" --check; then
+  echo "pre-push: example pages are stale or hand-edited. Edit data/example-pages.json" >&2
+  echo "and run python3 tools/build-example-pages.py." >&2
+  exit 1
+fi
