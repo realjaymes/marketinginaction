@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 487,
+  "count": 488,
   "items": [
     {
       "created": "2026-10-20",
@@ -6052,6 +6052,29 @@
       ],
       "website": "https://www.magnific.com",
       "slug": "magnific"
+    },
+    {
+      "created": "2026-10-22",
+      "last_edited": "2026-10-22",
+      "name": "MailCheap",
+      "overview": "MailCheap is a newsletter platform with an email editor, scheduling, per-issue web pages, signup forms and stats. It sends from your own domain and charges by emails sent instead of subscriber count.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "Email Deliverability"
+      ],
+      "use_cases": [
+        "Launch a newsletter on a custom sending domain",
+        "Migrate a list from beehiiv, Substack or Mailchimp",
+        "Schedule issues and preview them on mobile",
+        "Publish each issue as a web page for SEO",
+        "Collect subscribers with embeddable signup forms",
+        "Connect AI assistants through MCP or API keys"
+      ],
+      "website": "https://mailcheap.ai",
+      "slug": "mailcheap"
     },
     {
       "created": "2026-10-20",

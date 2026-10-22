@@ -1534,12 +1534,16 @@
   "tools_checked": "2026-10-20",
   "intake": {
     "candidates_tried": {
-      "avastudio": "2026-10-21"
+      "avastudio": "2026-10-21",
+      "mailcheap": "2026-10-22",
+      "ariesinfinite": "2026-10-22"
     },
     "briefs_done": [
       "2026-10-20 Evening Brief.md",
       "2026-10-20 Morning Brief.md",
-      "2026-10-21 Morning Brief.md"
+      "2026-10-21 Evening Brief.md",
+      "2026-10-21 Morning Brief.md",
+      "2026-10-22 Morning Brief.md"
     ]
   },
   "leaders": {
