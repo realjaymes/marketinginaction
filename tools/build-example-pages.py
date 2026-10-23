@@ -206,7 +206,7 @@ def page(p):
 <meta property="og:title" content="{attr(title)}">
 <meta property="og:description" content="{attr(desc)}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{SITE}/assets/og-acquisition.png">
+<meta property="og:image" content="{SITE}/assets/og-acquisition.png?v=20261023">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="MIA Acquisition: get more customers, predictably">
@@ -216,7 +216,7 @@ def page(p):
 <meta name="twitter:site" content="@marketinginact">
 <meta name="twitter:title" content="{attr(title)}">
 <meta name="twitter:description" content="{attr(desc)}">
-<meta name="twitter:image" content="{SITE}/assets/og-acquisition.png">
+<meta name="twitter:image" content="{SITE}/assets/og-acquisition.png?v=20261023">
 <meta name="twitter:image:alt" content="MIA Acquisition: get more customers, predictably">
 <link rel="icon" href="/favicon-32x32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -36,6 +36,9 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 BASE = "https://marketinginaction.xyz/"
 SITE_NAME = "Marketing In Action"
 TWITTER_SITE = "@marketinginact"
+# Appended to og:image and twitter:image so social platforms refetch a re-rendered image.
+# Bump it (a date) whenever an assets/og-*.png file changes.
+IMAGE_VERSION = "20261023"
 
 # First match wins. Paths are relative to the repo root, with a trailing slash.
 IMAGES = [
@@ -115,6 +118,7 @@ def image_for(path: str, current: str):
             chosen = (img, alt)
             break
     # Keep a page's own section image when it is already one of the 1200x630 set.
+    current = current.split("?")[0]
     for _, img, alt in IMAGES:
         if current == BASE + img:
             return img, alt
@@ -151,7 +155,7 @@ def desired(page: pathlib.Path) -> dict:
         "og:title": title,
         "og:description": desc,
         "og:url": url,
-        "og:image": BASE + img,
+        "og:image": f"{BASE}{img}?v={IMAGE_VERSION}",
         "og:image:width": "1200",
         "og:image:height": "630",
         "og:image:alt": alt,
@@ -160,7 +164,7 @@ def desired(page: pathlib.Path) -> dict:
         "twitter:site": TWITTER_SITE,
         "twitter:title": m.get("twitter:title") or title,
         "twitter:description": m.get("twitter:description") or desc,
-        "twitter:image": BASE + img,
+        "twitter:image": f"{BASE}{img}?v={IMAGE_VERSION}",
         "twitter:image:alt": alt,
     }
     for k, v in OVERRIDES.get(path, {}).items():

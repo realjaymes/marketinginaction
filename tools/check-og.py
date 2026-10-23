@@ -59,7 +59,7 @@ def main() -> int:
             if not url.startswith(BASE):
                 failures.append(f"{name}: {key} is not on {BASE}: {url}")
                 continue
-            img = ROOT / url[len(BASE):]
+            img = ROOT / url[len(BASE):].split("?")[0]
             if not img.exists():
                 failures.append(f"{name}: {key} file does not exist: {img.relative_to(ROOT)}")
             elif png_size(img) != (1200, 630):
