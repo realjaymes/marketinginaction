@@ -1536,14 +1536,21 @@
     "candidates_tried": {
       "avastudio": "2026-10-21",
       "mailcheap": "2026-10-22",
-      "ariesinfinite": "2026-10-22"
+      "ariesinfinite": "2026-10-22",
+      "claudeduet": "2026-10-23",
+      "daymaker": "2026-10-23",
+      "1passwordforagents": "2026-10-23",
+      "sumeapi": "2026-10-23",
+      "nectar": "2026-10-23"
     },
     "briefs_done": [
       "2026-10-20 Evening Brief.md",
       "2026-10-20 Morning Brief.md",
       "2026-10-21 Evening Brief.md",
       "2026-10-21 Morning Brief.md",
-      "2026-10-22 Morning Brief.md"
+      "2026-10-22 Evening Brief.md",
+      "2026-10-22 Morning Brief.md",
+      "2026-10-23 Morning Brief.md"
     ]
   },
   "leaders": {

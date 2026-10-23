@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 488,
+  "count": 491,
   "items": [
     {
       "created": "2026-10-20",
@@ -2254,6 +2254,31 @@
       ],
       "website": "https://www.blackmagicdesign.com/products/davinciresolve",
       "slug": "davinci-resolve"
+    },
+    {
+      "created": "2026-10-23",
+      "last_edited": "2026-10-23",
+      "name": "Daymaker",
+      "overview": "Daymaker researches a prospect from public sources, suggests one fitting gift and explains the pick. After you approve it, Daymaker buys the gift, adds a handwritten note and delivers it. It works with Claude and other MCP clients.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Sales Engagement",
+        "Sales Automation",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Send a personal gift to a cold outreach prospect",
+        "Warm up named accounts in an account based campaign",
+        "Help close a stalled deal with a thoughtful touch",
+        "Get a founder noticed by investors before a pitch",
+        "Cap gift spend per person or per campaign",
+        "Trigger gifts from Claude or other MCP clients"
+      ],
+      "website": "https://daymaker.com",
+      "slug": "daymaker"
     },
     {
       "created": "2026-10-20",
@@ -6965,6 +6990,31 @@
       "slug": "navattic"
     },
     {
+      "created": "2026-10-23",
+      "last_edited": "2026-10-23",
+      "name": "Nectar",
+      "overview": "Nectar is an AI operating system for social marketing. Its agent, Ren, works across community, creator, social, paid and care teams, using shared data on fans, creators, posts and orders. It drafts posts for approval, finds creators, handles inbox replies and traces revenue back to social conversations.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Social Media",
+        "AI Agents",
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Find and score creators against brand guidelines",
+        "Draft social posts for team approval",
+        "Automate replies to comments and messages with human handoff",
+        "Compare share of voice against competitors",
+        "Attribute revenue to social conversations",
+        "Spot organic posts worth boosting as ads"
+      ],
+      "website": "https://nectarsocial.com",
+      "slug": "nectar"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Nestuge",
@@ -9810,6 +9860,30 @@
       ],
       "website": "https://substack.com",
       "slug": "substack"
+    },
+    {
+      "created": "2026-10-23",
+      "last_edited": "2026-10-23",
+      "name": "Sume API",
+      "overview": "Sume API is a pay per use API for generating video, images, lipsync and captions from about 60 models. It charges the model cost with no markup and is also usable through Sume's studio and MCP.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Video Generation",
+        "AI Image Generation",
+        "AI Model Platforms"
+      ],
+      "use_cases": [
+        "Generate short video ads from a prompt or image",
+        "Create image variations for ad creative tests",
+        "Add lipsync to talking head and UGC style videos",
+        "Add captions to video content",
+        "Compare video and image models at their raw cost",
+        "Plug creative generation into an agent through MCP"
+      ],
+      "website": "https://sume.com/sume-api",
+      "slug": "sume-api"
     },
     {
       "notion_id": "24ca6d41-709c-8098-bd31-cd025dc1de6a",
