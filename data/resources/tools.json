@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 491,
+  "count": 492,
   "items": [
     {
       "created": "2026-10-20",
@@ -7769,6 +7769,29 @@
       ],
       "website": "https://partnerstack.com",
       "slug": "partnerstack"
+    },
+    {
+      "created": "2026-10-24",
+      "last_edited": "2026-10-24",
+      "name": "Pause",
+      "overview": "Pause is an AI video editor that edits a whole video from a single written instruction. It handles cuts, zooms, sound effects and captions.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Video & Audio Editing",
+        "Creative Automation"
+      ],
+      "use_cases": [
+        "Cut raw talking head footage into a tight short video",
+        "Add captions to social videos without manual timing",
+        "Add zooms and sound effects to founder content",
+        "Turn webinar or podcast recordings into clips",
+        "Speed up weekly video content production",
+        "Edit product demo videos from one instruction"
+      ],
+      "website": "https://pausevfx.com",
+      "slug": "pause"
     },
     {
       "created": "2026-10-20",
