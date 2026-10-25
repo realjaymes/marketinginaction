@@ -1543,7 +1543,9 @@
       "sumeapi": "2026-10-23",
       "nectar": "2026-10-23",
       "dessa": "2026-10-24",
-      "pause": "2026-10-24"
+      "pause": "2026-10-24",
+      "reason": "2026-10-25",
+      "llmdojo": "2026-10-25"
     },
     "briefs_done": [
       "2026-10-20 Evening Brief.md",
@@ -1554,6 +1556,7 @@
       "2026-10-22 Morning Brief.md",
       "2026-10-23 Evening Brief.md",
       "2026-10-23 Morning Brief.md",
+      "2026-10-24 Evening Brief.md",
       "2026-10-24 Morning Brief.md"
     ]
   },

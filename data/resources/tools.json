@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 492,
+  "count": 493,
   "items": [
     {
       "created": "2026-10-20",
@@ -8444,6 +8444,29 @@
       ],
       "website": "https://www.read.ai",
       "slug": "read-ai"
+    },
+    {
+      "created": "2026-10-25",
+      "last_edited": "2026-10-25",
+      "name": "Reason",
+      "overview": "Reason is an AI teammate that takes work and coding tasks, runs them in a cloud environment, and returns results such as pull requests, slide decks and CSV files. It can be mentioned in team chat and started from the web or a phone.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Hand off bug fixes and small code changes without opening an IDE",
+        "Build a spend or reporting dashboard from raw data",
+        "Assemble a slide deck from a data set",
+        "Delegate tasks from a team chat channel",
+        "Schedule recurring tasks to run on their own",
+        "Start and review tasks from a phone"
+      ],
+      "website": "https://reasonmachines.com",
+      "slug": "reason"
     },
     {
       "created": "2026-10-20",
