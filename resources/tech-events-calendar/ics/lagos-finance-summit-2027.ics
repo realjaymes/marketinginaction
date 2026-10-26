@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Lagos Finance Summit 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:lagos-finance-summit-2027-2027-03-03@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270306
+SUMMARY:Lagos Finance Summit 2027
+LOCATION:Landmark Event Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A finance and fintech summit connecting banks\, payment companies\, technology providers\, investors and financial industry executives. [Lagos Finance Summit](https://lfsevents.com/) https://lfsevents.com/?utm_source=chatgpt.com
+URL:https://lfsevents.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

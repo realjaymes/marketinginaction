@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Social Media Marketing World 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:social-media-marketing-world-2027-2027-04-01@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270404
+SUMMARY:Social Media Marketing World 2027
+LOCATION:Anaheim Convention Center\, Anaheim\, United States
+DESCRIPTION:A global marketing conference covering social media strategy\, AI marketing\, content creation\, audience growth and customer acquisition. [Social Media Examiner+1](https://www.socialmediaexaminer.com/smmworld/about/?utm_source=chatgpt.com) https://www.socialmediaexaminer.com/smmworld/?utm_source=chatgpt.com
+URL:https://www.socialmediaexaminer.com/smmworld/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

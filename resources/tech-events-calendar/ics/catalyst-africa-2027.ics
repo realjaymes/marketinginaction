@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Catalyst Africa 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:catalyst-africa-2027-2027-02-18@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270222
+SUMMARY:Catalyst Africa 2027
+LOCATION:Grand Arena\, Accra International Conference Centre\, Accra\, Ghana
+DESCRIPTION:An AI-focused African summit covering artificial intelligence\, startup investment\, insurance technology and climate innovation. [1X Events](https://1xevents.uk/catalyst-africa) https://catalyst-africa.com/?utm_source=chatgpt.com
+URL:https://catalyst-africa.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

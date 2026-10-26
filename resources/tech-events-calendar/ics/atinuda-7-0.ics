@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Atinuda 7.0
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:atinuda-7-0-2027-10-06@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20271006
+DTEND;VALUE=DATE:20271009
+SUMMARY:Atinuda 7.0
+LOCATION:To be announced\, Lagos\, Nigeria
+DESCRIPTION:A creative business and experiential marketing summit connecting designers\, creative entrepreneurs\, event professionals\, investors and hospitality executives. [atinuda.africa](https://www.atinuda.africa/) https://www.atinuda.africa/?utm_source=chatgpt.com
+URL:https://www.atinuda.africa/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

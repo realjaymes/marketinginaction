@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The MarTech Summit Berlin 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:the-martech-summit-berlin-2027-2027-02-25@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270225
+DTEND;VALUE=DATE:20270226
+SUMMARY:The MarTech Summit Berlin 2027
+LOCATION:Grand Hyatt Berlin\, Berlin\, Germany
+DESCRIPTION:A marketing technology summit covering AI agents\, marketing automation\, customer data\, attribution\, lifecycle marketing and customer experience. [The MarTech Summit](https://themartechsummit.com/berlin) https://themartechsummit.com/berlin?utm_source=chatgpt.com
+URL:https://themartechsummit.com/berlin?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

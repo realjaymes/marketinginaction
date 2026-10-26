@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Web Summit Qatar 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:web-summit-qatar-2027-2027-01-31@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270204
+SUMMARY:Web Summit Qatar 2027
+LOCATION:Doha Exhibition and Convention Center\, Doha\, Qatar
+DESCRIPTION:A major international technology conference connecting startups\, investors\, global technology companies and business leaders. [Web Summit Qatar\, Doha](https://qatar.websummit.com/?utm_source=chatgpt.com) https://qatar.websummit.com/?utm_source=chatgpt.com
+URL:https://qatar.websummit.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

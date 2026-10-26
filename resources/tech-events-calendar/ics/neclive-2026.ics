@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:NECLive 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:neclive-2026-2026-11-12@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:NECLive 2026
+LOCATION:Alliance Française\, Mike Adenuga Centre\, Lagos\, Nigeria
+DESCRIPTION:A creative economy conference exploring how Nigerian entertainment\, media\, creators and cultural businesses can grow internationally. [NECLive](https://nec.ng/) https://nec.ng/?utm_source=chatgpt.com
+URL:https://nec.ng/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

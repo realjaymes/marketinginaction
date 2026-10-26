@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:National Summit and Exhibition on the Orange Economy 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:national-summit-and-exhibition-on-the-orange-economy-2026-2026-12-08@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261211
+SUMMARY:National Summit and Exhibition on the Orange Economy 2026
+LOCATION:Admiralty Event Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A national gathering addressing investment\, technology\, policy and commercial opportunities across Nigeria's creative and cultural industries. [Orange Economy Summit](https://orangeeconomysummitandexhibition.com/register) https://orangeeconomysummitandexhibition.com/?utm_source=chatgpt.com
+URL:https://orangeeconomysummitandexhibition.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

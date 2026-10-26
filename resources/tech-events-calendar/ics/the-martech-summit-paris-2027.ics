@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The MarTech Summit Paris 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:the-martech-summit-paris-2027-2027-04-21@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270421
+DTEND;VALUE=DATE:20270422
+SUMMARY:The MarTech Summit Paris 2027
+LOCATION:To be announced\, Paris\, France
+DESCRIPTION:A senior marketing leadership summit exploring AI\, marketing technology\, customer data\, personalization and digital transformation. [The MarTech Summit](https://themartechsummit.com/paris) https://themartechsummit.com/paris?utm_source=chatgpt.com
+URL:https://themartechsummit.com/paris?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:AFRIFF Film & Content Market 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:afriff-film-content-market-2026-2026-11-02@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261106
+SUMMARY:AFRIFF Film & Content Market 2026
+LOCATION:Twinwaters Lagos\, Lekki\, Lagos\, Nigeria
+DESCRIPTION:An international film and content marketplace connecting African creators\, producers\, distributors\, technology providers and investors. [AFCM Market+1](https://afcm-market.com/) https://afcm-market.com/?utm_source=chatgpt.com
+URL:https://afcm-market.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

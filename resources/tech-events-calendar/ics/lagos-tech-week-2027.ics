@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Lagos Tech Week 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:lagos-tech-week-2027-2027-06-14@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270621
+SUMMARY:Lagos Tech Week 2027
+LOCATION:To be announced\, Lagos\, Nigeria
+DESCRIPTION:A week-long technology gathering connecting founders\, investors\, developers\, enterprises and policymakers across AI\, fintech\, cybersecurity and digital innovation. [Lagos Tech Week](https://lagostechweek.ng/) https://lagostechweek.ng/?utm_source=chatgpt.com
+URL:https://lagostechweek.ng/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

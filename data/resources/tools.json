@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 493,
+  "count": 495,
   "items": [
     {
       "created": "2026-10-20",
@@ -2209,6 +2209,28 @@
       ],
       "website": "https://www.d-id.com",
       "slug": "d-id"
+    },
+    {
+      "created": "2026-10-26",
+      "last_edited": "2026-10-26",
+      "name": "DataBull",
+      "overview": "DataBull is a self-hosted web analytics tool that matches payments from providers such as Stripe and Polar to the traffic source that produced each sale. It runs on your own Cloudflare account and is sold as a one-time license.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "See which post, search or referrer produced each sale",
+        "Track revenue by traffic source and campaign",
+        "Compare how buyers and non-buyers read a page",
+        "Measure time and visits needed before a purchase",
+        "Group customers by first source to compare lifetime value",
+        "Get sale and traffic spike alerts on Telegram"
+      ],
+      "website": "https://databull.app",
+      "slug": "databull"
     },
     {
       "created": "2026-10-20",
@@ -8100,6 +8122,30 @@
       ],
       "website": "https://labs.google.com/pomelli/about",
       "slug": "pomelli"
+    },
+    {
+      "created": "2026-10-26",
+      "last_edited": "2026-10-26",
+      "name": "Pomerado",
+      "overview": "Pomerado turns websites that have no API into APIs or MCP tools that AI agents can call. It hosts the integrations, handles sign-in, and repairs them when a site changes.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Developer Tools",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Let an AI agent act on a tool that has no API",
+        "Pull data from a web portal into an automated workflow",
+        "Replace fragile browser automation in agent builds",
+        "Connect a coding agent to a site through MCP",
+        "Automate logins and form actions on partner sites",
+        "Build GTM automations around sites that block integrations"
+      ],
+      "website": "https://pomerado.ai",
+      "slug": "pomerado"
     },
     {
       "created": "2026-10-20",

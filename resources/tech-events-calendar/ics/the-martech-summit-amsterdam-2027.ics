@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The MarTech Summit Amsterdam 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:the-martech-summit-amsterdam-2027-2027-06-24@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270624
+DTEND;VALUE=DATE:20270625
+SUMMARY:The MarTech Summit Amsterdam 2027
+LOCATION:To be announced\, Amsterdam\, Netherlands
+DESCRIPTION:A European marketing technology summit connecting marketing\, CRM\, customer experience and data leaders to discuss technology-driven growth. [The MarTech Summit](https://themartechsummit.com/summit-dates/) https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+URL:https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

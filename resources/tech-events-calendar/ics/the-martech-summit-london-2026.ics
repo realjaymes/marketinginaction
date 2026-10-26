@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The MarTech Summit London 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:the-martech-summit-london-2026-2026-11-10@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261112
+SUMMARY:The MarTech Summit London 2026
+LOCATION:Convene\, 155 Bishopsgate\, London\, United Kingdom
+DESCRIPTION:A two-day conference covering marketing technology\, AI\, customer experience\, data\, CRM and digital growth. [The MarTech Summit](https://themartechsummit.com/london) https://themartechsummit.com/london?utm_source=chatgpt.com
+URL:https://themartechsummit.com/london?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Nigeria Energy Technology Conference 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:nigeria-energy-technology-conference-2027-2027-03-24@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270326
+SUMMARY:Nigeria Energy Technology Conference 2027
+LOCATION:Oriental Hotel\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A technology and energy conference exploring AI\, digital transformation\, renewable energy innovation and investment opportunities across Africa's energy sector. [NETCON](https://www.netcon.ng/) https://www.netcon.ng/?utm_source=chatgpt.com
+URL:https://www.netcon.ng/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:West Africa Gaming Convention 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:west-africa-gaming-convention-2027-2027-04-28@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270502
+SUMMARY:West Africa Gaming Convention 2027
+LOCATION:Four Points by Sheraton\, Oriental Hotel and Fahrenheit\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A gaming industry convention bringing together game developers\, esports businesses\, creators\, publishers\, investors and gaming technology companies. [WAGCON 2027](https://wagconvention.com/) https://wagconvention.com/?utm_source=chatgpt.com
+URL:https://wagconvention.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

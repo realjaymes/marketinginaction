@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Energy Technology Conference 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-energy-technology-conference-2027-2027-05-18@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270518
+DTEND;VALUE=DATE:20270521
+SUMMARY:Africa Energy Technology Conference 2027
+LOCATION:Labadi Beach Hotel\, Accra\, Ghana
+DESCRIPTION:A pan-African technology conference focused on developing\, commercializing and scaling locally developed energy technologies. [AETC 2027](https://www.aetconference.com/) https://www.aetconference.com/?utm_source=chatgpt.com
+URL:https://www.aetconference.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

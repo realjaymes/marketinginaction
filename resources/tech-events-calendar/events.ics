@@ -15,6 +15,16 @@ DESCRIPTION:A two-day event featuring startup pitches\, fireside chats\, masterc
 URL:https://moonshot.techcabal.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:afriff-film-content-market-2026-2026-11-02@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261102
+DTEND;VALUE=DATE:20261106
+SUMMARY:AFRIFF Film & Content Market 2026
+LOCATION:Twinwaters Lagos\, Lekki\, Lagos\, Nigeria
+DESCRIPTION:An international film and content marketplace connecting African creators\, producers\, distributors\, technology providers and investors. [AFCM Market+1](https://afcm-market.com/) https://afcm-market.com/?utm_source=chatgpt.com
+URL:https://afcm-market.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:search-africon-2026-11-07@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20261107
@@ -33,6 +43,36 @@ SUMMARY:Web Summit
 LOCATION:Lisbon\, Portugal
 DESCRIPTION:Large global tech conference with founders\, investors and marketers in Lisbon. https://websummit.com/
 URL:https://websummit.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:the-martech-summit-london-2026-2026-11-10@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261110
+DTEND;VALUE=DATE:20261112
+SUMMARY:The MarTech Summit London 2026
+LOCATION:Convene\, 155 Bishopsgate\, London\, United Kingdom
+DESCRIPTION:A two-day conference covering marketing technology\, AI\, customer experience\, data\, CRM and digital growth. [The MarTech Summit](https://themartechsummit.com/london) https://themartechsummit.com/london?utm_source=chatgpt.com
+URL:https://themartechsummit.com/london?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:national-advertising-conference-2026-2026-11-11@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261111
+DTEND;VALUE=DATE:20261114
+SUMMARY:National Advertising Conference 2026
+LOCATION:To be announced\, Abuja\, Nigeria
+DESCRIPTION:Nigeria's national advertising conference brings together marketers\, agencies\, regulators and business leaders to discuss the future of marketing communications. [National Advertising Conference+1](https://nationaladvertisingconference.com/) https://nationaladvertisingconference.com/?utm_source=chatgpt.com
+URL:https://nationaladvertisingconference.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:neclive-2026-2026-11-12@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:NECLive 2026
+LOCATION:Alliance Française\, Mike Adenuga Centre\, Lagos\, Nigeria
+DESCRIPTION:A creative economy conference exploring how Nigerian entertainment\, media\, creators and cultural businesses can grow internationally. [NECLive](https://nec.ng/) https://nec.ng/?utm_source=chatgpt.com
+URL:https://nec.ng/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:devfest-lagos-2026-11-13@marketinginaction.xyz
@@ -125,6 +165,36 @@ DESCRIPTION:One-day Lagos conference on tech adoption\, ethics and governance fo
 URL:https://aotlagos.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:national-summit-and-exhibition-on-the-orange-economy-2026-2026-12-08@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261211
+SUMMARY:National Summit and Exhibition on the Orange Economy 2026
+LOCATION:Admiralty Event Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A national gathering addressing investment\, technology\, policy and commercial opportunities across Nigeria's creative and cultural industries. [Orange Economy Summit](https://orangeeconomysummitandexhibition.com/register) https://orangeeconomysummitandexhibition.com/?utm_source=chatgpt.com
+URL:https://orangeeconomysummitandexhibition.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:africa-prosperity-dialogues-2027-2027-01-13@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270113
+DTEND;VALUE=DATE:20270116
+SUMMARY:Africa Prosperity Dialogues 2027
+LOCATION:Kempinski Hotel Gold Coast City\, Accra\, Ghana
+DESCRIPTION:A pan-African business summit bringing together founders\, investors\, policymakers and technology companies to advance regional trade and digital commerce. [Africa Prosperity Dialogues 2027](https://apd2027.africaprosperitynetwork.com/) https://apd2027.africaprosperitynetwork.com/?utm_source=chatgpt.com
+URL:https://apd2027.africaprosperitynetwork.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:web-summit-qatar-2027-2027-01-31@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270131
+DTEND;VALUE=DATE:20270204
+SUMMARY:Web Summit Qatar 2027
+LOCATION:Doha Exhibition and Convention Center\, Doha\, Qatar
+DESCRIPTION:A major international technology conference connecting startups\, investors\, global technology companies and business leaders. [Web Summit Qatar\, Doha](https://qatar.websummit.com/?utm_source=chatgpt.com) https://qatar.websummit.com/?utm_source=chatgpt.com
+URL:https://qatar.websummit.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:africa-tech-summit-nairobi-2027-02-10@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270210
@@ -133,6 +203,26 @@ SUMMARY:Africa Tech Summit Nairobi
 LOCATION:Nairobi\, Kenya
 DESCRIPTION:Tech corporates\, investors\, startups\, fintech and climate leaders meet in Nairobi. https://www.africatechsummit.com/nairobi/
 URL:https://www.africatechsummit.com/nairobi/
+END:VEVENT
+BEGIN:VEVENT
+UID:catalyst-africa-2027-2027-02-18@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270222
+SUMMARY:Catalyst Africa 2027
+LOCATION:Grand Arena\, Accra International Conference Centre\, Accra\, Ghana
+DESCRIPTION:An AI-focused African summit covering artificial intelligence\, startup investment\, insurance technology and climate innovation. [1X Events](https://1xevents.uk/catalyst-africa) https://catalyst-africa.com/?utm_source=chatgpt.com
+URL:https://catalyst-africa.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:learnstar-creative-summit-2027-2027-02-19@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270221
+SUMMARY:Learnstar Creative Summit 2027
+LOCATION:Lagos Oriental Hotel\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A creative economy summit connecting creators\, founders\, investors and industry leaders through discussions\, exhibitions and investment networking. [Learnstar Creative Summit](https://lcs.learnstar.co/) https://lcs.learnstar.co/?utm_source=chatgpt.com
+URL:https://lcs.learnstar.co/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:lagos-tech-fest-2027-02-22@marketinginaction.xyz
@@ -155,6 +245,26 @@ DESCRIPTION:Tech Revolution Africa Conference and Exhibition 2026\, themed “Th
 URL:https://techrevolutionafrica.org/
 END:VEVENT
 BEGIN:VEVENT
+UID:the-martech-summit-berlin-2027-2027-02-25@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270225
+DTEND;VALUE=DATE:20270226
+SUMMARY:The MarTech Summit Berlin 2027
+LOCATION:Grand Hyatt Berlin\, Berlin\, Germany
+DESCRIPTION:A marketing technology summit covering AI agents\, marketing automation\, customer data\, attribution\, lifecycle marketing and customer experience. [The MarTech Summit](https://themartechsummit.com/berlin) https://themartechsummit.com/berlin?utm_source=chatgpt.com
+URL:https://themartechsummit.com/berlin?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:lagos-finance-summit-2027-2027-03-03@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270306
+SUMMARY:Lagos Finance Summit 2027
+LOCATION:Landmark Event Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A finance and fintech summit connecting banks\, payment companies\, technology providers\, investors and financial industry executives. [Lagos Finance Summit](https://lfsevents.com/) https://lfsevents.com/?utm_source=chatgpt.com
+URL:https://lfsevents.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:sxsw-2027-03-15@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270315
@@ -163,6 +273,26 @@ SUMMARY:SXSW
 LOCATION:Austin\, United States
 DESCRIPTION:Tech\, film and music festival and conference in Austin. https://sxsw.com/
 URL:https://sxsw.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:modern-marketing-cape-town-expo-2027-2027-03-17@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270319
+SUMMARY:Modern Marketing Cape Town Expo 2027
+LOCATION:CTICC 1\, Hall 2\, Cape Town\, South Africa
+DESCRIPTION:A marketing and branding exhibition showcasing advertising technology\, AI design tools\, digital printing\, signage and customer engagement solutions. [Modern Marketing Expo](https://www.modernmarketingexpo.co.za/cape-town-expo-2027/) https://www.modernmarketingexpo.co.za/cape-town-expo-2027/?utm_source=chatgpt.com
+URL:https://www.modernmarketingexpo.co.za/cape-town-expo-2027/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:nigeria-energy-technology-conference-2027-2027-03-24@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270324
+DTEND;VALUE=DATE:20270326
+SUMMARY:Nigeria Energy Technology Conference 2027
+LOCATION:Oriental Hotel\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A technology and energy conference exploring AI\, digital transformation\, renewable energy innovation and investment opportunities across Africa's energy sector. [NETCON](https://www.netcon.ng/) https://www.netcon.ng/?utm_source=chatgpt.com
+URL:https://www.netcon.ng/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:tech-unite-africa-2027-03-24@marketinginaction.xyz
@@ -185,6 +315,26 @@ DESCRIPTION:A major exhibition focusing on IoT innovations\, data centers\, and 
 URL:https://iotwestafrica.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:social-media-marketing-world-2027-2027-04-01@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270404
+SUMMARY:Social Media Marketing World 2027
+LOCATION:Anaheim Convention Center\, Anaheim\, United States
+DESCRIPTION:A global marketing conference covering social media strategy\, AI marketing\, content creation\, audience growth and customer acquisition. [Social Media Examiner+1](https://www.socialmediaexaminer.com/smmworld/about/?utm_source=chatgpt.com) https://www.socialmediaexaminer.com/smmworld/?utm_source=chatgpt.com
+URL:https://www.socialmediaexaminer.com/smmworld/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:the-martech-summit-paris-2027-2027-04-21@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270421
+DTEND;VALUE=DATE:20270422
+SUMMARY:The MarTech Summit Paris 2027
+LOCATION:To be announced\, Paris\, France
+DESCRIPTION:A senior marketing leadership summit exploring AI\, marketing technology\, customer data\, personalization and digital transformation. [The MarTech Summit](https://themartechsummit.com/paris) https://themartechsummit.com/paris?utm_source=chatgpt.com
+URL:https://themartechsummit.com/paris?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:gitex-africa-2027-04-26@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270426
@@ -193,6 +343,16 @@ SUMMARY:GITEX Africa
 LOCATION:Marrakech\, Morocco
 DESCRIPTION:Large Africa tech and startup show in Marrakech covering AI\, cloud\, cybersecurity\, fintech and agritech. https://gitexafrica.com/
 URL:https://gitexafrica.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:west-africa-gaming-convention-2027-2027-04-28@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270428
+DTEND;VALUE=DATE:20270502
+SUMMARY:West Africa Gaming Convention 2027
+LOCATION:Four Points by Sheraton\, Oriental Hotel and Fahrenheit\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A gaming industry convention bringing together game developers\, esports businesses\, creators\, publishers\, investors and gaming technology companies. [WAGCON 2027](https://wagconvention.com/) https://wagconvention.com/?utm_source=chatgpt.com
+URL:https://wagconvention.com/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:saastr-ai-annual-2027-05-11@marketinginaction.xyz
@@ -215,6 +375,16 @@ DESCRIPTION:AI summit and tech expo in Nairobi. https://www.aieverythingkenya.co
 URL:https://www.aieverythingkenya.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:africa-energy-technology-conference-2027-2027-05-18@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270518
+DTEND;VALUE=DATE:20270521
+SUMMARY:Africa Energy Technology Conference 2027
+LOCATION:Labadi Beach Hotel\, Accra\, Ghana
+DESCRIPTION:A pan-African technology conference focused on developing\, commercializing and scaling locally developed energy technologies. [AETC 2027](https://www.aetconference.com/) https://www.aetconference.com/?utm_source=chatgpt.com
+URL:https://www.aetconference.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:web-summit-vancouver-2027-05-25@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270525
@@ -223,6 +393,16 @@ SUMMARY:Web Summit Vancouver
 LOCATION:Vancouver\, Canada
 DESCRIPTION:North American Web Summit edition (formerly Collision). https://vancouver.websummit.com/
 URL:https://vancouver.websummit.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:lagos-tech-week-2027-2027-06-14@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270621
+SUMMARY:Lagos Tech Week 2027
+LOCATION:To be announced\, Lagos\, Nigeria
+DESCRIPTION:A week-long technology gathering connecting founders\, investors\, developers\, enterprises and policymakers across AI\, fintech\, cybersecurity and digital innovation. [Lagos Tech Week](https://lagostechweek.ng/) https://lagostechweek.ng/?utm_source=chatgpt.com
+URL:https://lagostechweek.ng/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:vivatech-2027-06-16@marketinginaction.xyz
@@ -255,6 +435,16 @@ DESCRIPTION:The main international festival of creativity for brands\, agencies 
 URL:https://www.canneslions.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:the-martech-summit-amsterdam-2027-2027-06-24@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270624
+DTEND;VALUE=DATE:20270625
+SUMMARY:The MarTech Summit Amsterdam 2027
+LOCATION:To be announced\, Amsterdam\, Netherlands
+DESCRIPTION:A European marketing technology summit connecting marketing\, CRM\, customer experience and data leaders to discuss technology-driven growth. [The MarTech Summit](https://themartechsummit.com/summit-dates/) https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+URL:https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:unbound-2027-09-08@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20270908
@@ -265,6 +455,16 @@ DESCRIPTION:HubSpot's annual go-to-market conference\, rebranded from INBOUND to
 URL:https://unbound.hubspot.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:the-martech-summit-dubai-2027-2027-09-28@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270928
+DTEND;VALUE=DATE:20270929
+SUMMARY:The MarTech Summit Dubai 2027
+LOCATION:To be announced\, Dubai\, United Arab Emirates
+DESCRIPTION:A regional marketing technology summit connecting marketing leaders\, technology vendors and digital growth professionals across the Middle East. [The MarTech Summit](https://themartechsummit.com/summit-dates/) https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+URL:https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:gitex-nigeria-2027-10-05@marketinginaction.xyz
 DTSTAMP:20261026T000000Z
 DTSTART;VALUE=DATE:20271005
@@ -273,6 +473,16 @@ SUMMARY:GITEX Nigeria
 LOCATION:Landmark Centre (Lagos expo)\; Abuja hosts a government and AI summit day\, Lagos\, Nigeria
 DESCRIPTION:A major tech event exploring Nigeria's vast tech ecosystem\, featuring global tech communities. https://www.gitexnigeria.ng/
 URL:https://www.gitexnigeria.ng/
+END:VEVENT
+BEGIN:VEVENT
+UID:atinuda-7-0-2027-10-06@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20271006
+DTEND;VALUE=DATE:20271009
+SUMMARY:Atinuda 7.0
+LOCATION:To be announced\, Lagos\, Nigeria
+DESCRIPTION:A creative business and experiential marketing summit connecting designers\, creative entrepreneurs\, event professionals\, investors and hospitality executives. [atinuda.africa](https://www.atinuda.africa/) https://www.atinuda.africa/?utm_source=chatgpt.com
+URL:https://www.atinuda.africa/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:digimarcon-africa-2027-10-06@marketinginaction.xyz

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The MarTech Summit Dubai 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:the-martech-summit-dubai-2027-2027-09-28@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270928
+DTEND;VALUE=DATE:20270929
+SUMMARY:The MarTech Summit Dubai 2027
+LOCATION:To be announced\, Dubai\, United Arab Emirates
+DESCRIPTION:A regional marketing technology summit connecting marketing leaders\, technology vendors and digital growth professionals across the Middle East. [The MarTech Summit](https://themartechsummit.com/summit-dates/) https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+URL:https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Modern Marketing Cape Town Expo 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:modern-marketing-cape-town-expo-2027-2027-03-17@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270317
+DTEND;VALUE=DATE:20270319
+SUMMARY:Modern Marketing Cape Town Expo 2027
+LOCATION:CTICC 1\, Hall 2\, Cape Town\, South Africa
+DESCRIPTION:A marketing and branding exhibition showcasing advertising technology\, AI design tools\, digital printing\, signage and customer engagement solutions. [Modern Marketing Expo](https://www.modernmarketingexpo.co.za/cape-town-expo-2027/) https://www.modernmarketingexpo.co.za/cape-town-expo-2027/?utm_source=chatgpt.com
+URL:https://www.modernmarketingexpo.co.za/cape-town-expo-2027/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

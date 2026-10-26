@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Learnstar Creative Summit 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:learnstar-creative-summit-2027-2027-02-19@marketinginaction.xyz
+DTSTAMP:20261026T000000Z
+DTSTART;VALUE=DATE:20270219
+DTEND;VALUE=DATE:20270221
+SUMMARY:Learnstar Creative Summit 2027
+LOCATION:Lagos Oriental Hotel\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A creative economy summit connecting creators\, founders\, investors and industry leaders through discussions\, exhibitions and investment networking. [Learnstar Creative Summit](https://lcs.learnstar.co/) https://lcs.learnstar.co/?utm_source=chatgpt.com
+URL:https://lcs.learnstar.co/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR
