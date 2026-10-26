@@ -1,6 +1,19 @@
 {
-  "events": [],
+  "events": [
+    {
+      "kind": "event-date-unconfirmed",
+      "slug": "devfest-lagos",
+      "name": "DevFest Lagos",
+      "message": "Its page no longer shows 2026-11-13. Check whether the date moved: https://devfestlagos.com/"
+    },
+    {
+      "kind": "event-date-unconfirmed",
+      "slug": "growth-africa-summit",
+      "name": "Growth Africa Summit",
+      "message": "Its page no longer shows 2026-11-14. Check whether the date moved: https://www.growthafricasummit.com/"
+    }
+  ],
   "tools": [],
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-26",
   "leaders": []
 }

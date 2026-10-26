@@ -1,7 +1,7 @@
 {
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
-  "updated": "2026-10-21",
+  "updated": "2026-10-26",
   "count": 68,
   "items": [
     {
@@ -108,11 +108,11 @@
       "profile_source": "https://getlatka.com/companies/fullfunnel/interviews/fullfunnel-andrei-zinkevich-2022",
       "headshot": "img/andrei-zinkevich.jpg",
       "headshot_source": "x:@azinkevich",
-      "feed_url": "https://fullfunnel.substack.com/feed",
+      "feed_url": "https://fullfunnel.io/feed/",
       "latest_post": {
-        "title": "🕵🏻‍♂️ How to plan an ABM program from your account journeys",
-        "url": "https://fullfunnel.substack.com/p/how-to-plan-an-abm-program-from-your",
-        "date": "2026-10-16"
+        "title": "The ultimate guide to marketing and sales alignment in B2B companies",
+        "url": "https://fullfunnel.io/the-ultimate-guide-to-marketing-and-sales-alignment-in-b2b-companies/",
+        "date": "2025-05-29"
       }
     },
     {
@@ -138,11 +138,11 @@
       "profile_source": "https://andrewchen.com/",
       "headshot": "img/andrew-chen.jpg",
       "headshot_source": "x:@andrewchen",
-      "feed_url": "https://andrewchen.substack.com/feed",
+      "feed_url": "https://andrewchen.com/feed/",
       "latest_post": {
-        "title": "Will agents have network effects?",
-        "url": "https://andrewchen.substack.com/p/will-agents-have-network-effects",
-        "date": "2026-10-06"
+        "title": "How to break into Silicon Valley",
+        "url": "https://andrewchen.com/how-to-break-into-silicon-valley/",
+        "date": "2024-02-26"
       }
     },
     {
@@ -231,11 +231,11 @@
       "headshot": "img/blessing-abeng.jpg",
       "headshot_source": "x:@blessingabeng_",
       "role": "Brand strategist",
-      "feed_url": "https://blessingabeng.substack.com/feed",
+      "feed_url": "https://blessingabeng.com/feed/",
       "latest_post": {
-        "title": "my imperfect sabbatical",
-        "url": "https://blessingabeng.substack.com/p/my-imperfect-sabbatical",
-        "date": "2025-04-10"
+        "title": "flodesk studio got me to resuscitate my newsletters",
+        "url": "https://blessingabeng.com/flodesk-studio-got-me-to-resuscitate-my-newsletters/",
+        "date": "2026-07-14"
       }
     },
     {
@@ -354,9 +354,9 @@
       "headshot_source": "x:@mercertweets",
       "feed_url": "https://measureu.com/rss.xml",
       "latest_post": {
-        "title": "6 Data Analytics Hiring Mistakes That Keep Your Agency Margins Low",
-        "url": "https://measureu.com/analytics-hiring-mistakes/",
-        "date": "2026-10-08"
+        "title": "Stop Selling Hours: How to Become the AI Consultant Clients Actually Retain",
+        "url": "https://measureu.com/fractional-ai-officer/",
+        "date": "2026-10-22"
       }
     },
     {
@@ -495,9 +495,9 @@
       "headshot_source": "x:@dmurr68",
       "feed_url": "https://themarketingmillennials.com/feed/",
       "latest_post": {
-        "title": "Are you running this Marketing channel?",
-        "url": "https://themarketingmillennials.com/articles/2026-10-14/are-you-running-this-marketing-channel/",
-        "date": "2026-10-14"
+        "title": "Have you become the human API?",
+        "url": "https://themarketingmillennials.com/articles/2026-10-21/have-you-become-the-human-api/",
+        "date": "2026-10-21"
       }
     },
     {
@@ -579,9 +579,9 @@
       "headshot_source": "x:@elenaverna",
       "feed_url": "https://www.elenaverna.com/feed",
       "latest_post": {
-        "title": "What on earth is going on with AI pricing and packaging?",
-        "url": "https://www.elenaverna.com/p/what-on-earth-is-going-on-with-ai",
-        "date": "2026-10-16"
+        "title": "I'm not doing 996.",
+        "url": "https://www.elenaverna.com/p/im-not-doing-996",
+        "date": "2026-10-22"
       }
     },
     {
@@ -725,11 +725,11 @@
       "profile_source": "https://contentfolks.com/",
       "headshot": "img/fio-dossetto.jpg",
       "headshot_source": "x:@content101",
-      "feed_url": "https://contentfolks.substack.com/feed",
+      "feed_url": "https://contentfolks.com/feed/",
       "latest_post": {
-        "title": "cf #108: the underrated power of product comparisons",
-        "url": "https://contentfolks.substack.com/p/b2b-product-comparisons",
-        "date": "2026-09-30"
+        "title": "#67: a key skill to master in the next 6 months",
+        "url": "https://contentfolks.com/how-to-interview-customers-product-users/",
+        "date": "2023-07-19"
       }
     },
     {
@@ -839,9 +839,9 @@
       "company": "Product Market Fit",
       "feed_url": "https://www.productmarketfit.tech/feed",
       "latest_post": {
-        "title": "We’re launching GR Angel: we invest in founders and put them in front of millions",
-        "url": "https://www.productmarketfit.tech/p/were-launching-gr-angel-we-invest",
-        "date": "2026-10-20"
+        "title": "The $100M GTM Playbook",
+        "url": "https://www.productmarketfit.tech/p/the-100m-gtm-playbook",
+        "date": "2026-10-22"
       }
     },
     {
@@ -1025,9 +1025,9 @@
       "headshot_source": "headshot_url",
       "feed_url": "https://www.gtmaipodcast.com/feed",
       "latest_post": {
-        "title": "Favor? Vote for Podcast Host for iHeartradio",
-        "url": "https://www.gtmaipodcast.com/p/favor-vote-for-podcast-host-for-iheartradio",
-        "date": "2026-10-08"
+        "title": "10/21/26: How The Swarm Built $10Million in Pipeline using Network Strategy",
+        "url": "https://www.gtmaipodcast.com/p/102126-how-the-swarm-built-10million",
+        "date": "2026-10-22"
       }
     },
     {
@@ -1102,9 +1102,9 @@
       "headshot_source": "x:@kevanlee",
       "feed_url": "https://newsletter.aroundthebonfire.com/feed",
       "latest_post": {
-        "title": "What do we owe our dreams?",
-        "url": "https://newsletter.aroundthebonfire.com/p/what-do-we-owe-our-dreams",
-        "date": "2026-10-19"
+        "title": "Is it burnout or is it stress? (Plus, 5 things to do about it, either way)",
+        "url": "https://newsletter.aroundthebonfire.com/p/is-it-burnout-or-is-it-stress-plus",
+        "date": "2026-10-26"
       }
     },
     {
@@ -1311,9 +1311,9 @@
       "headshot_source": "x:@majavoje",
       "feed_url": "https://knowledge.gtmstrategist.com/feed",
       "latest_post": {
-        "title": "Hands On: DIY Guide to Animated LinkedIn Infographics",
-        "url": "https://knowledge.gtmstrategist.com/p/diy-guide-animated-linkedin-infographics-claude-code",
-        "date": "2026-10-16"
+        "title": "The 4 Components of a Viral AI Product Launch",
+        "url": "https://knowledge.gtmstrategist.com/p/viral-ai-product-launch",
+        "date": "2026-10-23"
       }
     },
     {
@@ -1422,9 +1422,9 @@
       "headshot_source": "x:@neilpatel",
       "feed_url": "https://neilpatel.com/feed/",
       "latest_post": {
-        "title": "SEO Templates, Guides and Checklists to Streamline Your Strategy",
-        "url": "https://neilpatel.com/blog/seo-templates/",
-        "date": "2026-10-19"
+        "title": "The 4 Ps of Marketing: Product, Price, Place, and Promotion",
+        "url": "https://neilpatel.com/blog/4-ps-of-marketing/",
+        "date": "2026-10-23"
       }
     },
     {
@@ -1527,9 +1527,9 @@
       "headshot_source": "x:@petergyang",
       "feed_url": "https://creatoreconomy.so/feed",
       "latest_post": {
-        "title": "We Built an AI CFO to Help You Grow Your Net Worth | Anthony Pompliano",
-        "url": "https://creatoreconomy.so/p/we-built-an-ai-cfo-to-help-you-grow-net-worth-anthony-pompliano",
-        "date": "2026-10-18"
+        "title": "Full Tutorial: How to Make Amazing Videos with Claude and HyperFrames | Jake Moran",
+        "url": "https://creatoreconomy.so/p/how-to-make-amazing-videos-with-claude-and-hyperframes-jake-moran",
+        "date": "2026-10-25"
       }
     },
     {
@@ -1676,9 +1676,9 @@
       "headshot_source": "x:@thisissethsblog",
       "feed_url": "https://seths.blog/feed/",
       "latest_post": {
-        "title": "Thieves’ cant slang",
-        "url": "https://seths.blog/2026/10/thieves-cant-slang/",
-        "date": "2026-10-20"
+        "title": "Is our attitude up to us?",
+        "url": "https://seths.blog/2026/10/is-our-attitude-up-to-us/",
+        "date": "2026-10-26"
       }
     },
     {
@@ -1737,9 +1737,9 @@
       "headshot_source": "x:@tomorbach",
       "feed_url": "https://www.marketingideas.com/feed",
       "latest_post": {
-        "title": "AX is how you go viral in 2027 💡",
-        "url": "https://www.marketingideas.com/p/ax-is-how-you-go-viral-in-2027",
-        "date": "2026-10-19"
+        "title": "Steal your competitor’s customers for <$100 🥷",
+        "url": "https://www.marketingideas.com/p/steal-your-competitors-customers",
+        "date": "2026-10-26"
       }
     },
     {
@@ -1795,9 +1795,9 @@
       "headshot_source": "x:@wes_bush",
       "feed_url": "https://productled.com/blog/rss.xml",
       "latest_post": {
-        "title": "What Are the 3 Types of Product-Led Growth? | ProductLed",
-        "url": "https://productled.com/blog/product-led-growth-spectrum",
-        "date": "2026-10-20"
+        "title": "How to Use Aha Moments to Drive Onboarding Success | ProductLed",
+        "url": "https://productled.com/blog/how-to-use-aha-moments-to-drive-onboarding-success",
+        "date": "2026-10-23"
       }
     },
     {
