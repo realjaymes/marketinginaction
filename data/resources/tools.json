@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 495,
+  "count": 496,
   "items": [
     {
       "created": "2026-10-20",
@@ -9885,6 +9885,30 @@
       ],
       "website": "https://getstat.com",
       "slug": "stat-search-analytics"
+    },
+    {
+      "created": "2026-10-27",
+      "last_edited": "2026-10-27",
+      "name": "Strawberry",
+      "overview": "Strawberry is a desktop web browser for macOS and Windows with built-in AI companions. The companions research, write and carry out routine tasks in the user's open tabs, including pages behind logins.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Web Browsers",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Find and qualify leads on LinkedIn and draft outreach",
+        "Update CRMs and spreadsheets from web data",
+        "Transcribe meetings and pull out action items without a bot",
+        "Write social posts in your own voice",
+        "Prepare client research before kickoff calls",
+        "Run recurring browser tasks on a schedule"
+      ],
+      "website": "https://strawberrybrowser.com",
+      "slug": "strawberry"
     },
     {
       "created": "2026-10-20",
