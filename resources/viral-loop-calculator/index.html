@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="James Praise" />
+    <meta name="color-scheme" content="light only" />
+    <title>Viral Loop Calculator | Marketing In Action</title>
+    <meta
+      name="description"
+      content="Free Viral Loop Calculator. Work out your K-factor, see how many users a sharing loop adds round by round, and score the seven ingredients a loop needs before you launch."
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://marketinginaction.xyz/resources/viral-loop-calculator/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Viral Loop Calculator" />
+    <meta property="og:description" content="Work out your K-factor, see how many users your sharing loop adds, and score the seven ingredients a loop needs." />
+    <meta property="og:url" content="https://marketinginaction.xyz/resources/viral-loop-calculator/" />
+    <meta property="og:image" content="https://marketinginaction.xyz/assets/og-viral-loop-calculator.png?v=20261023" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Viral Loop Calculator by Marketing In Action: work out your K-factor and project your growth" />
+    <meta property="og:site_name" content="Marketing In Action" />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@marketinginact" />
+    <meta name="twitter:title" content="Viral Loop Calculator" />
+    <meta name="twitter:description" content="Work out your K-factor, see how many users your sharing loop adds, and score the seven ingredients a loop needs." />
+    <meta name="twitter:image" content="https://marketinginaction.xyz/assets/og-viral-loop-calculator.png?v=20261023" />
+    <meta name="twitter:image:alt" content="Viral Loop Calculator by Marketing In Action: work out your K-factor and project your growth" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Viral Loop Calculator",
+        "url": "https://marketinginaction.xyz/resources/viral-loop-calculator/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "James Praise" },
+        "publisher": { "@type": "Organization", "name": "Marketing In Action" },
+        "description": "A free calculator that works out your K-factor and cycle time, projects how many users a sharing loop adds round by round, and scores the seven ingredients a viral loop needs."
+      }
+    </script>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-KRT2BT27");
+    </script>
+    <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17909542714"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "AW-17909542714");
+    </script>
+    <style>
+      :root {
+        --mia-bg: #f7f4fa;
+        --mia-surface: #ffffff;
+        --mia-ink: #100a16;
+        --mia-ink-muted: rgba(28, 20, 34, 0.62);
+        --mia-accent: #f1de71;
+        --mia-border: rgba(28, 20, 34, 0.12);
+        --mia-shadow: 0 8px 30px rgba(28, 20, 34, 0.08);
+        --mia-radius: 14px;
+        --mia-radius-lg: 22px;
+        --mia-max: 1100px;
+
+        /* Tool palette, same shape as the playbook's inner tool */
+        --bg: #f0f2f5;
+        --card: #ffffff;
+        --text: #1c1e21;
+        --text-secondary: #65676b;
+        --border: #e4e6eb;
+        --good: #1a7f1a;
+        --good-bg: #e6f9e6;
+        --good-lite: #4ade80; /* the money green, lifted to carry on the ink panel */
+        --bad: #cc0000;
+        --bad-bg: #ffe9e9;
+
+        /* Accent switches per ICP preset, as the playbook switches per platform */
+        --occ-accent: #1877f2;
+        --occ-accent-bg: #e7f3ff;
+      }
+
+      * { box-sizing: border-box; }
+      html { -webkit-text-size-adjust: 100%; }
+      body {
+        margin: 0;
+        background: var(--mia-bg);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.5;
+      }
+      h1, h2, h3 { margin: 0; letter-spacing: -0.01em; }
+      a { color: inherit; }
+
+      /* ---------- top bar ---------- */
+      .mia-topbar {
+        background: var(--mia-surface);
+        border-bottom: 1px solid var(--mia-border);
+        padding: 14px 0;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
+      .mia-topbar-inner {
+        max-width: var(--mia-max); margin: 0 auto; padding: 0 24px;
+        display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      }
+      .mia-logo { display: inline-flex; align-items: center; color: var(--mia-ink); text-decoration: none; }
+      .mia-logo-img { height: 28px; width: auto; display: block; }
+      .mia-topbar-cta {
+        display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; border-radius: 999px;
+        background: var(--mia-ink); color: #fff; text-decoration: none; font-size: 13px; font-weight: 600;
+        transition: opacity 0.2s, transform 0.2s; white-space: nowrap;
+      }
+      .mia-topbar-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+      @media (max-width: 640px) {
+        .mia-logo-img { height: 24px; }
+        .mia-topbar-inner { padding: 0 16px; }
+        .mia-topbar-cta { font-size: 12px; padding: 7px 13px; }
+      }
+
+      /* ---------- hero ---------- */
+      .mia-hero {
+        background: linear-gradient(180deg, var(--mia-bg) 0%, var(--mia-surface) 100%);
+        padding: 52px 24px 36px;
+      }
+      .mia-hero-inner { max-width: 900px; margin: 0 auto; text-align: center; }
+      .mia-eyebrow {
+        display: inline-block; padding: 6px 14px; border-radius: 999px;
+        background: var(--mia-accent); color: var(--mia-ink);
+        font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+        margin-bottom: 20px;
+      }
+      .mia-hero h1 {
+        margin: 0 0 16px; font-size: clamp(27px, 4.4vw, 40px); font-weight: 800;
+        line-height: 1.1; letter-spacing: -0.02em; color: var(--mia-ink);
+      }
+      .mia-hero p {
+        margin: 0 auto 28px; max-width: 64ch; font-size: clamp(16px, 2vw, 18px);
+        color: var(--mia-ink-muted); line-height: 1.55;
+      }
+      .mia-verified {
+        display: inline-flex; flex-wrap: wrap; justify-content: center; gap: 6px;
+        margin-top: 18px; padding: 7px 14px; border-radius: 999px;
+        background: var(--mia-surface); border: 1px solid var(--mia-border);
+        font-size: 12.5px; color: var(--mia-ink-muted);
+      }
+      .mia-verified strong { color: var(--mia-ink); font-weight: 700; }
+      @media (max-width: 640px) { .mia-hero { padding: 36px 18px 26px; } }
+
+      /* ---------- shell ---------- */
+      .occ-shell { max-width: var(--mia-max); margin: 26px auto 0; padding: 0 24px 40px; }
+      @media (max-width: 640px) { .occ-shell { padding: 0 14px 28px; margin-top: 18px; } }
+
+      .occ-panel {
+        background: var(--card); border: 1px solid var(--mia-border);
+        border-radius: var(--mia-radius-lg); box-shadow: var(--mia-shadow);
+        padding: 26px 24px; margin-bottom: 16px;
+      }
+      @media (max-width: 640px) { .occ-panel { padding: 20px 16px; } }
+      .mia-footer-cta { background: var(--mia-ink); color: #fff; padding: 64px 24px; text-align: center; margin-top: 32px; }
+      .mia-footer-cta-inner { max-width: 720px; margin: 0 auto; }
+      .mia-footer-cta h2 { font-size: clamp(25px, 4vw, 37px); font-weight: 800; margin: 0 0 14px; }
+      .mia-footer-cta p { color: rgba(255, 255, 255, 0.78); font-size: 16px; line-height: 1.55; margin: 0 0 24px; }
+      .mia-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: center; }
+      html { scroll-behavior: smooth; }
+      #calculator { scroll-margin-top: 84px; }
+      @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+      .mia-btn {
+        display: inline-flex; align-items: center; gap: 7px; padding: 13px 24px; border-radius: 999px;
+        font-size: 15px; font-weight: 700; text-decoration: none; border: 1.5px solid transparent;
+        transition: opacity 0.2s, transform 0.2s, background 0.2s, color 0.2s;
+      }
+      .mia-btn-primary { background: var(--mia-accent); color: var(--mia-ink); }
+      .mia-btn-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+      .mia-btn-secondary { color: #fff; border-color: rgba(255, 255, 255, 0.4); }
+      .mia-btn-secondary:hover { background: #fff; color: var(--mia-ink); }
+      .mia-btn-ghost { color: var(--mia-ink); border-color: rgba(17, 17, 17, 0.22); }
+      .mia-btn-ghost:hover { background: var(--mia-ink); color: #fff; border-color: var(--mia-ink); }
+      @media (max-width: 640px) {
+        .mia-footer-cta { padding: 44px 18px; }
+        .mia-hero-actions { flex-direction: column; align-items: stretch; }
+        .mia-btn { justify-content: center; }
+    </style>
+<style id="academy-style">
+/* Academy styling layer. Styling only: layout, sections, copy and scripts unchanged. */
+:root{
+ --ink:#100a16;--gold:#f1de71;--gold-t:#FBF3C6;--sa:#F7F4FA;--sb:#E6E0EE;--line:#E3DDEA;
+ --muted:rgba(16,10,22,.68);--st:4px 4px 0 var(--ink);--st-sm:3px 3px 0 var(--ink);--st-lg:7px 7px 0 var(--ink);
+ --sys:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+ --pink:#f171c4;--blue:#71c4f1;--green:#71f19e;--purple:#7184f1;
+ --mia-bg:#F7F4FA;--mia-ink-muted:rgba(16,10,22,.68);--mia-border:#100a16;--mia-shadow:var(--st);
+ --bg:#F7F4FA;--text:#100a16;--text-secondary:rgba(16,10,22,.68);--border:#E3DDEA;
+ --good:#0f6b2a;--good-bg:#71f19e;--good-lite:#71f19e;
+ --occ-accent:#100a16;--occ-accent-bg:#FBF3C6;
+ color-scheme:light only;
+}
+html body{font-family:var(--sys);color:var(--ink);background:var(--sa);-webkit-font-smoothing:antialiased}
+button,input,select{font-family:inherit}
+h1,h2,h3{font-family:var(--sys);font-weight:750!important;letter-spacing:-.02em}
+:is(a,button,input,select,summary):focus-visible{outline:3px solid var(--ink);outline-offset:2px}
+
+/* header */
+.mia-topbar{background:rgba(247,244,250,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:2px solid var(--ink)}
+.mia-topbar-cta{background:var(--gold);color:var(--ink);border:2px solid var(--ink);box-shadow:var(--st-sm);font-weight:800;transition:transform .14s ease,box-shadow .14s ease}
+.mia-topbar-cta:hover{opacity:1;transform:translate(2px,2px);box-shadow:1px 1px 0 var(--ink)}
+
+/* hero */
+.mia-hero{background:var(--gold-t);border-bottom:2px solid var(--ink);position:relative;overflow:hidden}
+.mia-hero::before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:var(--gold);opacity:.55;right:-180px;top:-220px;pointer-events:none}
+.mia-hero-inner{position:relative}
+.mia-eyebrow{background:var(--white,#fff);border:2px solid var(--ink);color:var(--ink);font-weight:800}
+.mia-hero h1{font-weight:750;font-size:clamp(1.65rem,2.75vw,2.5rem);line-height:1.14}
+.mia-hero p{color:var(--muted)}
+.mia-verified{background:#fff;border:2px solid var(--ink);color:var(--muted)}
+@media(max-width:900px){.mia-hero::before{width:260px;height:260px;right:-110px;top:-150px}.mia-hero h1{font-size:clamp(1.65rem,5.2vw,2.4rem)}}
+
+/* panels and cards */
+.occ-panel{background:#fff;border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st)}
+.occ-card{background:var(--sa);border:2px solid var(--ink);border-radius:18px;box-shadow:var(--st-sm)}
+.occ-qhead h2,.occ-card>h2,.occ-foldtitle{color:var(--ink)}
+.occ-icplab{color:var(--ink)}
+
+/* buttons */
+.mia-btn{border:2px solid var(--ink);font-weight:800;box-shadow:var(--st);transition:transform .14s ease,box-shadow .14s ease}
+.mia-btn:hover{opacity:1;transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.mia-btn-primary{background:var(--gold);color:var(--ink)}
+.mia-btn-secondary,.mia-btn-ghost{background:#fff;color:var(--ink);border-color:var(--ink)}
+.mia-btn-secondary:hover,.mia-btn-ghost:hover{background:#fff;color:var(--ink);border-color:var(--ink)}
+
+/* CTA footer: black */
+.mia-footer-cta{background:var(--ink);border-top:2px solid var(--ink);margin-top:32px}
+.mia-footer-cta .mia-btn{border-color:var(--ink);box-shadow:4px 4px 0 var(--gold)}
+.mia-footer-cta .mia-btn:hover{box-shadow:2px 2px 0 var(--gold)}
+@media(prefers-reduced-motion:reduce){.mia-btn,.mia-topbar-cta,.occ-icp button,.occ-preset,.occ-seg button,.occ-share button{transition:none!important}}
+@media print{.occ-panel,.occ-funnel{box-shadow:none}}
+</style>
+<style id="vlc-style">
+/* Viral Loop Calculator */
+.vlc-shell{max-width:var(--mia-max);margin:26px auto 0;padding:0 24px 40px}
+@media(max-width:640px){.vlc-shell{padding:0 14px 28px;margin-top:18px}}
+.vlc-panel{background:#fff;border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st);padding:26px 24px;margin-bottom:20px}
+@media(max-width:640px){.vlc-panel{padding:20px 16px;border-radius:20px}}
+.vlc-panel>h2{font-size:clamp(20px,3vw,26px);margin:0 0 6px}
+.vlc-lead{margin:0 0 18px;font-size:14.5px;color:var(--muted);max-width:68ch}
+.vlc-block{margin-bottom:22px}
+.vlc-block:last-child{margin-bottom:0}
+.vlc-block h3{font-size:16px;margin:0 0 4px}
+.vlc-hint{font-size:13px;color:var(--muted);margin:0 0 12px;line-height:1.5}
+.vlc-grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:560px){.vlc-grid.two{grid-template-columns:1fr 1fr}.vlc-grid.three{grid-template-columns:repeat(3,1fr)}}
+.vlc-f label,.vlc-f .vlc-lab{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--ink)}
+.vlc-in{display:flex;align-items:center;background:#fff;border:2px solid var(--ink);border-radius:12px;padding:0 12px}
+.vlc-in:focus-within{box-shadow:var(--st-sm)}
+.vlc-in span{font-weight:700;color:var(--muted);flex:0 0 auto}
+.vlc-in input,.vlc-in select{border:0;background:transparent;font-size:16px;font-weight:800;color:var(--ink);padding:10px 4px;width:100%;min-width:0;flex:1 1 auto}
+.vlc-in input:focus,.vlc-in select:focus{outline:none}
+.vlc-note{display:block;font-size:12px;color:var(--muted);margin-top:5px;line-height:1.4}
+.vlc-seg{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.vlc-seg button{background:#fff;border:2px solid var(--ink);border-radius:999px;box-shadow:var(--st-sm);padding:8px 14px;font-size:13.5px;font-weight:800;color:var(--ink);cursor:pointer;transition:transform .14s ease,box-shadow .14s ease}
+.vlc-seg button:hover{transform:translate(1px,1px);box-shadow:2px 2px 0 var(--ink)}
+.vlc-seg button[aria-pressed="true"]{background:var(--gold)}
+.vlc-kread{margin-top:14px;padding:12px 14px;background:var(--gold-t);border:2px solid var(--ink);border-radius:14px;font-size:14px}
+.vlc-kread strong{font-size:20px}
+.vlc-tiles{display:grid;gap:10px;grid-template-columns:repeat(2,1fr);margin-bottom:14px}
+@media(min-width:760px){.vlc-tiles{grid-template-columns:repeat(4,1fr)}}
+.vlc-tile{background:#fff;border:2px solid var(--ink);border-radius:16px;box-shadow:var(--st-sm);padding:12px 14px;min-width:0}
+.vlc-tile small{display:block;font-size:12px;font-weight:700;color:var(--muted);line-height:1.3}
+.vlc-tile b{display:block;font-size:clamp(20px,3.4vw,28px);font-weight:800;line-height:1.15;margin-top:4px;overflow-wrap:anywhere}
+.vlc-tile.hi{background:var(--green)}
+.vlc-tile.alt{background:var(--blue)}
+.vlc-msg{padding:12px 14px;background:var(--gold-t);border:2px solid var(--ink);border-radius:14px;font-size:14px;line-height:1.55;margin:0 0 12px}
+.vlc-msg.warn{background:#ffe3e3}
+.vlc-assume{font-size:12.5px;color:var(--muted);line-height:1.55;margin:0}
+.vlc-chart{border:2px solid var(--ink);border-radius:16px;background:#fff;padding:12px 12px 8px;overflow:hidden}
+.vlc-chart svg{display:block;width:100%;height:auto}
+.vlc-chart figcaption{font-size:12px;color:var(--muted);margin-top:6px}
+.vlc-scroll{border:2px solid var(--ink);border-radius:16px;background:#fff;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.vlc-table{width:100%;border-collapse:collapse;font-size:13px}
+.vlc-table th,.vlc-table td{text-align:right;padding:8px 12px;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+.vlc-table th:first-child,.vlc-table td:first-child{text-align:left}
+.vlc-table th{background:var(--sb);border-bottom:2px solid var(--ink);font-size:11.5px;text-transform:uppercase;letter-spacing:.05em}
+.vlc-table tbody tr:last-child td{border-bottom:0}
+.vlc-more{font-size:12.5px;color:var(--muted);margin:8px 0 0}
+/* scorecard */
+.vlc-q{border:2px solid var(--ink);border-radius:16px;margin:0 0 10px;padding:12px 14px;background:#fff;min-width:0}
+.vlc-q legend{float:left;width:100%;padding:0 4px;font-size:14.5px;line-height:1.45}
+.vlc-opts{clear:both;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding-top:14px}
+.vlc-opts label{display:block;cursor:pointer}
+.vlc-opts input{position:absolute;opacity:0;pointer-events:none}
+.vlc-opts span{display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;border:2px solid var(--ink);border-radius:12px;padding:9px 4px;background:#fff;transition:background .14s ease}
+.vlc-opts span strong{font-size:14px;font-weight:800}
+.vlc-opts span small{font-size:11.5px;font-weight:500;color:var(--muted)}
+.vlc-opts label:hover span{background:var(--sa)}
+.vlc-opts input:checked+span{background:var(--gold);box-shadow:var(--st-sm)}
+.vlc-opts input:focus-visible+span{outline:3px solid var(--ink);outline-offset:2px}
+.vlc-total{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:14px 0 10px}
+.vlc-total b{font-size:34px;font-weight:800;line-height:1}
+.vlc-guide{margin:18px 0 0;font-size:14.5px}
+.vlc-guide a{font-weight:800;color:var(--ink);text-underline-offset:3px}
+[hidden]{display:none!important}
+#blocks.vlc-fallback{display:block}
+@media print{.vlc-panel{box-shadow:none}}
+/* modules */
+.vlc-sub{margin:0 0 22px}
+.vlc-sub:last-child{margin-bottom:0}
+.vlc-sub+.vlc-sub{padding-top:20px;border-top:2px dashed var(--line)}
+.vlc-res{margin:16px 0 12px}
+.vlc-res:empty{margin:0}
+.vlc-use{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:12px}
+.vlc-btn{border:2px solid var(--ink);border-radius:999px;box-shadow:var(--st-sm);padding:10px 20px;font-size:14px;font-weight:800;cursor:pointer;background:var(--gold);color:var(--ink)}
+.vlc-btn:disabled{opacity:.35;cursor:default;box-shadow:none}
+.vlc-loops{display:grid;gap:14px;grid-template-columns:1fr;margin-top:14px}
+@media(min-width:760px){.vlc-loops{grid-template-columns:1fr 1fr}}
+.vlc-loop{border:2px solid var(--ink);border-radius:16px;padding:12px 14px;background:var(--sa)}
+.vlc-loop h3{margin:0 0 10px}
+.vlc-tile.alt2{background:var(--pink)}
+.vlc-tile.bad{background:#ffb3b3}
+/* chart */
+.vlc-chart{position:relative}
+.vlc-chart svg{overflow:visible}
+.vlc-chart .grid{stroke:#100a16;stroke-opacity:.12;stroke-width:1}
+.vlc-chart .ylab,.vlc-chart .xlab{font-size:11px;fill:rgba(16,10,22,.68);font-family:inherit}
+.vlc-chart .hit{fill:transparent}
+.vlc-chart .vlc-bar{cursor:pointer;outline:none}
+.vlc-chart .vlc-bar rect.b{fill:#f1de71;stroke:#100a16;stroke-width:1.5}
+.vlc-chart .vlc-bar.start rect.b{fill:#71c4f1}
+.vlc-chart .vlc-bar.on rect.b,.vlc-chart .vlc-bar:focus-visible rect.b{fill:#f171c4;stroke-width:2.5}
+.vlc-chart .vlc-bar:focus-visible rect.hit{stroke:#100a16;stroke-dasharray:3 3}
+.vlc-table tbody tr.on td{background:var(--gold-t)}
+.vlc-table tbody tr{cursor:default}
+.vlc-tip{position:absolute;z-index:5;background:var(--ink);color:#fff;border-radius:10px;padding:8px 11px;font-size:12.5px;line-height:1.45;pointer-events:none;box-shadow:0 6px 18px rgba(0,0,0,.25);white-space:nowrap}
+.vlc-tip b{display:block;font-size:13px;margin-bottom:2px}
+.vlc-tip span{display:flex;justify-content:space-between;gap:14px}
+.vlc-tip em{font-style:normal;font-weight:800;font-variant-numeric:tabular-nums}
+/* segmented tab bar */
+.vlc-tabs{display:grid;grid-template-columns:repeat(5,1fr);background:#fff;border:2px solid var(--ink);border-radius:16px;box-shadow:var(--st);overflow:hidden;margin:0 0 14px}
+.vlc-tabs button{appearance:none;background:#fff;border:0;border-left:1px solid var(--line);padding:13px 10px;font-size:14.5px;font-weight:800;color:var(--ink);cursor:pointer;white-space:nowrap;font-family:inherit;transition:background .14s ease}
+.vlc-tabs button:first-child{border-left:0}
+.vlc-tabs button:hover{background:var(--sa)}
+.vlc-tabs button[aria-selected="true"]{background:var(--gold)}
+.vlc-tabs button:focus-visible{outline:3px solid var(--ink);outline-offset:-5px}
+@media(max-width:640px){.vlc-tabs{display:flex;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}.vlc-tabs::-webkit-scrollbar{display:none}.vlc-tabs button{flex:0 0 auto;padding:12px 16px}}
+/* save bar */
+.vlc-save{margin-top:20px}
+.vlc-save-row{display:flex;flex-wrap:wrap;gap:12px}
+.vlc-btn-alt{background:#fff}
+.vlc-link{background:none;border:0;padding:0;font:inherit;font-size:12px;color:var(--ink);text-decoration:underline;text-underline-offset:3px;cursor:pointer;margin-left:6px}
+.vlc-note-in{display:block;width:100%;margin-top:10px;border:0;border-bottom:2px dashed var(--line);background:transparent;padding:6px 4px;font-size:14px;font-family:inherit;color:var(--ink)}
+.vlc-note-in::placeholder{color:rgba(16,10,22,.45)}
+.vlc-note-in:focus{outline:none;border-bottom:2px solid var(--ink)}
+.vlc-fallback{margin-top:14px}
+.vlc-fallback label{display:block;font-size:13px;font-weight:700;margin-bottom:6px}
+.vlc-fallback textarea{width:100%;border:2px solid var(--ink);border-radius:12px;padding:10px;font-size:13px;font-family:ui-monospace,Menlo,monospace}
+@media(max-width:480px){.vlc-save-row .vlc-btn{width:100%}}
+
+</style>
+  </head>
+  <body>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <header class="mia-topbar">
+      <div class="mia-topbar-inner">
+        <a href="/consulting/" class="mia-logo" aria-label="Marketing In Action &mdash; go-to-market consulting">
+          <img src="/assets/mia-logo.svg" alt="Marketing In Action" class="mia-logo-img" />
+        </a>
+        <a
+          href="/consulting/book/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=viral-loop-calculator&amp;utm_content=topbar"
+          class="mia-topbar-cta"
+          data-cta="topbar"
+          >Book a free strategy call &rarr;</a
+        >
+      </div>
+    </header>
+
+    <section class="mia-hero">
+      <div class="mia-hero-inner">
+        <span class="mia-eyebrow">Free resource from Marketing In Action (MIA)</span>
+        <h1>Viral Loop Calculator</h1>
+        <p>
+          Find out how many users a sharing loop can add. K-factor (K) is the number of new users each user brings in.
+          Cycle time is the number of days between a user joining and the people they invite joining.
+        </p>
+        <div class="mia-hero-actions">
+          <a href="#calculator" class="mia-btn mia-btn-primary" data-cta="hero-run">Run the numbers</a>
+          <a href="https://newsletter.marketinginaction.xyz/p/how-to-build-a-viral-loop-before-launch" class="mia-btn mia-btn-ghost" data-cta="hero-guide">Read the full guide</a>
+        </div>
+      </div>
+    </section>
+
+    <main class="vlc-shell" id="calculator">
+      <div id="layout"></div>
+
+      <section class="vlc-panel vlc-save" id="saveBar" aria-labelledby="saveH">
+        <h2 id="saveH">Save your results</h2>
+        <p class="vlc-lead">Copy a plain text summary, or download everything as a spreadsheet.</p>
+        <div class="vlc-save-row">
+          <button type="button" class="vlc-btn" data-act="copy" id="copyBtn">Copy my results</button>
+          <button type="button" class="vlc-btn vlc-btn-alt" data-act="csv" id="csvBtn">Download as a spreadsheet</button>
+        </div>
+        <div class="vlc-fallback" id="saveFallback" hidden>
+          <label for="saveText">Your browser blocked copying. Select this text and copy it.</label>
+          <textarea id="saveText" rows="8" readonly></textarea>
+        </div>
+        <p class="vlc-note" style="margin-top:12px">Your answers stay in this browser. Nothing is sent to us. <button type="button" class="vlc-link" id="clearBtn">Clear my answers</button></p>
+      </section>
+
+      <!-- Blocks. The script places them into the layout for the chosen option. Without the script they show as one stack. -->
+      <div id="blocks" class="vlc-panel">
+        <div class="vlc-block" id="m-score">
+          <div id="scoreQs">
+          <fieldset class="vlc-q" data-q="1" data-name="Premise">
+            <legend><strong>1. Premise.</strong> Can a stranger retell it in one line after seeing one post?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q1" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q1" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q1" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note1" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Premise? (optional)" autocomplete="off" />
+          </fieldset>
+          <fieldset class="vlc-q" data-q="2" data-name="Identity">
+            <legend><strong>2. Identity.</strong> Can you list ten places, habits or jokes your audience already posts about that the product uses?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q2" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q2" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q2" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note2" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Identity? (optional)" autocomplete="off" />
+          </fieldset>
+          <fieldset class="vlc-q" data-q="3" data-name="Access">
+            <legend><strong>3. Access.</strong> Is it one tap from the post to the first moment of use?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q3" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q3" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q3" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note3" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Access? (optional)" autocomplete="off" />
+          </fieldset>
+          <fieldset class="vlc-q" data-q="4" data-name="Share artifact">
+            <legend><strong>4. Share artifact.</strong> Does using the product quickly produce something people want to post, with a share button next to it?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q4" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q4" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q4" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note4" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Share artifact? (optional)" autocomplete="off" />
+          </fieldset>
+          <fieldset class="vlc-q" data-q="5" data-name="Recruit loop">
+            <legend><strong>5. Recruit loop.</strong> Does a user get something useful when they bring another person in?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q5" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q5" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q5" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note5" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Recruit loop? (optional)" autocomplete="off" />
+          </fieldset>
+          <fieldset class="vlc-q" data-q="6" data-name="Builder cadence">
+            <legend><strong>6. Builder cadence.</strong> Are the first five updates and their posts planned?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q6" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q6" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q6" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note6" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Builder cadence? (optional)" autocomplete="off" />
+          </fieldset>
+          <fieldset class="vlc-q" data-q="7" data-name="Revenue">
+            <legend><strong>7. Revenue.</strong> Can the product earn money at launch, and do buyers have a reason to tell others?</legend>
+            <div class="vlc-opts">
+              <label><input type="radio" name="q7" value="0" /><span><strong>Missing</strong><small>0 points</small></span></label>
+              <label><input type="radio" name="q7" value="1" /><span><strong>Partial</strong><small>1 point</small></span></label>
+              <label><input type="radio" name="q7" value="2" /><span><strong>Strong</strong><small>2 points</small></span></label>
+            </div>
+            <input class="vlc-note-in" type="text" id="note7" maxlength="200" placeholder="Why this score? (optional)" aria-label="Why this score for Revenue? (optional)" autocomplete="off" />
+          </fieldset>
+          </div>
+          <div class="vlc-total" aria-live="polite"><b id="scoreTotal">0</b><span>out of 14</span><span class="vlc-note" id="scoreCount" style="margin:0">0 of 7 answered</span></div>
+          <div id="scoreMsgs" aria-live="polite"></div>
+        </div>
+
+        <div class="vlc-block" id="m-k">
+          <div class="vlc-sub">
+            <h3>From your numbers</h3>
+            <p class="vlc-hint">Type K if you know it, or multiply the invites each user sends by the share of invited people who join.</p>
+            <div class="vlc-seg" role="group" aria-label="How to set K">
+              <button type="button" data-kmode="rate" aria-pressed="true">Invites and join rate</button>
+              <button type="button" data-kmode="direct" aria-pressed="false">I know my K</button>
+            </div>
+            <div data-kpane="rate" class="vlc-grid two">
+              <div class="vlc-f"><label for="vInv">Invites per user</label><div class="vlc-in"><input id="vInv" type="text" inputmode="decimal" value="5" autocomplete="off" /></div><span class="vlc-note">How many people each user invites.</span></div>
+              <div class="vlc-f"><label for="vJoin">Join rate</label><div class="vlc-in"><input id="vJoin" type="text" inputmode="decimal" value="30" autocomplete="off" /><span>%</span></div><span class="vlc-note">The share of invited people who join.</span></div>
+            </div>
+            <div data-kpane="direct" hidden>
+              <div class="vlc-f"><label for="vK">K</label><div class="vlc-in"><input id="vK" type="text" inputmode="decimal" value="1.5" autocomplete="off" /></div><span class="vlc-note">New users per user. Invites per user times join rate.</span></div>
+            </div>
+            <div class="vlc-kread" id="kRead" aria-live="polite"></div>
+            <div class="vlc-use"><button type="button" class="vlc-btn" id="useK1">Use this K</button><span class="vlc-note" id="useMsg1" aria-live="polite"></span></div>
+          </div>
+
+          <div class="vlc-sub">
+            <h3>From your logged events</h3>
+            <p class="vlc-hint">Enter what you logged over one period. You get each step of the loop and the step that loses the most people.</p>
+            <div class="vlc-grid three">
+              <div class="vlc-f"><label for="vLU">Users in the period</label><div class="vlc-in"><input id="vLU" type="text" inputmode="decimal" value="" placeholder="200" autocomplete="off" /></div><span class="vlc-note">All users, including people who shared nothing.</span></div>
+              <div class="vlc-f"><label for="vLC">Share clicks (optional)</label><div class="vlc-in"><input id="vLC" type="text" inputmode="decimal" value="" placeholder="400" autocomplete="off" /></div></div>
+              <div class="vlc-f"><label for="vLI">Invites sent</label><div class="vlc-in"><input id="vLI" type="text" inputmode="decimal" value="" placeholder="600" autocomplete="off" /></div></div>
+              <div class="vlc-f"><label for="vLV">Visits from share links</label><div class="vlc-in"><input id="vLV" type="text" inputmode="decimal" value="" placeholder="300" autocomplete="off" /></div></div>
+              <div class="vlc-f"><label for="vLN">New users from share links</label><div class="vlc-in"><input id="vLN" type="text" inputmode="decimal" value="" placeholder="120" autocomplete="off" /></div></div>
+            </div>
+            <div id="logOut" aria-live="polite"></div>
+            <div class="vlc-use"><button type="button" class="vlc-btn" id="useK2" disabled>Use this K</button><span class="vlc-note" id="useMsg2" aria-live="polite"></span></div>
+          </div>
+        </div>
+
+        <div class="vlc-block" id="m-proj">
+          <p class="vlc-hint">Cycle time is the number of days between a user joining and the people they invite joining.</p>
+          <div class="vlc-grid two">
+            <div class="vlc-f"><label for="vN">Starting users</label><div class="vlc-in"><input id="vN" type="text" inputmode="decimal" value="1000" autocomplete="off" /></div><span class="vlc-note">The users you have before the loop starts.</span></div>
+            <div class="vlc-f"><label for="vPK">K</label><div class="vlc-in"><input id="vPK" type="text" inputmode="decimal" value="1.5" autocomplete="off" /></div><span class="vlc-note">New users per user. Use the K module above to work it out.</span></div>
+            <div class="vlc-f"><label for="vCycle">Cycle time (days)</label><div class="vlc-in"><input id="vCycle" type="text" inputmode="decimal" value="7" autocomplete="off" /></div><span class="vlc-note">Decimals are fine, for example 0.5.</span></div>
+            <div class="vlc-f"><label for="vPeriod">Period (days)</label><div class="vlc-in"><input id="vPeriod" type="text" inputmode="decimal" value="28" autocomplete="off" /></div><span class="vlc-note">How long you want to project.</span></div>
+          </div>
+          <div class="vlc-grid two" style="margin-top:14px">
+            <div class="vlc-f">
+              <label for="vCost">Cost per user you paid for (optional)</label>
+              <div class="vlc-in"><span id="curSym">$</span><input id="vCost" type="text" inputmode="decimal" value="5" autocomplete="off" /></div>
+              <span class="vlc-note">Shows what each user really costs once the loop adds free users.</span>
+            </div>
+            <div class="vlc-f">
+              <label for="vCur">Currency</label>
+              <div class="vlc-in"><select id="vCur" aria-label="Currency"><option value="$" selected>$ US dollars</option><option value="&#8358;">&#8358; Naira</option></select></div>
+            </div>
+          </div>
+          <div class="vlc-res" id="resOut" aria-live="polite"></div>
+          <p class="vlc-assume">This estimate assumes each new user invites people once, in the round after they join, and that K and cycle time stay the same. In real life K usually falls as you run out of people who have not heard of you, so treat the result as an estimate and check it against your real numbers.</p>
+          <div class="vlc-sub">
+            <h3>New users in each round</h3>
+            <figure class="vlc-chart" id="chartWrap" style="margin:0"><div id="chartOut"></div><div class="vlc-tip" id="chartTip" role="status" hidden></div><figcaption id="chartCap"></figcaption></figure>
+          </div>
+          <div class="vlc-sub">
+            <h3>Round by round</h3>
+            <div class="vlc-scroll"><table class="vlc-table"><thead><tr><th>Round</th><th>Day</th><th>New users</th><th>Total users</th></tr></thead><tbody id="rowsOut"></tbody></table></div>
+            <p class="vlc-more" id="rowsMore" hidden></p>
+          </div>
+        </div>
+
+        <div class="vlc-block" id="m-cmp">
+          <p class="vlc-hint">Each loop takes its own K and cycle time. Starting users and period are the same for both.</p>
+          <div class="vlc-grid two">
+            <div class="vlc-f"><label for="vCN">Starting users</label><div class="vlc-in"><input id="vCN" type="text" inputmode="decimal" value="1000" autocomplete="off" /></div></div>
+            <div class="vlc-f"><label for="vCP">Period (days)</label><div class="vlc-in"><input id="vCP" type="text" inputmode="decimal" value="28" autocomplete="off" /></div></div>
+          </div>
+          <div class="vlc-loops">
+            <div class="vlc-loop"><h3>Loop A</h3>
+              <div class="vlc-grid two">
+                <div class="vlc-f"><label for="vAK">K</label><div class="vlc-in"><input id="vAK" type="text" inputmode="decimal" value="1.2" autocomplete="off" /></div></div>
+                <div class="vlc-f"><label for="vAC">Cycle time (days)</label><div class="vlc-in"><input id="vAC" type="text" inputmode="decimal" value="1" autocomplete="off" /></div></div>
+              </div>
+            </div>
+            <div class="vlc-loop"><h3>Loop B</h3>
+              <div class="vlc-grid two">
+                <div class="vlc-f"><label for="vBK">K</label><div class="vlc-in"><input id="vBK" type="text" inputmode="decimal" value="1.5" autocomplete="off" /></div></div>
+                <div class="vlc-f"><label for="vBC">Cycle time (days)</label><div class="vlc-in"><input id="vBC" type="text" inputmode="decimal" value="7" autocomplete="off" /></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="vlc-res" id="cmpOut" aria-live="polite"></div>
+          <p class="vlc-assume">Both loops assume each new user invites people once, in the round after they join, and that K and cycle time stay the same.</p>
+        </div>
+
+        <div class="vlc-block" id="m-ret">
+          <p class="vlc-msg" style="margin:0 0 14px">Retention is the share of one day's new users who come back one, seven and 30 days later.</p>
+          <div class="vlc-grid two">
+            <div class="vlc-f"><label for="vRN">New users on one day</label><div class="vlc-in"><input id="vRN" type="text" inputmode="decimal" value="" placeholder="500" autocomplete="off" /></div></div>
+            <div class="vlc-f"><label for="vR1">Came back on Day 1</label><div class="vlc-in"><input id="vR1" type="text" inputmode="decimal" value="" placeholder="200" autocomplete="off" /></div></div>
+            <div class="vlc-f"><label for="vR7">Came back on Day 7</label><div class="vlc-in"><input id="vR7" type="text" inputmode="decimal" value="" placeholder="100" autocomplete="off" /></div></div>
+            <div class="vlc-f"><label for="vR30">Came back on Day 30</label><div class="vlc-in"><input id="vR30" type="text" inputmode="decimal" value="" placeholder="50" autocomplete="off" /></div></div>
+          </div>
+          <div class="vlc-res" id="retOut" aria-live="polite"></div>
+        </div>
+
+        <p class="vlc-guide" id="b-guide"><a href="https://newsletter.marketinginaction.xyz/p/how-to-build-a-viral-loop-before-launch" data-cta="guide">Read the full guide</a></p>
+      </div>
+    </main>
+
+    <section class="mia-footer-cta">
+      <div class="mia-footer-cta-inner">
+        <h2>Want help building the loop?</h2>
+        <p>
+          Book a 30 minute strategy call. We will look at your product, your users and your sharing moments, and map out the loop with you.
+        </p>
+        <div class="mia-hero-actions">
+          <a
+            href="/consulting/book/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=viral-loop-calculator&amp;utm_content=footer-primary"
+            class="mia-btn mia-btn-primary"
+            data-cta="footer-primary"
+            >Book a free strategy call &rarr;</a
+          >
+          <a
+            href="/consulting/?utm_source=resources&amp;utm_medium=tool&amp;utm_campaign=viral-loop-calculator&amp;utm_content=footer-secondary"
+            class="mia-btn mia-btn-secondary"
+            data-cta="footer-secondary"
+            >Read more about how we work</a
+          >
+        </div>
+      </div>
+    </section>
+
+
+    <script src="/resources/viral-loop-calculator/calc.js"></script>
+    <script src="/resources/viral-loop-calculator/save.js"></script>
+    <script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var qs = new URLSearchParams(location.search);
+
+  /* ---------- remember in this browser ---------- */
+  var STORE = "vlc.v1";
+  function lsGet() { try { var s = window.localStorage.getItem(STORE); return s ? JSON.parse(s) : null; } catch (e) { return null; } }
+  function lsSet(o) { try { window.localStorage.setItem(STORE, JSON.stringify(o)); } catch (e) {} }
+  function lsClear() { try { window.localStorage.removeItem(STORE); } catch (e) {} }
+  var saved = lsGet() || {};
+  var allFields = [].slice.call(document.querySelectorAll(".vlc-in input, .vlc-in select, .vlc-note-in"));
+  if (saved.f) allFields.forEach(function (f) { if (f.id && typeof saved.f[f.id] === "string") f.value = saved.f[f.id]; });
+  if (saved.s) [].forEach.call(document.querySelectorAll(".vlc-q"), function (q, i) {
+    var v = saved.s[i]; if (v === "0" || v === "1" || v === "2") { var r = q.querySelector('input[value="' + v + '"]'); if (r) r.checked = true; }
+  });
+
+  /* any field can be prefilled from the URL, for example ?vLU=200 */
+  qs.forEach(function (val, key) { var f = $(key); if (f && f.tagName === "INPUT") f.value = val; });
+
+  /* ---------- tabs ---------- */
+  var MODS = {
+    score: { id: "m-score", tab: "Scorecard", title: "Scorecard", lead: "Score the seven ingredients a loop needs, from 0 to 2 each, for a total out of 14." },
+    k: { id: "m-k", tab: "Your K", title: "Work out K", lead: "K is the number of new users each user brings in. Work it out from your own numbers or from your logged events." },
+    proj: { id: "m-proj", tab: "Projection", title: "Growth projection", lead: "See how many users the loop adds, round by round, from your starting users, K, cycle time and period." },
+    cmp: { id: "m-cmp", tab: "Compare", title: "Compare two loops", lead: "Put two loops side by side to see which one grows more users in the same time." },
+    ret: { id: "m-ret", tab: "Retention", title: "Retention check", lead: "Check Day 1, Day 7 and Day 30 retention before you trust the loop." }
+  };
+  var layout = $("layout"), blocks = $("blocks"), guide = $("b-guide");
+  var keys = ["score", "k", "proj", "cmp", "ret"], tabs = document.createElement("div"), secs = {}, btns = {};
+  tabs.className = "vlc-tabs"; tabs.setAttribute("role", "tablist"); tabs.setAttribute("aria-label", "Calculator modules");
+  keys.forEach(function (k) {
+    var m = MODS[k], b = document.createElement("button");
+    b.type = "button"; b.setAttribute("role", "tab"); b.textContent = m.tab;
+    b.addEventListener("click", function () { show(k); });
+    tabs.appendChild(b); btns[k] = b;
+    var s = document.createElement("section"); s.id = "sec-" + k; s.className = "vlc-panel"; s.setAttribute("role", "tabpanel");
+    var h = document.createElement("h2"); h.textContent = m.title; s.appendChild(h);
+    var p = document.createElement("p"); p.className = "vlc-lead"; p.textContent = m.lead; s.appendChild(p);
+    s.appendChild($(m.id)); secs[k] = s; layout.appendChild(s);
+  });
+  tabs.addEventListener("keydown", function (e) {
+    var i = keys.indexOf(document.activeElement && document.activeElement.getAttribute ? keys.filter(function (x) { return btns[x] === document.activeElement; })[0] : null);
+    if (i < 0) return;
+    var n = e.key === "ArrowRight" ? (i + 1) % keys.length : e.key === "ArrowLeft" ? (i + keys.length - 1) % keys.length : e.key === "Home" ? 0 : e.key === "End" ? keys.length - 1 : -1;
+    if (n < 0) return;
+    e.preventDefault(); show(keys[n]); btns[keys[n]].focus();
+  });
+  layout.insertBefore(tabs, layout.firstChild);
+  secs.ret.appendChild(guide);
+  var onShow = function () {};
+  function show(k) {
+    keys.forEach(function (x) { secs[x].hidden = x !== k; btns[x].setAttribute("aria-selected", x === k ? "true" : "false"); btns[x].tabIndex = x === k ? 0 : -1; });
+    if (tabs.scrollWidth > tabs.clientWidth) { var b = btns[k]; tabs.scrollLeft = Math.max(0, b.offsetLeft - (tabs.clientWidth - b.offsetWidth) / 2); }
+    onShow(k);
+  }
+  var nav = { go: function (k) { show(k); var t = tabs.getBoundingClientRect().top + window.pageYOffset - 80; if (window.pageYOffset > t) window.scrollTo({ top: t, behavior: "smooth" }); } };
+  function fromHash() { var h = (location.hash || "").replace("#", ""); show(MODS[h] ? h : "score"); }
+  window.addEventListener("hashchange", fromHash);
+  fromHash();
+  blocks.remove();
+
+  /* ---------- helpers ---------- */
+  function fmt(n, d) {
+    if (n === null || n === undefined || isNaN(n)) return "";
+    if (!isFinite(n)) return "Too large to show";
+    return n.toLocaleString("en-US", { maximumFractionDigits: d || 0 });
+  }
+  function pct(x, d) { return fmt(x, d === undefined ? 1 : d) + "%"; }
+  function cur$() { return $("vCur").value; }
+  function compact(n) {
+    var a = Math.abs(n);
+    if (a >= 1e9) return +(n / 1e9).toFixed(1) + "B";
+    if (a >= 1e6) return +(n / 1e6).toFixed(1) + "M";
+    if (a >= 1e3) return +(n / 1e3).toFixed(1) + "K";
+    return String(+n.toFixed(a < 10 ? 1 : 0));
+  }
+  function tile(label, value, cls) { return '<div class="vlc-tile ' + (cls || "") + '"><small>' + label + "</small><b>" + value + "</b></div>"; }
+  function msg(t, cls) { return '<p class="vlc-msg ' + (cls || "") + '">' + t + "</p>"; }
+
+  /* ---------- module: K from your numbers ---------- */
+  var kmode = "rate", kNow = NaN, logNow = null;
+  [].forEach.call(document.querySelectorAll("[data-kmode]"), function (b) {
+    b.addEventListener("click", function () {
+      kmode = b.getAttribute("data-kmode");
+      [].forEach.call(document.querySelectorAll("[data-kmode]"), function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      [].forEach.call(document.querySelectorAll("[data-kpane]"), function (p) { p.hidden = p.getAttribute("data-kpane") !== kmode; });
+      renderK();
+    });
+  });
+  function renderK() {
+    var k, text;
+    if (kmode === "direct") {
+      k = VLC.num($("vK").value);
+      text = isNaN(k) ? "Enter your K." : "Your K is <strong>" + fmt(k, 2) + "</strong>.";
+    } else {
+      k = VLC.kFromRate($("vInv").value, $("vJoin").value);
+      text = isNaN(k) ? "Enter invites per user and join rate." : fmt(VLC.num($("vInv").value), 2) + " invites per user times " + fmt(VLC.num($("vJoin").value), 1) + "% join rate. Your K is <strong>" + fmt(k, 2) + "</strong>.";
+    }
+    kNow = k;
+    $("kRead").innerHTML = text;
+    $("useK1").disabled = isNaN(k) || k < 0;
+  }
+
+  /* ---------- module: K from logged events ---------- */
+  function renderLogged() {
+    var r = VLC.logged($("vLU").value, $("vLC").value, $("vLI").value, $("vLV").value, $("vLN").value);
+    var out = $("logOut");
+    logNow = r.valid ? r : null;
+    $("useK2").disabled = !r.valid;
+    if (!r.valid) { out.innerHTML = ""; return; }
+    var h = '<div class="vlc-tiles" style="margin-top:14px">';
+    h += tile("Invites per user", fmt(r.invitesPerUser, 2));
+    h += tile("Open rate (visits ÷ invites)", pct(r.openRate * 100), r.weakest === "open" ? "bad" : "");
+    h += tile("Visit to join rate (new users ÷ visits)", pct(r.visitToJoin * 100), r.weakest === "join" ? "bad" : "");
+    h += tile("Join rate (new users ÷ invites)", pct(r.joinRate * 100));
+    h += tile("K", fmt(r.k, 2), "hi");
+    if (r.clicksPerUser !== undefined) { h += tile("Share clicks per user", fmt(r.clicksPerUser, 2)); h += tile("Invites per share click", fmt(r.invitesPerClick, 2)); }
+    h += "</div>";
+    if (r.weakest === "open") h += msg("The step that loses the most people is <strong>invites nobody opened</strong>: " + fmt(r.lostOpen) + " of " + fmt(VLC.num($("vLI").value)) + " invites. Fix this step first.");
+    else h += msg("The step that loses the most people is <strong>visitors who did not join</strong>: " + fmt(r.lostJoin) + " of " + fmt(VLC.num($("vLV").value)) + " visits. Fix this step first.");
+    out.innerHTML = h;
+  }
+
+  function useK(k, msgId) {
+    var t = String(+(+k).toFixed(4));
+    $("vPK").value = t;
+    $("useMsg1").textContent = ""; $("useMsg2").textContent = "";
+    $(msgId).textContent = "K " + t + " copied to the projection.";
+    renderAll();
+    nav.go("proj");
+  }
+  $("useK1").addEventListener("click", function () { if (!isNaN(kNow)) useK(kNow, "useMsg1"); });
+  $("useK2").addEventListener("click", function () { if (logNow) useK(logNow.k, "useMsg2"); });
+
+  /* ---------- module: projection ---------- */
+  function renderProj() {
+    $("curSym").textContent = cur$();
+    var r = VLC.project({ n: $("vN").value, k: $("vPK").value, cycle: $("vCycle").value, period: $("vPeriod").value, cost: $("vCost").value });
+    var out = $("resOut");
+    if (!r.valid) {
+      out.innerHTML = msg(r.error, "warn");
+      lastRows = []; $("chartOut").innerHTML = ""; $("chartCap").textContent = ""; $("rowsOut").innerHTML = ""; $("rowsMore").hidden = true;
+      return;
+    }
+    var h = '<div class="vlc-tiles">';
+    h += tile("K (new users per user)", fmt(r.k, 2));
+    h += tile("Rounds in " + fmt(r.period, 2) + " days", fmt(r.rounds));
+    h += tile("Total users after " + fmt(r.period, 2) + " days", fmt(r.total), "hi");
+    if (r.eventual !== null) {
+      h += tile("Eventual total if the loop runs to the end", fmt(r.eventual), "alt");
+      if (r.effectiveCost !== null) h += tile("Effective cost per user", cur$() + fmt(r.effectiveCost, 2), "alt");
+    }
+    h += "</div>";
+    if (r.rounds === 0) h += msg("Your period is shorter than one cycle, so the people your starting users invite have not joined yet.");
+    if (!r.finite) h += msg("The numbers are too large to show. Shorten the period or lengthen the cycle time.", "warn");
+    if (r.growing) h += msg("K is 1 or more, so the loop keeps growing while K and cycle time hold.");
+    else h += msg("K is below 1, so each round is smaller than the last and growth fades out. If the loop runs until the rounds are near zero, you reach about <strong>" + fmt(r.eventual) + "</strong> users in total.");
+    out.innerHTML = h;
+
+    lastRows = r.rows.slice(0, 40);
+    lastCapped = r.rows.length > 40;
+    lastSeen = r.rows.length;
+    drawChart();
+    var tb = "";
+    lastRows.forEach(function (x, i) { tb += '<tr data-i="' + i + '"><td>' + (x.round === 0 ? "Start" : "Round " + x.round) + "</td><td>" + fmt(x.day, 2) + "</td><td>" + fmt(x.newUsers) + "</td><td>" + fmt(x.total) + "</td></tr>"; });
+    $("rowsOut").innerHTML = tb;
+    var more = $("rowsMore");
+    if (lastCapped) { more.hidden = false; more.textContent = "Showing the first 40 of " + fmt(lastSeen) + " rows. The total above counts every round."; } else more.hidden = true;
+  }
+
+  /* ---------- chart with tooltip ---------- */
+  var lastRows = [], lastCapped = false, lastSeen = 0, drawnW = 0;
+  function niceMax(v) {
+    if (!(v > 0)) return 1;
+    var p = Math.pow(10, Math.floor(Math.log10(v))), f = v / p;
+    var n = f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10;
+    return n * p;
+  }
+  function rowText(x) { return "Round " + x.round + ", day " + fmt(x.day, 2) + ": " + fmt(x.newUsers) + " " + (x.round === 0 ? "starting users" : "new users") + ", " + fmt(x.total) + " total users"; }
+  function drawChart() {
+    var out = $("chartOut"), rows = lastRows;
+    if (!rows.length) { out.innerHTML = ""; return; }
+    var W = out.clientWidth || 560; drawnW = W;
+    var H = 210, L = 44, R = 8, T = 10, B = 26, base = H - B, plotW = W - L - R;
+    var max = 0; rows.forEach(function (x) { if (isFinite(x.newUsers) && x.newUsers > max) max = x.newUsers; });
+    var top = niceMax(max), bw = plotW / rows.length;
+    var svg = '<svg width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + " " + H + '" role="group" aria-label="New users in each round, one bar per round">';
+    for (var g = 0; g <= 4; g++) {
+      var y = base - (g / 4) * (base - T);
+      svg += '<line class="grid" x1="' + L + '" x2="' + (W - R) + '" y1="' + y.toFixed(1) + '" y2="' + y.toFixed(1) + '"/>';
+      svg += '<text class="ylab" x="' + (L - 6) + '" y="' + (y + 4).toFixed(1) + '" text-anchor="end">' + compact((g / 4) * top) + "</text>";
+    }
+    var step = Math.max(1, Math.ceil(rows.length / Math.max(4, Math.floor(plotW / 34))));
+    rows.forEach(function (x, i) {
+      var h = top > 0 && isFinite(x.newUsers) ? Math.max(1.5, (x.newUsers / top) * (base - T)) : 0;
+      var gx = L + i * bw, bx = gx + bw * 0.14, w = Math.max(2, bw * 0.72);
+      svg += '<g class="vlc-bar' + (i === 0 ? " start" : "") + '" data-i="' + i + '" tabindex="0" role="img" aria-label="' + rowText(x) + '">' +
+        '<rect class="hit" x="' + gx.toFixed(1) + '" y="' + T + '" width="' + bw.toFixed(1) + '" height="' + (base - T) + '"/>' +
+        '<rect class="b" x="' + bx.toFixed(1) + '" y="' + (base - h).toFixed(1) + '" width="' + w.toFixed(1) + '" height="' + h.toFixed(1) + '" rx="2"/></g>';
+      if (i % step === 0) svg += '<text class="xlab" x="' + (gx + bw / 2).toFixed(1) + '" y="' + (H - 9) + '" text-anchor="middle" aria-hidden="true">' + x.round + "</text>";
+    });
+    svg += '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + base + '" y2="' + base + '" stroke="#100a16" stroke-width="2"/></svg>';
+    out.innerHTML = svg;
+    $("chartCap").textContent = "The bottom axis is the round number. Blue is your starting users and yellow is the users added in each round. Hover, tap or tab to a bar for the numbers." + (lastCapped ? " Showing the first 40 rounds." : "");
+  }
+  var tip = $("chartTip"), wrapEl = $("chartWrap"), activeI = -1;
+  function setActive(i, showTip) {
+    var bars = $("chartOut").querySelectorAll(".vlc-bar"), trs = $("rowsOut").querySelectorAll("tr");
+    [].forEach.call(bars, function (b) { b.classList.toggle("on", +b.getAttribute("data-i") === i); });
+    [].forEach.call(trs, function (t) { t.classList.toggle("on", +t.getAttribute("data-i") === i); });
+    activeI = i;
+    if (i < 0 || !showTip) { tip.hidden = true; return; }
+    var x = lastRows[i], bar = bars[i]; if (!x || !bar) return;
+    tip.innerHTML = "<b>Round " + x.round + ", day " + fmt(x.day, 2) + "</b><span>" + (x.round === 0 ? "Starting users" : "New users") + " <em>" + fmt(x.newUsers) + "</em></span><span>Total users <em>" + fmt(x.total) + "</em></span>";
+    tip.hidden = false; tip.style.left = "0px"; tip.style.top = "0px";
+    var wr = wrapEl.getBoundingClientRect(), br = bar.querySelector("rect.b").getBoundingClientRect();
+    var tw = tip.offsetWidth, th = tip.offsetHeight;
+    var left = br.left - wr.left + br.width / 2 - tw / 2;
+    left = Math.max(4, Math.min(left, wr.width - tw - 4));
+    var topPx = br.top - wr.top - th - 8;
+    if (topPx < 4) topPx = Math.min(br.bottom - wr.top + 8, wr.height - th - 4);
+    tip.style.left = left.toFixed(0) + "px"; tip.style.top = topPx.toFixed(0) + "px";
+  }
+  var cho = $("chartOut"), rowsEl = $("rowsOut");
+  function barOf(t) { return t.closest ? t.closest(".vlc-bar") : null; }
+  cho.addEventListener("pointerover", function (e) { if (e.pointerType !== "mouse") return; var b = barOf(e.target); if (b) setActive(+b.getAttribute("data-i"), true); });
+  cho.addEventListener("pointerleave", function (e) { if (e.pointerType === "mouse") setActive(-1); });
+  cho.addEventListener("click", function (e) { var b = barOf(e.target); if (b) setActive(+b.getAttribute("data-i"), true); });
+  cho.addEventListener("focusin", function (e) { var b = barOf(e.target); if (b) setActive(+b.getAttribute("data-i"), true); });
+  cho.addEventListener("focusout", function () { setActive(-1); });
+  document.addEventListener("click", function (e) { if (!wrapEl.contains(e.target)) setActive(-1); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") setActive(-1); });
+  rowsEl.addEventListener("mouseover", function (e) { var tr = e.target.closest && e.target.closest("tr"); if (tr) setActive(+tr.getAttribute("data-i"), false); });
+  rowsEl.addEventListener("mouseleave", function () { setActive(-1); });
+  if (window.ResizeObserver) new ResizeObserver(function () { var w = cho.clientWidth; if (w && w !== drawnW && lastRows.length) { drawChart(); setActive(-1); } }).observe(cho);
+  else window.addEventListener("resize", function () { drawChart(); });
+  onShow = function (k) { if (k === "proj" && lastRows.length && cho.clientWidth !== drawnW) drawChart(); };
+
+  /* ---------- module: compare ---------- */
+  function renderCmp() {
+    var c = VLC.compare($("vCN").value, { k: $("vAK").value, cycle: $("vAC").value }, { k: $("vBK").value, cycle: $("vBC").value }, $("vCP").value);
+    var out = $("cmpOut");
+    if (!c.valid) { out.innerHTML = msg(c.error || "Fill in every field.", "warn"); return; }
+    var big = c.larger, small = big === "A" ? "B" : "A";
+    var h = '<div class="vlc-tiles">';
+    h += tile("Loop A total after " + fmt(c.a.period, 2) + " days", fmt(c.a.total), big === "A" ? "hi" : "");
+    h += tile("Loop B total after " + fmt(c.b.period, 2) + " days", fmt(c.b.total), big === "B" ? "hi" : "");
+    h += "</div>";
+    if (!isFinite(c.ratio)) h += msg("One total is too large or zero, so the two cannot be compared.", "warn");
+    else if (c.ratio < 1.005) h += msg("The two loops end at the same total.");
+    else h += msg("Loop " + big + " ends about <strong>" + fmt(c.ratio, c.ratio >= 10 ? 0 : 1) + " times</strong> bigger than Loop " + small + ".");
+    if (c.checkpoints) {
+      h += '<div class="vlc-scroll"><table class="vlc-table"><thead><tr><th>Day</th><th>Loop A</th><th>Loop B</th></tr></thead><tbody>';
+      c.checkpoints.forEach(function (p) { h += "<tr><td>Day " + p.day + "</td><td>" + fmt(p.a) + "</td><td>" + fmt(p.b) + "</td></tr>"; });
+      h += "</tbody></table></div>";
+    } else h += '<p class="vlc-more">Set the period to 28 days to see both loops at days 7, 14, 21 and 28.</p>';
+    out.innerHTML = h;
+  }
+
+  /* ---------- module: retention ---------- */
+  function renderRet() {
+    var r = VLC.retention($("vRN").value, $("vR1").value, $("vR7").value, $("vR30").value);
+    var out = $("retOut");
+    if (!r.valid) { out.innerHTML = ""; return; }
+    var h = '<div class="vlc-tiles" style="grid-template-columns:repeat(3,1fr)">';
+    h += tile("Day 1", r.d1 === null ? "Enter a number" : pct(r.d1));
+    h += tile("Day 7", r.d7 === null ? "Enter a number" : pct(r.d7));
+    h += tile("Day 30", r.d30 === null ? "Enter a number" : pct(r.d30));
+    h += "</div>";
+    out.innerHTML = h;
+  }
+
+  function renderAll() { renderK(); renderLogged(); renderProj(); renderCmp(); renderRet(); }
+  [].forEach.call(document.querySelectorAll(".vlc-in input"), function (i) { i.addEventListener("input", renderAll); });
+  $("vCur").addEventListener("change", renderAll);
+
+  /* ---------- scorecard ---------- */
+  function score() {
+    var total = 0, answered = 0, zeros = [], lowest = null;
+    [].forEach.call(document.querySelectorAll(".vlc-q"), function (f) {
+      var c = f.querySelector("input:checked");
+      if (!c) return;
+      var v = parseInt(c.value, 10), name = f.getAttribute("data-name"), q = parseInt(f.getAttribute("data-q"), 10);
+      total += v; answered++;
+      if (v === 0 && (q === 3 || q === 4 || q === 5)) zeros.push(name);
+      if (lowest === null || v < lowest.v) lowest = { v: v, name: name };
+    });
+    $("scoreTotal").textContent = total;
+    $("scoreCount").textContent = answered + " of 7 answered";
+    var m = "";
+    if (zeros.length) m += '<p class="vlc-msg warn"><strong>' + zeros.join(" and ") + (zeros.length > 1 ? " are" : " is") + " at 0.</strong> This breaks the loop on its own, however well the rest scores.</p>";
+    if (answered === 7) {
+      if (total < 9) m += '<p class="vlc-msg warn">Your score is ' + total + " out of 14. Below 9 is a warning. Fix the gaps before you launch.</p>";
+      if (lowest.v < 2) m += '<p class="vlc-msg">Fix <strong>' + lowest.name + "</strong> first. It is your lowest score.</p>";
+      else m += '<p class="vlc-msg">Every ingredient is strong. Check retention next.</p>';
+    }
+    $("scoreMsgs").innerHTML = m;
+  }
+  [].forEach.call(document.querySelectorAll(".vlc-q input"), function (i) { i.addEventListener("change", score); });
+
+  /* ---------- save: copy and download ---------- */
+  var PAGE_URL = "https://marketinginaction.xyz/resources/viral-loop-calculator/";
+  function today() { var d = new Date(), p = function (x) { return (x < 10 ? "0" : "") + x; }; return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate()); }
+  function readRaw() {
+    var v = function (id) { return $(id).value; }, qs7 = document.querySelectorAll(".vlc-q"), scores = [], notes = [];
+    [].forEach.call(qs7, function (q, i) { var c = q.querySelector("input:checked"); scores.push(c ? c.value : ""); notes.push($("note" + (i + 1)).value); });
+    return { date: today(), url: PAGE_URL, cur: v("vCur"), scores: scores, notes: notes, kmode: kmode,
+      inv: v("vInv"), join: v("vJoin"), kdirect: v("vK"), lu: v("vLU"), lc: v("vLC"), li: v("vLI"), lv: v("vLV"), ln: v("vLN"),
+      n: v("vN"), pk: v("vPK"), cycle: v("vCycle"), period: v("vPeriod"), cost: v("vCost"),
+      cn: v("vCN"), cp: v("vCP"), ak: v("vAK"), ac: v("vAC"), bk: v("vBK"), bc: v("vBC"),
+      rn: v("vRN"), r1: v("vR1"), r7: v("vR7"), r30: v("vR30") };
+  }
+  function flash(btn, text) {
+    var old = btn.getAttribute("data-label") || btn.textContent; btn.setAttribute("data-label", old);
+    btn.textContent = text; clearTimeout(btn._t); btn._t = setTimeout(function () { btn.textContent = old; }, 1800);
+  }
+  function showFallback(text) {
+    $("saveFallback").hidden = false; var ta = $("saveText"); ta.value = text; ta.focus(); ta.select();
+  }
+  $("copyBtn").addEventListener("click", function () {
+    var text = VLCSave.summaryText(VLCSave.build(readRaw())), btn = this;
+    var ok = function () { $("saveFallback").hidden = true; flash(btn, "Copied"); };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(text).then(ok, function () { showFallback(text); });
+      else showFallback(text);
+    } catch (e) { showFallback(text); }
+    try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "calculator_cta_click", cta_location: "save-copy" }); } catch (e) {}
+  });
+  $("csvBtn").addEventListener("click", function () {
+    var raw = readRaw(), text = VLCSave.withBom(VLCSave.csv(VLCSave.build(raw)));
+    try {
+      var blob = new Blob([text], { type: "text/csv;charset=utf-8" }), a = document.createElement("a");
+      a.href = URL.createObjectURL(blob); a.download = VLCSave.filename("all", raw.date);
+      document.body.appendChild(a); a.click();
+      setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 500);
+      flash(this, "Downloaded");
+    } catch (e) { showFallback(text.replace("\uFEFF", "")); }
+    try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "calculator_cta_click", cta_location: "save-csv" }); } catch (e) {}
+  });
+
+  /* autosave */
+  function persist() {
+    var f = {}; allFields.forEach(function (x) { if (x.id) f[x.id] = x.value; });
+    var s = []; [].forEach.call(document.querySelectorAll(".vlc-q"), function (q) { var c = q.querySelector("input:checked"); s.push(c ? c.value : ""); });
+    lsSet({ f: f, s: s, kmode: kmode });
+  }
+  allFields.forEach(function (x) { x.addEventListener("input", persist); x.addEventListener("change", persist); });
+  [].forEach.call(document.querySelectorAll(".vlc-q input"), function (i) { i.addEventListener("change", persist); });
+  [].forEach.call(document.querySelectorAll("[data-kmode]"), function (b) { b.addEventListener("click", persist); });
+  $("clearBtn").addEventListener("click", function () {
+    lsClear();
+    allFields.forEach(function (x) { if (x.tagName === "INPUT") x.value = x.defaultValue; });
+    $("vCur").selectedIndex = 0;
+    [].forEach.call(document.querySelectorAll(".vlc-q input"), function (i) { i.checked = false; });
+    var first = document.querySelector('[data-kmode="rate"]'); if (first) first.click();
+    lsClear(); renderAll(); score();
+    $("saveFallback").hidden = true; flash(this, "Cleared");
+  });
+  if (saved.kmode === "direct") { var kb = document.querySelector('[data-kmode="direct"]'); if (kb) kb.click(); }
+
+  /* ---------- tracking ---------- */
+  [].forEach.call(document.querySelectorAll("[data-cta]"), function (link) {
+    link.addEventListener("click", function () {
+      var loc = link.getAttribute("data-cta");
+      try { window.dataLayer = window.dataLayer || []; window.dataLayer.push({ event: "calculator_cta_click", cta_location: loc }); } catch (e) {}
+      try { if (window.fbq) fbq("trackCustom", "ViralLoopCalculatorCTA", { cta_location: loc }); } catch (e) {}
+    });
+  });
+
+  renderAll(); score();
+})();
+
+    </script>
+  </body>
+</html>
