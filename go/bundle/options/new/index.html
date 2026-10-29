@@ -94,6 +94,6 @@
       <p>This is practical training that takes real effort and consistency. Results vary from person to person, and nothing here is a promise of any specific outcome.</p>
     </div>
   </div>
-  <script>document.querySelector('.js-go').addEventListener('click',function(){try{fbq&&fbq('trackCustom','BridgeClick',{offer:'bundle'})}catch(e){}try{ttq&&ttq.track('ClickButton',{content_name:'bundle'})}catch(e){}try{gtag&&gtag('event','bridge_click',{offer:'bundle'})}catch(e){}});</script>
+  <script>(function(){var a=document.querySelector('.js-go');if(!a)return;/* Forward the ad click's query string (UTMs, fbclid) and hash to the sales page, so the checkout intent there still carries them. */try{var h=a.getAttribute('href').split('#')[0].split('?')[0];a.setAttribute('href',h+location.search+location.hash);}catch(e){}a.addEventListener('click',function(){try{fbq&&fbq('trackCustom','BridgeClick',{offer:'bundle'})}catch(e){}try{ttq&&ttq.track('ClickButton',{content_name:'bundle'})}catch(e){}try{gtag&&gtag('event','bridge_click',{offer:'bundle'})}catch(e){}});})();</script>
 </body>
 </html>

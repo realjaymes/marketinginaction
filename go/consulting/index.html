@@ -73,6 +73,6 @@
       <p>This is a professional service. Results depend on your business, your market, and execution, and nothing here is a promise of any specific outcome.</p>
     </div>
   </div>
-  <script>document.querySelector('.js-go').addEventListener('click',function(){try{fbq&&fbq('trackCustom','BridgeClick',{offer:'consulting'})}catch(e){}try{ttq&&ttq.track('ClickButton',{content_name:'consulting'})}catch(e){}try{gtag&&gtag('event','bridge_click',{offer:'consulting'})}catch(e){}});</script>
+  <script>(function(){var a=document.querySelector('.js-go');if(!a)return;/* Forward the ad click's query string (UTMs, fbclid) and hash to the sales page, so the checkout intent there still carries them. */try{var h=a.getAttribute('href').split('#')[0].split('?')[0];a.setAttribute('href',h+location.search+location.hash);}catch(e){}a.addEventListener('click',function(){try{fbq&&fbq('trackCustom','BridgeClick',{offer:'consulting'})}catch(e){}try{ttq&&ttq.track('ClickButton',{content_name:'consulting'})}catch(e){}try{gtag&&gtag('event','bridge_click',{offer:'consulting'})}catch(e){}});})();</script>
 </body>
 </html>
