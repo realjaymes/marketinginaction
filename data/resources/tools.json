@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 496,
+  "count": 498,
   "items": [
     {
       "created": "2026-10-20",
@@ -4452,6 +4452,29 @@
       "slug": "hermes-agent"
     },
     {
+      "created": "2026-10-30",
+      "last_edited": "2026-10-30",
+      "name": "HeyClicky",
+      "overview": "HeyClicky is an AI assistant for Mac and Windows that sees your screen when you press a hotkey. You ask questions out loud, and it can draw on your screen to point things out or run tasks through an agent mode.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Conversational AI"
+      ],
+      "use_cases": [
+        "Get walked through an unfamiliar marketing tool by voice",
+        "Ask questions about a dashboard or report while it is on screen",
+        "Hand repetitive desktop tasks to the agent mode",
+        "Onboard new team members to software faster",
+        "Dictate notes and messages in any app",
+        "Troubleshoot ad platform or analytics settings with on screen pointers"
+      ],
+      "website": "https://heyclicky.com",
+      "slug": "heyclicky"
+    },
+    {
       "notion_id": "24ca6d41-709c-8011-8105-cfc5585e0b7d",
       "created": "2025-08-11",
       "last_edited": "2025-08-11",
@@ -5185,6 +5208,29 @@
       ],
       "website": "https://www.kimi.com",
       "slug": "kimi"
+    },
+    {
+      "created": "2026-10-30",
+      "last_edited": "2026-10-30",
+      "name": "Kino",
+      "overview": "Kino is an AI video editor for teams and agents. Footage, edits and review comments live in one place, and an agent can make a cut that stays editable on the timeline.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Video & Audio Editing",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Ask an agent to cut a first draft from raw footage",
+        "Search footage by transcript and clip descriptions",
+        "Share a link so reviewers comment directly on the timeline",
+        "Edit ad and social video without a separate desktop editor",
+        "Let an agent respond to review notes",
+        "Keep camera original files in one shared media library"
+      ],
+      "website": "https://kino.ai",
+      "slug": "kino"
     },
     {
       "created": "2026-10-21",
