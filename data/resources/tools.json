@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-10-20",
-  "count": 498,
+  "count": 499,
   "items": [
     {
       "created": "2026-10-20",
@@ -236,6 +236,29 @@
       ],
       "website": "https://www.adyntel.com",
       "slug": "adyntel"
+    },
+    {
+      "created": "2026-10-31",
+      "last_edited": "2026-10-31",
+      "name": "agent-desktop",
+      "overview": "agent-desktop is an open source command line tool and C library from Vercel Labs that gives AI agents computer use on macOS, Windows and Linux. It reads each app's accessibility tree and returns a JSON snapshot with stable references the agent can act on.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Developer Tools"
+      ],
+      "use_cases": [
+        "Let a coding agent operate desktop apps that have no API",
+        "Automate repetitive tasks in marketing and analytics software",
+        "Run several agents on different apps in the background",
+        "Fill forms and move data between desktop tools",
+        "Test desktop app interfaces with an agent",
+        "Read clipboard, notifications and window state for workflows"
+      ],
+      "website": "https://agent-browser.dev/desktop",
+      "slug": "agent-desktop"
     },
     {
       "created": "2026-10-20",
