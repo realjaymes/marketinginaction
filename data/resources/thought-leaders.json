@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
   "updated": "2026-11-02",
-  "count": 68,
+  "count": 70,
   "items": [
     {
       "notion_id": "207a6d41-709c-803d-ad36-db4277a36030",
@@ -1828,6 +1828,58 @@
         "url": "https://knowyourgrowth.substack.com/p/steering-a-rocket-ship-inside-profounds",
         "date": "2026-09-16"
       }
+    },
+    {
+      "notion_id": "",
+      "created": "2026-10-27",
+      "last_edited": "2026-10-27",
+      "notion_headshot": "",
+      "name": "Alex Fine",
+      "slug": "alex-fine",
+      "domains": [
+        "GTM Engineering",
+        "Demand Generation",
+        "Advertising"
+      ],
+      "x": "",
+      "linkedin": "https://www.linkedin.com/in/theclayguy/",
+      "newsletter": "",
+      "website": "https://www.understoryagency.com/",
+      "role": "Co-founder",
+      "company": "Understory",
+      "one_liner": "Writes about allbound marketing, Clay and running go-to-market systems from Claude Code.",
+      "profile_source": "https://www.linkedin.com/in/theclayguy/",
+      "region": "North America",
+      "country": "United States",
+      "headshot_url": "https://www.understoryagency.com/assets/record/alex-linkedin.jpg",
+      "headshot": "img/alex-fine.jpg",
+      "headshot_source": "headshot_url"
+    },
+    {
+      "notion_id": "",
+      "created": "2026-10-27",
+      "last_edited": "2026-10-27",
+      "notion_headshot": "",
+      "name": "Daniel Johnson",
+      "slug": "daniel-johnson",
+      "domains": [
+        "Growth Marketing",
+        "GTM Engineering",
+        "AI"
+      ],
+      "x": "https://x.com/djohnsonxyz",
+      "linkedin": "https://www.linkedin.com/in/danieljohnsonxyz/",
+      "newsletter": "https://danieljohnson.xyz/newsletter/",
+      "website": "https://danieljohnson.xyz",
+      "role": "Fractional CMO",
+      "company": "We Scale Startups",
+      "one_liner": "Writes Growth Notes on growth systems, positioning and go-to-market decisions for post-traction startups.",
+      "profile_source": "https://danieljohnson.xyz",
+      "region": "Europe",
+      "country": "United Kingdom",
+      "feed_url": "https://danieljohnson.xyz/rss.xml",
+      "headshot": "img/daniel-johnson.jpg",
+      "headshot_source": "x:@djohnsonxyz"
     }
   ]
 }

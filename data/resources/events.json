@@ -204,8 +204,8 @@
     {
       "slug": "growth-africa-summit",
       "name": "Growth Africa Summit",
-      "start_date": "2026-11-14",
-      "end_date": "2026-11-14",
+      "start_date": "2026-11-21",
+      "end_date": "2026-11-21",
       "city": "Lagos",
       "country": "Nigeria",
       "venue": null,
@@ -217,11 +217,11 @@
       "description": "An annual summit that brings together founders, growth professionals, investors, and ecosystem actors across Africa to explore scaling strategies, growth frameworks, networking, and applied sessions (growth labs, revenue design, building growth systems).",
       "status": "scheduled",
       "date_source": "https://www.growthafricasummit.com/",
-      "verified": "2026-10-20",
+      "verified": "2026-10-27",
       "mia_event": false,
       "region": "africa",
       "origin": "notion",
-      "notes": "Third edition (GAS 3.0). Date is in page JSON-LD and body. Venue not published. Doors 9:00am."
+      "notes": "Third edition (GAS 3.0). Date is in page JSON-LD and body; the site moved it from 14 to 21 November. Venue not published. Doors 9:00am."
     },
     {
       "slug": "africa-tech-festival",
