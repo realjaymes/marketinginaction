@@ -447,6 +447,24 @@ html .acq-hero-vsl{border:3px solid var(--ink);border-radius:16px;box-shadow:var
 .sp-logos img{height:38px;width:auto;max-width:100%;object-fit:contain;filter:grayscale(1) contrast(1.3);opacity:.8;mix-blend-mode:multiply}
 .sp-logos a:hover img{opacity:1}
 .sp-wm{font-weight:900;font-size:1.35rem;letter-spacing:-.02em;color:#777}
+.sp-aud,.sp-pkg{display:block;border:2px solid var(--ink);border-radius:18px;padding:12px 16px;background:#fff;color:var(--ink);text-decoration:none;box-shadow:var(--st-sm);transition:transform .12s,box-shadow .12s}
+.sp-aud:hover,.sp-pkg:hover,.sp-aud:focus-visible,.sp-pkg:focus-visible{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
+.sp-aud-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.sp-aud-n{font-size:1.15rem;font-weight:900;letter-spacing:-.02em;line-height:1.1}
+.sp-aud-l{font-size:.72rem;color:var(--muted);margin-top:2px}
+.sp-pkg-h{font-size:1rem;font-weight:700;margin-bottom:8px}
+.sp-pkg-n{font-size:1.5rem;font-weight:900;letter-spacing:-.02em}
+.sp-pkg-chips{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:5px}
+.sp-pkg-chips li{border:2px solid var(--ink);border-radius:999px;padding:2px 9px;font-size:.72rem;font-weight:700;background:var(--gold-t)}
+.sp-tabs{display:flex;gap:6px;padding:12px 14px 0;flex-wrap:wrap}
+.sp-tab{font:inherit;font-weight:800;font-size:.82rem;border:2px solid var(--ink);border-radius:999px;padding:5px 12px;background:#fff;color:var(--ink);cursor:pointer}
+.sp-tab[aria-selected="true"]{background:var(--gold)}
+.sp-pan[hidden]{display:none}
+.sp-tabcs-note{margin:0;font-size:.85rem;color:var(--muted)}
+.sp-tabcs-list{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.sp-tabcs{display:flex;align-items:center;justify-content:center;height:70px;padding:10px 14px;border:2px solid var(--ink);border-radius:18px;background:var(--gold-t);box-shadow:var(--st-sm);text-decoration:none}
+.sp-tabcs img{height:36px;width:auto;max-width:100%;object-fit:contain;filter:grayscale(1) contrast(1.3);mix-blend-mode:multiply}
+.sp-tabcs:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
 .sp-hero-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:48px;align-items:center}
 .sp-win{background:#fff;border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg);position:relative}
 .sp-win-top{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 18px;border-bottom:2px solid var(--ink)}
@@ -471,7 +489,8 @@ html .acq-hero-vsl{border:3px solid var(--ink);border-radius:16px;box-shadow:var
  .sp-fmts{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:700px){
- .sp-hero{padding:44px 0 40px}
+ .sp-aud-grid{grid-template-columns:repeat(3,1fr);gap:8px 6px}
+  .sp-hero{padding:44px 0 40px}
  .sp-sec,.sp-final{padding:44px 0}
  .sp-stats{grid-template-columns:repeat(2,1fr)}
  .sp-proofs,.sp-steps{grid-template-columns:1fr}
@@ -555,14 +574,7 @@ html .acq-hero-vsl{border:3px solid var(--ink);border-radius:16px;box-shadow:var
       <div class="sp-ed "><span class="sp-edpill" data-ed-label>Global edition, prices in US dollars</span><button type="button" class="sp-switch" data-switch>Nigerian company? See naira prices</button></div>
       <p class="sp-note">Naira prices are for Nigerian companies paying in naira.</p>
     </div>
-    <aside class="sp-win" aria-label="Sponsor results">
-      <div class="sp-win-top"><span class="sp-win-title">Sponsor results</span><span class="sp-chip">Past sponsors</span></div>
-      <div class="sp-win-body">
-        <a class="sp-hc" href="https://newsletter.marketinginaction.xyz/p/vban-product-showcase" target="_blank" rel="noopener" data-card="vban" data-loc="hero"><div class="sp-hc-logo"><img src="/sponsor/assets/vban-logo-crop.jpg" alt="Vban logo" loading="eager"></div><div class="sp-hc-stats"><div class="sp-hc-stat"><div class="sp-hc-n">2,306</div><div class="sp-hc-l">people reached</div></div><div class="sp-hc-stat"><div class="sp-hc-n">9+</div><div class="sp-hc-l">verified signups</div></div></div><span class="sp-hc-go">Read the piece we published <b aria-hidden="true">&rarr;</b></span></a>
-        <a class="sp-hc" href="https://newsletter.marketinginaction.xyz/p/foragemail-product-showcase" target="_blank" rel="noopener" data-card="forage" data-loc="hero"><div class="sp-hc-logo"><img src="/sponsor/assets/forage-mail-logotype-black.png" alt="Forage Mail logo" loading="eager"></div><div class="sp-hc-stats"><div class="sp-hc-stat"><div class="sp-hc-n">13+</div><div class="sp-hc-l">verified trial signups</div></div></div><span class="sp-hc-go">Read the piece we published <b aria-hidden="true">&rarr;</b></span></a>
-      </div>
-      <p class="sp-win-note">Each card opens the piece we published for that sponsor. Results vary, and we do not promise signups.</p>
-    </aside>
+    <aside class="sp-win" aria-label="Why sponsor MIA"><div class="sp-win-top"><span class="sp-win-title">Why sponsor MIA</span><span class="sp-chip">Past sponsors</span></div><div class="sp-tabs" role="tablist" aria-label="Sponsor panel"><button type="button" role="tab" class="sp-tab" id="sp-tab-res" aria-controls="sp-pan-res" aria-selected="true" data-tab="res">Results</button><button type="button" role="tab" class="sp-tab" id="sp-tab-aud" aria-controls="sp-pan-aud" aria-selected="false" data-tab="aud">Audience</button><button type="button" role="tab" class="sp-tab" id="sp-tab-get" aria-controls="sp-pan-get" aria-selected="false" data-tab="get">What you get</button><button type="button" role="tab" class="sp-tab" id="sp-tab-cs" aria-controls="sp-pan-cs" aria-selected="false" data-tab="cs">Case studies</button></div><div class="sp-pan" role="tabpanel" id="sp-pan-res" aria-labelledby="sp-tab-res"><div class="sp-win-body"><a class="sp-hc" href="https://newsletter.marketinginaction.xyz/p/vban-product-showcase" target="_blank" rel="noopener" data-card="vban" data-loc="hero"><div class="sp-hc-logo"><img src="/sponsor/assets/vban-logo-crop.jpg" alt="Vban logo" loading="eager"></div><div class="sp-hc-stats"><div class="sp-hc-stat"><div class="sp-hc-n">2,306</div><div class="sp-hc-l">people reached</div></div><div class="sp-hc-stat"><div class="sp-hc-n">9+</div><div class="sp-hc-l">verified signups</div></div></div><span class="sp-hc-go">Read the piece we published <b aria-hidden="true">&rarr;</b></span></a><a class="sp-hc" href="https://newsletter.marketinginaction.xyz/p/foragemail-product-showcase" target="_blank" rel="noopener" data-card="forage" data-loc="hero"><div class="sp-hc-logo"><img src="/sponsor/assets/forage-mail-logotype-black.png" alt="Forage Mail logo" loading="eager"></div><div class="sp-hc-stats"><div class="sp-hc-stat"><div class="sp-hc-n">13+</div><div class="sp-hc-l">verified trial signups</div></div></div><span class="sp-hc-go">Read the piece we published <b aria-hidden="true">&rarr;</b></span></a></div></div><div class="sp-pan" role="tabpanel" id="sp-pan-aud" aria-labelledby="sp-tab-aud" hidden><div class="sp-win-body"><a class="sp-aud" href="#audience" data-card="audience" data-loc="hero"><div class="sp-aud-grid"><div class="sp-aud-c"><div class="sp-aud-n">2,869</div><div class="sp-aud-l">Newsletter</div></div><div class="sp-aud-c"><div class="sp-aud-n">8,130</div><div class="sp-aud-l">LinkedIn</div></div><div class="sp-aud-c"><div class="sp-aud-n">7,208</div><div class="sp-aud-l">Instagram</div></div><div class="sp-aud-c"><div class="sp-aud-n">3,225</div><div class="sp-aud-l">X</div></div><div class="sp-aud-c"><div class="sp-aud-n">328</div><div class="sp-aud-l">WhatsApp</div></div></div><span class="sp-hc-go">See who reads and follows MIA <b aria-hidden="true">&darr;</b></span></a></div></div><div class="sp-pan" role="tabpanel" id="sp-pan-get" aria-labelledby="sp-tab-get" hidden><div class="sp-win-body"><a class="sp-pkg" href="#what-you-get" data-card="package" data-loc="hero"><div class="sp-pkg-h"><span class="sp-pkg-n">30</span> pieces across <span class="sp-pkg-n">10</span> channels</div><ul class="sp-pkg-chips"><li>MIA newsletter</li><li>LinkedIn newsletter</li><li>James's LinkedIn</li><li>James's X</li><li>Substack Notes</li><li>Substack Chat</li><li>WhatsApp community</li><li>MIA LinkedIn group</li><li>Instagram</li><li>TikTok</li></ul><span class="sp-hc-go">See what a sponsor gets <b aria-hidden="true">&darr;</b></span></a></div></div><div class="sp-pan" role="tabpanel" id="sp-pan-cs" aria-labelledby="sp-tab-cs" hidden><div class="sp-win-body"><p class="sp-tabcs-note">Growth case studies we have published. Each logo opens the article.</p><ul class="sp-tabcs-list"><li><a class="sp-tabcs" href="https://newsletter.marketinginaction.xyz/p/piggyvest-marketing-led-growth-case-study" target="_blank" rel="noopener" data-card="case_study_piggyvest" data-loc="hero_tab" aria-label="PiggyVest growth case study"><img src="/sponsor/assets/case-study-logos/piggyvest.svg" alt="PiggyVest logo" width="120" height="34"></a></li><li><a class="sp-tabcs" href="https://newsletter.marketinginaction.xyz/p/moniepoint-marketing-led-growth-case-study" target="_blank" rel="noopener" data-card="case_study_moniepoint" data-loc="hero_tab" aria-label="Moniepoint growth case study"><span class="sp-wm">Moniepoint</span></a></li><li><a class="sp-tabcs" href="https://newsletter.marketinginaction.xyz/p/chowdeck-marketing-led-growth-case-study" target="_blank" rel="noopener" data-card="case_study_chowdeck" data-loc="hero_tab" aria-label="Chowdeck growth case study"><img src="/sponsor/assets/case-study-logos/chowdeck.svg" alt="Chowdeck logo" width="120" height="34"></a></li></ul></div></div><p class="sp-win-note">Each card opens the piece we published or the section it names. Results vary, and we do not promise signups.</p></aside>
   </div>
 </section>
 
@@ -875,6 +887,14 @@ var SPONSOR_EMAIL = "partnerships@marketinginaction.xyz";
     a.addEventListener("click", function () {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: "sponsor_deck_download", edition: edition, cta_location: a.getAttribute("data-loc") || "", file_name: DECKS[edition].file.split("/").pop() });
+    });
+  });
+  qs(".sp-tab").forEach(function (t) {
+    t.addEventListener("click", function () {
+      qs(".sp-tab").forEach(function (x) { var on = x === t; x.setAttribute("aria-selected", on ? "true" : "false"); });
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ event: "sponsor_hero_tab_click", tab: t.getAttribute("data-tab") || "", cta_location: "hero", edition: edition });
+      qs(".sp-pan").forEach(function (pn) { pn.hidden = pn.id !== "sp-pan-" + t.getAttribute("data-tab"); });
     });
   });
   qs("[data-card]").forEach(function (a) {
