@@ -1,7 +1,7 @@
 {
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
-  "updated": "2026-10-20",
+  "updated": "2026-11-02",
   "count": 499,
   "items": [
     {
@@ -6898,7 +6898,8 @@
         "Onboard and manage contractors alongside employees."
       ],
       "website": "https://affiliate.usemultiplier.com/james-mia",
-      "slug": "multiplier"
+      "slug": "multiplier",
+      "hidden_since": "2026-11-02"
     },
     {
       "notion_id": "27ba6d41-709c-8037-9526-ca6bf994e295",
@@ -10511,7 +10512,8 @@
         "Increasing travel-related sales and referrals"
       ],
       "website": "https://join.travel-code.com/james-mia",
-      "slug": "travel-code"
+      "slug": "travel-code",
+      "hidden_since": "2026-11-02"
     },
     {
       "created": "2026-10-20",

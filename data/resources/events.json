@@ -1,6 +1,6 @@
 {
   "source": "Exported from the MIA Notion calendar on 2026-10-20, then researched and verified on official pages.",
-  "updated": "2026-10-26",
+  "updated": "2026-11-02",
   "count": 66,
   "items": [
     {
@@ -127,7 +127,7 @@
       "tickets": "https://moonshot.techcabal.com/",
       "organiser": "TechCabal",
       "description": "A two-day event featuring startup pitches, fireside chats, masterclasses, and networking opportunities.",
-      "status": "scheduled",
+      "status": "past-awaiting-next",
       "date_source": "https://moonshot.techcabal.com/",
       "verified": "2026-10-20",
       "mia_event": false,
