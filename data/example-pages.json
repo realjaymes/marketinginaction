@@ -166,7 +166,7 @@
     "trust": [
       "Clear written estimate",
       "Inside and outside review",
-      "No pressure to decide"
+      "Price before any work starts"
     ],
     "form_title": "Request your basement inspection",
     "form_sub": "Tell us what is happening. Three quick steps.",
@@ -1313,7 +1313,7 @@
     "h1": "Start with a clear hearing check and a calm conversation.",
     "lead": "Tell us who the visit is for and what help you are looking for. We'll call to arrange a free hearing test.",
     "trust": [
-      "No pressure to choose",
+      "Device options and prices explained",
       "Current devices welcome",
       "Questions encouraged"
     ],
@@ -1427,7 +1427,7 @@
         },
         {
           "h": "We complete the hearing test",
-          "p": "We explain the results and discuss possible next steps without pressure."
+          "p": "We explain the results, talk through your options and give you prices for any devices that fit."
         }
       ]
     },
@@ -1479,7 +1479,7 @@
     "h1": "Find dependable help for someone you care about.",
     "lead": "Tell us what kind of help your family needs. We'll call to listen, answer questions and arrange a free consultation.",
     "trust": [
-      "No pressure",
+      "Care plan and pricing explained",
       "Plans built around you",
       "Non-medical home help"
     ],
@@ -2197,7 +2197,7 @@
     "trust": [
       "Questions come first",
       "Options reviewed with you",
-      "No pressure to book"
+      "Treatment plan and pricing explained"
     ],
     "form_title": "Request your consultation",
     "form_sub": "Tell us what interests you. Three quick steps.",
@@ -3950,12 +3950,12 @@
     "h1": "Is your water hard? Find out at your own kitchen sink.",
     "lead": "Answer a few quick questions and we'll call to book a free test at a time that works for you.",
     "trust": [
-      "Free, no obligation",
+      "Free test and written quote",
       "About 30 minutes",
       "City or well water"
     ],
     "form_title": "Request your free water test",
-    "form_sub": "Free and no pressure. Three quick steps.",
+    "form_sub": "Free test, then a quote for any system you need. Three quick steps.",
     "questions": [
       {
         "label": "Water source",
@@ -4080,7 +4080,7 @@
     "faq": [
       {
         "q": "Is the water test really free?",
-        "a": "Yes. There's no charge for the test and no obligation to buy anything."
+        "a": "Yes. There's no charge for the test. Afterwards we recommend a system if you need one and give you a written quote, and you decide whether to go ahead."
       },
       {
         "q": "How long does it take?",
