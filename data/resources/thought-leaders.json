@@ -988,7 +988,7 @@
         "Product Marketing",
         "Automation"
       ],
-      "x": "https://x.com/johnrushx",
+      "x": "https://x.com/johnrush",
       "linkedin": "https://www.linkedin.com/in/johnrushx/",
       "newsletter": "",
       "website": "https://johnrush.me/",
@@ -997,7 +997,9 @@
       "role": "Founder",
       "company": "MarsX",
       "one_liner": "Builds and sells small AI software products; shares indie startup lessons.",
-      "profile_source": "https://getlatka.com/interviews/marsxdev-john-rush-2025"
+      "profile_source": "https://getlatka.com/interviews/marsxdev-john-rush-2025",
+      "headshot": "img/john-rush.jpg",
+      "headshot_source": "x:@johnrush"
     },
     {
       "notion_id": "207a6d41-709c-8052-ab50-c327bae13a3c",
@@ -1569,7 +1571,7 @@
         "AI",
         "Automation"
       ],
-      "x": "https://x.com/rileybrown_ai",
+      "x": "https://x.com/rileybrown",
       "linkedin": "https://www.linkedin.com/in/riley-brown-7441b1101",
       "newsletter": "",
       "website": "https://youtube.com/@rileybrownai",
@@ -1578,7 +1580,9 @@
       "role": "Co-founder",
       "company": "Vibecode",
       "one_liner": "Teaches AI and vibe coding through videos; hosts the A New Vibe podcast.",
-      "profile_source": "https://getlatka.com/companies/vibecode"
+      "profile_source": "https://getlatka.com/companies/vibecode",
+      "headshot": "img/riley-brown.jpg",
+      "headshot_source": "x:@rileybrown"
     },
     {
       "notion_id": "207a6d41-709c-80b9-86c1-e66509d99d4a",
