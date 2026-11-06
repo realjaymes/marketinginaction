@@ -41,6 +41,9 @@ SITE = "https://marketinginaction.xyz"
 
 # Apps Script web app for the "Demo submissions" tab. Empty means the form shows
 # its thank-you without sending anything.
+# Email on the example forms: True makes it required, False keeps it optional.
+# Either way, an email that is typed in is checked by assets/lead-checks.js.
+EMAIL_REQUIRED = True
 ENDPOINT = "https://script.google.com/macros/s/AKfycbwMr1GPCvitOGZ-RKDrWS3woB8Ec-92Y40WA-DSoEugg-TnS4LLZzIlZ0Ghkjgnd4CZ/exec"
 
 CITY = '<span data-city>your area</span>'
@@ -99,7 +102,7 @@ def form(p):
     <div class="mspanel" data-step="2" hidden>
       {step2}
       <span class="q">{esc(zip_label)}</span>
-      <input type="text" name="zip" inputmode="numeric" pattern="[0-9]{{5}}" maxlength="5" placeholder="5-digit ZIP" required>
+      <input type="text" name="zip" data-lc="zip" inputmode="numeric" pattern="[0-9]{{5}}" maxlength="5" placeholder="5-digit ZIP" required>
       <div class="err"></div>
       <div class="msnav"><button type="button" class="btn ghost back">← Back</button><button type="button" class="btn next">Continue →</button></div>
     </div>
@@ -108,8 +111,8 @@ def form(p):
       <span class="q">Your name</span>
       <input type="text" name="name" autocomplete="name" placeholder="First and last name" required>
       <div class="grid2">
-        <div><span class="q">Mobile number</span><input type="tel" name="phone" autocomplete="tel" placeholder="Mobile number" required></div>
-        <div><span class="q">Email (optional)</span><input type="email" name="email" autocomplete="email" placeholder="you@email.com"></div>
+        <div><span class="q">Mobile number</span><input type="tel" name="phone" data-lc="phone" autocomplete="tel-national" placeholder="(555) 123-4567" required></div>
+        <div><span class="q">Email</span><input type="email" name="email" data-lc="email" autocomplete="email" placeholder="you@email.com"{" required" if EMAIL_REQUIRED else ""}></div>
       </div>
       <span class="q">Best time to call you</span>
       <div class="taps three">
@@ -405,6 +408,7 @@ def page(p):
 
 {form(p)}
 
+<script src="/assets/lead-checks.js"></script>
 <script>
   // Demo backend: the Apps Script web app behind the "Demo submissions" tab of the
   // MIA Acquisition View Leads sheet (tools/example-pages-apps-script.gs).
@@ -419,6 +423,7 @@ def page(p):
   var tpl = document.getElementById('form-tpl');
   document.querySelectorAll('[data-form]').forEach(function(slot){{ slot.appendChild(tpl.content.cloneNode(true)); }});
 
+  if (window.LeadChecks) LeadChecks.attach();
   document.querySelectorAll('.msform').forEach(function(form){{
     var panels = Array.prototype.slice.call(form.querySelectorAll('.mspanel'));
     var dots = form.querySelectorAll('.msbar span');
@@ -428,6 +433,7 @@ def page(p):
       dots.forEach(function(d, idx){{ d.classList.toggle('on', idx <= i); }});
       cur = i;
     }}
+    var FIELD_MSG = {{zip: 'Please enter a 5-digit ZIP code.', name: 'Please enter your name.', phone: 'Please enter your mobile number.', email: 'Please enter your email address.'}};
     function validPanel(){{
       var p = panels[cur], err = p.querySelector('.err'), seen = {{}};
       var fields = p.querySelectorAll('[required]');
@@ -437,7 +443,7 @@ def page(p):
           if (seen[f.name]) continue; seen[f.name] = 1;
           if (!form.querySelector('input[name="' + f.name + '"]:checked')){{ err.textContent = 'Please pick one answer for each question.'; return false; }}
         }} else if (!f.value.trim() || !f.checkValidity()){{
-          err.textContent = f.name === 'zip' ? 'Please enter a 5-digit ZIP code.' : 'Please fill in your name and mobile number.';
+          err.textContent = (window.LeadChecks && LeadChecks.msg(f)) || FIELD_MSG[f.name] || 'Please fill in this field.';
           f.focus(); return false;
         }}
       }}
