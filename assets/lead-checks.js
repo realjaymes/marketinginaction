@@ -11,7 +11,7 @@
  * and exchange (neither starts with 0 or 1, no N11 area code), and no obvious
  * fakes (one digit repeated, 1234567890, 555-01xx). Formats as (703) 928-1618.
  * Email: a normal address with a real ending; common domain typos (gnail.com,
- * yaho.com, .con) are caught with a one-tap fix.
+ * yaho.com, .con, .comp) are caught with a one-tap fix.
  * ZIP: five digits, not 00000.
  *
  * The same file is used by the MIA example pages (/assets/lead-checks.js) and
@@ -38,7 +38,7 @@
     'icloud.co': 'icloud.com', 'aol.co': 'aol.com', 'comcast.com': 'comcast.net',
     'verizon.com': 'verizon.net', 'att.com': 'att.net'
   };
-  var TLD_FIXES = { con: 'com', cmo: 'com', cpm: 'com', vom: 'com', comm: 'com', ocm: 'com', xom: 'com', nte: 'net', ner: 'net', ogr: 'org' };
+  var TLD_FIXES = { con: 'com', cmo: 'com', cpm: 'com', vom: 'com', comm: 'com', comp: 'com', coom: 'com', cim: 'com', ocm: 'com', xom: 'com', nte: 'net', ner: 'net', nett: 'net', ogr: 'org', orgg: 'org' };
 
   function digits(s) { return String(s || '').replace(/\D/g, ''); }
 
