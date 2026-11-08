@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
   "updated": "2026-11-09",
-  "count": 70,
+  "count": 74,
   "items": [
     {
       "notion_id": "207a6d41-709c-803d-ad36-db4277a36030",
@@ -1824,6 +1824,95 @@
         "url": "https://danieljohnson.xyz/writing/ai-driven-growth-theory/",
         "date": "2026-06-22"
       }
+    },
+    {
+      "name": "Oren John",
+      "domains": [
+        "Advertising",
+        "Brand Marketing"
+      ],
+      "x": "https://x.com/orenmeetsworld",
+      "linkedin": "https://www.linkedin.com/in/orenj/",
+      "newsletter": "",
+      "website": "https://www.darkroomagency.com/",
+      "slug": "oren-john",
+      "role": "Partner and Creative Director",
+      "company": "Darkroom",
+      "one_liner": "Posts as Oren Meets World about ad creative, brand and short-form video for consumer brands.",
+      "profile_source": "https://www.darkroomagency.com/team/oren-john",
+      "region": "North America",
+      "country": "United States",
+      "x_verified": true,
+      "headshot": "img/oren-john.jpg",
+      "headshot_source": "x:@orenmeetsworld"
+    },
+    {
+      "name": "Jay Yang",
+      "domains": [
+        "Content Marketing",
+        "Brand Marketing"
+      ],
+      "x": "https://x.com/Jayyanginspires",
+      "linkedin": "https://www.linkedin.com/in/jayyanginspires/",
+      "newsletter": "https://jayyanginspires.beehiiv.com/",
+      "website": "https://jayyanginspires.com/",
+      "slug": "jay-yang",
+      "role": "Co-founder",
+      "company": "Revenue Media Lab",
+      "one_liner": "Writes The Spark newsletter and books on copywriting, marketing strategy and building a personal brand.",
+      "profile_source": "https://jayyanginspires.com/",
+      "region": "North America",
+      "country": "United States",
+      "x_verified": true,
+      "feed_url": "https://jayyanginspires.com/rss.xml",
+      "latest_post": {
+        "title": "It's my birthday (next week)",
+        "url": "https://jayyanginspires.com/essays/it-s-my-birthday-next-week",
+        "date": "2026-11-01"
+      },
+      "headshot": "img/jay-yang.jpg",
+      "headshot_source": "x:@Jayyanginspires"
+    },
+    {
+      "name": "Tuan Le",
+      "domains": [
+        "Content Marketing",
+        "Brand Marketing"
+      ],
+      "x": "https://x.com/tuanle",
+      "linkedin": "",
+      "newsletter": "",
+      "website": "https://shortscut.com",
+      "slug": "tuan-le",
+      "role": "Founder",
+      "company": "Shortscut",
+      "one_liner": "Makes short-form viral videos for brands and shares what he learned about why people watch and share.",
+      "profile_source": "https://x.com/tuanle",
+      "region": "North America",
+      "country": "Canada",
+      "x_verified": true,
+      "headshot": "img/tuan-le.jpg",
+      "headshot_source": "x:@tuanle"
+    },
+    {
+      "name": "Hector Serrano",
+      "domains": [
+        "Growth Marketing",
+        "Content Marketing",
+        "Advertising"
+      ],
+      "x": "https://x.com/hectorserrranoo",
+      "linkedin": "",
+      "newsletter": "",
+      "website": "",
+      "slug": "hector-serrano",
+      "role": "Head of Content",
+      "company": "Wispr Flow",
+      "one_liner": "Runs paid UGC (creator made ads) for Wispr Flow and posts about growth and marketing.",
+      "profile_source": "https://www.lennysnewsletter.com/p/how-a-19-year-old-intern-built-the",
+      "x_verified": true,
+      "headshot": "img/hector-serrano.jpg",
+      "headshot_source": "x:@hectorserrranoo"
     }
   ]
 }
