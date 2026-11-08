@@ -15,6 +15,7 @@ folder (its path is printed), never into the site.
 Usage:
   python3 tools/resources/headshots.py            fetch missing photos
   python3 tools/resources/headshots.py --refresh  fetch every photo again
+  python3 tools/resources/headshots.py --slugs a,b  only these people (the daily intake uses it for new additions)
 Then run tools/resources/build.py --write.
 
 Vault: AI Workflows/MIA Resources from Notion — Build Plan.
@@ -53,11 +54,15 @@ def save_jpeg(raw, out):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--refresh", action="store_true")
+    ap.add_argument("--slugs", help="comma-separated slugs to fetch, leaving everyone else alone")
     args = ap.parse_args()
     d = json.loads(DATA.read_text(encoding="utf-8"))
     IMG.mkdir(parents=True, exist_ok=True)
     flagged = []
+    only = set(args.slugs.split(",")) if args.slugs else None
     for i in d["items"]:
+        if only is not None and i["slug"] not in only:
+            continue
         out = IMG / f"{i['slug']}.jpg"
         if out.exists() and i.get("headshot") and not args.refresh:
             continue

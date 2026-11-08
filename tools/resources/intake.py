@@ -11,6 +11,14 @@ Sources:
     complete (overview, type, categories, use cases) are checked and added. Rows
     with only a name and a link become candidates, which a Claude step in the
     runner researches into full rows; "add" then checks and adds those.
+  - Thought leaders: James's own list, Areas/Work/MIA/Resources/Thought Leader
+    Candidates.md, passed in every day and never marked processed. Each person
+    not yet listed becomes a candidate, a Claude step in the runner researches
+    role, company, region, topics and links from their own pages, and
+    "add-leaders" keeps the person only when name, role, a topic, profile_source
+    and a working link are present. The digest lists each new person with follow
+    links. X briefs are not a source: their authors are mostly viral accounts,
+    news outlets and brands, with no clean repeat signal.
 
 Every row is checked: the site must load, it must not already be listed (by
 name or domain), and tool labels must be ones tool-groups.json knows (old Notion
@@ -21,7 +29,9 @@ candidates already tried) lives in data/resources/upkeep-state.json.
 Usage (run inside the intake worktree, see tools/resources/intake-run.sh):
   python3 tools/resources/intake.py collect --events F.md ... --tools F.md ... --briefs DIR --feed URL --out DIR
   python3 tools/resources/intake.py add DIR/enriched.json --out DIR
-Both write DIR/summary.html for the digest and print what changed.
+  python3 tools/resources/intake.py collect ... --leaders "Thought Leader Candidates.md"   (also writes DIR/leader-candidates.json)
+  python3 tools/resources/intake.py add-leaders DIR/leaders-enriched.json --out DIR [--no-fetch]
+All write DIR/summary.html for the digest and print what changed.
 
 Vault: AI Workflows/MIA Resources from Notion — Build Plan.
 """
@@ -30,6 +40,7 @@ from datetime import date, timedelta
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 import upkeep as U  # fetch, failed, dates_in, jsonld_dates, plain, host
+import build as B  # DOMAINS and REGIONS for thought leaders
 
 DATA = U.DATA
 TODAY = date.today()
@@ -272,6 +283,160 @@ def add_enriched(path, log):
     (DATA / "tools.json").write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+# ---------- thought leaders ----------
+
+LEADERS_FILE = DATA / "thought-leaders.json"
+FOLLOW_KEYS = ("x", "linkedin", "newsletter", "website")
+PROFILE_HOSTS = {"x.com", "twitter.com", "linkedin.com"}
+
+
+def links_in(cell):
+    return list(dict.fromkeys(re.findall(r"https?://[^\s|)>\]]+", cell or "")))
+
+
+def handle_keys(url):
+    """Identity keys for a profile link: an X handle, a LinkedIn /in/ name, or a site host that is not a shared platform."""
+    u = (url or "").strip().lower().rstrip("/")
+    if not u.startswith("http"):
+        return set()
+    m = re.search(r"(?:x|twitter)\.com/@?([a-z0-9_]{1,15})(?:[/?#]|$)", u)
+    if m:
+        return {"x:" + m.group(1)}
+    m = re.search(r"linkedin\.com/(?:in|company)/([^/?#]+)", u)
+    if m:
+        return {"li:" + m.group(1)}
+    h = U.host(u)
+    return {"site:" + h} if h and h not in GENERIC_HOSTS | PROFILE_HOSTS else set()
+
+
+def person_keys(p):
+    keys = {"slug:" + (p.get("slug") or slug(p.get("name", "")))}
+    for k in FOLLOW_KEYS:
+        keys |= handle_keys(p.get(k))
+    return keys
+
+
+def leaders_index():
+    d = json.loads(LEADERS_FILE.read_text(encoding="utf-8"))
+    keys = set()
+    for i in d["items"]:
+        keys |= person_keys(i)
+    return d, keys
+
+
+def collect_leaders(files, state, log, out):
+    d, keys = leaders_index()
+    st = state.setdefault("intake", {})
+    cutoff = (TODAY - timedelta(days=90)).isoformat()
+    tried = st["leaders_tried"] = {k: v for k, v in st.setdefault("leaders_tried", {}).items() if v >= cutoff}
+    cands = {}
+    for f in files:
+        for r in table_rows(pathlib.Path(f).read_text(encoding="utf-8")):
+            name = re.sub(r"\[([^\]]+)\]\([^)]*\)", r"\1", pick(r, "name", "person")).strip()
+            links = links_in(pick(r, "profile", "link", "x", "site"))
+            if not name or not links:
+                if name:
+                    log["leaders_rejected"].append(f"{name}: no profile link in the candidate list")
+                continue
+            ck = {"slug:" + slug(name)}
+            for l in links:
+                ck |= handle_keys(l)
+            if ck & keys or slug(name) in tried or slug(name) in cands:
+                continue
+            cands[slug(name)] = {"name": name, "links": links, "note": pick(r, "note", "what", "why"), "source": "James's candidate list"}
+    for k in cands:
+        tried[k] = TODAY.isoformat()
+    (out / "leader-candidates.json").write_text(json.dumps(list(cands.values()), indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    log["leader_candidates"] = [c["name"] for c in cands.values()]
+
+
+def x_profile(url):
+    """Display name of an X account through the fxtwitter API (no login), or None."""
+    m = re.search(r"(?:x|twitter)\.com/@?([A-Za-z0-9_]{1,15})", url or "")
+    if not m:
+        return None
+    try:
+        req = urllib.request.Request(f"https://api.fxtwitter.com/{m.group(1)}", headers=U.UA)
+        with urllib.request.urlopen(req, timeout=25) as r:
+            return (json.loads(r.read()).get("user") or {}).get("name")
+    except Exception:
+        return None
+
+
+def add_leader(row, d, keys, log, fetch=True):
+    name = (row.get("name") or "").strip()
+    domains = [t for t in dict.fromkeys(row.get("domains") or row.get("tags") or []) if t in B.DOMAINS]
+    links = {k: (row.get(k) or "").strip() for k in FOLLOW_KEYS}
+    links = {k: v for k, v in links.items() if v.startswith("http")}
+    src = (row.get("profile_source") or "").strip()
+    why = None
+    if not name:
+        why = "no name"
+    elif not (row.get("role") or "").strip():
+        why = "no role confirmed from their own pages"
+    elif not domains:
+        why = "no topic tag the site knows"
+    elif not src.startswith("http"):
+        why = "no profile_source"
+    elif not links:
+        why = "no link"
+    else:
+        ck = {"slug:" + slug(name)}
+        for l in links.values():
+            ck |= handle_keys(l)
+        if ck & keys:
+            return  # already listed
+    xname = None
+    if not why and fetch:
+        working = False
+        for k in ("website", "newsletter"):
+            if links.get(k):
+                status, _, text = U.fetch(links[k])
+                if not U.failed(status, text):
+                    working = True
+        if links.get("x"):
+            xname = x_profile(links["x"])
+            working = working or bool(xname)
+        if not working:
+            why = "none of its links loads (X is checked through fxtwitter, LinkedIn is not counted)"
+    if why:
+        log["leaders_rejected"].append(f"{name or '?'}: {why}")
+        return
+    clean = lambda t: re.sub(r"\s*[\u2014\u2013]\s*|\s+-\s+", ", ", (t or "").strip())
+    item = {"name": name, "domains": sorted(domains, key=B.DOMAINS.index), "x": links.get("x", ""), "linkedin": links.get("linkedin", ""),
+            "newsletter": links.get("newsletter", ""), "website": links.get("website", ""), "slug": slug(name),
+            "role": clean(row["role"]), "company": clean(row.get("company")) or None, "one_liner": clean(row.get("one_liner")) or None,
+            "profile_source": src}
+    if row.get("region") in B.REGIONS:
+        item["region"] = row["region"]
+        if row.get("country"):
+            item["country"] = row["country"].strip()
+    if xname and U.words(xname) & U.words(name):
+        item["x_verified"] = True
+    item = {k: v for k, v in item.items() if v is not None}
+    if any(i["slug"] == item["slug"] for i in d["items"]):
+        item["slug"] += "-" + (item.get("company") and slug(item["company"]) or "mia")
+    d["items"].append(item)
+    keys |= person_keys(item)
+    log["leaders_added"].append(item["slug"])
+    log["leaders_follow"].append({"name": name, "role": item["role"], "company": item.get("company"),
+                                  "links": {k: links[k] for k in FOLLOW_KEYS if links.get(k)}})
+
+
+def add_leaders(path, log, fetch=True):
+    d, keys = leaders_index()
+    rows = json.loads(pathlib.Path(path).read_text(encoding="utf-8")) if pathlib.Path(path).exists() else []
+    for r in rows:
+        if r.get("skip"):
+            log["leaders_rejected"].append(f"{r.get('name', '?')}: {r['skip']}")
+            continue
+        add_leader(r, d, keys, log, fetch)
+    if log["leaders_added"]:
+        d["updated"] = TODAY.isoformat()
+        d["count"] = len(d["items"])
+        LEADERS_FILE.write_text(json.dumps(d, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+
 # ---------- summary ----------
 
 def summary(log, out):
@@ -282,7 +447,13 @@ def summary(log, out):
         parts.append("<p>Events added to the calendar:</p>" + li(log["events_added"]))
     if log["tools_added"]:
         parts.append("<p>Tools added to the directory:</p>" + li(log["tools_added"]))
-    rej = log["events_rejected"] + log["tools_rejected"]
+    if log.get("leaders_follow"):
+        lab = {"x": "X", "linkedin": "LinkedIn", "newsletter": "Newsletter", "website": "Website"}
+        rows = [f"{p['name']} ({' at '.join(x for x in (p['role'], p.get('company')) if x)}): follow on "
+                + ", ".join(f'<a href="{u}">{lab[k]}</a>' for k, u in p["links"].items()) for p in log["leaders_follow"]]
+        parts.append("<p>Thought leaders added to the directory. Follow them, then mark them followed in "
+                     "MIA/Resources/Thought Leaders — Follow List:</p>" + li(rows))
+    rej = log["events_rejected"] + log["tools_rejected"] + log.get("leaders_rejected", [])
     if rej:
         parts.append("<p>Not added:</p>" + li(rej))
     flags = [f"{f['name']}: {f['message']}" for f in review.get("events", []) + review.get("tools", []) + review.get("leaders", [])]
@@ -290,7 +461,7 @@ def summary(log, out):
         parts.append(f"<p>Waiting for your yes or no (from the {review.get('as_of', '')} upkeep run):</p>" + li(flags))
     parts += [f"<p>{n}</p>" for n in log["notes"]]
     (out / "summary.html").write_text("\n".join(parts), encoding="utf-8")
-    for k in ("events_added", "tools_added", "events_rejected", "tools_rejected", "candidates"):
+    for k in ("events_added", "tools_added", "events_rejected", "tools_rejected", "candidates", "leaders_added", "leaders_rejected", "leader_candidates"):
         for x in log.get(k, []):
             print(f"{k}: {x}")
 
@@ -303,22 +474,31 @@ def main():
     c.add_argument("--tools", nargs="*")
     c.add_argument("--briefs")
     c.add_argument("--feed")
+    c.add_argument("--leaders", nargs="*", help="James's thought leader candidate list(s)")
     c.add_argument("--out", required=True)
     a = sub.add_parser("add")
     a.add_argument("enriched")
     a.add_argument("--out", required=True)
+    l = sub.add_parser("add-leaders")
+    l.add_argument("enriched")
+    l.add_argument("--out", required=True)
+    l.add_argument("--no-fetch", action="store_true", help="skip the link checks (tests)")
     args = ap.parse_args()
     out = pathlib.Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
     logf = out / "log.json"
-    log = json.loads(logf.read_text()) if args.cmd == "add" and logf.exists() else \
-        {"events_added": [], "events_rejected": [], "tools_added": [], "tools_rejected": [], "candidates": [], "notes": []}
+    fresh = {"events_added": [], "events_rejected": [], "tools_added": [], "tools_rejected": [], "candidates": [], "notes": [],
+             "leaders_added": [], "leaders_rejected": [], "leader_candidates": [], "leaders_follow": []}
+    log = {**fresh, **json.loads(logf.read_text())} if args.cmd != "collect" and logf.exists() else fresh
     state = U.load(U.STATE, {})
     if args.cmd == "collect":
         events_from(args.events or [], log)
         collect_tools(args, state, log, out)
-    else:
+        collect_leaders(args.leaders or [], state, log, out)
+    elif args.cmd == "add":
         add_enriched(args.enriched, log)
+    else:
+        add_leaders(args.enriched, log, not args.no_fetch)
     U.save(U.STATE, state)
     logf.write_text(json.dumps(log, indent=2, ensure_ascii=False), encoding="utf-8")
     summary(log, out)
