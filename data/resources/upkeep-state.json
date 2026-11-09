@@ -1,256 +1,258 @@
 {
   "events": {
     "lagos-leadership-summit": {
-      "fails": 0,
+      "fails": 1,
       "checked": "2026-11-02"
     },
     "africa-startup-festival": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "no-code-tech-summit-ncts": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "martech-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "apiconf-lagos": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "moonshot-by-techcabal": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "search-africon": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "web-summit": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "devfest-lagos": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "growth-africa-summit": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-tech-festival": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "entertainment-week-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-fintech-summit-kigali": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "slush": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "admarp-digital-product-growth-summit": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "laif-awards": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "aot-lagos-8": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-tech-summit-nairobi": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "lagos-tech-fest": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "tech-revolution-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "sxsw": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "tech-unite-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "iot-west-africa-data-center-cloud-expo-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "gitex-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "saastr-ai-annual": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "ai-everything-kenya-gitex-kenya": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "web-summit-vancouver": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "vivatech": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-technology-expo": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "cannes-lions": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "unbound": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "gitex-nigeria": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "digimarcon-africa": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-revenue-makers-awards-arma": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "african-product-marketing-pioneers-apmp": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africarena-lagos-summit": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "lagos-executive-cloud-tech-summit": {
       "fails": 0
     },
     "lagos-startup-week": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "marketing-chill": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "nigeria-fintech-week": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "product-dive-conference": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "revup-africa": {
       "fails": 0
     },
     "the-builders-summit-by-founders-connect": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "afriff-film-content-market-2026": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "the-martech-summit-london-2026": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "national-advertising-conference-2026": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "neclive-2026": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "national-summit-and-exhibition-on-the-orange-economy-2026": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-prosperity-dialogues-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "web-summit-qatar-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "catalyst-africa-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "learnstar-creative-summit-2027": {
-      "fails": 1
+      "fails": 0,
+      "checked": "2026-11-09"
     },
     "the-martech-summit-berlin-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "lagos-finance-summit-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "modern-marketing-cape-town-expo-2027": {
-      "fails": 1
+      "fails": 0,
+      "checked": "2026-11-09"
     },
     "nigeria-energy-technology-conference-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "social-media-marketing-world-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "the-martech-summit-paris-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "west-africa-gaming-convention-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "africa-energy-technology-conference-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "lagos-tech-week-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "the-martech-summit-amsterdam-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "the-martech-summit-dubai-2027": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "atinuda-7-0": {
       "fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     }
   },
   "tools": {
@@ -3685,314 +3687,323 @@
     "adam-fishman": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "adia-sowho": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "alexander-estner": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "andrei-zinkevich": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "andrew-chen": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "anthony-pierri": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "april-dunford": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "arun-sivashankaran": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "blessing-abeng": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "bolaji-anifowose": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "brian-balfour": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "casey-winters": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "chris-mercer": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "corbin-brown": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "corey-haines": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "craig-zingerline": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "dan-hockenmaier": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "daniel-murray": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "domenico-loperfido": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "elena-madrigal": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "elena-verna": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "emily-kramer": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "eric-nowoslawski": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "eric-siu": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "essam-sleiman": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "fio-dossetto": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "franklin-ozekhome": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "greg-isenberg": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "guillaume-cabane": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "guillermo-flor": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "james-doman-pipe": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "james-praise": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "jan-meinecke": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "jared-waxman": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "jen-allen-knuth": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "john-rush": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "jonathan-m-k": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "jonathan-yagel": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "julian-shapiro": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "kevan-lee": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "kevin-depopas": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "khushi-lunkad": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "kieran-flanagan": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "kyle-poyar": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "lade-falobi": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "leah-tharin": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "lenny-rachitsky": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "maja-voje": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "matteo-tittarelli": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "michael-saruggia": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "nate-herk": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "neil-patel": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "nick-saraev": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "olabinjo-adeniran": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "peace-itimi": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "peter-yang": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "richard-purcell": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "riley-brown": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "robert-kaminski": {
-      "fails": 4,
+      "fails": 5,
       "site_fails": 0
     },
     "ruben-hassid": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "seth-godin": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "simo-ahava": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "tom-orbach": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "victor-eduoh": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
     },
     "wes-bush": {
       "fails": 0,
       "site_fails": 0,
-      "checked": "2026-11-02"
+      "checked": "2026-11-09"
     },
     "yash-tekriwal": {
-      "fails": 2,
+      "fails": 3,
       "site_fails": 0,
       "checked": "2026-10-21"
+    },
+    "alex-fine": {
+      "fails": 1,
+      "site_fails": 0
+    },
+    "daniel-johnson": {
+      "fails": 0,
+      "site_fails": 0,
+      "checked": "2026-11-09"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
-  "updated": "2026-11-02",
+  "updated": "2026-11-09",
   "count": 70,
   "items": [
     {
@@ -53,12 +53,7 @@
       "profile_source": "https://adia.substack.com/about",
       "headshot": "img/adia-sowho.jpg",
       "headshot_source": "x:@adiaspeaks",
-      "feed_url": "https://adia.substack.com/feed",
-      "latest_post": {
-        "title": "The Reminder Is the Standard",
-        "url": "https://adia.substack.com/p/the-reminder-is-the-standard",
-        "date": "2026-09-10"
-      }
+      "feed_url": "https://adia.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-80bc-9793-ec5df2dc5142",
@@ -324,9 +319,9 @@
       "headshot_source": "x:@onecaseman",
       "feed_url": "https://www.caseyaccidental.com/feed",
       "latest_post": {
-        "title": "Building a Better SuperMe, and Raising a $20 Million Series A",
-        "url": "https://www.caseyaccidental.com/p/building-a-better-superme",
-        "date": "2026-10-29"
+        "title": "Copying Cope",
+        "url": "https://www.caseyaccidental.com/p/copying-cope",
+        "date": "2026-11-04"
       }
     },
     {
@@ -354,9 +349,9 @@
       "headshot_source": "x:@mercertweets",
       "feed_url": "https://measureu.com/rss.xml",
       "latest_post": {
-        "title": "How to Install Tracklution Using Google Tag Manager (Step-by-Step GTM Setup Guide)",
-        "url": "https://measureu.com/tracklution-gtm/",
-        "date": "2026-10-28"
+        "title": "Dead Internet Theory Just Showed Up in Your GA4 Reports",
+        "url": "https://measureu.com/dead-internet-ga4/",
+        "date": "2026-10-30"
       }
     },
     {
@@ -465,9 +460,9 @@
       "headshot_source": "x:@danhockenmaier",
       "feed_url": "https://www.danhock.co/feed",
       "latest_post": {
-        "title": "How to future-proof a career in data science",
-        "url": "https://www.danhock.co/p/how-to-future-proof-a-career-in-data",
-        "date": "2026-10-27"
+        "title": "Should you quit your job?",
+        "url": "https://www.danhock.co/p/should-you-quit",
+        "date": "2026-11-05"
       }
     },
     {
@@ -495,9 +490,9 @@
       "headshot_source": "x:@dmurr68",
       "feed_url": "https://themarketingmillennials.com/feed/",
       "latest_post": {
-        "title": "The AI skills worth learning in 2027",
-        "url": "https://themarketingmillennials.com/articles/2026-10-29/the-ai-skills-worth-learning-in-2027/",
-        "date": "2026-10-29"
+        "title": "Before you spend another $1 on ads…",
+        "url": "https://themarketingmillennials.com/articles/2026-11-04/before-you-spend-another-1-on-ads/",
+        "date": "2026-11-04"
       }
     },
     {
@@ -519,12 +514,7 @@
       "company": "In case you missed it",
       "one_liner": "Curates a weekly list of advertising and marketing picks.",
       "profile_source": "https://domenicoloperfido.substack.com/about",
-      "feed_url": "https://domenicoloperfido.substack.com/feed",
-      "latest_post": {
-        "title": "Should I Stay or Should I Go?",
-        "url": "https://domenicoloperfido.substack.com/p/should-i-stay-or-should-i-go",
-        "date": "2026-10-18"
-      }
+      "feed_url": "https://domenicoloperfido.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-80ba-8f2b-ed56562bbede",
@@ -547,12 +537,7 @@
       "headshot_source": "headshot_url",
       "role": "Writer",
       "company": "Do Epic Sht",
-      "feed_url": "https://doepicsht.substack.com/feed",
-      "latest_post": {
-        "title": "Sales Doesn't Want Your Messaging Framework Either",
-        "url": "https://doepicsht.substack.com/p/sales-doesnt-want-your-messaging",
-        "date": "2026-10-18"
-      }
+      "feed_url": "https://doepicsht.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-80ae-810f-c18c480f20c0",
@@ -579,9 +564,9 @@
       "headshot_source": "x:@elenaverna",
       "feed_url": "https://www.elenaverna.com/feed",
       "latest_post": {
-        "title": "Here is what women want from AI.",
-        "url": "https://www.elenaverna.com/p/dear-new-york-times-thats-not-what",
-        "date": "2026-10-27"
+        "title": "The end of feature discovery as we know it.",
+        "url": "https://www.elenaverna.com/p/the-end-of-feature-discovery-as-we",
+        "date": "2026-11-05"
       }
     },
     {
@@ -607,9 +592,9 @@
       "headshot_source": "x:@emilykramer",
       "feed_url": "https://newsletter.mkt1.co/feed",
       "latest_post": {
-        "title": "October MKT1 Roundup",
-        "url": "https://newsletter.mkt1.co/p/mkt1-roundup-october-2026",
-        "date": "2026-10-26"
+        "title": "My best advice for sponsoring B2B creators",
+        "url": "https://newsletter.mkt1.co/p/b2b-creator-marketing",
+        "date": "2026-11-06"
       }
     },
     {
@@ -778,12 +763,7 @@
       "profile_source": "https://www.gregisenberg.com/",
       "headshot": "img/greg-isenberg.jpg",
       "headshot_source": "x:@gregisenberg",
-      "feed_url": "https://latecheckout.substack.com/feed",
-      "latest_post": {
-        "title": "The Guide to Faceless Brands",
-        "url": "https://latecheckout.substack.com/p/the-guide-to-faceless-brands",
-        "date": "2023-10-22"
-      }
+      "feed_url": "https://latecheckout.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-8085-9f7a-d4598bc5855b",
@@ -839,9 +819,9 @@
       "company": "Product Market Fit",
       "feed_url": "https://www.productmarketfit.tech/feed",
       "latest_post": {
-        "title": "YC’s Winter 2027 Requests for Startups: The Founder’s Playbook",
-        "url": "https://www.productmarketfit.tech/p/ycs-winter-2027-requests-for-startups",
-        "date": "2026-10-30"
+        "title": "The Daytona Playbook: From $1M to $100M in a Year",
+        "url": "https://www.productmarketfit.tech/p/the-daytona-playbook-from-1m-to-100m",
+        "date": "2026-11-06"
       }
     },
     {
@@ -898,9 +878,9 @@
       "headshot_source": "x:@realjaymes",
       "feed_url": "https://newsletter.marketinginaction.xyz/feed",
       "latest_post": {
-        "title": "How Shalom Rayhamen Took Lagos Life From a Link on X to 1M Players in 3 Days",
-        "url": "https://newsletter.marketinginaction.xyz/p/lagos-life-marketing-led-growth-case-study",
-        "date": "2026-11-02"
+        "title": "MIA #16: How Lagos Life, ChatGPT, TikTok, and WhatsApp Built Viral Loops (+ Template)",
+        "url": "https://newsletter.marketinginaction.xyz/p/how-to-build-a-viral-loop-before-launch",
+        "date": "2026-11-09"
       }
     },
     {
@@ -947,12 +927,7 @@
       "profile_source": "https://maven.com/gtme-school",
       "headshot": "img/jared-waxman.jpg",
       "headshot_source": "x:@jaredwaxman",
-      "feed_url": "https://gtmengineerschool.substack.com/feed",
-      "latest_post": {
-        "title": "The GTM Engineer Pulse | #45",
-        "url": "https://gtmengineerschool.substack.com/p/the-gtm-engineer-pulse-45",
-        "date": "2026-10-14"
-      }
+      "feed_url": "https://gtmengineerschool.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-8037-8d2f-cd9551f4b617",
@@ -1052,12 +1027,7 @@
       "profile_source": "https://www.jwby.co/",
       "headshot": "img/jonathan-yagel.jpg",
       "headshot_source": "x:@jwby",
-      "feed_url": "https://jwby.substack.com/feed",
-      "latest_post": {
-        "title": "1, #205 - You are what you... read?",
-        "url": "https://jwby.substack.com/p/1-205-you-are-what-you-read",
-        "date": "2026-10-15"
-      }
+      "feed_url": "https://jwby.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-804d-99f9-ca0f6fe226ff",
@@ -1104,9 +1074,9 @@
       "headshot_source": "x:@kevanlee",
       "feed_url": "https://newsletter.aroundthebonfire.com/feed",
       "latest_post": {
-        "title": "Creativity is contagious",
-        "url": "https://newsletter.aroundthebonfire.com/p/creativity-is-contagious",
-        "date": "2026-11-02"
+        "title": "Generalist vs. specialist",
+        "url": "https://newsletter.aroundthebonfire.com/p/generalist-vs-specialist",
+        "date": "2026-11-09"
       }
     },
     {
@@ -1154,9 +1124,9 @@
       "role": "Growth and product marketing operator",
       "feed_url": "https://www.toption.org/blog-feed.xml",
       "latest_post": {
-        "title": "Figuring out my relationship with AI",
-        "url": "https://www.toption.org/post/figuring-out-my-relationship-with-ai",
-        "date": "2026-06-26"
+        "title": "How to get the job and 25 bad best practices to avoid, from a hiring manager",
+        "url": "https://www.toption.org/post/job-application-feedback",
+        "date": "2026-09-11"
       }
     },
     {
@@ -1313,9 +1283,9 @@
       "headshot_source": "x:@majavoje",
       "feed_url": "https://knowledge.gtmstrategist.com/feed",
       "latest_post": {
-        "title": "One Person, 1,200 Creators, $2.4M Spent: Inside Viktor’s Partnership OS",
-        "url": "https://knowledge.gtmstrategist.com/p/viktor-ai-partnership-os",
-        "date": "2026-10-30"
+        "title": "85% of AEO Is Won Offsite",
+        "url": "https://knowledge.gtmstrategist.com/p/offsite-aeo-playbook",
+        "date": "2026-11-06"
       }
     },
     {
@@ -1344,12 +1314,7 @@
       "profile_source": "https://genesysgrowth.com/about",
       "headshot": "img/matteo-tittarelli.jpg",
       "headshot_source": "x:@matteo_titta",
-      "feed_url": "https://newsletter.genesysgrowth.com/feed",
-      "latest_post": {
-        "title": "The Context System Nobody Tells You to Build",
-        "url": "https://newsletter.genesysgrowth.com/p/the-context-system-nobody-tells-you",
-        "date": "2026-08-19"
-      }
+      "feed_url": "https://newsletter.genesysgrowth.com/feed"
     },
     {
       "notion_id": "296a6d41-709c-80ab-9c4c-f01eee3038f5",
@@ -1373,12 +1338,7 @@
       "profile_source": "http://michaelsaruggia.com",
       "headshot": "img/michael-saruggia.jpg",
       "headshot_source": "x:@michaelsaruggia",
-      "feed_url": "https://claygtmengineering.substack.com/feed",
-      "latest_post": {
-        "title": "How to use Clay & AI for Segmentation",
-        "url": "https://claygtmengineering.substack.com/p/how-to-use-clay-and-ai-for-segmentation",
-        "date": "2024-10-16"
-      }
+      "feed_url": "https://claygtmengineering.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-800a-b1ac-c3a89bb30dd0",
@@ -1424,9 +1384,9 @@
       "headshot_source": "x:@neilpatel",
       "feed_url": "https://neilpatel.com/feed/",
       "latest_post": {
-        "title": "How to Teach Content Strategy to Stakeholders Who Don’t Speak Marketing",
-        "url": "https://neilpatel.com/blog/teach-content-strategy-to-stakeholders/",
-        "date": "2026-10-28"
+        "title": "Trending Keywords in AnswerThePublic: Find What’s Rising on Google and YouTube",
+        "url": "https://neilpatel.com/blog/answerthepublic-trending-keywords/",
+        "date": "2026-11-06"
       }
     },
     {
@@ -1499,12 +1459,7 @@
       "profile_source": "https://www.peaceitimi.com/",
       "headshot": "img/peace-itimi.jpg",
       "headshot_source": "x:@peaceitimi",
-      "feed_url": "https://peaceitimi.substack.com/feed",
-      "latest_post": {
-        "title": "Starting",
-        "url": "https://peaceitimi.substack.com/p/starting",
-        "date": "2026-01-27"
-      }
+      "feed_url": "https://peaceitimi.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-8087-8da6-d42d688a60dd",
@@ -1529,9 +1484,9 @@
       "headshot_source": "x:@petergyang",
       "feed_url": "https://creatoreconomy.so/feed",
       "latest_post": {
-        "title": "Gemini 4 Changed How Google Builds Products | Jaclyn Konzelmann",
-        "url": "https://creatoreconomy.so/p/gemini-4-changed-how-google-builds-products-jaclyn-konzelmann",
-        "date": "2026-11-01"
+        "title": "OpenAI VP: How AI Changed My Family’s Fight Against Cancer | Ashley Alexander",
+        "url": "https://creatoreconomy.so/p/how-ai-changed-my-family-fight-against-cancer-ashley-openai",
+        "date": "2026-11-08"
       }
     },
     {
@@ -1555,12 +1510,7 @@
       "profile_source": "https://moxiegtm.substack.com/about",
       "headshot": "img/richard-purcell.jpg",
       "headshot_source": "x:@moxiegtm",
-      "feed_url": "https://moxiegtm.substack.com/feed",
-      "latest_post": {
-        "title": "How to scale referrals",
-        "url": "https://moxiegtm.substack.com/p/how-to-scale-referrals",
-        "date": "2026-10-19"
-      }
+      "feed_url": "https://moxiegtm.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-800d-abe6-e523de849a48",
@@ -1626,12 +1576,7 @@
       "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/4df84eb2-227f-435e-913c-4210fe339229_1203x1203.png",
       "headshot": "img/ruben-hassid.jpg",
       "headshot_source": "headshot_url",
-      "feed_url": "https://ruben.substack.com/feed",
-      "latest_post": {
-        "title": "Claude for Legal.",
-        "url": "https://ruben.substack.com/p/claude-for-legal",
-        "date": "2026-10-20"
-      }
+      "feed_url": "https://ruben.substack.com/feed"
     },
     {
       "notion_id": "296a6d41-709c-80a5-9c80-c124b9a0c1dd",
@@ -1680,9 +1625,9 @@
       "headshot_source": "x:@thisissethsblog",
       "feed_url": "https://seths.blog/feed/",
       "latest_post": {
-        "title": "Trees can’t run",
-        "url": "https://seths.blog/2026/11/trees-cant-run/",
-        "date": "2026-11-02"
+        "title": "Restrictive design",
+        "url": "https://seths.blog/2026/11/restrictive-design/",
+        "date": "2026-11-09"
       }
     },
     {
@@ -1741,9 +1686,9 @@
       "headshot_source": "x:@tomorbach",
       "feed_url": "https://www.marketingideas.com/feed",
       "latest_post": {
-        "title": "Substack is a $0 cheat code for your brand 🔑",
-        "url": "https://www.marketingideas.com/p/substack-is-a-0-cheat-code-for-your",
-        "date": "2026-11-02"
+        "title": "Every AI ad generator sucks right now 📉",
+        "url": "https://www.marketingideas.com/p/every-ai-ad-generator-sucks-right",
+        "date": "2026-11-09"
       }
     },
     {
@@ -1770,12 +1715,7 @@
       "profile_source": "http://vec.studio",
       "headshot": "img/victor-eduoh.jpg",
       "headshot_source": "x:@v_eduoh",
-      "feed_url": "https://productledstorytelling.substack.com/feed",
-      "latest_post": {
-        "title": "Nailing Your Overarching Company Narrative (The “Big S” Story)",
-        "url": "https://productledstorytelling.substack.com/p/nailing-your-company-narrative",
-        "date": "2026-06-04"
-      }
+      "feed_url": "https://productledstorytelling.substack.com/feed"
     },
     {
       "notion_id": "207a6d41-709c-804c-8509-c35154b7eb71",
@@ -1799,9 +1739,9 @@
       "headshot_source": "x:@wes_bush",
       "feed_url": "https://productled.com/blog/rss.xml",
       "latest_post": {
-        "title": "Your PLG Preflight Checklist",
-        "url": "https://productled.com/blog/plg-preflight-checklist",
-        "date": "2026-10-30"
+        "title": "How to Avoid Onboarding Mistakes: FullStory Case Study",
+        "url": "https://productled.com/blog/every-onboarding-mistake-i-made-so-you-dont-have-to",
+        "date": "2026-11-05"
       }
     },
     {
@@ -1826,12 +1766,7 @@
       "profile_source": "https://knowyourgrowth.substack.com/about",
       "headshot": "img/yash-tekriwal.jpg",
       "headshot_source": "x:@yash_tek",
-      "feed_url": "https://knowyourgrowth.substack.com/feed",
-      "latest_post": {
-        "title": "Steering a Rocket Ship: Inside Profound’s Meteoric Growth",
-        "url": "https://knowyourgrowth.substack.com/p/steering-a-rocket-ship-inside-profounds",
-        "date": "2026-09-16"
-      }
+      "feed_url": "https://knowyourgrowth.substack.com/feed"
     },
     {
       "notion_id": "",
@@ -1883,7 +1818,12 @@
       "country": "United Kingdom",
       "feed_url": "https://danieljohnson.xyz/rss.xml",
       "headshot": "img/daniel-johnson.jpg",
-      "headshot_source": "x:@djohnsonxyz"
+      "headshot_source": "x:@djohnsonxyz",
+      "latest_post": {
+        "title": "AI Driven Growth Theory: how to reduce Learning Latency and stop random acts of growth",
+        "url": "https://danieljohnson.xyz/writing/ai-driven-growth-theory/",
+        "date": "2026-06-22"
+      }
     }
   ]
 }

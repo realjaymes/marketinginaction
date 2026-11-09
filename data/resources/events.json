@@ -1,6 +1,6 @@
 {
   "source": "Exported from the MIA Notion calendar on 2026-10-20, then researched and verified on official pages.",
-  "updated": "2026-11-02",
+  "updated": "2026-11-09",
   "count": 66,
   "items": [
     {
@@ -149,7 +149,7 @@
       "tickets": "https://searchafricon.com/",
       "organiser": "Search Africon",
       "description": "A conference advancing SEO and digital marketing in Africa, featuring expert talks, workshops, and networking.",
-      "status": "scheduled",
+      "status": "past-awaiting-next",
       "date_source": "https://searchafricon.com/",
       "verified": "2026-10-20",
       "mia_event": false,
@@ -998,7 +998,7 @@
       "name": "AFRIFF Film & Content Market 2026",
       "start_date": "2026-11-02",
       "end_date": "2026-11-05",
-      "status": "scheduled",
+      "status": "past-awaiting-next",
       "date_source": "https://afcm-market.com/?utm_source=chatgpt.com",
       "verified": "2026-10-26",
       "website": "https://afcm-market.com/?utm_source=chatgpt.com",

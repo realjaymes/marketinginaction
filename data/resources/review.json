@@ -8,45 +8,33 @@
     },
     {
       "kind": "event-date-unconfirmed",
-      "slug": "growth-africa-summit",
-      "name": "Growth Africa Summit",
-      "message": "Its page no longer shows 2026-11-14. Check whether the date moved: https://www.growthafricasummit.com/"
+      "slug": "ai-everything-kenya-gitex-kenya",
+      "name": "AI Everything Kenya x GITEX Kenya",
+      "message": "Its page no longer shows 2027-05-12. Check whether the date moved: https://www.aieverythingkenya.com/"
     },
     {
-      "kind": "tool-pivot",
-      "slug": "delphi-ai",
-      "name": "Delphi AI",
-      "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"Discover • Delphi\", now \"Delphi - Ask The World's Experts\". Keep, rewrite or remove it."
+      "kind": "event-date-unconfirmed",
+      "slug": "digimarcon-africa",
+      "name": "DigiMarCon Africa",
+      "message": "Its page no longer shows 2027-10-06. Check whether the date moved: https://digimarconafrica.com/"
     },
     {
-      "kind": "tool-pivot",
-      "slug": "latenode",
-      "name": "Latenode",
-      "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"Latenode — AI Workflow Automation with 335+ LLMs Built In\", now \"AI Tools for Business — No-Code Agents, Automations & Apps | Latenode\". Keep, rewrite or remove it."
+      "kind": "event-date-unconfirmed",
+      "slug": "west-africa-gaming-convention-2027",
+      "name": "West Africa Gaming Convention 2027",
+      "message": "Its page no longer shows 2027-04-28. Check whether the date moved: https://wagconvention.com/?utm_source=chatgpt.com"
     },
     {
-      "kind": "tool-pivot",
-      "slug": "microsoft-365-copilot",
-      "name": "Microsoft 365 Copilot",
-      "message": "Possible pivot or acquisition: now redirects to cloud.microsoft. Was \"Sign in to your account\", now \"Microsoft 365 - Sign into Copilot\". Keep, rewrite or remove it."
+      "kind": "event-date-unconfirmed",
+      "slug": "africa-energy-technology-conference-2027",
+      "name": "Africa Energy Technology Conference 2027",
+      "message": "Its page no longer shows 2027-05-18. Check whether the date moved: https://www.aetconference.com/?utm_source=chatgpt.com"
     },
     {
-      "kind": "tool-pivot",
-      "slug": "pictory",
-      "name": "Pictory",
-      "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"Pictory - Text to Video AI\", now \"Pictory: Your AI Video Agent and AI Video Generator\". Keep, rewrite or remove it."
-    },
-    {
-      "kind": "tool-pivot",
-      "slug": "pika-labs",
-      "name": "Pika Labs",
-      "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"Pika\", now \"Pika: AI Creative Tools for Video, Image & Audio\". Keep, rewrite or remove it."
-    },
-    {
-      "kind": "tool-pivot",
-      "slug": "textcortex",
-      "name": "TextCortex",
-      "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"TextCortex: Enterprise AI Infrastructure That Delivers ROI\", now \"AI agents your teams actually use | TextCortex\". Keep, rewrite or remove it."
+      "kind": "event-date-unconfirmed",
+      "slug": "atinuda-7-0",
+      "name": "Atinuda 7.0",
+      "message": "Its page no longer shows 2027-10-06. Check whether the date moved: https://www.atinuda.africa/?utm_source=chatgpt.com"
     }
   ],
   "tools": [
@@ -87,6 +75,6 @@
       "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"TextCortex: Enterprise AI Infrastructure That Delivers ROI\", now \"AI agents your teams actually use | TextCortex\". Keep, rewrite or remove it."
     }
   ],
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-09",
   "leaders": []
 }
