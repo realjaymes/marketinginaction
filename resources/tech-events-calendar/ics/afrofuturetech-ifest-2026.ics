@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:AfroFutureTech iFest 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:afrofuturetech-ifest-2026-2026-12-03@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261207
+SUMMARY:AfroFutureTech iFest 2026
+LOCATION:Elegushi Beach and partner venues\, Lagos\, Nigeria
+DESCRIPTION:A four-day festival connecting technology startups\, investors\, creators and cultural entrepreneurs through exhibitions\, competitions\, performances and networking. [AftiFest](https://aftifest.com/?utm_source=chatgpt.com) https://aftifest.com/?utm_source=chatgpt.com
+URL:https://aftifest.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

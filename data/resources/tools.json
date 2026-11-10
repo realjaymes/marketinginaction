@@ -2,7 +2,7 @@
   "source": "https://www.notion.so/realjaymes/224a6d41709c8106ba43f1731bc9c3b7",
   "exported": "2026-10-20",
   "updated": "2026-11-02",
-  "count": 499,
+  "count": 521,
   "items": [
     {
       "created": "2026-10-20",
@@ -236,6 +236,30 @@
       ],
       "website": "https://www.adyntel.com",
       "slug": "adyntel"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Agent Craft",
+      "overview": "Agent Craft is a team social media system. Members record a short daily voice note or video that becomes posts for 8 platforms on their own accounts, and leads go to a CRM.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Social Media",
+        "AI Writing & Content"
+      ],
+      "use_cases": [
+        "Turn employee voice notes into posts",
+        "Run employee advocacy on LinkedIn",
+        "Post to several platforms from one recording",
+        "Send social leads to a CRM",
+        "Spot buyers in comments and messages",
+        "Keep a founder led content habit"
+      ],
+      "website": "https://agentcraft.ai/",
+      "slug": "agent-craft"
     },
     {
       "created": "2026-10-31",
@@ -874,6 +898,30 @@
       "slug": "avoma"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Banger",
+      "overview": "Banger is an email marketing and automation platform for online stores and small businesses. Users build and manage campaigns by asking ChatGPT, Claude or Grok.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "Marketing Automation"
+      ],
+      "use_cases": [
+        "Build email journeys by chatting with an AI assistant",
+        "Automate customer follow ups",
+        "Run store email campaigns",
+        "Reply to incoming customer emails",
+        "Set up welcome and win back flows",
+        "Manage campaigns without a dashboard"
+      ],
+      "website": "https://bangermail.com/",
+      "slug": "banger"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Base44",
@@ -1010,6 +1058,29 @@
       ],
       "website": "https://blink.new",
       "slug": "blink"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Bloomberry",
+      "overview": "Bloomberry is a technographic data service and API. It reports when companies start or stop paying for any of more than 1,700 B2B products, and it is a product from Revealera.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Data",
+        "Sales Intelligence"
+      ],
+      "use_cases": [
+        "Target companies using a competitor's tool",
+        "Catch accounts that just dropped a tool",
+        "Research a prospect's tech stack",
+        "Time outreach to buying changes",
+        "Build technographic lead lists",
+        "Feed tech data into enrichment"
+      ],
+      "website": "https://bloomberry.com/",
+      "slug": "bloomberry"
     },
     {
       "created": "2026-10-21",
@@ -1933,6 +2004,31 @@
       "slug": "cognism"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "ColdIQ",
+      "overview": "ColdIQ is a B2B go to market data platform. It gives company, people, email and phone data from its own database and more than 40 providers through one API, an MCP server and a web app.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Marketing Data",
+        "Data Enrichment",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Search leads across many providers with one key",
+        "Enrich contacts with emails and phones",
+        "Track buying signals",
+        "Draft outreach with the ColdIQ Agent",
+        "Use data from Claude Code through MCP",
+        "Work from Slack or chat"
+      ],
+      "website": "https://coldiq.com/",
+      "slug": "coldiq"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Common Room",
@@ -2212,6 +2308,29 @@
       "slug": "customer-io"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "CutBay",
+      "overview": "CutBay is a chat based AI video agent. It turns ideas, documents, links and media into videos and edits them through conversation.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Video Generation",
+        "Video & Audio Editing"
+      ],
+      "use_cases": [
+        "Turn a web page into a video",
+        "Make product explainers from documents",
+        "Edit a video by chatting",
+        "Create social video from a prompt",
+        "Repurpose uploaded media",
+        "Produce short promo clips fast"
+      ],
+      "website": "https://www.cutbay.ai/",
+      "slug": "cutbay"
+    },
+    {
       "created": "2026-10-21",
       "last_edited": "2026-10-21",
       "name": "D-ID",
@@ -2394,6 +2513,29 @@
       "slug": "debugbear"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Dedica",
+      "overview": "Dedica scores how well AI agents can find, read and use a website, then provides fixes. These include an agent version of the site and checkout support. A free score needs no signup.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI SEO",
+        "Marketing Technology"
+      ],
+      "use_cases": [
+        "Check if AI agents can read your site",
+        "Find pages that block agent navigation",
+        "Prepare a site for agent led shopping",
+        "Fix content AI agents misread",
+        "Support agent checkout on a store",
+        "Benchmark agent readiness over time"
+      ],
+      "website": "https://getdedica.com/",
+      "slug": "dedica"
+    },
+    {
       "notion_id": "284a6d41-709c-8122-8a6e-fdf190237f79",
       "created": "2025-10-06",
       "last_edited": "2025-10-06",
@@ -2415,6 +2557,31 @@
       ],
       "website": "https://get.deel.com/james-mia",
       "slug": "deel"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Deepline",
+      "overview": "Deepline is a go to market infrastructure platform. It lets AI agents such as Claude Code, Codex and Cursor run prospecting, enrichment and signal monitoring workflows with many data providers on one bill.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Engineering",
+        "Data Enrichment",
+        "GTM Automation"
+      ],
+      "use_cases": [
+        "Run enrichment from Claude Code or Codex",
+        "Use many data providers on one bill",
+        "Monitor buying signals",
+        "Automate prospecting workflows",
+        "Build a repeatable GTM pipeline",
+        "Reduce tool sprawl in outbound"
+      ],
+      "website": "https://deepline.com/",
+      "slug": "deepline"
     },
     {
       "notion_id": "24ca6d41-709c-819c-b686-eb438f05b7dc",
@@ -4313,6 +4480,29 @@
       "slug": "grok"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Grok Bot",
+      "overview": "Grok Bot is a team of always on AI agents that each run on their own cloud computer and work inside apps such as email and CRMs. It is in beta for paid SuperGrok and Cursor subscribers.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Platform-Integrated AI"
+      ],
+      "use_cases": [
+        "Delegate recurring inbox tasks",
+        "Update a CRM automatically",
+        "Run background research",
+        "Handle routine ops work",
+        "Monitor tools around the clock",
+        "Test agent teams on small workflows"
+      ],
+      "website": "https://x.ai/news/introducing-grok-bot",
+      "slug": "grok-bot"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "GTmetrix",
@@ -5416,6 +5606,30 @@
       "slug": "krea"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "kōdlo",
+      "overview": "kōdlo is an AI sales workspace that combines prospect discovery, cited research, outreach drafting, decks and a CRM. Some features, such as decks, are still in beta.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Lead Generation",
+        "Sales Engagement",
+        "CRM"
+      ],
+      "use_cases": [
+        "Discover prospects that fit an ICP",
+        "Research accounts with cited sources",
+        "Draft personalized outreach",
+        "Keep customer records in one place",
+        "Build sales decks",
+        "Run small team sales workflows"
+      ],
+      "website": "https://kodlo.ai/",
+      "slug": "k-dlo"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "La Growth Machine",
@@ -6475,6 +6689,51 @@
       "slug": "mention"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "MentionBird",
+      "overview": "MentionBird is an AI visibility platform for SaaS marketing teams. It shows whether ChatGPT, Gemini, Perplexity and Claude name a brand and what to do about it.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO"
+      ],
+      "use_cases": [
+        "See where your brand is missing from AI answers",
+        "Find citation sources to target",
+        "Compare mentions across AI engines",
+        "Discover content opportunities",
+        "Track AI visibility for a SaaS product",
+        "Plan fixes for missing mentions"
+      ],
+      "website": "https://www.mentionbird.ai/",
+      "slug": "mentionbird"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "MePersona",
+      "overview": "MePersona is an AI unified inbox for creators. It drafts replies to comments and direct messages in the creator's voice across 12 platforms, with optional auto reply.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Social Media",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Reply to fan messages faster",
+        "Keep one voice across platforms",
+        "Manage DMs in one inbox",
+        "Auto reply to common questions",
+        "Handle comment volume as a creator",
+        "Qualify leads from messages"
+      ],
+      "website": "https://mepersona.ai/",
+      "slug": "mepersona"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Meta Ad Library",
@@ -6808,6 +7067,31 @@
       ],
       "website": "https://www.modash.io",
       "slug": "modash"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "MoltSets",
+      "overview": "MoltSets is a B2B people and company search and enrichment service sold through an API, an MCP server and a console. It returns business emails, mobile numbers and company data.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Data Enrichment",
+        "Marketing Data",
+        "GTM Engineering"
+      ],
+      "use_cases": [
+        "Enrich leads through an API",
+        "Give AI agents contact data via MCP",
+        "Find business emails and mobile numbers",
+        "Search companies by firmographics",
+        "Feed GTM workflows with fresh data",
+        "Build prospect lists for outbound"
+      ],
+      "website": "https://moltsets.com/",
+      "slug": "moltsets"
     },
     {
       "notion_id": "284a6d41-709c-8137-9000-e6a5e3401511",
@@ -7796,6 +8080,30 @@
       "slug": "outscraper"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Ownfeed",
+      "overview": "Ownfeed is a social listening feed that uses AI to pick posts on Reddit, X, Bluesky and Hacker News from people looking for what a product does. It is aimed at indie makers.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "Social Media",
+        "Lead Generation"
+      ],
+      "use_cases": [
+        "Find people asking for a tool like yours",
+        "Join relevant Reddit and X threads",
+        "Collect problem language from buyers",
+        "Source early customers for a new product",
+        "Monitor Hacker News discussions",
+        "Replace manual social searching"
+      ],
+      "website": "https://ownfeed.dev/",
+      "slug": "ownfeed"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "PageSpeed Insights",
@@ -7816,6 +8124,31 @@
       ],
       "website": "https://pagespeed.web.dev",
       "slug": "pagespeed-insights"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Pancake",
+      "overview": "Pancake gives an AI agent such as Claude or Codex access to company context, more than 30 data providers and outreach tools. Teams use it to find and contact prospects from inside the agent.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "GTM Engineering",
+        "Sales Automation",
+        "Data Enrichment"
+      ],
+      "use_cases": [
+        "Find prospects from an AI agent",
+        "Enrich lead lists from many data providers",
+        "Run outbound campaigns from chat",
+        "Give agents company context for messaging",
+        "Build GTM workflows with MCP",
+        "Replace several data subscriptions with one"
+      ],
+      "website": "https://pancake.ai/",
+      "slug": "pancake"
     },
     {
       "notion_id": "284a6d41-709c-8115-80d6-c63be717a2b5",
@@ -8148,6 +8481,30 @@
       "hidden_since": "2026-10-20"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Playad",
+      "overview": "Playad is an AI marketing agent that plans, creates, launches and optimizes paid ad campaigns for Meta, Google, TikTok and ChatGPT Ads (beta) from one chat interface.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising",
+        "AI Agents"
+      ],
+      "use_cases": [
+        "Research competitor ads",
+        "Generate ad creative from a brief",
+        "Launch campaigns from chat",
+        "Analyze ad performance",
+        "Run paid ads without a media buyer",
+        "Test new angles quickly"
+      ],
+      "website": "https://playad.ai/",
+      "slug": "playad"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Polsia",
@@ -8306,6 +8663,29 @@
       ],
       "website": "https://predis.ai",
       "slug": "predis-ai"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Prefer",
+      "overview": "Prefer tracks how ChatGPT, Gemini and Perplexity mention a brand, then uses agents to carry out the fixes. It is an AI search visibility platform with a free trial.",
+      "product_type": [
+        "Marketing Tool",
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Monitor brand mentions in AI search",
+        "Spot visibility gaps against competitors",
+        "Automate optimization tasks",
+        "Track which prompts mention you",
+        "Improve content for AI citations",
+        "Report AI visibility to stakeholders"
+      ],
+      "website": "https://tryprefer.com/",
+      "slug": "prefer"
     },
     {
       "notion_id": "284a6d41-709c-8152-a010-d2cdecc90b02",
@@ -8865,6 +9245,28 @@
       "slug": "reply-io"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "ReSO AI",
+      "overview": "ReSO is a generative engine optimization platform that helps brands get mentioned and cited in AI search answers such as ChatGPT. It offers competitive analysis, content insights and optimization actions.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "AI SEO"
+      ],
+      "use_cases": [
+        "Track brand mentions in AI answers",
+        "Compare AI visibility against competitors",
+        "Find content gaps that cost citations",
+        "Plan content for AI search",
+        "Report AI search progress to a team",
+        "Prioritize optimization actions"
+      ],
+      "website": "https://www.resollm.ai/",
+      "slug": "reso-ai"
+    },
+    {
       "created": "2026-10-20",
       "last_edited": "2026-10-20",
       "name": "Respond.io",
@@ -9297,6 +9699,28 @@
       ],
       "website": "https://www.screamingfrog.co.uk/seo-spider/",
       "slug": "screaming-frog"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Scripe",
+      "overview": "Scripe is a social media management platform from Scripe GmbH, built around LinkedIn for B2B teams and agencies. It covers ideas, drafting, scheduling, approvals and analytics.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Social Media"
+      ],
+      "use_cases": [
+        "Plan LinkedIn content for a team",
+        "Draft posts with AI help",
+        "Run client approvals for an agency",
+        "Schedule and publish posts",
+        "Measure post performance",
+        "Manage founder and employee profiles"
+      ],
+      "website": "https://scripe.io/",
+      "slug": "scripe"
     },
     {
       "created": "2026-10-20",
@@ -10117,6 +10541,30 @@
       "slug": "supabase"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Superdraft",
+      "overview": "Superdraft watches signals such as weather, events and holidays to spot campaign moments. It then drafts branded emails or Instagram posts for review and export.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Email Marketing",
+        "AI Writing & Content"
+      ],
+      "use_cases": [
+        "Find timely moments to email customers",
+        "Draft branded campaign emails",
+        "Export drafts to existing email platforms",
+        "Plan holiday campaigns",
+        "Draft Instagram posts for review",
+        "Keep a small brand emailing on schedule"
+      ],
+      "website": "https://superdraft.ai/",
+      "slug": "superdraft"
+    },
+    {
       "notion_id": "27fa6d41-709c-80b0-a2d1-f5cd846ab7df",
       "created": "2025-10-01",
       "last_edited": "2025-10-02",
@@ -10583,6 +11031,29 @@
       "slug": "try-replay"
     },
     {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Tulu",
+      "overview": "Tulu connects ad, analytics and CRM data for small and mid sized businesses. It gives automated attribution insights, anomaly alerts and an Ask Tulu assistant for performance questions.",
+      "product_type": [
+        "AI Tool",
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Marketing Analytics"
+      ],
+      "use_cases": [
+        "Connect ad spend to revenue",
+        "Get alerts on unusual metric changes",
+        "Ask questions about performance in plain language",
+        "See attribution without a data team",
+        "Get budget recommendations",
+        "Combine ad, analytics and CRM data"
+      ],
+      "website": "https://www.onetulu.com/",
+      "slug": "tulu"
+    },
+    {
       "notion_id": "27ba6d41-709c-8023-81cc-f52c2359cc3e",
       "created": "2025-09-27",
       "last_edited": "2025-10-02",
@@ -10878,6 +11349,29 @@
       ],
       "website": "https://www.vidu.com",
       "slug": "vidu"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "Viktor",
+      "overview": "Viktor is an AI employee that works inside Slack and Microsoft Teams. It connects to thousands of tools and runs tasks such as reports, dashboards, code and campaigns.",
+      "product_type": [
+        "AI Tool"
+      ],
+      "notion_categories": [
+        "AI Agents",
+        "Workflow Automation"
+      ],
+      "use_cases": [
+        "Build reports from chat",
+        "Create dashboards from connected data",
+        "Draft and run campaigns",
+        "Answer data questions in Slack",
+        "Automate routine team tasks",
+        "Give a small team an extra operator"
+      ],
+      "website": "https://viktor.com/",
+      "slug": "viktor"
     },
     {
       "created": "2026-10-21",
@@ -11177,6 +11671,28 @@
       "website": "https://windsurf.com",
       "slug": "windsurf",
       "retired": "2026-10-21: became Devin Desktop, listed as Devin"
+    },
+    {
+      "created": "2026-11-10",
+      "last_edited": "2026-11-10",
+      "name": "WinnerAdSpy",
+      "overview": "WinnerAdSpy is an ad creative spy tool for mobile apps and games. It tracks competitor Facebook, Instagram and Meta ads and scores each one as a winner or loser.",
+      "product_type": [
+        "Marketing Tool"
+      ],
+      "notion_categories": [
+        "Advertising"
+      ],
+      "use_cases": [
+        "Study competitor mobile ad creatives",
+        "Find messaging patterns that run long",
+        "Browse a creative library for ideas",
+        "Spot likely winning ads early",
+        "Brief designers with real examples",
+        "Track competitor campaign changes"
+      ],
+      "website": "https://winneradspy.com/",
+      "slug": "winneradspy"
     },
     {
       "notion_id": "24ca6d41-709c-80fe-afae-faa10237635c",

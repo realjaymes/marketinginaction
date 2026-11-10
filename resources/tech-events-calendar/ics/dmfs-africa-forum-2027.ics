@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:DMFS Africa Forum 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:dmfs-africa-forum-2027-2027-05-12@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270514
+SUMMARY:DMFS Africa Forum 2027
+LOCATION:Black Diamond Hotel\, Lagos\, Nigeria
+DESCRIPTION:A digital finance infrastructure summit covering payments\, digital banking\, cross-border transactions\, artificial intelligence and financial technology partnerships. [DMFS Africa Forum](https://dmfsafrica.com/?utm_source=chatgpt.com) https://dmfsafrica.com/?utm_source=chatgpt.com
+URL:https://dmfsafrica.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

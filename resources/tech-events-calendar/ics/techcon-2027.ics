@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:TechCon 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:techcon-2027-2027-02-28@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270306
+SUMMARY:TechCon 2027
+LOCATION:The Avenue\, V&A Waterfront\, Cape Town\, South Africa
+DESCRIPTION:A technology conference exploring artificial intelligence\, tokenized assets\, financial innovation and emerging digital infrastructure. [TechCon](https://www.techcon.tech/?utm_source=chatgpt.com) https://www.techcon.tech/?utm_source=chatgpt.com
+URL:https://www.techcon.tech/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

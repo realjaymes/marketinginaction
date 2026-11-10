@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:GITEX Global 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:gitex-global-2026-2026-12-07@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261212
+SUMMARY:GITEX Global 2026
+LOCATION:Dubai World Trade Centre and Dubai Exhibition Centre\, Dubai\, United Arab Emirates
+DESCRIPTION:A global technology and AI exhibition connecting enterprises\, startups\, investors and governments across emerging technology sectors. [GITEX GLOBAL](https://www.gitex.com/plan-your-visit-2026?utm_source=chatgpt.com) https://www.gitex.com/?utm_source=chatgpt.com
+URL:https://www.gitex.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

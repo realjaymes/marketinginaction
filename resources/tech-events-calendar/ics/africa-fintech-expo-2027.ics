@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Fintech Expo 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-fintech-expo-2027-2027-05-25@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270525
+DTEND;VALUE=DATE:20270527
+SUMMARY:Africa Fintech Expo 2027
+LOCATION:Civic Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A financial technology exhibition connecting startups\, banks\, payment companies\, investors and regulators through product demonstrations\, conference sessions and networking. [Africa Fintech Expo 2027](https://africafintechexpo.com/?utm_source=chatgpt.com) https://africafintechexpo.com/?utm_source=chatgpt.com
+URL:https://africafintechexpo.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

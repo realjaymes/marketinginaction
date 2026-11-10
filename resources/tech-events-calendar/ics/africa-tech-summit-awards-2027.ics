@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Tech Summit Awards 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-tech-summit-awards-2027-2027-02-11@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY:Africa Tech Summit Awards 2027
+LOCATION:Sarit Expo Centre\, Nairobi\, Kenya
+DESCRIPTION:An awards programme recognising African technology companies and innovators across fintech\, AI\, health technology and climate technology. [Africa Tech Summit](https://www.africatechsummit.com/awards/?utm_source=chatgpt.com) https://www.africatechsummit.com/awards/?utm_source=chatgpt.com
+URL:https://www.africatechsummit.com/awards/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

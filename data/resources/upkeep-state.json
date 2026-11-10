@@ -3656,7 +3656,31 @@
       "heyclicky": "2026-10-30",
       "kino": "2026-10-30",
       "subvocal": "2026-10-31",
-      "agentdesktop": "2026-10-31"
+      "agentdesktop": "2026-10-31",
+      "pancake": "2026-11-10",
+      "resoai": "2026-11-10",
+      "dedica": "2026-11-10",
+      "kdlo": "2026-11-10",
+      "tulu": "2026-11-10",
+      "prefer": "2026-11-10",
+      "mentionbird": "2026-11-10",
+      "winneradspy": "2026-11-10",
+      "cutbay": "2026-11-10",
+      "ownfeed": "2026-11-10",
+      "mepersona": "2026-11-10",
+      "agentcraft": "2026-11-10",
+      "playad": "2026-11-10",
+      "superdraft": "2026-11-10",
+      "tractionwave": "2026-11-10",
+      "banger": "2026-11-10",
+      "comcent": "2026-11-10",
+      "moltsets": "2026-11-10",
+      "deepline": "2026-11-10",
+      "bloomberry": "2026-11-10",
+      "grokbot": "2026-11-10",
+      "viktor": "2026-11-10",
+      "scripe": "2026-11-10",
+      "coldiq": "2026-11-10"
     },
     "briefs_done": [
       "2026-10-20 Evening Brief.md",
@@ -3681,7 +3705,10 @@
       "2026-10-30 Evening Brief.md",
       "2026-10-30 Morning Brief.md",
       "2026-10-31 Morning Brief.md"
-    ]
+    ],
+    "leaders_tried": {
+      "juampi": "2026-11-10"
+    }
   },
   "leaders": {
     "adam-fishman": {

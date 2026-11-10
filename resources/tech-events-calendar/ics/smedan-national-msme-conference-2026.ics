@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:SMEDAN National MSME Conference 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:smedan-national-msme-conference-2026-2026-11-08@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261111
+SUMMARY:SMEDAN National MSME Conference 2026
+LOCATION:Ecobank Pan African Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A national entrepreneurship conference covering SME financing\, market access\, digital adoption\, AI and business growth. [GROW Nigerian 2026](https://conference.smedan.gov.ng/) https://conference.smedan.gov.ng/?utm_source=chatgpt.com
+URL:https://conference.smedan.gov.ng/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

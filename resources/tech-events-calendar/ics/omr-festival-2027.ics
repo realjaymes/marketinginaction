@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:OMR Festival 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:omr-festival-2027-2027-05-03@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270506
+SUMMARY:OMR Festival 2027
+LOCATION:Hamburg Messe\, Hamburg\, Germany
+DESCRIPTION:A major European digital marketing festival featuring marketing technology\, AI\, ecommerce\, creator economy discussions and business networking. [OMR](https://omr.com/en/events/festival/?utm_source=chatgpt.com) https://omr.com/en/events/festival/?utm_source=chatgpt.com
+URL:https://omr.com/en/events/festival/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

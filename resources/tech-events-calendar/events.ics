@@ -5,6 +5,16 @@ CALSCALE:GREGORIAN
 X-WR-CALNAME:MIA Tech Events Calendar
 X-WR-TIMEZONE:Africa/Lagos
 BEGIN:VEVENT
+UID:smedan-national-msme-conference-2026-2026-11-08@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261111
+SUMMARY:SMEDAN National MSME Conference 2026
+LOCATION:Ecobank Pan African Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A national entrepreneurship conference covering SME financing\, market access\, digital adoption\, AI and business growth. [GROW Nigerian 2026](https://conference.smedan.gov.ng/) https://conference.smedan.gov.ng/?utm_source=chatgpt.com
+URL:https://conference.smedan.gov.ng/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:web-summit-2026-11-09@marketinginaction.xyz
 DTSTAMP:20261109T000000Z
 DTSTART;VALUE=DATE:20261109
@@ -105,6 +115,16 @@ DESCRIPTION:An annual summit that brings together founders\, growth professional
 URL:https://www.growthafricasummit.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:lagos-ai-summit-2026-2026-11-23@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:Lagos AI Summit 2026
+LOCATION:Oriental Hotel\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A practitioner-led AI summit covering enterprise adoption\, financial services\, healthcare\, AI products and governance in Africa. [Lagos AI Summit](https://lagosaisummit.com/) https://lagosaisummit.com/?utm_source=chatgpt.com
+URL:https://lagosaisummit.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:admarp-digital-product-growth-summit-2026-11-27@marketinginaction.xyz
 DTSTAMP:20261109T000000Z
 DTSTART;VALUE=DATE:20261127
@@ -125,6 +145,16 @@ DESCRIPTION:Nigeria's main advertising and creative awards festival\, 21st editi
 URL:https://www.laif.com.ng/
 END:VEVENT
 BEGIN:VEVENT
+UID:afrofuturetech-ifest-2026-2026-12-03@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261203
+DTEND;VALUE=DATE:20261207
+SUMMARY:AfroFutureTech iFest 2026
+LOCATION:Elegushi Beach and partner venues\, Lagos\, Nigeria
+DESCRIPTION:A four-day festival connecting technology startups\, investors\, creators and cultural entrepreneurs through exhibitions\, competitions\, performances and networking. [AftiFest](https://aftifest.com/?utm_source=chatgpt.com) https://aftifest.com/?utm_source=chatgpt.com
+URL:https://aftifest.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:aot-lagos-8-2026-12-03@marketinginaction.xyz
 DTSTAMP:20261109T000000Z
 DTSTART;VALUE=DATE:20261203
@@ -133,6 +163,16 @@ SUMMARY:Art of Technology Lagos (AOT Lagos)
 LOCATION:Landmark Event Centre\, Victoria Island\, Lagos\, Nigeria
 DESCRIPTION:One-day Lagos conference on tech adoption\, ethics and governance for startups\, investors and policymakers. https://aotlagos.com/
 URL:https://aotlagos.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:gitex-global-2026-2026-12-07@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261207
+DTEND;VALUE=DATE:20261212
+SUMMARY:GITEX Global 2026
+LOCATION:Dubai World Trade Centre and Dubai Exhibition Centre\, Dubai\, United Arab Emirates
+DESCRIPTION:A global technology and AI exhibition connecting enterprises\, startups\, investors and governments across emerging technology sectors. [GITEX GLOBAL](https://www.gitex.com/plan-your-visit-2026?utm_source=chatgpt.com) https://www.gitex.com/?utm_source=chatgpt.com
+URL:https://www.gitex.com/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:national-summit-and-exhibition-on-the-orange-economy-2026-2026-12-08@marketinginaction.xyz
@@ -173,6 +213,16 @@ SUMMARY:Africa Tech Summit Nairobi
 LOCATION:Nairobi\, Kenya
 DESCRIPTION:Tech corporates\, investors\, startups\, fintech and climate leaders meet in Nairobi. https://www.africatechsummit.com/nairobi/
 URL:https://www.africatechsummit.com/nairobi/
+END:VEVENT
+BEGIN:VEVENT
+UID:africa-tech-summit-awards-2027-2027-02-11@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY:Africa Tech Summit Awards 2027
+LOCATION:Sarit Expo Centre\, Nairobi\, Kenya
+DESCRIPTION:An awards programme recognising African technology companies and innovators across fintech\, AI\, health technology and climate technology. [Africa Tech Summit](https://www.africatechsummit.com/awards/?utm_source=chatgpt.com) https://www.africatechsummit.com/awards/?utm_source=chatgpt.com
+URL:https://www.africatechsummit.com/awards/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:catalyst-africa-2027-2027-02-18@marketinginaction.xyz
@@ -223,6 +273,16 @@ SUMMARY:The MarTech Summit Berlin 2027
 LOCATION:Grand Hyatt Berlin\, Berlin\, Germany
 DESCRIPTION:A marketing technology summit covering AI agents\, marketing automation\, customer data\, attribution\, lifecycle marketing and customer experience. [The MarTech Summit](https://themartechsummit.com/berlin) https://themartechsummit.com/berlin?utm_source=chatgpt.com
 URL:https://themartechsummit.com/berlin?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:techcon-2027-2027-02-28@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270228
+DTEND;VALUE=DATE:20270306
+SUMMARY:TechCon 2027
+LOCATION:The Avenue\, V&A Waterfront\, Cape Town\, South Africa
+DESCRIPTION:A technology conference exploring artificial intelligence\, tokenized assets\, financial innovation and emerging digital infrastructure. [TechCon](https://www.techcon.tech/?utm_source=chatgpt.com) https://www.techcon.tech/?utm_source=chatgpt.com
+URL:https://www.techcon.tech/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:lagos-finance-summit-2027-2027-03-03@marketinginaction.xyz
@@ -325,6 +385,16 @@ DESCRIPTION:A gaming industry convention bringing together game developers\, esp
 URL:https://wagconvention.com/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
+UID:omr-festival-2027-2027-05-03@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270503
+DTEND;VALUE=DATE:20270506
+SUMMARY:OMR Festival 2027
+LOCATION:Hamburg Messe\, Hamburg\, Germany
+DESCRIPTION:A major European digital marketing festival featuring marketing technology\, AI\, ecommerce\, creator economy discussions and business networking. [OMR](https://omr.com/en/events/festival/?utm_source=chatgpt.com) https://omr.com/en/events/festival/?utm_source=chatgpt.com
+URL:https://omr.com/en/events/festival/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:saastr-ai-annual-2027-05-11@marketinginaction.xyz
 DTSTAMP:20261109T000000Z
 DTSTART;VALUE=DATE:20270511
@@ -345,6 +415,16 @@ DESCRIPTION:AI summit and tech expo in Nairobi. https://www.aieverythingkenya.co
 URL:https://www.aieverythingkenya.com/
 END:VEVENT
 BEGIN:VEVENT
+UID:dmfs-africa-forum-2027-2027-05-12@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270512
+DTEND;VALUE=DATE:20270514
+SUMMARY:DMFS Africa Forum 2027
+LOCATION:Black Diamond Hotel\, Lagos\, Nigeria
+DESCRIPTION:A digital finance infrastructure summit covering payments\, digital banking\, cross-border transactions\, artificial intelligence and financial technology partnerships. [DMFS Africa Forum](https://dmfsafrica.com/?utm_source=chatgpt.com) https://dmfsafrica.com/?utm_source=chatgpt.com
+URL:https://dmfsafrica.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:africa-energy-technology-conference-2027-2027-05-18@marketinginaction.xyz
 DTSTAMP:20261109T000000Z
 DTSTART;VALUE=DATE:20270518
@@ -355,6 +435,16 @@ DESCRIPTION:A pan-African technology conference focused on developing\, commerci
 URL:https://www.aetconference.com/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
+UID:africa-fintech-expo-2027-2027-05-25@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270525
+DTEND;VALUE=DATE:20270527
+SUMMARY:Africa Fintech Expo 2027
+LOCATION:Civic Centre\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A financial technology exhibition connecting startups\, banks\, payment companies\, investors and regulators through product demonstrations\, conference sessions and networking. [Africa Fintech Expo 2027](https://africafintechexpo.com/?utm_source=chatgpt.com) https://africafintechexpo.com/?utm_source=chatgpt.com
+URL:https://africafintechexpo.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:web-summit-vancouver-2027-05-25@marketinginaction.xyz
 DTSTAMP:20261109T000000Z
 DTSTART;VALUE=DATE:20270525
@@ -363,6 +453,16 @@ SUMMARY:Web Summit Vancouver
 LOCATION:Vancouver\, Canada
 DESCRIPTION:North American Web Summit edition (formerly Collision). https://vancouver.websummit.com/
 URL:https://vancouver.websummit.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:the-ai-summit-london-2027-2027-06-09@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270611
+SUMMARY:The AI Summit London 2027
+LOCATION:Tobacco Dock\, London\, United Kingdom
+DESCRIPTION:A commercial AI summit connecting enterprise leaders\, startups and technology providers through demonstrations\, conferences and networking. [The AI Summit London](https://london.theaisummit.com/) https://london.theaisummit.com/?utm_source=chatgpt.com
+URL:https://london.theaisummit.com/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:lagos-tech-week-2027-2027-06-14@marketinginaction.xyz
@@ -423,6 +523,16 @@ SUMMARY:UNBOUND (formerly INBOUND)
 LOCATION:Boston\, United States
 DESCRIPTION:HubSpot's annual go-to-market conference\, rebranded from INBOUND to UNBOUND. https://unbound.hubspot.com/
 URL:https://unbound.hubspot.com/
+END:VEVENT
+BEGIN:VEVENT
+UID:brightonseo-san-diego-2027-2027-09-09@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270909
+DTEND;VALUE=DATE:20270911
+SUMMARY:brightonSEO San Diego 2027
+LOCATION:San Diego Convention Center\, San Diego\, United States
+DESCRIPTION:A search and performance marketing conference covering SEO\, AI search\, PPC\, paid social\, analytics and digital marketing strategy. [BrightonSEO](https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com) https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com
+URL:https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:the-martech-summit-dubai-2027-2027-09-28@marketinginaction.xyz

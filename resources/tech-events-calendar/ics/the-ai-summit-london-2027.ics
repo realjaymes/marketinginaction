@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:The AI Summit London 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:the-ai-summit-london-2027-2027-06-09@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270611
+SUMMARY:The AI Summit London 2027
+LOCATION:Tobacco Dock\, London\, United Kingdom
+DESCRIPTION:A commercial AI summit connecting enterprise leaders\, startups and technology providers through demonstrations\, conferences and networking. [The AI Summit London](https://london.theaisummit.com/) https://london.theaisummit.com/?utm_source=chatgpt.com
+URL:https://london.theaisummit.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

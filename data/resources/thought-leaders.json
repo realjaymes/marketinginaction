@@ -1,8 +1,8 @@
 {
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
-  "updated": "2026-11-09",
-  "count": 74,
+  "updated": "2026-11-10",
+  "count": 75,
   "items": [
     {
       "notion_id": "207a6d41-709c-803d-ad36-db4277a36030",
@@ -1913,6 +1913,25 @@
       "x_verified": true,
       "headshot": "img/hector-serrano.jpg",
       "headshot_source": "x:@hectorserrranoo"
+    },
+    {
+      "name": "Juampi",
+      "domains": [
+        "Growth Marketing",
+        "AI",
+        "GTM Engineering"
+      ],
+      "x": "https://x.com/juampitech",
+      "linkedin": "",
+      "newsletter": "",
+      "website": "http://juampi.dev",
+      "slug": "juampi",
+      "role": "Growth",
+      "company": "Firecrawl",
+      "one_liner": "Shares his work on developer growth, GTM engineering and AI agents.",
+      "profile_source": "https://x.com/juampitech",
+      "region": "Latin America",
+      "country": "Argentina"
     }
   ]
 }

@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Lagos AI Summit 2026
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:lagos-ai-summit-2026-2026-11-23@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20261123
+DTEND;VALUE=DATE:20261124
+SUMMARY:Lagos AI Summit 2026
+LOCATION:Oriental Hotel\, Victoria Island\, Lagos\, Nigeria
+DESCRIPTION:A practitioner-led AI summit covering enterprise adoption\, financial services\, healthcare\, AI products and governance in Africa. [Lagos AI Summit](https://lagosaisummit.com/) https://lagosaisummit.com/?utm_source=chatgpt.com
+URL:https://lagosaisummit.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

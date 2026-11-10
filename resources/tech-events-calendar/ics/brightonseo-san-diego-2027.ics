@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:brightonSEO San Diego 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:brightonseo-san-diego-2027-2027-09-09@marketinginaction.xyz
+DTSTAMP:20261109T000000Z
+DTSTART;VALUE=DATE:20270909
+DTEND;VALUE=DATE:20270911
+SUMMARY:brightonSEO San Diego 2027
+LOCATION:San Diego Convention Center\, San Diego\, United States
+DESCRIPTION:A search and performance marketing conference covering SEO\, AI search\, PPC\, paid social\, analytics and digital marketing strategy. [BrightonSEO](https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com) https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com
+URL:https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR
