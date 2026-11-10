@@ -688,7 +688,9 @@
       "website": "",
       "notion_headshot": "",
       "slug": "feranmi-ajetomobi",
-      "profile_source": "https://ng.linkedin.com/in/ajetomobiferanmi"
+      "profile_source": "https://ng.linkedin.com/in/ajetomobiferanmi",
+      "headshot": "img/feranmi-ajetomobi.jpg",
+      "headshot_source": "linkedin"
     },
     {
       "notion_id": "207a6d41-709c-8082-9083-cf9e3b27691b",
@@ -737,7 +739,9 @@
       "region": "Africa",
       "country": "Nigeria",
       "one_liner": "Works on advertising strategy, African pop culture and consumer trends.",
-      "profile_source": "https://brandspurng.com/2025/09/03/chain-reactions-africa-names-franklin-ozekhome-as-executive-vice-president-strategy-innovation-launches-africas-first-intelligent-robot-to-service-clients/"
+      "profile_source": "https://brandspurng.com/2025/09/03/chain-reactions-africa-names-franklin-ozekhome-as-executive-vice-president-strategy-innovation-launches-africas-first-intelligent-robot-to-service-clients/",
+      "headshot": "img/franklin-ozekhome.jpg",
+      "headshot_source": "linkedin"
     },
     {
       "notion_id": "207a6d41-709c-80d6-9a48-fc9c6cfd2479",
@@ -902,7 +906,9 @@
       "slug": "jan-meinecke",
       "one_liner": "Trains business teams to use AI at work, from prompts to agents.",
       "profile_source": "https://go9x.com/",
-      "company": "9x"
+      "company": "9x",
+      "headshot": "img/jan-meinecke.jpg",
+      "headshot_source": "linkedin"
     },
     {
       "notion_id": "27aa6d41-709c-80f1-8404-ff4977ca32e0",
@@ -1435,7 +1441,9 @@
       "role": "Newsletter writer",
       "company": "Growth Case Studies",
       "one_liner": "Writes growth case studies on tech companies, product-led growth and retention.",
-      "profile_source": "https://growthcasestudies.com/"
+      "profile_source": "https://growthcasestudies.com/",
+      "headshot": "img/olabinjo-adeniran.jpg",
+      "headshot_source": "linkedin"
     },
     {
       "notion_id": "207a6d41-709c-80c1-8229-c5ae7eb7a8b9",
@@ -1551,7 +1559,9 @@
       "role": "Co-founder",
       "company": "Fletch PMM",
       "one_liner": "Teaches B2B SaaS positioning and go-to-market for early-stage startups.",
-      "profile_source": "https://metacast.app/podcast/the-marchitect/BgB01XUP/s3-episode-6-stop-leading-with-benefits-fletch-pmm-s-robert-and-anthony-explain-why/yQ4vcVv2"
+      "profile_source": "https://metacast.app/podcast/the-marchitect/BgB01XUP/s3-episode-6-stop-leading-with-benefits-fletch-pmm-s-robert-and-anthony-explain-why/yQ4vcVv2",
+      "headshot": "img/robert-kaminski.jpg",
+      "headshot_source": "x:@heyrobk"
     },
     {
       "notion_id": "233a6d41-709c-8082-a1cf-d499516e789e",
