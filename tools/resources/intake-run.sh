@@ -37,6 +37,7 @@ done
 paths() { local list="$1" p; local -a out; for p in ${(s:;:)list}; do [[ -n "$p" ]] && out+=("$VAULT/$p"); done; print -l -- $out; }
 
 if [[ -z "${INTAKE_WT:-}" && ! -d "$WT" ]]; then
+  git -C "$REPO" worktree prune
   git -C "$REPO" worktree add --detach "$WT" origin/main >/dev/null 2>&1 || { echo "<p>⚠️ MIA resources intake: could not create its worktree.</p>"; exit 1; }
 fi
 cd "$WT" || exit 1
