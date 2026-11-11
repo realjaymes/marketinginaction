@@ -81,7 +81,7 @@
             "name": "Does the domain extension change the cost of outbound?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Materially, in year two. Cheap first-year extensions carry the steepest renewals. At Spaceship in September 2026, .online and .site register at $0.98 and renew at $15.08, a 1,439 percent jump, and .info registers at $3.11 and renews at $21.74. Flat renewers like .us at $6.48 and .net at $11.20 cost more on day one and less every year after. If you rotate domains between campaigns you keep paying first-year pricing and the cheap extensions win. If you keep them, the flat renewers win."
+              "text": "Materially, in year two. Cheap first-year extensions carry the steepest renewals. At Spaceship in November 2026, .online and .site register at $0.98 and renew at $15.08, a 1,439 percent jump, and .info registers at $3.11 and renews at $21.74. Extensions that renew at their first-year price, like .net at $11.20 at Spaceship or .com at $11.17 at Cloudflare, cost more on day one and less every year after. If you rotate domains between campaigns you keep paying first-year pricing and the cheap extensions win. If you keep them, the flat renewers win."
             }
           },
           {
@@ -1108,6 +1108,11 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
 
               <div class="occ-fields occ-2">
                 <div class="occ-field">
+                  <label for="occReg">Registrar</label>
+                  <div class="occ-inp"><select id="occReg"></select></div>
+                  <span class="occ-help" id="occRegHelp"></span>
+                </div>
+                <div class="occ-field">
                   <label for="occTld">Domain extension</label>
                   <div class="occ-inp"><select id="occTld"></select></div>
                   <span class="occ-help" id="occTldHelp"></span>
@@ -1318,14 +1323,15 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
       <section class="occ-panel">
           <details class="occ-fold">
           <summary>
-            <span class="occ-foldlead">Verified 21 September 2026</span>
+            <span class="occ-foldlead">Verified 11 November 2026</span>
             <span class="occ-foldtitle">Domain pricing, and why year two moves</span>
-            <span class="occ-foldmeta">10 extensions, first-year against renewal</span>
+            <span class="occ-foldmeta">10 extensions, 5 registrars, first year against renewal</span>
           </summary>
           <p class="occ-lede" style="margin-top:18px">
-            Registrar pricing at Spaceship, checked live. The pattern is consistent across registrars even
-            where the exact figures differ: the cheaper the first year, the steeper the renewal. This is the
-            table behind the rotation toggle.
+            Prices from Spaceship, Cloudflare, Porkbun, Namecheap and Dynadot, checked live. The table shows
+            the registrar picked above. First-year prices include each registrar's current sale and change
+            often. Renewals are the price you pay every year after. At every registrar, the cheaper the first
+            year, the steeper the renewal. This is the table behind the rotation toggle.
           </p>
           <div class="occ-scroll">
             <table class="occ-table">
@@ -1335,6 +1341,7 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
                   <th class="occ-num">First year</th>
                   <th class="occ-num">Renewal</th>
                   <th class="occ-num">Renewal premium</th>
+                  <th>Lowest renewal</th>
                   <th>Best for</th>
                 </tr>
               </thead>
@@ -1343,10 +1350,13 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
           </div>
           <p class="occ-note">
             <strong>The counterintuitive part.</strong> Cheap first-year extensions are only cheap if you
-            rotate. Keep a <code>.online</code> for two years and it costs more than a <code>.com</code>.
-            Flat renewers like <code>.us</code>, <code>.net</code> and <code>.biz</code> cost more on day one
-            and less every year after, so the right extension is a function of the rotation toggle above,
-            not a matter of taste.
+            rotate. Keep a <code>.online</code> for two years at most registrars, or three at Spaceship, and
+            it costs more than a <code>.com</code>. So the right extension depends on the rotation toggle
+            above, not on taste. Cloudflare adds no markup and runs few first-year sales, so it is rarely
+            cheapest in year one but has the lowest renewal on five of these ten extensions. Before you buy
+            cold-email domains there, check how your inbox provider connects them. Cloudflare only registers
+            domains that use its own DNS on your account, and many inbox providers set up mailboxes by taking
+            over the domain's nameservers.
           </p>
           </details>
       </section>
@@ -1484,8 +1494,8 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
                 <tr>
                   <td><strong>Domains</strong></td>
                   <td>See table above</td>
-                  <td>Spaceship registration and renewal pricing, read from each extension's own pricing page.</td>
-                  <td><a href="https://www.spaceship.com/domains/" target="_blank" rel="noreferrer">spaceship.com</a></td>
+                  <td>Registration and renewal prices read on 11 November 2026 from each registrar's own pricing pages, and from the registrar dashboard for Cloudflare. First-year prices are that day's checkout price without coupon codes.</td>
+                  <td><a href="https://www.spaceship.com/domains/" target="_blank" rel="noreferrer">Spaceship</a>, <a href="https://www.cloudflare.com/products/registrar/" target="_blank" rel="noreferrer">Cloudflare</a>, <a href="https://porkbun.com/products/domains" target="_blank" rel="noreferrer">Porkbun</a>, <a href="https://www.namecheap.com/domains/" target="_blank" rel="noreferrer">Namecheap</a>, <a href="https://www.dynadot.com/domain/prices" target="_blank" rel="noreferrer">Dynadot</a></td>
                 </tr>
               </tbody>
             </table>
@@ -1505,17 +1515,37 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
          * Reference data. Every figure verified 2026-09-21 against the
          * vendor's own pricing page; sources are listed in the page table.
          * ------------------------------------------------------------- */
+        /* Domain prices, [first year, renewal] in USD, read 2026-11-11 from each
+         * registrar's own pricing pages (Cloudflare from its registrar dashboard).
+         * First-year prices are that day's checkout price without coupon codes. */
+        var REGISTRARS = [
+          { id: "spaceship",  name: "Spaceship",  note: "The cheapest first year on most extensions here and the lowest renewal on half of them. Free WHOIS privacy, and the domain can point at any DNS host, including an inbox provider's." },
+          { id: "cloudflare", name: "Cloudflare", note: "Adds no markup, and charges the same price for the first year and renewal on seven of these ten extensions. Free WHOIS privacy. The domain has to use Cloudflare's own DNS on your account." },
+          { id: "porkbun",    name: "Porkbun",    note: "Close to Spaceship on most extensions. Free WHOIS privacy, and the domain can point at any DNS host." },
+          { id: "namecheap",  name: "Namecheap",  note: "Low first-year sale prices and the highest renewals on every extension here. Free WHOIS privacy." },
+          { id: "dynadot",    name: "Dynadot",    note: "Close to Spaceship and Porkbun. Free WHOIS privacy, and the domain can point at any DNS host." }
+        ];
         var TLDS = [
-          { tld: ".com",    first: 8.88,  renew: 9.98,  best: "Keeping. Cheap to hold, and the most trusted extension." },
-          { tld: ".net",    first: 11.20, renew: 11.20, best: "Keeping. Flat forever, so year five costs what year one did." },
-          { tld: ".us",     first: 6.48,  renew: 6.48,  best: "Keeping. The cheapest flat renewer, US presence required." },
-          { tld: ".org",    first: 6.65,  renew: 11.39, best: "Either. Cheap enough to rotate, mild enough to keep." },
-          { tld: ".biz",    first: 18.63, renew: 18.63, best: "Keeping, if you can live with the day-one price." },
-          { tld: ".co",     first: 31.05, renew: 31.05, best: "Neither, on cost. Flat, but the most expensive on this list." },
-          { tld: ".xyz",    first: 1.86,  renew: 13.77, best: "Rotating. Very cheap to buy, painful to hold." },
-          { tld: ".info",   first: 3.11,  renew: 21.74, best: "Rotating only. Holding it costs seven times the first year." },
-          { tld: ".online", first: 0.98,  renew: 15.08, best: "Rotating only. Renews at fifteen times the first year." },
-          { tld: ".site",   first: 0.98,  renew: 15.08, best: "Rotating only. Renews at fifteen times the first year." }
+          { tld: ".com",    best: "Keeping. Cheap to hold, and the most trusted extension.",
+            p: { spaceship: [9.48, 10.68], cloudflare: [11.17, 11.17], porkbun: [11.81, 11.81], namecheap: [12.08, 19.98], dynadot: [11.62, 11.62] } },
+          { tld: ".net",    best: "Keeping. Renews at its first-year price everywhere except Namecheap.",
+            p: { spaceship: [11.20, 11.20], cloudflare: [11.86, 11.86], porkbun: [12.52, 12.52], namecheap: [12.48, 18.58], dynadot: [12.52, 12.52] } },
+          { tld: ".us",     best: "Keeping. The cheapest extension to hold, but you need a US address or business to register it.",
+            p: { spaceship: [4.14, 6.48], cloudflare: [6.50, 6.50], porkbun: [4.43, 7.00], namecheap: [5.98, 10.98], dynadot: [4.30, 6.96] } },
+          { tld: ".org",    best: "Either. Cheap enough to rotate, mild enough to keep.",
+            p: { spaceship: [6.65, 11.39], cloudflare: [8.50, 11.20], porkbun: [7.98, 11.84], namecheap: [8.48, 18.98], dynadot: [7.99, 11.64] } },
+          { tld: ".biz",    best: "Rotating. The first year is on sale at most registrars, and holding it costs $18 or more a year.",
+            p: { spaceship: [6.48, 18.63], cloudflare: [18.20, 18.20], porkbun: [6.69, 19.05], namecheap: [8.48, 28.98], dynadot: [6.65, 18.93] } },
+          { tld: ".co",     best: "Neither. The most expensive extension here to buy and to hold.",
+            p: { spaceship: [15.53, 31.05], cloudflare: [30.00, 30.00], porkbun: [15.76, 31.20], namecheap: [19.98, 45.48], dynadot: [15.50, 31.20] } },
+          { tld: ".xyz",    best: "Rotating. Under $2.10 in year one everywhere except Cloudflare, then $13.50 or more a year to hold.",
+            p: { spaceship: [1.86, 13.77], cloudflare: [13.50, 13.50], porkbun: [2.04, 14.21], namecheap: [2.00, 21.48], dynadot: [1.99, 14.45] } },
+          { tld: ".info",   best: "Rotating only. Renews at $21 or more everywhere.",
+            p: { spaceship: [3.11, 21.74], cloudflare: [21.20, 21.20], porkbun: [3.60, 22.14], namecheap: [3.98, 35.98], dynadot: [3.99, 22.69] } },
+          { tld: ".online", best: "Rotating only. Renews at $15 at Spaceship and $27 or more elsewhere.",
+            p: { spaceship: [0.98, 15.08], cloudflare: [4.99, 27.70], porkbun: [1.96, 28.84], namecheap: [0.98, 35.68], dynadot: [2.50, 29.64] } },
+          { tld: ".site",   best: "Rotating only. Renews at $15 at Spaceship and $26.97 or more elsewhere.",
+            p: { spaceship: [0.98, 15.08], cloudflare: [4.99, 27.70], porkbun: [1.96, 28.84], namecheap: [0.98, 29.98], dynadot: [2.50, 26.97] } }
         ];
 
         var PRESETS = {
@@ -2363,40 +2393,77 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
         /* ---------------------------------------------------------------
          * Wiring
          * ------------------------------------------------------------- */
-        function fillTldTable() {
+        function registrar() {
+          var id = $("occReg").value;
+          return REGISTRARS.filter(function (r) { return r.id === id; })[0] || REGISTRARS[0];
+        }
+
+        function lowestRenewal(t) {
+          var low = null;
+          REGISTRARS.forEach(function (r) {
+            var p = t.p[r.id];
+            if (p && (!low || p[1] < low.renew)) low = { name: r.name, renew: p[1] };
+          });
+          return low;
+        }
+
+        function fillRegistrars() {
+          var sel = $("occReg");
+          REGISTRARS.forEach(function (r) {
+            var opt = document.createElement("option");
+            opt.value = r.id;
+            opt.textContent = r.name;
+            sel.appendChild(opt);
+          });
+          sel.value = "spaceship";
+        }
+
+        function fillTldTable(keepPrices) {
           var body = $("occTldTable");
           var sel = $("occTld");
+          var keep = sel.value || ".com";
+          var reg = registrar();
+          body.innerHTML = "";
+          sel.innerHTML = "";
           TLDS.forEach(function (t) {
+            var p = t.p[reg.id];
             var opt = document.createElement("option");
             opt.value = t.tld;
-            var prem = t.first > 0 ? Math.round((t.renew / t.first - 1) * 100) : 0;
-            opt.textContent = t.tld + "  —  " + usd2(t.first) + " new, " + usd2(t.renew) + " renewal";
+            var prem = p[0] > 0 ? Math.round((p[1] / p[0] - 1) * 100) : 0;
+            opt.textContent = t.tld + "  —  " + usd2(p[0]) + " new, " + usd2(p[1]) + " renewal";
             sel.appendChild(opt);
 
+            var low = lowestRenewal(t);
             var tr = document.createElement("tr");
             tr.innerHTML =
               "<td><strong>" + t.tld + "</strong></td>" +
-              '<td class="occ-num">' + usd2(t.first) + "</td>" +
-              '<td class="occ-num">' + usd2(t.renew) + "</td>" +
+              '<td class="occ-num">' + usd2(p[0]) + "</td>" +
+              '<td class="occ-num">' + usd2(p[1]) + "</td>" +
               '<td class="occ-num ' + (prem === 0 ? "occ-flat" : "occ-up") + '">' +
               (prem === 0 ? "flat" : "+" + prem.toLocaleString("en-US") + "%") + "</td>" +
+              "<td>" + low.name + " " + usd2(low.renew) + "</td>" +
               "<td>" + t.best + "</td>";
             body.appendChild(tr);
           });
-          sel.value = ".com";
-          applyTld();
+          sel.value = keep;
+          applyTld(keepPrices);
         }
 
-        function applyTld() {
+        function applyTld(keepPrices) {
           var t = TLDS.filter(function (x) { return x.tld === $("occTld").value; })[0];
           if (!t) return;
-          $("occDomFirst").value = t.first.toFixed(2);
-          $("occDomRenew").value = t.renew.toFixed(2);
-          var prem = t.first > 0 ? Math.round((t.renew / t.first - 1) * 100) : 0;
+          var reg = registrar();
+          var p = t.p[reg.id];
+          if (!keepPrices) {
+            $("occDomFirst").value = p[0].toFixed(2);
+            $("occDomRenew").value = p[1].toFixed(2);
+          }
+          var prem = p[0] > 0 ? Math.round((p[1] / p[0] - 1) * 100) : 0;
           $("occTldHelp").textContent =
             prem === 0
               ? t.tld + " renews at the same price it registers for. " + t.best
               : t.tld + " renews " + prem.toLocaleString("en-US") + "% above its first year. " + t.best;
+          $("occRegHelp").textContent = reg.note;
         }
 
         function applyAccent() {
@@ -2503,6 +2570,10 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
           applyTld();
           compute();
         });
+        $("occReg").addEventListener("change", function () {
+          fillTldTable();
+          compute();
+        });
 
         /* Mark derived fields as overridden once typed into */
         ["occInboxes", "occDomains", "occSourced", "occSeqPrice"].forEach(function (id) {
@@ -2554,7 +2625,7 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
             applyPreset();
             return;
           }
-          if (step === "4") applyTld();
+          if (step === "4") fillTldTable();
           if (step === "5") {
             Object.keys(state.rowState).forEach(function (k) {
               if (k.indexOf(state.preset + ":") === 0) delete state.rowState[k];
@@ -2699,6 +2770,8 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
             else el.value = o.f[id];
           });
           (o.ov || []).forEach(function (k) { overrides[k] = true; });
+          /* Redraws the table for the restored registrar, keeping the link's domain prices. */
+          fillTldTable(true);
           compute();
           return true;
         }
@@ -2804,6 +2877,7 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
         });
 
         /* Boot */
+        fillRegistrars();
         fillTldTable();
         $("occAuto").value = "self";
         $("occAutoPrice").value = AUTOMATION.self.price;
