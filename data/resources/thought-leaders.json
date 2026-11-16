@@ -2012,7 +2012,6 @@
       "x": "",
       "linkedin": "",
       "newsletter": "",
-      "website": "https://www.instagram.com/anthonywolve/",
       "slug": "anthony-eigbe",
       "role": "Chief Creative Officer, West Africa",
       "company": "TECNO Mobile",
@@ -2021,7 +2020,9 @@
       "region": "Africa",
       "country": "Nigeria",
       "headshot": "img/anthony-eigbe.jpg",
-      "headshot_source": "canneslions.com jury profile photo"
+      "headshot_source": "canneslions.com jury profile photo",
+      "instagram": "https://www.instagram.com/anthonywolve/",
+      "website": ""
     }
   ]
 }

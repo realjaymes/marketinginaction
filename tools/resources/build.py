@@ -870,10 +870,10 @@ def validate_leaders(d):
             errs.append(f"{s}: domains must be from {DOMAINS}")
         if i.get("region") and i["region"] not in REGIONS:
             errs.append(f"{s}: region must be one of {REGIONS}")
-        for k in ("x", "linkedin", "newsletter", "website"):
+        for k in ("x", "linkedin", "newsletter", "website", "instagram"):
             if bad_link(i.get(k)):
                 errs.append(f"{s}: {k} is not a link: {i[k]}")
-        if not any(i.get(k) for k in ("x", "linkedin", "newsletter", "website")):
+        if not any(i.get(k) for k in ("x", "linkedin", "newsletter", "website", "instagram")):
             errs.append(f"{s}: needs at least one link")
         lp = i.get("latest_post")
         if lp and (not lp.get("title") or not lp.get("url") or bad_link(lp["url"]) or not iso(lp.get("date"))):
@@ -933,6 +933,8 @@ def leader_card(i):
         links.append(link(i["linkedin"], "LinkedIn"))
     if i.get("x"):
         links.append(link(i["x"], "X"))
+    if i.get("instagram"):
+        links.append(link(i["instagram"], "Instagram"))
     text = " ".join([i["name"], role, i.get("one_liner") or "", i.get("country") or ""] + i["domains"]).lower()
     return f"""          <article class="db-card" id="{E(i['slug'])}" data-domain="{E(' '.join(tok(d) for d in i['domains']))}" data-region="{E(tok(i.get('region') or ''))}" data-text="{E(text, quote=True)}">
             <div class="db-person">
@@ -998,7 +1000,7 @@ def leaders_files():
 
     def person(i):
         p = {"@type": "Person", "name": i["name"],
-             "sameAs": [i[k] for k in ("linkedin", "x", "website", "newsletter") if i.get(k)],
+             "sameAs": [i[k] for k in ("linkedin", "x", "instagram", "website", "newsletter") if i.get(k)],
              "knowsAbout": i["domains"]}
         if i.get("role"):
             p["jobTitle"] = i["role"]
