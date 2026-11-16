@@ -561,6 +561,29 @@ footer{background:var(--ink);color:#fff}
 .res.sme3 figcaption strong{font-size:1rem}
 @media(max-width:600px){.res.sme3{grid-template-columns:1fr}.res.sme3 figure:first-child{grid-row:auto}}
 
+
+/* Weave Loft case */ .wl-block{margin:0 auto 44px;max-width:1000px}
+.wl-line{text-align:center;font-size:1rem;line-height:1.55;margin:4px auto 18px;max-width:760px}
+.wl-thumbs{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.wl-thumbs a{display:block;width:min(300px,100%);border:3px solid var(--ink);border-radius:16px;overflow:hidden;box-shadow:var(--st)}
+.wl-thumbs img{display:block;width:100%;height:auto}
+.wl-case{background:var(--white);border:3px solid var(--ink);border-radius:26px;box-shadow:var(--st-lg);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);overflow:hidden}
+.wl-case__shots{background:#efeae2;border-right:3px solid var(--ink);padding:18px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.wl-case__shots a{display:block;border:2px solid var(--ink);border-radius:14px;overflow:hidden}
+.wl-case__shots img{display:block;width:100%;height:auto}
+.wl-case__body{padding:26px 26px 24px}
+.wl-case__body h3{margin:10px 0 6px;font-size:1.6rem;letter-spacing:-.03em;line-height:1.15}
+.wl-case__body p{margin:0 0 16px;color:var(--muted);line-height:1.55}
+.wl-steps{list-style:none;margin:0 0 18px;padding:0;display:grid;gap:10px}
+.wl-steps li{display:grid;grid-template-columns:86px 1fr;gap:12px;align-items:start;border:2px solid var(--ink);border-radius:14px;padding:10px 12px;background:var(--sa)}
+.wl-steps li b{font-size:.8rem;text-transform:uppercase;letter-spacing:.04em}
+.wl-steps li.big{background:var(--green)}
+.wl-mini{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.wl-mini div{border:2px solid var(--ink);border-radius:12px;padding:8px;text-align:center;background:var(--white)}
+.wl-mini b{display:block;font-size:1.15rem;font-weight:900}
+.wl-mini span{font-size:.72rem;color:var(--muted)}
+.wl-note{text-align:center;font-size:.84rem;color:var(--muted);margin-top:14px}
+@media (max-width:760px){.wl-case{grid-template-columns:1fr}.wl-case__shots{border-right:0;border-bottom:3px solid var(--ink)}.wl-mini{grid-template-columns:1fr 1fr}}
 </style>
   </head>
 <body>
@@ -625,9 +648,9 @@ footer{background:var(--ink);color:#fff}
 <div class="tabs" role="tablist"><button class="tab" role="tab" aria-selected="true" data-t="res">Results</button><button class="tab" role="tab" aria-selected="false" data-t="prog">Programs</button><button class="tab" role="tab" aria-selected="false" data-t="start">Start here</button></div>
 <div class="tp" data-p="res">
 <div class="res sme3">
+<figure><a class="imglink" href="/assets/credibility/client-result-weave-loft-pair-tall.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/client-result-weave-loft-pair-tall.jpg" alt="Top: Meta Ads Manager showing Instagram profile visits and amount spent, 10 October to 11 November. Below: the owner's WhatsApp message reporting 70 customers, 92 wigs and revenue of 119,000,000 naira" loading="eager" width="440" height="581"></a><figcaption><strong>&#8358;119M in sales. &#8358;1.27M in ad spend. 94x return on ad spend.</strong>Meta counted 48,821 profile visits; her orders close in DMs. 70 customers, 92 wigs. The Weave Loft.</figcaption></figure>
 <figure><a class="imglink" href="/assets/credibility/client-result-20x-roas.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/client-result-20x-roas.jpg" alt="Client result: 42 purchases from Meta Ads" loading="eager" width="800" height="495"></a><figcaption><strong>42 purchases, &#8358;6,680 each</strong>Meta Ads dashboard for one client. &#8358;280,540 ad spend.</figcaption></figure>
 <figure><a class="imglink" href="/assets/credibility/client-result-6x-roas.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/client-result-6x-roas.jpg" alt="Client result: 6x ROAS from Meta Ads" loading="eager" width="800" height="322"></a><figcaption><strong>6.34x return</strong>Meta Ads dashboard for a different client. &#8358;82,450 ad spend, 77 purchases.</figcaption></figure>
-<figure><a class="imglink" href="/assets/credibility/sales-backend.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/sales-backend.jpg" alt="Sales backend showing &#8358;1.4M+ net income, 309% ROAS" loading="eager" width="800" height="436"></a><figcaption><strong>&#8358;2.1M+ revenue, 309% ROAS</strong>Sales backend from real campaigns. 317 customers, &#8358;696K ad spend.</figcaption></figure>
 </div>
 <p class="win__note">Tap an image to see it full size. Business owner testimonials are below.</p>
 </div>
@@ -642,8 +665,28 @@ footer{background:var(--ink);color:#fff}
 <div class="truststrip"><div class="wrap"><span class="lab">TRUSTED BY BUSINESS OWNERS IN</span><span>LAGOS</span><span>ABUJA</span><span>PORT HARCOURT</span><span>IBADAN</span><span>LONDON</span></div></div>
 
 <section class="s s-a" id="results"><div class="wrap">
+
+<!-- Weave Loft case -->
+<div class="wl-block">
+<div class="wl-case">
+<div class="wl-case__shots"><a href="/assets/credibility/client-result-weave-loft-sale.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/client-result-weave-loft-sale.jpg" alt="WhatsApp messages: 70 customers, 92 wigs, revenue 119,000,000 naira" loading="lazy"></a><a href="/assets/credibility/client-result-weave-loft-september.jpg" target="_blank" rel="noopener"><img src="/assets/credibility/client-result-weave-loft-september.jpg" alt="WhatsApp messages: 10 sales in September, revenue 25 million naira" loading="lazy"></a></div>
+<div class="wl-case__body">
+<span class="tag c-green">Client result</span>
+<h3>The Weave Loft: &#8358;119M from one sale</h3>
+<p>A luxury wig brand in Lagos. Every order closes in her DMs, so the ads send buyers to her Instagram profile. Meta only counts those visits. The sales figures are hers.</p>
+<ol class="wl-steps">
+<li><b>August</b><span>Target Audience &amp; Ads Setup: audiences, pixel and tracking.</span></li>
+<li><b>September</b><span>First full month of ads. &#8358;25M in sales from 10 orders. &#8358;986K in ad spend, a 25x return.</span></li>
+<li class="big"><b>November sale</b><span>&#8358;119M in sales from 70 customers and 92 wigs. &#8358;1.27M in ad spend from 10 Oct, a 94x return.</span></li>
+</ol>
+<div class="wl-mini"><div><b>70</b><span>customers</span></div><div><b>92</b><span>wigs</span></div><div><b>&#8358;119M</b><span>in sales</span></div><div><b>94x</b><span>return on ad spend</span></div></div>
+</div>
+</div>
+</div>
+<p class="wl-note">Her own figures, shared on WhatsApp. Used with her permission.</p>
+
 <div class="center"><span class="tag c-green">What business owners say</span></div>
-<div class="quotes" style="margin-top:28px"><figure class="quote" style="margin:0"><p>"My business is successful today because I've had James as a partner over the years. Year on year revenue has been growing consistently. Today we do &#8358;1.5 million every single week."</p><div class="who"><span class="av">G</span><div><b>Grace Jegede (JegzFits)</b><span>Shoemaker/Leatherwork, Lagos</span></div></div></figure><figure class="quote" style="margin:0"><p>"The handbook feels like you wrote all my problems and I'm reading it out. The course is too good for only me to enjoy. I just had to drop this and let me continue reading my handbook."</p><div class="who"><span class="av">A</span><div><b>Ayaabaalasooke</b><span>Asooke Vendor, Lagos</span></div></div></figure><figure class="quote" style="margin:0"><p>"No other program gives you this level of detail. Others just send you a PDF and tell you to pay again for anything more. The mentorship actually walks you through every step. Pixels, tracking, accounts. Completely different."</p><div class="who"><span class="av">O</span><div><b>Omolabake Taiwo</b><span>Motai Voyage, Lagos</span></div></div></figure><figure class="quote" style="margin:0"><p>"I took James's recommendations on setting up my ad campaign. 24 orders already and almost 100 new followers."</p><div class="who"><span class="av">V</span><div><b>Victoria John</b><span>Veeva Crafts, Lagos</span></div></div></figure></div>
+<div class="quotes" style="margin-top:28px"><figure class="quote" style="margin:0"><p>"In September we got 10 sales and &#8358;25M in revenue. Some customers in Lagos and Abuja said they found us through Instagram ads or Instagram Explore. For our November sale, 70 people bought 92 wigs, at an average of &#8358;1.3M, with revenue of &#8358;119M."</p><div class="who"><span class="av">O</span><div><b>Oluwatobi Adewale (The Weave Loft)</b><span>Luxury wigs, Lagos</span></div></div></figure><figure class="quote" style="margin:0"><p>"My business is successful today because I've had James as a partner over the years. Year on year revenue has been growing consistently. Today we do up to &#8358;30 million every month."</p><div class="who"><span class="av">G</span><div><b>Grace Jegede (JegzFits)</b><span>Shoemaker/Leatherwork, Lagos</span></div></div></figure><figure class="quote" style="margin:0"><p>"The handbook feels like you wrote all my problems and I'm reading it out. The course is too good for only me to enjoy. I just had to drop this and let me continue reading my handbook."</p><div class="who"><span class="av">A</span><div><b>Ayaabaalasooke</b><span>Asooke Vendor, Lagos</span></div></div></figure><figure class="quote" style="margin:0"><p>"No other program gives you this level of detail. Others just send you a PDF and tell you to pay again for anything more. The mentorship actually walks you through every step. Pixels, tracking, accounts. Completely different."</p><div class="who"><span class="av">O</span><div><b>Omolabake Taiwo</b><span>Motai Voyage, Lagos</span></div></div></figure></div>
 </div></section>
 
 <section class="s s-b" id="programs"><div class="wrap">
