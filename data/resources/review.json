@@ -2,21 +2,9 @@
   "events": [
     {
       "kind": "event-date-unconfirmed",
-      "slug": "devfest-lagos",
-      "name": "DevFest Lagos",
-      "message": "Its page no longer shows 2026-11-13. Check whether the date moved: https://devfestlagos.com/"
-    },
-    {
-      "kind": "event-date-unconfirmed",
       "slug": "ai-everything-kenya-gitex-kenya",
       "name": "AI Everything Kenya x GITEX Kenya",
       "message": "Its page no longer shows 2027-05-12. Check whether the date moved: https://www.aieverythingkenya.com/"
-    },
-    {
-      "kind": "event-date-unconfirmed",
-      "slug": "digimarcon-africa",
-      "name": "DigiMarCon Africa",
-      "message": "Its page no longer shows 2027-10-06. Check whether the date moved: https://digimarconafrica.com/"
     },
     {
       "kind": "event-date-unconfirmed",
@@ -75,6 +63,6 @@
       "message": "Possible pivot or acquisition: its homepage title and description changed. Was \"TextCortex: Enterprise AI Infrastructure That Delivers ROI\", now \"AI agents your teams actually use | TextCortex\". Keep, rewrite or remove it."
     }
   ],
-  "as_of": "2026-11-09",
+  "as_of": "2026-11-16",
   "leaders": []
 }

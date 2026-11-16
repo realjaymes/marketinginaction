@@ -1,7 +1,7 @@
 {
   "source": "https://www.notion.so/realjaymes/207a6d41709c80e78e22e94c52270e89",
   "exported": "2026-10-20",
-  "updated": "2026-11-10",
+  "updated": "2026-11-16",
   "count": 75,
   "items": [
     {
@@ -53,7 +53,12 @@
       "profile_source": "https://adia.substack.com/about",
       "headshot": "img/adia-sowho.jpg",
       "headshot_source": "x:@adiaspeaks",
-      "feed_url": "https://adia.substack.com/feed"
+      "feed_url": "https://adia.substack.com/feed",
+      "latest_post": {
+        "title": "The Reminder Is the Standard",
+        "url": "https://adia.substack.com/p/the-reminder-is-the-standard",
+        "date": "2026-09-10"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80bc-9793-ec5df2dc5142",
@@ -78,9 +83,9 @@
       "headshot_source": "x:@alexanderestner",
       "feed_url": "https://www.mrrunlocked.com/feed",
       "latest_post": {
-        "title": "The 2 GTM AI Agents for Founder-Led Teams",
-        "url": "https://www.mrrunlocked.com/p/2-gtm-ai-agents-for-founder-led-sales",
-        "date": "2026-10-18"
+        "title": "The GTM Dashboard: 23 Metrics Sales-Led SaaS & AI Founders Should Track",
+        "url": "https://www.mrrunlocked.com/p/founder-led-gtm-dashboard",
+        "date": "2026-11-15"
       }
     },
     {
@@ -226,11 +231,11 @@
       "headshot": "img/blessing-abeng.jpg",
       "headshot_source": "x:@blessingabeng_",
       "role": "Brand strategist",
-      "feed_url": "https://blessingabeng.com/feed/",
+      "feed_url": "https://blessingabeng.substack.com/feed",
       "latest_post": {
-        "title": "flodesk studio got me to resuscitate my newsletters",
-        "url": "https://blessingabeng.com/flodesk-studio-got-me-to-resuscitate-my-newsletters/",
-        "date": "2026-07-14"
+        "title": "my imperfect sabbatical",
+        "url": "https://blessingabeng.substack.com/p/my-imperfect-sabbatical",
+        "date": "2025-04-10"
       }
     },
     {
@@ -349,9 +354,9 @@
       "headshot_source": "x:@mercertweets",
       "feed_url": "https://measureu.com/rss.xml",
       "latest_post": {
-        "title": "Dead Internet Theory Just Showed Up in Your GA4 Reports",
-        "url": "https://measureu.com/dead-internet-ga4/",
-        "date": "2026-10-30"
+        "title": "How to Sell an AI Traffic Audit to Clients (Pricing and Positioning Guide)",
+        "url": "https://measureu.com/ai-traffic-audit/",
+        "date": "2026-11-12"
       }
     },
     {
@@ -490,9 +495,9 @@
       "headshot_source": "x:@dmurr68",
       "feed_url": "https://themarketingmillennials.com/feed/",
       "latest_post": {
-        "title": "Before you spend another $1 on ads…",
-        "url": "https://themarketingmillennials.com/articles/2026-11-04/before-you-spend-another-1-on-ads/",
-        "date": "2026-11-04"
+        "title": "Your customers are talking behind your back",
+        "url": "https://themarketingmillennials.com/articles/2026-11-11/your-customers-are-talking-behind-your-back/",
+        "date": "2026-11-11"
       }
     },
     {
@@ -514,7 +519,12 @@
       "company": "In case you missed it",
       "one_liner": "Curates a weekly list of advertising and marketing picks.",
       "profile_source": "https://domenicoloperfido.substack.com/about",
-      "feed_url": "https://domenicoloperfido.substack.com/feed"
+      "feed_url": "https://domenicoloperfido.substack.com/feed",
+      "latest_post": {
+        "title": "The Afterglow",
+        "url": "https://domenicoloperfido.substack.com/p/the-afterglow",
+        "date": "2026-11-15"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80ba-8f2b-ed56562bbede",
@@ -537,7 +547,12 @@
       "headshot_source": "headshot_url",
       "role": "Writer",
       "company": "Do Epic Sht",
-      "feed_url": "https://doepicsht.substack.com/feed"
+      "feed_url": "https://doepicsht.substack.com/feed",
+      "latest_post": {
+        "title": "AI Slop vs. Art: The Positioning Lesson Gen AI Keeps Missing",
+        "url": "https://doepicsht.substack.com/p/ai-slop-vs-art-the-positioning-lesson",
+        "date": "2026-11-08"
+      }
     },
     {
       "notion_id": "207a6d41-709c-80ae-810f-c18c480f20c0",
@@ -564,9 +579,9 @@
       "headshot_source": "x:@elenaverna",
       "feed_url": "https://www.elenaverna.com/feed",
       "latest_post": {
-        "title": "The end of feature discovery as we know it.",
-        "url": "https://www.elenaverna.com/p/the-end-of-feature-discovery-as-we",
-        "date": "2026-11-05"
+        "title": "Confessions of a recovering Full-Time Employee",
+        "url": "https://www.elenaverna.com/p/confessions-of-a-recovering-full",
+        "date": "2026-11-13"
       }
     },
     {
@@ -767,7 +782,12 @@
       "profile_source": "https://www.gregisenberg.com/",
       "headshot": "img/greg-isenberg.jpg",
       "headshot_source": "x:@gregisenberg",
-      "feed_url": "https://latecheckout.substack.com/feed"
+      "feed_url": "https://latecheckout.substack.com/feed",
+      "latest_post": {
+        "title": "The Guide to Faceless Brands",
+        "url": "https://latecheckout.substack.com/p/the-guide-to-faceless-brands",
+        "date": "2023-10-22"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8085-9f7a-d4598bc5855b",
@@ -823,9 +843,9 @@
       "company": "Product Market Fit",
       "feed_url": "https://www.productmarketfit.tech/feed",
       "latest_post": {
-        "title": "The Daytona Playbook: From $1M to $100M in a Year",
-        "url": "https://www.productmarketfit.tech/p/the-daytona-playbook-from-1m-to-100m",
-        "date": "2026-11-06"
+        "title": "The Airbnb Playbook: How to Become the CEO Your Startup Needs",
+        "url": "https://www.productmarketfit.tech/p/the-airbnb-playbook-how-to-become",
+        "date": "2026-11-13"
       }
     },
     {
@@ -933,7 +953,12 @@
       "profile_source": "https://maven.com/gtme-school",
       "headshot": "img/jared-waxman.jpg",
       "headshot_source": "x:@jaredwaxman",
-      "feed_url": "https://gtmengineerschool.substack.com/feed"
+      "feed_url": "https://gtmengineerschool.substack.com/feed",
+      "latest_post": {
+        "title": "The GTM Engineer Pulse | #48",
+        "url": "https://gtmengineerschool.substack.com/p/the-gtm-engineer-pulse-48",
+        "date": "2026-11-04"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8037-8d2f-cd9551f4b617",
@@ -1008,9 +1033,9 @@
       "headshot_source": "headshot_url",
       "feed_url": "https://www.gtmaipodcast.com/feed",
       "latest_post": {
-        "title": "10/21/26: How The Swarm Built $10Million in Pipeline using Network Strategy",
-        "url": "https://www.gtmaipodcast.com/p/102126-how-the-swarm-built-10million",
-        "date": "2026-10-22"
+        "title": "11/12/26: Context Engineering for AI Agents: The 3-Layer System",
+        "url": "https://www.gtmaipodcast.com/p/111226-context-engineering-for-ai",
+        "date": "2026-11-12"
       }
     },
     {
@@ -1033,7 +1058,12 @@
       "profile_source": "https://www.jwby.co/",
       "headshot": "img/jonathan-yagel.jpg",
       "headshot_source": "x:@jwby",
-      "feed_url": "https://jwby.substack.com/feed"
+      "feed_url": "https://jwby.substack.com/feed",
+      "latest_post": {
+        "title": "1, #209 - Hard to read",
+        "url": "https://jwby.substack.com/p/1-209-hard-to-read",
+        "date": "2026-11-14"
+      }
     },
     {
       "notion_id": "207a6d41-709c-804d-99f9-ca0f6fe226ff",
@@ -1080,9 +1110,9 @@
       "headshot_source": "x:@kevanlee",
       "feed_url": "https://newsletter.aroundthebonfire.com/feed",
       "latest_post": {
-        "title": "Generalist vs. specialist",
-        "url": "https://newsletter.aroundthebonfire.com/p/generalist-vs-specialist",
-        "date": "2026-11-09"
+        "title": "Fear-based vs. joy-based decision making",
+        "url": "https://newsletter.aroundthebonfire.com/p/fear-based-vs-joy-based-decision",
+        "date": "2026-11-16"
       }
     },
     {
@@ -1160,9 +1190,9 @@
       "headshot_source": "x:@searchbrat",
       "feed_url": "https://www.kieranflanagan.io/feed",
       "latest_post": {
-        "title": "Stop using AI for writing.",
-        "url": "https://www.kieranflanagan.io/p/stop-using-ai-for-writing",
-        "date": "2026-10-30"
+        "title": "The 2027 Marketing Playbook: The Death of Owned Marketing",
+        "url": "https://www.kieranflanagan.io/p/the-2027-marketing-playbook-the-death",
+        "date": "2026-11-13"
       }
     },
     {
@@ -1289,9 +1319,9 @@
       "headshot_source": "x:@majavoje",
       "feed_url": "https://knowledge.gtmstrategist.com/feed",
       "latest_post": {
-        "title": "85% of AEO Is Won Offsite",
-        "url": "https://knowledge.gtmstrategist.com/p/offsite-aeo-playbook",
-        "date": "2026-11-06"
+        "title": "Is Your Website Ready for 2027?",
+        "url": "https://knowledge.gtmstrategist.com/p/website-gtm-plays-2027",
+        "date": "2026-11-13"
       }
     },
     {
@@ -1344,7 +1374,12 @@
       "profile_source": "http://michaelsaruggia.com",
       "headshot": "img/michael-saruggia.jpg",
       "headshot_source": "x:@michaelsaruggia",
-      "feed_url": "https://claygtmengineering.substack.com/feed"
+      "feed_url": "https://claygtmengineering.substack.com/feed",
+      "latest_post": {
+        "title": "How to use Clay & AI for Segmentation",
+        "url": "https://claygtmengineering.substack.com/p/how-to-use-clay-and-ai-for-segmentation",
+        "date": "2024-10-16"
+      }
     },
     {
       "notion_id": "207a6d41-709c-800a-b1ac-c3a89bb30dd0",
@@ -1390,9 +1425,9 @@
       "headshot_source": "x:@neilpatel",
       "feed_url": "https://neilpatel.com/feed/",
       "latest_post": {
-        "title": "Trending Keywords in AnswerThePublic: Find What’s Rising on Google and YouTube",
-        "url": "https://neilpatel.com/blog/answerthepublic-trending-keywords/",
-        "date": "2026-11-06"
+        "title": "AI Sentiment and Accuracy: The Metric Your Visibility Dashboard Is Missing (and How to Calibrate for It)",
+        "url": "https://neilpatel.com/blog/ai-sentiment-and-accuracy/",
+        "date": "2026-11-13"
       }
     },
     {
@@ -1467,7 +1502,12 @@
       "profile_source": "https://www.peaceitimi.com/",
       "headshot": "img/peace-itimi.jpg",
       "headshot_source": "x:@peaceitimi",
-      "feed_url": "https://peaceitimi.substack.com/feed"
+      "feed_url": "https://peaceitimi.substack.com/feed",
+      "latest_post": {
+        "title": "Starting",
+        "url": "https://peaceitimi.substack.com/p/starting",
+        "date": "2026-01-27"
+      }
     },
     {
       "notion_id": "207a6d41-709c-8087-8da6-d42d688a60dd",
@@ -1492,9 +1532,9 @@
       "headshot_source": "x:@petergyang",
       "feed_url": "https://creatoreconomy.so/feed",
       "latest_post": {
-        "title": "OpenAI VP: How AI Changed My Family’s Fight Against Cancer | Ashley Alexander",
-        "url": "https://creatoreconomy.so/p/how-ai-changed-my-family-fight-against-cancer-ashley-openai",
-        "date": "2026-11-08"
+        "title": "How to Get Claude to Design Without AI Slop in 40 Minutes | Nate Parrott",
+        "url": "https://creatoreconomy.so/p/how-to-fix-ai-slop-with-claude-design-nate-parrott",
+        "date": "2026-11-15"
       }
     },
     {
@@ -1518,7 +1558,12 @@
       "profile_source": "https://moxiegtm.substack.com/about",
       "headshot": "img/richard-purcell.jpg",
       "headshot_source": "x:@moxiegtm",
-      "feed_url": "https://moxiegtm.substack.com/feed"
+      "feed_url": "https://moxiegtm.substack.com/feed",
+      "latest_post": {
+        "title": "How to replace your CRM with your texts for warm intros",
+        "url": "https://moxiegtm.substack.com/p/how-to-replace-your-crm-with-your",
+        "date": "2026-11-13"
+      }
     },
     {
       "notion_id": "207a6d41-709c-800d-abe6-e523de849a48",
@@ -1586,7 +1631,12 @@
       "headshot_url": "https://substack-post-media.s3.amazonaws.com/public/images/4df84eb2-227f-435e-913c-4210fe339229_1203x1203.png",
       "headshot": "img/ruben-hassid.jpg",
       "headshot_source": "headshot_url",
-      "feed_url": "https://ruben.substack.com/feed"
+      "feed_url": "https://ruben.substack.com/feed",
+      "latest_post": {
+        "title": "4 prompts to erase your data from people-search sites",
+        "url": "https://ruben.substack.com/p/4-prompts-to-erase-your-data-from",
+        "date": "2026-11-15"
+      }
     },
     {
       "notion_id": "296a6d41-709c-80a5-9c80-c124b9a0c1dd",
@@ -1635,9 +1685,9 @@
       "headshot_source": "x:@thisissethsblog",
       "feed_url": "https://seths.blog/feed/",
       "latest_post": {
-        "title": "Restrictive design",
-        "url": "https://seths.blog/2026/11/restrictive-design/",
-        "date": "2026-11-09"
+        "title": "Practical empathy",
+        "url": "https://seths.blog/2026/11/practical-empathy/",
+        "date": "2026-11-16"
       }
     },
     {
@@ -1696,9 +1746,9 @@
       "headshot_source": "x:@tomorbach",
       "feed_url": "https://www.marketingideas.com/feed",
       "latest_post": {
-        "title": "Every AI ad generator sucks right now 📉",
-        "url": "https://www.marketingideas.com/p/every-ai-ad-generator-sucks-right",
-        "date": "2026-11-09"
+        "title": "I got a 2M-follower LinkedIn page to post our memes (for free) 🖼️",
+        "url": "https://www.marketingideas.com/p/i-got-a-2m-follower-linkedin-page",
+        "date": "2026-11-16"
       }
     },
     {
@@ -1725,7 +1775,12 @@
       "profile_source": "http://vec.studio",
       "headshot": "img/victor-eduoh.jpg",
       "headshot_source": "x:@v_eduoh",
-      "feed_url": "https://productledstorytelling.substack.com/feed"
+      "feed_url": "https://productledstorytelling.substack.com/feed",
+      "latest_post": {
+        "title": "Nailing Your Overarching Company Narrative (The “Big S” Story)",
+        "url": "https://productledstorytelling.substack.com/p/nailing-your-company-narrative",
+        "date": "2026-06-04"
+      }
     },
     {
       "notion_id": "207a6d41-709c-804c-8509-c35154b7eb71",
@@ -1776,7 +1831,12 @@
       "profile_source": "https://knowyourgrowth.substack.com/about",
       "headshot": "img/yash-tekriwal.jpg",
       "headshot_source": "x:@yash_tek",
-      "feed_url": "https://knowyourgrowth.substack.com/feed"
+      "feed_url": "https://knowyourgrowth.substack.com/feed",
+      "latest_post": {
+        "title": "Steering a Rocket Ship: Inside Profound’s Meteoric Growth",
+        "url": "https://knowyourgrowth.substack.com/p/steering-a-rocket-ship-inside-profounds",
+        "date": "2026-09-16"
+      }
     },
     {
       "notion_id": "",
@@ -1876,9 +1936,9 @@
       "x_verified": true,
       "feed_url": "https://jayyanginspires.com/rss.xml",
       "latest_post": {
-        "title": "It's my birthday (next week)",
-        "url": "https://jayyanginspires.com/essays/it-s-my-birthday-next-week",
-        "date": "2026-11-01"
+        "title": "I have a gift for you...",
+        "url": "https://jayyanginspires.com/essays/i-have-a-gift-for-you",
+        "date": "2026-11-07"
       },
       "headshot": "img/jay-yang.jpg",
       "headshot_source": "x:@Jayyanginspires"
