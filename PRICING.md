@@ -23,7 +23,7 @@ price edit. Do not hand-edit this file.
 | Meta Account Recovery Workshop | ₦15,000 | /academy/sme/safety-net/ |
 | Target Buyer Sales Masterclass | ₦5,000 | /academy/sme/target-buyer/ |
 | Online Marketing Mentorship (Bundle) | ₦45,000 | /academy/sme/bundle/ |
-| The Profitable Ads Targeting Setup | ₦75,000 | /academy/sme/targeting-setup/ |
+| The Profitable Ads Targeting Setup | ₦100,000 | /academy/sme/targeting-setup/ |
 | Online Marketing Consulting | ₦500,000/mo | /academy/sme/consulting/ |
 | SME Team Training | From ₦950,000 | /academy/sme/team-training/ |
 
