@@ -2002,6 +2002,26 @@
       "profile_source": "https://x.com/juampitech",
       "region": "Latin America",
       "country": "Argentina"
+    },
+    {
+      "name": "Anthony Eigbe",
+      "domains": [
+        "Brand Marketing",
+        "Advertising"
+      ],
+      "x": "",
+      "linkedin": "",
+      "newsletter": "",
+      "website": "https://www.instagram.com/anthonywolve/",
+      "slug": "anthony-eigbe",
+      "role": "Chief Creative Officer, West Africa",
+      "company": "TECNO Mobile",
+      "one_liner": "Leads creative for brand campaigns across West Africa and shares his work on creativity and commerce.",
+      "profile_source": "https://www.canneslions.com/awards/jury/anthony-eigbe-411111",
+      "region": "Africa",
+      "country": "Nigeria",
+      "headshot": "img/anthony-eigbe.jpg",
+      "headshot_source": "canneslions.com jury profile photo"
     }
   ]
 }
