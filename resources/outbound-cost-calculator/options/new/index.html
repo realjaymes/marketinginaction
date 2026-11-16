@@ -2210,7 +2210,8 @@ html:has(.occ-icp [data-preset="hard"][aria-pressed="true"]){--type-c:#7184f1}
           $("occQReplySub").textContent = num("occReply") + "% of contacts";
           $("occQMeetings").textContent = dMeetings < 10 ? dMeetings.toFixed(1) : int(dMeetings);
           $("occQMeetSub").textContent =
-            "from " + (dWarm < 10 ? dWarm.toFixed(1) : int(dWarm)) + (dWarm === 1 ? " positive reply" : " positive replies");
+            "from " + (dWarm < 10 ? dWarm.toFixed(1) : int(dWarm)) + (dWarm === 1 ? " positive reply" : " positive replies") +
+            " (" + num("occPositive") + "% of replies, " + (function (p) { return p < 1 ? p.toFixed(2) : p.toFixed(1); })(num("occReply") * num("occPositive") / 100) + "% of contacts)";
           $("occQPipeline").textContent = usd(pipeline);
           $("occQRevenue").textContent = usd(dRevenue);
           $("occQRoiSub").textContent =
