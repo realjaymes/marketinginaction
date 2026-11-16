@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa Technology Show Kenya 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-technology-show-kenya-2027-2027-07-25@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270725
+DTEND;VALUE=DATE:20270728
+SUMMARY:Africa Technology Show Kenya 2027
+LOCATION:Kenyatta International Convention Centre\, Nairobi\, Kenya
+DESCRIPTION:A technology exhibition showcasing AI\, fintech\, cybersecurity\, smart cities and enterprise technology. africatechshow.com https://africatechshow.com/?utm_source=chatgpt.com
+URL:https://africatechshow.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

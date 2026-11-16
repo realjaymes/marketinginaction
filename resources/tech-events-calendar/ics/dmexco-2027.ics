@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:DMEXCO 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:dmexco-2027-2027-09-22@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270922
+DTEND;VALUE=DATE:20270924
+SUMMARY:DMEXCO 2027
+LOCATION:Koelnmesse\, Cologne\, Germany
+DESCRIPTION:A European digital marketing and advertising technology event connecting brands\, agencies\, media companies and marketing technology providers. Digital Marketing Expo & Conference https://dmexco.com/de/?utm_source=chatgpt.com
+URL:https://dmexco.com/de/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

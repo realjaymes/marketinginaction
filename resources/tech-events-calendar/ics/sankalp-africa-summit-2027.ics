@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Sankalp Africa Summit 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:sankalp-africa-summit-2027-2027-02-22@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270227
+SUMMARY:Sankalp Africa Summit 2027
+LOCATION:Not confirmed\, Nairobi\, Kenya
+DESCRIPTION:An entrepreneurship and impact-investment summit connecting African ventures with investors and ecosystem partners. Nairobi\, 22–26 February https://event.sankalpforum.com/sankalp-africa-2027?utm_source=chatgpt.com
+URL:https://event.sankalpforum.com/sankalp-africa-2027?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

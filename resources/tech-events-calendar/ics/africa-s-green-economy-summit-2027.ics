@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Africa's Green Economy Summit 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:africa-s-green-economy-summit-2027-2027-02-23@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270227
+SUMMARY:Africa's Green Economy Summit 2027
+LOCATION:Century City Conference Centre\, Cape Town\, South Africa
+DESCRIPTION:A summit connecting green economy entrepreneurs\, project developers and investors around sustainable investment opportunities. VUKA Group https://wearevuka.com/press-release/81167/?utm_source=chatgpt.com
+URL:https://wearevuka.com/press-release/81167/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

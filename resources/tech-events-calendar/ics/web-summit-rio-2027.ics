@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Marketing In Action//Tech Events Calendar//EN
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Web Summit Rio 2027
+X-WR-TIMEZONE:Africa/Lagos
+BEGIN:VEVENT
+UID:web-summit-rio-2027-2027-06-14@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270618
+SUMMARY:Web Summit Rio 2027
+LOCATION:Riocentro\, Rio de Janeiro\, Brazil
+DESCRIPTION:A global technology conference connecting Latin American startups with international investors\, founders and media. About Web Summit https://rio.websummit.com/?utm_source=chatgpt.com
+URL:https://rio.websummit.com/?utm_source=chatgpt.com
+END:VEVENT
+END:VCALENDAR

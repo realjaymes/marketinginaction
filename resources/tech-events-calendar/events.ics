@@ -195,6 +195,26 @@ DESCRIPTION:An annual technology conference that brings together startup founder
 URL:https://tech.eventhive.ng/
 END:VEVENT
 BEGIN:VEVENT
+UID:sankalp-africa-summit-2027-2027-02-22@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270222
+DTEND;VALUE=DATE:20270227
+SUMMARY:Sankalp Africa Summit 2027
+LOCATION:Not confirmed\, Nairobi\, Kenya
+DESCRIPTION:An entrepreneurship and impact-investment summit connecting African ventures with investors and ecosystem partners. Nairobi\, 22–26 February https://event.sankalpforum.com/sankalp-africa-2027?utm_source=chatgpt.com
+URL:https://event.sankalpforum.com/sankalp-africa-2027?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:africa-s-green-economy-summit-2027-2027-02-23@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270223
+DTEND;VALUE=DATE:20270227
+SUMMARY:Africa's Green Economy Summit 2027
+LOCATION:Century City Conference Centre\, Cape Town\, South Africa
+DESCRIPTION:A summit connecting green economy entrepreneurs\, project developers and investors around sustainable investment opportunities. VUKA Group https://wearevuka.com/press-release/81167/?utm_source=chatgpt.com
+URL:https://wearevuka.com/press-release/81167/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:tech-revolution-africa-2027-02-25@marketinginaction.xyz
 DTSTAMP:20261116T000000Z
 DTSTART;VALUE=DATE:20270225
@@ -415,6 +435,16 @@ DESCRIPTION:A week-long technology gathering connecting founders\, investors\, d
 URL:https://lagostechweek.ng/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
+UID:web-summit-rio-2027-2027-06-14@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270614
+DTEND;VALUE=DATE:20270618
+SUMMARY:Web Summit Rio 2027
+LOCATION:Riocentro\, Rio de Janeiro\, Brazil
+DESCRIPTION:A global technology conference connecting Latin American startups with international investors\, founders and media. About Web Summit https://rio.websummit.com/?utm_source=chatgpt.com
+URL:https://rio.websummit.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:vivatech-2027-06-16@marketinginaction.xyz
 DTSTAMP:20261116T000000Z
 DTSTART;VALUE=DATE:20270616
@@ -455,6 +485,16 @@ DESCRIPTION:A European marketing technology summit connecting marketing\, CRM\, 
 URL:https://themartechsummit.com/summit-dates/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
+UID:africa-technology-show-kenya-2027-2027-07-25@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270725
+DTEND;VALUE=DATE:20270728
+SUMMARY:Africa Technology Show Kenya 2027
+LOCATION:Kenyatta International Convention Centre\, Nairobi\, Kenya
+DESCRIPTION:A technology exhibition showcasing AI\, fintech\, cybersecurity\, smart cities and enterprise technology. africatechshow.com https://africatechshow.com/?utm_source=chatgpt.com
+URL:https://africatechshow.com/?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
 UID:unbound-2027-09-08@marketinginaction.xyz
 DTSTAMP:20261116T000000Z
 DTSTART;VALUE=DATE:20270908
@@ -473,6 +513,16 @@ SUMMARY:brightonSEO San Diego 2027
 LOCATION:San Diego Convention Center\, San Diego\, United States
 DESCRIPTION:A search and performance marketing conference covering SEO\, AI search\, PPC\, paid social\, analytics and digital marketing strategy. [BrightonSEO](https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com) https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com
 URL:https://brightonseo.com/events/san-diego-2027?utm_source=chatgpt.com
+END:VEVENT
+BEGIN:VEVENT
+UID:dmexco-2027-2027-09-22@marketinginaction.xyz
+DTSTAMP:20261116T000000Z
+DTSTART;VALUE=DATE:20270922
+DTEND;VALUE=DATE:20270924
+SUMMARY:DMEXCO 2027
+LOCATION:Koelnmesse\, Cologne\, Germany
+DESCRIPTION:A European digital marketing and advertising technology event connecting brands\, agencies\, media companies and marketing technology providers. Digital Marketing Expo & Conference https://dmexco.com/de/?utm_source=chatgpt.com
+URL:https://dmexco.com/de/?utm_source=chatgpt.com
 END:VEVENT
 BEGIN:VEVENT
 UID:the-martech-summit-dubai-2027-2027-09-28@marketinginaction.xyz
