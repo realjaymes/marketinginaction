@@ -45,11 +45,12 @@ def cell(url, kind):
 
 
 def other(i):
-    """Newsletter first, then website when it is a different page."""
+    """Newsletter first, then website when it is a different page, then Instagram."""
     links = [i.get("newsletter") or ""]
     w = i.get("website") or ""
     if w and w.rstrip("/") != links[0].rstrip("/"):
         links.append(w)
+    links.append(i.get("instagram") or "")
     return [l for l in links if l]
 
 
