@@ -8,6 +8,7 @@ if [ "$(git rev-parse --is-shallow-repository 2>/dev/null)" = "true" ]; then git
 python3 tools/verify-calculators.py
 python3 tools/check-wording.py
 python3 tools/check-og.py
+python3 tools/check-analytics.py
 # The ad-bridge check joins the build the day its script is committed.
 if [ -f tools/check-bridges.py ]; then python3 tools/check-bridges.py; fi
 python3 tools/dime-proof.py

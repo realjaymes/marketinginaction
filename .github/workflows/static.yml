@@ -61,6 +61,12 @@ jobs:
         # tags, so this fails the deploy; tools/og-tags.py writes the fix.
         run: python3 tools/check-og.py
 
+      - name: Check analytics wiring
+        # Every page loads GTM-KRT2BT27 in <head> with its noscript iframe after
+        # <body>, and never loads GA4 directly. Missing Google Ads or Meta Pixel
+        # tags are reported as warnings.
+        run: python3 tools/check-analytics.py
+
       - name: Check ad bridges
         # Every page listed in data/advertised-pages.json runs paid ads and needs
         # a clean noindex, click-gated bridge at go/[slug]/. Acquisition and
