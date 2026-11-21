@@ -55,7 +55,10 @@
         { "@type": "ListItem", "position": 19, "name": "HVAC", "url": "https://marketinginaction.xyz/acquisition/hvac/" },
         { "@type": "ListItem", "position": 20, "name": "Roofing", "url": "https://marketinginaction.xyz/acquisition/roofing/" },
         { "@type": "ListItem", "position": 21, "name": "Excavation & Septic", "url": "https://marketinginaction.xyz/acquisition/excavation-septic/" },
-        { "@type": "ListItem", "position": 22, "name": "General Contracting", "url": "https://marketinginaction.xyz/acquisition/general-contracting/" }
+        { "@type": "ListItem", "position": 22, "name": "General Contracting", "url": "https://marketinginaction.xyz/acquisition/general-contracting/" },
+        { "@type": "ListItem", "position": 23, "name": "Kitchen Remodeling", "url": "https://marketinginaction.xyz/acquisition/kitchen-remodeling/" },
+        { "@type": "ListItem", "position": 24, "name": "Bathroom Remodeling", "url": "https://marketinginaction.xyz/acquisition/bathroom-remodeling/" },
+        { "@type": "ListItem", "position": 25, "name": "Siding", "url": "https://marketinginaction.xyz/acquisition/siding/" }
       ]
     }
     </script>
@@ -807,8 +810,11 @@ html.lb-open,html.lb-open body{overflow:hidden}
             { slug: "basement-waterproofing", name: "Basement Waterproofing", ticket: 8000, ticketLabel: "Avg job $", cpl: 75, margin: 0.30, close: 25, outcome: "inspections", metaLabel: "avg job · inspections" },
             { slug: "hvac", name: "HVAC", ticket: 12000, ticketLabel: "Avg job $", cpl: 115, margin: 0.40, close: 25, outcome: "estimates", metaLabel: "avg job · estimates" },
             { slug: "roofing", name: "Roofing", ticket: 15000, ticketLabel: "Avg job $", cpl: 85, margin: 0.35, close: 25, outcome: "estimates", metaLabel: "avg job · estimates" },
+            { slug: "siding", name: "Siding", ticket: 17000, ticketLabel: "Avg job $", cpl: 100, margin: 0.30, close: 25, outcome: "siding estimates", metaLabel: "avg job · siding estimates" },
             { slug: "excavation-septic", name: "Excavation & Septic", ticket: 20000, ticketLabel: "Avg job $", cpl: 75, margin: 0.25, close: 25, outcome: "site estimates", metaLabel: "avg job · site estimates" },
-            { slug: "general-contracting", name: "General Contracting", ticket: 30000, ticketLabel: "Avg project $", cpl: 90, margin: 0.28, close: 15, outcome: "project consultations", metaLabel: "avg project · project consultations", flag: true }
+            { slug: "general-contracting", name: "General Contracting", ticket: 30000, ticketLabel: "Avg project $", cpl: 90, margin: 0.28, close: 15, outcome: "project consultations", metaLabel: "avg project · project consultations", flag: true },
+            { slug: "kitchen-remodeling", name: "Kitchen Remodeling", ticket: 35000, ticketLabel: "Avg job $", cpl: 120, margin: 0.30, close: 25, outcome: "design consultations", metaLabel: "avg job · design consultations" },
+            { slug: "bathroom-remodeling", name: "Bathroom Remodeling", ticket: 20000, ticketLabel: "Avg job $", cpl: 100, margin: 0.30, close: 25, outcome: "in-home estimates", metaLabel: "avg job · in-home estimates" }
         ];
         var BY_SLUG = {};
         NICHES.forEach(function (n) { BY_SLUG[n.slug] = n; });
@@ -819,9 +825,9 @@ html.lb-open,html.lb-open body{overflow:hidden}
         // missing from every group still shows, under "More industries", so a
         // new page can never silently drop off this list.
         var GROUPS = [
-            { label: "Outdoor, land & exterior", slugs: ["excavation-septic", "fencing", "garage-door", "garage-floor-epoxy", "landscaping", "pest-control", "pool-service", "roofing"] },
+            { label: "Outdoor, land & exterior", slugs: ["excavation-septic", "fencing", "garage-door", "garage-floor-epoxy", "landscaping", "pest-control", "pool-service", "roofing", "siding"] },
             { label: "Home systems", slugs: ["basement-waterproofing", "electrical", "hvac", "plumbing", "spray-foam", "water-treatment"] },
-            { label: "Build & remodel", slugs: ["general-contracting", "handyman", "painting"] },
+            { label: "Build & remodel", slugs: ["bathroom-remodeling", "general-contracting", "handyman", "kitchen-remodeling", "painting"] },
             { label: "Cleaning, hauling & moving", slugs: ["home-cleaning", "junk-removal", "moving", "pet-waste-removal", "pressure-washing", "waste-management"] },
             { label: "Health & care", slugs: ["hearing-aid", "home-care", "medspa"] }
         ];

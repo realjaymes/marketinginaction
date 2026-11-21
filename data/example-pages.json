@@ -4104,5 +4104,440 @@
       "p": "Takes under a minute. We'll call you to pick a time."
     },
     "footer": "Water softeners, filtration and drinking water systems for homes in {city}."
+  },
+  {
+    "slug": "kitchen-remodeling",
+    "niche": "Kitchen remodeling",
+    "offer_page": "/acquisition/kitchen-remodeling/",
+    "business": "Cedarline Kitchen & Design",
+    "tagline": "Kitchen design and remodeling",
+    "palette": {
+      "deep": "#3a4a43",
+      "deep_dk": "#27332d",
+      "accent": "#b0602a",
+      "accent_dk": "#8f4c20",
+      "sky": "#f4eee6"
+    },
+    "title": "Free Kitchen Design Consultation",
+    "cta_long": "Book my design consultation",
+    "cta_short": "Book a consultation",
+    "eyebrow": "Free kitchen design consultation",
+    "h1": "See your new kitchen in 3D and get an exact price before you commit.",
+    "lead": "Tell us what you want to change, your budget range and timing. We'll call to talk through the kitchen and arrange an in-home design consultation.",
+    "trust": [
+      "3D design of your kitchen",
+      "Exact written quote",
+      "Budget range reviewed first"
+    ],
+    "form_title": "Request your design consultation",
+    "form_sub": "Tell us about the kitchen. Three quick steps.",
+    "questions": [
+      {
+        "label": "Scope",
+        "ask": "What do you want to change?",
+        "options": [
+          "Cabinets and countertops",
+          "Full kitchen remodel",
+          "Layout change",
+          "Not sure yet"
+        ]
+      },
+      {
+        "label": "Budget",
+        "ask": "What budget range are you planning around?",
+        "options": [
+          "Under $20K",
+          "$20K to $40K",
+          "$40K to $70K",
+          "Over $70K"
+        ]
+      },
+      {
+        "label": "Start",
+        "ask": "When would you like to start?",
+        "options": [
+          "Within 30 days",
+          "Within 90 days",
+          "Later this year",
+          "Just researching"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Book my consultation",
+    "thanks": "We'll call to learn about your kitchen and arrange your free in-home design consultation.",
+    "cards": {
+      "eyebrow": "Kitchens worth redesigning",
+      "h2": "A good kitchen remodel fixes how the room works every day.",
+      "p": "Start with what bothers you most and what you want the room to do.",
+      "items": [
+        {
+          "h": "The cabinets look dated",
+          "p": "Doors, finish and hardware no longer match how you want the room to feel."
+        },
+        {
+          "h": "Counter space runs out",
+          "p": "Prep and serving areas do not fit the way the household cooks."
+        },
+        {
+          "h": "The layout gets in the way",
+          "p": "Walkways, the sink and the fridge sit where they slow everyone down."
+        },
+        {
+          "h": "Storage is hard to reach",
+          "p": "Deep corners and crowded shelves make everyday items hard to find."
+        },
+        {
+          "h": "The room feels dark",
+          "p": "Lighting and finishes make the space feel smaller than it is."
+        },
+        {
+          "h": "You plan to stay and sell later",
+          "p": "A well-planned kitchen can improve daily life now and appeal at resale."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "Plan the kitchen before the work starts.",
+      "items": [
+        {
+          "h": "Describe the kitchen",
+          "p": "Share what you want to change, your budget range and timing."
+        },
+        {
+          "h": "We call to discuss it",
+          "p": "We learn about the room and arrange a time to visit your home."
+        },
+        {
+          "h": "We design and quote",
+          "p": "You see a 3D design of the kitchen and receive an exact written quote."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the design consultation free?",
+        "a": "Yes. The in-home visit, the 3D design and the quote are free."
+      },
+      {
+        "q": "How firm does my budget need to be?",
+        "a": "A starting range is enough for the first call. It keeps the design realistic."
+      },
+      {
+        "q": "Can you change the layout?",
+        "a": "Often yes. We check plumbing, walls and appliances during the visit."
+      },
+      {
+        "q": "How long does a kitchen remodel take?",
+        "a": "It depends on the scope and material lead times. You get a clear schedule with your quote."
+      },
+      {
+        "q": "Will I get an exact price?",
+        "a": "Yes. After the visit you receive a written quote for the agreed scope."
+      }
+    ],
+    "book": {
+      "h2": "Book your kitchen design consultation",
+      "p": "Tell us about the kitchen and we'll call to arrange a visit."
+    },
+    "footer": "Kitchen design and remodeling for homeowners in {city}."
+  },
+  {
+    "slug": "bathroom-remodeling",
+    "niche": "Bathroom remodeling",
+    "offer_page": "/acquisition/bathroom-remodeling/",
+    "business": "Clearwater Bath Studio",
+    "tagline": "Bathroom remodeling and shower conversions",
+    "palette": {
+      "deep": "#2f4a52",
+      "deep_dk": "#213439",
+      "accent": "#2e7d8c",
+      "accent_dk": "#23636f",
+      "sky": "#eaf3f4"
+    },
+    "title": "Free Bathroom Design and Estimate",
+    "cta_long": "Get my free estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free in-home bathroom estimate",
+    "h1": "Get an exact price for your new bathroom in one visit.",
+    "lead": "Tell us what you want to change and how soon. We'll call to talk it through and arrange a free in-home bathroom design and estimate.",
+    "trust": [
+      "Design ideas at your home",
+      "Exact written price",
+      "Safer shower options"
+    ],
+    "form_title": "Request your free estimate",
+    "form_sub": "Tell us about the bathroom. Three quick steps.",
+    "questions": [
+      {
+        "label": "Project",
+        "ask": "What would you like to do?",
+        "options": [
+          "Tub to shower conversion",
+          "Walk-in shower",
+          "Full bathroom remodel",
+          "Not sure yet"
+        ]
+      },
+      {
+        "label": "Reason",
+        "ask": "What is the main reason?",
+        "options": [
+          "Safer access",
+          "Dated look",
+          "Damage or leaks",
+          "More space"
+        ]
+      },
+      {
+        "label": "Start",
+        "ask": "When would you like to start?",
+        "options": [
+          "Within 30 days",
+          "Within 90 days",
+          "Later this year",
+          "Just researching"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Get my free estimate",
+    "thanks": "We'll call to learn about the bathroom and arrange your free in-home estimate.",
+    "cards": {
+      "eyebrow": "Bathrooms worth updating",
+      "h2": "A good bathroom remodel makes the room safer and easier to use.",
+      "p": "Start with what is hardest about the room today.",
+      "items": [
+        {
+          "h": "Stepping over the tub is hard",
+          "p": "A walk-in shower lets you step in instead of climbing over."
+        },
+        {
+          "h": "The bathroom looks dated",
+          "p": "Tile, fixtures and vanity no longer suit the home."
+        },
+        {
+          "h": "The shower is hard to clean",
+          "p": "Worn grout and old surrounds hold dirt and moisture."
+        },
+        {
+          "h": "A parent needs safer access",
+          "p": "Grab bars, a low entry and a seat can make daily routines easier."
+        },
+        {
+          "h": "Storage is short",
+          "p": "A better vanity and shelving can clear the counter."
+        },
+        {
+          "h": "Leaks or damage showed up",
+          "p": "Water damage is easier to fix when the room is opened up properly."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "See the plan and the price before you commit.",
+      "items": [
+        {
+          "h": "Describe the bathroom",
+          "p": "Share the project, the reason and your timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We confirm the details and arrange a visit to your home."
+        },
+        {
+          "h": "We measure and quote",
+          "p": "You see design options and receive an exact written price."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the in-home estimate free?",
+        "a": "Yes. The visit, the design ideas and the written price are free."
+      },
+      {
+        "q": "Can you turn a tub into a walk-in shower?",
+        "a": "Yes, in most bathrooms. We check the space and plumbing during the visit."
+      },
+      {
+        "q": "How long does a bathroom remodel take?",
+        "a": "A shower conversion is often shorter than a full remodel. You get a clear schedule with your price."
+      },
+      {
+        "q": "Will I get an exact price?",
+        "a": "Yes. After the visit you receive a written price for the agreed scope."
+      },
+      {
+        "q": "Can a family member join the visit?",
+        "a": "Yes. Many homeowners include an adult child or a partner so everyone hears the plan."
+      }
+    ],
+    "book": {
+      "h2": "Book your free bathroom estimate",
+      "p": "Tell us about the bathroom and we'll call to arrange a visit."
+    },
+    "footer": "Bathroom remodeling and shower conversions for homeowners in {city}."
+  },
+  {
+    "slug": "siding",
+    "niche": "Siding",
+    "offer_page": "/acquisition/siding/",
+    "business": "Ridgeway Exteriors",
+    "tagline": "Siding replacement and exterior repair",
+    "palette": {
+      "deep": "#3d4552",
+      "deep_dk": "#2a303a",
+      "accent": "#3f7a57",
+      "accent_dk": "#316145",
+      "sky": "#eef3ee"
+    },
+    "title": "Free Siding Inspection and Estimate",
+    "cta_long": "Book my siding estimate",
+    "cta_short": "Free estimate",
+    "eyebrow": "Free siding inspection and estimate",
+    "h1": "Find out what your siding needs before water gets behind it.",
+    "lead": "Tell us what you have noticed and when you want the work done. We'll call to arrange a free siding inspection and estimate.",
+    "trust": [
+      "Siding condition explained",
+      "Photos of problem areas",
+      "Written estimate"
+    ],
+    "form_title": "Request your siding estimate",
+    "form_sub": "Tell us about the siding. Three quick steps.",
+    "questions": [
+      {
+        "label": "Need",
+        "ask": "What does your siding need?",
+        "options": [
+          "Full replacement",
+          "Partial replacement",
+          "Storm damage",
+          "Not sure yet"
+        ]
+      },
+      {
+        "label": "Concern",
+        "ask": "What have you noticed?",
+        "options": [
+          "Cracked or warped panels",
+          "Faded or dated look",
+          "Water or moisture signs",
+          "Storm damage"
+        ]
+      },
+      {
+        "label": "Start",
+        "ask": "When would you like to start?",
+        "options": [
+          "Within 30 days",
+          "Within 90 days",
+          "Later this year",
+          "Just researching"
+        ]
+      },
+      {
+        "label": "Own the home",
+        "ask": "Do you own the home?",
+        "options": [
+          "Yes, I own it",
+          "No, I rent"
+        ]
+      }
+    ],
+    "zip_label": "Home ZIP code",
+    "submit": "Book my estimate",
+    "thanks": "We'll call to learn about the siding and arrange your free inspection and estimate.",
+    "cards": {
+      "eyebrow": "Signs the siding needs a look",
+      "h2": "Siding protects the walls, so small problems are worth checking.",
+      "p": "Start with what you can see from the ground.",
+      "items": [
+        {
+          "h": "Panels are cracked or warped",
+          "p": "Gaps can let water in behind the walls."
+        },
+        {
+          "h": "The color has faded",
+          "p": "Sun and weather can leave the house looking tired."
+        },
+        {
+          "h": "A storm passed through",
+          "p": "Hail and wind can damage panels you cannot see from the street."
+        },
+        {
+          "h": "Boards feel soft or damp",
+          "p": "Moisture behind the siding can lead to rot."
+        },
+        {
+          "h": "Paint keeps peeling",
+          "p": "Repainting may cost more over time than new siding."
+        },
+        {
+          "h": "You plan to sell soon",
+          "p": "Fresh siding can lift curb appeal before a listing."
+        }
+      ]
+    },
+    "steps": {
+      "h2": "See the condition and the price before you decide.",
+      "items": [
+        {
+          "h": "Describe the siding",
+          "p": "Share what you have noticed and your preferred timing."
+        },
+        {
+          "h": "We call to book",
+          "p": "We confirm access and arrange a visit to your home."
+        },
+        {
+          "h": "We inspect and quote",
+          "p": "You see photos of problem areas and receive a written estimate."
+        }
+      ]
+    },
+    "faq": [
+      {
+        "q": "Is the siding inspection free?",
+        "a": "Yes. The visit, the photos and the written estimate are free."
+      },
+      {
+        "q": "Can you replace only part of the house?",
+        "a": "Often yes. We discuss matching and what makes sense for the walls involved."
+      },
+      {
+        "q": "Which siding materials do you install?",
+        "a": "We discuss vinyl, fiber cement and other options during the visit."
+      },
+      {
+        "q": "Will insurance cover storm damage?",
+        "a": "It depends on the policy and the damage. We document what we find so you can share it with your insurer."
+      },
+      {
+        "q": "How long does a siding job take?",
+        "a": "Most homes take days, not weeks, depending on size and weather. You get a clear schedule with your estimate."
+      }
+    ],
+    "book": {
+      "h2": "Book your free siding estimate",
+      "p": "Tell us about the siding and we'll call to arrange a visit."
+    },
+    "footer": "Siding replacement and exterior repair for homes in {city}."
   }
 ]
