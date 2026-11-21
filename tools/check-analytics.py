@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 """Analytics check for every public MIA page. Runs in tools/cf-build.sh and .githooks/pre-push.
 
-Fails when a page is missing Google Tag Manager GTM-KRT2BT27 in <head>, is missing its noscript
-iframe after <body>, or loads GA4 directly with a gtag.js G- snippet (GA4 G-4HYQTZEZ52 loads
-through GTM, so a direct snippet counts every visit twice). Warns, without failing, when a page
-lacks the Google Ads tag AW-17909542714 or the Meta Pixel 660940561182168, which the
-mia-landing-page skill's standard <head> wiring includes.
+Fails when a page is missing Google Tag Manager GTM-KRT2BT27 in <head> or its noscript iframe
+after <body>, the Google Ads tag AW-17909542714 or the Meta Pixel 660940561182168 (the
+mia-landing-page skill's standard <head> wiring), or loads GA4 directly with a gtag.js G- snippet
+(GA4 G-4HYQTZEZ52 loads through GTM, so a direct snippet counts every visit twice).
 
 Skipped: design option pages (any /options/ folder), the Acquisition example pages
 (acquisition/*/example/, demo sites for prospects under made-up brands) and _lab/.
@@ -22,7 +21,7 @@ def skipped(rel: str) -> bool:
             or (parts[0] == "acquisition" and "example" in parts[:-1]))
 
 
-fails, warns, n = [], [], 0
+fails, n = [], 0
 for p in sorted(ROOT.rglob("*.html")):
     rel = p.relative_to(ROOT).as_posix()
     if skipped(rel):
@@ -40,16 +39,14 @@ for p in sorted(ROOT.rglob("*.html")):
     if re.search(r"gtag/js\?id=G-", s):
         fails.append(f"{rel}: loads GA4 with a gtag.js G- snippet; GA4 comes through GTM only")
     if ADS not in head:
-        warns.append(f"{rel}: no Google Ads tag {ADS}")
+        fails.append(f"{rel}: Google Ads tag {ADS} missing from <head>")
     if PIXEL not in head:
-        warns.append(f"{rel}: no Meta Pixel {PIXEL}")
+        fails.append(f"{rel}: Meta Pixel {PIXEL} missing from <head>")
 
-for w in warns:
-    print("WARN", w)
 for f in fails:
     print("FAIL", f)
 if fails:
     print(f"check-analytics: {len(fails)} problem(s). Copy the <head> and <body> wiring from a live page "
           "(see the mia-landing-page skill).", file=sys.stderr)
     sys.exit(1)
-print(f"check-analytics: GTM wiring correct on all {n} pages" + (f", {len(warns)} warning(s)" if warns else ""))
+print(f"check-analytics: GTM, Google Ads and Meta Pixel wiring correct on all {n} pages")

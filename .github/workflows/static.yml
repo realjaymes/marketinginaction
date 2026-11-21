@@ -63,8 +63,8 @@ jobs:
 
       - name: Check analytics wiring
         # Every page loads GTM-KRT2BT27 in <head> with its noscript iframe after
-        # <body>, and never loads GA4 directly. Missing Google Ads or Meta Pixel
-        # tags are reported as warnings.
+        # <body>, plus the Google Ads tag and the Meta Pixel, and never loads GA4
+        # directly.
         run: python3 tools/check-analytics.py
 
       - name: Check ad bridges
