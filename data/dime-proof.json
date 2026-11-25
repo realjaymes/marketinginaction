@@ -1,9 +1,9 @@
 {
-  "as_of": "2026-10-15",
+  "as_of": "2026-11-25",
   "source_dir": "~/Downloads/Screenshots & Visuals/DIME Product Screenshots",
   "values": {
-    "selar_sales": "831",
-    "selar_ngn": "&#8358;12,886,850",
+    "selar_sales": "835",
+    "selar_ngn": "&#8358;13,063,850",
     "selar_usd": "$481.82",
     "selar_gbp": "&pound;23.25",
     "selar_ghs": "GH&#8373;694.84",
@@ -24,7 +24,7 @@
     "meta_purchases"
   ],
   "screenshots": {
-    "academy/dime/assets/selar-dashboard.png": "James Selar Dashboard All Sales Update 2.png",
+    "academy/dime/assets/selar-dashboard.png": "James Selar Dashboard All Sales Update 3.png",
     "academy/dime/assets/selar-milestones.png": "Selar Milestones.png",
     "academy/dime/assets/monthly-revenue.png": "James Backend Last 3 Monthly Revenue Update 1.png"
   },
@@ -35,11 +35,13 @@
     "academy/dime/replay/index.html",
     "academy/dime/replay-info/index.html",
     "academy/dime/class/index.html",
-    "academy/dime/class-info/index.html"
+    "academy/dime/class-info/index.html",
+    "academy/dollar-blueprint/index.html"
   ],
   "retired": [
     "&#8358;9,209,500",
     "645 sales",
-    "$465.54"
+    "$465.54",
+    "&#8358;12,886,850"
   ]
 }
