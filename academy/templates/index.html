@@ -639,6 +639,15 @@ h1,h2,h3{text-wrap:balance}
 .cp-award{background:#E6E4F7!important}
 .mod b,.cell b{background:#E6E4F7!important}
 </style>
+    <style>/* Phones: headline first, then the proof card, then the rest of the hero copy. The card sits in the first screen instead of under the buy button. */
+    @media(max-width:900px){
+     .hero :has(> .win){row-gap:0!important;grid-template-columns:minmax(0,1fr)!important}
+     .hero :has(> .win) > .win{min-width:0;max-width:100%}
+     .hero :has(> .win) > :not(.win){display:contents}
+     .hero :has(> .win) > :not(.win) > span{justify-self:start}
+     .hero :has(> .win) > .win{order:1;margin:6px 0 30px}
+     .hero :has(> .win) > :not(.win) > h1 ~ *{order:2}
+    }</style>
 </head>
 <body>
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KRT2BT27" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
