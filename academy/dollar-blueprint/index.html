@@ -81,11 +81,13 @@
         "mainEntity": [
             {"@type": "Question", "name": "Who is this for?", "acceptedAnswer": {"@type": "Answer", "text": "Nigerians in Nigeria and the diaspora who can already do paid work in a digital skill and cannot find or win clients or employers who pay in dollars. It works for job seekers and for freelancers."}},
             {"@type": "Question", "name": "Will a foreign company hire me from Nigeria?", "acceptedAnswer": {"@type": "Answer", "text": "Some cannot, because of payroll, tax and employment law, and the course shows you how to spot them before you waste time. Others can, and the course shows you how to find them. I held dollar contracts from Nigeria for over two years, and the course covers the location, time zone, payment and trust questions buyers ask, so you can answer them before they come up."}},
-            {"@type": "Question", "name": "Is this another remote-work guide?", "acceptedAnswer": {"@type": "Answer", "text": "No. Guides give you a list of job sites. This is a program: the places most people never look, a way past the portal to the person who decides, a pitch for any platform, four bonus systems, a community and live group sessions every two weeks where I review members' work."}},
-            {"@type": "Question", "name": "I already applied everywhere and got nothing.", "acceptedAnswer": {"@type": "Answer", "text": "That is the problem the course solves. Applying where everyone applies, through the portal, puts you in the longest queue. Modules 2 to 5 replace it with a different search and a direct route to the person who decides."}},
-            {"@type": "Question", "name": "I am a freelancer, not a job seeker. Does this work for me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The same sources, the same route to the person who decides and the same pitch work for client work. The ads bonus is built for freelancers and service providers."}},
+            {"@type": "Question", "name": "Is this another remote-work guide?", "acceptedAnswer": {"@type": "Answer", "text": "No. Guides give you a list of job sites. This is a program: the places most people never look, a way past the portal to the person who decides, a pitch for any platform, a kit of seven Claude skills, a community and live group sessions every two weeks where I review members' work."}},
+            {"@type": "Question", "name": "I already applied everywhere and got nothing.", "acceptedAnswer": {"@type": "Answer", "text": "That is the problem the course solves. Applying where everyone applies, through the portal, puts you in the longest queue. Modules 3 and 4 replace it with a different search and a direct route to the person who decides."}},
+            {"@type": "Question", "name": "I am a freelancer, not a job seeker. Does this work for me?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The same sources, the same route to the person who decides and the same pitch work for client work. Module 2 shows freelancers how to sell ads or another service to local businesses abroad, and the kit helps you deliver it."}},
             {"@type": "Question", "name": "Will it work for my skill?", "acceptedAnswer": {"@type": "Answer", "text": "Every buyer has a problem, a person who decides and a reason to choose one person over another. The course examples cover design, writing, development, support, operations, data, sales, video editing and accounting support as well as marketing."}},
-            {"@type": "Question", "name": "Do I need money for ads or paid tools?", "acceptedAnswer": {"@type": "Answer", "text": "No. The core system runs on free methods. Paid email tools and the ads bonus are optional."}},
+            {"@type": "Question", "name": "Do I need money for ads or paid tools?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, one. The kit runs on Claude, so you need a paid Claude plan, which starts at about $20 a month. Everything else in the core system uses free methods, and paid email tools and ads are optional."}},
+            {"@type": "Question", "name": "Will my applications sound like AI wrote them?", "acceptedAnswer": {"@type": "Answer", "text": "They can, if you send the first draft as it is. The first skill records your real results and notes on how you write, and every other skill uses those notes when it drafts, so each draft points to work you have actually done. You read each one, change anything that does not sound like you and send it yourself."}},
+            {"@type": "Question", "name": "How do I pay for Claude from Nigeria?", "acceptedAnswer": {"@type": "Answer", "text": "Claude is available in Nigeria. On Claude's website you pay in US dollars by card, and some Nigerian bank cards decline dollar payments. If yours is declined, you can use a virtual dollar card from a fintech app, funded from your naira account. You can also subscribe inside the Claude app on your phone and pay through the App Store or Google Play. Check the price on both before you choose, because they can differ."}},
             {"@type": "Question", "name": "How much time does it take?", "acceptedAnswer": {"@type": "Answer", "text": "It is self-paced, so you set the speed. Plan for a few hours each week to research, send pitches and follow up, because the system only works when you run it."}},
             {"@type": "Question", "name": "When do I get access?", "acceptedAnswer": {"@type": "Answer", "text": "On 10 December 2026. This is a pre-sale, and recording starts once the first 5 people have paid. You get an email with your access details when it opens."}},
             {"@type": "Question", "name": "Can you guarantee me a job or a client?", "acceptedAnswer": {"@type": "Answer", "text": "No, and you should be careful of anyone who does. You get a system, live feedback and a pitch built so yes is the easy answer. My own contracts and case studies are on this page for you to check."}},
@@ -551,6 +553,9 @@ html[data-tone="mono"]{--sec-a:var(--cream);--sec-b:#EEE6D3}
 html[data-tone="mono"] .truststrip{background:var(--sec-b)}
 html[data-tone="mono"] section:nth-of-type(odd){background:var(--sec-a)}
 html[data-tone="mono"] section:nth-of-type(even){background:var(--sec-b)}
+/* coach-sticky: the instructor photo stays in view beside the bio on wide screens */@media(min-width:901px){.coach__photo{position:sticky;top:110px}}
+.partner a{color:var(--ink);font-weight:800;text-decoration:underline;text-underline-offset:2px}
+.grads.grads--vid{grid-template-columns:repeat(3,minmax(0,1fr));max-width:980px}.gvid{margin:0;padding:12px}.gvid__f{position:relative;padding-bottom:177.78%;height:0;border-radius:16px;overflow:hidden;border:2px solid var(--ink)}.gvid__f iframe{position:absolute;inset:0;width:100%;height:100%;border:0}@media(max-width:900px){.grads.grads--vid{grid-template-columns:1fr;max-width:340px}}
 </style>
 
     <script type="application/ld+json">
@@ -676,6 +681,9 @@ html.lb-open,html.lb-open body{overflow:hidden}
 .pc__k{font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
 .pc h3{font-size:1.4rem;margin-bottom:8px}
 .pc p{margin:0;color:var(--muted)}
+.pc{display:flex;flex-direction:column}
+.pc p.pc__kit{margin:auto 0 0;padding-top:12px;border-top:2px dashed var(--line);color:var(--ink);font-weight:700;font-size:.92rem}
+.pc p:not(.pc__kit){margin-bottom:14px}
 .after{text-align:center;max-width:680px;margin:30px auto 0;font-weight:750;font-size:1.1rem;text-wrap:balance}
 /* who it is for */
 .fit .ch p{margin:0;color:var(--ink)}
@@ -822,7 +830,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <div>
                 <span class="tag">For Nigerians who already have a skill people pay for</span>
                 <h1>Find clients and employers who pay up to <span class="band">$3,000 every month</span></h1>
-                <p class="hero__sub">This is the blueprint I used to pitch clients and land jobs that have paid me over $100,000 while living in Nigeria, without relocating. Over $80,000 of it came from dollar contracts with foreign companies, and I still run this system every week.</p>
+                <p class="hero__sub">This is the blueprint I used to pitch clients and land jobs that have paid me over $100,000 while living in Nigeria, without relocating. Over $80,000 of it came from dollar contracts with foreign companies, and I still run this system every week. Now you can do the same, with my help, and AI that works for you.</p>
                 <div class="hero__ctas" id="heroCtas">
                     <a href="https://selar.com/dollarblueprint?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-lg">Get the Blueprint for &#8358;20,000</a>
                 </div>
@@ -858,44 +866,38 @@ html.lb-open,html.lb-open body{overflow:hidden}
                 </div>
                 <div class="panel" data-p="road">
                     <div class="mods mods--9">
-                        <div class="mod"><b>1</b><span>Pick the buyer who pays in dollars</span></div>
-                        <div class="mod"><b>2</b><span>The hidden market</span></div>
-                        <div class="mod"><b>3</b><span>Find the hidden gems</span></div>
-                        <div class="mod"><b>4</b><span>A daily search</span></div>
-                        <div class="mod"><b>5</b><span>Go around the portal</span></div>
-                        <div class="mod"><b>6</b><span>The pitch</span></div>
-                        <div class="mod"><b>7</b><span>Calls, rates and closing</span></div>
-                        <div class="mod"><b>8</b><span>Contracts and getting paid</span></div>
-                        <div class="mod"><b>9</b><span>Your 30-day pipeline</span></div>
+                        <div class="mod"><b>1</b><span>Set up your kit</span></div>
+                        <div class="mod"><b>2</b><span>Pick your buyer and offer</span></div>
+                        <div class="mod"><b>3</b><span>Find roles and clients every day</span></div>
+                        <div class="mod"><b>4</b><span>Apply and pitch</span></div>
+                        <div class="mod"><b>5</b><span>Close, deliver and get paid</span></div>
                     </div>
-                    <div class="statchips"><span class="chip">9 modules</span><span class="chip">4 bonuses</span><span class="chip">Live sessions every 2 weeks</span><span class="chip">Private community</span></div>
+                    <div class="statchips"><span class="chip">5 modules</span><span class="chip">7 Claude skills</span><span class="chip">Live sessions every 2 weeks</span><span class="chip">Private community</span></div>
                 </div>
                 <div class="panel" data-p="plan">
                     <div class="plan">
                         <div class="plan__h"><span class="plan__n">The Dollar Offer Blueprint</span><span class="chip gold">Launch price</span></div>
                         <div class="plan__p">&#8358;20,000</div>
-                        <div class="win__note" style="margin:0">One payment.</div>
+                        <div class="win__note" style="margin:0">One payment. You also need a paid Claude plan to run the kit, from about $20 a month.</div>
                         <ul class="plan__list">
-                            <li>Nine video modules with assignments</li>
+                            <li>Five video modules with assignments</li>
+                            <li>The kit: seven Claude skills, with setup guides</li>
                             <li>The Source Map, updated every quarter for 12 months</li>
-                            <li>The Cold Email System</li>
-                            <li>The Cold Pitching Templates</li>
-                            <li>The Pitch Page Template</li>
-                            <li>Ads for Tier 1 Clients, with a path to done-for-you help</li>
+                            <li>The tracker, contract checklist and invoice templates</li>
                             <li>Live group sessions with James every two weeks</li>
                             <li>The private community</li>
                             <li>The Pitch Review Guarantee</li>
                         </ul>
                         <a href="https://selar.com/dollarblueprint?add_to_cart=1&email=&fullname=&mobile=" class="btn">Get the Blueprint for &#8358;20,000</a>
                     </div>
-                    <p class="win__note">Secure checkout on Selar. Access opens on 10 December 2026.</p>
+                    <p class="win__note">Secure checkout on Selar/Bachs/Paystack. Access opens on 10 December 2026.</p>
                 </div>
                 <div class="seal">Pitch Review Guarantee</div>
             </div>
         </div>
     </header>
 
-    <div class="truststrip"><div class="wrap"><span>Secure checkout on Selar</span><span>One payment</span><span>The Pitch Review Guarantee</span></div></div>
+    <div class="truststrip"><div class="wrap"><span>Secure checkout on Selar/Bachs/Paystack</span><span>One payment</span><span>The Pitch Review Guarantee</span></div></div>
 
     <!-- PROOF -->
     <section id="proof">
@@ -925,11 +927,11 @@ html.lb-open,html.lb-open body{overflow:hidden}
                 <h2 class="t">You keep applying. Nobody keeps replying.</h2>
             </div>
             <div class="prose prose-card">
-                <p>You can do the work. You have done it for clients in Lagos, for your employer, for friends who paid you small money because they trusted you. Your portfolio is not bad. Your CV has been rewritten so many times you know it by heart.</p>
+                <p>You're here because you already have a skill that people can pay you for. You have done it for clients in your country, for your employer, for friends who paid you small money because they trusted you. Your portfolio is not bad. Your CV has been rewritten so many times you know it by heart.</p>
                 <p class="pclose">And still, nothing.</p>
-                <p>You apply on LinkedIn on Monday. You apply on Indeed on Tuesday. Your inbox fills with "We have received your application" and then goes quiet. Three weeks later a rejection comes from a no-reply address, or nothing comes at all.</p>
-                <p class="pclose">The 25th is coming. Your last application still says "received."</p>
-                <p>If you freelance, it looks different but feels the same. Your local clients pay in naira, and the naira keeps losing value while your rate stays the same. On Upwork you send a proposal into a job post that already shows 50 or more proposals, and the buyer who replies wants the work for less than your rate.</p>
+                <p>You apply on LinkedIn on Monday. You apply on Indeed on Tuesday. Your inbox fills with "We have received your application" and then goes quiet. Three weeks later, you get a beautifully worded "we regret to inform you" rejection email, or nothing comes at all.</p>
+                <p>If you're a freelancer, it looks different but feels the same. Your local clients pay in naira, and the naira keeps losing value while your own rate stays the same. On Upwork you send a proposal into a job post that already shows 50 or more proposals, and then you are outbid by people who can afford to spend hundreds of connects to boost their proposals to the top. When you do get a client, they want you to work for less than your rate. For peanuts that cannot even buy you connects or data.</p>
+                <p class="pclose">The 25th is coming. Your last application still says "received," and your last client still wants a discount.</p>
                 <p>Meanwhile your mates keep announcing foreign roles and dollar clients on X, and you start to wonder if they know something you don't.</p>
                 <p class="pclose">They usually do. They know where to look.</p>
             </div>
@@ -944,10 +946,9 @@ html.lb-open,html.lb-open body{overflow:hidden}
         </div>
         <div class="wrap">
             <div class="prose center-prose">
-                <p>When a remote job goes up on the big boards, a crowd sees it at the same time. Most of them apply through the same portal with the same kind of CV. Software often screens the pile before a person reads it, so the person who decides may never see your work.</p>
-                <p>Some of those companies also cannot hire in Nigeria at all. Payroll, tax and employment law can stop them, even when the post says "remote." You can send them the best application of your life and the answer will still be no, because the decision was made before you applied.</p>
-                <p>So more applications will not fix it. A better CV will not fix it either, when the right person never sees it.</p>
-                <p class="pclose">If you can already do the work, the solution is not far from you. It all boils down to where you look, who you reach and what you send. All three can be learned.</p>
+                <p>When a remote job goes up on the big job boards like LinkedIn, Ashby, Lever, you and 100,000 other people see it at the same time. The competition is brutal and unforgiving. Most of them apply through the same portal with the same kind of CV, and the applicant tracking systems (ATS) often reject you automatically without mercy.</p>
+                <p>Some of those companies that we all want, the ones that can pay $2,000 – $10,000 per month, cannot hire in Nigeria at all. You must have seen the roles tagged "Remote US" etc. Payroll, tax and employment law is what stops them from hiring out of their country. You can send them the best application of your life and the answer will still be no, because the decision was made before you applied. There are ways around this that most people do not know, but my students in the Dollar Offer Blueprint community know this and keep it secret.</p>
+                <p class="pclose">The solution is not far from you. It all boils down to where you look, who you reach and what you send. All three can be learned.</p>
             </div>
         </div>
     </section>
@@ -957,151 +958,15 @@ html.lb-open,html.lb-open body{overflow:hidden}
         <div class="wrap center">
             <span class="tag">What the course does</span>
             <h2 class="t">A weekly system for finding and winning buyers who pay in dollars.</h2>
-            <p class="sub">The Dollar Offer Blueprint is a self-paced video course with a private community and live group sessions with me every two weeks. It does not teach you a skill. It assumes you already have one, and it teaches you three things.</p>
+            <p class="sub">The Dollar Offer Blueprint is the exact system that you need to get you out of the trenches. It is packed with self-paced video walkthroughs, a private community and live group sessions with me. As long as you already have a skill, you qualify for this program, and we teach you three things.</p>
         </div>
         <div class="wrap">
             <div class="grid3">
-                <div class="pc"><span class="num">1</span><div class="pc__k">Part 1</div><h3>Where to look.</h3><p>Dollar-paying clients and employers hire in places most applicants never check. LinkedIn, X, Indeed and Upwork are where the crowd applies. You get my map of the places beyond them, matched to your skill, and a way to tell a company that pays well and can hire you from one that will waste your week.</p></div>
-                <div class="pc"><span class="num">2</span><div class="pc__k">Part 2</div><h3>Who to reach.</h3><p>You learn how to get past the application portal and reach the people who can say yes, such as the founder, the hiring manager or the head of the department.</p></div>
-                <div class="pc"><span class="num">3</span><div class="pc__k">Part 3</div><h3>What to send.</h3><p>You learn one pitch that works on any platform. It is short, it points at a specific gap you found in the buyer's business, it shows proof that you have fixed that gap before, and it asks for one small next step. It is built so yes is the easy answer.</p></div>
+                <div class="pc"><span class="num">1</span><div class="pc__k">Part 1</div><h3>Where to look.</h3><p>Dollar-paying clients and employers hire in places most applicants never check. LinkedIn, X, Indeed and Upwork are where the crowd applies. You get my map of the places that only a select few know about, matched to your skill. These are well-paying clients and companies that will not waste your time.</p><p class="pc__kit">The AI kit searches these places for you every day. It checks each role on the company's own website, drops the ones that cannot hire from your country and finds businesses with a problem your skill can fix.</p></div>
+                <div class="pc"><span class="num">2</span><div class="pc__k">Part 2</div><h3>Who to reach.</h3><p>You learn how to get past the application portal and reach the people who can say yes, such as the founder, the hiring manager or the head of the department.</p><p class="pc__kit">The AI kit looks for the owner or the person who decides, then checks the email address it finds before you write to them.</p></div>
+                <div class="pc"><span class="num">3</span><div class="pc__k">Part 3</div><h3>What to send.</h3><p>You learn one pitch that works on any platform. It is short, it points at a specific gap you found in the buyer's business, it shows proof that you have fixed that gap before, and it asks for one small next step. It is built so yes is the easy answer.</p><p class="pc__kit">The AI kit writes each application and pitch from your real results and your notes on how you write. You check the draft, change what you want and send it.</p></div>
             </div>
             <p class="after">Then you run all three every week with a tracker and a <span class="nw">30-day</span> plan, so you stop starting from zero each Monday.</p>
-        </div>
-    </section>
-
-    <!-- WHO IT IS FOR -->
-    <section>
-        <div class="wrap center">
-            <span class="tag">Is this for you</span>
-            <h2 class="t">This course is for you if you can already do paid work.</h2>
-        </div>
-        <div class="wrap">
-            <div class="choices fit">
-                <div class="ch ch--good"><h3>This is for you if:</h3><ul>
-                    <li>You have a digital skill people already pay for, such as design, writing, development, customer support, operations, data, sales, video editing, accounting support or marketing.</li>
-                    <li>You are a job seeker who has applied everywhere and heard nothing back.</li>
-                    <li>You are a freelancer or service provider stuck on naira clients, or on marketplaces where buyers haggle you down.</li>
-                    <li>You live in Nigeria, or in London, Houston, Toronto or Dubai, and you want a better-paying buyer.</li>
-                    <li>You will send pitches and follow up every week, because the system only works when you run it.</li></ul></div>
-                <div class="ch ch--bad"><h3>This is not for you if:</h3><ul>
-                    <li>You do not have a skill yet. Start with the <a href="/academy/pro-bootcamp/">Product &amp; Growth Marketing with AI Bootcamp</a> to learn marketing, or <a href="/academy/dime/">Digital Income Made Easy (DIME)</a> to build a digital product. Come back when you can do the work for a real client.</li>
-                    <li>You want someone to promise you a job or a client. Nobody can promise that, and anyone who does is lying to you.</li>
-                    <li>You want to buy the course, watch it and wait. Nothing in it works unless you send the pitches.</li></ul></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT'S INSIDE -->
-    <section id="modules">
-        <div class="wrap center">
-            <span class="tag">The course</span>
-            <h2 class="t">Nine modules. Each one ends with something you have built.</h2>
-            <p class="sub">Every module ends with one assignment. You finish it before you move on, so by the end you have a working system you have already used.</p>
-        </div>
-        <div class="wrap">
-            <div class="modgrid">
-                <article class="mc"><span class="num">1</span><h3>Pick the buyer who pays in dollars.</h3><p>Decide who in the US, UK, Canada, Europe or Australia pays for your skill and what problem they pay to solve.</p><p class="mc__out">You leave with a one-line offer that names that buyer and that problem.</p></article>
-                <article class="mc"><span class="num">2</span><h3>The hidden market.</h3><p>The places dollar-paying clients and employers hire that most applicants never check, what each one pays, who it suits and how to apply there.</p><p class="mc__out">You leave with a map of 10 sources matched to your skill.</p></article>
-                <article class="mc"><span class="num">3</span><h3>Find the hidden gems.</h3><p>How to tell a well-paying buyer who can hire from Nigeria from a dead end, before you spend a day applying.</p><p class="mc__out">You leave with 30 qualified targets in a tracker, each with the reason it made the list.</p></article>
-                <article class="mc"><span class="num">4</span><h3>A daily search.</h3><p>How to find new roles every day before they reach the crowded boards, and how to tailor an application in under an hour without starting from zero.</p><p class="mc__out">You leave with a daily search routine and 10 tailored applications.</p></article>
-                <article class="mc"><span class="num">5</span><h3>Go around the portal.</h3><p>How to find the people who decide at a company and reach them directly, using free methods.</p><p class="mc__out">You leave with named contacts at five target companies.</p></article>
-                <article class="mc"><span class="num">6</span><h3>The pitch.</h3><p>How to write one pitch built so yes is the easy answer, point it at a real gap in the buyer's business, and adapt it to email, LinkedIn, X, an Upwork proposal or an application question.</p><p class="mc__out">You leave with five real pitches sent on three channels and logged in your tracker.</p></article>
-                <article class="mc"><span class="num">7</span><h3>Calls, rates and closing.</h3><p>How to run a first call, answer the "why Nigeria" and time zone questions calmly and truthfully, and set and defend a dollar rate.</p><p class="mc__out">You leave with a rate card and a recorded practice call.</p></article>
-                <article class="mc"><span class="num">8</span><h3>Contracts and getting paid.</h3><p>How to read a contract for pay terms, scope and termination, how to invoice, and the main ways to receive dollars in Nigeria with what each one costs.</p><p class="mc__out">You leave with a contract checklist and a payment route chosen for your situation.</p></article>
-                <article class="mc"><span class="num">9</span><h3>Your 30-day pipeline.</h3><p>A weekly plan that turns modules 2 to 7 into a habit, with your own targets for contacts found, pitches sent, calls booked and work closed.</p><p class="mc__out">You leave with a written 30-day plan you can bring to a live session for review.</p></article>
-            </div>
-            <div class="card srcmap">
-                <div><h3>The Source Map</h3><p>The full list of sources sits in a document you can open any time, not only inside the videos. Sources change, so I update it every quarter and you get the updates for 12 months after you buy.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- BONUSES -->
-    <section>
-        <div class="wrap center">
-            <span class="tag">Included at no extra cost</span>
-            <h2 class="t">Four bonuses, each one built to remove a reason people stop before they send.</h2>
-        </div>
-        <div class="wrap">
-            <div class="card invoice bonus-list">
-                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Bonus 1</span>The Cold Email System</div><div class="vi__d">How to set up cold email to foreign buyers so it has the best chance of reaching the inbox, and the short sequence to send once it is ready. The setup works with whichever email tool you choose.</div></div><div class="vi__r"><span class="chip">Included</span></div></div>
-                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Bonus 2</span>The Cold Pitching Templates</div><div class="vi__d">A bank of first messages and follow-ups for email, LinkedIn, community messages, Upwork proposals and application questions, each with a note on when to use it. You stop staring at a blank message box.</div></div><div class="vi__r"><span class="chip">Included</span></div></div>
-                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Bonus 3</span>The Pitch Page Template</div><div class="vi__d">A one-page personal pitch site built for one target company. I use this format for roles and clients I want most, and you get the template and the build steps.</div></div><div class="vi__r"><span class="chip">Included</span></div></div>
-                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Bonus 4</span>Ads for Tier 1 Clients</div><div class="vi__d">For freelancers and service providers. A starter playbook for running small ads aimed at bringing enquiries from businesses in the US, UK and Canada, with a simple landing page, a booking step and a small test budget. If you would rather have it done for you, there is a path to our done-for-you ads help.</div></div><div class="vi__r"><span class="chip">Included</span></div></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- LIVE SESSIONS AND COMMUNITY -->
-    <section>
-        <div class="wrap center">
-            <span class="tag">You are not doing this alone</span>
-            <h2 class="t">Live sessions with me every two weeks, and a room full of people doing the same work.</h2>
-        </div>
-        <div class="wrap">
-            <div class="grid3">
-                <div class="pc"><div class="pc__k">Every two weeks</div><h3>Live group sessions.</h3><p>Every two weeks I run a live session for everyone in the course. I take pitches and plans from the group apart line by line, so the whole room sees what a buyer sees. Each session runs for at least an hour. The sessions run for 3 months after the course opens.</p></div>
-                <div class="pc"><div class="pc__k">What to bring</div><h3>Your pitch, then your plan.</h3><p>After Module 6, bring your pitch. After Module 9, bring your 30-day plan, and I show you where it is likely to stall. I review as many as each session allows, and every pitch reviewed on the call teaches you something about your own.</p></div>
-                <div class="pc"><div class="pc__k">Community</div><h3>The community.</h3><p>A private group with everyone in the course. Ask questions, share your pitches and see what other members in your skill are sending.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHAT YOU LEAVE WITH -->
-    <section>
-        <div class="wrap center">
-            <span class="tag">By the end</span>
-            <h2 class="t">What you have when you finish.</h2>
-        </div>
-        <div class="wrap">
-            <ul class="card leave">
-                <li>A one-line offer aimed at a buyer who pays in dollars.</li>
-                <li>A map of 10 sources that fit your skill, and the full Source Map with a year of updates.</li>
-                <li>30 qualified targets in a tracker, with named contacts at the companies you want most.</li>
-                <li>Pitches you have sent on three channels, and a template bank for every channel after that.</li>
-                <li>A rate card, a contract checklist and a way to receive your money.</li>
-                <li>A written 30-day plan and a weekly routine that keeps your search running after the 30 days.</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- HOW IT IS DIFFERENT -->
-    <section>
-        <div class="wrap center">
-            <span class="tag">Why this course</span>
-            <h2 class="t">What you get here that a list of job sites cannot give you.</h2>
-        </div>
-        <div class="wrap">
-            <div class="prose prose-card center-prose">
-                <p>You have probably seen the guides. A PDF with a list of job sites, a few CV tips and a promise. You read it, apply on the same sites as everyone else who bought it, and end up back in the same queue.</p>
-                <p>The Blueprint is a program. You get nine modules with assignments, a Source Map that is updated every quarter, four bonus systems, a community and live group sessions every two weeks where I look at members' real pitches and plans.</p>
-                <p>It also comes from work I still do. The sources, the way past the portal and the pitch are the systems I run every week for my own work and for my businesses. When a source stops working, it comes out of the Source Map at the next quarterly update.</p>
-                <p>And it treats you as someone with a skill. It does not spend three modules polishing your LinkedIn profile. Positioning gets one short module. Finding and winning the buyer is the rest of the course.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- INSTRUCTOR -->
-    <section>
-        <div class="wrap center">
-            <span class="tag">Who's teaching you</span>
-            <h2 class="t">Meet James Praise.</h2>
-        </div>
-        <div class="wrap">
-            <div class="coach">
-                <div class="coach__photo"><img src="/assets/james.webp" alt="James Praise, founder of Marketing In Action" loading="lazy"></div>
-                <div>
-                    <h3>James Praise</h3>
-                    <p>I am a product marketing and go-to-market operator. Since 2018 I have worked with business software companies in Africa, North America and Europe, and I have contributed to over $10 million in qualified pipeline across more than 15 product launches. In plain terms, I help companies find buyers and win them.</p>
-                    <p>I went from Sales Manager to Chief Revenue Officer (CRO) at Cecure Intelligence Limited in under a year, then led growth and marketing at Bujeti. After that I worked on remote dollar contracts from Nigeria for over two years.</p>
-                    <p>I found and won that work with the systems in this course, and I still run them every week, for my own work and for Marketing In Action (MIA), the company I founded to teach marketers and business owners.</p>
-                    <p>I was one of five winners of the Growth Catalyst Award at the Africa Revenue Makers Awards (ARMA) 2026, and Africa Product Marketing Pioneers (APMP) named me one of Africa's Top 20 Marketing Leaders for 2025. Cleva (Y Combinator W24) listed me among its Top 10 People to Follow in Marketing for 2026, and my work has been featured in TechCabal, BusinessDay, Vanguard, Condia and Africa Fintech Summit.</p>
-                    <p>You can read my case studies at <a class="cs" href="https://jamespraise.xyz/work" target="_blank" rel="noopener">jamespraise.xyz/work</a>.</p>
-                    <div class="chips">
-                        <span class="chip">Over $80,000 earned on dollar contracts while living in Nigeria</span><span class="chip">Over $100,000 earned across my career</span><span class="chip">Sales Manager to CRO in under a year</span><span class="chip cp-award">ARMA Growth Catalyst 2026</span><span class="chip cp-award">APMP Top 20 2025</span><span class="chip">15+ product launches</span>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
@@ -1110,7 +975,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
         <div class="wrap center">
             <span class="tag">Results</span>
             <h2 class="t">People I've hired, mentored and pointed to opportunities.</h2>
-            <p class="sub">The Dollar Offer Blueprint is new, so nobody on this page has taken it. These people used guides, roles and advice I shared before the course existed, or took my earlier Bootcamp. Every quote is copied word for word from their own messages or recorded calls.</p>
+            <p class="sub">These people used the guidance, resources and advice I shared in many of my programs. Every quote is copied word for word from their own messages or recorded calls.</p>
         </div>
         <div class="wrap">
             <div class="stories">
@@ -1143,12 +1008,131 @@ html.lb-open,html.lb-open body{overflow:hidden}
                 </article>
             </div>
 
-            <h3 class="results__h">From my Product &amp; Growth Marketing Bootcamp</h3>
-            <div class="grads">
-                <article class="fc"><div class="fc__who"><span class="av cp-av4">Z</span><div><div class="fc__name">Zainab Oladoja</div><div class="fc__role">Product Marketing Manager, Abuja</div></div></div><p class="fc__q">"The materials really helped. While I was working, anytime I hit a roadblock I had a material to go to, to check what I could do and make my work more efficient. I'm even still using them now for the job applications I'm doing."</p><span class="chip tick mint">Bootcamp graduate</span></article>
-                <article class="fc"><div class="fc__who"><span class="av cp-av1">E</span><div><div class="fc__name">Emmanuella David</div><div class="fc__role">Product Marketer (Nigeria &rarr; Canada)</div></div></div><p class="fc__q">"I'm really exhausted with trainings that just give definitions, the benefits and the disadvantages. This was hands-on. Let's deal with it as though you've started a job as a product marketing person. This is a real life situation, this is how you should deal with it."</p><span class="chip tick mint">Bootcamp graduate</span></article>
+            <h3 class="results__h">From my AI Marketing Bootcamp</h3>
+            <div class="grads grads--vid">
+                <figure class="fc gvid"><div class="gvid__f"><iframe src="https://www.youtube-nocookie.com/embed/e_y_lphdtOQ" title="Emmanuella David, AI Marketing Bootcamp testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption><div class="fc__name">Emmanuella David</div><div class="fc__role">Product Marketer (Nigeria &rarr; Canada)</div></figcaption></figure>
+                <figure class="fc gvid"><div class="gvid__f"><iframe src="https://www.youtube-nocookie.com/embed/ivrbZ8UJ9Co" title="Dayo Akin, AI Marketing Bootcamp testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption><div class="fc__name">Dayo Akin</div><div class="fc__role">AI Marketing Bootcamp graduate</div></figcaption></figure>
+                <figure class="fc gvid"><div class="gvid__f"><iframe src="https://www.youtube-nocookie.com/embed/M9H3pmL0ym8" title="Zainab Oladoja, AI Marketing Bootcamp testimonial" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><figcaption><div class="fc__name">Zainab Oladoja</div><div class="fc__role">Product Marketing Manager, Abuja</div></figcaption></figure>
             </div>
-            <p class="disc">None of these people are students of The Dollar Offer Blueprint, and their results are not a promise of yours. Tap a screenshot to see it in full.</p>
+            <p class="disc">Their results are not a promise of yours. Tap a screenshot to see it in full.</p>
+        </div>
+    </section>
+
+    <!-- THE KIT -->
+    <section id="kit">
+        <div class="wrap center">
+            <span class="tag">The AI Kit</span>
+            <h2 class="t">Seven Claude skills that do most of the research and writing with you.</h2>
+            <p class="sub">Claude is an AI assistant. A skill is a set of instructions it follows to do one job well. Each skill works from your own profile and results, so what it writes is about you. You check every word before you send it. You need a paid Claude plan to run them.</p>
+        </div>
+        <div class="wrap">
+            <div class="card invoice bonus-list">
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 1</span>my-profile</div><div class="vi__d">Interviews you and writes your profile, your record of real results and notes on how you write, the files every other skill reads.</div></div></div>
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 2</span>offer-builder</div><div class="vi__d">Helps you pick who to sell to, build one offer and set your rate in dollars.</div></div></div>
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 3</span>job-radar</div><div class="vi__d">Searches the places dollar roles are posted, checks every role at the company's own posting and drops the ones that say they cannot hire from your country.</div></div></div>
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 4</span>prospect-finder</div><div class="vi__d">Builds a list of businesses abroad that need what you sell, notes a problem you can fix in each one and verifies the owner's email.</div></div></div>
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 5</span>application-pack</div><div class="vi__d">Writes a full application for one role: company research, a tailored CV, a short cover letter, form answers and follow-up messages.</div></div></div>
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 6</span>outreach-writer</div><div class="vi__d">Writes your cold emails, LinkedIn messages and Upwork proposals, drafts your replies and prepares your sales calls.</div></div></div>
+                <div class="vi"><div><div class="vi__n"><span class="chip rose cp-bonus" style="margin-right:6px">Skill 7</span>client-ads</div><div class="vi__d">Helps you set up and report on ads for your clients, and plan small video ads that bring clients to you.</div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHO IT IS FOR -->
+    <section>
+        <div class="wrap center">
+            <span class="tag">Is this for you</span>
+            <h2 class="t">You're here because you already have a skill that people can pay you for.</h2>
+        </div>
+        <div class="wrap">
+            <div class="choices fit">
+                <div class="ch ch--good"><h3>This is for you if:</h3><ul>
+                    <li>You have a digital skill people already pay for, such as design, writing, development, customer support, operations, data, sales, video editing, accounting support or marketing.</li>
+                    <li>You are a job seeker who has applied everywhere and heard nothing back.</li>
+                    <li>You are a freelancer or service provider stuck on naira clients, or on marketplaces like Upwork and Fiverr that are crowded with competition.</li>
+                    <li>You live in Nigeria, anywhere in Africa, or even in London, Houston, Toronto or Dubai, and you want better-paying clients.</li>
+                    <li>You will send pitches and follow up every week, because the system only works when you run it.</li></ul></div>
+                <div class="ch ch--bad"><h3>This is not for you if:</h3><ul>
+                    <li>You do not have a skill yet. Start with the <a href="/academy/pro-bootcamp/">AI Marketing Bootcamp</a> to learn Product and Growth Marketing skills that technology companies and founders are looking for, or <a href="/academy/dime/">Digital Income Made Easy (DIME)</a> to learn how to market and sell all kinds of digital products with paid advertising, content, email marketing and funnels. Come back when you can do the work for a real client.</li>
+                    <li>You want someone to promise you a job or a client. Nobody can promise that, and anyone who does is lying to you.</li>
+                    <li>You want to buy this program, watch a few videos and expect magic to happen without putting in the work. This is absolutely not for you.</li></ul></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT'S INSIDE -->
+    <section id="modules">
+        <div class="wrap center">
+            <span class="tag">The course</span>
+            <h2 class="t">Five modules. Each one ends with something you have built.</h2>
+            <p class="sub">Each module has one video that shows it being done with the kit, short lessons that cover every step, and one assignment you finish before you move on. By the end you have a working system you have already used.</p>
+        </div>
+        <div class="wrap">
+            <div class="modgrid">
+                <article class="mc"><span class="num">1</span><h3>Set up your kit.</h3><p>Install the seven Claude skills. The first one interviews you, then writes your profile, a record of your real results (your proof bank) and notes on how you write. Every other skill works from these files.</p><p class="mc__out">Your assignment is to set up the kit and write your profile and proof bank.</p></article>
+                <article class="mc"><span class="num">2</span><h3>Pick your buyer and offer.</h3><p>Decide between jobs, clients or both. For client work, choose one type of business abroad to sell to, such as roofers or dental clinics, write one clear offer and set your rate in dollars from what a new customer is worth to that business.</p><p class="mc__out">Your assignment is to write your offer and your rate.</p></article>
+                <article class="mc"><span class="num">3</span><h3>Find roles and clients every day.</h3><p>Search the places most applicants never check, such as company careers pages and talent networks, and confirm each role on the company's own posting before you apply. For client work, build a list of businesses you can help, with a problem you noticed in each one and the owner's verified email.</p><p class="mc__out">Your assignment is to check 20 businesses or 10 roles yourself.</p></article>
+                <article class="mc"><span class="num">4</span><h3>Apply and pitch.</h3><p>Build a full application for one role. Write short cold emails about each business, set up your email so it lands in the inbox, write LinkedIn messages and Upwork proposals, and answer replies with a one-page site made for that business (a pitch page).</p><p class="mc__out">Your assignment is to send your first five pitches and log every one.</p></article>
+                <article class="mc"><span class="num">5</span><h3>Close, deliver and get paid.</h3><p>Learn to run a short sales call, check a contract and spot scams, start work with a new client, and get paid into Nigeria through Payoneer, Deel, Grey or Bachs.</p><p class="mc__out">Your assignment is to write the plan for your first paying client.</p></article>
+                <article class="mc"><span class="num">+</span><h3>The Source Map.</h3><p>The full list of places to find roles and clients sits in a document you can open any time, not only inside the videos.</p><p class="mc__out">Sources change, so I update it every quarter and you get the updates for 12 months after you buy.</p></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIVE SESSIONS AND COMMUNITY -->
+    <section>
+        <div class="wrap center">
+            <span class="tag">You are not doing this alone</span>
+            <h2 class="t">Live sessions with me every two weeks, and a room full of people doing the same work.</h2>
+        </div>
+        <div class="wrap">
+            <div class="grid3">
+                <div class="pc"><div class="pc__k">Every two weeks</div><h3>Live group sessions.</h3><p>Every two weeks I run a live session for everyone in this program. I take your pitches and your plans to get clients and land jobs, and I review them for everyone to learn from. Each session runs for at least an hour, and we will have these sessions for 3 months.</p></div>
+                <div class="pc"><div class="pc__k">What to bring</div><h3>Your pitch, then your plan.</h3><p>After Module 4, bring your first five pitches. After Module 5, bring your plan for your first paying client, and I show you where it is likely to fail. I review as many as each session allows.</p></div>
+                <div class="pc"><div class="pc__k">Community</div><h3>The community.</h3><p>A private group with everyone in the course. Ask questions, share your pitches and see what other members with your skillset are sending.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHAT YOU LEAVE WITH -->
+    <section>
+        <div class="wrap center">
+            <span class="tag">By the end</span>
+            <h2 class="t">What you have when you finish.</h2>
+        </div>
+        <div class="wrap">
+            <ul class="card leave">
+                <li>The kit set up, with your profile, your record of results and your writing notes.</li>
+                <li>A written offer and a dollar rate for one buyer.</li>
+                <li>A daily search for roles open to your country, and a list of businesses with verified contacts.</li>
+                <li>Your first five pitches sent, a pitch page, and drafts for the replies that come back.</li>
+                <li>A contract checklist, an invoice, a payment route and a plan for your first paying client.</li>
+                <li>The full Source Map with a year of updates.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- INSTRUCTOR -->
+    <section>
+        <div class="wrap center">
+            <span class="tag">Who's teaching you</span>
+            <h2 class="t">Meet James Praise.</h2>
+        </div>
+        <div class="wrap">
+            <div class="coach">
+                <div class="coach__photo"><img src="/assets/james.webp" alt="James Praise, founder of Marketing In Action" loading="lazy"></div>
+                <div>
+                    <h3>James Praise</h3>
+                    <p>I am a product marketing and go-to-market operator. Since 2018 I have worked with business software companies in Africa, North America and Europe, and I have contributed to over $10 million in qualified pipeline across more than 15 product launches. In plain terms, I help companies find buyers and win them.</p>
+                    <p>I went from Sales Manager to Chief Revenue Officer (CRO) at Cecure Intelligence Limited in under a year, then led growth and marketing at Bujeti. After that I worked on remote dollar contracts from Nigeria for over two years.</p>
+                    <p>I found and closed all these opportunities with the systems in this course, and I still run them every week, for my own work and for Marketing In Action (MIA), the company I founded to teach marketers and business owners.</p>
+                    <p>I was one of five winners of the Growth Catalyst Award at the Africa Revenue Makers Awards (ARMA) 2026, and Africa Product Marketing Pioneers (APMP) named me one of Africa's Top 20 Marketing Leaders for 2025. Cleva (Y Combinator W24) listed me among its Top 10 People to Follow in Marketing for 2026, and my work has been featured in TechCabal, BusinessDay, Vanguard, Condia and Africa Fintech Summit.</p>
+                    <p>You can read my case studies at <a class="cs" href="https://jamespraise.xyz/work" target="_blank" rel="noopener">jamespraise.xyz/work</a>.</p>
+                    <div class="chips">
+                        <span class="chip">Over $80,000 earned on dollar contracts while living in Nigeria</span><span class="chip">Over $100,000 earned across my career</span><span class="chip">Sales Manager to CRO in under a year</span><span class="chip cp-award">ARMA Growth Catalyst 2026</span><span class="chip cp-award">APMP Top 20 2025</span><span class="chip">15+ product launches</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1163,7 +1147,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
                 <div class="card tier">
                     <div class="offer__h">What you get</div>
                     <ul>
-                        <li>Nine video modules with assignments</li><li>The Source Map, updated every quarter for 12 months</li><li>The Cold Email System</li><li>The Cold Pitching Templates</li><li>The Pitch Page Template</li><li>Ads for Tier 1 Clients, with a path to done-for-you help</li><li>Live group sessions with James every two weeks</li><li>The private community</li><li>The Pitch Review Guarantee</li>
+                        <li>Five video modules with assignments</li><li>The kit: seven Claude skills, with setup guides</li><li>The Source Map, updated every quarter for 12 months</li><li>The tracker, contract checklist and invoice templates</li><li>Live group sessions with James every two weeks</li><li>The private community</li><li>The Pitch Review Guarantee</li>
                     </ul>
                 </div>
                 <div class="card tier tier--rec pricecard">
@@ -1171,14 +1155,10 @@ html.lb-open,html.lb-open body{overflow:hidden}
                     <div class="tier__name">The Dollar Offer Blueprint</div>
                     <div class="tier__rate">&#8358;20,000</div>
                     <div class="tier__tot">One payment. Launch price.</div>
+                    <p class="win__note" style="margin:6px 0 0">You also need a paid Claude plan to run the kit, from about $20 a month.</p>
                     <a href="https://selar.com/dollarblueprint?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-ink btn-lg">Get the Blueprint for &#8358;20,000</a>
-                    <p class="pricecard__under">Secure checkout on Selar. Access opens on 10 December 2026.</p>
+                    <p class="pricecard__under">Secure checkout on Selar/Bachs/Paystack. Access opens on 10 December 2026.</p>
                 </div>
-            </div>
-            <div class="ctx">
-                <p>Guides on this topic sell for &#8358;3,000 to &#8358;20,000 on Selar. Live cohorts on the same problem sell for close to &#8358;98,000. The Blueprint sits between them: a full program with live feedback, at the price of a guide.</p>
-                <p>Now do the maths with your own numbers. Think about what one month of your work earns from a naira client. Then think about what a small company in Toronto or Manchester pays for the same month of work. The difference is what this course is trying to help you reach.</p>
-                <p class="about"><strong>About the price:</strong> &#8358;20,000 is the launch price. It holds until the first 100 sales. After that I review it, and if it goes up, the new price is announced on this page before it changes. There is no countdown and no fake deadline.</p>
             </div>
         </div>
     </section>
@@ -1190,8 +1170,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
                 <span class="tag">Guarantee</span>
                 <h3>The Pitch Review Guarantee.</h3>
                 <p class="gt">I will not promise you a job, a client or a reply. Nobody honest can. Those depend on your skill, your market and the buyer on the other side.</p>
-                <p>I promise you my time on your pitches. Bring them to the live sessions or post them in the review thread in the community, and I keep reviewing them, round after round, until you have sent 20 pitches logged in your tracker. You post a pitch, I review it, you fix it and send it. Then the next one. Everyone in the group sees the fixes, so every review helps more than one person.</p>
-                <p>The condition is plain. The pitches count once they are sent to real buyers and logged in the course tracker. When your tracker shows 20 sent pitches, the guarantee is complete.</p>
+                <p>My goal is to make sure you succeed so you can give me more testimonials to spread the good news. Come to our live sessions with the pitches you want to send to clients and employers. I will drill you, challenge you, and make sure your offer is a grand slam. I will keep working with you until you have sent 20 pitches, and by then you will already be a pro at pitching and winning jobs.</p>
             </div>
         </div>
     </section>
@@ -1200,13 +1179,13 @@ html.lb-open,html.lb-open body{overflow:hidden}
     <section>
         <div class="wrap center">
             <span class="tag">Pre-sale</span>
-            <h2 class="t">You are paying before the course is recorded.</h2>
+            <h2 class="t">This is your chance to join early.</h2>
         </div>
         <div class="wrap">
             <div class="prose prose-card center-prose">
-                <p>This is a pre-sale. The course is planned module by module, but the videos are not recorded yet. I start recording once the first 5 people have paid.</p>
-                <p>You get access to the course on 10 December 2026. When you pay, Selar sends you a receipt, and you get an email from us with your access details and the community link when access opens.</p>
-                <p>Buying now gets you the launch price and a place in the first live sessions when access opens.</p>
+                <p>This is a pre-sale. The course is planned module by module, and once the first 5 people join the program, I will start recording.</p>
+                <p>You get access to the course as soon as it opens on 10 December 2026, and you get an email from us with your access details to our learning platform and the community link.</p>
+                <p>This is the only time you will be able to get in at this giveaway price.</p>
             </div>
         </div>
     </section>
@@ -1219,8 +1198,8 @@ html.lb-open,html.lb-open body{overflow:hidden}
         </div>
         <div class="wrap">
             <div class="choices choices--two">
-                <div class="ch ch--bad"><h3>Choice 1</h3><p>Close this page. Apply on the same boards next week. Wait for the same "received" email. Watch your mates post their foreign roles.</p></div>
-                <div class="ch ch--good"><h3>Choice 2</h3><p>Get the Blueprint. Learn where to look, who to reach and what to send. Send your first real pitch to a person who can say yes, and keep sending until your tracker shows 20, with me reviewing them.</p></div>
+                <div class="ch ch--bad"><h3>Choice 1</h3><p>Close this page and keep doing what you have been doing. Apply on the same boards next week, wait for the same "we have received your application" email, and watch your mates post their foreign roles and dollar clients on X.</p></div>
+                <div class="ch ch--good"><h3>Choice 2</h3><p>Join the Blueprint. Set up your kit, learn where to look, who to reach and what to send, and send your first pitch to a person who can say yes. Then keep going until you have sent 20 pitches, with me reviewing them in our live sessions.</p></div>
             </div>
             <div class="ctaline" id="midCtas"><a href="https://selar.com/dollarblueprint?add_to_cart=1&email=&fullname=&mobile=" class="btn btn-lg">Get the Blueprint for &#8358;20,000</a></div>
         </div>
@@ -1235,11 +1214,13 @@ html.lb-open,html.lb-open body{overflow:hidden}
             <div class="faq-list">
                 <div class="faq-item active"><button class="faq-item__q" aria-expanded="true"><span>Who is this for?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Nigerians in Nigeria and the diaspora who can already do paid work in a digital skill and cannot find or win clients or employers who pay in dollars. It works for job seekers and for freelancers.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Will a foreign company hire me from Nigeria?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Some cannot, because of payroll, tax and employment law, and the course shows you how to spot them before you waste time. Others can, and the course shows you how to find them. I held dollar contracts from Nigeria for over two years, and the course covers the location, time zone, payment and trust questions buyers ask, so you can answer them before they come up.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Is this another remote-work guide?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No. Guides give you a list of job sites. This is a program: the places most people never look, a way past the portal to the person who decides, a pitch for any platform, four bonus systems, a community and live group sessions every two weeks where I review members' work.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>I already applied everywhere and got nothing.</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">That is the problem the course solves. Applying where everyone applies, through the portal, puts you in the longest queue. Modules 2 to 5 replace it with a different search and a direct route to the person who decides.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>I am a freelancer, not a job seeker. Does this work for me?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes. The same sources, the same route to the person who decides and the same pitch work for client work. The ads bonus is built for freelancers and service providers.</div></div></div>
+                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Is this another remote-work guide?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No. Guides give you a list of job sites. This is a program: the places most people never look, a way past the portal to the person who decides, a pitch for any platform, a kit of seven Claude skills, a community and live group sessions every two weeks where I review members' work.</div></div></div>
+                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>I already applied everywhere and got nothing.</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">That is the problem the course solves. Applying where everyone applies, through the portal, puts you in the longest queue. Modules 3 and 4 replace it with a different search and a direct route to the person who decides.</div></div></div>
+                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>I am a freelancer, not a job seeker. Does this work for me?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes. The same sources, the same route to the person who decides and the same pitch work for client work. Module 2 shows freelancers how to sell ads or another service to local businesses abroad, and the kit helps you deliver it.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Will it work for my skill?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Every buyer has a problem, a person who decides and a reason to choose one person over another. The course examples cover design, writing, development, support, operations, data, sales, video editing and accounting support as well as marketing.</div></div></div>
-                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Do I need money for ads or paid tools?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No. The core system runs on free methods. Paid email tools and the ads bonus are optional.</div></div></div>
+                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Do I need money for ads or paid tools?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Yes, one. The kit runs on Claude, so you need a paid Claude plan, which starts at about $20 a month. Everything else in the core system uses free methods, and paid email tools and ads are optional.</div></div></div>
+                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Will my applications sound like AI wrote them?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">They can, if you send the first draft as it is. The first skill records your real results and notes on how you write, and every other skill uses those notes when it drafts, so each draft points to work you have actually done. You read each one, change anything that does not sound like you and send it yourself.</div></div></div>
+                <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>How do I pay for Claude from Nigeria?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">Claude is available in Nigeria. On Claude's website you pay in US dollars by card, and some Nigerian bank cards decline dollar payments. If yours is declined, you can use a virtual dollar card from a fintech app, funded from your naira account. You can also subscribe inside the Claude app on your phone and pay through the App Store or Google Play. Check the price on both before you choose, because they can differ.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>How much time does it take?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">It is self-paced, so you set the speed. Plan for a few hours each week to research, send pitches and follow up, because the system only works when you run it.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>When do I get access?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">On 10 December 2026. This is a pre-sale, and recording starts once the first 5 people have paid. You get an email with your access details when it opens.</div></div></div>
                 <div class="faq-item"><button class="faq-item__q" aria-expanded="false"><span>Can you guarantee me a job or a client?</span><span class="faq-item__icon">+</span></button><div class="faq-item__a"><div class="faq-item__a-inner">No, and you should be careful of anyone who does. You get a system, live feedback and a pitch built so yes is the easy answer. My own contracts and case studies are on this page for you to check.</div></div></div>
@@ -1307,7 +1288,7 @@ html.lb-open,html.lb-open body{overflow:hidden}
                         <input type="tel" id="prefillPhone" name="phone" autocomplete="tel" placeholder="e.g. 08012345678">
                     </div>
                     <button type="submit" class="prefill-modal__btn">Proceed to Payment &rarr;</button>
-                    <p class="prefill-modal__trust">Secure payment via Selar &middot; Paystack &middot; Bank Transfer</p>
+                    <p class="prefill-modal__trust">Secure checkout on Selar/Bachs/Paystack</p>
                 </form>
             </div>
         </div>
