@@ -16,6 +16,9 @@ How pages carry the numbers
   content is rewritten from ``values``.
 * Alt text: ``data-proof-alt="Selar dashboard: {selar_sales} sales"``. The
   ``alt`` attribute on the same tag is rebuilt from that template.
+* Other figures: ``<span data-proof-skip>$2,000 &ndash; $10,000</span>``. A
+  number that only looks like a proof value (a salary range, say) is left out
+  of the scan.
 * Screenshots: ``data-proof-img`` on an ``<img>``. Its ``?v=`` is set to a
   short hash of the image file, so browsers fetch the new file the moment it
   changes and never before.
@@ -48,6 +51,9 @@ ALT = re.compile(r'((?<![\w-])alt=")([^"]*)(")')
 SRC = re.compile(r'(\bsrc=")([^"?]+)(?:\?v=[^"]*)?(")')
 
 
+SKIP = re.compile(r"<span data-proof-skip>.*?</span>", re.S)
+
+
 def load():
     return json.loads(DATA.read_text())
 
@@ -61,8 +67,9 @@ def render_alt(tpl, values):
 
 
 def visible_text(text):
-    """Page text a visitor reads, with proof markers removed."""
+    """Page text a visitor reads, with proof markers and skipped spans removed."""
     text = SPAN.sub(" ", text)
+    text = SKIP.sub(" ", text)
     text = re.sub(r"<(script|style)\b.*?</\1>", " ", text, flags=re.S | re.I)
     text = re.sub(r"<!--.*?-->", " ", text, flags=re.S)
     text = re.sub(r"<[^>]+>", " ", text)
