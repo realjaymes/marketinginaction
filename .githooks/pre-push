@@ -16,3 +16,17 @@ if ! python3 "$root/tools/build-example-pages.py" --check; then
   echo "and run python3 tools/build-example-pages.py." >&2
   exit 1
 fi
+# Button note spacing (14px from a buy button to the line under it), on the pages this push changes.
+# Needs the local site on port 8000 and puppeteer-core; skipped when either is missing.
+changed=""
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$remote_sha" in *[!0]*) range="$remote_sha..$local_sha" ;; *) range="$local_sha~1..$local_sha" ;; esac
+  changed="$changed $(git diff --name-only "$range" -- '*index.html' 2>/dev/null | grep -v '/options/')"
+done
+changed=$(echo $changed | tr ' ' '\n' | sort -u | tr '\n' ' ')
+if [ -n "$(echo $changed | tr -d ' ')" ] && command -v node >/dev/null 2>&1; then
+  if ! (cd "$root" && NODE_PATH=${NODE_PATH:-/tmp/wgog/node_modules} node tools/check-cta-spacing.js $changed); then
+    echo "pre-push: a button note gap is not 14px, push stopped. See tools/check-cta-spacing.js." >&2
+    exit 1
+  fi
+fi
