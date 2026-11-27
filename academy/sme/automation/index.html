@@ -1581,35 +1581,6 @@ html.lb-open,html.lb-open body{overflow:hidden}
             });
         });
 
-        /* 5. STICKY BOTTOM BAR */
-        var stickyBar = document.getElementById('stickyBar');
-        var showBar = false;
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 500 && !showBar) {
-                stickyBar.classList.add('visible');
-                showBar = true;
-            } else if (window.scrollY <= 500 && showBar) {
-                stickyBar.classList.remove('visible');
-                showBar = false;
-            }
-        });
-
-        /* 5b. HIDE STICKY BAR WHEN PRICING IS VISIBLE */
-        var pricingSection = document.getElementById('pricing');
-        var stickyBarEl = document.getElementById('stickyBar');
-        if (pricingSection && stickyBarEl) {
-            var pricingObserver = new IntersectionObserver(function(entries) {
-                if (entries[0].isIntersecting) {
-                    stickyBarEl.classList.remove('visible');
-                    stickyBarEl.style.pointerEvents = 'none';
-                } else {
-                    stickyBarEl.classList.add('visible');
-                    stickyBarEl.style.pointerEvents = '';
-                }
-            }, { threshold: 0.1 });
-            pricingObserver.observe(pricingSection);
-        }
 
         /* 6. COUNTDOWN TIMER */
         var timerEl = document.getElementById('countdownTimer');
@@ -1860,6 +1831,25 @@ html.lb-open,html.lb-open body{overflow:hidden}
     t.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(t),t)});
     t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(t),t)}});
   });
+})();
+</script>
+<script>
+/* Sticky bottom bar (phones): shows only once the hero has scrolled off screen, hides while the pricing section is on screen */
+(function(){
+  var bar=document.getElementById('stickyBar'); if(!bar) return;
+  var hero=document.querySelector('header.hero, section.hero, .hero');
+  var pricing=document.getElementById('pricing');
+  function update(){
+    var pastHero = hero ? hero.getBoundingClientRect().bottom < 0 : window.scrollY > 700;
+    var p = pricing ? pricing.getBoundingClientRect() : null;
+    var onPricing = p ? (p.top < window.innerHeight * 0.9 && p.bottom > 0) : false;
+    var show = pastHero && !onPricing;
+    bar.classList.toggle('visible', show);
+    bar.style.pointerEvents = show ? '' : 'none';
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update, {passive:true});
+  update();
 })();
 </script>
 </body>

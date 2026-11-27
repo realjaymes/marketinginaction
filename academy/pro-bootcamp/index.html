@@ -382,7 +382,7 @@ html.js .panel[hidden]{display:none}
 .ch--bad li::before{content:"";position:absolute;left:5px;top:19px;width:14px;height:2.5px;background:var(--ink);opacity:.5}
 .ch--good li::before{content:"";position:absolute;left:6px;top:13px;width:6px;height:11px;border:solid var(--ink);border-width:0 3px 3px 0;transform:rotate(45deg)}
 /* pricing */
-.tiers{display:grid;grid-template-columns:1fr 1fr;gap:26px;max-width:860px;margin:0 auto 28px;align-items:stretch}
+.tiers{display:grid;grid-template-columns:1fr;gap:26px;max-width:480px;margin:0 auto 28px;align-items:stretch}
 .tier{padding:30px;position:relative;display:flex;flex-direction:column}
 .tier--rec{background:var(--gold)}
 .tier__badge{position:absolute;top:-16px;right:22px;background:var(--ink);color:#fff;font-size:.76rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;padding:6px 14px;border-radius:999px}
@@ -1374,35 +1374,6 @@ html[data-tone="mono"] section:nth-of-type(even){background:var(--sec-b)}
             });
         });
 
-        /* 5. STICKY BOTTOM BAR */
-        var stickyBar = document.getElementById('stickyBar');
-        var showBar = false;
-
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 500 && !showBar) {
-                stickyBar.classList.add('visible');
-                showBar = true;
-            } else if (window.scrollY <= 500 && showBar) {
-                stickyBar.classList.remove('visible');
-                showBar = false;
-            }
-        });
-
-        /* 5b. HIDE STICKY BAR WHEN PRICING IS VISIBLE */
-        var pricingSection = document.getElementById('pricing');
-        var stickyBarEl = document.getElementById('stickyBar');
-        if (pricingSection && stickyBarEl) {
-            var pricingObserver = new IntersectionObserver(function(entries) {
-                if (entries[0].isIntersecting) {
-                    stickyBarEl.classList.remove('visible');
-                    stickyBarEl.style.pointerEvents = 'none';
-                } else {
-                    stickyBarEl.classList.add('visible');
-                    stickyBarEl.style.pointerEvents = '';
-                }
-            }, { threshold: 0.1 });
-            pricingObserver.observe(pricingSection);
-        }
 
         /* 6. ANNOUNCEMENT BAR OFFSET */
         var announceBar = document.querySelector('.announcement-bar');
@@ -1543,5 +1514,24 @@ html[data-tone="mono"] section:nth-of-type(even){background:var(--sec-b)}
 })();
 </script>
 
+<script>
+/* Sticky bottom bar (phones): shows only once the hero has scrolled off screen, hides while the pricing section is on screen */
+(function(){
+  var bar=document.getElementById('stickyBar'); if(!bar) return;
+  var hero=document.querySelector('header.hero, section.hero, .hero');
+  var pricing=document.getElementById('pricing');
+  function update(){
+    var pastHero = hero ? hero.getBoundingClientRect().bottom < 0 : window.scrollY > 700;
+    var p = pricing ? pricing.getBoundingClientRect() : null;
+    var onPricing = p ? (p.top < window.innerHeight * 0.9 && p.bottom > 0) : false;
+    var show = pastHero && !onPricing;
+    bar.classList.toggle('visible', show);
+    bar.style.pointerEvents = show ? '' : 'none';
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update, {passive:true});
+  update();
+})();
+</script>
 </body>
 </html>

@@ -1381,11 +1381,6 @@ html.lb-open,html.lb-open body{overflow:hidden}
       if(!isActive){item.classList.add('active');btn.setAttribute('aria-expanded','true')}
     });
   });
-  /* sticky bottom bar (phone): shows after the hero, hides while the price section is on screen */
-  var stickyBar=document.getElementById('stickyBar'),pricing=document.getElementById('pricing'),pastHero=false,onPrice=false;
-  function bar(){stickyBar.classList.toggle('visible',pastHero&&!onPrice);stickyBar.style.pointerEvents=(pastHero&&!onPrice)?'':'none'}
-  window.addEventListener('scroll',function(){var p=window.scrollY>500;if(p!==pastHero){pastHero=p;bar()}},{passive:true});
-  if(pricing&&'IntersectionObserver' in window){new IntersectionObserver(function(e){onPrice=e[0].isIntersecting;bar()},{threshold:0.1}).observe(pricing)}
   /* the sticky nav sits below the announcement bar */
   var announceBar=document.querySelector('.announcement-bar'),stickyNav=document.querySelector('.sticky-nav');
   if(announceBar&&stickyNav){var placeNav=function(){stickyNav.style.top=announceBar.offsetHeight+'px'};placeNav();window.addEventListener('resize',placeNav)}
@@ -1508,6 +1503,25 @@ html.lb-open,html.lb-open body{overflow:hidden}
     t.addEventListener('click',function(){open(im.currentSrc||im.src,im.alt,capFor(t),t)});
     t.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(im.currentSrc||im.src,im.alt,capFor(t),t)}});
   });
+})();
+</script>
+<script>
+/* Sticky bottom bar (phones): shows only once the hero has scrolled off screen, hides while the pricing section is on screen */
+(function(){
+  var bar=document.getElementById('stickyBar'); if(!bar) return;
+  var hero=document.querySelector('header.hero, section.hero, .hero');
+  var pricing=document.getElementById('pricing');
+  function update(){
+    var pastHero = hero ? hero.getBoundingClientRect().bottom < 0 : window.scrollY > 700;
+    var p = pricing ? pricing.getBoundingClientRect() : null;
+    var onPricing = p ? (p.top < window.innerHeight * 0.9 && p.bottom > 0) : false;
+    var show = pastHero && !onPricing;
+    bar.classList.toggle('visible', show);
+    bar.style.pointerEvents = show ? '' : 'none';
+  }
+  window.addEventListener('scroll', update, {passive:true});
+  window.addEventListener('resize', update, {passive:true});
+  update();
 })();
 </script>
 </body>
